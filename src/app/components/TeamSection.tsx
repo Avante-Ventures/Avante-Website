@@ -27,7 +27,7 @@ const TeamSectionComponent = () => {
     },
     {
       name: 'Felipe Moraes',
-      title: 'Co-Founder & Partner - Avante',
+      title: 'Strategic Advisor and founder of Bamboo DCM',
       image: imgFelipeMoraes,
       highlights: [
         'Strategic Partner and Founder of Bamboo DCM',

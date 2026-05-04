@@ -56,8 +56,9 @@ export function AppContent() {
       {/* Cursor Glow Effect */}
       <CursorGlow />
       
-      {/* Global Atmospheric Haze */}
+      {/* Global Atmospheric Haze - Optimized for Performance */}
       <div style={{ position: 'fixed', inset: 0, pointerEvents: 'none', zIndex: 0 }}>
+        {/* Purple Haze - Top */}
         <div 
           style={{
             position: 'absolute',
@@ -69,6 +70,8 @@ export function AppContent() {
             opacity: 0.8
           }}
         ></div>
+        
+        {/* Gold Haze - Bottom */}
         <div 
           style={{
             position: 'absolute',
@@ -80,6 +83,8 @@ export function AppContent() {
             opacity: 0.7
           }}
         ></div>
+
+        {/* Decorative Dots */}
         <div 
           style={{
             position: 'absolute',
@@ -265,7 +270,7 @@ export function AppContent() {
             </div>
         </section>
 
-        <style>{\`
+        <style>{`
           @media (max-width: 640px) {
             .hero-cta-container {
               flex-direction: column !important;
@@ -276,7 +281,7 @@ export function AppContent() {
               width: 100%;
             }
           }
-        \`}</style>
+        `}</style>
 
         <StatsBar />
         
@@ -357,7 +362,7 @@ export function AppContent() {
                 transform: 'translate(-50%, -50%)',
                 width: '800px',
                 height: '800px',
-                backgroundImage: \`url(\${brazilMap3D})\`,
+                backgroundImage: `url(${brazilMap3D})`,
                 backgroundSize: 'contain',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
@@ -435,6 +440,8 @@ export function AppContent() {
             style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}
           >
             <InvestorEcosystem onOpenContact={() => setIsContactModalOpen(true)} />
+            
+            {/* FAQ Section - Collapsible below investor close */}
             <FAQSection />
           </ScrollRevealSection>
 
@@ -454,6 +461,7 @@ export function AppContent() {
 
         </div>
 
+        {/* Footer */}
         <Footer />
 
       </div>

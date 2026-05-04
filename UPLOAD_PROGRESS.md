@@ -38,7 +38,6 @@
 - ✅ src/app/components/ScrollRevealSection.tsx
 - ✅ src/app/components/SectionHeader.tsx
 - ✅ src/app/components/CursorGlow.tsx
-- ✅ src/app/components/Button.tsx
 
 ### Pendientes Críticos
 - ⏳ src/app/AppContentWrapper.tsx (contenido principal - muy importante)

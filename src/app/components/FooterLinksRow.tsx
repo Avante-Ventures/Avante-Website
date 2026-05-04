@@ -40,6 +40,7 @@ export function FooterLinksRow({ title, links }: FooterLinksRowProps) {
       </h4>
       <div className="flex flex-col gap-2 mb-2">
         {links.map((link, index) => {
+          // Check if it's an internal link (starts with / and doesn't start with //)
           const isInternal = link.href.startsWith('/') && !link.href.startsWith('//');
           const Component = isInternal ? Link : 'a';
           const linkProps = isInternal ? { to: link.href } : { href: link.href };
