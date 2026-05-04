@@ -27,12 +27,11 @@ const TeamSectionComponent = () => {
     },
     {
       name: 'Felipe Moraes',
-      title: 'Co-Founder & Partner - Avante | Board Member WIR',
+      title: 'Co-Founder & Partner - Avante',
       image: imgFelipeMoraes,
       highlights: [
-        'Co-Founder and CEO of Bambú DCM',
-        'Serial entrepreneur in AI and insurtech',
-        'Extensive experience in venture building'
+        'Strategic Partner and Founder of Bamboo DCM',
+        'Board Member WIR'
       ],
       accentColor: '#F4A261'
     },
