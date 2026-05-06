@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Primary -->
-    <title>Avante Ventures — AI-native Venture Studio in Brazil</title>
-    <meta name="description" content="We co-found AI-native companies from scratch. Silicon Valley playbooks, Brazil-native execution. Built to compound for decades." />
-    <link rel="canonical" href="https://avanteventures.com/" />
+    <!-- Site-level baseline. Per-route title/description/canonical/OG-title/
+         OG-description/OG-url/twitter-title/twitter-description are injected
+         at runtime by react-helmet-async (src/app/components/SEOHelmet.tsx)
+         and captured at build time by the Puppeteer prerender. -->
+    <title>Avante Ventures</title>
+    <meta name="description" content="AI-native venture studio. Silicon Valley playbooks, Brazil-native execution." />
     <meta name="theme-color" content="#151E35" />
     <meta name="color-scheme" content="dark" />
 
@@ -18,12 +20,9 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
 
-    <!-- OpenGraph (Facebook, LinkedIn, WhatsApp) -->
+    <!-- OpenGraph site-level (overridable per page) -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://avanteventures.com/" />
     <meta property="og:site_name" content="Avante Ventures" />
-    <meta property="og:title" content="Avante Ventures — AI-native Venture Studio in Brazil" />
-    <meta property="og:description" content="We co-found AI-native companies from scratch. Silicon Valley playbooks, Brazil-native execution." />
     <meta property="og:image" content="https://avanteventures.com/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -31,11 +30,8 @@
     <meta property="og:locale" content="en_US" />
     <meta property="og:locale:alternate" content="pt_BR" />
 
-    <!-- Twitter Card -->
+    <!-- Twitter Card site-level -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://avanteventures.com/" />
-    <meta name="twitter:title" content="Avante Ventures — AI-native Venture Studio in Brazil" />
-    <meta name="twitter:description" content="We co-found AI-native companies from scratch. Silicon Valley playbooks, Brazil-native execution." />
     <meta name="twitter:image" content="https://avanteventures.com/og-image.png" />
 
     <!-- Hint search engines about indexing preferences -->

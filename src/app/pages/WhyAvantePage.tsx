@@ -1,24 +1,53 @@
 import { useLanguage } from "@/app/hooks/useLanguage";
 import { Navbar } from "@/app/components/Navbar";
 import { BackToTop } from "@/app/components/BackToTop";
+import { SEOHelmet } from "@/app/components/SEOHelmet";
 import { Link } from "react-router";
 import { useState } from "react";
 import comparisonChart from "figma:asset/37ee08c3bb79d5b7cd80ffc2853024534d044245.png";
 import returnsChart from "figma:asset/0a469bd800ea0caef4b2723b1776b2438a3aada4.png";
+
+const whyAvanteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "@id": "https://avanteventures.com/why-avante#article",
+  "headline": "Why Avante: The Venture Studio Advantage in Brazil",
+  "description": "Why venture studios outperform traditional VC: 50% annual returns from hands-on operational support, pre-traction capital, and Silicon Valley playbooks adapted for Brazil's service economy.",
+  "url": "https://avanteventures.com/why-avante",
+  "image": "https://avanteventures.com/og-image.png",
+  "inLanguage": "en",
+  "author": { "@id": "https://avanteventures.com/#organization" },
+  "publisher": { "@id": "https://avanteventures.com/#organization" },
+  "isPartOf": { "@id": "https://avanteventures.com/#website" },
+  "about": [
+    "Venture Studios",
+    "Brazil Startup Ecosystem",
+    "AI-Native Startups",
+    "Pre-traction Capital",
+    "Returns Comparison",
+  ],
+  "datePublished": "2026-01-01",
+};
 
 export default function WhyAvantePage() {
   const { t } = useLanguage();
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   return (
-    <div 
-      style={{ 
+    <div
+      style={{
         minHeight: '100vh',
         backgroundColor: 'var(--avante-background)',
         position: 'relative',
         overflow: 'hidden'
       }}
     >
+      <SEOHelmet
+        title="Why Avante: The Venture Studio Advantage in Brazil"
+        description="Why venture studios outperform traditional VC. 50% annual returns. Pre-traction capital + operational support compound. Silicon Valley playbooks for Brazil."
+        canonical="https://avanteventures.com/why-avante"
+        jsonLd={whyAvanteJsonLd}
+      />
       <Navbar />
       <BackToTop />
 

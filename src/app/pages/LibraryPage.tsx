@@ -1,6 +1,7 @@
 import { useLanguage } from "@/app/hooks/useLanguage";
 import { Navbar } from "@/app/components/Navbar";
 import { BackToTop } from "@/app/components/BackToTop";
+import { SEOHelmet } from "@/app/components/SEOHelmet";
 import { Link } from "react-router";
 import { useState } from "react";
 import { motion } from "motion/react";
@@ -188,15 +189,51 @@ export default function LibraryPage() {
     }, 500);
   };
 
+  // GEO-friendly schema: CollectionPage + ItemList of every published article.
+  // Lets LLMs cite specific titles even when the underlying article pages
+  // don't exist as standalone routes yet (they're listed inline on /library).
+  const libraryJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://avanteventures.com/library#collection",
+    "url": "https://avanteventures.com/library",
+    "name": "Avante Library: Insights, Research, Playbooks",
+    "description": "Insights, research reports, case studies, and playbooks on AI-native venture building, Brazil's service economy, and venture studio dynamics.",
+    "inLanguage": "en",
+    "publisher": { "@id": "https://avanteventures.com/#organization" },
+    "isPartOf": { "@id": "https://avanteventures.com/#website" },
+    "mainEntity": {
+      "@type": "ItemList",
+      "numberOfItems": libraryItems.length,
+      "itemListElement": libraryItems.map((item, i) => ({
+        "@type": "ListItem",
+        "position": i + 1,
+        "item": {
+          "@type": "Article",
+          "name": item.title,
+          "description": item.description,
+          "genre": item.type,
+          "datePublished": item.date,
+        },
+      })),
+    },
+  };
+
   return (
-    <div 
-      style={{ 
+    <div
+      style={{
         minHeight: '100vh',
         backgroundColor: 'var(--avante-background)',
         position: 'relative',
         overflow: 'hidden'
       }}
     >
+      <SEOHelmet
+        title="Library: Insights, Research, Playbooks on AI-native Venture Building"
+        description="Avante Library: research, case studies, and playbooks on venture studios, Brazil's AI market, and operating AI-native startups. 9+ articles."
+        canonical="https://avanteventures.com/library"
+        jsonLd={libraryJsonLd}
+      />
       <Navbar />
       <BackToTop />
 
