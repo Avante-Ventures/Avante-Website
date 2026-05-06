@@ -6,7 +6,9 @@
   "packageManager": "pnpm@11.0.4",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/prerender.mjs",
+    "build:vite-only": "vite build",
+    "prerender": "node scripts/prerender.mjs",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -71,6 +73,7 @@
   "devDependencies": {
     "@tailwindcss/vite": "4.1.12",
     "@vitejs/plugin-react": "4.7.0",
+    "puppeteer": "^24.42.0",
     "sharp": "^0.34.5",
     "tailwindcss": "4.1.12",
     "terser": "^5.46.2",
