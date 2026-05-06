@@ -1,17 +1,28 @@
 import { defineConfig } from 'vite'
 import path from 'path'
+import { existsSync } from 'node:fs'
 import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 
 
+// Resolves Figma Make's `figma:asset/<hash>.png` virtual imports to files in
+// src/assets/. Phase 4 enhancement: when a `.webp` sibling exists for the
+// requested PNG (created by scripts/optimize-images.mjs), serve that
+// instead — gives a 60-95% size reduction with no component-side changes.
+// The browser's Content-Type comes from the resolved file path so MIME
+// stays correct (image/webp).
 function figmaAssetResolver() {
   return {
     name: 'figma-asset-resolver',
     resolveId(id) {
-      if (id.startsWith('figma:asset/')) {
-        const filename = id.replace('figma:asset/', '')
-        return path.resolve(__dirname, 'src/assets', filename)
+      if (!id.startsWith('figma:asset/')) return
+      const filename = id.replace('figma:asset/', '')
+      const pngPath = path.resolve(__dirname, 'src/assets', filename)
+      if (filename.endsWith('.png')) {
+        const webpPath = pngPath.replace(/\.png$/, '.webp')
+        if (existsSync(webpPath)) return webpPath
       }
+      return pngPath
     },
   }
 }

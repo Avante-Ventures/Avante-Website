@@ -10,9 +10,16 @@
 
 import { createBrowserRouter, Outlet, Navigate, useParams } from "react-router"
 import HomePage from "./pages/HomePage.tsx"
-import WhyAvantePage from "./pages/WhyAvantePage.tsx"
-import LibraryPage from "./pages/LibraryPage.tsx"
 import { LanguageProvider, type Language } from "@/app/hooks/useLanguage"
+
+// HomePage stays in the main bundle (it's the LCP-critical entry route).
+// WhyAvantePage and LibraryPage are heavy (~30-40 KB JSX each + framer-motion)
+// and only loaded on demand. Saves ~150 KB from the initial bundle download
+// for users who never click into them.
+const WhyAvantePage = () =>
+  import('./pages/WhyAvantePage.tsx').then((m) => ({ Component: m.default }))
+const LibraryPage = () =>
+  import('./pages/LibraryPage.tsx').then((m) => ({ Component: m.default }))
 
 const SUPPORTED_LOCALES: Language[] = ['en', 'pt']
 const DEFAULT_LOCALE: Language = 'en'
@@ -50,8 +57,8 @@ export const router = createBrowserRouter([
     element: <LocaleLayout />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: "why-avante", element: <WhyAvantePage /> },
-      { path: "library", element: <LibraryPage /> },
+      { path: "why-avante", lazy: WhyAvantePage },
+      { path: "library", lazy: LibraryPage },
     ],
   },
 ])

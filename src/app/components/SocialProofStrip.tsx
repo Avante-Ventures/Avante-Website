@@ -1,11 +1,11 @@
 import { memo } from 'react';
-import bambooDcmLogo from '../../imports/image-6.png';
-import mahwayLogo from '../../imports/image.png';
-import siggaLogo from '../../imports/image-3.png';
-import softmaxLogo from '../../imports/image-1.png';
-import indineroLogo from '../../imports/image-2.png';
-import alphaLitLogo from '../../imports/image-5.png';
-import astonishingLabsLogo from '../../imports/image-4.png';
+import bambooDcmLogo from '../../imports/image-6.webp';
+import mahwayLogo from '../../imports/image.webp';
+import siggaLogo from '../../imports/image-3.webp';
+import softmaxLogo from '../../imports/image-1.webp';
+import indineroLogo from '../../imports/image-2.webp';
+import alphaLitLogo from '../../imports/image-5.webp';
+import astonishingLabsLogo from '../../imports/image-4.webp';
 
 interface Logo {
   src: string;
