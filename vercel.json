@@ -1,5 +1,6 @@
 {
   "framework": "vite",
+  "installCommand": "pnpm install --config.dangerously-allow-all-builds=true",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
