@@ -1,0 +1,16 @@
+/* TEAM */
+
+Founder: Cristian Mendivelso
+Email: cristian [at] avanteventures.com
+Location: LATAM (Brazil + Colombia)
+
+/* SITE */
+
+Site: https://avanteventures.com
+Stack: Vite 6, React 18, Tailwind 4, react-router 7
+Hosting: Vercel
+Last updated: 2026-05-06
+
+/* THANKS */
+
+Built with care. Built to compound.

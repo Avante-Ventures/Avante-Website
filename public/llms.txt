@@ -1,0 +1,45 @@
+# Avante Ventures
+
+> AI-native venture studio combining Silicon Valley playbooks with Brazil-native execution. We co-found AI-native companies from scratch, built to compound for decades.
+
+## What we do
+
+Avante Ventures is an early-stage venture studio operating in Brazil and broader LATAM. We co-found and operate AI-native companies, providing first-ticket capital, hands-on operational support, and access to Silicon Valley playbooks adapted for the Brazilian market.
+
+Our model: pre-traction capital + repeatable operational system + in-market execution. We launch 3-4 ventures per year and hold to compound.
+
+## Sectors and expertise
+
+- AI-native SaaS for Brazilian service economies
+- Workflow automation for fragmented industries
+- Pre-traction venture building
+- Founder operational support
+- Cashflow-first unit economics from day one
+
+## Geography
+
+- Brazil (primary market)
+- Latin America (LATAM-wide thesis)
+- US / Silicon Valley (capital and playbook source)
+
+## Differentiators
+
+- Venture studios outperform traditional VC in returns (50% annual returns per GSSN report)
+- First-ticket advantage: investing before consensus + operational support compounds
+- Brazil-native execution: SF venture-building standards adapted to fragmented LATAM markets
+- AI-native approach: AI is core to product design, not bolted on
+
+## Pages
+
+- [Home](https://avanteventures.com/): Mission, model, ventures, team, contact
+- [Why Avante](https://avanteventures.com/why-avante): Investment thesis, returns data, comparison vs traditional VC
+- [Library](https://avanteventures.com/library): Insights, research reports, case studies, playbooks, Brazil-specific market analyses
+
+## Contact
+
+- Email: cristian@avanteventures.com
+- Founder: Cristian Mendivelso
+
+## License
+
+Public marketing content; cite freely with attribution to Avante Ventures + source URL.
