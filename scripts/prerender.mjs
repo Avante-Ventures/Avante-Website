@@ -23,7 +23,14 @@ import { fileURLToPath } from 'node:url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const DIST = resolve(__dirname, '..', 'dist')
-const ROUTES = ['/', '/why-avante', '/library']
+// Phase 3: bilingual URL routing — 6 routes (3 paths × 2 locales).
+// Plus the apex `/` which redirects to /en (or /pt by browser detection)
+// at runtime; we still prerender it so crawlers without JS see the redirect.
+const ROUTES = [
+  '/',
+  '/en', '/en/why-avante', '/en/library',
+  '/pt', '/pt/why-avante', '/pt/library',
+]
 const PORT = 4179
 
 // ─────────────────────────────────────────────────────────────────────

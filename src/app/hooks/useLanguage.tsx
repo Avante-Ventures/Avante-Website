@@ -1,6 +1,7 @@
-import { createContext, useContext, useState, ReactNode, useMemo, useCallback } from 'react';
+import { createContext, useContext, ReactNode, useMemo, useCallback } from 'react';
+import { useLocation, useNavigate } from 'react-router';
 
-type Language = 'pt' | 'en';
+export type Language = 'pt' | 'en';
 
 interface LanguageContextType {
   language: Language;
@@ -611,18 +612,38 @@ const translations = {
   }
 };
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>('en');
+// Locale is now sourced from the URL (`/en/...` or `/pt/...`) — passed in
+// by routes.tsx via `<LocaleLayout>`. Toggling navigates to the same path
+// under the other locale prefix.
+//
+// Why URL-driven instead of state: Google + LLM crawlers index the URL,
+// not in-memory React state. State-only toggle is invisible to them.
+export function LanguageProvider({
+  children,
+  locale,
+}: {
+  children: ReactNode;
+  locale: Language;
+}) {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const setLanguage = useCallback((lang: Language) => {
+    if (lang === locale) return;
+    // Replace the leading /en or /pt with the target lang and keep the rest
+    const newPath = location.pathname.replace(/^\/(en|pt)/, `/${lang}`);
+    navigate(newPath || `/${lang}`, { replace: false });
+  }, [locale, location.pathname, navigate]);
 
   const t = useCallback((key: string): string => {
-    return translations[language][key] || key;
-  }, [language]);
+    return translations[locale][key] || key;
+  }, [locale]);
 
   const value = useMemo(() => ({
-    language,
+    language: locale,
     setLanguage,
     t
-  }), [language, t]);
+  }), [locale, setLanguage, t]);
 
   return (
     <LanguageContext.Provider value={value}>

@@ -7,31 +7,45 @@ import { useState } from "react";
 import comparisonChart from "figma:asset/37ee08c3bb79d5b7cd80ffc2853024534d044245.png";
 import returnsChart from "figma:asset/0a469bd800ea0caef4b2723b1776b2438a3aada4.png";
 
-const whyAvanteJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "@id": "https://avanteventures.com/why-avante#article",
-  "headline": "Why Avante: The Venture Studio Advantage in Brazil",
-  "description": "Why venture studios outperform traditional VC: 50% annual returns from hands-on operational support, pre-traction capital, and Silicon Valley playbooks adapted for Brazil's service economy.",
-  "url": "https://avanteventures.com/why-avante",
-  "image": "https://avanteventures.com/og-image.png",
-  "inLanguage": "en",
-  "author": { "@id": "https://avanteventures.com/#organization" },
-  "publisher": { "@id": "https://avanteventures.com/#organization" },
-  "isPartOf": { "@id": "https://avanteventures.com/#website" },
-  "about": [
-    "Venture Studios",
-    "Brazil Startup Ecosystem",
-    "AI-Native Startups",
-    "Pre-traction Capital",
-    "Returns Comparison",
-  ],
-  "datePublished": "2026-01-01",
-};
+const SEO_COPY = {
+  en: {
+    title: "Why Avante: The Venture Studio Advantage in Brazil",
+    description: "Why venture studios outperform traditional VC. 50% annual returns. Pre-traction capital + operational support compound. Silicon Valley playbooks for Brazil.",
+    inLanguage: "en",
+  },
+  pt: {
+    title: "Por Que Avante: A Vantagem do Venture Studio no Brasil",
+    description: "Por que venture studios superam VC tradicional. 50% de retornos anuais. Capital pré-tração + suporte operacional compõem. Playbooks do Vale para o Brasil.",
+    inLanguage: "pt-BR",
+  },
+} as const;
 
 export default function WhyAvantePage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+  const copy = SEO_COPY[language];
+
+  const whyAvanteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": `https://avanteventures.com/${language}/why-avante#article`,
+    "headline": copy.title,
+    "description": copy.description,
+    "url": `https://avanteventures.com/${language}/why-avante`,
+    "image": "https://avanteventures.com/og-image.png",
+    "inLanguage": copy.inLanguage,
+    "author": { "@id": "https://avanteventures.com/#organization" },
+    "publisher": { "@id": "https://avanteventures.com/#organization" },
+    "isPartOf": { "@id": "https://avanteventures.com/#website" },
+    "about": [
+      "Venture Studios",
+      "Brazil Startup Ecosystem",
+      "AI-Native Startups",
+      "Pre-traction Capital",
+      "Returns Comparison",
+    ],
+    "datePublished": "2026-01-01",
+  };
 
   return (
     <div
@@ -43,9 +57,9 @@ export default function WhyAvantePage() {
       }}
     >
       <SEOHelmet
-        title="Why Avante: The Venture Studio Advantage in Brazil"
-        description="Why venture studios outperform traditional VC. 50% annual returns. Pre-traction capital + operational support compound. Silicon Valley playbooks for Brazil."
-        canonical="https://avanteventures.com/why-avante"
+        title={copy.title}
+        description={copy.description}
+        pathname="/why-avante"
         jsonLd={whyAvanteJsonLd}
       />
       <Navbar />
@@ -95,9 +109,9 @@ export default function WhyAvantePage() {
         
         {/* Hero Section */}
         <div style={{ marginBottom: 'var(--avante-space-20)' }}>
-          <Link 
-            to="/" 
-            style={{ 
+          <Link
+            to={`/${language}`}
+            style={{
               display: 'inline-flex',
               alignItems: 'center',
               gap: 'var(--avante-space-2)',
@@ -943,7 +957,7 @@ export default function WhyAvantePage() {
             </p>
 
             <Link
-              to="/"
+              to={`/${language}`}
               style={{
                 display: 'inline-block',
                 padding: '18px 36px',

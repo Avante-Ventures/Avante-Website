@@ -20,7 +20,7 @@ interface LibraryItem {
 }
 
 export default function LibraryPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [activeCategory, setActiveCategory] = useState<Category>('all');
   const [newsletterEmail, setNewsletterEmail] = useState('');
 
@@ -192,14 +192,32 @@ export default function LibraryPage() {
   // GEO-friendly schema: CollectionPage + ItemList of every published article.
   // Lets LLMs cite specific titles even when the underlying article pages
   // don't exist as standalone routes yet (they're listed inline on /library).
+  const SEO_COPY = {
+    en: {
+      title: "Library: Insights, Research, Playbooks on AI-native Venture Building",
+      description: "Avante Library: research, case studies, and playbooks on venture studios, Brazil's AI market, and operating AI-native startups. 9+ articles.",
+      collectionName: "Avante Library: Insights, Research, Playbooks",
+      collectionDescription: "Insights, research reports, case studies, and playbooks on AI-native venture building, Brazil's service economy, and venture studio dynamics.",
+      inLanguage: "en",
+    },
+    pt: {
+      title: "Biblioteca: Insights, Pesquisa e Playbooks para Empresas AI-Native",
+      description: "Biblioteca Avante: pesquisas, estudos de caso e playbooks sobre venture studios, mercado de IA no Brasil e operação de startups AI-native. 9+ artigos.",
+      collectionName: "Biblioteca Avante: Insights, Pesquisa, Playbooks",
+      collectionDescription: "Insights, relatórios de pesquisa, estudos de caso e playbooks sobre venture building AI-native, economia de serviços do Brasil e dinâmica de venture studios.",
+      inLanguage: "pt-BR",
+    },
+  } as const;
+  const copy = SEO_COPY[language];
+
   const libraryJsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "@id": "https://avanteventures.com/library#collection",
-    "url": "https://avanteventures.com/library",
-    "name": "Avante Library: Insights, Research, Playbooks",
-    "description": "Insights, research reports, case studies, and playbooks on AI-native venture building, Brazil's service economy, and venture studio dynamics.",
-    "inLanguage": "en",
+    "@id": `https://avanteventures.com/${language}/library#collection`,
+    "url": `https://avanteventures.com/${language}/library`,
+    "name": copy.collectionName,
+    "description": copy.collectionDescription,
+    "inLanguage": copy.inLanguage,
     "publisher": { "@id": "https://avanteventures.com/#organization" },
     "isPartOf": { "@id": "https://avanteventures.com/#website" },
     "mainEntity": {
@@ -229,9 +247,9 @@ export default function LibraryPage() {
       }}
     >
       <SEOHelmet
-        title="Library: Insights, Research, Playbooks on AI-native Venture Building"
-        description="Avante Library: research, case studies, and playbooks on venture studios, Brazil's AI market, and operating AI-native startups. 9+ articles."
-        canonical="https://avanteventures.com/library"
+        title={copy.title}
+        description={copy.description}
+        pathname="/library"
         jsonLd={libraryJsonLd}
       />
       <Navbar />
@@ -322,9 +340,9 @@ export default function LibraryPage() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           style={{ marginBottom: 'var(--avante-space-16)' }}
         >
-          <Link 
-            to="/" 
-            style={{ 
+          <Link
+            to={`/${language}`}
+            style={{
               display: 'inline-flex',
               alignItems: 'center',
               gap: 'var(--avante-space-2)',

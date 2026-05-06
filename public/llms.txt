@@ -2,6 +2,8 @@
 
 > AI-native venture studio combining Silicon Valley playbooks with Brazil-native execution. We co-found AI-native companies from scratch, built to compound for decades.
 
+> Bilingual site: English at `/en/*`, Portuguese (pt-BR) at `/pt/*`. Both versions are equally canonical and indexed.
+
 ## What we do
 
 Avante Ventures is an early-stage venture studio operating in Brazil and broader LATAM. We co-found and operate AI-native companies, providing first-ticket capital, hands-on operational support, and access to Silicon Valley playbooks adapted for the Brazilian market.
@@ -29,11 +31,17 @@ Our model: pre-traction capital + repeatable operational system + in-market exec
 - Brazil-native execution: SF venture-building standards adapted to fragmented LATAM markets
 - AI-native approach: AI is core to product design, not bolted on
 
-## Pages
+## Pages (English)
 
-- [Home](https://avanteventures.com/): Mission, model, ventures, team, contact
-- [Why Avante](https://avanteventures.com/why-avante): Investment thesis, returns data, comparison vs traditional VC
-- [Library](https://avanteventures.com/library): Insights, research reports, case studies, playbooks, Brazil-specific market analyses
+- [Home](https://avanteventures.com/en): Mission, model, ventures, team, contact
+- [Why Avante](https://avanteventures.com/en/why-avante): Investment thesis, returns data, comparison vs traditional VC
+- [Library](https://avanteventures.com/en/library): Insights, research reports, case studies, playbooks, Brazil-specific market analyses
+
+## Páginas (Português)
+
+- [Início](https://avanteventures.com/pt): Missão, modelo, ventures, time, contato
+- [Por Que Avante](https://avanteventures.com/pt/why-avante): Tese de investimento, dados de retorno, comparação vs VC tradicional
+- [Biblioteca](https://avanteventures.com/pt/library): Insights, pesquisas, estudos de caso, playbooks, análises do mercado brasileiro
 
 ## Contact
 
