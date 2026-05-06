@@ -1,16 +1,20 @@
-// Post-build prerender: launches Puppeteer against a tiny static SPA server
-// pointed at dist/, navigates each route, and writes the post-hydration HTML
-// to dist/<route>/index.html. Vercel will serve those static files directly,
-// so crawlers (Googlebot, GPTBot, ClaudeBot, PerplexityBot) see fully-rendered
-// content without executing JavaScript.
+// Post-build prerender: launches headless Chromium against a tiny static SPA
+// server pointed at dist/, navigates each route, and writes the post-hydration
+// HTML to dist/<route>/index.html. Vercel will serve those static files
+// directly, so crawlers (Googlebot, GPTBot, ClaudeBot, PerplexityBot) see
+// fully-rendered content without executing JavaScript.
 //
-// Run automatically as part of `pnpm build` (see package.json scripts).
+// Cross-environment Chromium strategy:
+//   - On Vercel build (`VERCEL=1`): use @sparticuz/chromium (stripped binary
+//     that ships its own libnspr4 etc., works in Vercel's bare container)
+//   - Locally on macOS: use installed Google Chrome (`/Applications/...`)
+//   - Locally on Linux: probe well-known chromium / google-chrome paths
 //
-// Why this over vite-react-ssg: no refactor of routes.tsx, no peer-dep
-// mismatch with react-router 7, captures real post-hydration DOM (Three.js,
-// Framer Motion etc all settled).
+// Why not full puppeteer: bundles ~150MB of Chromium that fails on Vercel's
+// build container with "libnspr4.so: cannot open shared object file".
 
-import puppeteer from 'puppeteer'
+import puppeteer from 'puppeteer-core'
+import chromium from '@sparticuz/chromium'
 import { createServer } from 'node:http'
 import { readFile, writeFile, mkdir } from 'node:fs/promises'
 import { existsSync } from 'node:fs'
@@ -20,12 +24,56 @@ import { fileURLToPath } from 'node:url'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const DIST = resolve(__dirname, '..', 'dist')
 const ROUTES = ['/', '/why-avante', '/library']
-const PORT = 4179 // arbitrary free-ish port
+const PORT = 4179
 
 // ─────────────────────────────────────────────────────────────────────
-// Tiny SPA static server: serves files from DIST, falls back to /index.html
-// for unknown paths so the React Router takes over. Identical contract to
-// what Vercel will do at the edge once vercel.json rewrites kick in.
+// Resolve a Chromium binary path that works in this environment
+// ─────────────────────────────────────────────────────────────────────
+
+const KNOWN_LOCAL_PATHS = [
+  // macOS
+  '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+  '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary',
+  '/Applications/Chromium.app/Contents/MacOS/Chromium',
+  '/Applications/Brave Browser.app/Contents/MacOS/Brave Browser',
+  // Linux
+  '/usr/bin/google-chrome',
+  '/usr/bin/google-chrome-stable',
+  '/usr/bin/chromium',
+  '/usr/bin/chromium-browser',
+  '/snap/bin/chromium',
+]
+
+async function resolveChromium() {
+  // Vercel / generic CI: use Sparticuz
+  if (process.env.VERCEL || process.env.CI) {
+    return {
+      executablePath: await chromium.executablePath(),
+      args: chromium.args,
+      headless: chromium.headless,
+    }
+  }
+
+  // Local: probe known install paths
+  for (const path of KNOWN_LOCAL_PATHS) {
+    if (existsSync(path)) {
+      return {
+        executablePath: path,
+        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+        headless: true,
+      }
+    }
+  }
+
+  throw new Error(
+    'No Chromium binary found at known paths. Install Google Chrome ' +
+    'locally, or set VERCEL=1 to use @sparticuz/chromium.'
+  )
+}
+
+// ─────────────────────────────────────────────────────────────────────
+// Tiny SPA static server: SPA fallback so React Router takes over for
+// extension-less paths (matches Vercel rewrite contract).
 // ─────────────────────────────────────────────────────────────────────
 
 const MIME = {
@@ -47,9 +95,6 @@ function makeServer() {
     const urlPath = decodeURIComponent(req.url.split('?')[0])
     let filePath = join(DIST, urlPath === '/' ? 'index.html' : urlPath)
 
-    // SPA fallback: if path has no extension and the file doesn't exist,
-    // serve index.html. Lets Puppeteer hit /why-avante and React Router
-    // resolves it.
     if (!extname(filePath) && !existsSync(filePath)) {
       filePath = join(DIST, 'index.html')
     } else if (!existsSync(filePath)) {
@@ -70,17 +115,17 @@ function makeServer() {
 }
 
 // ─────────────────────────────────────────────────────────────────────
-// Main pipeline
+// Pipeline
 // ─────────────────────────────────────────────────────────────────────
+
+const launchOpts = await resolveChromium()
+console.log(`🌐 Chromium: ${launchOpts.executablePath}`)
 
 const server = makeServer()
 await new Promise((r) => server.listen(PORT, r))
 console.log(`📡 Static server on http://localhost:${PORT}`)
 
-const browser = await puppeteer.launch({
-  headless: true,
-  args: ['--no-sandbox', '--disable-setuid-sandbox'],
-})
+const browser = await puppeteer.launch(launchOpts)
 
 const errors = []
 
@@ -95,20 +140,17 @@ for (const route of ROUTES) {
 
     await page.goto(url, { waitUntil: 'networkidle0', timeout: 30000 })
 
-    // Wait until React has actually mounted real content into #root.
-    // The shell ships with <div id="root"></div> empty; once hydrated it has
-    // children. This guards against capturing a blank shell.
+    // Wait until React mounts real content into #root.
     await page.waitForFunction(
       () => document.getElementById('root')?.children.length > 0,
       { timeout: 10000 }
     )
 
-    // Small delay to let lazy effects (animations, deferred loads) settle.
+    // Settle window for lazy effects.
     await new Promise((r) => setTimeout(r, 500))
 
     const html = await page.content()
 
-    // Write to dist/<route>/index.html (or dist/index.html for "/")
     const outDir = route === '/' ? DIST : join(DIST, route)
     if (route !== '/') await mkdir(outDir, { recursive: true })
     const outFile = join(outDir, 'index.html')
