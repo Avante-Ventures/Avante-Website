@@ -136,41 +136,52 @@ const browser = await puppeteer.launch(launchOpts)
 
 const errors = []
 
-for (const route of ROUTES) {
-  const url = `http://localhost:${PORT}${route}`
-  console.log(`→ Rendering ${route}`)
-  const page = await browser.newPage()
+// Render a single route with up to 2 attempts. Vercel's Sparticuz Chromium
+// is slower than local Chrome and occasionally trips the hydration sentinel.
+// One retry on a fresh page is enough — true hangs don't recover.
+async function renderRoute(route) {
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    const page = await browser.newPage()
+    try {
+      await page.setViewport({ width: 1440, height: 900, deviceScaleFactor: 1 })
+      page.on('pageerror', (e) => errors.push({ route, err: String(e) }))
 
-  try {
-    await page.setViewport({ width: 1440, height: 900, deviceScaleFactor: 1 })
-    page.on('pageerror', (e) => errors.push({ route, err: String(e) }))
+      const url = `http://localhost:${PORT}${route}`
+      await page.goto(url, { waitUntil: 'networkidle0', timeout: 60000 })
 
-    await page.goto(url, { waitUntil: 'networkidle0', timeout: 30000 })
+      // Wait until React mounts real content into #root. 30s tolerates
+      // Vercel build's slower Chromium + lazy chunk loads on first nav.
+      await page.waitForFunction(
+        () => document.getElementById('root')?.children.length > 0,
+        { timeout: 30000 }
+      )
 
-    // Wait until React mounts real content into #root.
-    await page.waitForFunction(
-      () => document.getElementById('root')?.children.length > 0,
-      { timeout: 10000 }
-    )
+      // Settle window for lazy effects (Framer Motion poses, etc.)
+      await new Promise((r) => setTimeout(r, 500))
 
-    // Settle window for lazy effects.
-    await new Promise((r) => setTimeout(r, 500))
+      const html = await page.content()
 
-    const html = await page.content()
+      const outDir = route === '/' ? DIST : join(DIST, route)
+      if (route !== '/') await mkdir(outDir, { recursive: true })
+      const outFile = join(outDir, 'index.html')
+      await writeFile(outFile, html)
 
-    const outDir = route === '/' ? DIST : join(DIST, route)
-    if (route !== '/') await mkdir(outDir, { recursive: true })
-    const outFile = join(outDir, 'index.html')
-    await writeFile(outFile, html)
-
-    const sizeKB = (Buffer.byteLength(html) / 1024).toFixed(1)
-    console.log(`  ✓ ${outFile.replace(DIST, 'dist')}  (${sizeKB} KB)`)
-  } catch (err) {
-    errors.push({ route, err: String(err) })
-    console.log(`  ✗ FAILED: ${err.message}`)
-  } finally {
-    await page.close()
+      const sizeKB = (Buffer.byteLength(html) / 1024).toFixed(1)
+      console.log(`  ✓ ${outFile.replace(DIST, 'dist')}  (${sizeKB} KB)`)
+      return // success
+    } catch (err) {
+      const tag = attempt === 1 ? 'retry' : 'FAILED'
+      console.log(`  ${attempt === 1 ? '↻' : '✗'} ${tag}: ${err.message}`)
+      if (attempt === 2) errors.push({ route, err: String(err) })
+    } finally {
+      await page.close()
+    }
   }
+}
+
+for (const route of ROUTES) {
+  console.log(`→ Rendering ${route}`)
+  await renderRoute(route)
 }
 
 await browser.close()
