@@ -1,7 +1,10 @@
 import { useLanguage } from "@/app/hooks/useLanguage";
 import { Navbar } from "@/app/components/Navbar";
+import { Footer } from "@/app/components/Footer";
 import { BackToTop } from "@/app/components/BackToTop";
 import { SEOHelmet } from "@/app/components/SEOHelmet";
+import { SectionMasthead } from "@/app/components/SectionMasthead";
+import { PortfolioStrip } from "@/app/components/PortfolioStrip";
 import { Link } from "react-router";
 import { useState } from "react";
 import { motion } from "motion/react";
@@ -295,79 +298,53 @@ export default function LibraryPage() {
             <span>←</span> {t('library.backhome')}
           </Link>
 
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.5 }}
-            style={{ 
-              display: 'inline-block',
-              padding: '8px 14px',
-              backgroundColor: 'rgba(66, 70, 140, 0.12)',
-              border: '1px solid rgba(66, 70, 140, 0.25)',
-              borderRadius: 'var(--avante-radius-8)',
-              marginBottom: 'var(--avante-space-6)',
-              fontSize: '11px',
-              fontWeight: 'var(--font-weight-semibold)',
-              color: 'rgba(66, 70, 140, 1)',
-              letterSpacing: '0.08em',
-              textTransform: 'uppercase'
-            }}
-          >
-            {t('library.hero.badge')}
-          </motion.div>
+          <SectionMasthead
+            eyebrow={t('library.hero.badge')}
+            title={t('library.hero.title')}
+            description={t('library.hero.subtitle')}
+          />
 
-          <h1 
-            style={{
-              fontSize: 'clamp(36px, 6vw, 56px)',
-              fontWeight: 'var(--font-weight-medium)',
-              color: 'var(--avante-text-primary)',
-              lineHeight: '1.15',
-              letterSpacing: '-0.02em',
-              marginBottom: 'var(--avante-space-6)',
-              maxWidth: '900px'
-            }}
-          >
-            {t('library.hero.title')}
-          </h1>
-
-          <p 
-            style={{ 
-              fontSize: '18px',
-              color: 'var(--avante-text-secondary)',
-              maxWidth: '800px',
-              lineHeight: '1.7',
-              marginBottom: 'var(--avante-space-6)' }}
-          >
-            {t('library.hero.subtitle')}
-          </p>
-
-          <div 
+          <div
             style={{
               display: 'flex',
               gap: 'var(--avante-space-3)',
               alignItems: 'center',
-              flexWrap: 'wrap'
+              flexWrap: 'wrap',
+              marginBottom: 'var(--avante-space-6)',
             }}
           >
-            <span style={{ 
-              fontSize: '13px', 
-              color: 'var(--avante-text-muted)',
-              display: 'flex',
-              alignItems: 'center',
-              gap: 'var(--avante-space-2)',
-              padding: '6px 12px',
-              backgroundColor: 'rgba(255, 255, 255, 0.03)',
-              borderRadius: 'var(--avante-radius-8)',
-              border: '1px solid rgba(255, 255, 255, 0.08)'
-            }}>
-              <span style={{ 
-                width: '6px', 
-                height: '6px', 
-                borderRadius: '50%',
-                backgroundColor: '#F9B437'
-              }} />
+            <span
+              style={{
+                fontSize: '13px',
+                color: 'var(--avante-text-muted)',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 'var(--avante-space-2)',
+                padding: '6px 12px',
+                backgroundColor: 'rgba(255, 255, 255, 0.03)',
+                borderRadius: 'var(--avante-radius-8)',
+                border: '1px solid rgba(255, 255, 255, 0.08)',
+              }}
+            >
+              <span
+                style={{
+                  width: '6px',
+                  height: '6px',
+                  borderRadius: '50%',
+                  backgroundColor: '#F9B437',
+                }}
+              />
               {t('library.hero.stats')}
             </span>
+          </div>
+
+          {/* Portfolio strip — discoverability + social proof */}
+          <div style={{ marginTop: 'var(--avante-space-8)' }}>
+            <PortfolioStrip
+              label={language === 'pt' ? 'Portfólio do Studio' : 'Studio Portfolio'}
+              viewAllHref={`/${language}/portfolio`}
+              compact
+            />
           </div>
         </motion.div>
 
@@ -839,6 +816,8 @@ export default function LibraryPage() {
         </motion.section>
 
       </div>
+
+      <Footer />
 
       <style>{`
         @keyframes pulse {

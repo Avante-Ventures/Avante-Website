@@ -1,7 +1,10 @@
 import { useLanguage } from "@/app/hooks/useLanguage";
 import { Navbar } from "@/app/components/Navbar";
+import { Footer } from "@/app/components/Footer";
 import { BackToTop } from "@/app/components/BackToTop";
 import { SEOHelmet } from "@/app/components/SEOHelmet";
+import { SectionMasthead } from "@/app/components/SectionMasthead";
+import { PortfolioStrip } from "@/app/components/PortfolioStrip";
 import { Link } from "react-router";
 import { useState } from "react";
 import comparisonChart from "figma:asset/37ee08c3bb79d5b7cd80ffc2853024534d044245.png";
@@ -127,47 +130,11 @@ export default function WhyAvantePage() {
             <span>←</span> {t('whyavante.backhome')}
           </Link>
 
-          <div style={{ 
-            display: 'inline-block',
-            padding: '8px 16px',
-            backgroundColor: 'rgba(249, 180, 55, 0.1)',
-            border: '1px solid rgba(249, 180, 55, 0.2)',
-            borderRadius: 'var(--avante-radius-8)',
-            marginBottom: 'var(--avante-space-6)',
-            fontSize: '12px',
-            fontWeight: 'var(--font-weight-medium)',
-            color: 'rgba(249, 180, 55, 0.9)',
-            letterSpacing: '0.05em',
-            textTransform: 'uppercase'
-          }}>
-            {t('whyavante.hero.badge')}
-          </div>
-
-          <h1 
-            style={{
-              fontSize: 'clamp(48px, 7vw, 84px)',
-              fontWeight: 'var(--font-weight-medium)',
-              color: 'var(--avante-text-primary)',
-              lineHeight: '1.05',
-              letterSpacing: '-0.03em',
-              marginBottom: 'var(--avante-space-8)',
-              maxWidth: '1000px'
-            }}
-          >
-            {t('whyavante.hero.title')}
-          </h1>
-
-          <p 
-            style={{ 
-              fontSize: '20px',
-              color: 'var(--avante-text-secondary)',
-              maxWidth: '800px',
-              lineHeight: '1.7',
-              marginBottom: 'var(--avante-space-12)'
-            }}
-          >
-            {t('whyavante.hero.subtitle')}
-          </p>
+          <SectionMasthead
+            eyebrow={t('whyavante.hero.badge')}
+            title={t('whyavante.hero.title')}
+            description={t('whyavante.hero.subtitle')}
+          />
 
           {/* Key Stats Row */}
           <div style={{ 
@@ -221,6 +188,15 @@ export default function WhyAvantePage() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Portfolio strip — social proof under the hero */}
+          <div style={{ marginTop: 'var(--avante-space-12)' }}>
+            <PortfolioStrip
+              label={t('Portfolio includes', 'Portfólio inclui')}
+              viewAllHref={`/${language}/portfolio`}
+              bordered={false}
+            />
           </div>
         </div>
 
@@ -987,6 +963,8 @@ export default function WhyAvantePage() {
         </section>
 
       </div>
+
+      <Footer />
     </div>
   );
 }
