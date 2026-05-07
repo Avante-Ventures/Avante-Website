@@ -5,11 +5,15 @@ import { SEOHelmet } from "@/app/components/SEOHelmet";
 import { Link } from "react-router";
 import { useState } from "react";
 import { motion } from "motion/react";
+import { articles, type Category as ArticleCategory } from "@/app/data/articles";
 
-type Category = 'all' | 'insights' | 'research' | 'casestudies' | 'playbooks' | 'brazil' | 'ai';
+type Category = 'all' | ArticleCategory;
 
+// LibraryItem is derived from the articles data file (single source of truth).
+// Title/description are localized at render time via article[language].
 interface LibraryItem {
   id: string;
+  slug: string;
   title: string;
   description: string;
   category: Category;
@@ -17,6 +21,7 @@ interface LibraryItem {
   readTime: string;
   featured?: boolean;
   date?: string;
+  isPublished: boolean;
 }
 
 export default function LibraryPage() {
@@ -24,92 +29,18 @@ export default function LibraryPage() {
   const [activeCategory, setActiveCategory] = useState<Category>('all');
   const [newsletterEmail, setNewsletterEmail] = useState('');
 
-  const libraryItems: LibraryItem[] = [
-    {
-      id: '1',
-      title: 'Why Venture Studios Outperform Traditional VC',
-      description: 'Deep dive into the data: how hands-on execution and pre-traction capital create superior returns across all asset classes.',
-      category: 'insights',
-      type: 'Research Report',
-      readTime: '12 min',
-      featured: true,
-      date: 'Jan 2026'
-    },
-    {
-      id: '2',
-      title: 'The First Ticket Advantage: A Framework',
-      description: 'Why investing before consensus forms—combined with operational support—creates compounding returns and strategic control.',
-      category: 'playbooks',
-      type: 'Playbook',
-      readTime: '8 min',
-      featured: true,
-      date: 'Jan 2026'
-    },
-    {
-      id: '3',
-      title: 'Brazil AI Market Report 2026',
-      description: 'Service-heavy industries, low product saturation, and AI adoption creating generational opportunities in Latin America\'s largest economy.',
-      category: 'brazil',
-      type: 'Market Report',
-      readTime: '15 min',
-      featured: true,
-      date: 'Jan 2026'
-    },
-    {
-      id: '4',
-      title: 'Building AI-Native Companies: The Avante Playbook',
-      description: 'Our repeatable system for launching 3-4 ventures per year: from research to traction to compounding.',
-      category: 'playbooks',
-      type: 'Playbook',
-      readTime: '10 min',
-      date: 'Dec 2025'
-    },
-    {
-      id: '5',
-      title: 'Case Study: From Idea to Cashflow in 90 Days',
-      description: 'How we co-built an AI workflow automation tool in a fragmented service industry—proving unit economics in 12 weeks.',
-      category: 'casestudies',
-      type: 'Case Study',
-      readTime: '7 min',
-      date: 'Dec 2025'
-    },
-    {
-      id: '6',
-      title: 'Unit Economics 101: LTV:CAC from Day One',
-      description: 'Why cashflow-first businesses compound, and how to prove unit economics before scaling.',
-      category: 'insights',
-      type: 'Article',
-      readTime: '6 min',
-      date: 'Nov 2025'
-    },
-    {
-      id: '7',
-      title: 'The Operator\'s Guide to AI Automation',
-      description: 'Identifying workflows where AI creates 10x advantages—a framework for domain experts building AI-native products.',
-      category: 'ai',
-      type: 'Guide',
-      readTime: '9 min',
-      date: 'Nov 2025'
-    },
-    {
-      id: '8',
-      title: 'Why Brazil\'s Service Economy is Ripe for Disruption',
-      description: 'Manual workflows, fragmented industries, and low software penetration create massive opportunities for AI automation.',
-      category: 'brazil',
-      type: 'Analysis',
-      readTime: '11 min',
-      date: 'Oct 2025'
-    },
-    {
-      id: '9',
-      title: 'Global Venture Studio Data: 50% Annual Returns',
-      description: 'GSSN Report breakdown: why venture studios lead all asset classes and what this means for emerging markets.',
-      category: 'research',
-      type: 'Data Report',
-      readTime: '14 min',
-      date: 'Oct 2025'
-    }
-  ];
+  const libraryItems: LibraryItem[] = articles.map((a, i) => ({
+    id: String(i + 1),
+    slug: a.slug,
+    title: a[language].title,
+    description: a[language].description,
+    category: a.category,
+    type: a.type,
+    readTime: a.readTime,
+    featured: a.featured,
+    date: a.date,
+    isPublished: a.isPublished,
+  }));
 
   const categories = [
     { 
@@ -515,25 +446,29 @@ export default function LibraryPage() {
             const categoryColor = getCategoryColor(item.category);
             const categoryIcon = getCategoryIcon(item.category);
             return (
-              <motion.div
+              <Link
                 key={item.id}
+                to={`/${language}/library/${item.slug}`}
+                style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}
+              >
+              <motion.div
                 layout
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ 
+                transition={{
                   delay: index * 0.05,
                   duration: 0.5,
                   type: "spring",
                   stiffness: 100
                 }}
-                whileHover={{ 
+                whileHover={{
                   y: -8,
                   transition: { duration: 0.2 }
                 }}
                 style={{
                   padding: 'clamp(var(--avante-space-6), 5vw, var(--avante-space-8))',
-                  background: item.featured 
+                  background: item.featured
                     ? `linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%)`
                     : 'rgba(255, 255, 255, 0.02)',
                   border: item.featured
@@ -708,6 +643,7 @@ export default function LibraryPage() {
                   </motion.div>
                 </div>
               </motion.div>
+              </Link>
             );
           })}</motion.div>
 

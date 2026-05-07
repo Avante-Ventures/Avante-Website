@@ -399,6 +399,54 @@ export function AppContent() {
             <TeamSection />
           </ScrollRevealSection>
 
+          {/* Behind the Scenes — placeholder for future team-working photos.
+              Renders 4 dimmed slots with a subtle "coming soon" treatment.
+              Replace each <BehindSlot /> with an <img> when assets land. */}
+          <ScrollRevealSection
+            className="py-[48px] md:py-[64px] relative"
+            style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}
+          >
+            <div style={{ textAlign: 'center', marginBottom: 'var(--avante-space-6)' }}>
+              <SectionHeader
+                title="Behind the Scenes"
+                description="Photos from the studio coming soon."
+              />
+            </div>
+            <div
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+                gap: '16px',
+                maxWidth: '1100px',
+                margin: '0 auto',
+                padding: '0 var(--avante-space-4)',
+              }}
+            >
+              {[1, 2, 3, 4].map((i) => (
+                <div
+                  key={i}
+                  style={{
+                    aspectRatio: '4 / 3',
+                    borderRadius: '12px',
+                    background:
+                      'linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%)',
+                    border: '1px dashed rgba(255, 255, 255, 0.12)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    color: 'rgba(255, 255, 255, 0.25)',
+                    fontSize: '12px',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.12em',
+                    fontWeight: 600,
+                  }}
+                >
+                  Slot {i}
+                </div>
+              ))}
+            </div>
+          </ScrollRevealSection>
+
           <ScrollRevealSection
             className="py-[48px] md:py-[64px] relative"
             style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}

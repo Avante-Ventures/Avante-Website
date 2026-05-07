@@ -2,21 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- /en home -->
+  <!-- Home (en + pt) -->
   <url>
     <loc>https://avanteventures.com/en</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en"/>
   </url>
-
-  <!-- /pt home -->
   <url>
     <loc>https://avanteventures.com/pt</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en"/>
@@ -24,21 +22,19 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en"/>
   </url>
 
-  <!-- /en/why-avante -->
+  <!-- Why Avante (en + pt) -->
   <url>
     <loc>https://avanteventures.com/en/why-avante</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/why-avante"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/why-avante"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/why-avante"/>
   </url>
-
-  <!-- /pt/why-avante -->
   <url>
     <loc>https://avanteventures.com/pt/why-avante</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/why-avante"/>
@@ -46,26 +42,209 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/why-avante"/>
   </url>
 
-  <!-- /en/library -->
+  <!-- Library index (en + pt) -->
   <url>
     <loc>https://avanteventures.com/en/library</loc>
-    <lastmod>2026-05-06</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library"/>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library"/>
   </url>
 
-  <!-- /pt/library -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <!-- Library articles (9 articles × 2 locales = 18 entries)              -->
+  <!-- 3 published full-length, 6 stubs being drafted                      -->
+  <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+
+  <!-- 1. Why Venture Studios Outperform Traditional VC (PUBLISHED) -->
   <url>
-    <loc>https://avanteventures.com/pt/library</loc>
-    <lastmod>2026-05-06</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://avanteventures.com/en/library/venture-studios-outperform-traditional-vc</loc>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/venture-studios-outperform-traditional-vc"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/venture-studios-outperform-traditional-vc"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/venture-studios-outperform-traditional-vc"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/venture-studios-outperform-traditional-vc</loc>
+    <lastmod>2026-01-18</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/venture-studios-outperform-traditional-vc"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/venture-studios-outperform-traditional-vc"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/venture-studios-outperform-traditional-vc"/>
+  </url>
+
+  <!-- 2. The First Ticket Advantage (PUBLISHED) -->
+  <url>
+    <loc>https://avanteventures.com/en/library/first-ticket-advantage-framework</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/first-ticket-advantage-framework"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/first-ticket-advantage-framework"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/first-ticket-advantage-framework"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/first-ticket-advantage-framework</loc>
+    <lastmod>2026-01-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/first-ticket-advantage-framework"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/first-ticket-advantage-framework"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/first-ticket-advantage-framework"/>
+  </url>
+
+  <!-- 3. Brazil AI Market Report 2026 (PUBLISHED) -->
+  <url>
+    <loc>https://avanteventures.com/en/library/brazil-ai-market-report-2026</loc>
+    <lastmod>2026-01-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/brazil-ai-market-report-2026"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/brazil-ai-market-report-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/brazil-ai-market-report-2026"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/brazil-ai-market-report-2026</loc>
+    <lastmod>2026-01-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/brazil-ai-market-report-2026"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/brazil-ai-market-report-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/brazil-ai-market-report-2026"/>
+  </url>
+
+  <!-- 4. Building AI-Native Companies (DRAFT) -->
+  <url>
+    <loc>https://avanteventures.com/en/library/building-ai-native-companies-avante-playbook</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/building-ai-native-companies-avante-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/building-ai-native-companies-avante-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/building-ai-native-companies-avante-playbook"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/building-ai-native-companies-avante-playbook</loc>
+    <lastmod>2025-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/building-ai-native-companies-avante-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/building-ai-native-companies-avante-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/building-ai-native-companies-avante-playbook"/>
+  </url>
+
+  <!-- 5. Idea to Cashflow 90 Days (DRAFT) -->
+  <url>
+    <loc>https://avanteventures.com/en/library/idea-to-cashflow-90-days</loc>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/idea-to-cashflow-90-days"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/idea-to-cashflow-90-days"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/idea-to-cashflow-90-days"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/idea-to-cashflow-90-days</loc>
+    <lastmod>2025-12-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/idea-to-cashflow-90-days"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/idea-to-cashflow-90-days"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/idea-to-cashflow-90-days"/>
+  </url>
+
+  <!-- 6. Unit Economics 101 (DRAFT) -->
+  <url>
+    <loc>https://avanteventures.com/en/library/unit-economics-101-ltv-cac-day-one</loc>
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/unit-economics-101-ltv-cac-day-one"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/unit-economics-101-ltv-cac-day-one"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/unit-economics-101-ltv-cac-day-one"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/unit-economics-101-ltv-cac-day-one</loc>
+    <lastmod>2025-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/unit-economics-101-ltv-cac-day-one"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/unit-economics-101-ltv-cac-day-one"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/unit-economics-101-ltv-cac-day-one"/>
+  </url>
+
+  <!-- 7. Operator's Guide to AI Automation (DRAFT) -->
+  <url>
+    <loc>https://avanteventures.com/en/library/operators-guide-ai-automation</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/operators-guide-ai-automation"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/operators-guide-ai-automation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/operators-guide-ai-automation"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/operators-guide-ai-automation</loc>
+    <lastmod>2025-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/operators-guide-ai-automation"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/operators-guide-ai-automation"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/operators-guide-ai-automation"/>
+  </url>
+
+  <!-- 8. Brazil Service Economy Disruption (DRAFT) -->
+  <url>
+    <loc>https://avanteventures.com/en/library/brazil-service-economy-disruption</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/brazil-service-economy-disruption"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/brazil-service-economy-disruption"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/brazil-service-economy-disruption"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/brazil-service-economy-disruption</loc>
+    <lastmod>2025-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/brazil-service-economy-disruption"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/brazil-service-economy-disruption"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/brazil-service-economy-disruption"/>
+  </url>
+
+  <!-- 9. Global Venture Studio Data (DRAFT) -->
+  <url>
+    <loc>https://avanteventures.com/en/library/global-venture-studio-data-50-percent-returns</loc>
+    <lastmod>2025-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/global-venture-studio-data-50-percent-returns"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/global-venture-studio-data-50-percent-returns"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/global-venture-studio-data-50-percent-returns"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/global-venture-studio-data-50-percent-returns</loc>
+    <lastmod>2025-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/global-venture-studio-data-50-percent-returns"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/global-venture-studio-data-50-percent-returns"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/global-venture-studio-data-50-percent-returns"/>
   </url>
 
 </urlset>

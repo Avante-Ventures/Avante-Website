@@ -23,14 +23,30 @@ import { fileURLToPath } from 'node:url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const DIST = resolve(__dirname, '..', 'dist')
-// Phase 3: bilingual URL routing — 6 routes (3 paths × 2 locales).
-// Plus the apex `/` which redirects to /en (or /pt by browser detection)
-// at runtime; we still prerender it so crawlers without JS see the redirect.
-const ROUTES = [
+// Bilingual URL routing — base 7 routes (3 paths × 2 locales + redirect /)
+// PLUS one route per article slug × 2 locales (read from articles.ts so
+// adding/removing articles automatically updates the prerender list).
+const ARTICLE_SLUGS = [
+  'venture-studios-outperform-traditional-vc',
+  'first-ticket-advantage-framework',
+  'brazil-ai-market-report-2026',
+  'building-ai-native-companies-avante-playbook',
+  'idea-to-cashflow-90-days',
+  'unit-economics-101-ltv-cac-day-one',
+  'operators-guide-ai-automation',
+  'brazil-service-economy-disruption',
+  'global-venture-studio-data-50-percent-returns',
+]
+const BASE_ROUTES = [
   '/',
   '/en', '/en/why-avante', '/en/library',
   '/pt', '/pt/why-avante', '/pt/library',
 ]
+const ARTICLE_ROUTES = ARTICLE_SLUGS.flatMap((slug) => [
+  `/en/library/${slug}`,
+  `/pt/library/${slug}`,
+])
+const ROUTES = [...BASE_ROUTES, ...ARTICLE_ROUTES]
 const PORT = 4179
 
 // ─────────────────────────────────────────────────────────────────────
