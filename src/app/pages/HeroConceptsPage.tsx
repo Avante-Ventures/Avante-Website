@@ -1,53 +1,46 @@
-// Internal preview page that stacks all 5 hero concepts vertically with
-// labels. Visit /preview/heroes to compare. NOINDEX so this never enters
-// search results — it's purely for picking a winner before merging to
-// the live home page.
+// Internal preview — V2.
+//
+// V1 (5 concepts) was rated 4/10 best, 0/10 rest. The feedback hit a real
+// limitation: V1 was decoration on top of the existing centered hero.
+// V2 is structural redesign — each variant rebuilds the hero composition,
+// not adds animation to it.
+//
+// Visit /preview/heroes. NOINDEX.
 
 import { Helmet } from 'react-helmet-async'
-import { HeroA_Bridge } from '@/app/components/heroes/HeroA_Bridge'
-import { HeroB_LightSweep } from '@/app/components/heroes/HeroB_LightSweep'
-import { HeroC_GradientMesh } from '@/app/components/heroes/HeroC_GradientMesh'
-import { HeroD_DataTicker } from '@/app/components/heroes/HeroD_DataTicker'
-import { HeroE_Constellation } from '@/app/components/heroes/HeroE_Constellation'
+import { HeroV2_Minimal } from '@/app/components/heroes/HeroV2_Minimal'
+import { HeroV2_Editorial } from '@/app/components/heroes/HeroV2_Editorial'
+import { HeroV2_Bridge } from '@/app/components/heroes/HeroV2_Bridge'
 
 const CONCEPTS = [
   {
-    letter: 'A',
-    name: 'Bridge SF ↔ São Paulo',
-    pitch: 'Animated gold arc linking the two maps. Literalizes the brand line.',
-    Component: HeroA_Bridge,
+    letter: '1',
+    name: 'Confident Minimalism',
+    pitch:
+      'Strip everything. Massive AVANTE wordmark, one editorial line, single CTA. Sequoia/Anthropic energy. Confidence projects scale.',
+    Component: HeroV2_Minimal,
   },
   {
-    letter: 'B',
-    name: 'Light Sweep on AVANTE',
-    pitch: 'Subtle highlight passes across the wordmark every 7s. CSS-only, premium.',
-    Component: HeroB_LightSweep,
+    letter: '2',
+    name: 'Editorial Asymmetric',
+    pitch:
+      '60/40 split. Pitch on the left. Featured Library articles + portfolio metrics on the right as clickable cards. a16z magazine-cover energy.',
+    Component: HeroV2_Editorial,
   },
   {
-    letter: 'C',
-    name: 'Gradient Mesh Background',
-    pitch: '4 brand-color blobs slowly drifting under the maps. Adds depth without distraction.',
-    Component: HeroC_GradientMesh,
-  },
-  {
-    letter: 'D',
-    name: 'Live Data Ticker',
-    pitch: '5 stats cycle below the orange tagline every 4.5s. Data-driven brand.',
-    Component: HeroD_DataTicker,
-  },
-  {
-    letter: 'E',
-    name: 'Portfolio Constellation',
-    pitch: '7 portfolio nodes orbiting AVANTE. Replaces the maps. Visualizes the ecosystem.',
-    Component: HeroE_Constellation,
+    letter: '3',
+    name: 'Cinematic Bridge',
+    pitch:
+      'Refined SF↔SP — no static maps. Two floating city cards (with GPS coords) connected by a thick gradient ribbon and flowing particles. Wordmark sits below.',
+    Component: HeroV2_Bridge,
   },
 ]
 
 export default function HeroConceptsPage() {
   return (
-    <div style={{ background: '#0a0e1f', color: '#FFFFFF' }}>
+    <div style={{ background: '#08091A', color: '#FFFFFF' }}>
       <Helmet>
-        <title>Hero Concepts — Avante (internal preview)</title>
+        <title>Hero Concepts V2 — Avante (internal preview)</title>
         <meta name="robots" content="noindex,nofollow" />
         <meta name="googlebot" content="noindex,nofollow" />
       </Helmet>
@@ -55,10 +48,10 @@ export default function HeroConceptsPage() {
       {/* Top header */}
       <header
         style={{
-          padding: '40px 24px 32px',
+          padding: '48px 24px 36px',
           textAlign: 'center',
           borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
-          background: '#0a0e1f',
+          background: '#08091A',
         }}
       >
         <p
@@ -71,38 +64,37 @@ export default function HeroConceptsPage() {
             fontWeight: 600,
           }}
         >
-          Internal preview · noindex
+          Internal preview · noindex · v2
         </p>
         <h1
           style={{
-            fontSize: '32px',
+            fontSize: '36px',
             fontWeight: 600,
             margin: '0 0 12px 0',
             letterSpacing: '-0.02em',
           }}
         >
-          5 Hero Concepts
+          3 hero directions
         </h1>
         <p
           style={{
             fontSize: '15px',
             color: 'rgba(255, 255, 255, 0.6)',
             margin: 0,
-            maxWidth: '640px',
+            maxWidth: '680px',
             marginLeft: 'auto',
             marginRight: 'auto',
             lineHeight: 1.6,
           }}
         >
-          Scroll through the 5 variants below. Each is a full-height hero with the
-          same copy and CTAs — only the background/decoration differs. Pick the one
-          you want shipped to the live home page.
+          V1 was decoration on top of the existing centered hero — that's why
+          it felt tibio. V2 rebuilds the hero composition itself. Each variant
+          below is a structurally different hero, not a re-skin.
         </p>
 
-        {/* Quick-jump nav */}
         <nav
           style={{
-            marginTop: '20px',
+            marginTop: '24px',
             display: 'flex',
             gap: '12px',
             justifyContent: 'center',
@@ -114,8 +106,8 @@ export default function HeroConceptsPage() {
               key={c.letter}
               href={`#concept-${c.letter}`}
               style={{
-                padding: '8px 14px',
-                borderRadius: '8px',
+                padding: '10px 18px',
+                borderRadius: '10px',
                 background: 'rgba(255, 255, 255, 0.05)',
                 border: '1px solid rgba(255, 255, 255, 0.12)',
                 color: 'rgba(255, 255, 255, 0.85)',
@@ -141,20 +133,20 @@ export default function HeroConceptsPage() {
 
       {CONCEPTS.map((c) => (
         <section key={c.letter} id={`concept-${c.letter}`} style={{ position: 'relative' }}>
-          {/* Floating label badge — sticks to top-left of each variant */}
+          {/* Floating label badge */}
           <div
             style={{
               position: 'absolute',
               top: '24px',
               left: '24px',
               zIndex: 100,
-              padding: '10px 16px',
-              borderRadius: '10px',
+              padding: '12px 18px',
+              borderRadius: '12px',
               background: 'rgba(0, 0, 0, 0.7)',
-              backdropFilter: 'blur(8px)',
-              border: '1px solid rgba(249, 180, 55, 0.4)',
-              boxShadow: '0 8px 24px rgba(0, 0, 0, 0.4)',
-              maxWidth: '320px',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid rgba(249, 180, 55, 0.5)',
+              boxShadow: '0 12px 32px rgba(0, 0, 0, 0.5)',
+              maxWidth: '380px',
               pointerEvents: 'none',
             }}
           >
@@ -163,19 +155,20 @@ export default function HeroConceptsPage() {
                 fontSize: '11px',
                 fontWeight: 700,
                 color: '#F9B437',
-                letterSpacing: '0.12em',
+                letterSpacing: '0.14em',
                 textTransform: 'uppercase',
-                marginBottom: '4px',
+                marginBottom: '6px',
               }}
             >
               Concept {c.letter}
             </div>
             <div
               style={{
-                fontSize: '14px',
-                fontWeight: 600,
+                fontSize: '15px',
+                fontWeight: 700,
                 color: '#FFFFFF',
-                marginBottom: '4px',
+                marginBottom: '6px',
+                letterSpacing: '-0.01em',
               }}
             >
               {c.name}
@@ -183,7 +176,7 @@ export default function HeroConceptsPage() {
             <div
               style={{
                 fontSize: '12px',
-                color: 'rgba(255, 255, 255, 0.65)',
+                color: 'rgba(255, 255, 255, 0.7)',
                 lineHeight: 1.5,
               }}
             >
@@ -195,17 +188,19 @@ export default function HeroConceptsPage() {
         </section>
       ))}
 
-      {/* Footer back-to-top */}
       <footer
         style={{
-          padding: '40px 24px',
+          padding: '48px 24px',
           textAlign: 'center',
           borderTop: '1px solid rgba(255, 255, 255, 0.08)',
-          background: '#0a0e1f',
+          background: '#08091A',
         }}
       >
-        <p style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.55)', margin: 0 }}>
-          When you've picked one, tell me the letter and I'll merge it to the live home page.
+        <p style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.55)', margin: '0 0 8px 0' }}>
+          Pick a number (1, 2, 3) or combine. Tell me your reaction even if it's "nope" — we iterate.
+        </p>
+        <p style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.35)', margin: 0 }}>
+          v1 retired · 5 concepts removed from preview
         </p>
       </footer>
     </div>
