@@ -76,6 +76,9 @@ export function Footer() {
             </div>
             <FooterLink to={`/${language}`} label={t('Home', 'Início')} />
             <FooterLink to={`/${language}/why-avante`} label={t('Why Avante', 'Por Que Avante')} />
+            <FooterLink to={`/${language}/portfolio`} label={t('Portfolio', 'Portfólio')} />
+            <FooterLink to={`/${language}/founders`} label={t('For Founders', 'Para Fundadores')} />
+            <FooterLink to={`/${language}/investors`} label={t('For Investors', 'Para Investidores')} />
             <FooterLink to={`/${language}/library`} label={t('Library', 'Biblioteca')} />
           </div>
 

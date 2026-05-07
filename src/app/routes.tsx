@@ -22,6 +22,12 @@ const LibraryPage = () =>
   import('./pages/LibraryPage.tsx').then((m) => ({ Component: m.default }))
 const ArticlePage = () =>
   import('./pages/ArticlePage.tsx').then((m) => ({ Component: m.default }))
+const PortfolioPage = () =>
+  import('./pages/PortfolioPage.tsx').then((m) => ({ Component: m.default }))
+const FoundersPage = () =>
+  import('./pages/FoundersPage.tsx').then((m) => ({ Component: m.default }))
+const InvestorsPage = () =>
+  import('./pages/InvestorsPage.tsx').then((m) => ({ Component: m.default }))
 const HeroConceptsPage = () =>
   import('./pages/HeroConceptsPage.tsx').then((m) => ({ Component: m.default }))
 
@@ -68,6 +74,9 @@ export const router = createBrowserRouter([
       { path: "why-avante", lazy: WhyAvantePage },
       { path: "library", lazy: LibraryPage },
       { path: "library/:slug", lazy: ArticlePage },
+      { path: "portfolio", lazy: PortfolioPage },
+      { path: "founders", lazy: FoundersPage },
+      { path: "investors", lazy: InvestorsPage },
     ],
   },
 ])
