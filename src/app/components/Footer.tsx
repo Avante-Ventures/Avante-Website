@@ -68,7 +68,7 @@ export function Footer() {
                 fontWeight: 600,
                 textTransform: 'uppercase',
                 letterSpacing: '0.12em',
-                color: 'rgba(255, 255, 255, 0.4)',
+                color: 'rgba(255, 255, 255, 0.6)',
                 marginBottom: '16px',
               }}
             >
@@ -87,7 +87,7 @@ export function Footer() {
                 fontWeight: 600,
                 textTransform: 'uppercase',
                 letterSpacing: '0.12em',
-                color: 'rgba(255, 255, 255, 0.4)',
+                color: 'rgba(255, 255, 255, 0.6)',
                 marginBottom: '16px',
               }}
             >
@@ -107,7 +107,7 @@ export function Footer() {
                 fontWeight: 600,
                 textTransform: 'uppercase',
                 letterSpacing: '0.12em',
-                color: 'rgba(255, 255, 255, 0.4)',
+                color: 'rgba(255, 255, 255, 0.6)',
                 marginBottom: '16px',
               }}
             >
@@ -183,7 +183,7 @@ export function Footer() {
             alignItems: 'center',
             flexWrap: 'wrap',
             gap: '16px',
-            color: 'rgba(255, 255, 255, 0.4)',
+            color: 'rgba(255, 255, 255, 0.6)',
             fontSize: '13px',
           }}
         >

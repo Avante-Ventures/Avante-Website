@@ -588,6 +588,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
               href="https://www.linkedin.com/company/avante-ventures/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Avante Ventures on LinkedIn"
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -618,6 +619,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
 
             <a
               href="mailto:cristian@avanteventures.com"
+              aria-label="Email Avante Ventures"
               style={{
                 display: 'flex',
                 alignItems: 'center',

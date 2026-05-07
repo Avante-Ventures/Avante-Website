@@ -115,6 +115,7 @@ export function TeamGrid() {
                 href={member.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`${member.name} on LinkedIn`}
                 style={{
                   position: 'absolute',
                   top: '16px',
