@@ -41,6 +41,7 @@ const BASE_ROUTES = [
   '/',
   '/en', '/en/why-avante', '/en/library',
   '/pt', '/pt/why-avante', '/pt/library',
+  '/preview/heroes', // internal preview, noindex via meta robots
 ]
 const ARTICLE_ROUTES = ARTICLE_SLUGS.flatMap((slug) => [
   `/en/library/${slug}`,

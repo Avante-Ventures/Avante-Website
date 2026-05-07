@@ -22,6 +22,8 @@ const LibraryPage = () =>
   import('./pages/LibraryPage.tsx').then((m) => ({ Component: m.default }))
 const ArticlePage = () =>
   import('./pages/ArticlePage.tsx').then((m) => ({ Component: m.default }))
+const HeroConceptsPage = () =>
+  import('./pages/HeroConceptsPage.tsx').then((m) => ({ Component: m.default }))
 
 const SUPPORTED_LOCALES: Language[] = ['en', 'pt']
 const DEFAULT_LOCALE: Language = 'en'
@@ -52,6 +54,10 @@ function LocaleLayout() {
 export const router = createBrowserRouter([
   // Root: detect browser language, redirect
   { path: "/", element: <RootRedirect /> },
+
+  // Internal preview pages — listed BEFORE /:locale so the locale matcher
+  // doesn't swallow "preview". Have noindex meta tag in the page itself.
+  { path: "/preview/heroes", lazy: HeroConceptsPage },
 
   // Locale-prefixed routes
   {
