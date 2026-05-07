@@ -36,11 +36,13 @@ export function AvanteModelTabs() {
           const Icon = tab.icon;
           const isActive = activeTab === tab.id;
           
-          // Assign signature colors from logo to each tab
+          // Brand-aligned per-tab colors. Use the canonical accent vars from
+          // theme.css; the previous shorthand `--avante-indigo` was undefined
+          // and fell back to near-black on dark navy (a11y contrast 1.31:1).
           const tabColors = {
-            thesis: { active: 'var(--avante-indigo)', bg: 'rgba(66, 70, 140, 0.1)', border: 'rgba(66, 70, 140, 0.3)', shadow: 'rgba(66, 70, 140, 0.15)' },
-            dontdo: { active: 'var(--avante-purple)', bg: 'rgba(152, 80, 154, 0.1)', border: 'rgba(152, 80, 154, 0.3)', shadow: 'rgba(152, 80, 154, 0.15)' },
-            fits: { active: 'var(--avante-gold)', bg: 'rgba(249, 180, 55, 0.1)', border: 'rgba(249, 180, 55, 0.3)', shadow: 'rgba(249, 180, 55, 0.15)' },
+            thesis: { active: '#9CA8E0', bg: 'rgba(66, 70, 140, 0.18)', border: 'rgba(66, 70, 140, 0.5)', shadow: 'rgba(66, 70, 140, 0.25)' },
+            dontdo: { active: '#D9A6DA', bg: 'rgba(152, 80, 154, 0.18)', border: 'rgba(152, 80, 154, 0.5)', shadow: 'rgba(152, 80, 154, 0.25)' },
+            fits:   { active: '#FCD96E', bg: 'rgba(249, 180, 55, 0.18)', border: 'rgba(249, 180, 55, 0.5)', shadow: 'rgba(249, 180, 55, 0.25)' },
           };
           
           const colors = tabColors[tab.id];
@@ -207,7 +209,7 @@ function ThesisContent() {
                 width: '48px',
                 height: '48px',
                 borderRadius: '50%',
-                background: 'var(--avante-purple)',
+                background: 'var(--avante-accent-purple)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -277,7 +279,7 @@ function ThesisContent() {
                 width: '48px',
                 height: '48px',
                 borderRadius: '50%',
-                background: 'var(--avante-gold)',
+                background: 'var(--avante-accent-gold)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -347,7 +349,7 @@ function ThesisContent() {
                 width: '48px',
                 height: '48px',
                 borderRadius: '50%',
-                background: 'var(--avante-orange)',
+                background: 'var(--avante-accent-orange)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -477,7 +479,7 @@ function DontDoContent() {
                 width: '48px',
                 height: '48px',
                 borderRadius: '50%',
-                background: 'var(--avante-purple)',
+                background: 'var(--avante-accent-purple)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -540,7 +542,7 @@ function DontDoContent() {
                 width: '48px',
                 height: '48px',
                 borderRadius: '50%',
-                background: 'var(--avante-gold)',
+                background: 'var(--avante-accent-gold)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -603,7 +605,7 @@ function DontDoContent() {
                 width: '48px',
                 height: '48px',
                 borderRadius: '50%',
-                background: 'var(--avante-orange)',
+                background: 'var(--avante-accent-orange)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -720,7 +722,7 @@ function FitsContent() {
                 width: '48px',
                 height: '48px',
                 borderRadius: '50%',
-                background: 'var(--avante-purple)',
+                background: 'var(--avante-accent-purple)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -783,7 +785,7 @@ function FitsContent() {
                 width: '48px',
                 height: '48px',
                 borderRadius: '50%',
-                background: 'var(--avante-gold)',
+                background: 'var(--avante-accent-gold)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -846,7 +848,7 @@ function FitsContent() {
                 width: '48px',
                 height: '48px',
                 borderRadius: '50%',
-                background: 'var(--avante-orange)',
+                background: 'var(--avante-accent-orange)',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',

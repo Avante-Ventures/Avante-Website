@@ -11,7 +11,6 @@ interface Logo {
   src: string;
   alt: string;
   name: string;
-  darkBackground?: boolean;
 }
 
 const SocialProofStripComponent = () => {
@@ -21,8 +20,8 @@ const SocialProofStripComponent = () => {
     { src: siggaLogo, alt: 'Sigga Technologies', name: 'Sigga Technologies' },
     { src: softmaxLogo, alt: 'Softmax', name: 'Softmax' },
     { src: indineroLogo, alt: 'inDinero', name: 'inDinero' },
-    { src: alphaLitLogo, alt: 'Alpha Lit', name: 'Alpha Lit', darkBackground: true },
-    { src: astonishingLabsLogo, alt: 'Astonishing Labs', name: 'Astonishing Labs', darkBackground: true },
+    { src: alphaLitLogo, alt: 'Alpha Lit', name: 'Alpha Lit' },
+    { src: astonishingLabsLogo, alt: 'Astonishing Labs', name: 'Astonishing Labs' },
   ];
 
   // Duplicate logos for seamless infinite scroll
@@ -102,7 +101,7 @@ const SocialProofStripComponent = () => {
             }}
           >
             {allLogos.map((logo, index) => (
-              <LogoItem key={`${logo.name}-${index}`} src={logo.src} alt={logo.alt} darkBackground={logo.darkBackground} />
+              <LogoItem key={`${logo.name}-${index}`} src={logo.src} alt={logo.alt} />
             ))}
           </div>
         </div>
@@ -156,10 +155,13 @@ const SocialProofStripComponent = () => {
 interface LogoItemProps {
   src: string;
   alt: string;
-  darkBackground?: boolean;
 }
 
-const LogoItem = memo(({ src, alt, darkBackground }: LogoItemProps) => {
+// Uniform "muted-ghost" logo treatment: grayscale + dim by default, full
+// color + opacity on hover. Avoids the previous inconsistent look where some
+// logos rendered white-on-transparent (filter: brightness(0) invert(1)) and
+// others kept native colors via the `darkBackground` flag — visually noisy.
+const LogoItem = memo(({ src, alt }: LogoItemProps) => {
   return (
     <div
       style={{
@@ -167,20 +169,10 @@ const LogoItem = memo(({ src, alt, darkBackground }: LogoItemProps) => {
         alignItems: 'center',
         justifyContent: 'center',
         flexShrink: 0,
-        transition: 'all 0.3s ease',
         cursor: 'default',
-        opacity: 0.6,
-        padding: '8px 0',
+        padding: '8px 16px',
         minWidth: '180px',
-        height: '80px'
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.opacity = '1';
-        e.currentTarget.style.transform = 'scale(1.05)';
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.opacity = '0.6';
-        e.currentTarget.style.transform = 'scale(1)';
+        height: '80px',
       }}
     >
       <img
@@ -188,13 +180,24 @@ const LogoItem = memo(({ src, alt, darkBackground }: LogoItemProps) => {
         alt={alt}
         loading="lazy"
         style={{
-          maxWidth: '160px',
-          maxHeight: '70px',
+          maxWidth: '140px',
+          maxHeight: '60px',
           width: 'auto',
           height: 'auto',
           objectFit: 'contain',
-          filter: darkBackground ? 'none' : 'brightness(0) invert(1)',
-          transition: 'all 0.3s ease'
+          filter: 'grayscale(100%) brightness(1.4) contrast(0.9)',
+          opacity: 0.55,
+          transition: 'filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease',
+        }}
+        onMouseEnter={(e) => {
+          e.currentTarget.style.filter = 'grayscale(0%) brightness(1) contrast(1)'
+          e.currentTarget.style.opacity = '1'
+          e.currentTarget.style.transform = 'scale(1.05)'
+        }}
+        onMouseLeave={(e) => {
+          e.currentTarget.style.filter = 'grayscale(100%) brightness(1.4) contrast(0.9)'
+          e.currentTarget.style.opacity = '0.55'
+          e.currentTarget.style.transform = 'scale(1)'
         }}
       />
     </div>

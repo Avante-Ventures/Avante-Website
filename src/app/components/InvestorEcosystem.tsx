@@ -279,7 +279,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                   boxShadow: '0 8px 32px rgba(152, 80, 154, 0.2)'
                 }}
               >
-                <Users size={28} color="var(--avante-purple)" strokeWidth={2} />
+                <Users size={28} color="var(--avante-accent-purple)" strokeWidth={2} />
               </div>
 
               <h3 
@@ -387,7 +387,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                   boxShadow: '0 8px 32px rgba(244, 162, 97, 0.2)'
                 }}
               >
-                <Cpu size={28} color="var(--avante-orange)" strokeWidth={2} />
+                <Cpu size={28} color="var(--avante-accent-orange)" strokeWidth={2} />
               </div>
 
               <h3 
@@ -494,7 +494,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                   boxShadow: '0 8px 32px rgba(249, 180, 55, 0.2)'
                 }}
               >
-                <MessageSquare size={32} color="var(--avante-gold)" strokeWidth={2} />
+                <MessageSquare size={32} color="var(--avante-accent-gold)" strokeWidth={2} />
               </div>
 
               <h3 
@@ -539,7 +539,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
               fontSize: '18px',
               fontWeight: 'var(--font-weight-semibold)',
               color: '#FFFFFF',
-              background: 'linear-gradient(135deg, var(--avante-orange) 0%, var(--avante-gold) 100%)',
+              background: 'linear-gradient(135deg, var(--avante-accent-orange) 0%, var(--avante-accent-gold) 100%)',
               border: 'none',
               borderRadius: 'var(--avante-radius-12)',
               cursor: 'pointer',
@@ -602,8 +602,8 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.backgroundColor = 'rgba(249, 180, 55, 0.1)';
-                e.currentTarget.style.borderColor = 'var(--avante-orange)';
-                e.currentTarget.style.color = 'var(--avante-orange)';
+                e.currentTarget.style.borderColor = 'var(--avante-accent-orange)';
+                e.currentTarget.style.color = 'var(--avante-accent-orange)';
                 e.currentTarget.style.transform = 'translateY(-2px)';
               }}
               onMouseLeave={(e) => {
@@ -633,8 +633,8 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.backgroundColor = 'rgba(249, 180, 55, 0.1)';
-                e.currentTarget.style.borderColor = 'var(--avante-orange)';
-                e.currentTarget.style.color = 'var(--avante-orange)';
+                e.currentTarget.style.borderColor = 'var(--avante-accent-orange)';
+                e.currentTarget.style.color = 'var(--avante-accent-orange)';
                 e.currentTarget.style.transform = 'translateY(-2px)';
               }}
               onMouseLeave={(e) => {
