@@ -9,6 +9,7 @@ import { Footer } from '@/app/components/Footer'
 import { BackToTop } from '@/app/components/BackToTop'
 import { SEOHelmet } from '@/app/components/SEOHelmet'
 import { SectionMasthead } from '@/app/components/SectionMasthead'
+import { EditorialCard } from '@/app/components/EditorialCard'
 import { Link } from 'react-router'
 
 const SEO = {
@@ -190,50 +191,15 @@ export default function FoundersPage() {
             }}
           >
             {offer.map((o) => (
-              <div
+              <EditorialCard
                 key={o.title}
-                style={{
-                  padding: '28px',
-                  background: 'rgba(255, 255, 255, 0.025)',
-                  border: '1px solid rgba(255, 255, 255, 0.08)',
-                  borderTop: `3px solid ${o.accent}`,
-                  borderRadius: '14px',
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: '10px',
-                    fontWeight: 700,
-                    letterSpacing: '0.18em',
-                    textTransform: 'uppercase',
-                    color: o.accent,
-                    marginBottom: '12px',
-                  }}
-                >
-                  {o.label}
-                </div>
-                <h3
-                  style={{
-                    fontSize: '17px',
-                    fontWeight: 600,
-                    color: '#FFFFFF',
-                    margin: '0 0 12px 0',
-                    lineHeight: 1.3,
-                  }}
-                >
-                  {o.title}
-                </h3>
-                <p
-                  style={{
-                    fontSize: '14px',
-                    lineHeight: 1.65,
-                    color: 'rgba(255, 255, 255, 0.7)',
-                    margin: 0,
-                  }}
-                >
-                  {o.body}
-                </p>
-              </div>
+                eyebrow={o.label}
+                title={o.title}
+                body={o.body}
+                accent={o.accent}
+                accentPosition="border-top"
+                style={{ padding: '28px' }}
+              />
             ))}
           </div>
         </section>
@@ -326,37 +292,13 @@ export default function FoundersPage() {
             }}
           >
             {differences.map((d) => (
-              <div
+              <EditorialCard
                 key={d.title}
-                style={{
-                  padding: '28px',
-                  background: 'rgba(255, 255, 255, 0.025)',
-                  border: '1px solid rgba(255, 255, 255, 0.08)',
-                  borderRadius: '14px',
-                }}
-              >
-                <h3
-                  style={{
-                    fontSize: '17px',
-                    fontWeight: 600,
-                    color: '#FFFFFF',
-                    margin: '0 0 12px 0',
-                    lineHeight: 1.3,
-                  }}
-                >
-                  {d.title}
-                </h3>
-                <p
-                  style={{
-                    fontSize: '14px',
-                    lineHeight: 1.65,
-                    color: 'rgba(255, 255, 255, 0.7)',
-                    margin: 0,
-                  }}
-                >
-                  {d.body}
-                </p>
-              </div>
+                title={d.title}
+                body={d.body}
+                accentPosition="none"
+                style={{ padding: '28px' }}
+              />
             ))}
           </div>
         </section>

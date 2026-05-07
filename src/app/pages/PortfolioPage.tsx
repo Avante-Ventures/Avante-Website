@@ -10,6 +10,7 @@ import { Footer } from '@/app/components/Footer'
 import { BackToTop } from '@/app/components/BackToTop'
 import { SEOHelmet } from '@/app/components/SEOHelmet'
 import { SectionMasthead } from '@/app/components/SectionMasthead'
+import { EditorialCard } from '@/app/components/EditorialCard'
 import { Link } from 'react-router'
 
 // Ventures data. Status: 'exit' = realized, 'active' = current cohort,
@@ -185,9 +186,25 @@ export default function PortfolioPage() {
             gap: '20px',
           }}
         >
-          {VENTURES.map((v) => (
-            <VentureCard key={v.name} venture={v} language={language} t={t} />
-          ))}
+          {VENTURES.map((v) => {
+            const eyebrow = {
+              exit: t('REALIZED EXIT', 'EXIT REALIZADO'),
+              active: t('ACTIVE COHORT', 'COHORT ATIVA'),
+              alumni: t('ALUMNI', 'ALUMNI'),
+            }[v.status]
+            return (
+              <EditorialCard
+                key={v.name}
+                eyebrow={eyebrow}
+                title={v.name}
+                body={v.description[language]}
+                highlight={v.highlight}
+                accent={v.accent}
+                accentPosition="border-left"
+                style={{ padding: '28px' }}
+              />
+            )
+          })}
         </div>
 
         {/* Bottom note */}
@@ -270,99 +287,3 @@ function StatusKey({ label, dot }: { label: string; dot: string }) {
   )
 }
 
-function VentureCard({
-  venture,
-  language,
-  t,
-}: {
-  venture: Venture
-  language: 'en' | 'pt'
-  t: (en: string, pt: string) => string
-}) {
-  const statusLabel = {
-    exit: t('REALIZED EXIT', 'EXIT REALIZADO'),
-    active: t('ACTIVE COHORT', 'COHORT ATIVA'),
-    alumni: t('ALUMNI', 'ALUMNI'),
-  }[venture.status]
-
-  return (
-    <div
-      style={{
-        padding: '28px',
-        background: 'rgba(255, 255, 255, 0.025)',
-        border: '1px solid rgba(255, 255, 255, 0.08)',
-        borderLeft: `3px solid ${venture.accent}`,
-        borderRadius: '14px',
-        transition: 'all 0.25s ease',
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.background = `${venture.accent}0E`
-        e.currentTarget.style.borderColor = `${venture.accent}40`
-        e.currentTarget.style.transform = 'translateY(-2px)'
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.background = 'rgba(255, 255, 255, 0.025)'
-        e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)'
-        e.currentTarget.style.transform = 'translateY(0)'
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'flex-start',
-          marginBottom: '16px',
-          gap: '12px',
-        }}
-      >
-        <div
-          style={{
-            fontSize: '10px',
-            fontWeight: 700,
-            letterSpacing: '0.18em',
-            color: venture.accent,
-          }}
-        >
-          {statusLabel}
-        </div>
-        {venture.highlight && (
-          <div
-            style={{
-              fontSize: '11px',
-              fontWeight: 700,
-              color: '#F9B437',
-              padding: '3px 10px',
-              borderRadius: '999px',
-              background: 'rgba(249, 180, 55, 0.12)',
-              border: '1px solid rgba(249, 180, 55, 0.3)',
-              whiteSpace: 'nowrap',
-            }}
-          >
-            {venture.highlight}
-          </div>
-        )}
-      </div>
-      <h3
-        style={{
-          fontSize: '22px',
-          fontWeight: 600,
-          color: '#FFFFFF',
-          margin: '0 0 12px 0',
-          letterSpacing: '-0.01em',
-        }}
-      >
-        {venture.name}
-      </h3>
-      <p
-        style={{
-          fontSize: '14px',
-          lineHeight: 1.65,
-          color: 'rgba(255, 255, 255, 0.7)',
-          margin: 0,
-        }}
-      >
-        {venture.description[language]}
-      </p>
-    </div>
-  )
-}

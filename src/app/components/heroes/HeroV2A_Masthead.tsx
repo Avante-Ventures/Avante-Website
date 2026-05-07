@@ -12,8 +12,8 @@
 // while gaining magazine-cover credibility (geography + portfolio + status).
 
 import avanteLogo from 'figma:asset/1ee77d6dc5cd19bf91735ef627eddf9652d066cf.png'
-import { Link } from 'react-router'
 import { useLanguage } from '@/app/hooks/useLanguage'
+import { EditorialCard } from '@/app/components/EditorialCard'
 
 const FEATURES = [
   {
@@ -281,40 +281,16 @@ export function HeroV2A_Masthead() {
             From the Library
           </div>
           {FEATURES.map((f) => (
-            <Link
+            <EditorialCard
               key={f.title}
               to={`/${language}/${f.href}`}
-              style={{
-                display: 'block',
-                padding: '20px 24px',
-                background: 'rgba(255, 255, 255, 0.03)',
-                border: '1px solid rgba(255, 255, 255, 0.08)',
-                borderLeft: `3px solid ${f.accent}`,
-                borderRadius: '12px',
-                textDecoration: 'none',
-                transition: 'all 0.25s ease',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = `${f.accent}0F`
-                e.currentTarget.style.borderColor = `${f.accent}40`
-                e.currentTarget.style.transform = 'translateX(4px)'
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.03)'
-                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)'
-                e.currentTarget.style.transform = 'translateX(0)'
-              }}
-            >
-              <div style={{ fontSize: '10px', fontWeight: 700, letterSpacing: '0.18em', color: f.accent, textTransform: 'uppercase', marginBottom: '6px' }}>
-                {f.kind}
-              </div>
-              <div style={{ fontSize: '17px', fontWeight: 600, color: '#FFFFFF', marginBottom: '6px', letterSpacing: '-0.01em', lineHeight: 1.3 }}>
-                {f.title}
-              </div>
-              <div style={{ fontSize: '13px', color: 'rgba(255, 255, 255, 0.55)', lineHeight: 1.5 }}>
-                {f.metric}
-              </div>
-            </Link>
+              eyebrow={f.kind}
+              title={f.title}
+              body={f.metric}
+              accent={f.accent}
+              accentPosition="border-left"
+              style={{ padding: '20px 24px', background: 'rgba(255, 255, 255, 0.03)' }}
+            />
           ))}
         </div>
       </div>

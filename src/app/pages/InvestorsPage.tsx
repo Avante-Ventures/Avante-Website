@@ -9,6 +9,7 @@ import { Footer } from '@/app/components/Footer'
 import { BackToTop } from '@/app/components/BackToTop'
 import { SEOHelmet } from '@/app/components/SEOHelmet'
 import { SectionMasthead } from '@/app/components/SectionMasthead'
+import { EditorialCard } from '@/app/components/EditorialCard'
 import { Link } from 'react-router'
 
 const SEO = {
@@ -255,49 +256,15 @@ export default function InvestorsPage() {
             }}
           >
             {thesis.map((p, i) => (
-              <div
+              <EditorialCard
                 key={p.title}
-                style={{
-                  padding: '28px',
-                  background: 'rgba(255, 255, 255, 0.025)',
-                  border: '1px solid rgba(255, 255, 255, 0.08)',
-                  borderLeft: `3px solid ${p.accent}`,
-                  borderRadius: '14px',
-                }}
-              >
-                <div
-                  style={{
-                    fontSize: '11px',
-                    fontWeight: 700,
-                    letterSpacing: '0.18em',
-                    color: p.accent,
-                    marginBottom: '10px',
-                  }}
-                >
-                  {String(i + 1).padStart(2, '0')}
-                </div>
-                <h3
-                  style={{
-                    fontSize: '20px',
-                    fontWeight: 600,
-                    color: '#FFFFFF',
-                    margin: '0 0 12px 0',
-                    lineHeight: 1.3,
-                  }}
-                >
-                  {p.title}
-                </h3>
-                <p
-                  style={{
-                    fontSize: '15px',
-                    lineHeight: 1.7,
-                    color: 'rgba(255, 255, 255, 0.7)',
-                    margin: 0,
-                  }}
-                >
-                  {p.body}
-                </p>
-              </div>
+                eyebrow={String(i + 1).padStart(2, '0')}
+                title={p.title}
+                body={p.body}
+                accent={p.accent}
+                accentPosition="border-left"
+                style={{ padding: '28px' }}
+              />
             ))}
           </div>
         </section>
