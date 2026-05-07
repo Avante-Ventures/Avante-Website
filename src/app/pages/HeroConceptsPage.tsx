@@ -11,6 +11,7 @@ import { Helmet } from 'react-helmet-async'
 import { HeroV2_Minimal } from '@/app/components/heroes/HeroV2_Minimal'
 import { HeroV2_Editorial } from '@/app/components/heroes/HeroV2_Editorial'
 import { HeroV2_Bridge } from '@/app/components/heroes/HeroV2_Bridge'
+import { LanguageProvider } from '@/app/hooks/useLanguage'
 
 const CONCEPTS = [
   {
@@ -37,7 +38,10 @@ const CONCEPTS = [
 ]
 
 export default function HeroConceptsPage() {
+  // Wrap with LanguageProvider so HeroV2_Editorial can use useLanguage()
+  // for locale-aware Library links. Default to 'en' since this is internal.
   return (
+    <LanguageProvider locale="en">
     <div style={{ background: '#08091A', color: '#FFFFFF' }}>
       <Helmet>
         <title>Hero Concepts V2 — Avante (internal preview)</title>
@@ -204,5 +208,6 @@ export default function HeroConceptsPage() {
         </p>
       </footer>
     </div>
+    </LanguageProvider>
   )
 }
