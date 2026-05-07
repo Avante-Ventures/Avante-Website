@@ -81,168 +81,39 @@ const SiliconValleyVentureBuildingComponent = () => {
             </h4>
           </div>
 
-          {/* Table Content */}
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr 1fr',
-              gap: '1px',
-              background: 'rgba(255, 255, 255, 0.08)'
-            }}
-          >
-            {/* Header Row */}
-            <div
-              style={{
-                padding: '16px 24px',
-                background: 'var(--avante-background)',
-                fontSize: '13px',
-                fontWeight: 'var(--font-weight-semibold)',
-                color: 'rgba(255, 255, 255, 0.6)',
-                textTransform: 'uppercase',
-                letterSpacing: '0.05em'
-              }}
-            >
-              Metric
-            </div>
-            <div
-              style={{
-                padding: '16px 24px',
-                background: 'var(--avante-background)',
-                fontSize: '13px',
-                fontWeight: 'var(--font-weight-semibold)',
-                color: 'rgba(255, 255, 255, 0.6)',
-                textTransform: 'uppercase',
-                letterSpacing: '0.05em',
-                textAlign: 'center'
-              }}
-            >
-              Before AI
-            </div>
-            <div
-              style={{
-                padding: '16px 24px',
-                background: 'var(--avante-background)',
-                fontSize: '13px',
-                fontWeight: 'var(--font-weight-semibold)',
-                color: 'rgba(255, 255, 255, 0.6)',
-                textTransform: 'uppercase',
-                letterSpacing: '0.05em',
-                textAlign: 'center'
-              }}
-            >
-              After AI
-            </div>
-
-            {/* Time to Market Row */}
-            <div
-              style={{
-                padding: '20px 24px',
-                background: 'var(--avante-background)',
-                fontSize: '14px',
-                color: 'rgba(255, 255, 255, 0.85)',
-                fontWeight: 'var(--font-weight-medium)'
-              }}
-            >
-              Time to Market
-            </div>
-            <div
-              style={{
-                padding: '20px 24px',
-                background: 'var(--avante-background)',
-                fontSize: '20px',
-                fontWeight: 'var(--font-weight-bold)',
-                color: 'rgba(255, 255, 255, 0.5)',
-                textAlign: 'center'
-              }}
-            >
-              3 years
-            </div>
-            <div
-              style={{
-                padding: '20px 24px',
-                background: 'var(--avante-background)',
-                fontSize: '20px',
-                fontWeight: 'var(--font-weight-bold)',
-                color: '#98509A',
-                textAlign: 'center'
-              }}
-            >
-              1 year
-            </div>
-
-            {/* Capital Required Row */}
-            <div
-              style={{
-                padding: '20px 24px',
-                background: 'var(--avante-background)',
-                fontSize: '14px',
-                color: 'rgba(255, 255, 255, 0.85)',
-                fontWeight: 'var(--font-weight-medium)'
-              }}
-            >
-              Capital Required
-            </div>
-            <div
-              style={{
-                padding: '20px 24px',
-                background: 'var(--avante-background)',
-                fontSize: '20px',
-                fontWeight: 'var(--font-weight-bold)',
-                color: 'rgba(255, 255, 255, 0.5)',
-                textAlign: 'center'
-              }}
-            >
-              $5M
-            </div>
-            <div
-              style={{
-                padding: '20px 24px',
-                background: 'var(--avante-background)',
-                fontSize: '20px',
-                fontWeight: 'var(--font-weight-bold)',
-                color: '#F4A261',
-                textAlign: 'center'
-              }}
-            >
-              $1M
-            </div>
-
-            {/* Headcount Row */}
-            <div
-              style={{
-                padding: '20px 24px',
-                background: 'var(--avante-background)',
-                fontSize: '14px',
-                color: 'rgba(255, 255, 255, 0.85)',
-                fontWeight: 'var(--font-weight-medium)'
-              }}
-            >
-              Headcount
-            </div>
-            <div
-              style={{
-                padding: '20px 24px',
-                background: 'var(--avante-background)',
-                fontSize: '20px',
-                fontWeight: 'var(--font-weight-bold)',
-                color: 'rgba(255, 255, 255, 0.5)',
-                textAlign: 'center'
-              }}
-            >
-              20
-            </div>
-            <div
-              style={{
-                padding: '20px 24px',
-                background: 'var(--avante-background)',
-                fontSize: '20px',
-                fontWeight: 'var(--font-weight-bold)',
-                color: '#F9B437',
-                textAlign: 'center'
-              }}
-            >
-              3
-            </div>
+          {/* Visual comparison rows — each metric shows two horizontal bars
+              (before vs after) at proportional widths, plus a reduction badge.
+              Replaces the previous 3-col text table that buried the magnitude
+              of the change in similar-sized typography. */}
+          <div style={{ padding: '32px' }}>
+            <ComparisonRow
+              label="Time to Market"
+              before="3 years"
+              after="1 year"
+              afterRatio={1 / 3}
+              afterColor="#B794C1"
+              afterBarColor="rgba(152, 80, 154, 0.7)"
+              reduction="−67%"
+            />
+            <ComparisonRow
+              label="Capital Required"
+              before="$5M"
+              after="$1M"
+              afterRatio={1 / 5}
+              afterColor="#F4A261"
+              afterBarColor="rgba(244, 162, 97, 0.7)"
+              reduction="−80%"
+            />
+            <ComparisonRow
+              label="Headcount"
+              before="20"
+              after="3"
+              afterRatio={3 / 20}
+              afterColor="#F9B437"
+              afterBarColor="rgba(249, 180, 55, 0.7)"
+              reduction="−85%"
+              isLast
+            />
           </div>
 
           {/* Result Footer */}
@@ -292,5 +163,141 @@ const SiliconValleyVentureBuildingComponent = () => {
     </div>
   );
 };
+
+// ─────────────────────────────────────────────────────────────────────
+// ComparisonRow — visual before/after bar pair with reduction badge
+// ─────────────────────────────────────────────────────────────────────
+
+interface ComparisonRowProps {
+  label: string
+  before: string
+  after: string
+  /** afterValue / beforeValue, e.g. 3/20 = 0.15 → After bar is 15% of full width */
+  afterRatio: number
+  afterColor: string
+  afterBarColor: string
+  reduction: string
+  isLast?: boolean
+}
+
+function ComparisonRow({
+  label,
+  before,
+  after,
+  afterRatio,
+  afterColor,
+  afterBarColor,
+  reduction,
+  isLast,
+}: ComparisonRowProps) {
+  return (
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: '160px 1fr 80px',
+        gap: '24px',
+        alignItems: 'center',
+        paddingBottom: isLast ? 0 : '28px',
+        marginBottom: isLast ? 0 : '28px',
+        borderBottom: isLast ? 'none' : '1px solid rgba(255, 255, 255, 0.06)',
+      }}
+    >
+      {/* Metric label */}
+      <div
+        style={{
+          fontSize: '14px',
+          color: 'rgba(255, 255, 255, 0.85)',
+          fontWeight: 600,
+        }}
+      >
+        {label}
+      </div>
+
+      {/* Bars stack */}
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+        {/* Before bar — full width, gray */}
+        <BarRow
+          width="100%"
+          value={before}
+          valueColor="rgba(255, 255, 255, 0.55)"
+          barColor="rgba(255, 255, 255, 0.10)"
+          subLabel="before AI"
+        />
+        {/* After bar — proportional width, brand color */}
+        <BarRow
+          width={`${Math.max(afterRatio * 100, 8)}%`}
+          value={after}
+          valueColor={afterColor}
+          barColor={afterBarColor}
+          subLabel="after AI"
+        />
+      </div>
+
+      {/* Reduction badge */}
+      <div
+        style={{
+          fontSize: '15px',
+          fontWeight: 700,
+          color: afterColor,
+          textAlign: 'right',
+          letterSpacing: '-0.01em',
+        }}
+      >
+        {reduction}
+      </div>
+    </div>
+  )
+}
+
+function BarRow({
+  width,
+  value,
+  valueColor,
+  barColor,
+  subLabel,
+}: {
+  width: string
+  value: string
+  valueColor: string
+  barColor: string
+  subLabel: string
+}) {
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+      <div
+        style={{
+          width,
+          minWidth: '40px',
+          height: '14px',
+          borderRadius: '7px',
+          background: barColor,
+          transition: 'width 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
+        }}
+      />
+      <div
+        style={{
+          fontSize: '15px',
+          fontWeight: 700,
+          color: valueColor,
+          whiteSpace: 'nowrap',
+        }}
+      >
+        {value}
+        <span
+          style={{
+            marginLeft: '8px',
+            fontSize: '11px',
+            fontWeight: 500,
+            color: 'rgba(255, 255, 255, 0.4)',
+            textTransform: 'uppercase',
+            letterSpacing: '0.06em',
+          }}
+        >
+          {subLabel}
+        </span>
+      </div>
+    </div>
+  )
+}
 
 export const SiliconValleyVentureBuilding = memo(SiliconValleyVentureBuildingComponent);
