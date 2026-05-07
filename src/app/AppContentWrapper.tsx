@@ -7,7 +7,7 @@ import { HeroV2A_Masthead } from "@/app/components/heroes/HeroV2A_Masthead";
 import { StatsBar } from "@/app/components/StatsBar";
 import { SocialProofStrip } from "@/app/components/SocialProofStrip";
 import { ScrollRevealSection } from "@/app/components/ScrollRevealSection";
-import { SectionHeader } from "@/app/components/SectionHeader";
+import { SectionMasthead } from "@/app/components/SectionMasthead";
 import { PlaybookStaircase } from "@/app/components/PlaybookStaircase";
 import { ProofSection } from "@/app/components/ProofSection";
 import { CTASection } from "@/app/components/CTASection";
@@ -381,10 +381,18 @@ export function AppContent() {
             ></div>
             
             <div style={{ position: 'relative', zIndex: 1, marginTop: 'var(--avante-space-4)' }}>
-              <SectionHeader
-                title={t('system.title')}
-                description={t('system.subtitle')}
-              />
+              <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 var(--avante-space-4)' }}>
+                <SectionMasthead
+                  centered
+                  eyebrow={language === 'pt' ? 'Nosso Playbook' : 'Our Playbook'}
+                  title={
+                    language === 'pt'
+                      ? 'Um loop repetível. Seis estágios. 3–4 ventures por ano.'
+                      : 'A repeatable loop. Six stages. 3–4 ventures a year.'
+                  }
+                  description={t('system.subtitle')}
+                />
+              </div>
               <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <PlaybookStaircase />
               </div>
@@ -472,8 +480,21 @@ export function AppContent() {
             className="py-[48px] md:py-[64px] relative"
             style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}
           >
-            <div style={{ textAlign: 'center', marginBottom: 'var(--avante-space-6)' }}>
-              <SectionHeader title="The Avante Model" description="Our framework for filtering noise and building conviction." />
+            <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 var(--avante-space-4)' }}>
+              <SectionMasthead
+                centered
+                eyebrow={language === 'pt' ? 'Como Decidimos' : 'How We Decide'}
+                title={
+                  language === 'pt'
+                    ? 'O Modelo Avante — filtro anti-hype'
+                    : 'The Avante Model — anti-hype filter'
+                }
+                description={
+                  language === 'pt'
+                    ? 'Nosso framework para filtrar ruído e construir convicção.'
+                    : 'Our framework for filtering noise and building conviction.'
+                }
+              />
             </div>
             <AvanteModelTabs onOpenContact={() => setIsContactModalOpen(true)} />
           </ScrollRevealSection>
@@ -490,7 +511,22 @@ export function AppContent() {
             className="py-[48px] md:py-[64px] relative"
             style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}
           >
-            <SectionHeader title="Venture Pipeline" description="Next wave of AI-native category leaders" align="center" />
+            <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 var(--avante-space-4)' }}>
+              <SectionMasthead
+                centered
+                eyebrow={language === 'pt' ? 'Pipeline' : 'Pipeline'}
+                title={
+                  language === 'pt'
+                    ? 'A próxima onda de líderes de categoria AI-native'
+                    : 'Next wave of AI-native category leaders'
+                }
+                description={
+                  language === 'pt'
+                    ? 'Cohort atual + ventures co-fundadas previamente.'
+                    : 'Live cohort + previously co-founded ventures.'
+                }
+              />
+            </div>
             <div style={{ marginTop: 'var(--avante-space-6)' }}>
               <VenturePipeline />
             </div>

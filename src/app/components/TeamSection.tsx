@@ -3,6 +3,8 @@ import imgAmandaPinheiro from "figma:asset/b5863e4467cfc4dd5b953580a9fd0f52cb39d
 import imgFelipeMoraes from "figma:asset/24217fa1372f1a7a6001c942dbc43c8d05ffbe06.png";
 import imgJessMah from "figma:asset/0cc97db3c08e4e16ab3eed711a0e53d69d4a9e2d.png";
 import imgAndreaBarrica from "figma:asset/f44c4accfb2025a70b48a3e7ce1e850a67f1519f.png";
+import { SectionMasthead } from '@/app/components/SectionMasthead';
+import { useLanguage } from '@/app/hooks/useLanguage';
 
 interface TeamMember {
   name: string;
@@ -13,6 +15,9 @@ interface TeamMember {
 }
 
 const TeamSectionComponent = () => {
+  const { language } = useLanguage();
+  const t = (en: string, pt: string) => (language === 'pt' ? pt : en);
+
   const teamMembers: TeamMember[] = [
     {
       name: 'Amanda Pinheiro',
@@ -92,32 +97,18 @@ const TeamSectionComponent = () => {
         }}
       >
         {/* Title */}
-        <div style={{ textAlign: 'center', marginBottom: '56px' }}>
-          <p
-            style={{
-              fontSize: '14px',
-              textTransform: 'uppercase',
-              letterSpacing: '0.15em',
-              color: 'rgba(255, 255, 255, 0.5)',
-              fontWeight: 'var(--font-weight-medium)',
-              marginBottom: '12px'
-            }}
-          >
-            Our Team
-          </p>
-          <h2
-            style={{
-              fontSize: '48px',
-              fontWeight: 'var(--font-weight-bold)',
-              color: '#FFFFFF',
-              margin: 0,
-              lineHeight: '1.2',
-              letterSpacing: '-0.02em'
-            }}
-          >
-            Silicon Valley meets Brazil
-          </h2>
-        </div>
+        <SectionMasthead
+          centered
+          eyebrow={t('Our Team', 'Nosso Time')}
+          title={t(
+            'Silicon Valley meets Brazil.',
+            'Vale do Silício encontra o Brasil.'
+          )}
+          description={t(
+            'Operators who have built, scaled, and exited — now writing the playbook for Brazil.',
+            'Operadores que construíram, escalaram e saíram — agora escrevendo o playbook para o Brasil.'
+          )}
+        />
 
         {/* Team Grid */}
         <div

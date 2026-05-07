@@ -1,4 +1,5 @@
 import { memo } from 'react';
+import { useLanguage } from '@/app/hooks/useLanguage';
 
 interface MetricData {
   value: string;
@@ -7,6 +8,9 @@ interface MetricData {
 }
 
 const ProofSectionComponent = () => {
+  const { language } = useLanguage();
+  const t = (en: string, pt: string) => (language === 'pt' ? pt : en);
+
   const trackRecordMetrics: MetricData[] = [
     {
       value: '10x',
@@ -73,20 +77,12 @@ const ProofSectionComponent = () => {
         {/* PART A: Track Record */}
         <div style={{ marginBottom: '64px' }}>
           {/* Subtitle */}
-          <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-            <p
-              style={{
-                fontSize: '14px',
-                textTransform: 'uppercase',
-                letterSpacing: '0.15em',
-                color: 'rgba(255, 255, 255, 0.5)',
-                fontWeight: 'var(--font-weight-medium)',
-                margin: 0
-              }}
-            >
-              What our team has built and exited
-            </p>
-          </div>
+          <ProofEyebrow
+            label={t(
+              'What our team has built and exited',
+              'O que nosso time já construiu e saiu'
+            )}
+          />
 
           {/* Metrics Grid */}
           <div
@@ -116,20 +112,12 @@ const ProofSectionComponent = () => {
         {/* PART B: Current Ventures */}
         <div>
           {/* Subtitle */}
-          <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-            <p
-              style={{
-                fontSize: '14px',
-                textTransform: 'uppercase',
-                letterSpacing: '0.15em',
-                color: 'rgba(255, 255, 255, 0.5)',
-                fontWeight: 'var(--font-weight-medium)',
-                margin: 0
-              }}
-            >
-              Early signals from our ventures
-            </p>
-          </div>
+          <ProofEyebrow
+            label={t(
+              'Early signals from our ventures',
+              'Sinais iniciais das nossas ventures'
+            )}
+          />
 
           {/* Metrics Grid */}
           <div
@@ -172,6 +160,40 @@ const ProofSectionComponent = () => {
     </div>
   );
 };
+
+// Compact eyebrow with the gold-dot signature, matching the SectionMasthead
+// pattern but lighter (these are sub-section dividers, not full mastheads).
+function ProofEyebrow({ label }: { label: string }) {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        gap: '10px',
+        marginBottom: '48px',
+        fontSize: '11px',
+        fontWeight: 600,
+        letterSpacing: '0.18em',
+        textTransform: 'uppercase',
+        color: '#F9B437',
+      }}
+    >
+      <span
+        aria-hidden
+        style={{
+          display: 'inline-block',
+          width: '6px',
+          height: '6px',
+          borderRadius: '50%',
+          background: '#F9B437',
+          boxShadow: '0 0 8px rgba(249, 180, 55, 0.6)',
+        }}
+      />
+      <span>{label}</span>
+    </div>
+  );
+}
 
 interface MetricCardProps {
   metric: MetricData;

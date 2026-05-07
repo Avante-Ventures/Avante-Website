@@ -1,6 +1,11 @@
 import { useState, useEffect } from 'react';
+import { SectionMasthead } from '@/app/components/SectionMasthead';
+import { useLanguage } from '@/app/hooks/useLanguage';
 
 export function ContactFormSection() {
+  const { language } = useLanguage();
+  const t = (en: string, pt: string) => (language === 'pt' ? pt : en);
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -76,29 +81,15 @@ export function ContactFormSection() {
       }}
     >
       {/* Header */}
-      <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-        <h2
-          style={{
-            fontSize: '48px',
-            lineHeight: '1.2',
-            color: '#FFFFFF',
-            fontWeight: 'var(--font-weight-bold)',
-            letterSpacing: '-0.02em',
-            marginBottom: '16px',
-          }}
-        >
-          Let's Talk
-        </h2>
-        <p
-          style={{
-            fontSize: '18px',
-            color: 'rgba(255, 255, 255, 0.7)',
-            lineHeight: '1.6',
-          }}
-        >
-          Whether you're a founder or investor, we'd love to hear from you.
-        </p>
-      </div>
+      <SectionMasthead
+        centered
+        eyebrow={t('Get in Touch', 'Entre em Contato')}
+        title={t("Let's talk.", 'Vamos conversar.')}
+        description={t(
+          "Whether you're a founder building or an investor looking for AI-native exposure in Brazil — we'd love to hear from you.",
+          'Seja fundador construindo ou investidor buscando exposição AI-native no Brasil — queremos ouvir você.'
+        )}
+      />
 
       {/* Success Message */}
       {isSuccess && (

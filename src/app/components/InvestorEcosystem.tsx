@@ -1,10 +1,15 @@
 import { Sparkles, Users, Cpu, MessageSquare, Linkedin, Mail, MapPin } from 'lucide-react';
+import { SectionMasthead } from '@/app/components/SectionMasthead';
+import { useLanguage } from '@/app/hooks/useLanguage';
 
 interface InvestorEcosystemProps {
   onOpenContact: () => void;
 }
 
 export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
+  const { language } = useLanguage();
+  const t = (en: string, pt: string) => (language === 'pt' ? pt : en);
+
   return (
     <div 
       style={{
@@ -30,51 +35,20 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
 
       <div style={{ position: 'relative', zIndex: 1 }}>
         {/* Header */}
-        <h2 
-          style={{
-            fontSize: '48px',
-            lineHeight: '1.2',
-            fontWeight: 'var(--font-weight-bold)',
-            color: '#FFFFFF',
-            marginBottom: 'var(--avante-space-4)',
-            letterSpacing: '-0.02em'
-          }}
-        >
-          Welcome to the Avante Ecosystem
-        </h2>
-        
-        <p 
-          style={{
-            fontSize: '20px',
-            lineHeight: '1.5',
-            color: '#9CA3AF',
-            fontWeight: 'var(--font-weight-regular)',
-            marginBottom: 'var(--avante-space-3)',
-            maxWidth: '800px',
-            margin: '0 auto var(--avante-space-3) auto'
-          }}
-        >
-          Beyond returns — strategic access to the AI revolution in Brazil
-        </p>
+        <SectionMasthead
+          centered
+          eyebrow={t('For Investors', 'Para Investidores')}
+          title={t(
+            'Welcome to the Avante ecosystem.',
+            'Bem-vindo ao ecossistema Avante.'
+          )}
+          description={t(
+            'Beyond returns — strategic access to the AI revolution in Brazil.',
+            'Além dos retornos — acesso estratégico à revolução da IA no Brasil.'
+          )}
+        />
 
-        {/* Eyebrow badge */}
-        <div 
-          style={{
-            display: 'inline-block',
-            padding: 'var(--avante-space-2) var(--avante-space-5)',
-            backgroundColor: 'rgba(230, 197, 76, 0.12)',
-            border: '1px solid rgba(230, 197, 76, 0.3)',
-            borderRadius: 'var(--avante-radius-8)',
-            marginBottom: 'var(--avante-space-12)',
-            fontSize: '13px',
-            fontWeight: 'var(--font-weight-bold)',
-            color: '#E6C54C',
-            textTransform: 'uppercase',
-            letterSpacing: '1.5px'
-          }}
-        >
-          Investor Mega Perks
-        </div>
+        <div style={{ marginBottom: 'var(--avante-space-12)' }} />
 
         {/* Investor Perks - Bento Grid Style */}
         <div 

@@ -1,4 +1,5 @@
 import { memo } from 'react';
+import { useLanguage } from '@/app/hooks/useLanguage';
 import bambooDcmLogo from '../../imports/image-6.webp';
 import mahwayLogo from '../../imports/image.webp';
 import siggaLogo from '../../imports/image-3.webp';
@@ -14,6 +15,9 @@ interface Logo {
 }
 
 const SocialProofStripComponent = () => {
+  const { language } = useLanguage();
+  const t = (en: string, pt: string) => (language === 'pt' ? pt : en);
+
   const logos: Logo[] = [
     { src: bambooDcmLogo, alt: 'Bamboo DCM', name: 'Bamboo DCM' },
     { src: mahwayLogo, alt: 'Mahway', name: 'Mahway' },
@@ -60,25 +64,33 @@ const SocialProofStripComponent = () => {
           margin: '0 auto'
         }}
       >
-        {/* Title */}
-        <div 
+        {/* Eyebrow — gold-dot signature, matching the masthead family */}
+        <div
           style={{
-            textAlign: 'center',
-            marginBottom: '40px'
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            gap: '10px',
+            marginBottom: '40px',
+            fontSize: '11px',
+            fontWeight: 600,
+            letterSpacing: '0.18em',
+            textTransform: 'uppercase',
+            color: '#F9B437',
           }}
         >
-          <p 
+          <span
+            aria-hidden
             style={{
-              fontSize: '12px',
-              textTransform: 'uppercase',
-              letterSpacing: '0.15em',
-              color: 'rgba(255, 255, 255, 0.5)',
-              fontWeight: 'var(--font-weight-medium)',
-              margin: 0
+              display: 'inline-block',
+              width: '6px',
+              height: '6px',
+              borderRadius: '50%',
+              background: '#F9B437',
+              boxShadow: '0 0 8px rgba(249, 180, 55, 0.6)',
             }}
-          >
-            Our ecosystem includes
-          </p>
+          />
+          <span>{t('Our ecosystem includes', 'Nosso ecossistema inclui')}</span>
         </div>
 
         {/* Logo Marquee Container */}
@@ -116,7 +128,7 @@ const SocialProofStripComponent = () => {
             borderTop: '1px solid rgba(255, 255, 255, 0.08)'
           }}
         >
-          <p 
+          <p
             style={{
               fontSize: '20px',
               lineHeight: '1.6',
@@ -127,9 +139,12 @@ const SocialProofStripComponent = () => {
               letterSpacing: '-0.01em'
             }}
           >
-            "We are not tourists. We have built, scaled, and exited. Now we are deploying that pattern recognition to build Brazil's next category leaders."
+            {t(
+              '"We are not tourists. We have built, scaled, and exited. Now we are deploying that pattern recognition to build Brazil\'s next category leaders."',
+              '"Não somos turistas. Já construímos, escalamos e saímos. Agora estamos aplicando esse reconhecimento de padrões para construir os próximos líderes de categoria do Brasil."'
+            )}
           </p>
-          <p 
+          <p
             style={{
               fontSize: '14px',
               color: '#F4A261',
@@ -137,7 +152,7 @@ const SocialProofStripComponent = () => {
               margin: 0
             }}
           >
-            — Avante Founding Team
+            {t('— Avante Founding Team', '— Time Fundador da Avante')}
           </p>
         </div>
       </div>
