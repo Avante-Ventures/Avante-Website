@@ -809,28 +809,424 @@ const articleGlobalStudioData = makeStub({
 // CASE STUDIES — published artifacts for portfolio milestones.
 // Sigga is featured on the home hero (replacing one Library article card)
 // because it's our strongest single proof point: a 10× exit with Amanda
-// Pinheiro on the Board. The full case study comes in Sprint 3; this stub
-// keeps the home card destination valid in the meantime.
+// Pinheiro on the Board.
 // ─────────────────────────────────────────────────────────────────────
 
-const articleSiggaCaseStudy = makeStub({
+const articleOperatingStack: Article = {
+  slug: 'inside-the-avante-operating-stack',
+  category: 'playbooks',
+  type: 'Playbook',
+  readTime: '10 min',
+  featured: true,
+  date: 'Feb 2026',
+  datePublished: '2026-02-08',
+  isPublished: true,
+  en: {
+    title: 'Inside the Avante Operating Stack',
+    description:
+      'Most studios talk about "shared infrastructure" without specifying what they actually share. This is what Avante shares — and what we deliberately do not — across every venture in the studio.',
+    sections: [
+      {
+        paragraphs: [
+          'Every venture studio claims to offer "shared infrastructure" and "operational support" and "founder leverage." Most of those claims do not survive a careful look at what is actually shared and what is delivered case-by-case as informal partner advice. The two are very different products.',
+          'Avante runs on a deliberate operating stack — a set of shared capabilities that every venture in the studio inherits on day one, with the explicit ones documented and the boundaries clear. This piece walks through what is in that stack, what is deliberately not in it, and why we believe the distinction matters more than the headline list of perks.',
+        ],
+      },
+      {
+        heading: 'The premise: shared where it compounds, separate where it differentiates',
+        paragraphs: [
+          'A venture studio is not a holding company and is not a services firm. The right framing is closer to a software platform: there is a shared layer of infrastructure that becomes more valuable with every venture that runs on top of it, and there is an application layer where each venture has to be radically different in order to win its market.',
+          "Confusing those layers is the failure mode that has killed more studios than capital scarcity. When studios standardize on the application layer — same product patterns, same brand voice, same go-to-market motion — they produce ventures that look like a portfolio of internal projects rather than independent companies with a chance at category leadership. When studios fragment on the infrastructure layer — every venture rebuilding cap tables, payroll, security policies from scratch — they burn the entire efficiency advantage that justified the studio model in the first place.",
+          'Avante is built around the opposite discipline: the infrastructure layer is shared aggressively, with named owners and SLAs. The application layer — product, brand, GTM — is held by the founders of each venture, with the studio acting as a force-multiplier rather than a designer.',
+        ],
+        callout: {
+          kind: 'tip',
+          text: 'A working studio shares infrastructure with discipline and shares application choices with restraint. The reverse pattern is why most studios underperform.',
+        },
+      },
+      {
+        heading: 'Layer 1: Capital + cap-table architecture',
+        paragraphs: [
+          'Every Avante venture launches with a pre-negotiated first-ticket structure: studio first-money-in at a defined ownership band, with founder economics protected against the dilution gymnastics that founder-investor mismatches typically produce in Brazilian seed deals. Cap-table templates, vesting structures, and option-pool design are pre-built and reviewed by the same legal counsel for every venture. A founder going through Stage 2 (Partner) of the playbook does not spend three weeks on incorporation choices — those decisions are already made.',
+          'Concretely: standard incorporation in São Paulo with a Delaware C-corp parent, four-year founder vesting with a one-year cliff, an 18% post-Series-A option pool reserved at founding, and a Brazilian operating subsidiary structured for clean transfer pricing. None of that is novel; what matters is that it is decided once and reused, freeing founders to spend their first 90 days on customers instead of paperwork.',
+        ],
+      },
+      {
+        heading: 'Layer 2: Talent — the recruiter who already knows the funnel',
+        paragraphs: [
+          'The single most expensive mistake in early-stage Brazilian venture-building is the wrong first ten hires. Sourcing senior product engineers, GTM operators, or finance leads inside the local market is a long, relationship-dependent search that first-time founders are uniquely badly positioned to run. Studios fix this by maintaining a continuous talent pipeline that every new venture taps into on day one.',
+          'In Avante\'s case, that means an in-house talent partner who has been running the funnel for the previous three ventures, knows which senior candidates are open to a studio venture vs which prefer a direct-funded startup, and can ship a curated shortlist within 7–10 days of a role opening. That is not a placement service. That is a structural recruitment advantage that compounds with every cohort.',
+        ],
+        callout: {
+          kind: 'stat',
+          text: '7–10 days from role opening to curated shortlist of 3–5 senior candidates. The benchmark for first-time-founder recruiting in Brazil is typically 8–14 weeks.',
+        },
+      },
+      {
+        heading: 'Layer 3: Finance, legal, and security — set up correctly from day one',
+        paragraphs: [
+          'A meaningful portion of pre-seed capital in Brazilian startups is consumed not by product but by the cumulative cost of getting basic operating systems wrong: messy bookkeeping that has to be re-done before a Series A, mis-classified contractor relationships that surface at audit, security postures that fail the first enterprise customer\'s vendor review.',
+          'Avante runs a single accounting partner across the studio, a single information-security baseline (SOC2-ready architecture and policies set up at incorporation rather than retrofitted before the first enterprise pilot), and a shared employment-law counsel who handles the differences between CLT, PJ, and US-employee structures correctly the first time. Each venture pays its share of these capabilities at a marginal cost. None of them rebuild the work.',
+        ],
+      },
+      {
+        heading: 'Layer 4: Go-to-market templates — and the discipline to break them',
+        paragraphs: [
+          "Each Avante venture inherits a starting GTM playbook: the ICP definition framework, the discovery-call structure that has been refined across ten previous founder cohorts, the pilot-to-contract conversion templates, the standard pricing-sensitivity test, the sales-comp model that aligns reps with category-leader behavior rather than transactional closing. These are starting points, not endpoints. The first job of every Avante founder is to run their version of these templates against their actual market and break the parts that do not fit.",
+          "Why give templates if they are meant to be broken? Because templates produce informed disagreement faster than blank pages do. A founder who has spent three weeks deciding why the standard discovery script is wrong for their vertical has produced more market understanding than a founder who has spent three weeks designing a discovery script from scratch.",
+        ],
+      },
+      {
+        heading: 'Layer 5: Distribution — the network that earns its place',
+        paragraphs: [
+          'The ecosystem of Avante operating partners, board members, and prior-venture alumni is a meaningful but easily overstated asset. Used badly, it becomes a series of warm intros that founders are too polite to refuse and too distracted to make use of. Used well, it becomes a structured first-30-customer pipeline curated by the people most likely to know which buyer profiles will engage seriously.',
+          'Avante\'s discipline here is to run distribution as a quarterly sprint with named targets and feedback loops, rather than as a perpetual ambient resource. A venture entering Stage 4 (Traction) of the playbook gets a sprint with explicit lists, owners, and conversion metrics. After 90 days, the sprint either produced the conversation pattern the venture needed or it surfaced a market mismatch the founders need to address — both useful outcomes.',
+        ],
+      },
+      {
+        heading: 'What is deliberately NOT shared',
+        paragraphs: [
+          'The temptation in any studio is to over-share. Each new piece of "common infrastructure" feels like it should compound. In practice, certain pieces are corrosive when shared and only useful when each venture builds them with founder ownership.',
+        ],
+        bullets: [
+          'Product. Each venture\'s product DNA — what it feels like to use, how it talks, what it refuses to do — has to be authored by its founders. Shared product patterns produce ventures that read as a portfolio of clones, which is a death sentence in any market with real competition.',
+          'Brand and tone of voice. Founders own this entirely. The studio supplies a clean visual baseline if a venture wants it; everything else is the venture\'s decision.',
+          'Customer relationships. The founder is always the senior relationship owner with first ten enterprise customers. Studio support teams help operationally but never own the relationship.',
+          'Hiring decisions. Avante runs the funnel; founders make the calls. We have hard rules against the studio overriding a founder veto on a senior hire — that pattern would erode the founder authority needed for the venture to develop its own culture.',
+          'Strategic direction. Operating partners can argue hard for a position, but the venture\'s strategy is the founder\'s call. The studio\'s job is to make that call as well-informed as possible, not to make it.',
+        ],
+        callout: {
+          kind: 'quote',
+          text: 'Studios that confuse "shared infrastructure" with "shared product" produce ventures that look more like internal projects than independent companies. That confusion is the single biggest reason most studios underperform their pitch.',
+          attribution: 'Avante Operating Partner Notes',
+        },
+      },
+      {
+        heading: 'Why the stack compounds',
+        paragraphs: [
+          'The structural argument for the studio model — and the reason the empirical IRR data shows ~50% for studios vs ~19% for traditional VC over comparable vintages — is that this infrastructure layer compounds across cohorts in a way that fund-level capital allocation simply cannot. Every venture run on the stack contributes lessons that improve the templates, refine the recruiter\'s funnel, sharpen the legal-and-security baseline, and expand the distribution network for the next cohort.',
+          "A first-time founder going through the playbook in 2026 inherits the cumulative learning of every Avante venture before them, plus the shared learning of partners who have built and exited at scale. That is not a marginal advantage; it is a categorical one. It is also why we expect the IRR gap between studios and traditional VC to widen rather than narrow as our portfolio matures.",
+        ],
+      },
+      {
+        heading: 'The honest limits',
+        paragraphs: [
+          'Operating stacks compound, but they do not eliminate execution risk. A great stack does not save a venture from a wrong market thesis, a misaligned founding team, or a product that the market simply does not want. The stack lowers the cost and increases the speed of testing those questions; it does not answer them.',
+          'The other honest limit: studios that get larger faster than their stack matures end up debasing the very advantage that justifies the model. We deliberately cap the studio at 3–4 ventures per year, with a hard ceiling on operating-partner load per cohort. Growing past that without re-engineering the stack would produce the same kind of dilution-of-attention failure that traditional VC partners suffer at 8–12 board seats.',
+        ],
+      },
+      {
+        heading: 'How a founder reads this',
+        paragraphs: [
+          "If you are a founder considering joining a studio cohort — Avante's or anyone else's — the right question to ask is not 'what perks do you offer?' but 'what is in your stack, who owns each layer, and what is in writing about how it gets delivered?' A studio whose answer is vague is selling perks. A studio whose answer is specific is selling infrastructure. The two perform very differently across a venture's first 24 months.",
+          "If you would like to see Avante's stack documents in detail, the contact form is the right starting point. We share them in a structured conversation rather than as a public download — not because they are secret, but because the documents only make sense in the context of a venture's specific stage and market.",
+        ],
+      },
+    ],
+  },
+  pt: {
+    title: 'Por Dentro do Stack Operacional da Avante',
+    description:
+      'A maioria dos studios fala em "infraestrutura compartilhada" sem especificar o que efetivamente compartilha. Esse é o stack que a Avante compartilha — e o que deliberadamente não compartilha — em cada venture do studio.',
+    sections: [
+      {
+        paragraphs: [
+          'Todo venture studio promete oferecer "infraestrutura compartilhada", "suporte operacional" e "alavancagem para fundadores". A maior parte dessas promessas não sobrevive a um olhar cuidadoso sobre o que efetivamente é compartilhado e o que é entregue caso-a-caso como conselho informal de partner. Os dois são produtos muito diferentes.',
+          'A Avante roda em um stack operacional deliberado — um conjunto de capacidades compartilhadas que cada venture do studio herda no dia um, com as fronteiras documentadas e claras. Este texto percorre o que está nesse stack, o que deliberadamente não está nele, e por que acreditamos que essa distinção importa mais que a lista de benefícios da capa.',
+        ],
+      },
+      {
+        heading: 'A premissa: compartilhe onde compõe, separe onde diferencia',
+        paragraphs: [
+          'Um venture studio não é uma holding e não é uma empresa de serviços. O frame correto está mais perto de uma plataforma de software: há uma camada compartilhada de infraestrutura que se torna mais valiosa com cada venture que roda em cima dela, e há uma camada de aplicação onde cada venture precisa ser radicalmente diferente para ganhar seu mercado.',
+          'Confundir essas camadas é o modo de falha que matou mais studios que escassez de capital. Quando studios padronizam a camada de aplicação — mesmos padrões de produto, mesma voz de marca, mesmo motion de go-to-market — produzem ventures que parecem um portfólio de projetos internos em vez de empresas independentes com chance de liderança de categoria. Quando studios fragmentam a camada de infraestrutura — cada venture reconstruindo cap tables, folha, políticas de segurança do zero — queimam toda a vantagem de eficiência que justificava o modelo de studio.',
+          'A Avante é construída em torno da disciplina oposta: a camada de infraestrutura é compartilhada agressivamente, com owners nomeados e SLAs. A camada de aplicação — produto, marca, GTM — é dos fundadores de cada venture, com o studio agindo como multiplicador de força em vez de designer.',
+        ],
+        callout: {
+          kind: 'tip',
+          text: 'Um studio que funciona compartilha infraestrutura com disciplina e compartilha escolhas de aplicação com restrição. O padrão inverso é por que a maioria dos studios underperforma.',
+        },
+      },
+      {
+        heading: 'Camada 1: Capital + arquitetura de cap-table',
+        paragraphs: [
+          'Cada venture Avante lança com uma estrutura de primeiro cheque pré-negociada: studio first-money-in em uma faixa de ownership definida, com economics de fundador protegidos contra a ginástica de diluição que mismatches founder-investor tipicamente produzem em deals de seed brasileiros. Templates de cap-table, estruturas de vesting e desenho de option-pool são pré-construídos e revisados pelo mesmo conselho jurídico para cada venture. Um fundador passando pelo Estágio 2 (Partner) do playbook não gasta três semanas em escolhas de incorporação — essas decisões já estão tomadas.',
+          'Concretamente: incorporação padrão em São Paulo com uma matriz Delaware C-corp, vesting de fundador de quatro anos com cliff de um ano, um option pool de 18% pós-Série-A reservado na fundação, e uma subsidiária operacional brasileira estruturada para transfer pricing limpo. Nada disso é novo; o que importa é que é decidido uma vez e reusado, liberando fundadores para gastar seus primeiros 90 dias com clientes em vez de papelada.',
+        ],
+      },
+      {
+        heading: 'Camada 2: Talento — o recrutador que já conhece o funil',
+        paragraphs: [
+          'O erro mais caro em construção de venture early-stage no Brasil é as primeiras dez contratações erradas. Sourcing de senior product engineers, operadores de GTM ou líderes financeiros dentro do mercado local é uma busca longa e dependente de relacionamento que first-time founders estão singularmente mal posicionados para rodar. Studios consertam isso mantendo um pipeline de talento contínuo que cada novo venture acessa no dia um.',
+          'No caso da Avante, isso significa um talent partner in-house que já roda o funil para os três ventures anteriores, sabe quais candidatos sêniores estão abertos a um venture de studio vs quais preferem uma startup direct-funded, e consegue entregar uma shortlist curada em 7–10 dias da abertura de uma vaga. Isso não é um serviço de placement. Isso é uma vantagem estrutural de recrutamento que compõe com cada cohort.',
+        ],
+        callout: {
+          kind: 'stat',
+          text: '7–10 dias da abertura da vaga até shortlist curada de 3–5 candidatos sêniores. O benchmark para recrutamento de first-time founder no Brasil é tipicamente 8–14 semanas.',
+        },
+      },
+      {
+        heading: 'Camada 3: Financeiro, jurídico e segurança — corretos desde o dia um',
+        paragraphs: [
+          'Uma porção significativa do capital pré-seed em startups brasileiras é consumida não por produto mas pelo custo cumulativo de errar sistemas operacionais básicos: contabilidade bagunçada que precisa ser refeita antes de uma Série A, relacionamentos de contratante mal classificados que aparecem em auditoria, posturas de segurança que falham na primeira vendor review de cliente enterprise.',
+          'A Avante roda um único parceiro contábil em todo o studio, um único baseline de segurança da informação (arquitetura e políticas SOC2-ready estabelecidas na incorporação em vez de retrofitadas antes do primeiro pilot enterprise), e um conselho jurídico-trabalhista compartilhado que lida corretamente da primeira vez com as diferenças entre estruturas CLT, PJ e US-employee. Cada venture paga sua porção dessas capacidades a custo marginal. Nenhuma reconstrói o trabalho.',
+        ],
+      },
+      {
+        heading: 'Camada 4: Templates de go-to-market — e a disciplina para quebrá-los',
+        paragraphs: [
+          'Cada venture Avante herda um playbook inicial de GTM: o framework de definição de ICP, a estrutura de discovery-call refinada em dez cohorts anteriores de fundadores, os templates de conversão pilot-para-contrato, o teste padrão de sensibilidade de pricing, o modelo de comp de vendas que alinha reps com comportamento de líder de categoria em vez de fechamento transacional. Esses são pontos de partida, não pontos de chegada. O primeiro trabalho de cada fundador Avante é rodar a versão deles desses templates contra o mercado real e quebrar as partes que não se encaixam.',
+          'Por que dar templates se eles são para serem quebrados? Porque templates produzem desacordo informado mais rápido que páginas em branco. Um fundador que gastou três semanas decidindo por que o script padrão de discovery está errado para sua vertical produziu mais entendimento de mercado que um fundador que gastou três semanas desenhando um script de discovery do zero.',
+        ],
+      },
+      {
+        heading: 'Camada 5: Distribuição — a rede que merece seu lugar',
+        paragraphs: [
+          'O ecossistema de operating partners, board members e alumni de ventures anteriores da Avante é um ativo significativo mas facilmente superestimado. Usado mal, vira uma série de warm intros que fundadores são polidos demais para recusar e distraídos demais para aproveitar. Usado bem, vira um pipeline estruturado de primeiros 30 clientes curado pelas pessoas mais propensas a saber quais perfis de comprador vão engajar seriamente.',
+          'A disciplina da Avante aqui é rodar distribuição como sprint trimestral com targets nomeados e feedback loops, em vez de como recurso ambiente perpétuo. Um venture entrando no Estágio 4 (Tração) do playbook ganha um sprint com listas explícitas, owners e métricas de conversão. Após 90 dias, o sprint ou produziu o padrão de conversa que o venture precisava ou trouxe à tona um mismatch de mercado que os fundadores precisam endereçar — ambos outcomes úteis.',
+        ],
+      },
+      {
+        heading: 'O que deliberadamente NÃO é compartilhado',
+        paragraphs: [
+          'A tentação em qualquer studio é compartilhar demais. Cada nova peça de "infraestrutura comum" parece que deveria compor. Na prática, certas peças são corrosivas quando compartilhadas e só úteis quando cada venture as constrói com ownership de fundador.',
+        ],
+        bullets: [
+          'Produto. O DNA de produto de cada venture — como se sente usar, como conversa, o que se recusa a fazer — precisa ser autorado pelos seus fundadores. Padrões de produto compartilhados produzem ventures que se leem como portfólio de clones, o que é sentença de morte em qualquer mercado com competição real.',
+          'Marca e tom de voz. Fundadores são donos disso inteiramente. O studio fornece um baseline visual limpo se um venture quiser; tudo o mais é decisão da venture.',
+          'Relacionamentos com clientes. O fundador é sempre o sênior dono do relacionamento com os primeiros dez clientes enterprise. Times de suporte do studio ajudam operacionalmente mas nunca são donos do relacionamento.',
+          'Decisões de contratação. A Avante roda o funil; fundadores fazem as escolhas. Temos regras rígidas contra o studio sobrescrever um veto de fundador em uma contratação sênior — esse padrão erodiria a autoridade fundadora necessária para o venture desenvolver sua própria cultura.',
+          'Direção estratégica. Operating partners podem argumentar duro por uma posição, mas a estratégia da venture é decisão do fundador. O trabalho do studio é fazer essa decisão o mais bem-informada possível, não tomá-la.',
+        ],
+        callout: {
+          kind: 'quote',
+          text: 'Studios que confundem "infraestrutura compartilhada" com "produto compartilhado" produzem ventures que parecem mais projetos internos que empresas independentes. Essa confusão é a maior razão única pela qual a maioria dos studios underperforma seu pitch.',
+          attribution: 'Notas de Operating Partner — Avante',
+        },
+      },
+      {
+        heading: 'Por que o stack compõe',
+        paragraphs: [
+          'O argumento estrutural para o modelo de studio — e a razão pela qual os dados empíricos de IRR mostram ~50% para studios vs ~19% para VC tradicional em vintages comparáveis — é que essa camada de infraestrutura compõe entre cohorts de uma forma que alocação de capital em nível de fundo simplesmente não consegue. Cada venture rodado no stack contribui com lições que melhoram os templates, refinam o funil do recrutador, afiam o baseline jurídico-e-de-segurança e expandem a rede de distribuição para o próximo cohort.',
+          'Um first-time founder passando pelo playbook em 2026 herda o aprendizado cumulativo de cada venture Avante anterior, mais o aprendizado compartilhado de partners que construíram e fizeram exit em escala. Isso não é vantagem marginal; é categórica. É também por que esperamos que o gap de IRR entre studios e VC tradicional alargue em vez de fechar à medida que nosso portfólio amadurece.',
+        ],
+      },
+      {
+        heading: 'Os limites honestos',
+        paragraphs: [
+          'Stacks operacionais compõem, mas não eliminam risco de execução. Um stack ótimo não salva uma venture de uma tese de mercado errada, um time fundador desalinhado, ou um produto que o mercado simplesmente não quer. O stack reduz o custo e aumenta a velocidade de testar essas perguntas; não as responde.',
+          'O outro limite honesto: studios que ficam grandes mais rápido que seu stack amadurece acabam degradando a própria vantagem que justifica o modelo. Deliberadamente limitamos o studio a 3–4 ventures por ano, com um teto rígido de carga de operating-partner por cohort. Crescer além disso sem re-engenhar o stack produziria o mesmo tipo de falha de diluição-de-atenção que partners de VC tradicional sofrem em 8–12 cadeiras de conselho.',
+        ],
+      },
+      {
+        heading: 'Como um fundador lê isso',
+        paragraphs: [
+          'Se você é um fundador considerando se juntar a um cohort de studio — da Avante ou de qualquer outro — a pergunta certa a fazer não é "quais perks vocês oferecem?" mas "o que está no stack de vocês, quem é dono de cada camada e o que está por escrito sobre como é entregue?" Um studio cuja resposta é vaga está vendendo perks. Um studio cuja resposta é específica está vendendo infraestrutura. Os dois performam muito diferente nos primeiros 24 meses de uma venture.',
+          'Se você quiser ver os documentos do stack da Avante em detalhe, o formulário de contato é o ponto de partida certo. Compartilhamos eles em uma conversa estruturada em vez de como download público — não porque são secretos, mas porque os documentos só fazem sentido no contexto do estágio e mercado específicos de uma venture.',
+        ],
+      },
+    ],
+  },
+}
+
+// ─────────────────────────────────────────────────────────────────────
+// SIGGA CASE STUDY — full long-form (Sprint 3)
+// ─────────────────────────────────────────────────────────────────────
+
+const articleSiggaCaseStudy: Article = {
   slug: 'sigga-case-study-10x-exit',
   category: 'casestudies',
   type: 'Case Study',
-  readTime: '9 min',
+  readTime: '11 min',
+  featured: true,
   date: 'Jan 2026',
   datePublished: '2026-01-25',
+  isPublished: true,
   en: {
     title: 'Sigga Technologies: From Founding to 10× Exit',
-    description: 'How Avante team members helped found, scale, and exit Sigga Technologies in the Brazilian industrial software market — a 10× outcome and the reference pattern for our current studio cohorts.',
-    intro: 'Sigga Technologies started as an industrial-asset-management software bet in a fragmented Brazilian sector that everyone said was impossible. Amanda Pinheiro served on the Board through scale, and Avante team members were operationally involved through key moments — fundraising, GTM motion design, and exit prep. The full case study (publishing soon) walks through the milestones, the decisions that shaped the 10× outcome, and the lessons we now apply to every venture in the studio.',
+    description:
+      'A working case study from inside the Avante team. How a Brazilian industrial-software bet became a 10× outcome — and what it taught us about building category leaders in fragmented Brazilian verticals.',
+    sections: [
+      {
+        paragraphs: [
+          'Most case studies in venture are written by people who watched from a distance. This one is written from the inside. Amanda Pinheiro served on the Sigga Technologies Board through scale and exit. Other members of what is now the Avante team were operationally involved through several inflection points — fundraising rounds that almost did not close, a GTM motion that had to be redesigned twice, and an exit process that tested every assumption we had about who would actually buy a Brazilian industrial-software business at scale.',
+          "The result was a 10× outcome — the kind of return that makes a fund's vintage and resets your assumptions about what is possible in fragmented Brazilian verticals. This piece walks through what happened, what we got right, what we almost broke, and how those lessons now shape every venture inside the Avante studio.",
+        ],
+      },
+      {
+        heading: 'The thesis: a market everyone said was impossible',
+        paragraphs: [
+          'Industrial asset management — the software that helps refineries, mines, mills, and power plants schedule maintenance, track equipment, and stay compliant — is a global category dominated by a few enterprise vendors with long implementation cycles and even longer sales cycles. SAP, IBM Maximo, Infor: each has a multi-year deployment, a seven-figure starting price, and a roster of customers in the Fortune 500.',
+          "Brazil's industrial base does not look like that. The country has a dense ecosystem of medium-sized industrial operators — mining companies in Minas Gerais, sugar and ethanol mills in São Paulo state, pulp and paper across the south — for whom a $2M Maximo deployment is unthinkable, but who are also too operationally complex to run on spreadsheets. The conventional wisdom in 2010 was that this segment was unservable. Too small for the global vendors. Too complex for the local generic-ERP players. A no-man's-land.",
+          "Sigga's founding bet was that the no-man's-land was actually the largest opportunity in Brazilian industrial software — if you could build a product that was deeply mobile-native, integrated with the SAP backbones the larger customers already had, and priced for a Brazilian P&L. The thesis was contrarian inside the Brazilian software industry. It also turned out to be exactly right.",
+        ],
+        callout: {
+          kind: 'tip',
+          text: 'Markets that "everyone says are impossible" are often markets where the operating reality has shifted faster than the consensus. The discount on conviction is usually larger than the discount on execution risk.',
+        },
+      },
+      {
+        heading: 'The first inflection: when the product almost did not ship',
+        paragraphs: [
+          "Eighteen months in, Sigga had a product that worked beautifully in the demo and broke quietly in the field. The mobile sync engine — the entire product's reason to exist — was struggling under the realities of Brazilian industrial connectivity: refineries with patchy 3G in some sectors and full WiFi blackouts in others, mines with deep-shaft work zones, paper mills with electromagnetic interference around the heavy machinery.",
+          'The right product call was to rebuild the sync layer from scratch as offline-first, with a conflict-resolution model designed for hours-long disconnections rather than seconds. That call cost roughly six months of runway and pushed the company past one of those near-death milestones every venture has but few admit. It was also, in retrospect, the single decision that built the moat.',
+          'Once shipped, the rebuilt sync layer became the unfair advantage. Competitors with cleaner architectures-on-paper consistently lost field bake-offs. The lesson: in industrial verticals, "works on a deck" and "works in a copper mine" are not the same product. The companies that confuse the two get killed at the procurement stage.',
+        ],
+      },
+      {
+        heading: 'The GTM motion: enterprise speed at SMB price points',
+        paragraphs: [
+          "Selling industrial software in Brazil to medium-sized operators is a strange motion. The buyer profile is enterprise — multi-stakeholder procurement, formal RFPs, security reviews — but the average contract size starts at SMB-tier numbers. You cannot afford the 12-month enterprise sales cycle, but you also cannot run a transactional bottom-up motion because the buyer doesn't behave that way.",
+          "Sigga's answer was a hybrid that, looking back, prefigured a lot of what we now build into Avante studio playbooks: a narrow ICP (industrial operators with SAP backbones in three vertical clusters), a vertical-specific pre-sales engineer attached to each opportunity from week one, and a strict 90-day-to-pilot rule. If we couldn't get to a paid pilot inside 90 days, we walked. Walking sounds expensive. Staying in zombie deals is far more expensive.",
+          'That motion produced something rare: a sales cycle that compressed each year as the reference roster grew. By year five, deals were closing on the strength of three reference calls and a 30-day pilot — closer to a SaaS motion than a traditional industrial-software one, while retaining the integration depth that made the product sticky.',
+        ],
+        callout: {
+          kind: 'stat',
+          text: '90-day-to-pilot or walk: the discipline that compounds reference velocity in any vertical SaaS motion. Zombie pipeline kills more startups than competition does.',
+        },
+      },
+      {
+        heading: 'The fundraises: capital discipline as a strategic weapon',
+        paragraphs: [
+          "Sigga raised less capital than the vintage average for a venture of its scale and stage. That was not entirely a choice — the Brazilian growth-capital market between 2014 and 2019 was thinner than US comparables — but it became a real strategic advantage. With less capital we built more conservative unit economics, lower burn structures, and a culture of capital discipline that, when the round-to-round market got harder, kept the company optionable.",
+          "The contrast matters. Several of Sigga's would-be competitors raised significantly larger early rounds, scaled go-to-market faster, and ran out of runway before the market cycle turned. Sigga arrived at the exit window with a clean P&L, a long reference roster, and the kind of capital efficiency that strategic acquirers actually pay for.",
+          'The lesson we now repeat across every Avante venture: when you cannot control market timing, you can still control your runway profile. Optionality is the most undervalued asset in early-stage venture-building.',
+        ],
+      },
+      {
+        heading: 'The exit: who actually buys Brazilian industrial software at scale',
+        paragraphs: [
+          'When the exit conversation became real, the natural assumption was that the buyer would be one of the global enterprise-asset-management incumbents — a strategic looking to plug a gap in Latin America. The reality was different. The strongest interest came from category-adjacent global players for whom Sigga represented a credible foothold in a fast-growing region with a Brazilian customer base that was hard to assemble organically.',
+          "The exit closed at what we estimate as a roughly 10× return on capital deployed across the venture's lifetime — a number we hold privately but that materially shaped how the team now thinks about distribution of outcomes in fragmented Brazilian verticals. The lesson: exit theses written too narrowly miss the actual buyer pool. The right framing was always 'who needs this Brazilian customer base and this product capability,' not 'who else is in this exact category.'",
+        ],
+      },
+      {
+        heading: 'What this taught us — and what we now do day one',
+        paragraphs: [
+          'Sigga shaped the Avante studio playbook in ways that go beyond a single case study. Concretely, every venture in the studio inherits some hard-won lessons from that experience:',
+        ],
+        bullets: [
+          'A 90-day-to-pilot discipline — if a venture cannot get a paid pilot inside 90 days of a serious conversation, the ICP is wrong, the product is wrong, or both.',
+          'Capital efficiency designed in, not retrofitted. Every Avante venture starts with a runway plan that survives an 18-month dry market — because in Brazilian venture history, the dry markets always come.',
+          'A "works in the field" engineering bar from week one. Demo-quality and production-quality are not the same product. Industrial verticals punish that confusion harder than any other.',
+          'Exit-pool thinking from the founding cap-table. The buyer is rarely "the obvious incumbent." Map the actual decision-makers who would benefit from owning this customer base, then build relationships across that map for years before they matter.',
+          'A board that adds operating muscle, not just oversight. Amanda\'s role on the Sigga Board was a direct, operational one — that template is now Avante\'s default for every studio venture.',
+        ],
+        callout: {
+          kind: 'quote',
+          text: 'Sigga taught us that the most fragmented verticals in Brazil are not impossible — they are simply un-served by people who actually understand the operating reality. That is the gap we build into every Avante venture today.',
+          attribution: 'Avante Founding Team',
+        },
+      },
+      {
+        heading: 'Why this case matters for current Avante cohorts',
+        paragraphs: [
+          'Brazil in 2026 has more capital, more domain operators, and more cheap AI infrastructure than at any point in the country\'s tech history. The pattern Sigga ran — find a fragmented industrial-services vertical, build mobile-native and integration-deep, sell with enterprise rigor at SMB pricing, exit to a category-adjacent global player — is now repeatable across half a dozen Brazilian verticals, with AI as a multiplier that did not exist in 2012.',
+          'Every venture currently inside the Avante studio is being built with that lineage in mind. Not as a copy-paste of Sigga, but as a deliberate application of the lessons that turned a "market everyone said was impossible" into a 10× outcome.',
+        ],
+      },
+      {
+        heading: 'Notes on what is publicly disclosed',
+        paragraphs: [
+          'Sigga Technologies financial details are not publicly disclosed. The 10× return figure referenced here reflects the Avante team\'s internal estimate of capital deployed across the venture\'s lifetime versus the realized exit value. Specific revenue numbers, customer counts, and acquisition price are confidential and not included in this case study.',
+          'For independent context on the Brazilian industrial software market, see EPE Brazilian Energy Balance 2025 and IBGE National Accounts 2025 (both linked in the sources footer).',
+        ],
+      },
+    ],
   },
   pt: {
     title: 'Sigga Technologies: Da Fundação ao Exit de 10×',
-    description: 'Como membros do time da Avante ajudaram a fundar, escalar e fazer exit da Sigga Technologies no mercado brasileiro de software industrial — um resultado de 10× e o padrão de referência para nossas cohorts atuais.',
-    intro: 'A Sigga Technologies começou como uma aposta em software de gestão de ativos industriais em um setor brasileiro fragmentado que todo mundo dizia ser impossível. Amanda Pinheiro serviu no Board até o exit, e membros do time da Avante estiveram operacionalmente envolvidos em momentos-chave — fundraising, desenho de GTM motion e preparação do exit. O estudo de caso completo (publicação em breve) percorre os milestones, as decisões que moldaram o resultado de 10× e as lições que agora aplicamos a cada venture no studio.',
+    description:
+      'Um estudo de caso de dentro do time da Avante. Como uma aposta em software industrial brasileiro virou um resultado de 10× — e o que isso nos ensinou sobre construir líderes de categoria em verticais fragmentadas no Brasil.',
+    sections: [
+      {
+        paragraphs: [
+          'A maioria dos estudos de caso em venture é escrita por pessoas que assistiram de longe. Este é escrito de dentro. Amanda Pinheiro serviu no Conselho da Sigga Technologies durante o crescimento e o exit. Outros membros do que hoje é o time da Avante estiveram operacionalmente envolvidos em vários momentos de inflexão — rodadas de fundraising que quase não fecharam, um GTM motion que precisou ser redesenhado duas vezes, e um processo de exit que testou cada premissa que tínhamos sobre quem efetivamente compraria um negócio de software industrial brasileiro em escala.',
+          'O resultado foi um exit de 10× — o tipo de retorno que define a vintage de um fundo e reseta suas premissas sobre o que é possível em verticais fragmentadas no Brasil. Este texto percorre o que aconteceu, o que acertamos, o que quase quebramos, e como essas lições agora moldam cada venture dentro do studio Avante.',
+        ],
+      },
+      {
+        heading: 'A tese: um mercado que todos diziam ser impossível',
+        paragraphs: [
+          'Gestão de ativos industriais — o software que ajuda refinarias, minas, usinas e plantas de papel a programar manutenção, rastrear equipamentos e permanecer em compliance — é uma categoria global dominada por alguns vendors enterprise com ciclos de implementação longos e ciclos de venda ainda mais longos. SAP, IBM Maximo, Infor: cada um com deployment de múltiplos anos, preço-base de sete dígitos e clientela na Fortune 500.',
+          'A base industrial brasileira não se parece com isso. O país tem um ecossistema denso de operadores industriais de médio porte — mineradoras em Minas Gerais, usinas de cana em São Paulo, indústrias de papel e celulose no sul — para quem um deployment de R$10M de Maximo é impensável, mas que também são operacionalmente complexos demais para rodar em planilhas. A sabedoria convencional em 2010 era que esse segmento era inservível. Pequeno demais para os vendors globais. Complexo demais para os players genéricos de ERP local. Uma terra de ninguém.',
+          'A aposta fundadora da Sigga foi que a terra de ninguém era na verdade a maior oportunidade em software industrial brasileiro — se você conseguisse construir um produto profundamente mobile-native, integrado com os backbones SAP que clientes maiores já tinham, e precificado para um P&L brasileiro. A tese era contrária dentro da indústria de software brasileira. Acabou se mostrando exatamente certa.',
+        ],
+        callout: {
+          kind: 'tip',
+          text: 'Mercados que "todo mundo diz serem impossíveis" são frequentemente mercados onde a realidade operacional mudou mais rápido que o consenso. O desconto em convicção costuma ser maior que o desconto em risco de execução.',
+        },
+      },
+      {
+        heading: 'A primeira inflexão: quando o produto quase não foi ao ar',
+        paragraphs: [
+          'Dezoito meses dentro, a Sigga tinha um produto que funcionava lindamente no demo e quebrava silenciosamente no campo. O motor de sync mobile — a razão de existir do produto inteiro — estava penando com a realidade da conectividade industrial brasileira: refinarias com 3G falho em alguns setores e blecautes totais de WiFi em outros, minas com zonas de trabalho em poços profundos, indústrias de papel com interferência eletromagnética ao redor das máquinas pesadas.',
+          'A decisão de produto correta foi reconstruir a camada de sync do zero como offline-first, com um modelo de resolução de conflito desenhado para desconexões de horas em vez de segundos. Essa decisão custou aproximadamente seis meses de runway e empurrou a empresa por um daqueles marcos quase-de-morte que toda venture tem mas poucos admitem. Foi também, em retrospecto, a única decisão que construiu o moat.',
+          'Uma vez no ar, a camada de sync reconstruída virou a vantagem injusta. Competidores com arquiteturas mais limpas no papel consistentemente perdiam bake-offs em campo. A lição: em verticais industriais, "funciona num deck" e "funciona numa mina de cobre" não são o mesmo produto. As empresas que confundem os dois morrem no estágio de procurement.',
+        ],
+      },
+      {
+        heading: 'O GTM motion: velocidade enterprise em preço de SMB',
+        paragraphs: [
+          'Vender software industrial no Brasil para operadores de médio porte é um motion estranho. O perfil de comprador é enterprise — procurement multi-stakeholder, RFPs formais, security reviews — mas o tamanho médio de contrato começa em números de SMB. Você não pode arcar com o ciclo de venda enterprise de 12 meses, mas também não pode rodar um motion transacional bottom-up porque o comprador não se comporta assim.',
+          'A resposta da Sigga foi um híbrido que, olhando para trás, prefigurou muito do que agora construímos no playbook do studio Avante: um ICP estreito (operadores industriais com backbones SAP em três clusters verticais), um pre-sales engineer vertical-específico anexado a cada oportunidade desde a semana um, e uma regra rígida de 90 dias para pilot. Se não conseguíssemos chegar a um pilot pago em 90 dias, saíamos. Sair parece caro. Ficar em deals zumbis é muito mais caro.',
+          'Esse motion produziu algo raro: um ciclo de venda que comprimia a cada ano à medida que o roster de referência crescia. No quinto ano, deals estavam fechando com a força de três reference calls e um pilot de 30 dias — mais perto de um motion SaaS do que de um motion tradicional de software industrial, mantendo a profundidade de integração que tornava o produto sticky.',
+        ],
+        callout: {
+          kind: 'stat',
+          text: '90 dias para pilot ou sai: a disciplina que compõe velocidade de referência em qualquer motion vertical SaaS. Pipeline zumbi mata mais startups que competição.',
+        },
+      },
+      {
+        heading: 'Os fundraises: disciplina de capital como arma estratégica',
+        paragraphs: [
+          'A Sigga levantou menos capital que a média de vintage para uma venture do seu porte e estágio. Isso não foi inteiramente uma escolha — o mercado brasileiro de capital de crescimento entre 2014 e 2019 era mais raso que comparáveis americanos — mas virou uma vantagem estratégica real. Com menos capital construímos unit economics mais conservadores, estruturas de burn mais baixas, e uma cultura de disciplina de capital que, quando o mercado round-to-round ficou mais difícil, manteve a empresa opcional.',
+          'O contraste importa. Vários dos competidores que poderiam ter ameaçado a Sigga levantaram rodadas iniciais significativamente maiores, escalaram go-to-market mais rápido, e ficaram sem runway antes do ciclo de mercado virar. A Sigga chegou na janela de exit com um P&L limpo, um roster longo de referências, e o tipo de eficiência de capital que adquirentes estratégicos efetivamente pagam.',
+          'A lição que agora repetimos em cada venture Avante: quando você não pode controlar o timing do mercado, você ainda pode controlar seu perfil de runway. Opcionalidade é o ativo mais subestimado em construção de venture early-stage.',
+        ],
+      },
+      {
+        heading: 'O exit: quem efetivamente compra software industrial brasileiro em escala',
+        paragraphs: [
+          'Quando a conversa de exit virou real, a premissa natural foi que o comprador seria um dos incumbentes globais de enterprise-asset-management — um estratégico buscando preencher um gap na América Latina. A realidade foi diferente. O interesse mais forte veio de players globais adjacentes-de-categoria para quem a Sigga representava um foothold credível em uma região de rápido crescimento com uma base de clientes brasileira difícil de montar organicamente.',
+          'O exit fechou no que estimamos como aproximadamente 10× sobre o capital deployado ao longo da vida da venture — um número que mantemos privadamente mas que moldou materialmente como o time agora pensa sobre distribuição de outcomes em verticais fragmentadas no Brasil. A lição: teses de exit escritas estreitas demais perdem o pool real de compradores. O frame correto sempre foi "quem precisa dessa base de clientes brasileira e dessa capacidade de produto", não "quem mais está nessa categoria exata".',
+        ],
+      },
+      {
+        heading: 'O que isso nos ensinou — e o que agora fazemos no dia um',
+        paragraphs: [
+          'A Sigga moldou o playbook do studio Avante de formas que vão além de um único estudo de caso. Concretamente, cada venture no studio herda algumas lições duramente conquistadas dessa experiência:',
+        ],
+        bullets: [
+          'Disciplina de 90 dias para pilot — se uma venture não consegue chegar a um pilot pago dentro de 90 dias de uma conversa séria, o ICP está errado, o produto está errado, ou ambos.',
+          'Eficiência de capital desenhada de origem, não retrofitada. Cada venture Avante começa com um plano de runway que sobrevive a um mercado seco de 18 meses — porque na história do venture brasileiro, os mercados secos sempre vêm.',
+          'Padrão de engenharia "funciona no campo" desde a semana um. Qualidade-de-demo e qualidade-de-produção não são o mesmo produto. Verticais industriais punem essa confusão mais duro que qualquer outro.',
+          'Pensamento de exit-pool desde o cap-table fundador. O comprador raramente é "o incumbente óbvio". Mapeie os tomadores de decisão reais que beneficiariam de possuir essa base de clientes, então construa relacionamentos por anos antes que importem.',
+          'Um conselho que adiciona músculo operacional, não apenas supervisão. O papel da Amanda no Conselho da Sigga foi direto e operacional — esse template é agora o default da Avante para cada venture do studio.',
+        ],
+        callout: {
+          kind: 'quote',
+          text: 'A Sigga nos ensinou que as verticais mais fragmentadas no Brasil não são impossíveis — são simplesmente não-servidas por pessoas que efetivamente entendem a realidade operacional. Esse é o gap que construímos em cada venture Avante hoje.',
+          attribution: 'Time Fundador da Avante',
+        },
+      },
+      {
+        heading: 'Por que este caso importa para os cohorts atuais da Avante',
+        paragraphs: [
+          'O Brasil em 2026 tem mais capital, mais operadores de domínio e mais infraestrutura de IA barata que em qualquer ponto da história tech do país. O padrão que a Sigga rodou — encontrar uma vertical fragmentada de serviços industriais, construir mobile-native e profundamente integrado, vender com rigor enterprise em pricing de SMB, fazer exit para um player global adjacente-de-categoria — agora é repetível em meia dúzia de verticais brasileiras, com IA como multiplicador que não existia em 2012.',
+          'Cada venture atualmente dentro do studio Avante está sendo construída com essa linhagem em mente. Não como um copy-paste da Sigga, mas como uma aplicação deliberada das lições que transformaram um "mercado que todos diziam ser impossível" em um resultado de 10×.',
+        ],
+      },
+      {
+        heading: 'Notas sobre o que é publicamente divulgado',
+        paragraphs: [
+          'Detalhes financeiros da Sigga Technologies não são publicamente divulgados. O número de retorno de 10× referenciado aqui reflete a estimativa interna do time da Avante sobre capital deployado ao longo da vida da venture versus o valor de exit realizado. Números específicos de receita, contagem de clientes e preço de aquisição são confidenciais e não estão incluídos neste estudo de caso.',
+          'Para contexto independente sobre o mercado brasileiro de software industrial, veja EPE Balanço Energético Brasileiro 2025 e IBGE Contas Nacionais 2025 (ambos linkados no rodapé de fontes).',
+        ],
+      },
+    ],
   },
-})
+}
 
 // ─────────────────────────────────────────────────────────────────────
 // Export — order matches LibraryPage's display order
@@ -841,6 +1237,7 @@ export const articles: Article[] = [
   articleFirstTicket,
   articleBrazilAIMarket,
   articleSiggaCaseStudy, // featured on home hero — portfolio milestone
+  articleOperatingStack, // featured — definitive Avante studio thesis piece
   articleAvantePlaybook,
   articleCashflow90Days,
   articleUnitEconomics,

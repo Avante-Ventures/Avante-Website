@@ -42,6 +42,8 @@ Our model: pre-traction capital + repeatable operational system + in-market exec
 - [Why Venture Studios Outperform Traditional VC](https://avanteventures.com/en/library/venture-studios-outperform-traditional-vc): The data on the 50% IRR vs 19% IRR gap, with the three structural advantages that explain it. Research Report, 12 min read.
 - [The First Ticket Advantage: A Framework](https://avanteventures.com/en/library/first-ticket-advantage-framework): Why the first ticket determines venture returns more than picking ability — plus the four-filter framework Avante uses. Playbook, 8 min.
 - [Brazil AI Market Report 2026](https://avanteventures.com/en/library/brazil-ai-market-report-2026): $2.5T economy, 70% services GDP, $4.5B AI investment — the structural setup for AI-native venture creation in Latin America's largest market. Market Report, 15 min.
+- [Sigga Technologies: From Founding to 10× Exit](https://avanteventures.com/en/library/sigga-case-study-10x-exit): An inside-the-team case study on how a Brazilian industrial-software bet became a 10× exit — and the lessons now applied to every Avante studio venture. Case Study, 11 min.
+- [Inside the Avante Operating Stack](https://avanteventures.com/en/library/inside-the-avante-operating-stack): The five layers of shared infrastructure every Avante venture inherits — and the layers we deliberately keep separate. The definitive piece on how the studio model actually works. Playbook, 10 min.
 
 ## Drafts (intro available, full version forthcoming)
 
@@ -63,6 +65,8 @@ Our model: pre-traction capital + repeatable operational system + in-market exec
 - [Por Que Venture Studios Superam VC Tradicional](https://avanteventures.com/pt/library/venture-studios-outperform-traditional-vc)
 - [A Vantagem do Primeiro Cheque: Um Framework](https://avanteventures.com/pt/library/first-ticket-advantage-framework)
 - [Relatório do Mercado de IA no Brasil 2026](https://avanteventures.com/pt/library/brazil-ai-market-report-2026)
+- [Sigga Technologies: Da Fundação ao Exit de 10×](https://avanteventures.com/pt/library/sigga-case-study-10x-exit)
+- [Por Dentro do Stack Operacional da Avante](https://avanteventures.com/pt/library/inside-the-avante-operating-stack)
 
 ## Contact
 

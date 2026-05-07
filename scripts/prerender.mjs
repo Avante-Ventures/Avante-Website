@@ -30,6 +30,8 @@ const ARTICLE_SLUGS = [
   'venture-studios-outperform-traditional-vc',
   'first-ticket-advantage-framework',
   'brazil-ai-market-report-2026',
+  'sigga-case-study-10x-exit',
+  'inside-the-avante-operating-stack',
   'building-ai-native-companies-avante-playbook',
   'idea-to-cashflow-90-days',
   'unit-economics-101-ltv-cac-day-one',
