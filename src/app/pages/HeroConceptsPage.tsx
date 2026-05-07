@@ -1,49 +1,48 @@
-// Internal preview — Concept 2 enhancement variants.
+// Internal preview — Concept 2A (7/10 base) + 3 new map treatments.
 //
-// User picked Concept 2 (Editorial Asymmetric) as the direction. Now
-// comparing 4 versions of how to handle SF/SP geography:
-//   - Concept 2 base (no maps, no geography touches)
-//   - 2A: magazine masthead (text-only dateline + portfolio strip)
-//   - 2B: Brazil silhouette watermark behind cards + SF pin
-//   - 2C: operational data sidebar above cards
-//
-// NOINDEX. Visit /preview/heroes.
+// User confirmed Concept 2A is on the right track but missed the visual
+// geographic anchor. Three new variants experiment with how to put maps
+// back without making them feel like stock decoration:
+//   - 2A base (text-only masthead, current 7/10 reference)
+//   - 2D: Geo Strip Masthead — both maps recolored, small, with city pins
+//   - 2E: Brazil Hero / SF Inset — Brazil prominent, SF small inset
+//   - 2F: Live Operations Terminal — no maps, Bloomberg-style status feed
 
 import { Helmet } from 'react-helmet-async'
-import { HeroV2_Editorial } from '@/app/components/heroes/HeroV2_Editorial'
 import { HeroV2A_Masthead } from '@/app/components/heroes/HeroV2A_Masthead'
-import { HeroV2B_BrazilWatermark } from '@/app/components/heroes/HeroV2B_BrazilWatermark'
-import { HeroV2C_OperationalSidebar } from '@/app/components/heroes/HeroV2C_OperationalSidebar'
+import { HeroV2D_GeoStrip } from '@/app/components/heroes/HeroV2D_GeoStrip'
+import { HeroV2E_BrazilHero } from '@/app/components/heroes/HeroV2E_BrazilHero'
+import { HeroV2F_LiveTerminal } from '@/app/components/heroes/HeroV2F_LiveTerminal'
 import { LanguageProvider } from '@/app/hooks/useLanguage'
 
 const CONCEPTS = [
   {
-    letter: '2',
-    name: 'Editorial — base (no geography)',
-    pitch:
-      'Reference: original Concept 2. The 60/40 split with featured cards. No SF/SP treatment yet. Useful as the comparison point.',
-    Component: HeroV2_Editorial,
-  },
-  {
     letter: '2A',
-    name: 'Magazine Masthead + Portfolio Strip',
+    name: 'Reference: text masthead (7/10 baseline)',
     pitch:
-      'Top dateline: "São Paulo + San Francisco · Est. 2025 · AI-Native Venture Studio". Bottom: a horizontal portfolio strip below CTAs (SIGGA · MAHWAY · WIR ...). 100% type, no images. Cleanest.',
+      'Original Concept 2A. Text-only dateline + portfolio strip. No maps. The 7/10 your gut was reading.',
     Component: HeroV2A_Masthead,
   },
   {
-    letter: '2B',
-    name: 'Brazil Silhouette Watermark',
+    letter: '2D',
+    name: 'Geo Strip Masthead — maps return, recolored',
     pitch:
-      'Brazil-shaped watermark at 7% opacity behind the right column cards. Plus a small "+ San Francisco" pill above the cards. Geographic identity felt subliminally; cards stay sharp via backdrop-blur.',
-    Component: HeroV2B_BrazilWatermark,
+      'Both maps return as a small horizontal strip ABOVE the wordmark. USA (gold-tinted, ~50px) → animated dotted gradient ribbon → Brazil (purple-tinted, ~70px). City pins pulse on each. The maps are now branded artifacts, not stock decoration. Text dateline tucked below in tighter caps.',
+    Component: HeroV2D_GeoStrip,
   },
   {
-    letter: '2C',
-    name: 'Operational Data Sidebar',
+    letter: '2E',
+    name: 'Brazil Hero / SF Inset — hierarchy matches the brand',
     pitch:
-      'Right column gets a "Live · Active Operations" panel above the article cards: per-city stats (3 ventures incubating in SP, playbook source in SF). "Next cohort Q3 2026" line. Data over geography.',
-    Component: HeroV2C_OperationalSidebar,
+      'Brazil BIG (~280px tall, purple glow) on the right column with SP/Rio/BH pins floating + a labeled "São Paulo · HQ" badge. Top-right corner: small SF inset card with a tiny USA map and "+ San Francisco · Capital · Playbook source". The visual hierarchy literally is the brand promise.',
+    Component: HeroV2E_BrazilHero,
+  },
+  {
+    letter: '2F',
+    name: 'Live Operations Terminal — no maps, but undeniable',
+    pitch:
+      'Replaces the dateline with a Bloomberg-style live status panel. Cycles every 4s through "SP · 3 ventures incubating", "SF · capital partner", "GLOBAL · 50% target IRR", "NEXT · Q3 2026 cohort accepting founders". Geography is implied by city codes. Reads as "active operation, not a brochure."',
+    Component: HeroV2F_LiveTerminal,
   },
 ]
 
@@ -52,7 +51,7 @@ export default function HeroConceptsPage() {
     <LanguageProvider locale="en">
       <div style={{ background: '#08091A', color: '#FFFFFF' }}>
         <Helmet>
-          <title>Hero Concepts — Concept 2 enhancements (internal preview)</title>
+          <title>Hero Concepts — 2A + map proposals (internal preview)</title>
           <meta name="robots" content="noindex,nofollow" />
           <meta name="googlebot" content="noindex,nofollow" />
         </Helmet>
@@ -75,7 +74,7 @@ export default function HeroConceptsPage() {
               fontWeight: 600,
             }}
           >
-            Internal preview · noindex · concept 2 variants
+            Internal preview · noindex · 2A reference + 3 map proposals
           </p>
           <h1
             style={{
@@ -85,7 +84,7 @@ export default function HeroConceptsPage() {
               letterSpacing: '-0.02em',
             }}
           >
-            Concept 2: how to handle SF + São Paulo
+            How to put SF + São Paulo back in
           </h1>
           <p
             style={{
@@ -98,9 +97,11 @@ export default function HeroConceptsPage() {
               lineHeight: 1.6,
             }}
           >
-            Same 60/40 editorial layout in all 4. Only the geographic identity
-            treatment changes. Compare and pick — A, B, C — or combine (e.g. A
-            masthead + B watermark together is also viable).
+            2A is the 7/10 baseline (text-only masthead). 2D returns the maps as
+            branded artifacts in a strip masthead. 2E makes Brazil the visual
+            hero with SF as inset. 2F drops the maps entirely for a live
+            operations terminal. Pick one — or combine (e.g. "2D masthead + 2E
+            Brazil right column" is the most ambitious combo).
           </p>
 
           <nav
@@ -152,11 +153,11 @@ export default function HeroConceptsPage() {
                 zIndex: 100,
                 padding: '12px 18px',
                 borderRadius: '12px',
-                background: 'rgba(0, 0, 0, 0.75)',
+                background: 'rgba(0, 0, 0, 0.78)',
                 backdropFilter: 'blur(10px)',
                 border: '1px solid rgba(249, 180, 55, 0.5)',
                 boxShadow: '0 12px 32px rgba(0, 0, 0, 0.5)',
-                maxWidth: '420px',
+                maxWidth: '460px',
                 pointerEvents: 'none',
               }}
             >
@@ -207,10 +208,10 @@ export default function HeroConceptsPage() {
           }}
         >
           <p style={{ fontSize: '14px', color: 'rgba(255, 255, 255, 0.55)', margin: '0 0 8px 0' }}>
-            Pick a letter — 2 (no geo), 2A, 2B, 2C — or combine (e.g. "2A + 2B").
+            Pick a letter (2A · 2D · 2E · 2F) or combine (e.g. "2D + 2E").
           </p>
           <p style={{ fontSize: '12px', color: 'rgba(255, 255, 255, 0.35)', margin: 0 }}>
-            Concepts 1 (Minimal) + 3 (Bridge) retired from this preview · already eliminated
+            Earlier 2B + 2C retired · Concepts 1 + 3 retired
           </p>
         </footer>
       </div>
