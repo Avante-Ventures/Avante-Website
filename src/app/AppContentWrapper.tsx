@@ -3,7 +3,7 @@ import { ContactModal } from "@/app/components/ContactModal";
 import { BackToTop } from "@/app/components/BackToTop";
 import { CursorGlow } from "@/app/components/CursorGlow";
 import { Navbar } from "@/app/components/Navbar";
-import { AvanteHeroBackground } from "@/app/components/AvanteHeroBackground";
+import { HeroV2A_Masthead } from "@/app/components/heroes/HeroV2A_Masthead";
 import { StatsBar } from "@/app/components/StatsBar";
 import { SocialProofStrip } from "@/app/components/SocialProofStrip";
 import { ScrollRevealSection } from "@/app/components/ScrollRevealSection";
@@ -105,11 +105,17 @@ export function AppContent() {
       {/* Main Frame Container */}
       <div className="w-full max-w-[1440px] mx-auto" style={{ position: 'relative', zIndex: 1 }}>
         
-        {/* HERO SECTION */}
-        <section 
-          id="hero"
+        {/* HERO SECTION — replaced by HeroV2A_Masthead (editorial 60/40 +
+            masthead dateline + portfolio strip + 3 featured Library cards).
+            Old hero left commented below for one cycle in case rollback is
+            needed; will be removed in the next sweep. */}
+        <div id="hero">
+          <HeroV2A_Masthead />
+        </div>
+
+        {false && <section
           className="flex items-center justify-center relative w-full"
-          style={{ 
+          style={{
             overflow: 'hidden',
             background: '#151E35',
             position: 'relative',
@@ -268,7 +274,7 @@ export function AppContent() {
                 </button>
               </div>
             </div>
-        </section>
+        </section>}
 
         <style>{`
           @media (max-width: 640px) {

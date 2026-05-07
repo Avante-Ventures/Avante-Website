@@ -41,6 +41,21 @@ const FEATURES = [
 
 const PORTFOLIO = ['SIGGA', 'MAHWAY', 'WIR', 'BAMBOO DCM', 'ALPHALIT', 'INDINERO']
 
+// Wire CTAs to the contact form below: scroll to it, then auto-select
+// the inquiry type after the smooth-scroll has settled (~800ms).
+function scrollToContactAndSelect(inquiryType: 'Founder Inquiry' | 'Investor Inquiry') {
+  const element = document.getElementById('contact')
+  if (!element) return
+  element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  setTimeout(() => {
+    const select = document.querySelector('#inquiryType') as HTMLSelectElement | null
+    if (select) {
+      select.value = inquiryType
+      select.dispatchEvent(new Event('change', { bubbles: true }))
+    }
+  }, 800)
+}
+
 export function HeroV2A_Masthead() {
   const { language } = useLanguage()
 
@@ -176,6 +191,7 @@ export function HeroV2A_Masthead() {
 
           <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '32px' }}>
             <button
+              onClick={() => scrollToContactAndSelect('Founder Inquiry')}
               style={{
                 padding: '14px 26px',
                 fontSize: '15px',
@@ -200,6 +216,7 @@ export function HeroV2A_Masthead() {
               For Founders →
             </button>
             <button
+              onClick={() => scrollToContactAndSelect('Investor Inquiry')}
               style={{
                 padding: '14px 26px',
                 fontSize: '15px',
@@ -210,6 +227,14 @@ export function HeroV2A_Masthead() {
                 borderRadius: '999px',
                 cursor: 'pointer',
                 transition: 'all 0.25s ease',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.55)'
+                e.currentTarget.style.background = 'rgba(255, 255, 255, 0.04)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.25)'
+                e.currentTarget.style.background = 'transparent'
               }}
             >
               For Investors
