@@ -806,6 +806,33 @@ const articleGlobalStudioData = makeStub({
 })
 
 // ─────────────────────────────────────────────────────────────────────
+// CASE STUDIES — published artifacts for portfolio milestones.
+// Sigga is featured on the home hero (replacing one Library article card)
+// because it's our strongest single proof point: a 10× exit with Amanda
+// Pinheiro on the Board. The full case study comes in Sprint 3; this stub
+// keeps the home card destination valid in the meantime.
+// ─────────────────────────────────────────────────────────────────────
+
+const articleSiggaCaseStudy = makeStub({
+  slug: 'sigga-case-study-10x-exit',
+  category: 'casestudies',
+  type: 'Case Study',
+  readTime: '9 min',
+  date: 'Jan 2026',
+  datePublished: '2026-01-25',
+  en: {
+    title: 'Sigga Technologies: From Founding to 10× Exit',
+    description: 'How Avante team members helped found, scale, and exit Sigga Technologies in the Brazilian industrial software market — a 10× outcome and the reference pattern for our current studio cohorts.',
+    intro: 'Sigga Technologies started as an industrial-asset-management software bet in a fragmented Brazilian sector that everyone said was impossible. Amanda Pinheiro served on the Board through scale, and Avante team members were operationally involved through key moments — fundraising, GTM motion design, and exit prep. The full case study (publishing soon) walks through the milestones, the decisions that shaped the 10× outcome, and the lessons we now apply to every venture in the studio.',
+  },
+  pt: {
+    title: 'Sigga Technologies: Da Fundação ao Exit de 10×',
+    description: 'Como membros do time da Avante ajudaram a fundar, escalar e fazer exit da Sigga Technologies no mercado brasileiro de software industrial — um resultado de 10× e o padrão de referência para nossas cohorts atuais.',
+    intro: 'A Sigga Technologies começou como uma aposta em software de gestão de ativos industriais em um setor brasileiro fragmentado que todo mundo dizia ser impossível. Amanda Pinheiro serviu no Board até o exit, e membros do time da Avante estiveram operacionalmente envolvidos em momentos-chave — fundraising, desenho de GTM motion e preparação do exit. O estudo de caso completo (publicação em breve) percorre os milestones, as decisões que moldaram o resultado de 10× e as lições que agora aplicamos a cada venture no studio.',
+  },
+})
+
+// ─────────────────────────────────────────────────────────────────────
 // Export — order matches LibraryPage's display order
 // ─────────────────────────────────────────────────────────────────────
 
@@ -813,6 +840,7 @@ export const articles: Article[] = [
   articleVentureStudios,
   articleFirstTicket,
   articleBrazilAIMarket,
+  articleSiggaCaseStudy, // featured on home hero — portfolio milestone
   articleAvantePlaybook,
   articleCashflow90Days,
   articleUnitEconomics,

@@ -61,6 +61,7 @@ const StatsBarComponent = () => {
             value={stat.value}
             label={stat.label}
             color={stat.color}
+            fn={stat.fn}
           />
         ))}
       </div>
@@ -87,9 +88,10 @@ interface StatDisplayProps {
   value: string;
   label: string;
   color: string;
+  fn?: string;
 }
 
-const StatDisplay = memo(({ value, label, color }: StatDisplayProps) => {
+const StatDisplay = memo(({ value, label, color, fn }: StatDisplayProps) => {
   return (
     <div
       style={{
@@ -109,6 +111,25 @@ const StatDisplay = memo(({ value, label, color }: StatDisplayProps) => {
         }}
       >
         {value}
+        {fn && (
+          <a
+            href={`#source-${fn}`}
+            aria-label={`Source ${fn}`}
+            style={{
+              fontSize: '14px',
+              fontWeight: 600,
+              color: 'rgba(255, 255, 255, 0.4)',
+              textDecoration: 'none',
+              marginLeft: '2px',
+              verticalAlign: 'super',
+              transition: 'color 0.2s ease',
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = color)}
+            onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255, 255, 255, 0.4)')}
+          >
+            {fn}
+          </a>
+        )}
       </div>
       <div
         style={{

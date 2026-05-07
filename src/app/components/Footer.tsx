@@ -175,6 +175,95 @@ export function Footer() {
         {/* Divider */}
         <div style={{ height: '1px', background: 'rgba(255, 255, 255, 0.08)' }} />
 
+        {/* Sources — Sprint 1 / A3.
+            Footnote anchors for the StatsBar numbers. Diana opens the door
+            on a site that cites; Pedro stops calling them "every BR pitch
+            deck stats"; Karim respects intellectual honesty. */}
+        <div>
+          <div
+            style={{
+              fontSize: '11px',
+              fontWeight: 700,
+              letterSpacing: '0.18em',
+              textTransform: 'uppercase',
+              color: 'rgba(255, 255, 255, 0.4)',
+              marginBottom: '12px',
+            }}
+          >
+            {t('Sources', 'Fontes')}
+          </div>
+          <ol
+            style={{
+              fontSize: '12px',
+              color: 'rgba(255, 255, 255, 0.55)',
+              lineHeight: 1.7,
+              margin: 0,
+              paddingLeft: '20px',
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gap: '4px 24px',
+            }}
+          >
+            <li id="source-1">
+              {t(
+                'Brazil GDP, population, services share: ',
+                'PIB, população e parcela de serviços do Brasil: '
+              )}
+              <a href="https://www.ibge.gov.br" target="_blank" rel="noopener noreferrer" style={sourceLinkStyle}>
+                IBGE National Accounts 2025
+              </a>
+              {' · '}
+              <a href="https://www.bcb.gov.br" target="_blank" rel="noopener noreferrer" style={sourceLinkStyle}>
+                Banco Central do Brasil
+              </a>
+            </li>
+            <li id="source-2">
+              {t('Brazilian unicorns count: ', 'Número de unicórnios brasileiros: ')}
+              <a href="https://www.distrito.me" target="_blank" rel="noopener noreferrer" style={sourceLinkStyle}>
+                Distrito Mining Report 2025
+              </a>
+            </li>
+            <li id="source-3">
+              {t('Brazil renewable energy share: ', 'Parcela de energia renovável do Brasil: ')}
+              <a href="https://www.epe.gov.br" target="_blank" rel="noopener noreferrer" style={sourceLinkStyle}>
+                EPE Brazilian Energy Balance 2025
+              </a>
+            </li>
+            <li id="source-4">
+              {t('Brazil AI investment: ', 'Investimento em IA no Brasil: ')}
+              <a href="https://www.lavca.org" target="_blank" rel="noopener noreferrer" style={sourceLinkStyle}>
+                LAVCA Brazil VC + Tech Report 2025
+              </a>
+            </li>
+            <li id="source-5">
+              {t(
+                'SME software penetration: ',
+                'Penetração de software em PMEs: '
+              )}
+              <a href="https://www.sebrae.com.br" target="_blank" rel="noopener noreferrer" style={sourceLinkStyle}>
+                Sebrae SME Tech Adoption Survey 2024
+              </a>
+              {' · '}Avante internal market sizing
+            </li>
+            <li id="source-6">
+              {t(
+                'Studio IRR vs traditional VC: ',
+                'IRR de studios vs VC tradicional: '
+              )}
+              <a href="https://www.gssn.co" target="_blank" rel="noopener noreferrer" style={sourceLinkStyle}>
+                GSSN Annual Report 2025
+              </a>
+              {' · '}
+              <a href="https://www.cambridgeassociates.com" target="_blank" rel="noopener noreferrer" style={sourceLinkStyle}>
+                Cambridge Associates US VC Index Q4 2025
+              </a>
+            </li>
+          </ol>
+        </div>
+
+        {/* Divider */}
+        <div style={{ height: '1px', background: 'rgba(255, 255, 255, 0.08)' }} />
+
         {/* Bottom: copyright + language switch hint */}
         <div
           style={{
@@ -207,6 +296,13 @@ export function Footer() {
       `}</style>
     </footer>
   )
+}
+
+const sourceLinkStyle: React.CSSProperties = {
+  color: 'rgba(255, 255, 255, 0.75)',
+  textDecoration: 'none',
+  borderBottom: '1px dotted rgba(255, 255, 255, 0.3)',
+  transition: 'color 0.2s ease, border-color 0.2s ease',
 }
 
 const socialIconStyle: React.CSSProperties = {

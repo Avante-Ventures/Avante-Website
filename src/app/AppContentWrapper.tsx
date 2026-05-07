@@ -20,12 +20,13 @@ import { SiliconValleyVentureBuilding } from "@/app/components/SiliconValleyVent
 import { TeamSection } from "@/app/components/TeamSection";
 import { ContactFormSection } from "@/app/components/ContactFormSection";
 import { Footer } from "@/app/components/Footer";
+import { PortfolioStrip } from "@/app/components/PortfolioStrip";
 import { useLanguage } from "@/app/hooks/useLanguage";
 import avanteLogo from "figma:asset/1ee77d6dc5cd19bf91735ef627eddf9652d066cf.png";
 import brazilMap3D from "figma:asset/74fa96e445ccfc4a7e6981a97d144c53880a9f45.png";
 
 export function AppContent() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
   
   // Preload critical assets
@@ -403,53 +404,60 @@ export function AppContent() {
             style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}
           >
             <TeamSection />
-          </ScrollRevealSection>
 
-          {/* Behind the Scenes — placeholder for future team-working photos.
-              Renders 4 dimmed slots with a subtle "coming soon" treatment.
-              Replace each <BehindSlot /> with an <img> when assets land. */}
-          <ScrollRevealSection
-            className="py-[48px] md:py-[64px] relative"
-            style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}
-          >
-            <div style={{ textAlign: 'center', marginBottom: 'var(--avante-space-6)' }}>
-              <SectionHeader
-                title="Behind the Scenes"
-                description="Photos from the studio coming soon."
-              />
-            </div>
+            {/* Bridge narrative — Sprint 1 / A2.
+                Closes the credibility gap between US team (Jess + Andrea)
+                and BR team (Amanda + Felipe). Without this paragraph the
+                team grid reads as 4 separate photos with no thread. */}
             <div
               style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-                gap: '16px',
-                maxWidth: '1100px',
-                margin: '0 auto',
-                padding: '0 var(--avante-space-4)',
+                maxWidth: '760px',
+                margin: '48px auto 0',
+                padding: '32px',
+                background: 'rgba(255, 255, 255, 0.025)',
+                border: '1px solid rgba(249, 180, 55, 0.15)',
+                borderLeft: '3px solid #F9B437',
+                borderRadius: '12px',
               }}
             >
-              {[1, 2, 3, 4].map((i) => (
-                <div
-                  key={i}
-                  style={{
-                    aspectRatio: '4 / 3',
-                    borderRadius: '12px',
-                    background:
-                      'linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%)',
-                    border: '1px dashed rgba(255, 255, 255, 0.12)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    color: 'rgba(255, 255, 255, 0.25)',
-                    fontSize: '12px',
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.12em',
-                    fontWeight: 600,
-                  }}
-                >
-                  Slot {i}
-                </div>
-              ))}
+              <div
+                style={{
+                  fontSize: '11px',
+                  fontWeight: 700,
+                  letterSpacing: '0.18em',
+                  textTransform: 'uppercase',
+                  color: '#F9B437',
+                  marginBottom: '12px',
+                }}
+              >
+                {language === 'pt' ? 'Como nos juntamos' : 'How we came together'}
+              </div>
+              <p
+                style={{
+                  fontSize: '16px',
+                  lineHeight: 1.7,
+                  color: 'rgba(255, 255, 255, 0.82)',
+                  margin: 0,
+                }}
+              >
+                {language === 'pt'
+                  ? 'Jess e Andrea passaram a década anterior construindo a inDinero (US$100M+ ARR, 100+ funcionários) e investindo a partir de São Francisco. Amanda e Felipe ficaram com cicatrizes operacionais brasileiras — Amanda escalando a Sigga até um exit de 10×, Felipe construindo a Bamboo DCM no mercado de capitais. Nos conhecemos em 2024 quando os quatro chegamos à mesma conclusão a partir de ângulos opostos: o Brasil tem volume massivo de economia de serviço, talento sênior de engenharia subestimado e quase nenhum capital pré-tração com profundidade operacional. A divisão de trabalho é deliberada: time de São Paulo opera; time de São Francisco traz playbook + capital + rede.'
+                  : 'Jess and Andrea spent the prior decade building inDinero ($100M+ ARR, 100+ headcount) and investing out of San Francisco. Amanda and Felipe earned operational scar tissue in Brazil — Amanda scaling Sigga through a 10× exit, Felipe building Bamboo DCM in the capital markets. We met in 2024 when all four of us arrived at the same conclusion from opposite angles: Brazil has massive service-economy volume, underestimated senior engineering talent, and almost no pre-traction capital with operational depth attached. The division of labor is deliberate: the São Paulo team operates; the San Francisco team brings playbook + capital + network.'}
+              </p>
+            </div>
+          </ScrollRevealSection>
+
+          {/* PortfolioStrip — Sprint 1 / B7.
+              Replaces the previous Behind-the-Scenes placeholder section
+              (4 dashed slots that read as "TODO"). The strip reuses the
+              social-proof line from the home hero, keeping rhythm without
+              the unfinished smell. Links to /portfolio (Sprint 4 dest). */}
+          <ScrollRevealSection
+            className="py-[32px] md:py-[40px] relative"
+            style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}
+          >
+            <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 var(--avante-space-4)' }}>
+              <PortfolioStrip viewAllHref={`/${language}/portfolio`} />
             </div>
           </ScrollRevealSection>
 

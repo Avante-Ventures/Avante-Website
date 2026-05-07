@@ -17,6 +17,13 @@ import { useLanguage } from '@/app/hooks/useLanguage'
 
 const FEATURES = [
   {
+    kind: 'PORTFOLIO MILESTONE',
+    title: 'Sigga Technologies · 10× exit',
+    metric: 'Industrial software · Brazil · Amanda Pinheiro on Board',
+    accent: '#98509A',
+    href: 'library/sigga-case-study-10x-exit',
+  },
+  {
     kind: 'MARKET REPORT',
     title: 'Brazil AI Market 2026',
     metric: '$2.5T economy · 70% services GDP',
@@ -29,13 +36,6 @@ const FEATURES = [
     metric: '4-filter framework · 100× upside vs 7×',
     accent: '#F4A261',
     href: 'library/first-ticket-advantage-framework',
-  },
-  {
-    kind: 'RESEARCH',
-    title: 'Why Studios Beat Traditional VC',
-    metric: '50% IRR vs 19% · GSSN 2025 data',
-    accent: '#98509A',
-    href: 'library/venture-studios-outperform-traditional-vc',
   },
 ]
 
