@@ -278,6 +278,27 @@ export default function PortfolioPage() {
           <div style={{ marginTop: '32px' }}>
             <VenturePipeline />
           </div>
+
+          {/* Disclaimer per Toney (Plexo) + Felipe Martins panel notes:
+              named pipeline ventures are quasi-public commitments. If any
+              pivots pre-Series A (50%+ of the time), the public site reads
+              as broken promises. Make the soft-commitment explicit.       */}
+          <p
+            style={{
+              fontSize: '12px',
+              color: 'rgba(255, 255, 255, 0.45)',
+              fontStyle: 'italic',
+              textAlign: 'center',
+              margin: '24px auto 0',
+              maxWidth: '640px',
+              lineHeight: 1.6,
+            }}
+          >
+            {t(
+              'Pipeline ventures are pre-launch — names, taglines, and scope are subject to change as theses sharpen. Track Record above reflects realized outcomes from the founding team\'s prior work, not Pipeline performance.',
+              'Ventures de pipeline estão pré-lançamento — nomes, taglines e escopo podem mudar conforme as teses afinam. O Track Record acima reflete resultados realizados do trabalho prévio do time fundador, não performance do Pipeline.'
+            )}
+          </p>
         </section>
 
         {/* CTA back to home library */}

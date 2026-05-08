@@ -284,14 +284,19 @@ export function AppContent() {
         `}</style>
 
         {/* SIGNATURE MOMENT — the compounding curve. Placed right after the
-            hero, before the credibility row. The visual that the site is
-            remembered by. Editorial restraint: one figure, one caption,
-            no surrounding chrome.                                          */}
+            hero, before the credibility row. Generous vertical breathing per
+            Ive's panel note ("the chart should respire 2x more"). The chart
+            now spans up to 720px wide and the section gets clamp(96-160px)
+            of vertical padding so it reads as a "chapter break" between
+            the hero and the credibility row.                               */}
         <ScrollRevealSection
-          className="py-[64px] md:py-[96px] relative"
-          style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.06)' }}
+          className="relative"
+          style={{
+            padding: 'clamp(96px, 14vh, 160px) 0',
+            borderBottom: '1px solid rgba(255, 255, 255, 0.06)',
+          }}
         >
-          <div style={{ maxWidth: '720px', margin: '0 auto', padding: '0 24px' }}>
+          <div style={{ maxWidth: '880px', margin: '0 auto', padding: '0 24px' }}>
             <CompoundingChart />
           </div>
         </ScrollRevealSection>
@@ -438,12 +443,17 @@ export function AppContent() {
                 }
               />
 
+              {/* Editorial grid — no card chrome. Mirrors the /principles
+                  page typography (Beirut's panel note: same number in two
+                  places should read with the same visual weight). Numbers
+                  scale up to clamp(36-56px) to match the destination page;
+                  no border, no background — just type on dark.            */}
               <div
                 style={{
                   display: 'grid',
-                  gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
-                  gap: '24px',
-                  marginTop: '48px',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))',
+                  gap: 'clamp(40px, 5vw, 56px)',
+                  marginTop: 'clamp(48px, 6vw, 72px)',
                 }}
               >
                 {[
@@ -478,45 +488,39 @@ export function AppContent() {
                         : 'A studio that cannot articulate its negative space cannot articulate its positive. Saying no is the discipline.',
                   },
                 ].map((p) => (
-                  <div
-                    key={p.n}
-                    style={{
-                      padding: '28px',
-                      background: 'rgba(255, 255, 255, 0.025)',
-                      border: '1px solid rgba(255, 255, 255, 0.08)',
-                      borderRadius: '14px',
-                    }}
-                  >
+                  <div key={p.n}>
                     <div
                       style={{
-                        fontSize: '32px',
+                        fontSize: 'clamp(36px, 4.5vw, 52px)',
                         fontWeight: 600,
                         color: '#F9B437',
                         lineHeight: 1,
-                        marginBottom: '14px',
+                        marginBottom: '20px',
                         fontVariantNumeric: 'tabular-nums',
+                        letterSpacing: '-0.02em',
                       }}
                     >
                       {p.n}
                     </div>
                     <h3
                       style={{
-                        fontSize: '17px',
+                        fontSize: 'clamp(18px, 2vw, 22px)',
                         fontWeight: 600,
                         color: '#FFFFFF',
-                        margin: '0 0 10px 0',
-                        lineHeight: 1.3,
-                        letterSpacing: '-0.01em',
+                        margin: '0 0 12px 0',
+                        lineHeight: 1.25,
+                        letterSpacing: '-0.015em',
                       }}
                     >
                       {p.title}
                     </h3>
                     <p
                       style={{
-                        fontSize: '14px',
-                        lineHeight: 1.6,
+                        fontSize: '15px',
+                        lineHeight: 1.65,
                         color: 'rgba(255, 255, 255, 0.7)',
                         margin: 0,
+                        maxWidth: '380px',
                       }}
                     >
                       {p.body}

@@ -15,44 +15,47 @@ export function VenturePipeline() {
   const pipelineVentures: PipelineVenture[] = [
     {
       name: 'CRIA Studio',
-      tagline: t('AI Creative Studio for SMB', 'AI Creative Studio para PME'),
+      // PT pass per Sofia Aguiar's panel note — native voice over literal
+      // translation: "AI Creative Studio para PME" reads as US copy translated;
+      // "Studio de Conteúdo com IA para PMEs" reads as native BR positioning.
+      tagline: t('AI Creative Studio for SMB', 'Studio de Conteúdo com IA para PMEs'),
       bullets: [
-        t('On-demand branded content generation', 'Geração de conteúdo branded sob demanda'),
-        t('Multi-channel asset optimization', 'Otimização de assets multi-canal'),
-        t('Built-in compliance & brand guidelines', 'Compliance e brand guidelines embutidos'),
+        t('On-demand branded content generation', 'Conteúdo de marca gerado sob demanda'),
+        t('Multi-channel asset optimization', 'Otimização de peças multi-canal'),
+        t('Built-in compliance & brand guidelines', 'Compliance e brand book embutidos'),
       ],
       color: '#F4A261',
       accentColor: '#F9B437',
     },
     {
       name: 'Pulse.ai',
-      tagline: t('WhatsApp Sales for CPG', 'Vendas WhatsApp para CPG'),
+      tagline: t('WhatsApp Sales for CPG', 'Vendas por WhatsApp para CPG'),
       bullets: [
-        t('Conversational commerce at scale', 'Conversational commerce em escala'),
-        t('Automated order fulfillment', 'Fulfillment de pedidos automatizado'),
-        t('Real-time inventory sync', 'Sincronização de estoque em tempo real'),
+        t('Conversational commerce at scale', 'Comércio conversacional em escala'),
+        t('Automated order fulfillment', 'Captação e expedição automatizadas'),
+        t('Real-time inventory sync', 'Sincronia de estoque em tempo real'),
       ],
       color: '#98509A',
       accentColor: '#C47EC6',
     },
     {
       name: 'RADAR.ai',
-      tagline: t('Market Intelligence for Investors', 'Inteligência de Mercado para Investidores'),
+      tagline: t('Market Intelligence for Investors', 'Inteligência de mercado para investidores'),
       bullets: [
-        t('Real-time sector trend analysis', 'Análise de tendências setoriais em tempo real'),
-        t('Automated deal sourcing pipeline', 'Pipeline automatizado de deal sourcing'),
-        t('Competitive landscape mapping', 'Mapeamento competitivo'),
+        t('Real-time sector trend analysis', 'Análise setorial em tempo real'),
+        t('Automated deal sourcing pipeline', 'Pipeline de sourcing automatizado'),
+        t('Competitive landscape mapping', 'Mapeamento do cenário competitivo'),
       ],
       color: '#F18B46',
       accentColor: '#F9B437',
     },
     {
       name: 'ROTA.ai',
-      tagline: t('AI Procurement Hub', 'Hub de Procurement com IA'),
+      tagline: t('AI Procurement Hub', 'Procurement inteligente'),
       bullets: [
         t('Intelligent vendor matching', 'Matching inteligente de fornecedores'),
-        t('Automated RFP generation', 'Geração automatizada de RFPs'),
-        t('Contract negotiation assistance', 'Assistência em negociação de contratos'),
+        t('Automated RFP generation', 'Geração automática de RFPs'),
+        t('Contract negotiation assistance', 'Assistência em negociação contratual'),
       ],
       color: '#F9B437',
       accentColor: '#FDD068',

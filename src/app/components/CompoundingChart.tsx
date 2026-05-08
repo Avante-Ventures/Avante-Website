@@ -60,8 +60,15 @@ export function CompoundingChart({
   const t = (en: string, pt: string) => (language === 'pt' ? pt : en)
 
   const eyebrowText = eyebrow ?? t('Built to compound', 'Construído para compor')
+  // Caption anchored to operational reality (Beirut + Lopez panel note):
+  // generic compounding metaphors are forgettable. Anchoring to "Vintage 1,
+  // year 2" tells the visitor exactly where the studio is on its own curve.
   const captionText =
-    caption ?? t('Year over year. Cohort over cohort.', 'Ano após ano. Cohort após cohort.')
+    caption ??
+    t(
+      'Vintage 1, year 2 of investing — first cohort live.',
+      'Vintage 1, ano 2 de investimentos — primeira cohort ativa.'
+    )
 
   // Total path length is approximately the diagonal of the curve, ~110 units.
   const PATH_LEN = 130
@@ -114,7 +121,7 @@ export function CompoundingChart({
         preserveAspectRatio="xMidYMid meet"
         style={{
           width: '100%',
-          maxWidth: compact ? '320px' : '480px',
+          maxWidth: compact ? '420px' : '720px',
           height: 'auto',
           aspectRatio: '1.6 / 1',
           overflow: 'visible',
@@ -125,6 +132,17 @@ export function CompoundingChart({
         )}
         role="img"
       >
+        {/* Radial gradient for the LAST dot — communicates jerarquía narrativa.
+            Dots 1-6 are gold; dot 7 transitions gold center → purple edge,
+            signaling "the future is where the model goes non-linear" without
+            disrupting the unified palette.                                  */}
+        <defs>
+          <radialGradient id="avt-future-dot" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="#F9B437" />
+            <stop offset="55%" stopColor="#F4A261" />
+            <stop offset="100%" stopColor="#98509A" />
+          </radialGradient>
+        </defs>
         {/* CSS keyframes: curve draws + dots pop in. Plays once on mount.
             Animations are enhancement only — final state is the rendered
             state, so prerender/SSR/Playwright always see the full chart. */}
@@ -177,10 +195,14 @@ export function CompoundingChart({
           }}
         />
 
-        {/* The 7 compounding dots, staggered via animation-delay inline */}
+        {/* The 7 compounding dots, staggered via animation-delay inline.
+            The last dot uses the radial gradient (gold → purple) to signal
+            narrative hierarchy — the future cohort is where compounding
+            transitions to category-leadership outcomes.                    */}
         {DOTS.map((dot, i) => {
           const stagger = 600 + i * 90
-          const finalOpacity = i === DOTS.length - 1 ? 1 : 0.55 + i * 0.06
+          const isFuture = i === DOTS.length - 1
+          const finalOpacity = isFuture ? 1 : 0.55 + i * 0.06
           return (
             <circle
               key={i}
@@ -188,16 +210,15 @@ export function CompoundingChart({
               cx={dot.x}
               cy={dot.y}
               r={dot.r}
-              fill={ACCENT}
+              fill={isFuture ? 'url(#avt-future-dot)' : ACCENT}
               opacity={finalOpacity}
               style={
                 {
                   animationDelay: `${stagger}ms`,
                   ['--final-opacity' as string]: String(finalOpacity),
-                  filter:
-                    i === DOTS.length - 1
-                      ? `drop-shadow(0 0 ${dot.r * 1.4}px ${ACCENT}aa)`
-                      : `drop-shadow(0 0 ${dot.r * 0.8}px ${ACCENT}66)`,
+                  filter: isFuture
+                    ? `drop-shadow(0 0 ${dot.r * 1.6}px rgba(152, 80, 154, 0.6)) drop-shadow(0 0 ${dot.r * 0.9}px ${ACCENT}aa)`
+                    : `drop-shadow(0 0 ${dot.r * 0.8}px ${ACCENT}66)`,
                 } as React.CSSProperties
               }
             />
