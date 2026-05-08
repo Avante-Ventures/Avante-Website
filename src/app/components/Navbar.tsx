@@ -31,8 +31,11 @@ export function Navbar() {
       // Change navbar background after scrolling past 50px
       setIsScrolled(window.scrollY > 50);
 
-      // Determine active section based on scroll position
-      const sections = ['hero', 'whatwedo', 'playbook', 'ventures', 'team'];
+      // Determine active section based on scroll position. After the home
+      // consolidation (Move B), the only remaining home anchors are #playbook,
+      // #team, #principles, and #contact. The navbar links favor full-route
+      // navigation over anchors so they work on every page.
+      const sections = ['hero', 'playbook', 'team', 'principles'];
       const scrollPosition = window.scrollY + 200;
 
       // Use slice() to avoid mutating the array with reverse()
@@ -56,22 +59,34 @@ export function Navbar() {
     setMobileMenuOpen(false);
   }, [location]);
 
-  // Smooth scroll handler
+  // Click handler: route links navigate normally (default browser behavior),
+  // anchor links smooth-scroll. Route links are detected by absence of '#'.
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const targetId = href.replace('/#', '').replace('#', '');
+    if (!href.includes('#')) {
+      // Route navigation — let the browser handle it (or react-router via <Link>).
+      // Just close mobile menu.
+      setMobileMenuOpen(false);
+      return;
+    }
+    // Anchor link — smooth scroll if target on current page.
+    const targetId = href.split('#')[1];
     const element = document.getElementById(targetId);
     if (element) {
+      e.preventDefault();
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       setMobileMenuOpen(false);
     }
+    // If anchor target doesn't exist on current page, allow default browser
+    // navigation (will navigate to home + scroll).
   };
 
+  // Nav prioritizes destination pages (work on every route) over anchors.
+  // Playbook + Team remain as #anchors because they still exist on home.
   const navLinks = [
-    { id: 'whatwedo', label: 'Thesis', href: '/#whatwedo' },
-    { id: 'playbook', label: 'Playbook', href: '/#playbook' },
-    { id: 'ventures', label: 'Ventures', href: '/#ventures' },
-    { id: 'team', label: 'Team', href: '/#team' },
+    { id: 'why', label: language === 'pt' ? 'Por Que' : 'Why', href: `/${language}/why-avante`, isRoute: true },
+    { id: 'playbook', label: 'Playbook', href: `/${language}#playbook`, isRoute: false },
+    { id: 'portfolio', label: language === 'pt' ? 'Portfólio' : 'Portfolio', href: `/${language}/portfolio`, isRoute: true },
+    { id: 'principles', label: language === 'pt' ? 'Princípios' : 'Principles', href: `/${language}/principles`, isRoute: true },
   ];
 
   return (

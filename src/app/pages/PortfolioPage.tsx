@@ -11,6 +11,8 @@ import { BackToTop } from '@/app/components/BackToTop'
 import { SEOHelmet } from '@/app/components/SEOHelmet'
 import { SectionMasthead } from '@/app/components/SectionMasthead'
 import { EditorialCard } from '@/app/components/EditorialCard'
+import { ProofSection } from '@/app/components/ProofSection'
+import { VenturePipeline } from '@/app/components/VenturePipeline'
 import { Link } from 'react-router'
 
 // Ventures data. Status: 'exit' = realized, 'active' = current cohort,
@@ -234,8 +236,52 @@ export default function PortfolioPage() {
           </p>
         </div>
 
+        {/* TRACK RECORD section — relocated from home (ProofSection).
+            10× / 4× / $500MM+ + 5× / 90% are studio-level proof points
+            and belong with the venture data, not with the marketing
+            home flow.                                                      */}
+        <section style={{ marginTop: '96px' }}>
+          <SectionMasthead
+            centered
+            compact
+            eyebrow={t('Track Record', 'Track Record')}
+            title={t(
+              'What our team has built — and what current ventures are signaling.',
+              'O que nosso time construiu — e os sinais das ventures atuais.'
+            )}
+            description={t(
+              'Top row: realized outcomes from the founding team. Bottom row: early operational signals from the current cohort.',
+              'Linha de cima: resultados realizados pelo time fundador. Linha de baixo: sinais operacionais iniciais da cohort atual.'
+            )}
+          />
+          <ProofSection />
+        </section>
+
+        {/* PIPELINE section — relocated from home. The 3 pipeline ventures
+            (CRIA Studio, Pulse.ai, RADAR.ai) belong on the portfolio page
+            alongside the realized + active cohort, not as a separate home
+            section.                                                        */}
+        <section style={{ marginTop: '96px' }}>
+          <SectionMasthead
+            centered
+            compact
+            eyebrow={t('Pipeline', 'Pipeline')}
+            title={t(
+              'Next wave of AI-native category leaders.',
+              'A próxima onda de líderes de categoria AI-native.'
+            )}
+            description={t(
+              'Ventures currently in Stage 1–3 of the playbook (Research / Partner / Build). Names and details may shift before public launch.',
+              'Ventures atualmente nos Estágios 1–3 do playbook (Research / Partner / Build). Nomes e detalhes podem mudar antes do lançamento público.'
+            )}
+          />
+          <div style={{ marginTop: '32px' }}>
+            <VenturePipeline />
+          </div>
+        </section>
+
         {/* CTA back to home library */}
-        <div style={{ textAlign: 'center', marginTop: '64px' }}>
+        <div style={{ textAlign: 'center', marginTop: '96px' }}>
           <Link
             to={`/${language}/library/sigga-case-study-10x-exit`}
             style={{

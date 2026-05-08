@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router";
 import { ContactModal } from "@/app/components/ContactModal";
 import { BackToTop } from "@/app/components/BackToTop";
 import { CursorGlow } from "@/app/components/CursorGlow";
@@ -9,18 +10,10 @@ import { SocialProofStrip } from "@/app/components/SocialProofStrip";
 import { ScrollRevealSection } from "@/app/components/ScrollRevealSection";
 import { SectionMasthead } from "@/app/components/SectionMasthead";
 import { PlaybookStaircase } from "@/app/components/PlaybookStaircase";
-import { ProofSection } from "@/app/components/ProofSection";
-import { CTASection } from "@/app/components/CTASection";
-import { AvanteModelTabs } from "@/app/components/AvanteModelTabs";
-import { VenturePipeline } from "@/app/components/VenturePipeline";
-import { WhyVentureStudio } from "@/app/components/WhyVentureStudio";
-import { InvestorEcosystem } from "@/app/components/InvestorEcosystem";
-import { FAQSection } from "@/app/components/FAQSection";
-import { SiliconValleyVentureBuilding } from "@/app/components/SiliconValleyVentureBuilding";
+import { CompoundingChart } from "@/app/components/CompoundingChart";
 import { TeamSection } from "@/app/components/TeamSection";
 import { ContactFormSection } from "@/app/components/ContactFormSection";
 import { Footer } from "@/app/components/Footer";
-import { PortfolioStrip } from "@/app/components/PortfolioStrip";
 import { useLanguage } from "@/app/hooks/useLanguage";
 import avanteLogo from "figma:asset/1ee77d6dc5cd19bf91735ef627eddf9652d066cf.png";
 import brazilMap3D from "figma:asset/74fa96e445ccfc4a7e6981a97d144c53880a9f45.png";
@@ -290,73 +283,30 @@ export function AppContent() {
           }
         `}</style>
 
+        {/* SIGNATURE MOMENT — the compounding curve. Placed right after the
+            hero, before the credibility row. The visual that the site is
+            remembered by. Editorial restraint: one figure, one caption,
+            no surrounding chrome.                                          */}
+        <ScrollRevealSection
+          className="py-[64px] md:py-[96px] relative"
+          style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.06)' }}
+        >
+          <div style={{ maxWidth: '720px', margin: '0 auto', padding: '0 24px' }}>
+            <CompoundingChart />
+          </div>
+        </ScrollRevealSection>
+
         <StatsBar />
-        
+
         <SocialProofStrip />
 
         <div className="max-w-[1200px] mx-auto px-[24px]">
 
-          <ScrollRevealSection 
-            id="whatwedo"
-            className="py-[48px] md:py-[64px] relative"
-            style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}
-          >
-            <div className="max-w-[800px] mx-auto text-center px-4">
-              <h2
-                className="text-[28px] sm:text-[32px] md:text-[44px] lg:text-[52px]"
-                style={{
-                  lineHeight: '1.25',
-                  color: 'var(--avante-text-primary)',
-                  marginBottom: 'var(--avante-space-8)',
-                  fontWeight: 'var(--font-weight-medium)',
-                  letterSpacing: '-0.02em'
-                }}
-              >
-                {t('whatwedo.title.line1')}
-                <br />
-                {t('whatwedo.title.line2')}
-              </h2>
-              <div
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  marginTop: 'var(--avante-space-8)',
-                }}
-              >
-                <button
-                  onClick={() => {
-                    const element = document.getElementById('contact');
-                    if (element) {
-                      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
-                  }}
-                  style={{
-                    padding: 'var(--avante-space-2) var(--avante-space-5)',
-                    background: 'var(--avante-gradient-linear)',
-                    color: 'var(--avante-text-primary)',
-                    border: 'none',
-                    borderRadius: 'var(--avante-radius-12)',
-                    fontSize: '16px',
-                    fontWeight: 'var(--font-weight-semibold)',
-                    cursor: 'pointer',
-                    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'translateY(-2px)';
-                    e.currentTarget.style.boxShadow = '0 12px 32px rgba(152, 80, 154, 0.3)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.boxShadow = 'none';
-                  }}
-                >
-                  {t('cta.compact')}
-                </button>
-              </div>
-            </div>
-          </ScrollRevealSection>
+          {/* Removed: "Two ways to work with Avante" CTA section. The hero
+              already has For Founders + For Investors CTAs — repeating
+              them here added a pseudo-section without new content.       */}
 
-          <ScrollRevealSection 
+          <ScrollRevealSection
             id="playbook"
             className="py-[48px] md:py-[64px] relative"
             style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}
@@ -399,12 +349,9 @@ export function AppContent() {
             </div>
           </ScrollRevealSection>
 
-          <ScrollRevealSection
-            className="py-[48px] md:py-[64px] relative"
-            style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}
-          >
-            <ProofSection />
-          </ScrollRevealSection>
+          {/* ProofSection moved to /portfolio. The 10× / 4× / $500MM+ +
+              5× / 90% proof points belong with the venture data, not
+              repeated on home alongside StatsBar.                          */}
 
           <ScrollRevealSection
             id="team"
@@ -455,92 +402,157 @@ export function AppContent() {
             </div>
           </ScrollRevealSection>
 
-          {/* PortfolioStrip — Sprint 1 / B7.
-              Replaces the previous Behind-the-Scenes placeholder section
-              (4 dashed slots that read as "TODO"). The strip reuses the
-              social-proof line from the home hero, keeping rhythm without
-              the unfinished smell. Links to /portfolio (Sprint 4 dest). */}
-          <ScrollRevealSection
-            className="py-[32px] md:py-[40px] relative"
-            style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}
-          >
-            <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 var(--avante-space-4)' }}>
-              <PortfolioStrip viewAllHref={`/${language}/portfolio`} />
-            </div>
-          </ScrollRevealSection>
+          {/* PRINCIPLES TEASER — replaces the cluster of 5 marketing
+              sections (PortfolioStrip duplicate, SiliconValleyVentureBuilding,
+              AvanteModelTabs, WhyVentureStudio, VenturePipeline,
+              InvestorEcosystem, FAQSection). Each of those was either a
+              duplicate or content that lives more naturally on its own
+              destination page. Now: 3 principles + a clear link to /principles
+              for the full doctrine.
 
+              Content moved to:
+              - VenturePipeline → /portfolio (new "Pipeline" section)
+              - InvestorEcosystem → /investors (new perks section below CTA)
+              - ProofSection → /portfolio (new "Track Record" section)
+              - AvanteModelTabs / WhyVentureStudio / SiliconValleyVentureBuilding
+                → already covered by /why-avante comparison table + dual model
+              - FAQ → /founders Q&A block (5 founder-focused items)            */}
           <ScrollRevealSection
-            className="py-[48px] md:py-[64px] relative"
-            style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}
+            id="principles"
+            className="py-[64px] md:py-[96px] relative"
+            style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.06)' }}
           >
-            <SiliconValleyVentureBuilding />
-          </ScrollRevealSection>
-
-          <ScrollRevealSection
-            className="py-[48px] md:py-[64px] relative"
-            style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}
-          >
-            <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 var(--avante-space-4)' }}>
+            <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 var(--avante-space-4)' }}>
               <SectionMasthead
                 centered
-                eyebrow={language === 'pt' ? 'Como Decidimos' : 'How We Decide'}
+                eyebrow={language === 'pt' ? 'Doutrina Operacional' : 'Operating Doctrine'}
                 title={
                   language === 'pt'
-                    ? 'O Modelo Avante — filtro anti-hype'
-                    : 'The Avante Model — anti-hype filter'
+                    ? 'Três das dez regras pelas quais operamos.'
+                    : 'Three of the ten rules we operate by.'
                 }
                 description={
                   language === 'pt'
-                    ? 'Nosso framework para filtrar ruído e construir convicção.'
-                    : 'Our framework for filtering noise and building conviction.'
+                    ? 'Não são valores. São regras que constrangem comportamento — as decisões que já tomamos para gastar tempo operacional nas que ainda restam.'
+                    : 'Not values. Rules that constrain behavior — the decisions we have already made so we can spend operating time on the ones that are left.'
                 }
               />
-            </div>
-            <AvanteModelTabs onOpenContact={() => setIsContactModalOpen(true)} />
-          </ScrollRevealSection>
 
-          <ScrollRevealSection 
-            className="py-[48px] md:py-[64px] relative"
-            style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}
-          >
-            <WhyVentureStudio />
-          </ScrollRevealSection>
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
+                  gap: '24px',
+                  marginTop: '48px',
+                }}
+              >
+                {[
+                  {
+                    n: '01',
+                    title: language === 'pt' ? 'Primeiro cheque ou nada.' : 'First ticket or no ticket.',
+                    body:
+                      language === 'pt'
+                        ? "Somos first-money-in ou não investimos. A vantagem do studio está no momento de fundação."
+                        : "We are first-money-in or we do not invest. The studio's edge is at the founding moment.",
+                  },
+                  {
+                    n: '04',
+                    title:
+                      language === 'pt'
+                        ? '3–4 ventures por ano. Sem exceção.'
+                        : '3–4 ventures per year. No exceptions.',
+                    body:
+                      language === 'pt'
+                        ? 'A gente limita throughput de propósito. Studios que escalam mais rápido que seu stack amadurece degradam a vantagem que justifica o modelo.'
+                        : 'We deliberately cap throughput. Studios that scale faster than their stack matures debase the very advantage that justifies the model.',
+                  },
+                  {
+                    n: '10',
+                    title:
+                      language === 'pt'
+                        ? 'O que não fazemos é o que somos.'
+                        : 'What we will not do is what we are.',
+                    body:
+                      language === 'pt'
+                        ? 'Um studio que não consegue articular seu espaço negativo não consegue articular o positivo. Dizer não é a disciplina.'
+                        : 'A studio that cannot articulate its negative space cannot articulate its positive. Saying no is the discipline.',
+                  },
+                ].map((p) => (
+                  <div
+                    key={p.n}
+                    style={{
+                      padding: '28px',
+                      background: 'rgba(255, 255, 255, 0.025)',
+                      border: '1px solid rgba(255, 255, 255, 0.08)',
+                      borderRadius: '14px',
+                    }}
+                  >
+                    <div
+                      style={{
+                        fontSize: '32px',
+                        fontWeight: 600,
+                        color: '#F9B437',
+                        lineHeight: 1,
+                        marginBottom: '14px',
+                        fontVariantNumeric: 'tabular-nums',
+                      }}
+                    >
+                      {p.n}
+                    </div>
+                    <h3
+                      style={{
+                        fontSize: '17px',
+                        fontWeight: 600,
+                        color: '#FFFFFF',
+                        margin: '0 0 10px 0',
+                        lineHeight: 1.3,
+                        letterSpacing: '-0.01em',
+                      }}
+                    >
+                      {p.title}
+                    </h3>
+                    <p
+                      style={{
+                        fontSize: '14px',
+                        lineHeight: 1.6,
+                        color: 'rgba(255, 255, 255, 0.7)',
+                        margin: 0,
+                      }}
+                    >
+                      {p.body}
+                    </p>
+                  </div>
+                ))}
+              </div>
 
-          <ScrollRevealSection 
-            id="ventures"
-            className="py-[48px] md:py-[64px] relative"
-            style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}
-          >
-            <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 var(--avante-space-4)' }}>
-              <SectionMasthead
-                centered
-                eyebrow={language === 'pt' ? 'Pipeline' : 'Pipeline'}
-                title={
-                  language === 'pt'
-                    ? 'A próxima onda de líderes de categoria AI-native'
-                    : 'Next wave of AI-native category leaders'
-                }
-                description={
-                  language === 'pt'
-                    ? 'Cohort atual + ventures co-fundadas previamente.'
-                    : 'Live cohort + previously co-founded ventures.'
-                }
-              />
+              <div style={{ textAlign: 'center', marginTop: '40px' }}>
+                <Link
+                  to={`/${language}/principles`}
+                  style={{
+                    display: 'inline-block',
+                    padding: '14px 28px',
+                    background: 'transparent',
+                    color: '#FFFFFF',
+                    border: '1.5px solid rgba(255, 255, 255, 0.25)',
+                    borderRadius: '999px',
+                    textDecoration: 'none',
+                    fontSize: '15px',
+                    fontWeight: 600,
+                    transition: 'all 0.25s ease',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.borderColor = 'rgba(249, 180, 55, 0.55)'
+                    e.currentTarget.style.background = 'rgba(249, 180, 55, 0.06)'
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.25)'
+                    e.currentTarget.style.background = 'transparent'
+                  }}
+                >
+                  {language === 'pt' ? 'Ler os 10 princípios →' : 'Read all 10 principles →'}
+                </Link>
+              </div>
             </div>
-            <div style={{ marginTop: 'var(--avante-space-6)' }}>
-              <VenturePipeline />
-            </div>
-          </ScrollRevealSection>
-
-          <ScrollRevealSection
-            id="investors"
-            className="py-[48px] md:py-[64px] relative"
-            style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}
-          >
-            <InvestorEcosystem onOpenContact={() => setIsContactModalOpen(true)} />
-            
-            {/* FAQ Section - Collapsible below investor close */}
-            <FAQSection />
           </ScrollRevealSection>
 
           <ScrollRevealSection

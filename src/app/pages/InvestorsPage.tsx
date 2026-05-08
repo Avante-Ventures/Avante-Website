@@ -10,7 +10,10 @@ import { BackToTop } from '@/app/components/BackToTop'
 import { SEOHelmet } from '@/app/components/SEOHelmet'
 import { SectionMasthead } from '@/app/components/SectionMasthead'
 import { EditorialCard } from '@/app/components/EditorialCard'
+import { InvestorEcosystem } from '@/app/components/InvestorEcosystem'
 import { Link } from 'react-router'
+import { useState } from 'react'
+import { ContactModal } from '@/app/components/ContactModal'
 
 const SEO = {
   en: {
@@ -31,6 +34,7 @@ export default function InvestorsPage() {
   const { language } = useLanguage()
   const t = (en: string, pt: string) => (language === 'pt' ? pt : en)
   const copy = SEO[language]
+  const [isContactOpen, setIsContactOpen] = useState(false)
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -349,6 +353,14 @@ export default function InvestorsPage() {
           </ul>
         </section>
 
+        {/* INVESTOR PERKS — relocated from home (InvestorEcosystem). The
+            "Investor Mega Perks" bento (Quarterly AI training, FutureProofing
+            priority, Mahway agents, On-demand AI consulting) is LP-side
+            value-add and belongs on the investor-facing page, not on home. */}
+        <section style={{ margin: '64px 0' }}>
+          <InvestorEcosystem onOpenContact={() => setIsContactOpen(true)} />
+        </section>
+
         {/* CTA */}
         <section
           style={{
@@ -414,6 +426,8 @@ export default function InvestorsPage() {
           </Link>
         </section>
       </div>
+
+      <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
 
       <Footer />
     </div>
