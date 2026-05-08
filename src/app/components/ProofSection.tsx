@@ -15,31 +15,46 @@ const ProofSectionComponent = () => {
     {
       value: '10x',
       color: '#98509A',
-      context: 'Exit multiple — Sigga Technologies (Board: Amanda Pinheiro)'
+      context: t(
+        'Exit multiple — Sigga Technologies (Board: Amanda Pinheiro)',
+        'Múltiplo de exit — Sigga Technologies (Conselho: Amanda Pinheiro)'
+      ),
     },
     {
       value: '4x',
       color: '#F18B46',
-      context: 'MOI — Accera investment (Innova Capital era)'
+      context: t(
+        'MOI — Accera investment (Innova Capital era)',
+        'MOI — investimento Accera (era Innova Capital)'
+      ),
     },
     {
       value: '$500MM+',
       color: '#F9B437',
-      context: 'Invested across 20+ companies by our founding team'
-    }
+      context: t(
+        'Invested across 20+ companies by our founding team',
+        'Investido em 20+ empresas pelo nosso time fundador'
+      ),
+    },
   ];
 
   const currentMetrics: MetricData[] = [
     {
       value: '5x',
       color: '#98509A',
-      context: 'Intake volume increase (WIR InsurTech)'
+      context: t(
+        'Intake volume increase (WIR InsurTech)',
+        'Aumento de volume de intake (WIR InsurTech)'
+      ),
     },
     {
       value: '90%',
       color: '#F18B46',
-      context: 'Cost reduction in underwriting workflows'
-    }
+      context: t(
+        'Cost reduction in underwriting workflows',
+        'Redução de custo em workflows de underwriting'
+      ),
+    },
   ];
 
   return (
@@ -139,7 +154,10 @@ const ProofSectionComponent = () => {
                 margin: 0
               }}
             >
-              AI-native architecture consistently delivers 3-10x operational improvements across our portfolio
+              {t(
+                'AI-native architecture consistently delivers 3-10x operational improvements across our portfolio',
+                'Arquitetura AI-native entrega consistentemente melhorias operacionais de 3-10x em todo o portfólio'
+              )}
             </p>
           </div>
         </div>

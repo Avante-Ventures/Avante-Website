@@ -155,10 +155,10 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                   letterSpacing: '-0.01em'
                 }}
               >
-                Quarterly Expert AI Training
+                {t('Quarterly Expert AI Training', 'Treinamento Trimestral com Especialistas em IA')}
               </h3>
 
-              <p 
+              <p
                 style={{
                   fontSize: '17px',
                   lineHeight: '1.7',
@@ -167,7 +167,10 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                   maxWidth: '420px'
                 }}
               >
-                Exclusive workshops led by top AI practitioners. Stay ahead of the curve with hands-on learning from the best minds in AI.
+                {t(
+                  'Exclusive workshops led by top AI practitioners. Stay ahead of the curve with hands-on learning from the best minds in AI.',
+                  'Workshops exclusivos liderados por top practitioners de IA. Fique à frente da curva com aprendizado hands-on das mentes mais relevantes em IA.'
+                )}
               </p>
             </div>
           </div>
@@ -265,10 +268,10 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                   lineHeight: '1.3'
                 }}
               >
-                Futureproofing.dev Priority
+                {t('Futureproofing.dev Priority', 'Prioridade Futureproofing.dev')}
               </h3>
 
-              <p 
+              <p
                 style={{
                   fontSize: '15px',
                   lineHeight: '1.7',
@@ -276,7 +279,10 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                   fontWeight: 'var(--font-weight-regular)'
                 }}
               >
-                Priority access to our AI talent company. Hire vetted AI engineers before anyone else.
+                {t(
+                  'Priority access to our AI talent company. Hire vetted AI engineers before anyone else.',
+                  'Acesso prioritário à nossa empresa de talentos AI. Contrate engenheiros de IA pré-validados antes de qualquer outro.'
+                )}
               </p>
             </div>
           </div>
@@ -373,10 +379,10 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                   lineHeight: '1.3'
                 }}
               >
-                Access to Mahway Agents
+                {t('Access to Mahway Agents', 'Acesso aos Agentes Mahway')}
               </h3>
 
-              <p 
+              <p
                 style={{
                   fontSize: '15px',
                   lineHeight: '1.7',
@@ -384,7 +390,10 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                   fontWeight: 'var(--font-weight-regular)'
                 }}
               >
-                Portfolio of custom AI agents for your business. Ready-to-deploy automation tools.
+                {t(
+                  'Portfolio of custom AI agents for your business. Ready-to-deploy automation tools.',
+                  'Portfólio de agentes de IA customizados para seu negócio. Ferramentas de automação prontas para deploy.'
+                )}
               </p>
             </div>
           </div>
@@ -481,10 +490,10 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                   letterSpacing: '-0.01em'
                 }}
               >
-                On-Demand AI Consulting
+                {t('On-Demand AI Consulting', 'Consultoria de IA Sob Demanda')}
               </h3>
 
-              <p 
+              <p
                 style={{
                   fontSize: '17px',
                   lineHeight: '1.7',
@@ -493,7 +502,10 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                   maxWidth: '420px'
                 }}
               >
-                Personalized AI implementation consulting. Turn your operations into AI-powered workflows with expert guidance.
+                {t(
+                  'Personalized AI implementation consulting. Turn your operations into AI-powered workflows with expert guidance.',
+                  'Consultoria personalizada de implementação de IA. Transforme suas operações em workflows AI-powered com orientação especialista.'
+                )}
               </p>
             </div>
           </div>
@@ -530,7 +542,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
               e.currentTarget.style.boxShadow = '0 8px 32px rgba(249, 180, 55, 0.3)';
             }}
           >
-            Start a Conversation
+            {t('Start a Conversation', 'Iniciar uma Conversa')}
           </button>
 
           {/* Location info */}
@@ -643,7 +655,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                 textAlign: 'center'
               }}
             >
-              Worldwide Legal Advisors
+              {t('Worldwide Legal Advisors', 'Conselheiros Jurídicos Globais')}
             </p>
 
             <div
@@ -675,7 +687,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                   e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
                 }}
               >
-                Foley (USA)
+                {t('Foley (USA)', 'Foley (EUA)')}
               </div>
 
               <div
@@ -698,7 +710,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                   e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
                 }}
               >
-                Lefosse (Brazil)
+                {t('Lefosse (Brazil)', 'Lefosse (Brasil)')}
               </div>
             </div>
           </div>
