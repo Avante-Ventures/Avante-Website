@@ -73,20 +73,7 @@ const TeamSectionComponent = () => {
         overflow: 'hidden'
       }}
     >
-      {/* Background glow */}
-      <div
-        style={{
-          position: 'absolute',
-          top: '30%',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          width: '1200px',
-          height: '600px',
-          background: 'radial-gradient(ellipse, rgba(152, 80, 154, 0.06) 0%, transparent 70%)',
-          filter: 'blur(100px)',
-          pointerEvents: 'none'
-        }}
-      />
+      {/* Background glow removed per Ive's panel — was ambient, not structural */}
 
       <div
         style={{

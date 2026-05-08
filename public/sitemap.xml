@@ -122,6 +122,26 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/investors"/>
   </url>
 
+  <!-- Operating Principles page (en + pt) — high priority, iconic doctrine -->
+  <url>
+    <loc>https://avanteventures.com/en/principles</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/principles"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/principles"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/principles"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/principles</loc>
+    <lastmod>2026-05-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/principles"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/principles"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/principles"/>
+  </url>
+
   <!-- ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
   <!-- Library articles (9 articles × 2 locales = 18 entries)              -->
   <!-- 3 published full-length, 6 stubs being drafted                      -->

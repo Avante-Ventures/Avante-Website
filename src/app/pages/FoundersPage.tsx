@@ -314,6 +314,19 @@ export default function FoundersPage() {
             )}
           />
           <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '24px' }}>
+            {/* Apple-curve toggle on the '+' affordance: rotates 45° to
+                read as '×' when expanded. CSS-only via [open] selector. */}
+            <style>{`
+              .avt-qa[open] .avt-qa-mark {
+                transform: rotate(45deg);
+              }
+              .avt-qa-mark {
+                transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+                transform-origin: center;
+                will-change: transform;
+              }
+              .avt-qa summary::-webkit-details-marker { display: none; }
+            `}</style>
             {[
               {
                 q: t(
@@ -355,9 +368,30 @@ export default function FoundersPage() {
                   'Algumas vão quebrar. O studio é construído em torno de stage gates honestos (90 dias para pilot, 6 meses para clientes pagos, 12 meses para readiness de Série A) — se uma venture não passa, temos um protocolo estruturado de wind-down: fundadores mantêm o equity ganho, direitos de IP são claros, e ficamos no canto de qualquer coisa futura que o time construir. Já vivemos isso e tratamos como parte da relação, não cláusula de pior caso escondida em side letter.'
                 ),
               },
+              {
+                q: t(
+                  '"What does an Avante operating partner actually do day-to-day?"',
+                  '"O que um operating partner da Avante faz no dia a dia?"'
+                ),
+                a: t(
+                  "First 30 days: customer-discovery alongside the founder, ICP doc co-authored, first-ten-customer target list assembled. Months 2–6: weekly working sessions on whatever blocks the venture (pricing test, hiring loop, security review, fundraising deck). Months 6–12: shifts to coach + escalation owner — present at major customer + investor calls, on-call for crises. After Series A: board observer or full board seat, depending on what the founder wants. Concrete and bounded — not 'available for advice.'",
+                  'Primeiros 30 dias: customer discovery junto com o fundador, doc de ICP co-escrito, lista de primeiros dez clientes-alvo montada. Meses 2–6: working sessions semanais no que estiver travando a venture (teste de pricing, loop de contratação, security review, deck de fundraising). Meses 6–12: vira coach + dono de escalações — presente em calls grandes de cliente e investidor, on-call em crises. Depois da Série A: board observer ou cadeira de board, dependendo do que o fundador quiser. Concreto e delimitado — não "disponível para conselhos".'
+                ),
+              },
+              {
+                q: t(
+                  '"How long is the engagement? When does the studio step back?"',
+                  '"Quanto tempo dura o engajamento? Quando o studio sai de cena?"'
+                ),
+                a: t(
+                  "The default is 18 months of intensive operating engagement, then a structured handoff into board-level governance only. Some founders want the studio to stay closer for longer; some want full operational autonomy by month 12. We are explicit about this in month 6 — no surprises, no slow fades. The relationship continues through the cap table for the life of the venture, but the work changes.",
+                  'O default são 18 meses de engajamento operacional intensivo, depois transição estruturada para governança só em nível de board. Alguns fundadores querem que o studio fique mais perto por mais tempo; outros querem autonomia operacional total no mês 12. A gente é explícito sobre isso no mês 6 — sem surpresa, sem fade gradual. A relação continua via cap table pela vida da venture, mas o trabalho muda.'
+                ),
+              },
             ].map((item, i) => (
               <details
                 key={i}
+                className="avt-qa"
                 style={{
                   background: 'rgba(255, 255, 255, 0.025)',
                   border: '1px solid rgba(255, 255, 255, 0.08)',
@@ -381,11 +415,18 @@ export default function FoundersPage() {
                   <span>{item.q}</span>
                   <span
                     aria-hidden
+                    className="avt-qa-mark"
                     style={{
-                      fontSize: '20px',
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      width: '22px',
+                      height: '22px',
+                      fontSize: '22px',
                       color: '#F9B437',
                       flexShrink: 0,
                       lineHeight: 1,
+                      fontWeight: 300,
                     }}
                   >
                     +

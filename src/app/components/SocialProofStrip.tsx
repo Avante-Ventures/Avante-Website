@@ -41,22 +41,9 @@ const SocialProofStripComponent = () => {
         overflow: 'hidden'
       }}
     >
-      {/* Background glow */}
-      <div
-        style={{
-          position: 'absolute',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          width: '1000px',
-          height: '300px',
-          background: 'radial-gradient(ellipse, rgba(249, 180, 55, 0.03) 0%, transparent 70%)',
-          filter: 'blur(80px)',
-          pointerEvents: 'none'
-        }}
-      />
+      {/* Background glow removed per Ive's panel — was ambient, not structural */}
 
-      <div 
+      <div
         style={{ 
           position: 'relative', 
           zIndex: 1,

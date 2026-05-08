@@ -51,22 +51,9 @@ const ProofSectionComponent = () => {
         overflow: 'hidden'
       }}
     >
-      {/* Background glow */}
-      <div
-        style={{
-          position: 'absolute',
-          top: '20%',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          width: '1200px',
-          height: '400px',
-          background: 'radial-gradient(ellipse, rgba(152, 80, 154, 0.04) 0%, transparent 70%)',
-          filter: 'blur(100px)',
-          pointerEvents: 'none'
-        }}
-      />
+      {/* Background glow removed per Ive's panel — was ambient, not structural */}
 
-      <div 
+      <div
         style={{ 
           maxWidth: '1200px',
           margin: '0 auto',

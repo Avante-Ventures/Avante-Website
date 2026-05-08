@@ -28,6 +28,8 @@ const FoundersPage = () =>
   import('./pages/FoundersPage.tsx').then((m) => ({ Component: m.default }))
 const InvestorsPage = () =>
   import('./pages/InvestorsPage.tsx').then((m) => ({ Component: m.default }))
+const PrinciplesPage = () =>
+  import('./pages/PrinciplesPage.tsx').then((m) => ({ Component: m.default }))
 const HeroConceptsPage = () =>
   import('./pages/HeroConceptsPage.tsx').then((m) => ({ Component: m.default }))
 
@@ -77,6 +79,7 @@ export const router = createBrowserRouter([
       { path: "portfolio", lazy: PortfolioPage },
       { path: "founders", lazy: FoundersPage },
       { path: "investors", lazy: InvestorsPage },
+      { path: "principles", lazy: PrinciplesPage },
     ],
   },
 ])

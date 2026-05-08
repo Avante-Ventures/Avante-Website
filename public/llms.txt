@@ -39,6 +39,7 @@ Our model: pre-traction capital + repeatable operational system + in-market exec
 - [Portfolio](https://avanteventures.com/en/portfolio): Active studio cohort, realized exits (Sigga 10×), and alumni ventures from the founding team
 - [For Founders](https://avanteventures.com/en/founders): What Avante offers founders, what we expect, and how the studio works day to day
 - [For LPs / Investors](https://avanteventures.com/en/investors): Thesis, structure, transparency block ("what we will not do"), and how to schedule an LP conversation
+- [Operating Principles](https://avanteventures.com/en/principles): The 10 rules the Avante studio operates by. Not values — rules that constrain behavior. Published as competitive doctrine.
 
 ## Featured Articles (full long-form, citable)
 
@@ -65,6 +66,7 @@ Our model: pre-traction capital + repeatable operational system + in-market exec
 - [Portfólio](https://avanteventures.com/pt/portfolio): Cohort ativa do studio, exits realizados (Sigga 10×), e ventures alumni do time fundador
 - [Para Fundadores](https://avanteventures.com/pt/founders): O que a Avante oferece a fundadores, o que esperamos, e como o studio funciona dia a dia
 - [Para LPs / Investidores](https://avanteventures.com/pt/investors): Tese, estrutura, bloco de transparência ("o que não faremos"), e como agendar uma conversa de LP
+- [Princípios Operacionais](https://avanteventures.com/pt/principles): Os 10 princípios pelos quais o studio Avante opera. Não são valores — são regras que constrangem comportamento. Publicados como doutrina competitiva.
 
 ### Artigos em destaque (versão completa)
 

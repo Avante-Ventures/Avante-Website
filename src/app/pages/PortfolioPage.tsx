@@ -151,14 +151,14 @@ export default function PortfolioPage() {
         </Link>
 
         <SectionMasthead
-          eyebrow={t('Portfolio', 'Portfólio')}
+          eyebrow={t('Portfolio · Year 2 of investing', 'Portfólio · Ano 2 de investimentos')}
           title={t(
             'The ventures we co-founded — and the ones our team built before.',
             'As ventures que co-fundamos — e as que nosso time construiu antes.'
           )}
           description={t(
-            'A working portfolio, not a pitch list. Each venture below is either active in the current Avante studio cohort, a realized exit, or an alumni venture that shaped the operating playbook we use today.',
-            'Um portfólio de trabalho, não uma lista de pitch. Cada venture abaixo está na cohort ativa do studio, é um exit realizado, ou é alumni que moldou o playbook operacional que usamos hoje.'
+            'A working portfolio, not a pitch list. Six entries below: the current Avante studio cohort, one realized exit (Sigga), and the alumni ventures that shaped the operating playbook we use today. The studio caps at 3–4 new ventures per year — by design.',
+            'Um portfólio de trabalho, não uma lista de pitch. Seis entradas abaixo: a cohort ativa do studio Avante, um exit realizado (Sigga), e as ventures alumni que moldaram o playbook operacional que usamos hoje. O studio limita 3–4 novas ventures por ano — por design.'
           )}
         />
 
