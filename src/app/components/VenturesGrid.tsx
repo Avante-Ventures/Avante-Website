@@ -15,7 +15,7 @@ export function VenturesGrid() {
       industry: 'FinTech',
       year: '2023',
       description: 'AI-powered financial literacy platform for emerging markets',
-      color: '#42468C'
+      color: '#F4A261'
     },
     {
       name: 'Astonishing Labs',

@@ -6,9 +6,6 @@ import { SEOHelmet } from "@/app/components/SEOHelmet";
 import { SectionMasthead } from "@/app/components/SectionMasthead";
 import { PortfolioStrip } from "@/app/components/PortfolioStrip";
 import { Link } from "react-router";
-import { useState } from "react";
-import comparisonChart from "figma:asset/37ee08c3bb79d5b7cd80ffc2853024534d044245.png";
-import returnsChart from "figma:asset/0a469bd800ea0caef4b2723b1776b2438a3aada4.png";
 
 const SEO_COPY = {
   en: {
@@ -25,7 +22,6 @@ const SEO_COPY = {
 
 export default function WhyAvantePage() {
   const { t, language } = useLanguage();
-  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
   const copy = SEO_COPY[language];
 
   const whyAvanteJsonLd = {
@@ -146,7 +142,7 @@ export default function WhyAvantePage() {
             {[
               { value: '50%', label: t('whyavante.stats.stat1'), color: '#F9B437' },
               { value: '3x', label: t('whyavante.stats.stat2'), color: '#98509A' },
-              { value: '30%', label: t('whyavante.stats.stat3'), color: '#42468C' }
+              { value: '30%', label: t('whyavante.stats.stat3'), color: '#98509A' }
             ].map((stat, index) => (
               <div 
                 key={index}
@@ -294,114 +290,117 @@ export default function WhyAvantePage() {
           </div>
         </section>
 
-        {/* Comparison Chart Section */}
+        {/* Comparison Table — replaces the two legacy chart-image sections.
+            Single tabular block, editorial typography, no static PNGs.       */}
         <section style={{ marginBottom: 'var(--avante-space-24)' }}>
-          <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center', marginBottom: 'var(--avante-space-10)' }}>
-            <h2 
+          <SectionMasthead
+            centered
+            eyebrow={t('whyavante.comparison.title')}
+            title={
+              language === 'pt'
+                ? 'Venture studio vs. VC tradicional, lado a lado.'
+                : 'Venture studio vs. traditional VC, side by side.'
+            }
+            description={
+              language === 'pt'
+                ? 'Os mesmos vintages, métricas comparáveis. Os números são da indústria — não nossos.'
+                : 'Same vintages, comparable metrics. The numbers are industry data — not ours.'
+            }
+          />
+
+          <div
+            style={{
+              maxWidth: '960px',
+              margin: '0 auto',
+              backgroundColor: 'rgba(255, 255, 255, 0.02)',
+              border: '1px solid rgba(255, 255, 255, 0.08)',
+              borderRadius: '20px',
+              overflow: 'hidden',
+            }}
+          >
+            {/* Header row */}
+            <div
               style={{
-                fontSize: 'clamp(32px, 5vw, 52px)',
-                fontWeight: 'var(--font-weight-medium)',
-                color: 'var(--avante-text-primary)',
-                lineHeight: '1.15',
-                letterSpacing: '-0.02em',
-                marginBottom: 'var(--avante-space-6)'
+                display: 'grid',
+                gridTemplateColumns: '1.4fr 1fr 1fr',
+                padding: '20px 28px',
+                background: 'rgba(255, 255, 255, 0.03)',
+                borderBottom: '1px solid rgba(255, 255, 255, 0.08)',
+                fontSize: '11px',
+                fontWeight: 700,
+                letterSpacing: '0.18em',
+                textTransform: 'uppercase',
+                color: 'rgba(255, 255, 255, 0.55)',
               }}
             >
-              {t('whyavante.comparison.title')}
-            </h2>
+              <span>{language === 'pt' ? 'Métrica' : 'Metric'}</span>
+              <span style={{ color: '#F9B437' }}>Studio</span>
+              <span>{language === 'pt' ? 'VC tradicional' : 'Traditional VC'}</span>
+            </div>
 
-            <p 
-              style={{ 
-                fontSize: '18px',
-                color: 'var(--avante-text-secondary)',
-                lineHeight: '1.7',
-                maxWidth: '700px',
-                margin: '0 auto'
-              }}
-            >
-              {t('whyavante.comparison.description')}
-            </p>
+            {[
+              {
+                metric: language === 'pt' ? 'IRR anualizado (10 anos)' : 'IRR annualized (10-yr)',
+                studio: '~50%',
+                vc: '~19%',
+              },
+              {
+                metric: language === 'pt' ? 'Time-to-traction' : 'Time-to-traction',
+                studio: language === 'pt' ? '6–9 meses à frente' : '6–9 months ahead',
+                vc: language === 'pt' ? 'Linha de base' : 'Baseline',
+              },
+              {
+                metric: language === 'pt' ? 'Encanamento da empresa' : 'Company "plumbing"',
+                studio: language === 'pt' ? 'Compartilhado, dia 1' : 'Shared, day one',
+                vc: language === 'pt' ? '~40% do pré-seed' : '~40% of pre-seed',
+              },
+              {
+                metric: language === 'pt' ? 'Engajamento operacional' : 'Operating engagement',
+                studio: language === 'pt' ? 'Operating partner no código' : 'Operating partner in the code',
+                vc: language === 'pt' ? '8–12 board seats' : '8–12 board seats',
+              },
+              {
+                metric: language === 'pt' ? 'Estágio de entrada' : 'Entry stage',
+                studio: language === 'pt' ? 'Primeiro cheque, sempre' : 'First ticket, always',
+                vc: language === 'pt' ? 'Seed → Série C' : 'Seed → Series C',
+              },
+            ].map((row, i, arr) => (
+              <div
+                key={row.metric}
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: '1.4fr 1fr 1fr',
+                  padding: '22px 28px',
+                  borderBottom:
+                    i < arr.length - 1 ? '1px solid rgba(255, 255, 255, 0.05)' : 'none',
+                  fontSize: '15px',
+                  alignItems: 'center',
+                }}
+              >
+                <span style={{ color: 'rgba(255, 255, 255, 0.85)', fontWeight: 500 }}>
+                  {row.metric}
+                </span>
+                <span style={{ color: '#F9B437', fontWeight: 600 }}>{row.studio}</span>
+                <span style={{ color: 'rgba(255, 255, 255, 0.55)' }}>{row.vc}</span>
+              </div>
+            ))}
           </div>
 
-          <div style={{
-            backgroundColor: 'rgba(255, 255, 255, 0.02)',
-            border: '1px solid rgba(255, 255, 255, 0.08)',
-            borderRadius: 'var(--avante-radius-16)',
-            padding: 'var(--avante-space-10)',
-            overflow: 'hidden',
-            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)'
-          }}>
-            <img 
-              src={comparisonChart} 
-              alt="Venture Studio vs VC Comparison"
-              style={{
-                width: '100%',
-                height: 'auto',
-                display: 'block',
-                borderRadius: 'var(--avante-radius-8)'
-              }}
-            />
-          </div>
-        </section>
-
-        {/* Returns Chart Section */}
-        <section style={{ marginBottom: 'var(--avante-space-24)' }}>
-          <div style={{ maxWidth: '900px', margin: '0 auto', textAlign: 'center', marginBottom: 'var(--avante-space-10)' }}>
-            <h2 
-              style={{
-                fontSize: 'clamp(32px, 5vw, 52px)',
-                fontWeight: 'var(--font-weight-medium)',
-                color: 'var(--avante-text-primary)',
-                lineHeight: '1.15',
-                letterSpacing: '-0.02em',
-                marginBottom: 'var(--avante-space-6)'
-              }}
-            >
-              {t('whyavante.returns.title')}
-            </h2>
-
-            <p 
-              style={{ 
-                fontSize: '18px',
-                color: 'var(--avante-text-secondary)',
-                lineHeight: '1.7',
-                maxWidth: '700px',
-                margin: '0 auto'
-              }}
-            >
-              {t('whyavante.returns.description')}
-            </p>
-          </div>
-
-          <div style={{
-            backgroundColor: 'rgba(255, 255, 255, 0.02)',
-            border: '1px solid rgba(255, 255, 255, 0.08)',
-            borderRadius: 'var(--avante-radius-16)',
-            padding: 'var(--avante-space-10)',
-            overflow: 'hidden',
-            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)'
-          }}>
-            <img 
-              src={returnsChart} 
-              alt="Venture Studios Lead in Returns"
-              style={{
-                width: '100%',
-                height: 'auto',
-                display: 'block',
-                borderRadius: 'var(--avante-radius-8)'
-              }}
-            />
-          </div>
-
-          {/* Data Source Note */}
-          <p style={{
-            fontSize: '13px',
-            color: 'var(--avante-text-muted)',
-            textAlign: 'center',
-            marginTop: 'var(--avante-space-4)',
-            fontStyle: 'italic'
-          }}>
-            {t('whyavante.returns.source')}
+          {/* Data source note (anchored to /en#source-6 footnote) */}
+          <p
+            style={{
+              fontSize: '13px',
+              color: 'var(--avante-text-muted)',
+              textAlign: 'center',
+              marginTop: 'var(--avante-space-5)',
+              fontStyle: 'italic',
+              maxWidth: '700px',
+              margin: 'var(--avante-space-5) auto 0',
+            }}
+          >
+            {language === 'pt'
+              ? 'Fontes: GSSN Annual Report 2025 · Cambridge Associates US VC Index Q4 2025.'
+              : 'Sources: GSSN Annual Report 2025 · Cambridge Associates US VC Index Q4 2025.'}
           </p>
         </section>
 
@@ -704,96 +703,9 @@ export default function WhyAvantePage() {
           </div>
         </section>
 
-        {/* Why This Matters Section */}
-        <section style={{ marginBottom: 'var(--avante-space-24)' }}>
-          <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-            <h2 
-              style={{
-                fontSize: 'clamp(32px, 5vw, 52px)',
-                fontWeight: 'var(--font-weight-medium)',
-                color: 'var(--avante-text-primary)',
-                lineHeight: '1.15',
-                letterSpacing: '-0.02em',
-                marginBottom: 'var(--avante-space-12)',
-                textAlign: 'center'
-              }}
-            >
-              {t('whyavante.matters.title')}
-            </h2>
-
-            <div style={{ 
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: 'var(--avante-space-6)'
-            }}>
-              {[1, 2, 3, 4].map((num) => (
-                <div 
-                  key={num}
-                  style={{
-                    backgroundColor: 'rgba(255, 255, 255, 0.02)',
-                    border: '1px solid rgba(255, 255, 255, 0.08)',
-                    borderRadius: 'var(--avante-radius-12)',
-                    padding: 'var(--avante-space-7)',
-                    transition: 'all 0.3s ease',
-                    position: 'relative',
-                    overflow: 'hidden'
-                  }}
-                  onMouseEnter={(e) => {
-                    setHoveredCard(num);
-                    e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.04)';
-                    e.currentTarget.style.borderColor = 'rgba(66, 70, 140, 0.3)';
-                    e.currentTarget.style.transform = 'translateY(-6px)';
-                    e.currentTarget.style.boxShadow = '0 12px 32px rgba(66, 70, 140, 0.15)';
-                  }}
-                  onMouseLeave={(e) => {
-                    setHoveredCard(null);
-                    e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.02)';
-                    e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.08)';
-                    e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.boxShadow = 'none';
-                  }}
-                >
-                  <div style={{
-                    position: 'absolute',
-                    top: '0',
-                    right: '0',
-                    fontSize: '72px',
-                    fontWeight: 'var(--font-weight-bold)',
-                    color: 'rgba(255, 255, 255, 0.02)',
-                    lineHeight: '1',
-                    padding: 'var(--avante-space-3)'
-                  }}>
-                    {num}
-                  </div>
-
-                  <h3 
-                    style={{
-                      fontSize: '21px',
-                      fontWeight: 'var(--font-weight-medium)',
-                      color: 'var(--avante-text-primary)',
-                      marginBottom: 'var(--avante-space-4)',
-                      position: 'relative',
-                      zIndex: 1
-                    }}
-                  >
-                    {t(`whyavante.matters.point${num}.title`)}
-                  </h3>
-                  <p 
-                    style={{ 
-                      fontSize: '15px',
-                      color: 'var(--avante-text-secondary)',
-                      lineHeight: '1.7',
-                      position: 'relative',
-                      zIndex: 1
-                    }}
-                  >
-                    {t(`whyavante.matters.point${num}.description`)}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        {/* "Why This Matters" section removed — its 4 cards were repetitive
+            with The Problem (above) and Why Brazil Why Now (below). The
+            consolidation keeps 5 content sections instead of 7.             */}
 
         {/* Why Brazil, Why Now Section */}
         <section style={{ 

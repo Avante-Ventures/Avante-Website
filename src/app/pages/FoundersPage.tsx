@@ -50,7 +50,7 @@ export default function FoundersPage() {
       title: t('First-ticket capital, written by the studio.', 'Capital de primeiro cheque, escrito pelo studio.'),
       body: t(
         'Pre-negotiated first ticket from Avante on day one — no fundraising sprint before you can hire your first engineer.',
-        'Primeiro cheque pré-negociado da Avante no dia um — sem sprint de fundraising antes de você poder contratar seu primeiro engenheiro.'
+        'Primeiro cheque pré-negociado da Avante no dia um — sem corrida de fundraising antes de você contratar seu primeiro engenheiro.'
       ),
       accent: '#F9B437',
     },
@@ -59,7 +59,7 @@ export default function FoundersPage() {
       title: t('Senior operating partner attached, week one.', 'Operating partner sênior anexado, semana um.'),
       body: t(
         'A partner who has built and exited at scale — in the codebase, not on a quarterly call. Engaged through your first revenue milestone.',
-        'Um partner que já construiu e fez exit em escala — no código, não em ligação trimestral. Engajado até seu primeiro marco de receita.'
+        'Um partner que já construiu e fez exit em escala — dentro do código, não em call trimestral. Engajado até seu primeiro milestone de receita.'
       ),
       accent: '#F4A261',
     },
@@ -68,7 +68,7 @@ export default function FoundersPage() {
       title: t('Talent funnel, finance, legal, security — pre-built.', 'Funil de talento, financeiro, jurídico, segurança — pré-construídos.'),
       body: t(
         'A recruiter who already knows the local senior funnel. SOC2-ready posture from incorporation. Books that survive a Series A audit.',
-        'Um recrutador que já conhece o funil sênior local. Postura SOC2-ready desde a incorporação. Contabilidade que sobrevive a uma auditoria de Série A.'
+        'Recrutador que já conhece o funil sênior local. Postura SOC2-ready desde a incorporação. Contabilidade que aguenta uma auditoria de Série A.'
       ),
       accent: '#98509A',
     },
@@ -77,16 +77,16 @@ export default function FoundersPage() {
       title: t('A first-30-customer pipeline, run as a sprint.', 'Pipeline de primeiros 30 clientes, rodado como sprint.'),
       body: t(
         'When you hit Stage 4 (Traction), a structured 90-day sprint with named buyer targets — not random warm intros.',
-        'Quando você bater no Estágio 4 (Tração), um sprint estruturado de 90 dias com targets de comprador nomeados — não warm intros aleatórias.'
+        'Quando você chega no Estágio 4 (Tração), um sprint estruturado de 90 dias com targets nomeados — não warm intros soltas.'
       ),
-      accent: '#42468C',
+      accent: '#98509A',
     },
   ]
 
   const expectations = [
     t(
       'You are operating in a Brazilian market vertical with real, daily-operating-decision domain experience.',
-      'Você opera em uma vertical de mercado brasileira com experiência de decisão operacional diária real.'
+      'Você opera numa vertical do mercado brasileiro com experiência real de decisão operacional do dia a dia.'
     ),
     t(
       "You are willing to spend Stage 1 (Research) doing customer-discovery, not building product. The discipline is the point.",
@@ -94,7 +94,7 @@ export default function FoundersPage() {
     ),
     t(
       "You can name your ICP in one sentence — and you've already had at least 10 unstructured conversations with that ICP.",
-      'Você consegue nomear seu ICP em uma frase — e já teve pelo menos 10 conversas não estruturadas com esse ICP.'
+      'Você consegue descrever seu ICP em uma frase — e já teve pelo menos 10 conversas não-estruturadas com gente desse ICP.'
     ),
     t(
       'You are comfortable with the studio holding meaningful equity in exchange for first-money-in plus the operating stack.',
@@ -102,7 +102,7 @@ export default function FoundersPage() {
     ),
     t(
       'You see English-language internal docs as a feature, not a friction point. Our partner network spans São Paulo + San Francisco.',
-      'Você vê docs internos em inglês como feature, não fricção. Nossa rede de partners cobre São Paulo + San Francisco.'
+      'Você enxerga docs internos em inglês como feature, não fricção. Nossa rede de partners cobre São Paulo e San Francisco.'
     ),
   ]
 
@@ -111,7 +111,7 @@ export default function FoundersPage() {
       title: t('Operating partner, not check-writer.', 'Operating partner, não check-writer.'),
       body: t(
         'Most studios oversee from quarterly board meetings. Avante operating partners are in the ICP doc, the unit economics spreadsheet, and the first ten hires.',
-        'A maioria dos studios supervisiona de board meetings trimestrais. Operating partners da Avante estão no doc de ICP, na planilha de unit economics e nas primeiras dez contratações.'
+        'A maioria dos studios supervisiona em board meeting trimestral. Operating partners da Avante ficam no doc de ICP, na planilha de unit economics e nas primeiras dez contratações.'
       ),
     },
     {
@@ -125,7 +125,7 @@ export default function FoundersPage() {
       title: t('A 90-day-to-pilot discipline, enforced.', 'Disciplina de 90 dias para pilot, enforced.'),
       body: t(
         "Lessons from Sigga (10× exit). If you can't get to a paid pilot inside 90 days of a serious customer conversation, the ICP or product is wrong — we surface that early instead of letting zombie deals burn runway.",
-        'Lições da Sigga (exit 10×). Se você não consegue chegar a um pilot pago em 90 dias de uma conversa séria com cliente, o ICP ou produto está errado — trazemos isso à tona cedo em vez de deixar deals zumbis queimarem runway.'
+        'Aprendizado da Sigga (exit 10×). Se você não chega num pilot pago em 90 dias depois de uma conversa séria com cliente, o ICP ou o produto está errado — a gente expõe isso cedo em vez de deixar deal zumbi queimar runway.'
       ),
     },
   ]
@@ -299,6 +299,109 @@ export default function FoundersPage() {
                 accentPosition="none"
                 style={{ padding: '28px' }}
               />
+            ))}
+          </div>
+        </section>
+
+        {/* Q&A block — the questions founders actually ask before committing */}
+        <section style={{ margin: '64px 0' }}>
+          <SectionMasthead
+            compact
+            eyebrow={t('Honest answers', 'Respostas honestas')}
+            title={t(
+              'The questions founders ask before signing.',
+              'As perguntas que fundadores fazem antes de assinar.'
+            )}
+          />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginTop: '24px' }}>
+            {[
+              {
+                q: t(
+                  '"Why not just raise from a tier-1 VC instead?"',
+                  '"Por que não levantar direto com um VC tier-1?"'
+                ),
+                a: t(
+                  "Tier-1 VCs are great at writing checks. They are not great at being in your codebase week one, designing your discovery script, or carrying the first 30 customers with you. If your venture needs $5M and three intros, raise from Sequoia. If it needs an operating partner who has built and exited at scale in Brazil, that is a different product — and that is what the studio is.",
+                  'VCs tier-1 são ótimos para escrever cheques. Não são ótimos para estar no seu código na semana um, desenhar seu script de discovery, ou carregar os primeiros 30 clientes com você. Se sua venture precisa de R$25M e três introduções, levante com a Sequoia. Se precisa de um operating partner que já construiu e fez exit em escala no Brasil, é outro produto — e é o que o studio é.'
+                ),
+              },
+              {
+                q: t(
+                  '"How much equity does the studio take?"',
+                  '"Quanto equity o studio fica?"'
+                ),
+                a: t(
+                  'Studio economics — meaningful enough that we are aligned for a decade, calibrated so the founders still own their company in a way that makes a Series A unblocked. Specific numbers are shared in the first structured call, not on a public page.',
+                  'Economics de studio — suficiente para nos alinharmos por uma década, calibrado para que os fundadores ainda sejam donos da empresa de uma forma que destrava a Série A. Números específicos são compartilhados na primeira call estruturada, não em página pública.'
+                ),
+              },
+              {
+                q: t(
+                  '"Do I have to relocate to São Paulo or San Francisco?"',
+                  '"Preciso me mudar para São Paulo ou San Francisco?"'
+                ),
+                a: t(
+                  'No. Most founders we work with are already operating somewhere in Brazil and stay there. The studio comes to you — partners visit, working sessions happen on your turf, and remote rituals (weekly checkpoints, async loom reviews) are designed for distance, not against it.',
+                  'Não. A maioria dos fundadores com quem trabalhamos já opera em algum ponto do Brasil e fica lá. O studio vai até você — partners visitam, sessões de trabalho acontecem no seu território, e rituais remotos (checkpoints semanais, reviews em loom assíncrono) são desenhados para distância, não contra ela.'
+                ),
+              },
+              {
+                q: t(
+                  '"What happens if my venture fails?"',
+                  '"O que acontece se minha venture quebrar?"'
+                ),
+                a: t(
+                  'Some will. The studio is built around honest stage gates (90-day-to-pilot, 6-month-to-paid-customers, 12-month-to-Series-A-readiness) — if a venture cannot clear them, we have a structured wind-down protocol: founders keep equity earned, IP rights are clear, and we stay in the corner of any future thing the team builds. We have lived this and we treat it as part of the relationship, not a worst-case clause buried in a side letter.',
+                  'Algumas vão quebrar. O studio é construído em torno de stage gates honestos (90 dias para pilot, 6 meses para clientes pagos, 12 meses para readiness de Série A) — se uma venture não passa, temos um protocolo estruturado de wind-down: fundadores mantêm o equity ganho, direitos de IP são claros, e ficamos no canto de qualquer coisa futura que o time construir. Já vivemos isso e tratamos como parte da relação, não cláusula de pior caso escondida em side letter.'
+                ),
+              },
+            ].map((item, i) => (
+              <details
+                key={i}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.025)',
+                  border: '1px solid rgba(255, 255, 255, 0.08)',
+                  borderRadius: '12px',
+                  padding: '20px 24px',
+                }}
+              >
+                <summary
+                  style={{
+                    cursor: 'pointer',
+                    fontSize: '16px',
+                    fontWeight: 600,
+                    color: '#FFFFFF',
+                    listStyle: 'none',
+                    display: 'flex',
+                    justifyContent: 'space-between',
+                    alignItems: 'center',
+                    gap: '16px',
+                  }}
+                >
+                  <span>{item.q}</span>
+                  <span
+                    aria-hidden
+                    style={{
+                      fontSize: '20px',
+                      color: '#F9B437',
+                      flexShrink: 0,
+                      lineHeight: 1,
+                    }}
+                  >
+                    +
+                  </span>
+                </summary>
+                <p
+                  style={{
+                    fontSize: '15px',
+                    lineHeight: 1.7,
+                    color: 'rgba(255, 255, 255, 0.72)',
+                    margin: '14px 0 4px 0',
+                  }}
+                >
+                  {item.a}
+                </p>
+              </details>
             ))}
           </div>
         </section>

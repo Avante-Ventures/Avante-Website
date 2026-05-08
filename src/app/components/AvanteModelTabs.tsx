@@ -40,9 +40,9 @@ export function AvanteModelTabs() {
           // theme.css; the previous shorthand `--avante-indigo` was undefined
           // and fell back to near-black on dark navy (a11y contrast 1.31:1).
           const tabColors = {
-            thesis: { active: '#9CA8E0', bg: 'rgba(66, 70, 140, 0.18)', border: 'rgba(66, 70, 140, 0.5)', shadow: 'rgba(66, 70, 140, 0.25)' },
+            thesis: { active: '#FCD96E', bg: 'rgba(249, 180, 55, 0.18)', border: 'rgba(249, 180, 55, 0.5)', shadow: 'rgba(249, 180, 55, 0.25)' },
             dontdo: { active: '#D9A6DA', bg: 'rgba(152, 80, 154, 0.18)', border: 'rgba(152, 80, 154, 0.5)', shadow: 'rgba(152, 80, 154, 0.25)' },
-            fits:   { active: '#FCD96E', bg: 'rgba(249, 180, 55, 0.18)', border: 'rgba(249, 180, 55, 0.5)', shadow: 'rgba(249, 180, 55, 0.25)' },
+            fits:   { active: '#FBC59B', bg: 'rgba(244, 162, 97, 0.18)', border: 'rgba(244, 162, 97, 0.5)', shadow: 'rgba(244, 162, 97, 0.25)' },
           };
           
           const colors = tabColors[tab.id];

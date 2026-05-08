@@ -116,12 +116,15 @@ export function HeroV2A_Masthead() {
       >
         {/* LEFT */}
         <div>
-          {/* MASTHEAD — top dateline */}
+          {/* MASTHEAD — top dateline. flex-wrap allows mobile to break
+              cleanly between segments instead of mid-phrase.              */}
           <div
+            className="hv2a-masthead"
             style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '16px',
+              gap: '12px 16px',
+              flexWrap: 'wrap',
               marginBottom: '24px',
               fontSize: '11px',
               fontWeight: 600,
@@ -132,19 +135,29 @@ export function HeroV2A_Masthead() {
           >
             <span
               style={{
-                display: 'inline-block',
-                width: '6px',
-                height: '6px',
-                borderRadius: '50%',
-                background: '#F9B437',
-                boxShadow: '0 0 8px rgba(249, 180, 55, 0.6)',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '10px',
+                whiteSpace: 'nowrap',
               }}
-            />
-            <span style={{ color: '#F9B437' }}>São Paulo + San Francisco</span>
+            >
+              <span
+                aria-hidden
+                style={{
+                  display: 'inline-block',
+                  width: '6px',
+                  height: '6px',
+                  borderRadius: '50%',
+                  background: '#F9B437',
+                  boxShadow: '0 0 8px rgba(249, 180, 55, 0.6)',
+                }}
+              />
+              <span style={{ color: '#F9B437' }}>São Paulo · San Francisco</span>
+            </span>
             <span style={{ opacity: 0.4 }}>·</span>
-            <span>Est. 2025</span>
+            <span style={{ whiteSpace: 'nowrap' }}>Est. 2025</span>
             <span style={{ opacity: 0.4 }}>·</span>
-            <span>AI-Native Venture Studio</span>
+            <span style={{ whiteSpace: 'nowrap' }}>AI-Native Venture Studio</span>
           </div>
 
           <img
@@ -298,6 +311,12 @@ export function HeroV2A_Masthead() {
       <style>{`
         .hv2a-grid { grid-template-columns: 1fr; }
         @media (min-width: 900px) { .hv2a-grid { grid-template-columns: 1.4fr 1fr; } }
+        /* At ultra-wide (1600+), the FEATURES column gets too narrow.
+           Rebalance toward 1.2fr / 1fr so the Library cards keep their
+           breathable width and the headline doesn't run too long.        */
+        @media (min-width: 1600px) {
+          .hv2a-grid { grid-template-columns: 1.2fr 1fr; max-width: 1440px; }
+        }
       `}</style>
     </section>
   )

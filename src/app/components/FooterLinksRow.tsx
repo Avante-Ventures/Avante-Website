@@ -13,7 +13,7 @@ interface FooterLinksRowProps {
 export function FooterLinksRow({ title, links }: FooterLinksRowProps) {
   // Color mapping for hover effects
   const getHoverColor = (index: number) => {
-    const colors = ['#42468C', '#98509A', '#F18B46', '#F9B437'];
+    const colors = ['#98509A', '#F18B46', '#F9B437', '#F4A261'];
     return colors[index % colors.length];
   };
 

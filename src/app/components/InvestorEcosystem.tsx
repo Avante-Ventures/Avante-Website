@@ -100,7 +100,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                 width: '300px',
                 height: '300px',
                 borderRadius: '50%',
-                background: 'radial-gradient(circle, rgba(230, 197, 76, 0.4) 0%, transparent 70%)',
+                background: 'radial-gradient(circle, rgba(230, 197, 76, 0.18) 0%, transparent 70%)',
                 filter: 'blur(60px)',
                 pointerEvents: 'none'
               }}
@@ -210,7 +210,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                 width: '240px',
                 height: '240px',
                 borderRadius: '50%',
-                background: 'radial-gradient(circle, rgba(152, 80, 154, 0.35) 0%, transparent 70%)',
+                background: 'radial-gradient(circle, rgba(152, 80, 154, 0.16) 0%, transparent 70%)',
                 filter: 'blur(60px)',
                 pointerEvents: 'none'
               }}
@@ -318,7 +318,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                 width: '200px',
                 height: '200px',
                 borderRadius: '50%',
-                background: 'radial-gradient(circle, rgba(244, 162, 97, 0.35) 0%, transparent 70%)',
+                background: 'radial-gradient(circle, rgba(244, 162, 97, 0.16) 0%, transparent 70%)',
                 filter: 'blur(60px)',
                 pointerEvents: 'none'
               }}
@@ -427,7 +427,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                 width: '400px',
                 height: '300px',
                 borderRadius: '50%',
-                background: 'radial-gradient(ellipse, rgba(249, 180, 55, 0.35) 0%, transparent 70%)',
+                background: 'radial-gradient(ellipse, rgba(249, 180, 55, 0.16) 0%, transparent 70%)',
                 filter: 'blur(80px)',
                 pointerEvents: 'none'
               }}

@@ -16,8 +16,8 @@ export function VenturePipeline() {
         'Multi-channel asset optimization',
         'Built-in compliance & brand guidelines'
       ],
-      color: '#42468C',
-      accentColor: '#6B7FD4',
+      color: '#F4A261',
+      accentColor: '#F9B437',
     },
     {
       name: 'Pulse.ai',

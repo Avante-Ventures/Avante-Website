@@ -39,7 +39,7 @@ const VENTURES: Venture[] = [
     name: 'Mahway',
     description: {
       en: 'AI-native operator platform built by repeat founders Jess Mah + Andrea Barrica. Studio-affiliated; defines our partner-of-record model.',
-      pt: 'Plataforma operacional AI-native construída por fundadores repeat Jess Mah + Andrea Barrica. Afiliada ao studio; define nosso modelo partner-of-record.',
+      pt: 'Plataforma operacional AI-native construída pelas fundadoras seriais Jess Mah e Andrea Barrica. Afiliada ao studio; define nosso modelo de partner-of-record.',
     },
     status: 'active',
     accent: '#F4A261',
@@ -48,7 +48,7 @@ const VENTURES: Venture[] = [
     name: 'WIR',
     description: {
       en: 'Async insurance pricing + risk scoring API. AXA pilot in motion; reference architecture for InsurTech sales across LATAM.',
-      pt: 'API assíncrona de precificação e risk scoring para seguros. Piloto AXA em curso; arquitetura de referência para vendas InsurTech em toda a LATAM.',
+      pt: 'API assíncrona de pricing e risk scoring para seguros. Piloto AXA em andamento; arquitetura de referência para vendas InsurTech na LATAM.',
     },
     status: 'active',
     accent: '#F9B437',
@@ -57,16 +57,16 @@ const VENTURES: Venture[] = [
     name: 'Bamboo DCM',
     description: {
       en: 'Debt capital markets advisory + structuring built by Felipe Moraes. Strategic partner across the studio cap stack.',
-      pt: 'Assessoria e estruturação de debt capital markets construída por Felipe Moraes. Parceiro estratégico em toda a cap stack do studio.',
+      pt: 'Boutique de assessoria e estruturação de debt capital markets fundada por Felipe Moraes. Parceiro estratégico em toda a cap stack do studio.',
     },
     status: 'active',
-    accent: '#42468C',
+    accent: '#F4A261',
   },
   {
     name: 'AlphaLit',
     description: {
       en: 'AI-native learning company; studio-adjacent reference for product loop design in consumer education.',
-      pt: 'Empresa de aprendizado AI-native; referência studio-adjacente para design de product loops em educação consumer.',
+      pt: 'Empresa de aprendizado AI-native; referência adjacente ao studio para desenho de product loops em educação consumer.',
     },
     status: 'alumni',
     accent: '#E6C54C',
@@ -75,7 +75,7 @@ const VENTURES: Venture[] = [
     name: 'inDinero',
     description: {
       en: 'Profitable accounting + finance platform founded by Jess Mah. Scaled to 100+ employees; reference operator track record for the studio.',
-      pt: 'Plataforma lucrativa de contabilidade e finanças fundada por Jess Mah. Escalada para 100+ funcionários; track record de referência operacional para o studio.',
+      pt: 'Plataforma rentável de contabilidade e finanças fundada por Jess Mah. Escalou para 100+ funcionários; track record de referência operacional para o studio.',
     },
     status: 'alumni',
     accent: '#7B68EE',
@@ -158,7 +158,7 @@ export default function PortfolioPage() {
           )}
           description={t(
             'A working portfolio, not a pitch list. Each venture below is either active in the current Avante studio cohort, a realized exit, or an alumni venture that shaped the operating playbook we use today.',
-            'Um portfólio de trabalho, não uma lista de pitch. Cada venture abaixo está ativa na cohort atual do studio Avante, é um exit realizado, ou é uma venture alumni que moldou o playbook operacional que usamos hoje.'
+            'Um portfólio de trabalho, não uma lista de pitch. Cada venture abaixo está na cohort ativa do studio, é um exit realizado, ou é alumni que moldou o playbook operacional que usamos hoje.'
           )}
         />
 
@@ -229,7 +229,7 @@ export default function PortfolioPage() {
           >
             {t(
               'We launch 3–4 new ventures per year inside the studio. The active cohort listed here is intentionally narrow — a discipline, not a scarcity. New cohort additions are introduced after a venture has cleared Stage 3 (Build) of the playbook.',
-              'Lançamos 3–4 novas ventures por ano dentro do studio. A cohort ativa listada aqui é intencionalmente estreita — uma disciplina, não escassez. Novas adições à cohort são introduzidas após uma venture passar do Estágio 3 (Build) do playbook.'
+              'Lançamos 3–4 novas ventures por ano dentro do studio. A cohort ativa aqui listada é deliberadamente enxuta — disciplina, não escassez. Novas ventures aparecem na lista depois de passar pelo Estágio 3 (Build) do playbook.'
             )}
           </p>
         </div>

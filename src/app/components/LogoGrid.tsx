@@ -5,7 +5,7 @@ import futureProofingLogo from "figma:asset/c9a0b54648245f57238f9c98fa5893acf2b7
 
 const LogoGridComponent = () => {
   const items = [
-    { name: 'WIR', subtitle: 'AI-Native InsurTech', type: 'venture', color: '#42468C' },
+    { name: 'WIR', subtitle: 'AI-Native InsurTech', type: 'venture', color: '#F4A261' },
     { name: 'Clareo', subtitle: 'Litigation Finance', type: 'venture', color: '#98509A' },
     { src: mahwayLogo, alt: 'Mahway', subtitle: 'Operational Partner', size: 120, type: 'logo' },
     { src: futureProofingLogo, alt: 'Future Proofing', subtitle: 'Operational Partner', size: 200, type: 'logo' }

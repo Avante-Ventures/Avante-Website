@@ -76,7 +76,7 @@ export default function InvestorsPage() {
       title: t('Brazil is the largest under-served services economy on earth.', 'O Brasil é a maior economia de serviços subatendida do mundo.'),
       body: t(
         '$2.5T GDP, 70% services, ~90% of SMBs under-digitalized. The structural gap between volume and software penetration is unique among large markets globally.',
-        'PIB de US$2.5T, 70% serviços, ~90% das PMEs subdigitalizadas. O gap estrutural entre volume e penetração de software é único entre grandes mercados globalmente.'
+        'PIB de US$ 2,5 tri, 70% serviços, ~90% das PMEs sub-digitalizadas. O gap estrutural entre volume e penetração de software é único entre grandes mercados no mundo.'
       ),
       accent: '#F9B437',
     },
@@ -84,7 +84,7 @@ export default function InvestorsPage() {
       title: t('AI infrastructure is now cheap enough to deploy without a Series A.', 'Infraestrutura de IA é barata o suficiente para deployar sem uma Série A.'),
       body: t(
         'In 2026, a 4-person Brazilian team can ship an AI-native vertical product with the operating cost of a 2018 SaaS startup. The studio model captures that arbitrage with discipline.',
-        'Em 2026, um time brasileiro de 4 pessoas pode lançar um produto vertical AI-native com o custo operacional de uma startup SaaS de 2018. O modelo de studio captura essa arbitragem com disciplina.'
+        'Em 2026, um time brasileiro de 4 pessoas consegue lançar um produto vertical AI-native com o custo operacional de uma SaaS de 2018. O modelo de studio captura essa arbitragem com disciplina.'
       ),
       accent: '#F4A261',
     },
@@ -92,7 +92,7 @@ export default function InvestorsPage() {
       title: t('The studio model historically outperforms VC by ~2.5×.', 'O modelo de studio historicamente supera VC por ~2.5×.'),
       body: t(
         'Operating depth at week one. Capital efficiency by design. Time spent on chosen ventures, not on losing competitive deal sourcing. Each compounds with every cohort.',
-        'Profundidade operacional na semana um. Eficiência de capital por design. Tempo gasto em ventures escolhidas, não em sourcing competitivo perdedor. Cada um compõe com cada cohort.'
+        'Profundidade operacional desde a semana um. Eficiência de capital por design. Tempo dedicado às ventures escolhidas, não a sourcing competitivo perdido. Cada elemento compõe a cada cohort.'
       ),
       accent: '#98509A',
     },
@@ -109,11 +109,11 @@ export default function InvestorsPage() {
     ),
     t(
       'Operating partners hold studio economics; LPs hold capital economics. Aligned incentives, separated workload.',
-      'Operating partners detêm economics de studio; LPs detêm economics de capital. Incentivos alinhados, workload separada.'
+      'Operating partners ficam com a economics do studio; LPs ficam com a economics de capital. Incentivos alinhados, cargas de trabalho separadas.'
     ),
     t(
       'Reporting on a quarterly cadence with cohort-level NAV transparency and per-venture milestone notes.',
-      'Reporting em cadência trimestral com transparência de NAV em nível de cohort e notas de milestones por venture.'
+      'Reporting trimestral com transparência de NAV no nível de cohort e notas de milestones por venture.'
     ),
     t(
       'Specific terms (target fund size, GP commitment, fee model, distribution waterfall) are shared in a structured LP conversation, not on a public page.',
@@ -123,9 +123,9 @@ export default function InvestorsPage() {
 
   const willNotDo = [
     t('We will not share LP names or other LP identities. Each LP relationship is confidential by default.', 'Não compartilhamos nomes de LPs ou outras identidades de LPs. Cada relação de LP é confidencial por padrão.'),
-    t('We will not provide financial advice, allocation guidance, or tax structuring. LPs engage their own counsel.', 'Não fornecemos conselho financeiro, orientação de alocação ou estruturação tributária. LPs engajam seus próprios advisors.'),
-    t('We will not run a parallel co-investment vehicle without explicit governance for it. The studio is the studio.', 'Não rodamos um veículo paralelo de co-investment sem governança explícita. O studio é o studio.'),
-    t('We will not launch ventures whose primary buyer is "the LP base." Customer markets are independent of capital markets.', 'Não lançamos ventures cujo comprador primário é "a base de LPs". Mercados de cliente são independentes de mercados de capital.'),
+    t('We will not provide financial advice, allocation guidance, or tax structuring. LPs engage their own counsel.', 'Não damos conselho financeiro, orientação de alocação ou estruturação tributária. LPs contratam seus próprios advisors.'),
+    t('We will not run a parallel co-investment vehicle without explicit governance for it. The studio is the studio.', 'Não rodamos veículo paralelo de co-investment sem governança explícita. Studio é studio.'),
+    t('We will not launch ventures whose primary buyer is "the LP base." Customer markets are independent of capital markets.', 'Não lançamos ventures cujo comprador principal é "a base de LPs". Mercados de cliente são independentes do mercado de capital.'),
   ]
 
   return (

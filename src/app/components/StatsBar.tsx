@@ -43,40 +43,68 @@ const StatsBarComponent = () => {
         }}
       />
 
+      {/* Two-row layout: 4 + 3. The previous 7-column grid was visually
+          dense per Beirut's panel note ("seven equal cells fight each
+          other"). Splitting in two rows also lets the 'SMEs' label breathe
+          since it's longer than the others.                                */}
       <div
         style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(7, 1fr)',
-          gap: '24px',
-          maxWidth: '1200px',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: '32px',
+          maxWidth: '1100px',
           margin: '0 auto',
           position: 'relative',
-          zIndex: 1
+          zIndex: 1,
         }}
-        className="stats-grid"
       >
-        {stats.map((stat, index) => (
-          <StatDisplay
-            key={index}
-            value={stat.value}
-            label={stat.label}
-            color={stat.color}
-            fn={stat.fn}
-          />
-        ))}
+        <div
+          className="stats-grid stats-row-4"
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(4, 1fr)',
+            gap: '24px',
+          }}
+        >
+          {stats.slice(0, 4).map((stat, index) => (
+            <StatDisplay
+              key={index}
+              value={stat.value}
+              label={stat.label}
+              color={stat.color}
+              fn={stat.fn}
+            />
+          ))}
+        </div>
+        <div
+          className="stats-grid stats-row-3"
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(3, 1fr)',
+            gap: '24px',
+            maxWidth: '825px',
+            margin: '0 auto',
+            width: '100%',
+          }}
+        >
+          {stats.slice(4).map((stat, index) => (
+            <StatDisplay
+              key={index}
+              value={stat.value}
+              label={stat.label}
+              color={stat.color}
+              fn={stat.fn}
+            />
+          ))}
+        </div>
       </div>
 
       <style>{`
         @media (max-width: 768px) {
-          .stats-grid {
+          .stats-row-4, .stats-row-3 {
             grid-template-columns: repeat(2, 1fr) !important;
             gap: 16px !important;
-          }
-        }
-        
-        @media (min-width: 769px) and (max-width: 1024px) {
-          .stats-grid {
-            grid-template-columns: repeat(3, 1fr) !important;
+            max-width: none !important;
           }
         }
       `}</style>
@@ -101,11 +129,11 @@ const StatDisplay = memo(({ value, label, color, fn }: StatDisplayProps) => {
     >
       <div
         style={{
-          fontSize: '48px',
+          fontSize: 'clamp(32px, 3.5vw, 42px)',
           fontWeight: 'var(--font-weight-bold)',
           color: color,
           lineHeight: '1.1',
-          marginBottom: '8px',
+          marginBottom: '10px',
           letterSpacing: '-0.02em',
           fontVariantNumeric: 'tabular-nums'
         }}

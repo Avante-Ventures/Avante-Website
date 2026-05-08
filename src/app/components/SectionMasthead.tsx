@@ -3,10 +3,13 @@
 // gold dot + caps eyebrow + title with optional gradient accent + optional
 // description.
 //
-// Replaces the previous SectionHeader. Kept as a separate component so the
-// migration can happen section-by-section without breaking what's there.
+// Signature microinteraction (Apple curve): on first scroll-into-view, the
+// eyebrow + title + description reveal with a staggered fade+rise using
+// cubic-bezier(0.16, 1, 0.3, 1) — the "out-quint" curve that Apple uses
+// for product reveals. Once played, the elements stay at rest. Respects
+// prefers-reduced-motion.
 
-import type { ReactNode } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
 
 export interface SectionMastheadProps {
   /** Caps eyebrow text shown above the title (e.g. "Our Playbook"). */
@@ -28,8 +31,55 @@ export function SectionMasthead({
   centered = false,
   compact = false,
 }: SectionMastheadProps) {
+  const ref = useRef<HTMLDivElement>(null)
+  const [revealed, setRevealed] = useState(false)
+  const [reducedMotion, setReducedMotion] = useState(false)
+
+  useEffect(() => {
+    // Respect user's accessibility preference. If reduced motion, skip
+    // the choreography and render at rest immediately.
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
+    if (mq.matches) {
+      setReducedMotion(true)
+      setRevealed(true)
+      return
+    }
+
+    const node = ref.current
+    if (!node) return
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setRevealed(true)
+            io.unobserve(entry.target)
+          }
+        })
+      },
+      { rootMargin: '0px 0px -10% 0px', threshold: 0.05 }
+    )
+    io.observe(node)
+    return () => io.disconnect()
+  }, [])
+
+  // Apple's signature out-quint curve. Slower than the default ease-out,
+  // settles into rest with a soft deceleration that feels expensive.
+  const APPLE_CURVE = 'cubic-bezier(0.16, 1, 0.3, 1)'
+  const baseDuration = reducedMotion ? '0ms' : '900ms'
+
+  // Staggered reveal: eyebrow first (snappy), title second (anchor), then
+  // description. The total choreography is ~1.1s — long enough to feel
+  // intentional, short enough not to make the user wait.
+  const stage = (delay: number): React.CSSProperties => ({
+    opacity: revealed ? 1 : 0,
+    transform: revealed ? 'translateY(0)' : 'translateY(12px)',
+    transition: `opacity ${baseDuration} ${APPLE_CURVE} ${delay}ms, transform ${baseDuration} ${APPLE_CURVE} ${delay}ms`,
+  })
+
   return (
     <div
+      ref={ref}
       style={{
         textAlign: centered ? 'center' : 'left',
         marginBottom: compact ? 'var(--avante-space-6)' : 'var(--avante-space-10)',
@@ -47,6 +97,7 @@ export function SectionMasthead({
             letterSpacing: '0.18em',
             textTransform: 'uppercase',
             color: '#F9B437',
+            ...stage(0),
           }}
         >
           <span
@@ -75,6 +126,7 @@ export function SectionMasthead({
           maxWidth: centered ? '880px' : 'none',
           marginLeft: centered ? 'auto' : 0,
           marginRight: centered ? 'auto' : 0,
+          ...stage(140),
         }}
       >
         {title}
@@ -90,6 +142,7 @@ export function SectionMasthead({
             maxWidth: centered ? '720px' : '640px',
             marginLeft: centered ? 'auto' : 0,
             marginRight: centered ? 'auto' : 0,
+            ...stage(280),
           }}
         >
           {description}

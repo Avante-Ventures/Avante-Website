@@ -45,49 +45,18 @@ export default function LibraryPage() {
     isPublished: a.isPublished,
   }));
 
+  // Editorial discipline: no emoji icons. The dot signature carries the
+  // category accent — same pattern used in the masthead family.
+  // Indigo (#42468C) dropped per Beirut's panel note — palette consolidated
+  // to gold / orange / purple as primary punctuation.
   const categories = [
-    { 
-      id: 'all', 
-      label: t('library.category.all'), 
-      color: '#FFFFFF',
-      icon: '✨'
-    },
-    { 
-      id: 'insights', 
-      label: t('library.category.insights'), 
-      color: '#42468C',
-      icon: '💡'
-    },
-    { 
-      id: 'research', 
-      label: t('library.category.research'), 
-      color: '#98509A',
-      icon: '📊'
-    },
-    { 
-      id: 'casestudies', 
-      label: t('library.category.casestudies'), 
-      color: '#F18B46',
-      icon: '🎯'
-    },
-    { 
-      id: 'playbooks', 
-      label: t('library.category.playbooks'), 
-      color: '#F9B437',
-      icon: '📖'
-    },
-    { 
-      id: 'brazil', 
-      label: t('library.category.brazil'), 
-      color: '#42468C',
-      icon: '🇧🇷'
-    },
-    { 
-      id: 'ai', 
-      label: t('library.category.ai'), 
-      color: '#98509A',
-      icon: '🤖'
-    }
+    { id: 'all',         label: t('library.category.all'),         color: '#FFFFFF' },
+    { id: 'insights',    label: t('library.category.insights'),    color: '#F9B437' },
+    { id: 'research',    label: t('library.category.research'),    color: '#98509A' },
+    { id: 'casestudies', label: t('library.category.casestudies'), color: '#F4A261' },
+    { id: 'playbooks',   label: t('library.category.playbooks'),   color: '#F9B437' },
+    { id: 'brazil',      label: t('library.category.brazil'),      color: '#98509A' },
+    { id: 'ai',          label: t('library.category.ai'),          color: '#E6C54C' },
   ];
 
   const filteredItems = activeCategory === 'all' 
@@ -99,10 +68,6 @@ export default function LibraryPage() {
     return cat?.color || '#FFFFFF';
   };
 
-  const getCategoryIcon = (category: Category) => {
-    const cat = categories.find(c => c.id === category);
-    return cat?.icon || '✨';
-  };
 
   const handleNewsletterSubscribe = () => {
     if (!newsletterEmail) return;
@@ -402,7 +367,21 @@ export default function LibraryPage() {
                   gap: 'var(--avante-space-2)'
                 }}
               >
-                <span style={{ fontSize: '16px' }}>{category.icon}</span>
+                {/* Dot signature — same atom as the masthead family */}
+                <span
+                  aria-hidden
+                  style={{
+                    display: 'inline-block',
+                    width: '6px',
+                    height: '6px',
+                    borderRadius: '50%',
+                    background: category.color,
+                    boxShadow: activeCategory === category.id
+                      ? `0 0 8px ${category.color}AA`
+                      : `0 0 6px ${category.color}66`,
+                    transition: 'box-shadow 0.3s ease',
+                  }}
+                />
                 {category.label}
               </motion.button>
             ))}
@@ -421,7 +400,6 @@ export default function LibraryPage() {
         >
           {filteredItems.map((item, index) => {
             const categoryColor = getCategoryColor(item.category);
-            const categoryIcon = getCategoryIcon(item.category);
             return (
               <Link
                 key={item.id}
@@ -527,11 +505,18 @@ export default function LibraryPage() {
                   zIndex: 1,
                   flexWrap: 'wrap'
                 }}>
-                  <span style={{
-                    fontSize: '20px'
-                  }}>
-                    {categoryIcon}
-                  </span>
+                  {/* Dot signature replaces the previous emoji icon */}
+                  <span
+                    aria-hidden
+                    style={{
+                      display: 'inline-block',
+                      width: '8px',
+                      height: '8px',
+                      borderRadius: '50%',
+                      background: categoryColor,
+                      boxShadow: `0 0 8px ${categoryColor}80`,
+                    }}
+                  />
                   <span style={{
                     fontSize: 'clamp(11px, 1.5vw, 12px)',
                     fontWeight: 'var(--font-weight-bold)',
