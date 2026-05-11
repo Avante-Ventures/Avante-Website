@@ -2,5 +2,9 @@
   "framework": "vite",
   "installCommand": "pnpm install --config.dangerously-allow-all-builds=true --no-frozen-lockfile",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
+

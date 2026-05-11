@@ -23,9 +23,11 @@ import { fileURLToPath } from 'node:url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const DIST = resolve(__dirname, '..', 'dist')
-// Bilingual URL routing — base 7 routes (3 paths × 2 locales + redirect /)
-// PLUS one route per article slug × 2 locales (read from articles.ts so
-// adding/removing articles automatically updates the prerender list).
+// Trilingual URL routing — base routes per locale + the root redirect +
+// one route per article slug per locale. Locales kept in a single source of
+// truth so adding a fourth language is a one-line change.
+const LOCALES = ['en', 'pt', 'es']
+const PAGE_PATHS = ['', '/why-avante', '/library', '/portfolio', '/founders', '/investors', '/principles']
 const ARTICLE_SLUGS = [
   'venture-studios-outperform-traditional-vc',
   'first-ticket-advantage-framework',
@@ -41,16 +43,12 @@ const ARTICLE_SLUGS = [
 ]
 const BASE_ROUTES = [
   '/',
-  '/en', '/en/why-avante', '/en/library',
-  '/en/portfolio', '/en/founders', '/en/investors', '/en/principles',
-  '/pt', '/pt/why-avante', '/pt/library',
-  '/pt/portfolio', '/pt/founders', '/pt/investors', '/pt/principles',
+  ...LOCALES.flatMap((loc) => PAGE_PATHS.map((p) => `/${loc}${p}`)),
   '/preview/heroes', // internal preview, noindex via meta robots
 ]
-const ARTICLE_ROUTES = ARTICLE_SLUGS.flatMap((slug) => [
-  `/en/library/${slug}`,
-  `/pt/library/${slug}`,
-])
+const ARTICLE_ROUTES = LOCALES.flatMap((loc) =>
+  ARTICLE_SLUGS.map((slug) => `/${loc}/library/${slug}`)
+)
 const ROUTES = [...BASE_ROUTES, ...ARTICLE_ROUTES]
 const PORT = 4179
 
