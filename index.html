@@ -52,7 +52,12 @@
          producing a duplicate meta robots tag in the DOM. -->
 
 
-    <!-- JSON-LD: Organization (primary entity) -->
+    <!-- JSON-LD: Organization (primary entity).
+         GEO enrichment (May 2026): added `sameAs` (LinkedIn company),
+         `founder` array (4 named Person entities each with their own
+         LinkedIn `sameAs`), `address` (São Paulo HQ), `numberOfEmployees`,
+         and `es` to knowsLanguage. Each Person gets its own @id so future
+         Article schemas can `author: { "@id": "..." }` instead of nesting. -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -66,6 +71,13 @@
       "description": "AI-native venture studio combining Silicon Valley playbooks with Brazil-native execution. We co-found AI-native companies from scratch, built to compound for decades.",
       "slogan": "Silicon Valley Playbooks. Brazil-Native Execution.",
       "foundingDate": "2025",
+      "numberOfEmployees": { "@type": "QuantitativeValue", "minValue": 4, "maxValue": 10 },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
       "areaServed": [
         { "@type": "Country", "name": "Brazil" },
         { "@type": "Country", "name": "United States" },
@@ -84,12 +96,49 @@
         "Workflow Automation",
         "AI for Service Economies"
       ],
-      "knowsLanguage": ["en", "pt-BR"],
+      "knowsLanguage": ["en", "pt-BR", "es"],
+      "sameAs": [
+        "https://www.linkedin.com/company/avante-ventures/"
+      ],
+      "founder": [
+        {
+          "@type": "Person",
+          "@id": "https://avanteventures.com/#amanda-pinheiro",
+          "name": "Amanda Pinheiro",
+          "jobTitle": "Co-Founder & Managing Partner",
+          "worksFor": { "@id": "https://avanteventures.com/#organization" },
+          "sameAs": ["https://www.linkedin.com/in/amandafmpinheiro/"]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://avanteventures.com/#andrea-barrica",
+          "name": "Andrea Barrica",
+          "jobTitle": "Co-Founder & Operating Partner",
+          "worksFor": { "@id": "https://avanteventures.com/#organization" },
+          "sameAs": ["https://www.linkedin.com/in/andreabarrica/"]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://avanteventures.com/#felipe-moraes",
+          "name": "Felipe Moraes",
+          "jobTitle": "Venture Partner",
+          "worksFor": { "@id": "https://avanteventures.com/#organization" },
+          "sameAs": ["https://www.linkedin.com/in/felipe-moraes/"]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://avanteventures.com/#jess-mah",
+          "name": "Jess Mah",
+          "jobTitle": "Strategic Advisor",
+          "worksFor": { "@id": "https://avanteventures.com/#organization" },
+          "sameAs": ["https://www.linkedin.com/in/jessmah/"]
+        }
+      ],
       "contactPoint": [{
         "@type": "ContactPoint",
         "email": "cristian@avanteventures.com",
         "contactType": "general inquiries",
-        "availableLanguage": ["en", "pt"]
+        "availableLanguage": ["en", "pt", "es"]
       }]
     }
     </script>
@@ -104,7 +153,7 @@
       "name": "Avante Ventures",
       "description": "AI-native venture studio. Silicon Valley Playbooks. Brazil-Native Execution.",
       "publisher": { "@id": "https://avanteventures.com/#organization" },
-      "inLanguage": ["en", "pt-BR"]
+      "inLanguage": ["en", "pt-BR", "es"]
     }
     </script>
   </head>

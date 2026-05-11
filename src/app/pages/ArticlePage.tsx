@@ -44,26 +44,92 @@ export default function ArticlePage() {
   const inLanguage =
     language === 'pt' ? 'pt-BR' : language === 'es' ? 'es' : 'en'
   const taxonomy = articleTaxonomy(article.slug)
-  const jsonLd = {
+  const articleUrl = `https://avanteventures.com/${language}/library/${article.slug}`
+  const breadcrumbHome = t('Home', 'Início', 'Inicio')
+  const breadcrumbLibrary = t('Library', 'Biblioteca', 'Biblioteca')
+
+  // Combined JSON-LD using the canonical @graph form: a single
+  // @context applies to all nodes inside the array. This lets Google +
+  // LLMs resolve the Article and BreadcrumbList as related parts of the
+  // same page without parsing two separate <script> tags.
+  //
+  // GEO E-E-A-T moves layered in here:
+  //   - `author` is the named Founding Team (E-E-A-T author entity)
+  //     plus a back-reference to the Organization @id.
+  //   - `publisher` includes a `logo` ImageObject — Google requires this
+  //     to consider the Article schema valid for rich results.
+  //   - `keywords` / `about` / `mentions` come from articleTaxonomy()
+  //     so each Schema.org Thing the article addresses is named and
+  //     (where applicable) sameAs-linked to Wikipedia / official sites.
+  //   - `BreadcrumbList` enables the Home › Library › Article trail
+  //     to appear in Google search snippets.
+  const combinedJsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Article',
-    '@id': `https://avanteventures.com/${language}/library/${article.slug}#article`,
-    headline: content.title,
-    description: content.description,
-    url: `https://avanteventures.com/${language}/library/${article.slug}`,
-    image: 'https://avanteventures.com/og-image.png',
-    inLanguage,
-    datePublished: article.datePublished,
-    dateModified: article.datePublished,
-    articleSection: article.category,
-    wordCount: estimateWordCount(content.sections),
-    author: { '@id': 'https://avanteventures.com/#organization' },
-    publisher: { '@id': 'https://avanteventures.com/#organization' },
-    isPartOf: { '@id': 'https://avanteventures.com/#website' },
-    mainEntityOfPage: `https://avanteventures.com/${language}/library/${article.slug}`,
-    keywords: taxonomy.keywords,
-    about: taxonomy.about,
-    mentions: taxonomy.mentions,
+    '@graph': [
+      {
+        '@type': 'Article',
+        '@id': `${articleUrl}#article`,
+        headline: content.title,
+        description: content.description,
+        url: articleUrl,
+        image: 'https://avanteventures.com/og-image.png',
+        inLanguage,
+        datePublished: article.datePublished,
+        dateModified: article.datePublished,
+        articleSection: article.category,
+        wordCount: estimateWordCount(content.sections),
+        author: [
+          {
+            '@type': 'Organization',
+            '@id': 'https://avanteventures.com/#founding-team',
+            name: 'Avante Founding Team',
+            url: 'https://avanteventures.com/',
+            memberOf: { '@id': 'https://avanteventures.com/#organization' },
+          },
+          { '@id': 'https://avanteventures.com/#organization' },
+        ],
+        publisher: {
+          '@type': 'Organization',
+          '@id': 'https://avanteventures.com/#organization',
+          name: 'Avante Ventures',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://avanteventures.com/apple-touch-icon.png',
+            width: 180,
+            height: 180,
+          },
+        },
+        isPartOf: { '@id': 'https://avanteventures.com/#website' },
+        mainEntityOfPage: articleUrl,
+        keywords: taxonomy.keywords,
+        about: taxonomy.about,
+        mentions: taxonomy.mentions,
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${articleUrl}#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: breadcrumbHome,
+            item: `https://avanteventures.com/${language}`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: breadcrumbLibrary,
+            item: `https://avanteventures.com/${language}/library`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: content.title,
+            item: articleUrl,
+          },
+        ],
+      },
+    ],
   }
 
   return (
@@ -79,7 +145,7 @@ export default function ArticlePage() {
         title={content.title}
         description={content.description}
         pathname={`/library/${article.slug}`}
-        jsonLd={jsonLd}
+        jsonLd={combinedJsonLd}
         noindex={!article.isPublished}
       />
 
