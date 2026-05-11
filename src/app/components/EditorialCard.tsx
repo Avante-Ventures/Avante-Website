@@ -1,26 +1,32 @@
-// EditorialCard — the studio's repeating card primitive.
+// EditorialCard — Phase C editorial refactor.
 //
-// One look across the site:
-//   • Eyebrow tag (caps, accent color, 11px / 0.18em letter-spacing)
-//   • Title (17–22px, weight 600, white, -0.01em letter-spacing)
-//   • Body copy (14–15px, 0.7 white, 1.65 line-height)
-//   • Optional left-border accent (3px) OR top-border accent (3px)
-//   • Optional right-side highlight chip (e.g. "10× exit")
-//   • Hover lift + subtle accent-tinted background
+// Old: rounded 14px card with soft glass background, 17px title, 10px
+// eyebrow. Read like a SaaS feature card.
 //
-// Used on: HeroV2A_Masthead (FEATURES cards), PortfolioPage (VentureCard),
-// FoundersPage (offer cards), InvestorsPage (thesis cards).
+// New: hairline-bordered newspaper item. 2px corner radius (almost flat —
+// preserves a hint of softness for screen-to-screen continuity), Funnel
+// Display title at 22-28px, JetBrains Mono eyebrow with 0.22em tracking,
+// gradient highlight chip when present. Background defaults to fully
+// transparent so containers control their own surface — the card adds
+// only structure (border + spacing), not visual weight.
 //
-// Renders as a <Link> if `to` is passed, otherwise a <div>. Keeps the API
-// flat and predictable — no slots, no children projection.
+// API preservation: the prop set is unchanged. Consumers across the site
+// (HomePage hero feature row, PortfolioPage venture cards, FoundersPage
+// offer cards, InvestorsPage thesis cards) get the new look automatically.
+//
+// One quietly powerful behavior worth noting: the hover applies a tinted
+// background derived from the `accent` color via hex8 (`${accent}0E` =
+// 0E hex = 14/255 alpha = 5.5%). Same trick as before, kept intact —
+// the accent color itself drives a tonally consistent hover.
 
 import type { CSSProperties } from 'react'
 import { Link } from 'react-router'
+import { AvanteLockup } from '@/app/components/AvanteLockup'
 
 export type EditorialCardAccent = 'border-left' | 'border-top' | 'none'
 
 export interface EditorialCardProps {
-  /** Caps eyebrow tag shown above the title. Use ALL CAPS by convention. */
+  /** Caps eyebrow tag shown above the title. ALL CAPS by convention. */
   eyebrow?: string
   /** Main title (h3-equivalent). */
   title: string
@@ -36,6 +42,9 @@ export interface EditorialCardProps {
   to?: string
   /** External href (target=_blank). Mutually exclusive with `to`. */
   href?: string
+  /** When true, prepends a pulsing "A" mark before the eyebrow as a
+   *  "live / active" indicator. Used for portfolio active cohort cards. */
+  livePulse?: boolean
   /** Override the default padding/border-radius (rare). */
   style?: CSSProperties
   /** Optional className for layout-context overrides. */
@@ -53,32 +62,40 @@ export function EditorialCard({
   accentPosition = 'border-left',
   to,
   href,
+  livePulse = false,
   style,
   className,
 }: EditorialCardProps) {
+  // Border base: hairline on all sides; the accent side gets bumped to 3px
+  // so the card has a clear "publication tag" of color on its left or top.
+  const HAIR = 'var(--avt-hair)'
   const baseStyle: CSSProperties = {
     display: 'block',
-    padding: '24px 28px',
-    background: 'rgba(255, 255, 255, 0.025)',
-    border: '1px solid rgba(255, 255, 255, 0.08)',
-    borderLeft: accentPosition === 'border-left' ? `3px solid ${accent}` : '1px solid rgba(255, 255, 255, 0.08)',
-    borderTop: accentPosition === 'border-top' ? `3px solid ${accent}` : '1px solid rgba(255, 255, 255, 0.08)',
-    borderRadius: '14px',
+    padding: '28px 32px',
+    background: 'transparent',
+    border: `1px solid ${HAIR}`,
+    borderLeft: accentPosition === 'border-left' ? `3px solid ${accent}` : `1px solid ${HAIR}`,
+    borderTop: accentPosition === 'border-top' ? `3px solid ${accent}` : `1px solid ${HAIR}`,
+    borderRadius: '2px',
     textDecoration: 'none',
-    transition: 'all 0.25s ease',
+    transition: 'background 0.25s ease, border-color 0.25s ease, transform 0.25s ease',
     ...style,
   }
 
   const handleEnter = (e: React.MouseEvent<HTMLElement>) => {
     const el = e.currentTarget
-    el.style.background = `${accent}0E`
-    el.style.borderColor = `${accent}40`
+    el.style.background = `${accent}0E` // ~5.5% alpha
+    el.style.borderColor = `${accent}40` // ~25% alpha
+    if (accentPosition === 'border-left') el.style.borderLeftColor = accent
+    if (accentPosition === 'border-top') el.style.borderTopColor = accent
     el.style.transform = 'translateY(-2px)'
   }
   const handleLeave = (e: React.MouseEvent<HTMLElement>) => {
     const el = e.currentTarget
-    el.style.background = 'rgba(255, 255, 255, 0.025)'
-    el.style.borderColor = 'rgba(255, 255, 255, 0.08)'
+    el.style.background = 'transparent'
+    el.style.borderColor = HAIR
+    if (accentPosition === 'border-left') el.style.borderLeftColor = accent
+    if (accentPosition === 'border-top') el.style.borderTopColor = accent
     el.style.transform = 'translateY(0)'
   }
 
@@ -90,34 +107,44 @@ export function EditorialCard({
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'flex-start',
-            marginBottom: '12px',
+            marginBottom: '16px',
             gap: '12px',
           }}
         >
           {eyebrow && (
             <div
               style={{
-                fontSize: '10px',
-                fontWeight: 700,
-                letterSpacing: '0.18em',
+                fontFamily: 'var(--avt-font-body)',
+                fontSize: '11.5px',
+                fontWeight: 600,
+                letterSpacing: '0.08em',
                 color: accent,
                 textTransform: 'uppercase',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
               }}
             >
+              {/* Tier 3 / use 12 — Pulsing "A" live indicator. Renders only
+                  when `livePulse` is true (e.g., active cohort ventures).
+                  Replaces the conventional green dot with brand-aligned pulse. */}
+              {livePulse && (
+                <AvanteLockup size="xs" markOnly variant="default" pulse ariaLabel="Live" />
+              )}
               {eyebrow}
             </div>
           )}
           {highlight && (
             <div
               style={{
-                fontSize: '11px',
-                fontWeight: 700,
-                color: '#F9B437',
+                fontFamily: 'var(--avt-font-body)',
+                fontSize: '11.5px',
+                fontWeight: 600,
+                color: '#fff',
                 padding: '3px 10px',
-                borderRadius: '999px',
-                background: 'rgba(249, 180, 55, 0.12)',
-                border: '1px solid rgba(249, 180, 55, 0.3)',
+                background: 'var(--avt-grad)',
                 whiteSpace: 'nowrap',
+                letterSpacing: '0.04em',
               }}
             >
               {highlight}
@@ -127,12 +154,13 @@ export function EditorialCard({
       )}
       <h3
         style={{
-          fontSize: '17px',
-          fontWeight: 600,
+          fontFamily: 'var(--avt-font-display)',
+          fontSize: 'clamp(20px, 1.8vw, 26px)',
+          fontWeight: 500,
           color: '#FFFFFF',
-          margin: '0 0 10px 0',
-          letterSpacing: '-0.01em',
-          lineHeight: 1.3,
+          margin: '0 0 12px 0',
+          letterSpacing: '-0.02em',
+          lineHeight: 1.15,
         }}
       >
         {title}
@@ -140,9 +168,9 @@ export function EditorialCard({
       {body && (
         <p
           style={{
-            fontSize: '14px',
+            fontSize: '14.5px',
             lineHeight: 1.65,
-            color: 'rgba(255, 255, 255, 0.7)',
+            color: 'var(--avt-muted)',
             margin: 0,
           }}
         >

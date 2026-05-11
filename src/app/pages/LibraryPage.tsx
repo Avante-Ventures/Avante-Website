@@ -35,8 +35,8 @@ export default function LibraryPage() {
   const libraryItems: LibraryItem[] = articles.map((a, i) => ({
     id: String(i + 1),
     slug: a.slug,
-    title: a[language].title,
-    description: a[language].description,
+    title: a[language === "es" ? "en" : language].title,
+    description: a[language === "es" ? "en" : language].description,
     category: a.category,
     type: a.type,
     readTime: a.readTime,
@@ -106,8 +106,15 @@ export default function LibraryPage() {
       collectionDescription: "Insights, relatórios de pesquisa, estudos de caso e playbooks sobre venture building AI-native, economia de serviços do Brasil e dinâmica de venture studios.",
       inLanguage: "pt-BR",
     },
+    es: {
+      title: "Biblioteca: Insights, Investigación y Playbooks para Empresas AI-Native",
+      description: "Biblioteca Avante: investigación, casos de estudio y playbooks sobre venture studios, mercado de IA en Brasil y operación de startups AI-native. 9+ artículos.",
+      collectionName: "Biblioteca Avante: Insights, Investigación, Playbooks",
+      collectionDescription: "Insights, reportes de investigación, casos de estudio y playbooks sobre venture building AI-native, economía de servicios de Brasil y dinámica de venture studios.",
+      inLanguage: "es",
+    },
   } as const;
-  const copy = SEO_COPY[language];
+  const copy = SEO_COPY[language] ?? SEO_COPY.en;
 
   const libraryJsonLd = {
     "@context": "https://schema.org",

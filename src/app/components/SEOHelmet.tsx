@@ -23,15 +23,26 @@ export interface SEOHelmetProps {
   image?: string
   /** Page-specific JSON-LD object (Article, CollectionPage, etc.) */
   jsonLd?: object
+  /** When true, emits robots noindex,follow — used for stub articles that
+   *  do not yet have full content. Prevents thin-content from dragging the
+   *  domain authority while still allowing the page to be discoverable
+   *  through internal links. */
+  noindex?: boolean
 }
 
 const SITE_NAME = 'Avante Ventures'
 const ORIGIN = 'https://avanteventures.com'
 const DEFAULT_IMAGE = `${ORIGIN}/og-image.png`
-const SUPPORTED_LOCALES = ['en', 'pt'] as const
+const SUPPORTED_LOCALES = ['en', 'pt', 'es'] as const
 const HREFLANG_MAP: Record<string, string> = {
   en: 'en',
   pt: 'pt-BR',
+  es: 'es',
+}
+const OG_LOCALE_MAP: Record<string, string> = {
+  en: 'en_US',
+  pt: 'pt_BR',
+  es: 'es_419', // Latin American Spanish — matches our LATAM positioning
 }
 
 export function SEOHelmet({
@@ -40,6 +51,7 @@ export function SEOHelmet({
   pathname,
   image = DEFAULT_IMAGE,
   jsonLd,
+  noindex = false,
 }: SEOHelmetProps) {
   const { language } = useLanguage()
   const fullTitle = title.includes(SITE_NAME) ? title : `${title} — ${SITE_NAME}`
@@ -47,8 +59,10 @@ export function SEOHelmet({
   // Normalize pathname: ensure leading slash, no trailing slash (except home)
   const normalized = pathname && !pathname.startsWith('/') ? `/${pathname}` : pathname
   const canonical = `${ORIGIN}/${language}${normalized}`
-  const ogLocale = language === 'pt' ? 'pt_BR' : 'en_US'
-  const ogLocaleAlt = language === 'pt' ? 'en_US' : 'pt_BR'
+  const ogLocale = OG_LOCALE_MAP[language] ?? OG_LOCALE_MAP.en
+  const ogLocaleAlternates = SUPPORTED_LOCALES.filter((l) => l !== language).map(
+    (l) => OG_LOCALE_MAP[l]
+  )
 
   return (
     <Helmet>
@@ -57,6 +71,19 @@ export function SEOHelmet({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={canonical} />
+
+      {/* Robots: emit per-route so we own the value (and so the static HTML
+          baseline does not silently duplicate the tag). Default = full index;
+          stub articles flip to noindex,follow to avoid thin-content penalties
+          while still letting link equity flow through. */}
+      <meta
+        name="robots"
+        content={
+          noindex
+            ? 'noindex,follow'
+            : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
+        }
+      />
 
       {/* hreflang alternates — tell Google + LLMs which version is which */}
       {SUPPORTED_LOCALES.map((loc) => (
@@ -75,7 +102,9 @@ export function SEOHelmet({
       <meta property="og:url" content={canonical} />
       <meta property="og:image" content={image} />
       <meta property="og:locale" content={ogLocale} />
-      <meta property="og:locale:alternate" content={ogLocaleAlt} />
+      {ogLocaleAlternates.map((alt) => (
+        <meta key={alt} property="og:locale:alternate" content={alt} />
+      ))}
 
       {/* Twitter Card */}
       <meta name="twitter:title" content={fullTitle} />

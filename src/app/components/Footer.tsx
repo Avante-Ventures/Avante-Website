@@ -1,377 +1,457 @@
-import { Linkedin, Mail, MapPin } from 'lucide-react'
+// Footer — Phase B editorial refactor.
+//
+// Old (rev a3): a balanced 4-column grid with brand blurb + nav + sources +
+// social. Functional but visually small — read like a SaaS footer.
+//
+// New: a publication colophon. A scroll-triggered cord (gradient line that
+// draws itself in 1.4s on scroll-into-view) opens the footer, followed by a
+// MONUMENTAL "A vante." lockup at 340px on desktop (clamps to 96px on
+// mobile). Below: a Funnel Display tagline anchored to the firm's actual
+// horizon ("Studio that compounds. Brazil-native, AI-native. Built for
+// decades."), the 4-column nav grid (Offices / Firm / For / Now), and the
+// Sources block (preserved verbatim — Diana's panel insisted citations stay).
+// Bottom is a mono colophon row: © + cordão version + signature line.
+//
+// Why this scale matters: the Figma's footer mark is the visual full stop
+// of the site's narrative arc. Anything smaller reads as "we ran out of
+// runway." 340px reads as "we put our name on the building."
+
+import { useEffect, useRef, type ReactNode } from 'react'
 import { Link } from 'react-router'
 import { useLanguage } from '@/app/hooks/useLanguage'
+import { ClockRow } from '@/app/components/ClockRow'
 
 export function Footer() {
   const { language } = useLanguage()
-  const t = (en: string, pt: string) => (language === 'pt' ? pt : en)
+  // Accepts ReactNode so the tagline can carry inline JSX (gradient span).
+  // Optional `es` arg lets us add Spanish without breaking existing 2-arg
+  // callsites — those fall back to EN for ES viewers until translated.
+  const t = <T extends ReactNode>(en: T, pt: T, es?: T): T =>
+    language === 'pt' ? pt : language === 'es' && es !== undefined ? es : en
+  const cordRef = useRef<HTMLDivElement>(null)
+
+  // Scroll-trigger the cord exactly once when 40% of it enters the viewport.
+  // Pure CSS class flip — the tween itself is in theme.css (.avt-cord-fill).
+  useEffect(() => {
+    const el = cordRef.current
+    if (!el) return
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('avt-cord--played')
+            io.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.4 }
+    )
+    io.observe(el)
+    return () => io.disconnect()
+  }, [])
 
   return (
     <footer
       style={{
-        borderTop: '1px solid rgba(255, 255, 255, 0.08)',
-        backgroundColor: 'rgba(0, 0, 0, 0.25)',
-        padding: '64px 24px 32px',
+        position: 'relative',
+        overflow: 'hidden',
+        background: 'var(--avt-ink)',
+        padding: '120px 24px 56px',
+        borderTop: '1px solid var(--avt-hair)',
       }}
     >
-      <div
-        style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-          display: 'flex',
-          flexDirection: 'column',
-          gap: '40px',
-        }}
-      >
-        {/* Top: 4-column grid */}
+      <div style={{ maxWidth: '1440px', margin: '0 auto' }}>
+        {/* Scroll-triggered cord */}
         <div
-          className="footer-grid"
+          ref={cordRef}
+          className="avt-cord"
+          style={{ ['--cord-w' as string]: '78%' } as React.CSSProperties}
+        >
+          <div className="avt-cord-fill" />
+        </div>
+
+        {/* Editorial signature mark — Round 8.2: scaled down again from
+            180px → 96px max. Reads as a confident colophon, not a billboard. */}
+        <div
           style={{
-            display: 'grid',
-            gap: '32px',
+            marginTop: 'clamp(40px, 6vw, 64px)',
+            display: 'flex',
+            alignItems: 'flex-end',
+            gap: 0,
+            fontFamily: 'var(--avt-font-display)',
+            fontWeight: 500,
+            letterSpacing: '-0.045em',
+            lineHeight: 0.9,
+            fontSize: 'clamp(40px, 6vw, 96px)',
+            color: '#fff',
           }}
         >
-          {/* Brand */}
-          <div>
-            <div
-              style={{
-                fontSize: '20px',
-                fontWeight: 600,
-                color: '#FFFFFF',
-                letterSpacing: '-0.01em',
-                marginBottom: '12px',
-              }}
-            >
-              Avante Ventures
-            </div>
-            <p
-              style={{
-                fontSize: '14px',
-                color: 'rgba(255, 255, 255, 0.55)',
-                lineHeight: 1.6,
-                margin: 0,
-                maxWidth: '280px',
-              }}
-            >
-              {t(
-                'AI-native venture studio. Silicon Valley playbooks, Brazil-native execution.',
-                'Venture studio AI-native. Playbooks do Vale do Silício, execução brasileira.'
-              )}
-            </p>
-          </div>
-
-          {/* Navigate */}
-          <div>
-            <div
-              style={{
-                fontSize: '11px',
-                fontWeight: 600,
-                textTransform: 'uppercase',
-                letterSpacing: '0.12em',
-                color: 'rgba(255, 255, 255, 0.6)',
-                marginBottom: '16px',
-              }}
-            >
-              {t('Navigate', 'Navegação')}
-            </div>
-            <FooterLink to={`/${language}`} label={t('Home', 'Início')} />
-            <FooterLink to={`/${language}/why-avante`} label={t('Why Avante', 'Por Que Avante')} />
-            <FooterLink to={`/${language}/portfolio`} label={t('Portfolio', 'Portfólio')} />
-            <FooterLink to={`/${language}/principles`} label={t('Principles', 'Princípios')} />
-            <FooterLink to={`/${language}/founders`} label={t('For Founders', 'Para Fundadores')} />
-            <FooterLink to={`/${language}/investors`} label={t('For Investors', 'Para Investidores')} />
-            <FooterLink to={`/${language}/library`} label={t('Library', 'Biblioteca')} />
-          </div>
-
-          {/* Resources / inline section anchors on home */}
-          <div>
-            <div
-              style={{
-                fontSize: '11px',
-                fontWeight: 600,
-                textTransform: 'uppercase',
-                letterSpacing: '0.12em',
-                color: 'rgba(255, 255, 255, 0.6)',
-                marginBottom: '16px',
-              }}
-            >
-              {t('Explore', 'Explore')}
-            </div>
-            <FooterAnchor href={`/${language}#whatwedo`} label={t('Thesis', 'Tese')} />
-            <FooterAnchor href={`/${language}#playbook`} label="Playbook" />
-            <FooterAnchor href={`/${language}#ventures`} label="Ventures" />
-            <FooterAnchor href={`/${language}#team`} label={t('Team', 'Time')} />
-          </div>
-
-          {/* Contact */}
-          <div>
-            <div
-              style={{
-                fontSize: '11px',
-                fontWeight: 600,
-                textTransform: 'uppercase',
-                letterSpacing: '0.12em',
-                color: 'rgba(255, 255, 255, 0.6)',
-                marginBottom: '16px',
-              }}
-            >
-              {t('Get in Touch', 'Entre em Contato')}
-            </div>
-
-            <a
-              href="mailto:cristian@avanteventures.com"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '8px',
-                color: 'rgba(255, 255, 255, 0.7)',
-                fontSize: '14px',
-                textDecoration: 'none',
-                marginBottom: '12px',
-                transition: 'color 0.2s ease',
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = '#F4A261')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)')}
-            >
-              <Mail size={14} />
-              cristian@avanteventures.com
-            </a>
-
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '8px',
-                color: 'rgba(255, 255, 255, 0.55)',
-                fontSize: '14px',
-                marginBottom: '20px',
-              }}
-            >
-              <MapPin size={14} />
-              São Paulo · San Francisco
-            </div>
-
-            <div style={{ display: 'flex', gap: '12px' }}>
-              <a
-                href="https://www.linkedin.com/company/avante-ventures/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Avante Ventures on LinkedIn"
-                style={socialIconStyle}
-                onMouseEnter={(e) => applySocialHover(e.currentTarget, true)}
-                onMouseLeave={(e) => applySocialHover(e.currentTarget, false)}
-              >
-                <Linkedin size={16} />
-              </a>
-              <a
-                href="mailto:cristian@avanteventures.com"
-                aria-label="Email Avante Ventures"
-                style={socialIconStyle}
-                onMouseEnter={(e) => applySocialHover(e.currentTarget, true)}
-                onMouseLeave={(e) => applySocialHover(e.currentTarget, false)}
-              >
-                <Mail size={16} />
-              </a>
-            </div>
-          </div>
+          <ResponsiveLockupMark />
+          <span style={{ marginLeft: 'clamp(-12px, -1vw, -4px)' }}>vante.</span>
         </div>
 
-        {/* Divider */}
-        <div style={{ height: '1px', background: 'rgba(255, 255, 255, 0.08)' }} />
+        {/* Tagline */}
+        <p
+          style={{
+            marginTop: 'clamp(32px, 5vw, 64px)',
+            fontFamily: 'var(--avt-font-display)',
+            fontWeight: 400,
+            fontSize: 'clamp(20px, 2.4vw, 32px)',
+            color: '#cdd2ee',
+            letterSpacing: '-0.015em',
+            lineHeight: 1.25,
+            maxWidth: '780px',
+          }}
+        >
+          {t(
+            <>
+              Studio that compounds.{' '}
+              <span className="avt-grad">Brazil-native, AI-native.</span> Built for decades.
+            </>,
+            <>
+              Studio que compõe.{' '}
+              <span className="avt-grad">Brasil-native, AI-native.</span> Construído para décadas.
+            </>,
+            <>
+              Studio que compone.{' '}
+              <span className="avt-grad">Brasil-native, AI-native.</span> Construido para décadas.
+            </>
+          )}
+        </p>
 
-        {/* Sources — Sprint 1 / A3.
-            Footnote anchors for the StatsBar numbers. Diana opens the door
-            on a site that cites; Pedro stops calling them "every BR pitch
-            deck stats"; Karim respects intellectual honesty. */}
-        <div>
-          <div
-            style={{
-              fontSize: '11px',
-              fontWeight: 700,
-              letterSpacing: '0.18em',
-              textTransform: 'uppercase',
-              color: 'rgba(255, 255, 255, 0.4)',
-              marginBottom: '12px',
-            }}
-          >
-            {t('Sources', 'Fontes')}
-          </div>
-          <ol
-            style={{
-              fontSize: '12px',
-              color: 'rgba(255, 255, 255, 0.55)',
-              lineHeight: 1.7,
-              margin: 0,
-              paddingLeft: '20px',
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '4px 24px',
-            }}
-          >
-            <li id="source-1">
-              {t(
-                'Brazil GDP, population, services share: ',
-                'PIB, população e parcela de serviços do Brasil: '
-              )}
-              <a href="https://www.ibge.gov.br" target="_blank" rel="noopener noreferrer" style={sourceLinkStyle}>
-                IBGE National Accounts 2025
-              </a>
-              {' · '}
-              <a href="https://www.bcb.gov.br" target="_blank" rel="noopener noreferrer" style={sourceLinkStyle}>
-                Banco Central do Brasil
-              </a>
-            </li>
-            <li id="source-2">
-              {t('Brazilian unicorns count: ', 'Número de unicórnios brasileiros: ')}
-              <a href="https://www.distrito.me" target="_blank" rel="noopener noreferrer" style={sourceLinkStyle}>
-                Distrito Mining Report 2025
-              </a>
-            </li>
-            <li id="source-3">
-              {t('Brazil renewable energy share: ', 'Parcela de energia renovável do Brasil: ')}
-              <a href="https://www.epe.gov.br" target="_blank" rel="noopener noreferrer" style={sourceLinkStyle}>
-                EPE Brazilian Energy Balance 2025
-              </a>
-            </li>
-            <li id="source-4">
-              {t('Brazil AI investment: ', 'Investimento em IA no Brasil: ')}
-              <a href="https://www.lavca.org" target="_blank" rel="noopener noreferrer" style={sourceLinkStyle}>
-                LAVCA Brazil VC + Tech Report 2025
-              </a>
-            </li>
-            <li id="source-5">
-              {t(
-                'SME software penetration: ',
-                'Penetração de software em PMEs: '
-              )}
-              <a href="https://www.sebrae.com.br" target="_blank" rel="noopener noreferrer" style={sourceLinkStyle}>
-                Sebrae SME Tech Adoption Survey 2024
-              </a>
-              {' · '}Avante internal market sizing
-            </li>
-            <li id="source-6">
-              {t(
-                'Studio IRR vs traditional VC: ',
-                'IRR de studios vs VC tradicional: '
-              )}
-              <a href="https://www.gssn.co" target="_blank" rel="noopener noreferrer" style={sourceLinkStyle}>
-                GSSN Annual Report 2025
-              </a>
-              {' · '}
-              <a href="https://www.cambridgeassociates.com" target="_blank" rel="noopener noreferrer" style={sourceLinkStyle}>
-                Cambridge Associates US VC Index Q4 2025
-              </a>
-            </li>
-          </ol>
+        {/* ClockRow — Phase D. Live local time in the firm's three operating
+            cities, rendered as 3-column hairline cells. Quietly tells the
+            visitor where the studio physically is, in real time. */}
+        <div style={{ marginTop: 'clamp(48px, 6vw, 80px)' }}>
+          <ClockRow />
         </div>
 
-        {/* Divider */}
-        <div style={{ height: '1px', background: 'rgba(255, 255, 255, 0.08)' }} />
+        {/* 4-column nav grid (preserves all current routes) */}
+        <div
+          className="avt-footer-grid"
+          style={{
+            marginTop: 'clamp(56px, 8vw, 120px)',
+            display: 'grid',
+            gap: '48px',
+          }}
+        >
+          {/* Column 1: Offices (3 cities for clock-row vibe) */}
+          <FooterColumn title={t('Offices', 'Escritórios', 'Oficinas')}>
+            <FooterStaticLine>São Paulo · sede</FooterStaticLine>
+            <FooterStaticLine>San Francisco</FooterStaticLine>
+            <FooterStaticLine>{t('Cidade de México', 'Cidade do México', 'Ciudad de México')}</FooterStaticLine>
+          </FooterColumn>
 
-        {/* Bottom: copyright + language switch hint */}
+          {/* Column 2: Firm — top-level routes */}
+          <FooterColumn title={t('Firm', 'Studio', 'Studio')}>
+            <FooterLink to={`/${language}/why-avante`} label={t('Why Avante', 'Por Que Avante', 'Por Qué Avante')} />
+            <FooterLink to={`/${language}/portfolio`} label={t('Portfolio', 'Portfólio', 'Portafolio')} />
+            <FooterLink to={`/${language}/principles`} label={t('Principles', 'Princípios', 'Principios')} />
+            <FooterLink to={`/${language}/library`} label={t('Library', 'Biblioteca', 'Biblioteca')} />
+          </FooterColumn>
+
+          {/* Column 3: For — audiences (doors pattern coming in Phase D) */}
+          <FooterColumn title={t('For', 'Para', 'Para')}>
+            <FooterLink to={`/${language}/founders`} label={t('Founders', 'Founders', 'Founders')} />
+            <FooterLink to={`/${language}/investors`} label={t('Investors / LPs', 'Investidores / LPs', 'Inversores / LPs')} />
+            <FooterMail href="mailto:cristian@avanteventures.com" label={t('Press · Inquiries', 'Imprensa · Consultas', 'Prensa · Consultas')} />
+          </FooterColumn>
+
+          {/* Column 4: Now — operating reality */}
+          <FooterColumn title={t('Now', 'Agora', 'Ahora')}>
+            <FooterStaticLine>{t('Open to LP conversations', 'Aberto a conversas com LPs', 'Abierto a conversaciones con LPs')}</FooterStaticLine>
+            <FooterStaticLine>{t('1 active · 4 in pipeline', '1 ativa · 4 no pipeline', '1 activa · 4 en pipeline')}</FooterStaticLine>
+            <FooterStaticLine>{t('São Paulo · winter 2026', 'São Paulo · inverno 2026', 'São Paulo · invierno 2026')}</FooterStaticLine>
+            <FooterStaticLine
+              style={{ color: 'rgba(205, 210, 238, 0.55)', marginTop: '6px', fontSize: '12px' }}
+            >
+              {t('Legal: Lefosse + Foley', 'Jurídico: Lefosse + Foley', 'Legal: Lefosse + Foley')}
+            </FooterStaticLine>
+          </FooterColumn>
+        </div>
+
+        {/* Sources — Diana's panel: a venture firm that cites is a firm that opens its work. */}
+        <SourcesBlock t={t} />
+
+        {/* Bottom mono colophon */}
         <div
           style={{
+            marginTop: '64px',
+            paddingTop: '32px',
+            borderTop: '1px solid var(--avt-hair)',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
             flexWrap: 'wrap',
             gap: '16px',
-            color: 'rgba(255, 255, 255, 0.6)',
-            fontSize: '13px',
           }}
         >
-          <div>© 2026 Avante Ventures. {t('All rights reserved.', 'Todos os direitos reservados.')}</div>
-          <div style={{ fontSize: '12px' }}>
-            {t('Built to compound for decades.', 'Construído para compor por décadas.')}
-          </div>
+          <MonoColophon>© 2026 Avante Ventures · São Paulo · cordão v0.1</MonoColophon>
+          <MonoColophon>
+            {t(
+              '— a venture studio that signs its name',
+              '— um venture studio que assina seu nome',
+              '— un venture studio que firma con su nombre'
+            )}
+          </MonoColophon>
         </div>
       </div>
 
       <style>{`
-        .footer-grid {
+        .avt-footer-grid {
           grid-template-columns: 1fr;
         }
         @media (min-width: 640px) {
-          .footer-grid { grid-template-columns: repeat(2, 1fr); }
+          .avt-footer-grid { grid-template-columns: repeat(2, 1fr); }
         }
         @media (min-width: 1024px) {
-          .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1.2fr; }
+          .avt-footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1.2fr; }
         }
       `}</style>
     </footer>
   )
 }
 
-const sourceLinkStyle: React.CSSProperties = {
-  color: 'rgba(255, 255, 255, 0.75)',
+// ─────────────────────────────────────────────────────────────────────────
+// Internal building blocks. Kept inline (not extracted to a separate file)
+// to make the editorial vocabulary easy to read in one place.
+// ─────────────────────────────────────────────────────────────────────────
+
+function ResponsiveLockupMark() {
+  // Width scaled to match the new clamp(40-96px) word. Round 8.2 brings
+  // the mark down to 80px max — equivalent in visual weight to a tier-1
+  // wordmark, not a hero. Pairs cleanly with `vante.` at 96px.
+  const aspectRatio = 364 / 535
+  return (
+    <span
+      aria-hidden
+      style={{
+        display: 'inline-block',
+        width: 'clamp(28px, 4.8vw, 80px)',
+        height: 'calc(clamp(28px, 4.8vw, 80px) / ' + aspectRatio + ')',
+        backgroundImage: `url(/redesign-assets/avante-A.png)`,
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'left bottom',
+        marginBottom: 'clamp(1px, 0.3vw, 4px)',
+        flexShrink: 0,
+      }}
+    />
+  )
+}
+
+function FooterColumn({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <div>
+      <h4
+        style={{
+          fontFamily: 'var(--avt-font-body)',
+          fontSize: '12px',
+          color: 'var(--avt-meta)',
+          letterSpacing: '0.08em',
+          textTransform: 'uppercase',
+          fontWeight: 600,
+          marginBottom: '18px',
+        }}
+      >
+        {title}
+      </h4>
+      {children}
+    </div>
+  )
+}
+
+const footerLinkStyle: React.CSSProperties = {
+  display: 'block',
+  fontSize: '14px',
+  color: '#cdd2ee',
   textDecoration: 'none',
-  borderBottom: '1px dotted rgba(255, 255, 255, 0.3)',
-  transition: 'color 0.2s ease, border-color 0.2s ease',
-}
-
-const socialIconStyle: React.CSSProperties = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  width: '36px',
-  height: '36px',
-  borderRadius: '50%',
-  backgroundColor: 'rgba(255, 255, 255, 0.05)',
-  border: '1px solid rgba(255, 255, 255, 0.1)',
-  transition: 'all 0.25s ease',
-  color: '#9CA3AF',
-}
-
-function applySocialHover(el: HTMLElement, hover: boolean) {
-  if (hover) {
-    el.style.backgroundColor = 'rgba(249, 180, 55, 0.12)'
-    el.style.borderColor = 'rgba(249, 180, 55, 0.6)'
-    el.style.color = '#F9B437'
-    el.style.transform = 'translateY(-2px)'
-  } else {
-    el.style.backgroundColor = 'rgba(255, 255, 255, 0.05)'
-    el.style.borderColor = 'rgba(255, 255, 255, 0.1)'
-    el.style.color = '#9CA3AF'
-    el.style.transform = 'translateY(0)'
-  }
+  padding: '6px 0',
+  transition: 'color 0.2s ease',
 }
 
 function FooterLink({ to, label }: { to: string; label: string }) {
   return (
     <Link
       to={to}
-      style={{
-        display: 'block',
-        color: 'rgba(255, 255, 255, 0.7)',
-        fontSize: '14px',
-        textDecoration: 'none',
-        marginBottom: '10px',
-        transition: 'color 0.2s ease',
-      }}
-      onMouseEnter={(e) => (e.currentTarget.style.color = '#F4A261')}
-      onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)')}
+      style={footerLinkStyle}
+      onMouseEnter={(e) => (e.currentTarget.style.color = '#fff')}
+      onMouseLeave={(e) => (e.currentTarget.style.color = '#cdd2ee')}
     >
       {label}
     </Link>
   )
 }
 
-function FooterAnchor({ href, label }: { href: string; label: string }) {
+function FooterMail({ href, label }: { href: string; label: string }) {
   return (
     <a
       href={href}
-      style={{
-        display: 'block',
-        color: 'rgba(255, 255, 255, 0.7)',
-        fontSize: '14px',
-        textDecoration: 'none',
-        marginBottom: '10px',
-        transition: 'color 0.2s ease',
-      }}
-      onMouseEnter={(e) => (e.currentTarget.style.color = '#F4A261')}
-      onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255, 255, 255, 0.7)')}
+      style={footerLinkStyle}
+      onMouseEnter={(e) => (e.currentTarget.style.color = '#fff')}
+      onMouseLeave={(e) => (e.currentTarget.style.color = '#cdd2ee')}
     >
       {label}
+    </a>
+  )
+}
+
+function FooterStaticLine({
+  children,
+  style,
+}: {
+  children: React.ReactNode
+  style?: React.CSSProperties
+}) {
+  return (
+    <div
+      style={{
+        display: 'block',
+        fontSize: '14px',
+        color: '#cdd2ee',
+        padding: '6px 0',
+        ...style,
+      }}
+    >
+      {children}
+    </div>
+  )
+}
+
+function MonoColophon({ children }: { children: React.ReactNode }) {
+  return (
+    <span
+      style={{
+        fontFamily: 'var(--avt-font-body)',
+        fontSize: '11px',
+        fontWeight: 600,
+        letterSpacing: '0.08em',
+        textTransform: 'uppercase',
+        color: 'var(--avt-meta)',
+      }}
+    >
+      {children}
+    </span>
+  )
+}
+
+function SourcesBlock({ t }: { t: <T extends ReactNode>(en: T, pt: T, es?: T) => T }) {
+  return (
+    <div style={{ marginTop: '64px' }}>
+      <div
+        style={{
+          fontFamily: 'var(--avt-font-body)',
+          fontSize: '12px',
+          fontWeight: 700,
+          letterSpacing: '0.08em',
+          textTransform: 'uppercase',
+          color: 'var(--avt-meta)',
+          marginBottom: '12px',
+        }}
+      >
+        {t('Sources', 'Fontes', 'Fuentes')}
+      </div>
+      <ol
+        style={{
+          fontSize: '12px',
+          color: 'rgba(205, 210, 238, 0.6)',
+          lineHeight: 1.7,
+          margin: 0,
+          paddingLeft: '20px',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: '4px 24px',
+        }}
+      >
+        <SourceItem id="source-1">
+          {t(
+            'Brazil GDP, population, services share: ',
+            'PIB, população e parcela de serviços do Brasil: ',
+            'PIB, población y participación de servicios de Brasil: '
+          )}
+          <SourceLink href="https://www.ibge.gov.br">IBGE National Accounts 2025</SourceLink>
+          {' · '}
+          <SourceLink href="https://www.bcb.gov.br">Banco Central do Brasil</SourceLink>
+        </SourceItem>
+        <SourceItem id="source-2">
+          {t(
+            'Brazilian unicorns count: ',
+            'Número de unicórnios brasileiros: ',
+            'Número de unicornios brasileños: '
+          )}
+          <SourceLink href="https://www.distrito.me">Distrito Mining Report 2025</SourceLink>
+        </SourceItem>
+        <SourceItem id="source-3">
+          {t(
+            'Brazil renewable energy share: ',
+            'Parcela de energia renovável do Brasil: ',
+            'Participación de energía renovable de Brasil: '
+          )}
+          <SourceLink href="https://www.epe.gov.br">EPE Brazilian Energy Balance 2025</SourceLink>
+        </SourceItem>
+        <SourceItem id="source-4">
+          {t(
+            'Brazil AI investment: ',
+            'Investimento em IA no Brasil: ',
+            'Inversión en IA en Brasil: '
+          )}
+          <SourceLink href="https://www.lavca.org">LAVCA Brazil VC + Tech Report 2025</SourceLink>
+        </SourceItem>
+        <SourceItem id="source-5">
+          {t(
+            'SME software penetration: ',
+            'Penetração de software em PMEs: ',
+            'Penetración de software en PYMEs: '
+          )}
+          <SourceLink href="https://www.sebrae.com.br">Sebrae SME Tech Adoption Survey 2024</SourceLink>
+          {' · '}
+          {t('Avante internal market sizing', 'Estimativa interna Avante', 'Estimación interna Avante')}
+        </SourceItem>
+        <SourceItem id="source-6">
+          {t(
+            'Studio IRR vs traditional VC: ',
+            'IRR de studios vs VC tradicional: ',
+            'IRR de studios vs VC tradicional: '
+          )}
+          <SourceLink href="https://www.gssn.co">GSSN Annual Report 2025</SourceLink>
+          {' · '}
+          <SourceLink href="https://www.cambridgeassociates.com">Cambridge Associates US VC Index Q4 2025</SourceLink>
+        </SourceItem>
+      </ol>
+    </div>
+  )
+}
+
+function SourceItem({ id, children }: { id: string; children: React.ReactNode }) {
+  return (
+    <li id={id} style={{ marginBottom: '4px' }}>
+      {children}
+    </li>
+  )
+}
+
+function SourceLink({ href, children }: { href: string; children: React.ReactNode }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        color: 'rgba(205, 210, 238, 0.85)',
+        textDecoration: 'none',
+        borderBottom: '1px dotted rgba(205, 210, 238, 0.3)',
+        transition: 'color 0.2s ease, border-color 0.2s ease',
+      }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.color = '#fff'
+        e.currentTarget.style.borderBottomColor = '#fff'
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.color = 'rgba(205, 210, 238, 0.85)'
+        e.currentTarget.style.borderBottomColor = 'rgba(205, 210, 238, 0.3)'
+      }}
+    >
+      {children}
     </a>
   )
 }

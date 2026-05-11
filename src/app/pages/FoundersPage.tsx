@@ -25,12 +25,18 @@ const SEO = {
       'O que oferecemos a fundadores, o que esperamos, e como o studio Avante efetivamente funciona dia a dia. Compromissos específicos, não listas de benefícios.',
     inLanguage: 'pt-BR',
   },
+  es: {
+    title: 'Para Fundadores — Avante Ventures',
+    description:
+      'Qué ofrecemos a los fundadores, qué esperamos, y cómo el studio Avante funciona día a día. Compromisos específicos, no listas de beneficios.',
+    inLanguage: 'es',
+  },
 } as const
 
 export default function FoundersPage() {
   const { language } = useLanguage()
   const t = (en: string, pt: string) => (language === 'pt' ? pt : en)
-  const copy = SEO[language]
+  const copy = SEO[language] ?? SEO.en
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -145,7 +151,7 @@ export default function FoundersPage() {
         style={{
           maxWidth: '1100px',
           margin: '0 auto',
-          padding: 'clamp(96px, 12vh, 140px) 24px 96px',
+          padding: 'var(--avt-page-pad-top) var(--avt-page-pad-x) var(--avt-page-pad-bottom)',
         }}
       >
         <Link

@@ -13,6 +13,10 @@ import { PlaybookStaircase } from "@/app/components/PlaybookStaircase";
 import { CompoundingChart } from "@/app/components/CompoundingChart";
 import { TeamSection } from "@/app/components/TeamSection";
 import { ContactFormSection } from "@/app/components/ContactFormSection";
+import { ContactDoors } from "@/app/components/ContactDoors";
+import { EditorialTicker } from "@/app/components/EditorialTicker";
+import { AvtCord } from "@/app/components/AvtCord";
+import { CinematicFrame } from "@/app/components/CinematicFrame";
 import { Footer } from "@/app/components/Footer";
 import { useLanguage } from "@/app/hooks/useLanguage";
 import avanteLogo from "figma:asset/1ee77d6dc5cd19bf91735ef627eddf9652d066cf.png";
@@ -106,6 +110,12 @@ export function AppContent() {
         <div id="hero">
           <HeroV2A_Masthead />
         </div>
+
+        {/* EditorialTicker — Phase D. Surfaces the studio's operating
+            metrics (vintage, exits, intake, offices, legal, horizon) on
+            an infinite mono-strip right under the hero. Re-densifies
+            above-the-fold without bloating section count. */}
+        <EditorialTicker />
 
         {false && <section
           className="flex items-center justify-center relative w-full"
@@ -305,6 +315,14 @@ export function AppContent() {
 
         <SocialProofStrip />
 
+        {/* AvtCord — Phase D. Editorial divider that draws itself on
+            scroll-into-view. Replaces the standard hairline border between
+            the credibility row and the playbook section with something
+            that signals "chapter break" without taking visual weight. */}
+        <div style={{ maxWidth: '1200px', margin: '48px auto 0', padding: '0 24px' }}>
+          <AvtCord width="62%" />
+        </div>
+
         <div className="max-w-[1200px] mx-auto px-[24px]">
 
           {/* Removed: "Two ways to work with Avante" CTA section. The hero
@@ -339,11 +357,15 @@ export function AppContent() {
               <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 var(--avante-space-4)' }}>
                 <SectionMasthead
                   centered
-                  eyebrow={language === 'pt' ? 'Nosso Playbook' : 'Our Playbook'}
+                  eyebrow={
+                    language === 'pt' ? 'Nosso Playbook' : language === 'es' ? 'Nuestro Playbook' : 'Our Playbook'
+                  }
                   title={
                     language === 'pt'
                       ? 'Um loop repetível. Seis estágios. 3–4 ventures por ano.'
-                      : 'A repeatable loop. Six stages. 3–4 ventures a year.'
+                      : language === 'es'
+                        ? 'Un loop repetible. Seis etapas. 3–4 ventures por año.'
+                        : 'A repeatable loop. Six stages. 3–4 ventures a year.'
                   }
                   description={t('system.subtitle')}
                 />
@@ -390,7 +412,7 @@ export function AppContent() {
                   marginBottom: '12px',
                 }}
               >
-                {language === 'pt' ? 'Como nos juntamos' : 'How we came together'}
+                {language === 'pt' ? 'Como nos juntamos' : language === 'es' ? 'Cómo nos juntamos' : 'How we came together'}
               </div>
               <p
                 style={{
@@ -401,9 +423,38 @@ export function AppContent() {
                 }}
               >
                 {language === 'pt'
-                  ? 'Jess e Andrea passaram a década anterior construindo a inDinero (US$100M+ ARR, 100+ funcionários) e investindo a partir de São Francisco. Amanda e Felipe ficaram com cicatrizes operacionais brasileiras — Amanda escalando a Sigga até um exit de 10×, Felipe construindo a Bamboo DCM no mercado de capitais. Nos conhecemos em 2024 quando os quatro chegamos à mesma conclusão a partir de ângulos opostos: o Brasil tem volume massivo de economia de serviço, talento sênior de engenharia subestimado e quase nenhum capital pré-tração com profundidade operacional. A divisão de trabalho é deliberada: time de São Paulo opera; time de São Francisco traz playbook + capital + rede.'
-                  : 'Jess and Andrea spent the prior decade building inDinero ($100M+ ARR, 100+ headcount) and investing out of San Francisco. Amanda and Felipe earned operational scar tissue in Brazil — Amanda scaling Sigga through a 10× exit, Felipe building Bamboo DCM in the capital markets. We met in 2024 when all four of us arrived at the same conclusion from opposite angles: Brazil has massive service-economy volume, underestimated senior engineering talent, and almost no pre-traction capital with operational depth attached. The division of labor is deliberate: the São Paulo team operates; the San Francisco team brings playbook + capital + network.'}
+                  ? 'Nos conhecemos em 2024. Quatro operadores em ângulos opostos: Jess e Andrea com inDinero ($100M+ ARR) em SF; Amanda escalando Sigga até exit 10× e Felipe na Bamboo DCM no Brasil. Mesma conclusão: o Brasil tem volume massivo de economia de serviços, talento sênior de engenharia subestimado e quase nenhum capital pré-tração com profundidade operacional. SP opera, SF traz playbook + capital.'
+                  : language === 'es'
+                    ? 'Nos conocimos en 2024. Cuatro operadores desde ángulos opuestos: Jess y Andrea con inDinero ($100M+ ARR) en SF; Amanda escalando Sigga hasta exit 10× y Felipe en Bamboo DCM en Brasil. Misma conclusión: Brasil tiene volumen masivo de economía de servicios, talento senior de ingeniería subestimado y casi nada de capital pre-tracción con profundidad operativa. SP opera, SF aporta playbook + capital.'
+                    : 'We met in 2024. Four operators from opposite angles: Jess and Andrea with inDinero ($100M+ ARR) out of SF; Amanda scaling Sigga to a 10× exit and Felipe at Bamboo DCM in Brazil. Same conclusion: Brazil has massive service-economy volume, underestimated senior engineering talent, and almost no pre-traction capital with operational depth. SP operates, SF brings playbook + capital.'}
               </p>
+            </div>
+          </ScrollRevealSection>
+
+          {/* CinematicFrame — Phase D. The "stop and breathe" beat between
+              the team narrative and the principles/contact closing arc.
+              Uses the São Paulo skyline asset that ships under
+              /redesign-assets/. Captions are bilingual + reference Av.
+              Paulista at dawn — anchors the studio in physical place. */}
+          <ScrollRevealSection
+            className="py-[80px] md:py-[120px]"
+            style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.06)' }}
+          >
+            <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 24px' }}>
+              <CinematicFrame
+                imageUrl="/redesign-assets/photo-skyline.jpg"
+                aspectRatio="21 / 9"
+                captionLeft="frame 001 — sede"
+                captionRight="av. paulista · são paulo · 06:14 brt"
+                slotLeft={
+                  language === 'pt'
+                    ? '— frame · São Paulo ao amanhecer'
+                    : language === 'es'
+                      ? '— frame · São Paulo al amanecer'
+                      : '— frame · São Paulo at dawn'
+                }
+                slotRight="21:9 · 06:14"
+              />
             </div>
           </ScrollRevealSection>
 
@@ -430,16 +481,26 @@ export function AppContent() {
             <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 var(--avante-space-4)' }}>
               <SectionMasthead
                 centered
-                eyebrow={language === 'pt' ? 'Doutrina Operacional' : 'Operating Doctrine'}
+                eyebrow={
+                  language === 'pt'
+                    ? 'Doutrina Operacional'
+                    : language === 'es'
+                      ? 'Doctrina Operativa'
+                      : 'Operating Doctrine'
+                }
                 title={
                   language === 'pt'
                     ? 'Três das dez regras pelas quais operamos.'
-                    : 'Three of the ten rules we operate by.'
+                    : language === 'es'
+                      ? 'Tres de las diez reglas por las que operamos.'
+                      : 'Three of the ten rules we operate by.'
                 }
                 description={
                   language === 'pt'
                     ? 'Não são valores. São regras que constrangem comportamento — as decisões que já tomamos para gastar tempo operacional nas que ainda restam.'
-                    : 'Not values. Rules that constrain behavior — the decisions we have already made so we can spend operating time on the ones that are left.'
+                    : language === 'es'
+                      ? 'No son valores. Son reglas que limitan el comportamiento — las decisiones que ya tomamos para gastar tiempo operativo en las que quedan.'
+                      : 'Not values. Rules that constrain behavior — the decisions we have already made so we can spend operating time on the ones that are left.'
                 }
               />
 
@@ -459,33 +520,48 @@ export function AppContent() {
                 {[
                   {
                     n: '01',
-                    title: language === 'pt' ? 'Primeiro cheque ou nada.' : 'First ticket or no ticket.',
+                    title:
+                      language === 'pt'
+                        ? 'Primeiro cheque ou nada.'
+                        : language === 'es'
+                          ? 'Primer cheque o nada.'
+                          : 'First ticket or no ticket.',
                     body:
                       language === 'pt'
-                        ? "Somos first-money-in ou não investimos. A vantagem do studio está no momento de fundação."
-                        : "We are first-money-in or we do not invest. The studio's edge is at the founding moment.",
+                        ? 'Somos first-money-in ou não investimos. A vantagem do studio está no momento de fundação.'
+                        : language === 'es'
+                          ? 'Somos first-money-in o no invertimos. La ventaja del studio está en el momento de fundación.'
+                          : "We are first-money-in or we do not invest. The studio's edge is at the founding moment.",
                   },
                   {
                     n: '04',
                     title:
                       language === 'pt'
                         ? '3–4 ventures por ano. Sem exceção.'
-                        : '3–4 ventures per year. No exceptions.',
+                        : language === 'es'
+                          ? '3–4 ventures por año. Sin excepciones.'
+                          : '3–4 ventures per year. No exceptions.',
                     body:
                       language === 'pt'
                         ? 'A gente limita throughput de propósito. Studios que escalam mais rápido que seu stack amadurece degradam a vantagem que justifica o modelo.'
-                        : 'We deliberately cap throughput. Studios that scale faster than their stack matures debase the very advantage that justifies the model.',
+                        : language === 'es'
+                          ? 'Limitamos el throughput a propósito. Studios que escalan más rápido de lo que madura su stack degradan la ventaja que justifica el modelo.'
+                          : 'We deliberately cap throughput. Studios that scale faster than their stack matures debase the very advantage that justifies the model.',
                   },
                   {
                     n: '10',
                     title:
                       language === 'pt'
                         ? 'O que não fazemos é o que somos.'
-                        : 'What we will not do is what we are.',
+                        : language === 'es'
+                          ? 'Lo que no haremos es lo que somos.'
+                          : 'What we will not do is what we are.',
                     body:
                       language === 'pt'
                         ? 'Um studio que não consegue articular seu espaço negativo não consegue articular o positivo. Dizer não é a disciplina.'
-                        : 'A studio that cannot articulate its negative space cannot articulate its positive. Saying no is the discipline.',
+                        : language === 'es'
+                          ? 'Un studio que no puede articular su espacio negativo no puede articular el positivo. Decir no es la disciplina.'
+                          : 'A studio that cannot articulate its negative space cannot articulate its positive. Saying no is the discipline.',
                   },
                 ].map((p) => (
                   <div key={p.n}>
@@ -553,7 +629,11 @@ export function AppContent() {
                     e.currentTarget.style.background = 'transparent'
                   }}
                 >
-                  {language === 'pt' ? 'Ler os 10 princípios →' : 'Read all 10 principles →'}
+                  {language === 'pt'
+                    ? 'Ler os 10 princípios →'
+                    : language === 'es'
+                      ? 'Leer los 10 principios →'
+                      : 'Read all 10 principles →'}
                 </Link>
               </div>
             </div>
@@ -570,6 +650,51 @@ export function AppContent() {
               marginTop: 'var(--avante-space-6)'
             }}
           >
+            {/* ContactDoors — Phase D. Three mailto cells (Founders / LPs /
+                Press) presented as the primary contact pattern. The classic
+                ContactFormSection stays below as a fallback for visitors
+                who prefer a form, but the doors lead the section. */}
+            <div style={{ marginBottom: 'var(--avante-space-8)' }}>
+              <SectionMasthead
+                eyebrow={
+                  language === 'pt' ? '§ V — contato' : language === 'es' ? '§ V — contacto' : '§ V — contact'
+                }
+                title={
+                  language === 'pt' ? (
+                    <>
+                      Se você está construindo,
+                      <br />
+                      nos encontre.
+                    </>
+                  ) : language === 'es' ? (
+                    <>
+                      Si estás construyendo,
+                      <br />
+                      encuéntranos.
+                    </>
+                  ) : (
+                    <>
+                      If you’re building,
+                      <br />
+                      find us.
+                    </>
+                  )
+                }
+                description={
+                  language === 'pt'
+                    ? 'Três portas. Escolha a que encaixa. Cada uma abre para uma pessoa — não um formulário.'
+                    : language === 'es'
+                      ? 'Tres puertas. Elige la que encaja. Cada una abre a una persona — no un formulario.'
+                      : 'Three doors. Pick the one that fits. Each opens to a person — not a form.'
+                }
+                screenLabel={
+                  language === 'pt' ? '§ v — contato' : language === 'es' ? '§ v — contacto' : '§ v — contact'
+                }
+                screenNum="05 / 05"
+              />
+              <ContactDoors />
+            </div>
+
             <ContactFormSection />
           </ScrollRevealSection>
 

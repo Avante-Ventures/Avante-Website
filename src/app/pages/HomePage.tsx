@@ -13,11 +13,16 @@ const SEO_COPY = {
     description: "Co-fundamos empresas AI-native do zero. Playbooks do Vale do Silício, execução brasileira. Construído para compor por décadas.",
     inLanguage: "pt-BR",
   },
+  es: {
+    title: "Avante Ventures — Venture Studio AI-Native en Brasil",
+    description: "Co-fundamos empresas AI-native desde cero. Playbooks de Silicon Valley, ejecución nativa de Brasil. Construido para hacer compound por décadas.",
+    inLanguage: "es",
+  },
 } as const;
 
 export default function HomePage() {
   const { language } = useLanguage();
-  const copy = SEO_COPY[language];
+  const copy = SEO_COPY[language] ?? SEO_COPY.en;
 
   const homeJsonLd = {
     "@context": "https://schema.org",

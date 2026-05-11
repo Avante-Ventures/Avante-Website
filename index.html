@@ -4,14 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Site-level baseline. Per-route title/description/canonical/OG-title/
-         OG-description/OG-url/twitter-title/twitter-description are injected
-         at runtime by react-helmet-async (src/app/components/SEOHelmet.tsx)
-         and captured at build time by the Puppeteer prerender. -->
+    <!-- Site-level baseline. Per-route title / description / canonical /
+         OG-title / OG-description / OG-url / OG-image / OG-locale /
+         twitter-title / twitter-description are injected at runtime by
+         react-helmet-async (src/app/components/SEOHelmet.tsx) and captured
+         at build time by the Puppeteer prerender. The previous static
+         description here was producing a DUPLICATE meta tag in the DOM
+         alongside the per-route one — Google was reading the static one
+         first, defeating per-page descriptions. Same logic applies to
+         og:image (now also per-route only). -->
     <title>Avante Ventures</title>
-    <meta name="description" content="AI-native venture studio. Silicon Valley playbooks, Brazil-native execution." />
-    <meta name="theme-color" content="#151E35" />
+    <meta name="theme-color" content="#06070d" />
     <meta name="color-scheme" content="dark" />
+
+    <!-- Editorial typography: Funnel Display (display) + Bricolage Grotesque (body) + JetBrains Mono (labels). -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Favicons + PWA manifest -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -20,22 +32,25 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
 
-    <!-- OpenGraph site-level (overridable per page) -->
+    <!-- OpenGraph site-level (overridable per page).
+         og:locale, og:locale:alternate, AND og:image are emitted per-route
+         by SEOHelmet — keep them out of the static HTML so we don't get
+         duplicate tags. og:image:width/height/alt stay here as static
+         metadata about the default image (SEOHelmet uses it by default). -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Avante Ventures" />
-    <meta property="og:image" content="https://avanteventures.com/og-image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Avante Ventures — AI-native venture studio for Brazil" />
-    <meta property="og:locale" content="en_US" />
-    <meta property="og:locale:alternate" content="pt_BR" />
 
     <!-- Twitter Card site-level -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content="https://avanteventures.com/og-image.png" />
 
-    <!-- Hint search engines about indexing preferences -->
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <!-- robots is now emitted per-route by SEOHelmet so individual pages
+         (e.g. unpublished stub articles) can flip to noindex without
+         producing a duplicate meta robots tag in the DOM. -->
+
 
     <!-- JSON-LD: Organization (primary entity) -->
     <script type="application/ld+json">

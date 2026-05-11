@@ -13,6 +13,14 @@ const ProofSectionComponent = () => {
 
   const trackRecordMetrics: MetricData[] = [
     {
+      value: '2014',
+      color: '#42468C',
+      context: t(
+        'iFood — early investment by our team (pre-unicorn era)',
+        'iFood — investimento inicial pelo nosso time (era pré-unicórnio)'
+      ),
+    },
+    {
       value: '10x',
       color: '#98509A',
       context: t(
@@ -38,21 +46,25 @@ const ProofSectionComponent = () => {
     },
   ];
 
+  // Round 8 — softened "Early signals" wording. The previous "90% cost
+  // reduction" claim was a public commitment we cannot guarantee at scale;
+  // reframed as a directional indicator from a specific workflow without
+  // generalizing to the whole product.
   const currentMetrics: MetricData[] = [
     {
       value: '5x',
       color: '#98509A',
       context: t(
-        'Intake volume increase (WIR InsurTech)',
-        'Aumento de volume de intake (WIR InsurTech)'
+        'Intake volume increase (WIR InsurTech, Tier-1 insurer pilot under NDA)',
+        'Aumento de volume de intake (WIR InsurTech, piloto com seguradora Tier-1 sob NDA)'
       ),
     },
     {
-      value: '90%',
+      value: 'Hours → minutes',
       color: '#F18B46',
       context: t(
-        'Cost reduction in underwriting workflows',
-        'Redução de custo em workflows de underwriting'
+        'Underwriting cycle compression on early WIR pilots',
+        'Compressão do ciclo de underwriting nos pilotos iniciais da WIR'
       ),
     },
   ];
@@ -86,19 +98,26 @@ const ProofSectionComponent = () => {
             )}
           />
 
-          {/* Metrics Grid */}
+          {/* Metrics Grid — 4 columns on desktop (one row), 2 on tablet,
+              1 on mobile. Round 8 update: was 3-col which left the 4th
+              metric ($500MM+) orphaned on its own row. */}
           <div
+            className="track-record-grid"
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: '40px',
-              marginBottom: '24px'
+              gap: '32px',
+              marginBottom: '24px',
             }}
           >
             {trackRecordMetrics.map((metric, index) => (
               <MetricCard key={index} metric={metric} />
             ))}
           </div>
+          <style>{`
+            .track-record-grid { grid-template-columns: 1fr; }
+            @media (min-width: 640px) { .track-record-grid { grid-template-columns: repeat(2, 1fr); } }
+            @media (min-width: 1024px) { .track-record-grid { grid-template-columns: repeat(4, 1fr); } }
+          `}</style>
         </div>
 
         {/* Divider */}
@@ -228,19 +247,21 @@ const MetricCard = memo(({ metric }: MetricCardProps) => {
         e.currentTarget.style.transform = 'translateY(0)';
       }}
     >
-      {/* Metric Value */}
+      {/* Metric Value — Round 8 fix: long values like "Hours → minutes"
+          were truncating in the 4-col grid. clamp() lets the type shrink
+          to fit but keep the visual gravity at desktop sizes. */}
       <div
         style={{
-          fontSize: '64px',
+          fontSize: 'clamp(32px, 4vw, 56px)',
           fontWeight: 'var(--font-weight-bold)',
           color: metric.color,
-          lineHeight: '1.1',
-          marginBottom: '20px',
-          letterSpacing: '-0.02em',
+          lineHeight: '1.05',
+          marginBottom: '18px',
+          letterSpacing: '-0.025em',
           fontVariantNumeric: 'tabular-nums',
           wordBreak: 'keep-all',
           whiteSpace: 'nowrap',
-          overflow: 'visible'
+          overflow: 'visible',
         }}
       >
         {metric.value}

@@ -18,11 +18,16 @@ const SEO_COPY = {
     description: "Por que venture studios superam VC tradicional. 50% de retornos anuais. Capital pré-tração + suporte operacional compõem. Playbooks do Vale para o Brasil.",
     inLanguage: "pt-BR",
   },
+  es: {
+    title: "Por Qué Avante: La Ventaja del Venture Studio en Brasil",
+    description: "Por qué los venture studios superan al VC tradicional. 50% de retornos anuales. Capital pre-tracción + soporte operativo hacen compound. Playbooks de Silicon Valley para Brasil.",
+    inLanguage: "es",
+  },
 } as const;
 
 export default function WhyAvantePage() {
   const { t, language } = useLanguage();
-  const copy = SEO_COPY[language];
+  const copy = SEO_COPY[language] ?? SEO_COPY.en;
 
   const whyAvanteJsonLd = {
     "@context": "https://schema.org",

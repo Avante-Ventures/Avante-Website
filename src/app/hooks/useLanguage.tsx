@@ -1,7 +1,7 @@
 import { createContext, useContext, ReactNode, useMemo, useCallback } from 'react';
 import { useLocation, useNavigate } from 'react-router';
 
-export type Language = 'pt' | 'en';
+export type Language = 'pt' | 'en' | 'es';
 
 interface LanguageContextType {
   language: Language;
@@ -609,6 +609,310 @@ const translations = {
     'library.cta.placeholder': 'your@email.com',
     'library.cta.button': 'Subscribe',
     'library.cta.note': 'One email per month. No spam. Unsubscribe anytime.',
+  },
+
+  // Spanish translations — added in Round 6. Mirrors the EN dictionary 1:1
+  // so any key resolved through `t()` returns native Spanish copy. Strings
+  // are written in neutral LATAM Spanish (no Spain regionalisms), tuned for
+  // the same operator + investor audience that reads the EN/PT versions.
+  es: {
+    // Nav
+    'nav.thesis': 'Tesis',
+    'nav.playbook': 'Playbook',
+    'nav.team': 'Equipo',
+    'nav.faq': 'FAQ',
+    'nav.contact': 'Contacto',
+    'nav.what': 'Qué Hacemos',
+    'nav.brazil': 'Brasil',
+    'nav.cta': 'Empezar',
+    'nav.cta.primary': 'Asóciate con Avante',
+    'nav.cta.secondary': 'Ver el Sistema',
+
+    // Hero
+    'hero.tagline': 'Venture Building + Inversión en Etapa Temprana',
+    'hero.headline': 'Co-fundamos empresas desde cero e invertimos en startups pre-tracción en Brasil.',
+    'hero.subheadline': 'Avante aporta capital, desarrollo de producto, ingeniería e infraestructura de go-to-market. O construimos contigo desde el día uno, o invertimos antes de tu Serie A.',
+    'hero.cta.primary': 'Iniciar una Conversación',
+    'hero.cta.secondary': 'Ver el Sistema',
+    'hero.microproof': 'Build-to-compound. Cashflow primero. Sin hype—solo ejecución.',
+    'hero.scroll': 'Bajar',
+
+    // CTA Sections
+    'cta.title': '¿Listo para construir?',
+    'cta.subtitle': 'Únete a operadores construyendo la próxima generación de empresas AI-native en Brasil.',
+    'cta.primary': 'Iniciar una Conversación',
+    'cta.secondary': 'Conoce al Equipo',
+    'cta.compact': 'Contáctanos',
+
+    // Contact Modal
+    'contact.title': 'Construyamos juntos',
+    'contact.subtitle': 'Cuéntanos sobre tu visión y te respondemos en menos de 48 horas.',
+    'contact.success': '¡Mensaje enviado! Te contactaremos pronto.',
+    'contact.form.name': 'Nombre',
+    'contact.form.email': 'Email',
+    'contact.form.company': 'Empresa (opcional)',
+    'contact.form.message': '¿Qué estás construyendo?',
+    'contact.form.stage': 'Etapa',
+    'contact.form.stages.idea': 'Idea / Concepto',
+    'contact.form.stages.mvp': 'MVP / Construyendo',
+    'contact.form.stages.traction': 'Tracción Inicial',
+    'contact.form.stages.scaling': 'Escalando',
+    'contact.form.submit': 'Enviar Mensaje',
+    'contact.form.submitting': 'Enviando...',
+
+    // What We Do
+    'whatwedo.title.line1': 'Dos formas de trabajar con Avante:',
+    'whatwedo.title.line2': 'Venture building o inversión en etapa temprana.',
+    'whatwedo.bullet1': 'Camino 1: Co-Construir — Somos socios desde el día uno, aportando producto, ingeniería y capital para lanzar desde cero.',
+    'whatwedo.bullet2': 'Camino 2: Invertir Temprano — Lideramos rondas pre-tracción en fundadores excepcionales construyendo líderes de categoría AI-native.',
+    'whatwedo.bullet3': 'Ambos Caminos: Soporte operativo completo incluyendo go-to-market, estrategia de capital e infraestructura de gobernanza.',
+    'whatwedo.tagline': 'Avante combina ejecución de venture studio con disciplina de inversión en etapa temprana.',
+
+    // The Avante System
+    'system.title': 'El Sistema Avante',
+    'system.subtitle': 'Un loop repetible para lanzar 3–4 ventures por año y hacer compound de los ganadores por décadas.',
+    'system.step1.title': 'Investigar la cuña',
+    'system.step1.desc': 'encontrar workflows donde la IA crea ventaja de 10×.',
+    'system.step2.title': 'Asociarse con operadores',
+    'system.step2.desc': 'expertos de dominio + constructores.',
+    'system.step3.title': 'Construir rápido',
+    'system.step3.desc': 'equipo pequeño, núcleo con IA, iteración rápida.',
+    'system.step4.title': 'Ganar tracción',
+    'system.step4.desc': 'usuarios reales, ingresos reales, señales honestas.',
+    'system.step5.title': 'Probar unit economics',
+    'system.step5.desc': 'LTV:CAC importa desde el día uno.',
+    'system.step6.title': 'Compound',
+    'system.step6.desc': 'escalar con rentabilidad, construir moats duraderos.',
+    'system.miniline': 'Investigar → Asociar → Construir → Tracción → Ingresos → Compounding.',
+
+    // Resource Backbone
+    'backbone.title': 'Capacidades de una organización escalada—desde el día cero.',
+    'backbone.subtitle': 'Los fundadores no fallan por falta de ideas. Fallan porque la ejecución está fragmentada. Nosotros aportamos la espina dorsal.',
+    'backbone.card1.title': 'Producto e Ingeniería',
+    'backbone.card1.desc': 'Entrega de producto de clase mundial e infraestructura de IA—construida para entregar.',
+    'backbone.card2.title': 'Capital y Acceso a Deal Flow',
+    'backbone.card2.desc': 'Capital pre-tracción + un camino creíble al follow-on cuando las señales son reales.',
+    'backbone.card3.title': 'Dominio y Distribución',
+    'backbone.card3.desc': 'Ventaja local en Brasil + redes de operadores para llegar rápido a clientes.',
+    'backbone.card4.title': 'Marca y Diseño',
+    'backbone.card4.desc': 'Posicionamiento premium, claridad de categoría y storytelling que coincide con la realidad.',
+    'backbone.card5.title': 'Sistema Operativo',
+    'backbone.card5.desc': 'Gobernanza, cadencia, reporting y disciplina de toma de decisiones.',
+    'backbone.card6.title': 'Crecimiento y GTM',
+    'backbone.card6.desc': 'Motion de ventas, pricing, funnels, partnerships—construido para cashflow.',
+
+    // Why Brazil, Why Now
+    'whybrazil.title': 'Brasil es el mercado de compounding más subestimado.',
+    'whybrazil.bullet1': 'Industrias enormes intensivas en servicios donde los workflows siguen siendo manuales y fragmentados.',
+    'whybrazil.bullet2': 'La IA está temprano en producción—los líderes de categoría aún no están coronados.',
+    'whybrazil.bullet3': 'Baja saturación de producto crea espacio para nuevos negocios que definen categoría.',
+    'whybrazil.bullet4': 'Velocidad + disciplina vence al hype en mercados con complejidad operativa real.',
+
+    // Build-to-Compound
+    'compound.title': 'Build-to-Compound.',
+    'compound.subtitle': 'No construimos para exits. Construimos negocios duraderos que generan caja y hacen compound por décadas.',
+    'compound.principle1': 'El cashflow es la tracción más honesta.',
+    'compound.principle2': 'Probar unit economics temprano (LTV:CAC desde el día uno).',
+    'compound.principle3': 'Retención vence métricas de vanidad (uso real, stickiness real).',
+    'compound.principle4': 'Los moats se construyen, no se reclaman (loops, lock-in, redes).',
+
+    // Thesis (for tabs)
+    'thesis.tab': 'Build-to-Compound',
+    'thesis.intro': 'No construimos para exits. Construimos negocios duraderos que generan caja y hacen compound por décadas.',
+    'thesis.step1.title': 'Cashflow Primero',
+    'thesis.step1.desc': 'Probar unit economics temprano. LTV:CAC desde el día uno. La caja es la tracción más honesta.',
+    'thesis.step2.title': 'Retención > Vanidad',
+    'thesis.step2.desc': 'Uso real, stickiness real. Optimizamos para el usuario que se queda, no para el que firma.',
+    'thesis.step3.title': 'Construir Moats',
+    'thesis.step3.desc': 'Network effects, costos de switching, loops de datos. Los moats se construyen mediante compounding, no se reclaman.',
+
+    // What We Don't Do
+    'dontdo.title': 'Lo que no hacemos.',
+    'dontdo.tab': 'Filtro Anti-Hype',
+    'dontdo.intro': 'Sin turistas. Sin teatro. Filtramos el ruido y nos enfocamos en lo que realmente funciona.',
+    'dontdo.item1': 'No perseguimos mercados hype-first sin ventaja operativa.',
+    'dontdo.item2': 'No construimos servicios disfrazados de software.',
+    'dontdo.item3': 'No dependemos del fundraising como modelo de negocio.',
+    'dontdo.item4': 'No corremos ciclos largos de R&D antes de probar demanda.',
+    'dontdo.item5': 'No contratamos por titulares—contratamos por ejecución.',
+    'dontdo.item6': 'No optimizamos para demo day—optimizamos para semana 52.',
+    'dontdo.bullet1': 'No perseguimos mercados hype-first sin ventaja operativa.',
+    'dontdo.bullet2': 'No construimos servicios disfrazados de software.',
+    'dontdo.bullet3': 'No dependemos del fundraising como modelo de negocio.',
+    'dontdo.bullet4': 'No corremos ciclos largos de R&D antes de probar demanda.',
+    'dontdo.tagline': 'Sin turistas. Sin teatro. Solo operadores construyendo para la realidad.',
+
+    // Where Avante Fits
+    'fits.title': 'Dónde encaja Avante.',
+    'fits.tab': 'Dónde Encajamos',
+    'fits.intro': 'No somos un VC. Ni un acelerador. Ni una agencia. Somos los tres—y ninguno.',
+    'fits.column.traditional': 'Modelo Tradicional',
+    'fits.column.avante': 'Avante',
+    'fits.traditional.item1': 'Solo invierte capital',
+    'fits.traditional.item2': 'Provee mentoría',
+    'fits.traditional.item3': 'Programas de corto plazo',
+    'fits.traditional.item4': 'Aproximación hands-off',
+    'fits.avante.item1': 'Co-construye + financia',
+    'fits.avante.item2': 'Espina dorsal de ejecución completa',
+    'fits.avante.item3': 'Asociación de largo plazo',
+    'fits.avante.item4': 'Hands-on diariamente',
+    'fits.tagline': 'Co-fundamos, construimos, financiamos y escalamos bajo un único sistema operativo.',
+    'fits.vc': 'VC: invierte capital—no co-construye diariamente.',
+    'fits.accelerator': 'Acelerador: ayuda a fundadores—no aporta espina dorsal de ejecución.',
+    'fits.agency': 'Agencia: entrega para clientes—no es dueña ni compone valor del venture.',
+    'fits.avante': 'Avante: co-funda + construye + financia + escala bajo un único sistema operativo.',
+
+    // Team
+    'team.title': 'Construido por operadores que ya han estado ahí.',
+    'team.subtitle': 'Hemos construido, escalado y salido. Ahora estamos desplegando esa pattern recognition para construir los próximos líderes de categoría de Brasil.',
+    'team.location.sf': 'San Francisco',
+    'team.location.sp': 'São Paulo',
+    'team.role.cofounder': 'Co-Fundadora',
+    'team.role.cofounderM': 'Co-Fundador',
+    'team.role.strategicpartner': 'Socio Estratégico',
+    'team.andrea.desc': 'Líder de producto en [Empresa]. Lanzó productos 0→1, escaló equipos, navegó adquisición.',
+    'team.jess.desc': 'Líder de ingeniería en [Empresa]. Construyó infraestructura a escala, profunda experiencia en AI/ML.',
+    'team.amanda.desc': 'Operadora en [Empresa Brasileña]. Profunda experiencia vertical, ejecución de go-to-market.',
+    'team.felipe.desc': 'Builder en [Startup Brasileña]. Velocidad de producto, ejecución técnica, levantó capital.',
+    'team.quote': 'No somos turistas. Hemos construido, escalado y salido. Ahora desplegamos esa pattern recognition para construir los próximos líderes de categoría de Brasil.',
+
+    // Logo Strip
+    'logos.title': 'Operadores que han construido, escalado y salido—aplicando ahora esa pattern recognition en Brasil.',
+    'logos.subtitle': 'Nuestro ecosistema: ventures que construimos y socios con los que operamos.',
+
+    // FAQ
+    'faq.title': 'Preguntas Frecuentes',
+    'faq.q1': '¿Quién debería asociarse con Avante?',
+    'faq.a1': 'Operadores y fundadores construyendo software AI-powered para industrias intensivas en servicios en Brasil. Debes tener experiencia de dominio y querer soporte hands-on de builders experimentados.',
+    'faq.q2': '¿Cuánto capital aportan?',
+    'faq.a2': 'Para venture builds: capital pre-seed a seed atado a milestones. Para inversiones tempranas: lideramos o co-lideramos rondas pre-tracción, típicamente $250K–$2M.',
+    'faq.q3': '¿Qué aportan más allá del capital?',
+    'faq.a3': 'Soporte completo de ejecución: equipo de desarrollo de producto, infraestructura de ingeniería, estrategia de go-to-market, guía de fundraising y sistemas de gobernanza. Trabajamos contigo diariamente.',
+    'faq.q4': '¿Qué participación accionaria toman?',
+    'faq.a4': 'Varía por modelo. Venture builds: equity de co-fundador alineado. Inversiones tempranas: términos estándar pre-seed/seed a precio justo de mercado. Optimizamos para alineación de largo plazo, no para ownership máximo.',
+    'faq.q5': '¿Cuánto tarda en arrancar?',
+    'faq.a5': 'Después de la conversación inicial: 1–2 semanas para evaluación de venture build, 2–4 semanas para diligence de inversión. Nos movemos rápido cuando vemos un fit.',
+    'faq.q6': '¿Cómo aplico o me pongo en contacto?',
+    'faq.a6': 'Haz clic en "Iniciar una Conversación" arriba. Incluye: qué estás construyendo, tu background, etapa actual y por qué Brasil. Respondemos a cada consulta seria en menos de 48 horas.',
+
+    // Footer
+    'footer.tagline': 'Construyendo campeones verticales AI-native en Brasil.',
+    'footer.company': 'Empresa',
+    'footer.connect': 'Conecta',
+    'footer.resources': 'Recursos',
+    'footer.thesis': 'Tesis',
+    'footer.playbook': 'Playbook',
+    'footer.team': 'Equipo',
+    'footer.faq': 'FAQ',
+    'footer.whyavante': 'Por Qué Avante',
+    'footer.library': 'Biblioteca',
+    'footer.copyright': '© 2026 Avante. Todos los derechos reservados.',
+
+    // Why Avante Page
+    'whyavante.backhome': 'Volver al Inicio',
+    'whyavante.hero.badge': 'Datos & Hechos',
+    'whyavante.hero.title': 'Los Venture Studios Retornan 50% Anual. Los VCs Tradicionales 15%.',
+    'whyavante.hero.subtitle': 'Co-construimos empresas desde cero e invertimos pre-consenso. Sin esperar tracción. Sin seguir multitudes. Datos de GSSN lo prueban: venture building + first tickets superan a toda otra clase de activo.',
+
+    // Stats
+    'whyavante.stats.stat1': 'Retorno Anual Promedio (Venture Studios)',
+    'whyavante.stats.stat2': 'Más Alto que VC Tradicional',
+    'whyavante.stats.stat3': 'Mayor Tasa de Éxito',
+
+    // Problem Section
+    'whyavante.problem.title': 'El Modelo Tradicional Está Roto',
+    'whyavante.problem.subtitle': 'El venture capital en mercados emergentes sigue un patrón predecible: esperar tracción, perseguir consenso, diluir fundadores y esperar exits. Eso crea incentivos desalineados y resultados mediocres.',
+    'whyavante.problem.issue1.label': 'Issue #1',
+    'whyavante.problem.issue1.title': 'Los VCs Esperan Tracción',
+    'whyavante.problem.issue1.description': 'Los fondos tradicionales despliegan capital solo cuando el riesgo está reducido. Para entonces, el precio es alto, el equity está diluido y el upside está acotado.',
+    'whyavante.problem.issue2.label': 'Issue #2',
+    'whyavante.problem.issue2.title': 'Los Fundadores Carecen de Soporte de Ejecución',
+    'whyavante.problem.issue2.description': 'Mentoría e intros de network no son suficientes. Los fundadores necesitan producto, capital, distribución y sistemas desde el día cero.',
+    'whyavante.problem.issue3.label': 'Issue #3',
+    'whyavante.problem.issue3.title': 'Mentalidad Exit-First',
+    'whyavante.problem.issue3.description': 'Cuando el modelo de negocio son rondas de fundraising y flips, los incentivos se rompen. Los negocios reales hacen compound—no optimizan para demo day.',
+
+    // Comparison & Returns
+    'whyavante.comparison.title': 'Venture Studio vs Capital Tradicional',
+    'whyavante.comparison.description': 'Mientras los VCs firman cheques y esperan, los venture studios co-construyen desde cero con ejecución hands-on. La diferencia es estructural—y los retornos lo reflejan.',
+    'whyavante.returns.title': 'Los Datos: Venture Studios Superan',
+    'whyavante.returns.description': 'Los venture studios lideran todas las clases de activos con 50% de retornos anualizados—el doble de los aceleradores y 3x el VC tradicional. Esto no es suerte. Es un modelo operativo superior.',
+    'whyavante.returns.source': 'Fuente: GSSN Global Venture Studio Report 2023',
+
+    // The Avante Dual Model
+    'whyavante.model.title': 'El Modelo Dual Avante',
+    'whyavante.model.subtitle': 'Combinamos lo mejor de venture building Y first-ticket investing. Dos caminos, un sistema, resultados que componen.',
+
+    'whyavante.model.path1.badge': 'Camino 1',
+    'whyavante.model.path1.title': 'Venture Building',
+    'whyavante.model.path1.description': 'Co-fundamos desde cero en verticales donde la IA crea ventajas de 10x. Espina dorsal de ejecución completa, capital pre-tracción, equity alineado.',
+    'whyavante.model.path1.point1': 'Investigar oportunidades AI-native en industrias intensivas en servicios',
+    'whyavante.model.path1.point2': 'Asociarnos con operadores de dominio que conocen el workflow',
+    'whyavante.model.path1.point3': 'Construir MVPs en 8–12 semanas con nuestro equipo de producto + ingeniería',
+    'whyavante.model.path1.point4': 'Probar unit economics temprano, escalar con disciplina de cashflow',
+
+    'whyavante.model.path2.badge': 'Camino 2',
+    'whyavante.model.path2.title': 'First Tickets',
+    'whyavante.model.path2.description': 'Invertimos pre-tracción en fundadores excepcionales construyendo líderes de categoría AI-native. Entramos antes del consenso, ganamos el mejor precio y escalamos con gobernanza.',
+    'whyavante.model.path2.point1': 'Identificar mega-ganadores antes de que el mercado vea la señal',
+    'whyavante.model.path2.point2': 'Liderar rondas con capital estratégico + soporte operativo',
+    'whyavante.model.path2.point3': 'Aportar la espina dorsal de recursos: producto, GTM, sistemas',
+    'whyavante.model.path2.point4': 'Mantener por décadas—componer, no flippear',
+
+    // Why This Matters
+    'whyavante.matters.title': 'Por Qué Esto Importa para Brasil',
+    'whyavante.matters.point1.title': 'Hands-On Desde el Día Cero',
+    'whyavante.matters.point1.description': 'No esperamos a que los fundadores lo descifren. Co-construimos con producto, capital y distribución desde el día uno.',
+    'whyavante.matters.point2.title': 'Capital Pre-Tracción',
+    'whyavante.matters.point2.description': 'Los first tickets nos dan el mejor precio, el mayor equity y control sobre la dirección estratégica antes de que el mercado se ponga ruidoso.',
+    'whyavante.matters.point3.title': 'Capital-Eficiente por Diseño',
+    'whyavante.matters.point3.description': 'Optimizamos para cashflow y unit economics, no para métricas de vanidad. Cada dólar desplegado está atado a tracción real.',
+    'whyavante.matters.point4.title': 'Compounding Sobre Exits',
+    'whyavante.matters.point4.description': 'Construimos para mantener por décadas. Los mejores resultados vienen de negocios que componen, no de los optimizados para demo day.',
+
+    // Why Brazil, Why Now
+    'whyavante.brazil.title': 'Por Qué Brasil, Por Qué Ahora',
+    'whyavante.brazil.subtitle': 'Brasil es el mercado de compounding más subestimado del mundo. Industrias enormes intensivas en servicios, baja saturación de producto e IA creando ventajas generacionales—ahora mismo.',
+    'whyavante.brazil.point1.label': 'Tamaño de Mercado',
+    'whyavante.brazil.point1.text': 'Población de 215M, economía de $2T+, aún dramáticamente subatendida por software.',
+    'whyavante.brazil.point2.label': 'Complejidad Operativa',
+    'whyavante.brazil.point2.text': 'Industrias intensivas en servicios donde los workflows son manuales, fragmentados y maduros para automatización con IA.',
+    'whyavante.brazil.point3.label': 'Adopción Temprana de IA',
+    'whyavante.brazil.point3.text': 'La IA está en producción pero los líderes de categoría aún no están coronados. Velocidad + disciplina gana.',
+    'whyavante.brazil.point4.label': 'Baja Saturación',
+    'whyavante.brazil.point4.text': 'Espacio para nuevos negocios que definen categoría. Sin competir con 50 copycats.',
+    'whyavante.brazil.point5.label': 'Ventaja Local',
+    'whyavante.brazil.point5.text': 'Profunda experiencia de dominio, redes de operadores y distribución que jugadores internacionales no pueden replicar.',
+    'whyavante.brazil.point6.label': 'Capital-Eficiente',
+    'whyavante.brazil.point6.text': 'Construir por menos, ganar tracción más rápido, hacer compound sin necesitar mega-rondas.',
+
+    // CTA
+    'whyavante.cta.title': '¿Listo para Construir al Estilo Avante?',
+    'whyavante.cta.description': 'Únete a operadores, builders e inversores creando la próxima generación de líderes de categoría AI-native en Brasil. Sin turistas. Sin hype. Solo ejecución.',
+    'whyavante.cta.button': 'Asóciate con Avante',
+
+    // Library Page
+    'library.backhome': 'Volver al Inicio',
+    'library.hero.badge': 'Investigación & Insights',
+    'library.hero.title': 'Insights de Venture Building para Operadores',
+    'library.hero.subtitle': 'Reportes de investigación, playbooks y case studies sobre venture studios, first-ticket investing, negocios AI-native y oportunidades en Brasil. Escritos por operadores que han construido y escalado empresas.',
+    'library.hero.stats': '9 Recursos • Actualizado Mensualmente',
+
+    // Categories
+    'library.category.all': 'Todos',
+    'library.category.insights': 'Insights',
+    'library.category.research': 'Investigación',
+    'library.category.casestudies': 'Case Studies',
+    'library.category.playbooks': 'Playbooks',
+    'library.category.brazil': 'Mercado Brasil',
+    'library.category.ai': 'IA & Tech',
+
+    // CTA
+    'library.cta.title': 'Recibe Nueva Investigación & Insights',
+    'library.cta.description': 'Únete a operadores, inversores y builders recibiendo insights mensuales sobre venture building, negocios AI-native y oportunidades en mercados emergentes.',
+    'library.cta.placeholder': 'tu@email.com',
+    'library.cta.button': 'Suscribirse',
+    'library.cta.note': 'Un email al mes. Sin spam. Cancela cuando quieras.',
   }
 };
 
@@ -630,13 +934,18 @@ export function LanguageProvider({
 
   const setLanguage = useCallback((lang: Language) => {
     if (lang === locale) return;
-    // Replace the leading /en or /pt with the target lang and keep the rest
-    const newPath = location.pathname.replace(/^\/(en|pt)/, `/${lang}`);
+    // Replace the leading /en /pt /es with the target lang and keep the rest
+    const newPath = location.pathname.replace(/^\/(en|pt|es)/, `/${lang}`);
     navigate(newPath || `/${lang}`, { replace: false });
   }, [locale, location.pathname, navigate]);
 
+  // ES dictionary may have gaps during incremental rollout — fall back to
+  // EN strings rather than rendering raw key names. Pattern: `es?[k] || en[k]`.
   const t = useCallback((key: string): string => {
-    return translations[locale][key] || key;
+    const dict = translations[locale] as Record<string, string> | undefined;
+    if (dict && dict[key]) return dict[key];
+    // Fallback chain: dict -> EN -> the key itself
+    return translations.en[key] || key;
   }, [locale]);
 
   const value = useMemo(() => ({

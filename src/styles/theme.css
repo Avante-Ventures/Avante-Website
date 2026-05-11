@@ -18,29 +18,57 @@ section[id] {
   --font-weight-medium: 500;
   --font-weight-normal: 400;
 
-  /* Avante Color System - Brazilian Abundance + Exclusivity */
-  --avante-background: #151E35;
-  --avante-surface: rgba(255, 255, 255, 0.05);
-  --avante-surface-glass: rgba(255, 255, 255, 0.05);
-  --avante-surface-hover: rgba(255, 255, 255, 0.08);
-  --avante-border: rgba(255, 255, 255, 0.12);
-  --avante-text-primary: #FFFFFF;
-  --avante-text-secondary: rgba(255, 255, 255, 0.72);
-  --avante-text-muted: rgba(255, 255, 255, 0.55);
-  
-  /* Avante Accent System */
-  --avante-accent-indigo: #42468C;
-  --avante-accent-purple: #98509A;
-  --avante-accent-orange: #F18B46;
-  --avante-accent-gold: #F9B437;
+  /* Avante Color System — editorial dark (Phase A: bumped from #151E35 to #06070d ink). */
+  --avante-background: #06070d;
+  --avante-surface: rgba(255, 255, 255, 0.03);
+  --avante-surface-glass: rgba(255, 255, 255, 0.04);
+  --avante-surface-hover: rgba(255, 255, 255, 0.06);
+  --avante-border: rgba(255, 255, 255, 0.08);
+  --avante-text-primary: #eef0f7;
+  --avante-text-secondary: rgba(238, 240, 247, 0.78);
+  --avante-text-muted: rgba(238, 240, 247, 0.55);
 
-  /* Avante Gradient System */
-  --avante-gradient-signature: linear-gradient(135deg, #F9B437 0%, #F18B46 25%, #98509A 60%, #42468C 100%);
-  --avante-gradient-linear: linear-gradient(135deg, #F9B437 0%, #F18B46 25%, #98509A 60%, #42468C 100%);
-  
-  /* Avante Glow System - Night Luxury */
-  --avante-glow-purple: rgba(152, 80, 154, 0.22);
-  --avante-glow-gold: rgba(249, 180, 55, 0.14);
+  /* Avante Accent System (legacy) — kept for components mid-migration. */
+  --avante-accent-indigo: #3a2f8f;
+  --avante-accent-purple: #a8429b;
+  --avante-accent-orange: #f4a93a;
+  --avante-accent-gold: #f4a93a;
+
+  /* Avante Gradient System (refreshed: orange → pink → purple → indigo). */
+  --avante-gradient-signature: linear-gradient(118deg, #f4a93a 0%, #ec5f72 38%, #a8429b 68%, #3a2f8f 100%);
+  --avante-gradient-linear: linear-gradient(118deg, #f4a93a 0%, #ec5f72 38%, #a8429b 68%, #3a2f8f 100%);
+
+  /* Avante Glow System (refreshed for #06070d ink). */
+  --avante-glow-purple: rgba(168, 66, 155, 0.22);
+  --avante-glow-gold: rgba(244, 169, 58, 0.18);
+
+  /* Editorial design tokens (new — used by refactored components in B/C/D). */
+  --avt-ink: #06070d;
+  --avt-ink-2: #0a0c16;
+  --avt-ink-3: #0f1124;
+  --avt-hair: #171a2a;
+  --avt-hair-2: #252a40;
+  --avt-meta: #5d6486;
+  --avt-muted: #8a91b0;
+  --avt-txt: #eef0f7;
+  --avt-grad: linear-gradient(118deg, #f4a93a 0%, #ec5f72 38%, #a8429b 68%, #3a2f8f 100%);
+  --avt-grad-line: linear-gradient(90deg, transparent 0%, #f4a93a 18%, #ec5f72 38%, #a8429b 60%, #3a2f8f 82%, transparent 100%);
+
+  /* Editorial typography — used by .avt-display / .avt-body / .avt-lbl. */
+  --avt-font-display: 'Funnel Display', system-ui, sans-serif;
+  --avt-font-body: 'Bricolage Grotesque', system-ui, sans-serif;
+  --avt-font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Page-level layout tokens (Fix 4 — TOC panel: padding consistency).
+     Each route used to define its own `padding: clamp(...)` triplet,
+     producing 3+ different rhythms across the site. These tokens
+     centralize the rhythm so every page heads with the same reveal
+     distance under the navbar. The container token caps the readable
+     width consistently. */
+  --avt-page-pad-top: clamp(96px, 13vh, 150px);
+  --avt-page-pad-bottom: clamp(64px, 8vh, 96px);
+  --avt-page-pad-x: clamp(24px, 4vw, 48px);
+  --avt-page-max-width: 1200px;
 
   /* Avante Typography System */
   --avante-h1-size: 56px;
@@ -227,10 +255,20 @@ section[id] {
 
   body {
     @apply bg-background text-foreground;
+    /* Editorial body font (Phase A). Fallback to system-ui until Bricolage loads. */
+    font-family: var(--avt-font-body);
+    font-variation-settings: 'opsz' 24;
+    background-color: var(--avt-ink);
+    color: var(--avt-txt);
     /* Optimize scroll performance */
     -webkit-overflow-scrolling: touch;
     overflow-y: scroll;
     overflow-x: hidden;
+  }
+
+  ::selection {
+    background: rgba(236, 95, 114, 0.35);
+    color: #fff;
   }
 
   /**
@@ -346,5 +384,114 @@ section[id] {
 @media (min-width: 640px) {
   .avante-button {
     width: auto;
+  }
+}
+
+/* ==========================================================================
+   Editorial design language utilities (Phase A — used by B/C/D refactor).
+   Names prefixed with `avt-` to coexist with legacy `avante-*` classes.
+   ========================================================================== */
+
+.avt-display {
+  font-family: var(--avt-font-display);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 0.92;
+}
+
+.avt-display-tight {
+  font-family: var(--avt-font-display);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  line-height: 0.88;
+}
+
+.avt-body {
+  font-family: var(--avt-font-body);
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.6;
+}
+
+.avt-lbl {
+  font-family: var(--avt-font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--avt-meta);
+  font-weight: 400;
+}
+
+.avt-grad {
+  background: var(--avt-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: 600;
+}
+
+/* Editorial bullet list with the "A" mark as bullet glyph.
+   Apply on a <ul> to get every <li> rendered with a tiny gradient "A"
+   bullet in place of the default disc. Uses `li::before` (not legacy
+   `list-style-image`) so the glyph aligns properly across browsers and
+   the spacing tokens stay consistent with the rest of the type system.
+
+   Usage:
+     <ul class="avt-bullet-list">
+       <li>First operating principle.</li>
+       <li>Second operating principle.</li>
+     </ul>
+*/
+.avt-bullet-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+.avt-bullet-list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  font-family: var(--avt-font-body);
+  line-height: 1.65;
+  color: var(--avt-muted);
+}
+.avt-bullet-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.45em;
+  width: 14px;
+  height: 20px;
+  background-image: url('/redesign-assets/avante-A.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+/* Editorial scroll-cord (1px gradient line that draws on scroll-into-view).
+   Components opt in by adding the `avt-cord` class and a `--cord-w` width. */
+.avt-cord {
+  position: relative;
+  height: 1px;
+  background: var(--avt-hair-2);
+  overflow: visible;
+}
+.avt-cord-fill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 1px;
+  width: 0;
+  background: var(--avt-grad-line);
+  box-shadow: 0 0 18px rgba(236, 95, 114, 0.55);
+  transition: width 1.4s cubic-bezier(0.16, 0.84, 0.32, 1);
+}
+.avt-cord.avt-cord--played .avt-cord-fill {
+  width: var(--cord-w, 42%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .avt-cord-fill {
+    transition: none;
   }
 }

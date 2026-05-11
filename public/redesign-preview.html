@@ -1,0 +1,1016 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Avante — Studio that ships.</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="robots" content="noindex,nofollow"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --ink:#06070d;
+    --ink-2:#0a0c16;
+    --ink-3:#0f1124;
+    --hair:#171a2a;
+    --hair-2:#252a40;
+    --meta:#5d6486;
+    --muted:#8a91b0;
+    --txt:#eef0f7;
+    --grad: linear-gradient(118deg,#f4a93a 0%,#ec5f72 38%,#a8429b 68%,#3a2f8f 100%);
+    --grad-line: linear-gradient(90deg,transparent 0%,#f4a93a 18%,#ec5f72 38%,#a8429b 60%,#3a2f8f 82%,transparent 100%);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;padding:0;background:var(--ink);color:var(--txt);font-family:'Bricolage Grotesque',system-ui,sans-serif;-webkit-font-smoothing:antialiased;font-variation-settings:"opsz" 24}
+  .display{font-family:'Funnel Display',sans-serif;font-weight:500;letter-spacing:-0.04em;line-height:0.92}
+  .lbl{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:0.24em;text-transform:uppercase;color:var(--meta);font-weight:400}
+  .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600}
+  h1,h2,h3,h4{margin:0}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:rgba(236,95,114,0.35)}
+  .stage{max-width:1440px;margin:0 auto}
+
+  /* Bilingual visibility — !important to beat inline display:block on footer links */
+  html[data-lang="en"] [data-lang-only="pt"]{display:none !important}
+  html[data-lang="pt"] [data-lang-only="en"]{display:none !important}
+
+  /* MARK */
+  .A{display:inline-block;background-image:url('/redesign-assets/avante-A.png');background-size:contain;background-repeat:no-repeat;background-position:left center;aspect-ratio:364/535}
+  .A-220{width:220px}.A-160{width:160px}.A-120{width:120px}.A-72{width:72px}.A-48{width:48px}.A-32{width:32px}.A-24{width:24px}
+
+  .lockup{display:inline-flex;align-items:flex-end;gap:10px;line-height:1}
+  .lockup .A{margin-bottom:-2px}
+  .lockup .word{font-family:'Funnel Display';font-weight:500;letter-spacing:-0.04em;color:#fff}
+  .lockup-sm .A{width:22px}.lockup-sm .word{font-size:24px}
+  .lockup-md .A{width:42px}.lockup-md .word{font-size:48px}
+
+  /* CORD */
+  .cord{position:relative;height:1px;background:var(--hair-2);overflow:visible}
+  .cord-fill{position:absolute;left:0;top:0;height:1px;width:0;background:var(--grad-line);box-shadow:0 0 18px rgba(236,95,114,0.55);transition:width 1.4s cubic-bezier(.16,.84,.32,1)}
+  .cord.played .cord-fill{width:var(--cord-w,42%)}
+
+  /* NAV */
+  .nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(6,7,13,0.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--hair)}
+  .nav-inner{max-width:1440px;margin:0 auto;padding:18px 64px;display:flex;justify-content:space-between;align-items:center}
+  .nav-links{display:flex;gap:36px}
+  .nav-links a{font-family:'JetBrains Mono';font-size:11.5px;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);transition:color .2s;cursor:pointer}
+  .nav-links a:hover,.nav-links a.active{color:#fff}
+  .nav-cta{display:inline-flex;align-items:center;gap:8px;font-family:'JetBrains Mono';font-size:11.5px;letter-spacing:0.18em;text-transform:uppercase;color:#fff;border:1px solid var(--hair-2);padding:10px 16px;transition:border-color .2s;background:transparent;cursor:pointer}
+  .nav-cta:hover{border-color:#fff}
+  .nav-cta .dot{width:6px;height:6px;border-radius:99px;background:#ec5f72;box-shadow:0 0 10px #ec5f72;animation:pulse 2s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:.5}50%{opacity:1}}
+  .lang-toggle{display:inline-flex;align-items:center;gap:6px;font-family:'JetBrains Mono';font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--muted);border:1px solid var(--hair-2);padding:8px 12px;background:transparent;cursor:pointer;margin-right:12px}
+  .lang-toggle:hover{color:#fff;border-color:#fff}
+  .lang-toggle .on{color:#fff}
+
+  /* HERO */
+  .hero{min-height:100vh;padding:140px 64px 64px;position:relative;display:flex;flex-direction:column;justify-content:space-between}
+  .hero-meta{display:flex;justify-content:space-between;align-items:center}
+  .hero-h{font-family:'Funnel Display';font-weight:500;font-size:188px;letter-spacing:-0.05em;line-height:0.88;color:#fff}
+  .hero-foot{display:flex;justify-content:space-between;align-items:flex-end;gap:64px}
+  .hero-cue{display:flex;flex-direction:column;gap:8px;align-items:flex-end}
+  .hero-cue-arr{width:1px;height:48px;background:linear-gradient(180deg,var(--meta) 0%,transparent 100%);margin-right:9px;animation:cueDrop 2.4s ease-in-out infinite}
+  @keyframes cueDrop{0%,100%{opacity:.3;transform:translateY(0)}50%{opacity:1;transform:translateY(8px)}}
+
+  /* Ticker */
+  .ticker{position:relative;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);overflow:hidden;background:var(--ink-2)}
+  .ticker-strip{display:flex;gap:0;animation:tickerScroll 56s linear infinite;width:max-content}
+  .ticker-cell{padding:16px 28px;border-right:1px solid var(--hair);display:flex;align-items:center;gap:14px;white-space:nowrap;font-family:'JetBrains Mono';font-size:12px;letter-spacing:0.06em}
+  .ticker-cell .k{color:var(--meta);text-transform:uppercase;letter-spacing:0.18em;font-size:10.5px}
+  .ticker-cell .v{color:#fff}
+  .ticker-cell .arr-up{color:#7dd394}
+  .ticker-cell .arr-dn{color:#e26a7d}
+  @keyframes tickerScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* Cinematic */
+  .cine{position:relative;background:#020308;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+  .cine-inner{max-width:1440px;margin:0 auto;padding:120px 64px;display:flex;flex-direction:column;justify-content:space-between;gap:120px;min-height:78vh;color:#fff}
+  .cine-cap{font-family:'JetBrains Mono';font-size:11px;color:var(--meta);letter-spacing:0.22em;text-transform:uppercase;display:flex;justify-content:space-between;align-items:center;padding-bottom:24px;border-bottom:1px solid var(--hair)}
+  .cine-quote{font-family:'Funnel Display';font-weight:400;font-size:96px;line-height:0.96;letter-spacing:-0.035em;max-width:1180px;color:#fff}
+  .cine-quote em{font-style:italic;font-weight:400;color:#cdd2ee}
+  .cine-frame{position:relative;border:1px solid var(--hair-2);aspect-ratio:21/9;display:flex;align-items:flex-end;justify-content:space-between;padding:28px;background-size:cover;background-position:center;background-repeat:no-repeat;overflow:hidden}
+  .cine-frame::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,7,13,0.15) 0%,rgba(6,7,13,0.05) 40%,rgba(6,7,13,0.55) 100%);pointer-events:none}
+  .cine-corners{position:absolute;inset:0;pointer-events:none;z-index:2}
+  .cine-corners::before,.cine-corners::after,.cine-frame > .cc-tl,.cine-frame > .cc-br{content:"";position:absolute;width:18px;height:18px}
+  .cine-corners::before{top:18px;right:18px;border-top:1px solid #fff;border-right:1px solid #fff;opacity:.85}
+  .cine-corners::after{bottom:18px;left:18px;border-bottom:1px solid #fff;border-left:1px solid #fff;opacity:.85}
+  .cc-tl{top:18px;left:18px;border-top:1px solid #fff;border-left:1px solid #fff;opacity:.85;z-index:2}
+  .cc-br{bottom:18px;right:18px;border-bottom:1px solid #fff;border-right:1px solid #fff;opacity:.85;z-index:2}
+  .cine-slot{font-family:'JetBrains Mono';font-size:11px;color:#fff;letter-spacing:0.22em;text-transform:uppercase;position:relative;z-index:3;text-shadow:0 1px 8px rgba(0,0,0,0.6)}
+  .cine-credit{font-family:'JetBrains Mono';font-size:10.5px;color:rgba(255,255,255,0.85);letter-spacing:0.22em;text-transform:uppercase;position:relative;z-index:3;text-shadow:0 1px 8px rgba(0,0,0,0.6)}
+
+  /* Screen scaffold */
+  section[data-screen]{padding:160px 64px 140px;border-bottom:1px solid var(--hair);position:relative}
+  .screen-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:96px}
+  .screen-num{font-family:'JetBrains Mono';font-size:11px;color:var(--meta);letter-spacing:0.22em}
+  .screen-title{font-family:'Funnel Display';font-weight:500;font-size:148px;line-height:0.92;letter-spacing:-0.05em;color:#fff;max-width:1240px}
+  .screen-lede{margin-top:56px;font-family:'Funnel Display';font-weight:400;font-size:28px;color:#cdd2ee;line-height:1.3;letter-spacing:-0.01em;max-width:880px}
+
+  /* Movements */
+  .mov-row{display:grid;grid-template-columns:180px 1fr;gap:64px;padding:64px 0;border-top:1px solid var(--hair)}
+  .mov-row .num{font-family:'JetBrains Mono';font-size:12px;color:var(--meta);letter-spacing:0.22em}
+  .mov-row .tag{margin-top:8px}
+  .mov-row .h{font-family:'Funnel Display';font-weight:500;font-size:64px;color:#fff;letter-spacing:-0.03em;line-height:1.0;max-width:980px}
+  .mov-row .d{margin-top:28px;font-size:17px;color:var(--muted);line-height:1.7;max-width:780px}
+
+  /* Verticals */
+  .verticals{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--hair);margin-top:64px}
+  .vert{padding:36px;border-right:1px solid var(--hair);border-bottom:1px solid var(--hair);min-height:200px;display:flex;flex-direction:column;justify-content:space-between}
+  .vert:nth-child(4n){border-right:0}
+  .vert:nth-child(n+5){border-bottom:0}
+  .vert .h{font-family:'Funnel Display';font-weight:500;font-size:28px;color:#fff;letter-spacing:-0.02em;margin-top:14px;line-height:1.05}
+
+  /* Track record */
+  .tr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--hair);margin-top:64px}
+  .tr-cell{padding:48px 36px;border-right:1px solid var(--hair);min-height:240px;display:flex;flex-direction:column;justify-content:space-between}
+  .tr-cell:last-child{border-right:0}
+  .tr-cell .v{font-family:'Funnel Display';font-weight:500;font-size:96px;letter-spacing:-0.04em;line-height:1;color:#fff}
+  .tr-cell .v.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600}
+  .tr-cell .ctx{font-size:14px;color:var(--muted);line-height:1.6;margin-top:24px;max-width:280px}
+
+  /* Portfolio list */
+  .pf-list{margin-top:48px}
+  .pf-row{display:grid;grid-template-columns:60px 1.2fr 1.6fr auto;align-items:center;padding:22px 0;border-bottom:1px solid var(--hair-2);transition:padding .25s ease,background .25s}
+  .pf-row:hover{padding-left:16px}
+  .pf-row .nm{font-family:'Funnel Display';font-weight:500;font-size:32px;color:#fff;letter-spacing:-0.02em}
+  .pf-row .desc{font-size:13px;color:var(--muted)}
+  .pf-row .meta{font-family:'JetBrains Mono';font-size:11px;color:var(--meta);letter-spacing:0.16em;text-align:right}
+  .pf-row .idx{font-family:'JetBrains Mono';font-size:12px;color:var(--meta);letter-spacing:0.18em}
+  .pf-row.active .nm{color:#fff}
+  .pf-row.pipeline .nm{color:rgba(255,255,255,0.78)}
+
+  /* Featured portco */
+  .pf-feat{display:grid;grid-template-columns:1fr 1.1fr;gap:0;border:1px solid var(--hair);margin-top:64px;background:var(--ink-2);min-height:520px}
+  .pf-feat .left{padding:56px;display:flex;flex-direction:column;justify-content:space-between}
+  .pf-feat .right{position:relative;border-left:1px solid var(--hair);background-image:url('/redesign-assets/photo-skyline.jpg');background-size:cover;background-position:center}
+  .pf-feat .right::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,7,13,0.2) 0%,rgba(6,7,13,0.6) 100%)}
+  .pf-feat .nm{font-family:'Funnel Display';font-weight:500;font-size:96px;color:#fff;letter-spacing:-0.035em;line-height:1}
+  .pf-feat .stats{display:flex;gap:48px}
+
+  /* Filters */
+  .filters{margin-top:80px;display:flex;border:1px solid var(--hair)}
+  .filters button{flex:1;padding:14px;background:transparent;border:0;border-right:1px solid var(--hair);color:var(--muted);font-family:'JetBrains Mono';font-size:11px;letter-spacing:0.18em;text-transform:uppercase;cursor:pointer;transition:color .2s,background .2s}
+  .filters button:last-child{border-right:0}
+  .filters button.on{color:#fff;background:#0b0d18}
+  .filters button:hover{color:#fff}
+
+  /* Team */
+  .team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--hair);margin-top:64px}
+  .partner{padding:48px;border-right:1px solid var(--hair);border-bottom:1px solid var(--hair);min-height:380px;display:flex;flex-direction:column;justify-content:space-between}
+  .partner:nth-child(2n){border-right:0}
+  .partner:nth-child(n+3){border-bottom:0}
+  .partner-img{width:120px;height:120px;background:var(--ink-3);border:1px solid var(--hair-2);position:relative;overflow:hidden;flex-shrink:0;filter:grayscale(100%);transition:filter .3s ease}
+  .partner:hover .partner-img{filter:grayscale(40%)}
+  .partner-img img{width:100%;height:100%;object-fit:cover}
+  .partner .nm{font-family:'Funnel Display';font-weight:500;font-size:36px;color:#fff;letter-spacing:-0.02em;margin-top:24px}
+  .partner .role{font-family:'JetBrains Mono';font-size:11px;color:var(--meta);letter-spacing:0.18em;margin-top:8px}
+  .partner .bio{font-size:14px;color:var(--muted);line-height:1.7;margin-top:20px;max-width:440px}
+
+  /* Doors */
+  .doors{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--hair);margin-top:64px}
+  .door{padding:48px;border-right:1px solid var(--hair);min-height:340px;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;transition:background .2s,padding .2s}
+  .door:last-child{border-right:0}
+  .door:hover{background:var(--ink-2);padding-left:56px}
+  .door .h{font-family:'Funnel Display';font-weight:500;font-size:48px;color:#fff;letter-spacing:-0.025em;margin-top:24px;line-height:1}
+  .door .d{font-size:14px;color:var(--muted);line-height:1.7;margin-top:16px}
+  .door .arr{font-family:'JetBrains Mono';font-size:11px;color:var(--meta);letter-spacing:0.18em;display:flex;justify-content:space-between;align-items:center}
+  .door:hover .arr{color:#fff}
+
+  /* Clocks */
+  .clocks{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--hair);margin-top:64px}
+  .clock{padding:36px;border-right:1px solid var(--hair);display:flex;flex-direction:column;gap:20px;min-height:220px}
+  .clock:last-child{border-right:0}
+  .clock .city{font-family:'Funnel Display';font-weight:500;font-size:48px;color:#fff;letter-spacing:-0.025em}
+  .clock .time{font-family:'JetBrains Mono';font-size:36px;color:#fff;letter-spacing:0.04em;font-weight:400}
+  .clock .tz{font-family:'JetBrains Mono';font-size:11px;color:var(--meta);letter-spacing:0.18em}
+  .clock .addr{font-family:'JetBrains Mono';font-size:11px;color:var(--muted);letter-spacing:0.12em;line-height:1.5}
+
+  /* Footer */
+  footer{padding:140px 64px 56px;background:var(--ink);position:relative;overflow:hidden}
+  .foot-mark{font-family:'Funnel Display';font-weight:500;font-size:340px;line-height:0.78;letter-spacing:-0.06em;color:#fff;position:relative;display:flex;align-items:flex-end;gap:18px}
+  .foot-mark .A{width:280px;margin-bottom:8px}
+  .foot-line{margin-top:64px;font-family:'Funnel Display';font-weight:400;font-size:32px;color:#cdd2ee;letter-spacing:-0.015em;line-height:1.25;max-width:780px}
+  .foot-bot{margin-top:120px;padding-top:32px;border-top:1px solid var(--hair);display:flex;justify-content:space-between;align-items:center}
+  .foot-bot .lbl{font-size:10.5px}
+
+  @media (max-width: 980px){
+    .hero{padding:120px 24px 48px}
+    .hero-h{font-size:88px}
+    section[data-screen]{padding:96px 24px}
+    .screen-title{font-size:64px}
+    .screen-lede{font-size:18px}
+    .nav-inner{padding:14px 24px}
+    .nav-links{display:none}
+    .mov-row{grid-template-columns:1fr;gap:24px;padding:40px 0}
+    .mov-row .h{font-size:36px}
+    .verticals{grid-template-columns:repeat(2,1fr)}
+    .vert:nth-child(2n){border-right:0}
+    .vert:nth-child(n+5){border-bottom:1px solid var(--hair)}
+    .vert:nth-last-child(-n+2){border-bottom:0}
+    .pf-feat{grid-template-columns:1fr}
+    .pf-feat .nm{font-size:48px}
+    .pf-feat .right{display:none}
+    .pf-row{grid-template-columns:40px 1fr;gap:8px}
+    .pf-row .desc,.pf-row .meta{display:none}
+    .pf-row .nm{font-size:18px}
+    .filters{flex-wrap:wrap}
+    .team-grid{grid-template-columns:1fr}
+    .partner{border-right:0}
+    .doors{grid-template-columns:1fr}
+    .door{border-right:0;border-bottom:1px solid var(--hair)}
+    .clocks{grid-template-columns:1fr}
+    .clock{border-right:0;border-bottom:1px solid var(--hair)}
+    .clock .city{font-size:32px}
+    .clock .time{font-size:24px}
+    .cine-quote{font-size:36px}
+    .foot-mark{font-size:120px}
+    .foot-mark .A{width:96px}
+    .foot-line{font-size:20px}
+    .tr-grid{grid-template-columns:1fr}
+    .tr-cell{border-right:0;border-bottom:1px solid var(--hair)}
+    .tr-cell .v{font-size:64px}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#home" class="lockup lockup-sm">
+      <span class="A"></span>
+      <span class="word">vante</span>
+    </a>
+    <div class="nav-links">
+      <a href="#thesis" data-lang-only="en">Thesis</a><a href="#thesis" data-lang-only="pt">Tese</a>
+      <a href="#portfolio" data-lang-only="en">Portfolio</a><a href="#portfolio" data-lang-only="pt">Portfólio</a>
+      <a href="#team" data-lang-only="en">Team</a><a href="#team" data-lang-only="pt">Equipe</a>
+      <a href="#contact" data-lang-only="en">Contact</a><a href="#contact" data-lang-only="pt">Contato</a>
+    </div>
+    <div style="display:flex;align-items:center">
+      <button class="lang-toggle" id="langToggle" aria-label="Toggle language">
+        <span class="en-label">EN</span>
+        <span style="opacity:0.4">/</span>
+        <span class="pt-label">PT</span>
+      </button>
+      <a href="#contact" class="nav-cta">
+        <span class="dot"></span>
+        <span data-lang-only="en">Vintage 1 — open</span>
+        <span data-lang-only="pt">Vintage 1 — aberto</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="stage">
+
+  <!-- HERO -->
+  <section id="home" data-screen-label="01 Home">
+    <div class="hero">
+      <div class="hero-meta">
+        <div class="lbl" data-lang-only="en">§ I — São Paulo · founded 2024</div>
+        <div class="lbl" data-lang-only="pt">§ I — São Paulo · fundada em 2024</div>
+        <div class="lbl">vintage 1 · year 2</div>
+      </div>
+      <h1 class="hero-h">
+        <span data-lang-only="en">Studio that<br/><span class="grad">ships</span>.</span>
+        <span data-lang-only="pt">Studio que<br/><span class="grad">entrega</span>.</span>
+      </h1>
+      <div class="hero-foot">
+        <div class="cord" data-cord-w="56%" style="flex:1;margin-bottom:18px"><div class="cord-fill"></div></div>
+        <div class="hero-cue">
+          <div class="hero-cue-arr"></div>
+          <div class="lbl" data-lang-only="en">scroll</div>
+          <div class="lbl" data-lang-only="pt">role</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker">
+    <div class="ticker-strip" id="tickerStrip"></div>
+  </div>
+
+  <!-- CINEMATIC I -->
+  <section data-screen-label="01b Cinematic">
+    <div class="cine">
+      <div class="cine-inner">
+        <div class="cine-cap">
+          <span data-lang-only="en">frame 001 — to be commissioned</span>
+          <span data-lang-only="pt">frame 001 — a comissionar</span>
+          <span>av. paulista · são paulo · 06:14</span>
+        </div>
+        <div class="cine-frame" style="background-image:url('/redesign-assets/photo-skyline.jpg')">
+          <div class="cc-tl"></div><div class="cc-br"></div>
+          <div class="cine-corners"></div>
+          <div class="cine-slot" data-lang-only="en">— frame · São Paulo at dawn</div>
+          <div class="cine-slot" data-lang-only="pt">— frame · São Paulo ao amanhecer</div>
+          <div class="cine-credit">21:9 · 06:14 BRT</div>
+        </div>
+        <div>
+          <h2 class="cine-quote">
+            <span data-lang-only="en">&ldquo;Our companies don&apos;t translate playbooks. <em>They invent the version that works for Brazil.</em>&rdquo;</span>
+            <span data-lang-only="pt">&ldquo;Nossas empresas não traduzem playbooks. <em>Elas inventam a versão que funciona para o Brasil.</em>&rdquo;</span>
+          </h2>
+          <div style="margin-top:56px;display:flex;align-items:center;gap:14px">
+            <span class="A A-32"></span>
+            <span class="lbl" data-lang-only="en">— AVANTE OPERATING THESIS · 2026</span>
+            <span class="lbl" data-lang-only="pt">— TESE OPERACIONAL AVANTE · 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THESIS -->
+  <section data-screen="thesis" id="thesis" data-screen-label="02 Thesis">
+    <div class="screen-head">
+      <div class="lbl" data-lang-only="en">§ II — thesis</div>
+      <div class="lbl" data-lang-only="pt">§ II — tese</div>
+      <div class="screen-num">02 / 05</div>
+    </div>
+    <h2 class="screen-title">
+      <span data-lang-only="en">One studio.<br/>One decade.</span>
+      <span data-lang-only="pt">Um studio.<br/>Uma década.</span>
+    </h2>
+    <p class="screen-lede">
+      <span data-lang-only="en">Three movements describe the firm. Not pillars or principles — the way we read every memo, every venture, every quarter.</span>
+      <span data-lang-only="pt">Três movimentos descrevem o studio. Não pilares ou princípios — a forma como lemos cada memo, cada venture, cada trimestre.</span>
+    </p>
+
+    <div style="margin-top:96px">
+      <div class="mov-row">
+        <div>
+          <div class="num">MOVEMENT 001</div>
+          <div class="lbl tag" data-lang-only="en">— operator-led</div>
+          <div class="lbl tag" data-lang-only="pt">— liderado por operadores</div>
+        </div>
+        <div>
+          <h3 class="h">
+            <span data-lang-only="en">We <span class="grad">build</span> before we fund.</span>
+            <span data-lang-only="pt">Nós <span class="grad">construímos</span> antes de financiar.</span>
+          </h3>
+          <p class="d">
+            <span data-lang-only="en">Every partner has shipped product. Amanda exited Sigga at 10x. Andrea founded O.school after YC W14. Felipe has been in the LATAM PE/VC trenches since 2014. We default to product reviews on Tuesdays, not status reports on Mondays.</span>
+            <span data-lang-only="pt">Cada partner já entregou produto. Amanda fez exit da Sigga em 10x. Andrea fundou a O.school depois do YC W14. Felipe está nas trincheiras de PE/VC LATAM desde 2014. Nosso default são product reviews às terças, não status reports às segundas.</span>
+          </p>
+        </div>
+      </div>
+      <div class="mov-row">
+        <div>
+          <div class="num">MOVEMENT 002</div>
+          <div class="lbl tag" data-lang-only="en">— ai-native, not bolted on</div>
+          <div class="lbl tag" data-lang-only="pt">— ai-native, não acoplado</div>
+        </div>
+        <div>
+          <h3 class="h">
+            <span data-lang-only="en">AI is the architecture. <span class="grad">Not a feature.</span></span>
+            <span data-lang-only="pt">IA é a arquitetura. <span class="grad">Não uma feature.</span></span>
+          </h3>
+          <p class="d">
+            <span data-lang-only="en">The ventures we build don&apos;t graft AI onto legacy workflows — they design from the agent outward. WIR InsurTech: 5x intake volume, 90% cost reduction in underwriting. The math is the message.</span>
+            <span data-lang-only="pt">As ventures que construímos não enxertam IA em workflows legados — elas desenham a partir do agente para fora. WIR InsurTech: 5x volume de intake, 90% redução de custo em underwriting. A matemática é a mensagem.</span>
+          </p>
+        </div>
+      </div>
+      <div class="mov-row" style="border-bottom:1px solid var(--hair)">
+        <div>
+          <div class="num">MOVEMENT 003</div>
+          <div class="lbl tag" data-lang-only="en">— honest horizon</div>
+          <div class="lbl tag" data-lang-only="pt">— horizonte honesto</div>
+        </div>
+        <div>
+          <h3 class="h">
+            <span data-lang-only="en">Vintage 1, year 2. <span class="grad">First cohort live.</span></span>
+            <span data-lang-only="pt">Vintage 1, ano 2. <span class="grad">Primeira cohort ativa.</span></span>
+          </h3>
+          <p class="d">
+            <span data-lang-only="en">We don&apos;t pretend to be Andreessen. Our founding team has invested $500MM+ across 20+ companies — but Avante itself is two years in, four ventures deep, and built to compound. We tell the truth about where we are.</span>
+            <span data-lang-only="pt">Não fingimos ser Andreessen. Nosso time fundador investiu $500MM+ em 20+ empresas — mas Avante em si tem dois anos, quatro ventures, e foi construída para compor. Falamos a verdade sobre onde estamos.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:120px;display:flex;justify-content:space-between;align-items:flex-end">
+      <h3 class="display" style="font-weight:500;font-size:64px;color:#fff;letter-spacing:-0.03em">
+        <span data-lang-only="en">Where we look.</span>
+        <span data-lang-only="pt">Onde olhamos.</span>
+      </h3>
+      <div class="lbl" data-lang-only="en">— eight verticals</div>
+      <div class="lbl" data-lang-only="pt">— oito verticais</div>
+    </div>
+    <div class="cord" data-cord-w="62%" style="margin-top:24px"><div class="cord-fill"></div></div>
+    <div class="verticals">
+      <div class="vert">
+        <div class="lbl">001</div>
+        <div class="h" data-lang-only="en">AI Creative<br/>Studio</div>
+        <div class="h" data-lang-only="pt">Studio Criativo<br/>com IA</div>
+        <p class="lbl" style="color:var(--muted)">CRIA · SMB · content</p>
+      </div>
+      <div class="vert">
+        <div class="lbl">002</div>
+        <div class="h" data-lang-only="en">WhatsApp<br/>Commerce</div>
+        <div class="h" data-lang-only="pt">Comércio<br/>via WhatsApp</div>
+        <p class="lbl" style="color:var(--muted)">Pulse · CPG · conversational</p>
+      </div>
+      <div class="vert">
+        <div class="lbl">003</div>
+        <div class="h" data-lang-only="en">Investor<br/>Intelligence</div>
+        <div class="h" data-lang-only="pt">Inteligência para<br/>Investidores</div>
+        <p class="lbl" style="color:var(--muted)">RADAR · sourcing · signals</p>
+      </div>
+      <div class="vert">
+        <div class="lbl">004</div>
+        <div class="h" data-lang-only="en">AI<br/>Procurement</div>
+        <div class="h" data-lang-only="pt">Procurement<br/>com IA</div>
+        <p class="lbl" style="color:var(--muted)">ROTA · vendor matching</p>
+      </div>
+      <div class="vert">
+        <div class="lbl">005</div>
+        <div class="h" data-lang-only="en">InsurTech<br/>AI</div>
+        <div class="h" data-lang-only="pt">InsurTech<br/>com IA</div>
+        <p class="lbl" style="color:var(--muted)">WIR · underwriting · risk</p>
+      </div>
+      <div class="vert">
+        <div class="lbl">006</div>
+        <div class="h" data-lang-only="en">Vertical<br/>SaaS LATAM</div>
+        <div class="h" data-lang-only="pt">SaaS Vertical<br/>LATAM</div>
+        <p class="lbl" style="color:var(--muted)">healthcare · law · logistics</p>
+      </div>
+      <div class="vert">
+        <div class="lbl">007</div>
+        <div class="h" data-lang-only="en">Operator-led<br/>infra</div>
+        <div class="h" data-lang-only="pt">Infra liderada<br/>por operadores</div>
+        <p class="lbl" style="color:var(--muted)">agents · ops · DX</p>
+      </div>
+      <div class="vert">
+        <div class="lbl">008</div>
+        <div class="h" data-lang-only="en">Frontier<br/>(open)</div>
+        <div class="h" data-lang-only="pt">Fronteira<br/>(aberta)</div>
+        <p class="lbl" style="color:var(--muted)" data-lang-only="en">where founders take us</p>
+        <p class="lbl" style="color:var(--muted)" data-lang-only="pt">para onde os founders nos levam</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section data-screen="portfolio" id="portfolio" data-screen-label="03 Portfolio">
+    <div class="screen-head">
+      <div class="lbl" data-lang-only="en">§ III — portfolio</div>
+      <div class="lbl" data-lang-only="pt">§ III — portfólio</div>
+      <div class="screen-num">03 / 05</div>
+    </div>
+    <h2 class="screen-title">
+      <span data-lang-only="en">One active.<br/>Four in pipeline.</span>
+      <span data-lang-only="pt">Uma ativa.<br/>Quatro no pipeline.</span>
+    </h2>
+    <p class="screen-lede">
+      <span data-lang-only="en">Vintage 1 is live. WIR InsurTech is shipping. Four ventures are in pipeline — names, taglines, and scope subject to change as theses sharpen.</span>
+      <span data-lang-only="pt">Vintage 1 está ativa. WIR InsurTech está em produção. Quatro ventures estão no pipeline — nomes, taglines e escopo sujeitos a mudança conforme as teses afinam.</span>
+    </p>
+
+    <div style="margin-top:120px;display:flex;justify-content:space-between;align-items:flex-end">
+      <h3 class="display" style="font-weight:500;font-size:48px;color:#fff;letter-spacing:-0.025em">
+        <span data-lang-only="en">What our team has built and exited.</span>
+        <span data-lang-only="pt">O que nosso time já construiu e saiu.</span>
+      </h3>
+      <div class="lbl" data-lang-only="en">— track record</div>
+      <div class="lbl" data-lang-only="pt">— track record</div>
+    </div>
+    <div class="tr-grid">
+      <div class="tr-cell">
+        <div class="v grad">10x</div>
+        <p class="ctx">
+          <span data-lang-only="en">Exit multiple — Sigga Technologies (Board: Amanda Pinheiro)</span>
+          <span data-lang-only="pt">Múltiplo de exit — Sigga Technologies (Conselho: Amanda Pinheiro)</span>
+        </p>
+      </div>
+      <div class="tr-cell">
+        <div class="v grad">4x</div>
+        <p class="ctx">
+          <span data-lang-only="en">MOI — Accera investment (Innova Capital era)</span>
+          <span data-lang-only="pt">MOI — investimento Accera (era Innova Capital)</span>
+        </p>
+      </div>
+      <div class="tr-cell">
+        <div class="v grad">$500MM+</div>
+        <p class="ctx">
+          <span data-lang-only="en">Invested across 20+ companies by our founding team</span>
+          <span data-lang-only="pt">Investido em 20+ empresas pelo nosso time fundador</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="pf-feat">
+      <div class="left">
+        <div>
+          <div class="lbl" data-lang-only="en">— flagship venture · vintage 1</div>
+          <div class="lbl" data-lang-only="pt">— venture flagship · vintage 1</div>
+          <h3 class="nm" style="margin-top:18px">WIR InsurTech</h3>
+        </div>
+        <p style="font-size:16px;color:var(--muted);line-height:1.7;max-width:480px">
+          <span data-lang-only="en">AI-native underwriting for the global InsurTech market. From pilot to production with AXA. Reference architecture for every WIR sale that follows.</span>
+          <span data-lang-only="pt">Underwriting AI-native para o mercado global de InsurTech. Do piloto à produção com AXA. Arquitetura de referência para cada venda WIR que segue.</span>
+        </p>
+        <div class="stats">
+          <div>
+            <div class="lbl" data-lang-only="en">intake volume</div>
+            <div class="lbl" data-lang-only="pt">volume intake</div>
+            <div class="display" style="font-size:32px;margin-top:6px"><span class="grad">5x</span></div>
+          </div>
+          <div>
+            <div class="lbl" data-lang-only="en">cost reduction</div>
+            <div class="lbl" data-lang-only="pt">redução custo</div>
+            <div class="display" style="font-size:32px;margin-top:6px"><span class="grad">90%</span></div>
+          </div>
+          <div>
+            <div class="lbl">stage</div>
+            <div class="display" style="font-size:24px;font-weight:500;color:#fff;margin-top:6px">Live · Pilot</div>
+          </div>
+        </div>
+      </div>
+      <div class="right"></div>
+    </div>
+
+    <div class="filters">
+      <button class="on" data-lang-only="en">All · 5</button>
+      <button class="on" data-lang-only="pt">Todas · 5</button>
+      <button data-lang-only="en">Active · 1</button>
+      <button data-lang-only="pt">Ativa · 1</button>
+      <button data-lang-only="en">Pipeline · 4</button>
+      <button data-lang-only="pt">Pipeline · 4</button>
+      <button>InsurTech · 1</button>
+      <button>AI Creative · 1</button>
+      <button>Conversational · 1</button>
+    </div>
+
+    <div class="pf-list">
+      <div class="pf-row active">
+        <span class="idx">001</span>
+        <span class="nm">WIR InsurTech</span>
+        <span class="desc" data-lang-only="en">AI-native underwriting (AXA pilot)</span>
+        <span class="desc" data-lang-only="pt">Underwriting AI-native (piloto AXA)</span>
+        <span class="meta">SP · 2024 · ACTIVE</span>
+      </div>
+      <div class="pf-row pipeline">
+        <span class="idx">002</span>
+        <span class="nm">CRIA Studio</span>
+        <span class="desc" data-lang-only="en">AI Creative Studio for SMB</span>
+        <span class="desc" data-lang-only="pt">Studio de Conteúdo com IA para PMEs</span>
+        <span class="meta">SP · 2026 · PIPELINE</span>
+      </div>
+      <div class="pf-row pipeline">
+        <span class="idx">003</span>
+        <span class="nm">Pulse.ai</span>
+        <span class="desc" data-lang-only="en">WhatsApp Sales for CPG</span>
+        <span class="desc" data-lang-only="pt">Vendas por WhatsApp para CPG</span>
+        <span class="meta">SP · 2026 · PIPELINE</span>
+      </div>
+      <div class="pf-row pipeline">
+        <span class="idx">004</span>
+        <span class="nm">RADAR.ai</span>
+        <span class="desc" data-lang-only="en">Market Intelligence for Investors</span>
+        <span class="desc" data-lang-only="pt">Inteligência de mercado para investidores</span>
+        <span class="meta">SP · 2026 · PIPELINE</span>
+      </div>
+      <div class="pf-row pipeline">
+        <span class="idx">005</span>
+        <span class="nm">ROTA.ai</span>
+        <span class="desc" data-lang-only="en">AI Procurement Hub</span>
+        <span class="desc" data-lang-only="pt">Procurement inteligente</span>
+        <span class="meta">SP · 2026 · PIPELINE</span>
+      </div>
+    </div>
+    <div class="lbl" style="margin-top:32px" data-lang-only="en">— pipeline ventures are pre-launch · names and scope subject to change</div>
+    <div class="lbl" style="margin-top:32px" data-lang-only="pt">— ventures de pipeline são pré-lançamento · nomes e escopo podem mudar</div>
+  </section>
+
+  <!-- CINEMATIC II -->
+  <section data-screen-label="03b Cinematic">
+    <div class="cine">
+      <div class="cine-inner">
+        <div class="cine-cap">
+          <span data-lang-only="en">frame 002 — to be commissioned</span>
+          <span data-lang-only="pt">frame 002 — a comissionar</span>
+          <span data-lang-only="en">partner&apos;s desk · são paulo · 21:48</span>
+          <span data-lang-only="pt">mesa do partner · são paulo · 21:48</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:center">
+          <div>
+            <div class="lbl" data-lang-only="en">— working hours</div>
+            <div class="lbl" data-lang-only="pt">— horário de trabalho</div>
+            <h2 class="display" style="font-size:88px;font-weight:500;color:#fff;letter-spacing:-0.035em;margin-top:18px;line-height:0.96">
+              <span data-lang-only="en">We build every<br/>venture. <em style="font-weight:400;font-style:italic;color:#cdd2ee">From day one.</em></span>
+              <span data-lang-only="pt">Construímos cada<br/>venture. <em style="font-weight:400;font-style:italic;color:#cdd2ee">Desde o dia um.</em></span>
+            </h2>
+            <p style="margin-top:32px;font-size:17px;color:var(--muted);line-height:1.7;max-width:420px">
+              <span data-lang-only="en">Once for the architecture. Once for the founder. Replies are signed by a partner — never an EA. Always within seven days.</span>
+              <span data-lang-only="pt">Uma vez pela arquitetura. Uma vez pelo founder. Respostas são assinadas por um partner — nunca por um EA. Sempre em até sete dias.</span>
+            </p>
+          </div>
+          <div class="cine-frame" style="aspect-ratio:4/5;background-image:url('/redesign-assets/photo-skyline.jpg');background-position:30% 60%">
+            <div class="cc-tl"></div><div class="cc-br"></div>
+            <div class="cine-corners"></div>
+            <div class="cine-slot" data-lang-only="en">— frame · partner reading</div>
+            <div class="cine-slot" data-lang-only="pt">— frame · partner lendo</div>
+            <div class="cine-credit">4:5 · 21:48 BRT</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section data-screen="team" id="team" data-screen-label="04 Team">
+    <div class="screen-head">
+      <div class="lbl" data-lang-only="en">§ IV — team</div>
+      <div class="lbl" data-lang-only="pt">§ IV — equipe</div>
+      <div class="screen-num">04 / 05</div>
+    </div>
+    <h2 class="screen-title">
+      <span data-lang-only="en">People who shipped<br/>before they invested.</span>
+      <span data-lang-only="pt">Pessoas que entregaram<br/>antes de investir.</span>
+    </h2>
+    <p class="screen-lede">
+      <span data-lang-only="en">Two co-founders. One venture partner. One strategic advisor. Legal counsel in São Paulo and the Bay Area.</span>
+      <span data-lang-only="pt">Dois cofundadores. Um venture partner. Um conselheiro estratégico. Suporte jurídico em São Paulo e na Bay Area.</span>
+    </p>
+
+    <div class="team-grid">
+      <div class="partner">
+        <div style="display:flex;align-items:center;gap:24px">
+          <div class="partner-img"><img src="/redesign-assets/team-amanda.webp" alt="Amanda Pinheiro" loading="lazy"/></div>
+          <div>
+            <div class="nm">Amanda Pinheiro</div>
+            <div class="role" data-lang-only="en">CO-FOUNDER &amp; MANAGING PARTNER · SÃO PAULO</div>
+            <div class="role" data-lang-only="pt">COFUNDADORA &amp; MANAGING PARTNER · SÃO PAULO</div>
+          </div>
+        </div>
+        <p class="bio">
+          <span data-lang-only="en">$500MM+ invested at Innova Capital. Board exits: Sigga (10x), Accera (4x MOI). Built her track record before she built Avante — and writes every memo herself.</span>
+          <span data-lang-only="pt">$500MM+ investidos na Innova Capital. Exits no conselho: Sigga (10x), Accera (4x MOI). Construiu seu track record antes de construir a Avante — e escreve cada memo ela mesma.</span>
+        </p>
+        <div class="lbl">— managing partner · ai-native ventures</div>
+      </div>
+      <div class="partner">
+        <div style="display:flex;align-items:center;gap:24px">
+          <div class="partner-img"><img src="/redesign-assets/team-andrea.webp" alt="Andrea Barrica" loading="lazy"/></div>
+          <div>
+            <div class="nm">Andrea Barrica</div>
+            <div class="role" data-lang-only="en">CO-FOUNDER &amp; OPERATING PARTNER · SAN FRANCISCO</div>
+            <div class="role" data-lang-only="pt">COFUNDADORA &amp; OPERATING PARTNER · SAN FRANCISCO</div>
+          </div>
+        </div>
+        <p class="bio">
+          <span data-lang-only="en">YC W14 founder. Built O.school from zero. Operator who has been in the cofounder seat — knows the difference between a board observation and a useful one.</span>
+          <span data-lang-only="pt">Fundadora YC W14. Construiu a O.school do zero. Operadora que esteve na cadeira de cofundadora — conhece a diferença entre uma observação de conselho e uma útil.</span>
+        </p>
+        <div class="lbl">— operating partner · venture building</div>
+      </div>
+      <div class="partner">
+        <div style="display:flex;align-items:center;gap:24px">
+          <div class="partner-img"><img src="/redesign-assets/team-felipe.webp" alt="Felipe Moraes" loading="lazy"/></div>
+          <div>
+            <div class="nm">Felipe Moraes</div>
+            <div class="role" data-lang-only="en">VENTURE PARTNER · SÃO PAULO</div>
+            <div class="role" data-lang-only="pt">VENTURE PARTNER · SÃO PAULO</div>
+          </div>
+        </div>
+        <p class="bio">
+          <span data-lang-only="en">Innova Capital alum. Brazilian PE/VC ecosystem native. Closes the loop between São Paulo capital, U.S. playbooks, and the founders who don&apos;t need either.</span>
+          <span data-lang-only="pt">Alumni Innova Capital. Nativo do ecossistema PE/VC brasileiro. Fecha o loop entre capital paulistano, playbooks americanos, e os founders que não precisam de nenhum dos dois.</span>
+        </p>
+        <div class="lbl">— venture partner · LATAM ecosystem</div>
+      </div>
+      <div class="partner">
+        <div style="display:flex;align-items:center;gap:24px">
+          <div class="partner-img"><img src="/redesign-assets/team-jess.webp" alt="Jess Mah" loading="lazy"/></div>
+          <div>
+            <div class="nm">Jess Mah</div>
+            <div class="role" data-lang-only="en">STRATEGIC ADVISOR · SAN FRANCISCO</div>
+            <div class="role" data-lang-only="pt">CONSELHEIRA ESTRATÉGICA · SAN FRANCISCO</div>
+          </div>
+        </div>
+        <p class="bio">
+          <span data-lang-only="en">YC alum. Founded inDinero. Forbes 30 Under 30. Decade of operating leverage in B2B SaaS — applied where Avante&apos;s ventures meet U.S. distribution.</span>
+          <span data-lang-only="pt">Alumna YC. Fundou a inDinero. Forbes 30 Under 30. Uma década de alavanca operacional em B2B SaaS — aplicada onde as ventures da Avante encontram distribuição nos EUA.</span>
+        </p>
+        <div class="lbl">— strategic advisor · GTM</div>
+      </div>
+    </div>
+
+    <div style="margin-top:96px;padding:32px;border:1px solid var(--hair);text-align:center">
+      <p style="font-size:14px;color:var(--muted);line-height:1.7;margin:0">
+        <span style="color:#fff;font-weight:500" data-lang-only="en">Legal &amp; Governance:</span>
+        <span style="color:#fff;font-weight:500" data-lang-only="pt">Jurídico &amp; Governança:</span>
+        <span data-lang-only="en"> Lefosse (Brazil) + Foley &amp; Lardner (United States) — counsel on every term sheet, every quarter, every cohort.</span>
+        <span data-lang-only="pt"> Lefosse (Brasil) + Foley &amp; Lardner (Estados Unidos) — assessoria em cada term sheet, cada trimestre, cada cohort.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section data-screen="contact" id="contact" data-screen-label="05 Contact">
+    <div class="screen-head">
+      <div class="lbl" data-lang-only="en">§ V — contact</div>
+      <div class="lbl" data-lang-only="pt">§ V — contato</div>
+      <div class="screen-num">05 / 05</div>
+    </div>
+    <h2 class="screen-title">
+      <span data-lang-only="en">If you&apos;re building,<br/>find us.</span>
+      <span data-lang-only="pt">Se você está construindo,<br/>nos encontre.</span>
+    </h2>
+    <p class="screen-lede">
+      <span data-lang-only="en">Three doors. Pick the one that fits. Each opens to a person — not a form.</span>
+      <span data-lang-only="pt">Três portas. Escolha a que encaixa. Cada uma abre para uma pessoa — não um formulário.</span>
+    </p>
+
+    <div class="doors">
+      <a class="door" href="mailto:info@avanteventures.com">
+        <div>
+          <div class="lbl" data-lang-only="en">door 001</div>
+          <div class="lbl" data-lang-only="pt">porta 001</div>
+          <div class="h" data-lang-only="en">Founders.</div>
+          <div class="h" data-lang-only="pt">Founders.</div>
+        </div>
+        <p class="d">
+          <span data-lang-only="en">Send the deck, the demo, or the codebase. Replies signed by a partner within seven days. We read every memo. Twice.</span>
+          <span data-lang-only="pt">Envie o deck, o demo, ou o codebase. Respostas assinadas por um partner em sete dias. Lemos cada memo. Duas vezes.</span>
+        </p>
+        <div class="arr"><span>info@avanteventures.com</span><span>↗</span></div>
+      </a>
+      <a class="door" href="mailto:invest@avanteventures.com">
+        <div>
+          <div class="lbl" data-lang-only="en">door 002 — vintage 1 open</div>
+          <div class="lbl" data-lang-only="pt">porta 002 — vintage 1 aberto</div>
+          <div class="h"><span class="grad">LPs.</span></div>
+        </div>
+        <p class="d">
+          <span data-lang-only="en">Vintage 1 is open through 2026. Quarterly portfolio updates and operating dashboards available under NDA. We share more, not less.</span>
+          <span data-lang-only="pt">Vintage 1 está aberto até 2026. Updates trimestrais de portfólio e dashboards operacionais disponíveis sob NDA. Compartilhamos mais, não menos.</span>
+        </p>
+        <div class="arr"><span>invest@avanteventures.com</span><span>↗</span></div>
+      </a>
+      <a class="door" href="mailto:press@avanteventures.com">
+        <div>
+          <div class="lbl" data-lang-only="en">door 003</div>
+          <div class="lbl" data-lang-only="pt">porta 003</div>
+          <div class="h" data-lang-only="en">Press.</div>
+          <div class="h" data-lang-only="pt">Imprensa.</div>
+        </div>
+        <p class="d">
+          <span data-lang-only="en">For coverage on the firm or its ventures. We respond within 48h with the founder we&apos;d like you to talk to instead of us.</span>
+          <span data-lang-only="pt">Para cobertura sobre o studio ou suas ventures. Respondemos em 48h com o founder com quem gostaríamos que você falasse no nosso lugar.</span>
+        </p>
+        <div class="arr"><span>press@avanteventures.com</span><span>↗</span></div>
+      </a>
+    </div>
+
+    <div style="margin-top:120px;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:end;border-top:1px solid var(--hair);padding-top:64px">
+      <div>
+        <div class="lbl" data-lang-only="en">letters · monthly</div>
+        <div class="lbl" data-lang-only="pt">cartas · mensais</div>
+        <h3 class="display" style="font-weight:500;font-size:56px;color:#fff;letter-spacing:-0.025em;margin-top:18px">
+          <span data-lang-only="en">A short note,<br/>once a month.</span>
+          <span data-lang-only="pt">Uma nota curta,<br/>uma vez por mês.</span>
+        </h3>
+        <p style="font-size:14px;color:var(--muted);line-height:1.7;margin-top:16px;max-width:440px">
+          <span data-lang-only="en">A founder feature. A market read. One tactical lesson from the portfolio. Bilingual EN + PT.</span>
+          <span data-lang-only="pt">Um destaque de founder. Uma leitura de mercado. Uma lição tática do portfólio. Bilíngue EN + PT.</span>
+        </p>
+      </div>
+      <div style="display:flex;border:1px solid var(--hair-2);align-items:stretch">
+        <input placeholder="email@firm.vc" style="flex:1;background:transparent;border:0;padding:18px;color:#fff;font-family:'JetBrains Mono';font-size:13px;letter-spacing:0.06em;outline:none"/>
+        <button style="background:#fff;border:0;padding:0 28px;font-family:'JetBrains Mono';font-size:11px;letter-spacing:0.18em;text-transform:uppercase;cursor:pointer;color:#06070d">
+          <span data-lang-only="en">Subscribe ↗</span>
+          <span data-lang-only="pt">Assinar ↗</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="clocks">
+      <div class="clock">
+        <div class="lbl">001 — sede</div>
+        <div class="city">São Paulo</div>
+        <div class="time" id="clk-sp">— : —</div>
+        <div class="tz">UTC −03 · BRT</div>
+        <div class="addr">Av. Brigadeiro Faria Lima</div>
+      </div>
+      <div class="clock">
+        <div class="lbl">002</div>
+        <div class="city">San Francisco</div>
+        <div class="time" id="clk-sf">— : —</div>
+        <div class="tz">UTC −08 · PST</div>
+        <div class="addr" data-lang-only="en">Bay Area · operating hub</div>
+        <div class="addr" data-lang-only="pt">Bay Area · hub operacional</div>
+      </div>
+      <div class="clock">
+        <div class="lbl">003</div>
+        <div class="city">Bogotá</div>
+        <div class="time" id="clk-bog">— : —</div>
+        <div class="tz">UTC −05 · COT</div>
+        <div class="addr" data-lang-only="en">Andes · LATAM ex-Brazil</div>
+        <div class="addr" data-lang-only="pt">Andes · LATAM ex-Brasil</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div style="max-width:1440px;margin:0 auto">
+    <div class="cord" data-cord-w="78%"><div class="cord-fill"></div></div>
+    <div class="foot-mark" style="margin-top:80px;align-items:flex-end">
+      <span class="A"></span>
+      <span>vante.</span>
+    </div>
+    <p class="foot-line">
+      <span data-lang-only="en">Studio that ships. <span class="grad">Brazil-native, AI-native.</span> Founded 2024. We will be here in 2034.</span>
+      <span data-lang-only="pt">Studio que entrega. <span class="grad">Brasil-native, AI-native.</span> Fundada em 2024. Estaremos aqui em 2034.</span>
+    </p>
+
+    <div style="margin-top:120px;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px">
+      <div>
+        <h4 style="font-family:'JetBrains Mono';font-size:11px;color:var(--meta);letter-spacing:0.22em;text-transform:uppercase;font-weight:400;margin-bottom:18px" data-lang-only="en">Offices</h4>
+        <h4 style="font-family:'JetBrains Mono';font-size:11px;color:var(--meta);letter-spacing:0.22em;text-transform:uppercase;font-weight:400;margin-bottom:18px" data-lang-only="pt">Escritórios</h4>
+        <a style="display:block;font-size:14px;color:#cdd2ee;padding:6px 0">São Paulo · sede</a>
+        <a style="display:block;font-size:14px;color:#cdd2ee;padding:6px 0">San Francisco</a>
+        <a style="display:block;font-size:14px;color:#cdd2ee;padding:6px 0">Bogotá</a>
+      </div>
+      <div>
+        <h4 style="font-family:'JetBrains Mono';font-size:11px;color:var(--meta);letter-spacing:0.22em;text-transform:uppercase;font-weight:400;margin-bottom:18px" data-lang-only="en">Firm</h4>
+        <h4 style="font-family:'JetBrains Mono';font-size:11px;color:var(--meta);letter-spacing:0.22em;text-transform:uppercase;font-weight:400;margin-bottom:18px" data-lang-only="pt">Studio</h4>
+        <a href="#thesis" style="display:block;font-size:14px;color:#cdd2ee;padding:6px 0" data-lang-only="en">Thesis</a>
+        <a href="#thesis" style="display:block;font-size:14px;color:#cdd2ee;padding:6px 0" data-lang-only="pt">Tese</a>
+        <a href="#portfolio" style="display:block;font-size:14px;color:#cdd2ee;padding:6px 0" data-lang-only="en">Portfolio</a>
+        <a href="#portfolio" style="display:block;font-size:14px;color:#cdd2ee;padding:6px 0" data-lang-only="pt">Portfólio</a>
+        <a href="#team" style="display:block;font-size:14px;color:#cdd2ee;padding:6px 0" data-lang-only="en">Team</a>
+        <a href="#team" style="display:block;font-size:14px;color:#cdd2ee;padding:6px 0" data-lang-only="pt">Equipe</a>
+      </div>
+      <div>
+        <h4 style="font-family:'JetBrains Mono';font-size:11px;color:var(--meta);letter-spacing:0.22em;text-transform:uppercase;font-weight:400;margin-bottom:18px">For</h4>
+        <a href="mailto:info@avanteventures.com" style="display:block;font-size:14px;color:#cdd2ee;padding:6px 0">Founders</a>
+        <a href="mailto:invest@avanteventures.com" style="display:block;font-size:14px;color:#cdd2ee;padding:6px 0">LPs · Vintage 1</a>
+        <a href="mailto:press@avanteventures.com" style="display:block;font-size:14px;color:#cdd2ee;padding:6px 0" data-lang-only="en">Press</a>
+        <a href="mailto:press@avanteventures.com" style="display:block;font-size:14px;color:#cdd2ee;padding:6px 0" data-lang-only="pt">Imprensa</a>
+      </div>
+      <div>
+        <h4 style="font-family:'JetBrains Mono';font-size:11px;color:var(--meta);letter-spacing:0.22em;text-transform:uppercase;font-weight:400;margin-bottom:18px">Now</h4>
+        <a style="display:block;font-size:14px;color:#cdd2ee;padding:6px 0" data-lang-only="en">Vintage 1 — open</a>
+        <a style="display:block;font-size:14px;color:#cdd2ee;padding:6px 0" data-lang-only="pt">Vintage 1 — aberto</a>
+        <a style="display:block;font-size:14px;color:#cdd2ee;padding:6px 0" data-lang-only="en">1 active · 4 in pipeline</a>
+        <a style="display:block;font-size:14px;color:#cdd2ee;padding:6px 0" data-lang-only="pt">1 ativa · 4 no pipeline</a>
+        <a style="display:block;font-size:14px;color:#cdd2ee;padding:6px 0" data-lang-only="en">São Paulo · winter 2026</a>
+        <a style="display:block;font-size:14px;color:#cdd2ee;padding:6px 0" data-lang-only="pt">São Paulo · inverno 2026</a>
+      </div>
+    </div>
+
+    <div class="foot-bot">
+      <span class="lbl">© 2026 Avante Ventures · São Paulo · cordão v0.1</span>
+      <span class="lbl" data-lang-only="en">— a venture studio that signs its name</span>
+      <span class="lbl" data-lang-only="pt">— um venture studio que assina seu nome</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // TICKER — built via DOM API (no innerHTML)
+  (function(){
+    const items = {
+      en: [
+        ['portfolio · pipeline', '1 active · 4 pipeline', ''],
+        ['vintage 1', 'year 2 · live', 'up'],
+        ['team track record', '$500MM+ invested', ''],
+        ['exits · sigga', '10x', 'up'],
+        ['exits · accera', '4x MOI', 'up'],
+        ['flagship · WIR', '5x intake volume', 'up'],
+        ['cost reduction · WIR', '90% underwriting', 'up'],
+        ['offices', 'SP · SF · BOG', ''],
+        ['legal', 'Lefosse · Foley', ''],
+        ['next memo', 'monthly', ''],
+        ['founded', 'são paulo · 2024', ''],
+        ['horizon', 'here in 2034', '']
+      ],
+      pt: [
+        ['portfólio · pipeline', '1 ativa · 4 pipeline', ''],
+        ['vintage 1', 'ano 2 · ativa', 'up'],
+        ['track record do time', '$500MM+ investidos', ''],
+        ['exits · sigga', '10x', 'up'],
+        ['exits · accera', '4x MOI', 'up'],
+        ['flagship · WIR', '5x volume intake', 'up'],
+        ['redução custo · WIR', '90% underwriting', 'up'],
+        ['escritórios', 'SP · SF · BOG', ''],
+        ['jurídico', 'Lefosse · Foley', ''],
+        ['próxima carta', 'mensal', ''],
+        ['fundada', 'são paulo · 2024', ''],
+        ['horizonte', 'aqui em 2034', '']
+      ]
+    };
+    function buildCell(k, v, t){
+      const cell = document.createElement('div');
+      cell.className = 'ticker-cell';
+      const ks = document.createElement('span');
+      ks.className = 'k';
+      ks.textContent = k;
+      const vs = document.createElement('span');
+      vs.className = 'v';
+      vs.textContent = v;
+      cell.appendChild(ks);
+      cell.appendChild(vs);
+      if (t === 'up' || t === 'dn') {
+        const arr = document.createElement('span');
+        arr.className = t === 'up' ? 'arr-up' : 'arr-dn';
+        arr.textContent = t === 'up' ? '▲' : '▼';
+        cell.appendChild(arr);
+      }
+      return cell;
+    }
+    function renderTicker(lang){
+      const strip = document.getElementById('tickerStrip');
+      while (strip.firstChild) strip.removeChild(strip.firstChild);
+      const list = items[lang] || items.en;
+      // Render twice for seamless scroll
+      for (let i = 0; i < 2; i++) {
+        list.forEach(([k, v, t]) => strip.appendChild(buildCell(k, v, t)));
+      }
+    }
+    renderTicker(document.documentElement.getAttribute('data-lang') || 'en');
+    document.addEventListener('lang-change', e => renderTicker(e.detail.lang));
+  })();
+
+  // SCROLL-DRIVEN CORD
+  (function(){
+    const cords = document.querySelectorAll('.cord');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('played');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.4 });
+    cords.forEach(c => io.observe(c));
+  })();
+
+  // CLOCKS
+  (function(){
+    function fmt(tz){
+      try {
+        return new Intl.DateTimeFormat('en-GB', {hour:'2-digit', minute:'2-digit', hour12:false, timeZone: tz}).format(new Date());
+      } catch(e) { return '—:—'; }
+    }
+    function tick(){
+      const sp = document.getElementById('clk-sp');
+      const sf = document.getElementById('clk-sf');
+      const bog = document.getElementById('clk-bog');
+      if (sp) sp.textContent = fmt('America/Sao_Paulo');
+      if (sf) sf.textContent = fmt('America/Los_Angeles');
+      if (bog) bog.textContent = fmt('America/Bogota');
+    }
+    tick(); setInterval(tick, 30 * 1000);
+  })();
+
+  // ACTIVE NAV
+  (function(){
+    const links = document.querySelectorAll('.nav-links a');
+    const sections = ['#thesis', '#portfolio', '#team', '#contact'].map(id => document.querySelector(id)).filter(Boolean);
+    function onScroll(){
+      const y = window.scrollY + 120;
+      let active = null;
+      sections.forEach(s => { if (s.offsetTop <= y) active = s.id; });
+      links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + active));
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  })();
+
+  // LANGUAGE TOGGLE
+  (function(){
+    const btn = document.getElementById('langToggle');
+    const en = btn.querySelector('.en-label');
+    const pt = btn.querySelector('.pt-label');
+    function setLang(lang){
+      document.documentElement.setAttribute('data-lang', lang);
+      document.documentElement.setAttribute('lang', lang);
+      en.classList.toggle('on', lang === 'en');
+      pt.classList.toggle('on', lang === 'pt');
+      try { localStorage.setItem('avante-lang', lang); } catch(e){}
+      document.dispatchEvent(new CustomEvent('lang-change', { detail: { lang } }));
+    }
+    let initial = 'en';
+    try { initial = localStorage.getItem('avante-lang') || 'en'; } catch(e){}
+    setLang(initial);
+    btn.addEventListener('click', () => {
+      const cur = document.documentElement.getAttribute('data-lang');
+      setLang(cur === 'en' ? 'pt' : 'en');
+    });
+  })();
+</script>
+
+</body>
+</html>

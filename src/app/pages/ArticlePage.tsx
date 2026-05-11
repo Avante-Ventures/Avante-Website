@@ -4,6 +4,7 @@ import { Navbar } from '@/app/components/Navbar'
 import { BackToTop } from '@/app/components/BackToTop'
 import { Footer } from '@/app/components/Footer'
 import { SEOHelmet } from '@/app/components/SEOHelmet'
+import { AvanteLockup } from '@/app/components/AvanteLockup'
 import { articleBySlug, type ArticleSection } from '@/app/data/articles'
 
 export default function ArticlePage() {
@@ -15,11 +16,34 @@ export default function ArticlePage() {
     return <Navigate to={`/${language}/library`} replace />
   }
 
-  const content = article[language]
-  const t = (en: string, pt: string) => (language === 'pt' ? pt : en)
+  // Resolve content with locale-aware fallback. ES gets its own slot when
+  // available; otherwise falls back to EN (and we render a banner so the
+  // visitor knows the translation is in flight). This keeps the URL stable
+  // for Google (canonical /es/library/<slug> is real) without lying about
+  // the language served right now.
+  const hasEsContent = !!article.es
+  const content =
+    language === 'pt'
+      ? article.pt
+      : language === 'es' && article.es
+        ? article.es
+        : article.en
+  const isEsFallingBackToEn = language === 'es' && !hasEsContent
+  const t = (en: string, pt: string, es?: string) =>
+    language === 'pt' ? pt : language === 'es' && es !== undefined ? es : en
 
   // JSON-LD Article schema — declares this page to LLMs and Google as a
-  // first-class Article authored by Avante Ventures.
+  // first-class Article authored by Avante Ventures. inLanguage tracks the
+  // URL's locale, not the served content; with hreflang declared on the
+  // sitemap + SEOHelmet, this is the correct signal.
+  //
+  // GEO enrichment (Apr 2026): added `keywords`, `about`, and `mentions`.
+  // Schema.org signals that LLM crawlers + Google AI Overviews actively
+  // parse to understand topical scope. A bare Article schema is enough for
+  // ranking; these three fields are what gets you cited in answers.
+  const inLanguage =
+    language === 'pt' ? 'pt-BR' : language === 'es' ? 'es' : 'en'
+  const taxonomy = articleTaxonomy(article.slug)
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -28,7 +52,7 @@ export default function ArticlePage() {
     description: content.description,
     url: `https://avanteventures.com/${language}/library/${article.slug}`,
     image: 'https://avanteventures.com/og-image.png',
-    inLanguage: language === 'pt' ? 'pt-BR' : 'en',
+    inLanguage,
     datePublished: article.datePublished,
     dateModified: article.datePublished,
     articleSection: article.category,
@@ -37,6 +61,9 @@ export default function ArticlePage() {
     publisher: { '@id': 'https://avanteventures.com/#organization' },
     isPartOf: { '@id': 'https://avanteventures.com/#website' },
     mainEntityOfPage: `https://avanteventures.com/${language}/library/${article.slug}`,
+    keywords: taxonomy.keywords,
+    about: taxonomy.about,
+    mentions: taxonomy.mentions,
   }
 
   return (
@@ -53,6 +80,7 @@ export default function ArticlePage() {
         description={content.description}
         pathname={`/library/${article.slug}`}
         jsonLd={jsonLd}
+        noindex={!article.isPublished}
       />
 
       <Navbar />
@@ -101,8 +129,15 @@ export default function ArticlePage() {
           onMouseEnter={(e) => (e.currentTarget.style.color = '#F4A261')}
           onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255, 255, 255, 0.6)')}
         >
-          <span>←</span> {t('Back to Library', 'Voltar para Biblioteca')}
+          <span>←</span> {t('Back to Library', 'Voltar para Biblioteca', 'Volver a la Biblioteca')}
         </Link>
+
+        {/* Tier 2 / use 07 — Editorial article anchor. Replaces the absent
+            featured image with the gradient "A" mark. Acts as a visual
+            "Avante essay" stamp at the top of every article body. */}
+        <div style={{ marginBottom: '32px' }}>
+          <AvanteLockup size="md" markOnly variant="default" ariaLabel="Avante editorial" />
+        </div>
 
         {/* Meta strip */}
         <div
@@ -126,11 +161,33 @@ export default function ArticlePage() {
             <>
               <span>·</span>
               <span style={{ color: 'rgba(249, 180, 55, 0.85)', fontWeight: 600 }}>
-                {t('Draft', 'Rascunho')}
+                {t('Draft', 'Rascunho', 'Borrador')}
               </span>
             </>
           )}
         </div>
+
+        {/* ES translation in-progress notice — shown only when an ES viewer
+            lands on a slug that does not yet have a Spanish version. We
+            serve the EN body so the page is still useful, and signal
+            clearly that the ES translation is on the way. */}
+        {isEsFallingBackToEn && (
+          <div
+            style={{
+              margin: '0 0 32px 0',
+              padding: '12px 16px',
+              borderRadius: '8px',
+              background: 'rgba(249, 180, 55, 0.08)',
+              border: '1px solid rgba(249, 180, 55, 0.25)',
+              fontSize: '13px',
+              color: 'rgba(255, 255, 255, 0.78)',
+              lineHeight: 1.55,
+            }}
+          >
+            <strong style={{ color: '#F9B437' }}>Traducción al español en proceso.</strong>{' '}
+            Por ahora se muestra el contenido original en inglés.
+          </div>
+        )}
 
         {/* Title */}
         <h1
@@ -163,6 +220,43 @@ export default function ArticlePage() {
           <Section key={i} section={section} />
         ))}
 
+        {/* Tier 3 / use 10 — Newsletter signature. Closes the article as a
+            signed editorial letter from the firm rather than an anonymous
+            blog post. Sits between the body and the "Browse Library" CTA. */}
+        <div
+          style={{
+            marginTop: '72px',
+            paddingTop: '40px',
+            borderTop: '1px solid var(--avt-hair)',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '20px',
+          }}
+        >
+          <AvanteLockup size="md" markOnly variant="default" ariaLabel="" />
+          <div
+            style={{
+              fontFamily: 'var(--avt-font-mono)',
+              fontSize: '11px',
+              letterSpacing: '0.22em',
+              textTransform: 'uppercase',
+              color: 'var(--avt-meta)',
+              lineHeight: 1.6,
+            }}
+          >
+            <div style={{ color: '#fff' }}>
+              {t('— Avante Founding Team', '— Time Fundador da Avante', '— Equipo Fundador de Avante')}
+            </div>
+            <div style={{ marginTop: '4px' }}>
+              {t(
+                'São Paulo + San Francisco · written from inside the studio',
+                'São Paulo + San Francisco · escrito de dentro do studio',
+                'São Paulo + San Francisco · escrito desde dentro del studio'
+              )}
+            </div>
+          </div>
+        </div>
+
         {/* Article footer CTA */}
         <div
           style={{
@@ -184,7 +278,8 @@ export default function ArticlePage() {
           >
             {t(
               'Want more? Get one essay per month on venture building, AI-native businesses, and the Brazil opportunity.',
-              'Quer mais? Receba um ensaio por mês sobre venture building, negócios AI-native e a oportunidade Brasil.'
+              'Quer mais? Receba um ensaio por mês sobre venture building, negócios AI-native e a oportunidade Brasil.',
+              '¿Quieres más? Recibe un ensayo al mes sobre venture building, negocios AI-native y la oportunidad Brasil.'
             )}
           </p>
           <Link
@@ -212,7 +307,7 @@ export default function ArticlePage() {
               e.currentTarget.style.borderColor = 'rgba(249, 180, 55, 0.4)'
             }}
           >
-            {t('Browse the Library', 'Ver Biblioteca completa')} →
+            {t('Browse the Library', 'Ver Biblioteca completa', 'Ver Biblioteca completa')} →
           </Link>
         </div>
       </article>
@@ -261,9 +356,11 @@ function Section({ section }: { section: ArticleSection }) {
 
       {section.bullets && section.bullets.length > 0 && (
         <ul
+          className="avt-bullet-list"
           style={{
+            // The utility class handles list-style and bullet glyph;
+            // we override only font-size + color tone for the article context.
             margin: '8px 0 18px 0',
-            paddingLeft: '20px',
             color: 'rgba(255, 255, 255, 0.82)',
           }}
         >
@@ -273,7 +370,6 @@ function Section({ section }: { section: ArticleSection }) {
               style={{
                 fontSize: '16px',
                 lineHeight: 1.7,
-                marginBottom: '8px',
               }}
             >
               {b}
@@ -315,12 +411,15 @@ function Callout({
       style={{
         margin: '24px 0',
         padding: '20px 24px',
-        borderLeft: `3px solid ${s.accent}`,
         background: s.bg,
         borderRadius: '0 12px 12px 0',
-        border: `1px solid ${s.border}`,
-        borderLeftColor: s.accent,
-        borderLeftWidth: '3px',
+        // All borders expressed as longhand to avoid React's shorthand-vs-longhand
+        // rerender warning. Top/right/bottom share the muted hairline; left is
+        // the accent-colored 3px rule that signals the callout kind.
+        borderTop: `1px solid ${s.border}`,
+        borderRight: `1px solid ${s.border}`,
+        borderBottom: `1px solid ${s.border}`,
+        borderLeft: `3px solid ${s.accent}`,
       }}
     >
       <p
@@ -364,4 +463,145 @@ function estimateWordCount(sections: ArticleSection[]): number {
     if (s.callout?.text) count += s.callout.text.split(/\s+/).length
   }
   return count
+}
+
+// Per-slug topical taxonomy. Feeds Schema.org `keywords`, `about`, and
+// `mentions` so LLM crawlers + Google AI Overviews can resolve which entities
+// the article addresses. We keep this in code (not in the article record)
+// because (a) it is metadata-about-content rather than content itself, and
+// (b) it lets us evolve the GEO strategy without touching the source copy.
+//
+// `keywords`: free-form tags (used by Google's keyword index)
+// `about`:    Schema.org Things the article is primarily about
+// `mentions`: Schema.org Things named in the body but not the primary subject
+function articleTaxonomy(slug: string): {
+  keywords: string[]
+  about: Array<{ '@type': string; name: string; sameAs?: string }>
+  mentions: Array<{ '@type': string; name: string; sameAs?: string }>
+} {
+  const COMMON_AVANTE = {
+    '@type': 'Organization',
+    name: 'Avante Ventures',
+    sameAs: 'https://avanteventures.com',
+  }
+  switch (slug) {
+    case 'venture-studios-outperform-traditional-vc':
+      return {
+        keywords: ['venture studio', 'venture capital', 'IRR', 'GSSN', 'startup studio model', 'venture building', 'Brazil VC'],
+        about: [
+          { '@type': 'Thing', name: 'Venture studio model' },
+          { '@type': 'Thing', name: 'Internal rate of return (IRR)', sameAs: 'https://en.wikipedia.org/wiki/Internal_rate_of_return' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Global Startup Studio Network', sameAs: 'https://www.gssn.co' },
+          { '@type': 'Organization', name: 'Cambridge Associates', sameAs: 'https://www.cambridgeassociates.com' },
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'first-ticket-advantage-framework':
+      return {
+        keywords: ['first ticket', 'pre-seed investing', 'pre-traction venture', 'venture studio framework', 'cap table', 'AI-native startup', 'investment framework'],
+        about: [
+          { '@type': 'Thing', name: 'Pre-seed investing' },
+          { '@type': 'Thing', name: 'Venture capital ownership economics' },
+        ],
+        mentions: [
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'brazil-ai-market-report-2026':
+      return {
+        keywords: ['Brazil AI market', 'LATAM AI', 'Brazilian SMEs', 'service economy', 'AI-native venture building', 'Brazilian VC 2026', 'AI investment Brazil', 'venture studio Brazil'],
+        about: [
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+          { '@type': 'Thing', name: 'Artificial intelligence market' },
+          { '@type': 'Thing', name: 'Service economy' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'IBGE', sameAs: 'https://www.ibge.gov.br' },
+          { '@type': 'Organization', name: 'Banco Central do Brasil', sameAs: 'https://www.bcb.gov.br' },
+          { '@type': 'Organization', name: 'LAVCA', sameAs: 'https://www.lavca.org' },
+          { '@type': 'Organization', name: 'Distrito', sameAs: 'https://www.distrito.me' },
+          { '@type': 'Place', name: 'São Paulo', sameAs: 'https://en.wikipedia.org/wiki/S%C3%A3o_Paulo' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'sigga-case-study-10x-exit':
+      return {
+        keywords: ['Sigga Technologies', '10x exit', 'industrial software Brazil', 'Brazilian SaaS exit', 'venture case study', 'mobile-native software', 'SAP integration', 'Amanda Pinheiro'],
+        about: [
+          { '@type': 'Organization', name: 'Sigga Technologies' },
+          { '@type': 'Thing', name: 'Industrial asset management software' },
+        ],
+        mentions: [
+          { '@type': 'Person', name: 'Amanda Pinheiro' },
+          { '@type': 'Organization', name: 'SAP', sameAs: 'https://www.sap.com' },
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+          { '@type': 'Place', name: 'Minas Gerais', sameAs: 'https://en.wikipedia.org/wiki/Minas_Gerais' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'inside-the-avante-operating-stack':
+      return {
+        keywords: ['venture studio infrastructure', 'operating stack', 'shared studio infrastructure', 'cap table architecture', 'studio talent funnel', 'GTM templates', 'venture studio playbook', 'Avante studio'],
+        about: [
+          { '@type': 'Thing', name: 'Venture studio operating model' },
+          { '@type': 'Thing', name: 'Shared startup infrastructure' },
+        ],
+        mentions: [
+          { '@type': 'Place', name: 'São Paulo', sameAs: 'https://en.wikipedia.org/wiki/S%C3%A3o_Paulo' },
+          { '@type': 'Place', name: 'Delaware', sameAs: 'https://en.wikipedia.org/wiki/Delaware' },
+          COMMON_AVANTE,
+        ],
+      }
+    // Stubs share a topical seed so even the noindex pages declare their
+    // intended scope to internal-link crawlers and to LLMs that ignore
+    // the noindex hint.
+    case 'building-ai-native-companies-avante-playbook':
+      return {
+        keywords: ['AI-native company', 'venture studio playbook', 'startup studio system', 'Brazilian venture building'],
+        about: [{ '@type': 'Thing', name: 'AI-native venture building' }],
+        mentions: [COMMON_AVANTE],
+      }
+    case 'idea-to-cashflow-90-days':
+      return {
+        keywords: ['90-day pilot', 'venture cashflow', 'AI workflow automation', 'unit economics validation'],
+        about: [{ '@type': 'Thing', name: 'Pre-seed venture validation' }],
+        mentions: [{ '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' }, COMMON_AVANTE],
+      }
+    case 'unit-economics-101-ltv-cac-day-one':
+      return {
+        keywords: ['unit economics', 'LTV', 'CAC', 'cashflow first', 'pre-seed venture metrics'],
+        about: [{ '@type': 'Thing', name: 'Unit economics' }],
+        mentions: [COMMON_AVANTE],
+      }
+    case 'operators-guide-ai-automation':
+      return {
+        keywords: ['AI automation', 'workflow automation', 'AI for operators', 'vertical AI', 'AI-native product design'],
+        about: [{ '@type': 'Thing', name: 'AI workflow automation' }],
+        mentions: [COMMON_AVANTE],
+      }
+    case 'brazil-service-economy-disruption':
+      return {
+        keywords: ['Brazil service economy', 'Brazilian SMEs', 'fragmented industries', 'AI disruption Brazil', 'service economy AI'],
+        about: [
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+          { '@type': 'Thing', name: 'Service economy' },
+        ],
+        mentions: [COMMON_AVANTE],
+      }
+    case 'global-venture-studio-data-50-percent-returns':
+      return {
+        keywords: ['venture studio returns', 'GSSN report', 'studio IRR', 'startup studio data', 'venture studio benchmarks'],
+        about: [{ '@type': 'Thing', name: 'Venture studio performance benchmarks' }],
+        mentions: [
+          { '@type': 'Organization', name: 'Global Startup Studio Network', sameAs: 'https://www.gssn.co' },
+          COMMON_AVANTE,
+        ],
+      }
+    default:
+      return { keywords: [], about: [], mentions: [COMMON_AVANTE] }
+  }
 }

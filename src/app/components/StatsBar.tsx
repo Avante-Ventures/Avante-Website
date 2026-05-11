@@ -1,4 +1,5 @@
 import { memo } from 'react';
+import { useLanguage } from '@/app/hooks/useLanguage';
 
 interface StatItem {
   value: string;
@@ -7,14 +8,18 @@ interface StatItem {
 }
 
 const StatsBarComponent = () => {
+  const { language } = useLanguage();
+  const t = (en: string, pt: string, es: string) =>
+    language === 'pt' ? pt : language === 'es' ? es : en;
+
   const stats: StatItem[] = [
-    { value: '$2.5T', label: 'Economy', color: '#7B68EE' },
-    { value: '215M', label: 'People', color: '#F4A261' },
-    { value: '70%', label: 'Services', color: '#E6C54C' },
-    { value: '25', label: 'Unicorns', color: '#7B68EE' },
-    { value: '93%', label: 'Renewable', color: '#F4A261' },
-    { value: '$4.5B', label: 'AI Investment', color: '#E6C54C' },
-    { value: '~90%', label: 'SMEs under-digitalized', color: '#7B68EE' }
+    { value: '$2.5T', label: t('Economy', 'Economia', 'Economía'), color: '#7B68EE' },
+    { value: '215M', label: t('People', 'Pessoas', 'Personas'), color: '#F4A261' },
+    { value: '70%', label: t('Services', 'Serviços', 'Servicios'), color: '#E6C54C' },
+    { value: '25', label: t('Unicorns', 'Unicórnios', 'Unicornios'), color: '#7B68EE' },
+    { value: '93%', label: t('Renewable', 'Renovável', 'Renovable'), color: '#F4A261' },
+    { value: '$4.5B', label: t('AI Investment', 'Investimento em IA', 'Inversión en IA'), color: '#E6C54C' },
+    { value: '~90%', label: t('SMEs under-digitalized', 'PMEs sub-digitalizadas', 'PYMEs sub-digitalizadas'), color: '#7B68EE' }
   ];
 
   return (
@@ -58,6 +63,10 @@ const StatsBarComponent = () => {
           zIndex: 1,
         }}
       >
+        {/* Section title — "Why we choose Brazil?" frames the metrics as
+            an answer to a strategic question, not just decorative figures.
+            Round 8 feedback. */}
+        <SectionTitle />
         <div
           className="stats-grid stats-row-4"
           style={{
@@ -124,9 +133,14 @@ const StatDisplay = memo(({ value, label, color, fn }: StatDisplayProps) => {
     <div
       style={{
         textAlign: 'center',
-        padding: '16px 8px'
+        padding: '16px 8px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
       }}
     >
+      {/* "A" prefix removed per Round 8 feedback — under a "Why we choose
+          Brazil?" title, the marks felt like noise on top of macro stats. */}
       <div
         style={{
           fontSize: 'clamp(32px, 3.5vw, 42px)',
@@ -176,5 +190,65 @@ const StatDisplay = memo(({ value, label, color, fn }: StatDisplayProps) => {
 });
 
 StatDisplay.displayName = 'StatDisplay';
+
+// Section title for StatsBar — frames the metrics under a strategic question.
+// Uses the gold-dot eyebrow signature pattern + Funnel Display monumental
+// title for visual continuity with SectionMasthead family.
+const SectionTitle = memo(() => {
+  const { language } = useLanguage();
+  const title =
+    language === 'pt'
+      ? <>Por que <span className="avt-grad">escolhemos o Brasil?</span></>
+      : language === 'es'
+        ? <>¿Por qué <span className="avt-grad">elegimos Brasil?</span></>
+        : <>Why we <span className="avt-grad">choose Brazil?</span></>;
+  return (
+    <div style={{ textAlign: 'center', marginBottom: '24px' }}>
+      <div
+        style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '10px',
+          marginBottom: '20px',
+          fontFamily: 'var(--avt-font-body)',
+          fontSize: '12px',
+          fontWeight: 600,
+          letterSpacing: '0.08em',
+          textTransform: 'uppercase',
+          color: '#F9B437',
+        }}
+      >
+        <span
+          aria-hidden
+          style={{
+            display: 'inline-block',
+            width: '6px',
+            height: '6px',
+            borderRadius: '50%',
+            background: '#F9B437',
+            boxShadow: '0 0 8px rgba(249, 180, 55, 0.6)',
+          }}
+        />
+        <span>
+          {language === 'pt' ? 'Macro' : language === 'es' ? 'Macro' : 'Macro'}
+        </span>
+      </div>
+      <h2
+        style={{
+          fontFamily: 'var(--avt-font-display)',
+          fontSize: 'clamp(36px, 5vw, 64px)',
+          fontWeight: 500,
+          letterSpacing: '-0.04em',
+          lineHeight: 1.0,
+          color: '#fff',
+          margin: 0,
+        }}
+      >
+        {title}
+      </h2>
+    </div>
+  );
+});
+SectionTitle.displayName = 'StatsBarSectionTitle';
 
 export const StatsBar = memo(StatsBarComponent);

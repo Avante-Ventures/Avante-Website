@@ -2,7 +2,7 @@
 
 > AI-native venture studio combining Silicon Valley playbooks with Brazil-native execution. We co-found AI-native companies from scratch, built to compound for decades.
 
-> Bilingual site: English at `/en/*`, Portuguese (pt-BR) at `/pt/*`. Both versions are equally canonical and indexed.
+> Trilingual site: English at `/en/*`, Portuguese (pt-BR) at `/pt/*`, Spanish (Latin American) at `/es/*`. All three locales are equally canonical and indexed via hreflang. Long-form articles are translated EN ↔ PT today; ES translations are rolling out — Spanish URLs that do not yet have a translated article serve the EN body with a "translation in progress" notice.
 
 ## What we do
 
@@ -75,6 +75,24 @@ Our model: pre-traction capital + repeatable operational system + in-market exec
 - [Relatório do Mercado de IA no Brasil 2026](https://avanteventures.com/pt/library/brazil-ai-market-report-2026)
 - [Sigga Technologies: Da Fundação ao Exit de 10×](https://avanteventures.com/pt/library/sigga-case-study-10x-exit)
 - [Por Dentro do Stack Operacional da Avante](https://avanteventures.com/pt/library/inside-the-avante-operating-stack)
+
+## Páginas (Español)
+
+- [Inicio](https://avanteventures.com/es): Misión, modelo, ventures, equipo, contacto
+- [Por Qué Avante](https://avanteventures.com/es/why-avante): Tesis de inversión, datos de retorno, comparación vs VC tradicional
+- [Biblioteca](https://avanteventures.com/es/library): Insights, investigación, casos de estudio, playbooks, análisis del mercado brasileño
+- [Portafolio](https://avanteventures.com/es/portfolio): Cohort activa del studio, exits realizados (Sigga 10×), y ventures alumni del equipo fundador
+- [Para Founders](https://avanteventures.com/es/founders): Lo que Avante ofrece a founders, lo que esperamos, y cómo opera el studio día a día
+- [Para LPs / Inversores](https://avanteventures.com/es/investors): Tesis, estructura, bloque de transparencia ("lo que no haremos"), y cómo agendar una conversación de LP
+- [Principios Operativos](https://avanteventures.com/es/principles): Los 10 principios por los que opera el studio Avante. No son valores — son reglas que limitan el comportamiento. Publicados como doctrina competitiva.
+
+### Artículos destacados (versión completa)
+
+- [Por Qué los Venture Studios Superan al VC Tradicional](https://avanteventures.com/es/library/venture-studios-outperform-traditional-vc)
+- [La Ventaja del Primer Cheque: Un Framework](https://avanteventures.com/es/library/first-ticket-advantage-framework)
+- [Reporte del Mercado de IA en Brasil 2026](https://avanteventures.com/es/library/brazil-ai-market-report-2026)
+- [Sigga Technologies: De la Fundación al Exit de 10×](https://avanteventures.com/es/library/sigga-case-study-10x-exit)
+- [Por Dentro del Stack Operativo de Avante](https://avanteventures.com/es/library/inside-the-avante-operating-stack)
 
 ## Contact
 

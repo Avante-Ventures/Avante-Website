@@ -57,17 +57,21 @@ export function CompoundingChart({
   compact = false,
 }: CompoundingChartProps) {
   const { language } = useLanguage()
-  const t = (en: string, pt: string) => (language === 'pt' ? pt : en)
+  const t = (en: string, pt: string, es?: string) =>
+    language === 'pt' ? pt : language === 'es' && es !== undefined ? es : en
 
-  const eyebrowText = eyebrow ?? t('Built to compound', 'Construído para compor')
-  // Caption anchored to operational reality (Beirut + Lopez panel note):
-  // generic compounding metaphors are forgettable. Anchoring to "Vintage 1,
-  // year 2" tells the visitor exactly where the studio is on its own curve.
+  const eyebrowText =
+    eyebrow ?? t('Built to compound', 'Construído para compor', 'Construido para componer')
+  // Caption — Round 8 update: replaced "Vintage 1, year 2" anchor with
+  // an operating thesis statement ("Building 3-4 companies per year.
+  // Cashflow-focused machines.") that frames the compounding curve as
+  // a function of execution discipline rather than vintage age.
   const captionText =
     caption ??
     t(
-      'Vintage 1, year 2 of investing — first cohort live.',
-      'Vintage 1, ano 2 de investimentos — primeira cohort ativa.'
+      'Building 3–4 companies per year. Cashflow‑focused machines.',
+      'Construímos 3–4 empresas por ano. Máquinas focadas em cashflow.',
+      'Construimos 3–4 empresas por año. Máquinas enfocadas en cashflow.'
     )
 
   // Total path length is approximately the diagonal of the curve, ~110 units.

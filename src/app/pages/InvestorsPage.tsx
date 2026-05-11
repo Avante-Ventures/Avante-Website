@@ -28,12 +28,18 @@ const SEO = {
       'Exposição estratégica ao Brasil AI-native através de um venture studio com exit de 10× no track record. Estrutura de investimento, tese, e o que faremos e não faremos em uma primeira conversa.',
     inLanguage: 'pt-BR',
   },
+  es: {
+    title: 'Para Inversores / LPs — Avante Ventures',
+    description:
+      'Exposición estratégica al Brasil AI-native a través de un venture studio con exit de 10× en su track record. Estructura de inversión, tesis, y lo que haremos y no haremos en una primera conversación.',
+    inLanguage: 'es',
+  },
 } as const
 
 export default function InvestorsPage() {
   const { language } = useLanguage()
   const t = (en: string, pt: string) => (language === 'pt' ? pt : en)
-  const copy = SEO[language]
+  const copy = SEO[language] ?? SEO.en
   const [isContactOpen, setIsContactOpen] = useState(false)
 
   const jsonLd = {
@@ -147,7 +153,7 @@ export default function InvestorsPage() {
         style={{
           maxWidth: '1100px',
           margin: '0 auto',
-          padding: 'clamp(96px, 12vh, 140px) 24px 96px',
+          padding: 'var(--avt-page-pad-top) var(--avt-page-pad-x) var(--avt-page-pad-bottom)',
         }}
       >
         <Link

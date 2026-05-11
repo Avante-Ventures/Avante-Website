@@ -46,6 +46,12 @@ export interface Article {
   datePublished: string
   en: ArticleLocaleContent
   pt: ArticleLocaleContent
+  /** Optional Spanish translation. When absent, ES viewers see EN with a
+   *  banner indicating the ES translation is in progress. JSON-LD still
+   *  declares inLanguage:'es' on the /es/ URL — Google treats the URL as
+   *  an es-region landing page that is currently serving en content (which
+   *  is the truth on the ground). */
+  es?: ArticleLocaleContent
   /** True if full long-form content is published. False = stub/coming-soon. */
   isPublished: boolean
 }
@@ -209,6 +215,81 @@ const articleVentureStudios: Article = {
           'GSSN Annual Report 2025 (Global Startup Studio Network) — comparação longitudinal de IRR referenciada acima.',
           'Cambridge Associates US Venture Capital Index Q4 2025 — para o número de IRR de referência ~19%.',
           'LAVCA Brazil VC + Tech Report 2025 — pontos de dados de economia de serviço e investimento em IA.',
+        ],
+      },
+    ],
+  },
+  es: {
+    title: 'Por Qué los Venture Studios Superan al VC Tradicional',
+    description: 'Los datos son contundentes: los venture studios generan ~50% de IRR vs ~19% del VC tradicional. La razón estructural — y por qué Brasil es el próximo escenario del modelo.',
+    sections: [
+      {
+        paragraphs: [
+          'La mayoría de las clases de activos reportan desempeño suavizado a cinco años. Los venture studios no tienen ese lujo — cada cohort es un único año de decisiones. Aun así, los datos consistentes de la última década apuntan en una dirección: cuando se miden en horizontes realistas, los studios producen aproximadamente 2.5× el IRR del venture capital tradicional.',
+          'El reporte anual de la GSSN (Global Startup Studio Network) — el estudio longitudinal más citado de la industria — coloca el IRR de studios en ~50%, contra un estándar de ~19% de fondos VC en vintages similares. Esa brecha no es estadística. Es una consecuencia estructural de cómo se construye el modelo.',
+        ],
+      },
+      {
+        heading: 'El 50% de IRR no es suerte',
+        paragraphs: [
+          'Si pasas quince minutos pensando en retornos de VC, asumirás que la brecha se explica por sesgo de supervivencia — solo los studios con grandes deals reportan datos. La metodología de la GSSN controla por eso: studios muertos, dormidos y con retornos por debajo del promedio están todos en el dataset.',
+          'Mira más de cerca y emergen tres ventajas estructurales que el VC tradicional simplemente no puede replicar a escala, no importa qué tan buenos sean los partners.',
+        ],
+      },
+      {
+        heading: 'Ventaja 1: Profundidad operativa por diseño',
+        level: 3,
+        paragraphs: [
+          'Un partner de VC tradicional se sienta en 8–12 consejos. Su palanca es consejo, presentaciones y capital de reserva. Ninguna de ellas compone en la capa de decisión operativa diaria donde una startup realmente gana o muere.',
+          'El operating partner de un venture studio está en el codebase, en la planilla de unit economics y en la primera conversación de contratación. El studio tiene infraestructura compartida — recruiters que ya conocen el pipeline, líderes financieros que estructuran la contabilidad desde el día uno, operadores de GTM que ya vendieron en mercados adyacentes. El efecto compositor es brutal: cada nueva venture lanza 6–9 meses adelante de donde estaría un equipo standalone con capital similar.',
+        ],
+        callout: {
+          kind: 'stat',
+          text: '6–9 meses: ventaja típica en time-to-traction de una venture de studio vs un equipo no afiliado con el mismo capital.',
+        },
+      },
+      {
+        heading: 'Ventaja 2: Eficiencia de tiempo a nivel de portafolio',
+        level: 3,
+        paragraphs: [
+          'Los fondos VC están restringidos por deal flow. Un partner gasta 60%+ de su tiempo en sourcing, evaluando y persiguiendo rondas que puede no ganar. El ownership real construido por hora-de-atención es bajo.',
+          'Los studios invierten esto. Cada venture es una venture que el studio eligió empezar — el sourcing es interno, la evaluación se hace antes de fundar, y la firma es el primer inversor por definición. La razón horas-a-ownership es dramáticamente mejor, y crucialmente, esas horas se gastan en la etapa donde pequeñas intervenciones operativas crean los mayores deltas estratégicos.',
+        ],
+      },
+      {
+        heading: 'Ventaja 3: Eficiencia de capital vía sistemas repetibles',
+        level: 3,
+        paragraphs: [
+          'Un first-time founder gasta aproximadamente 40% del capital pre-seed en lo que llamaríamos "plomería de la empresa" — apertura de persona jurídica, nómina/RRHH, libros contables, seguridad y compliance básicos, construcción del playbook GTM fundador. La mayoría de eso es trabajo repetido en cada venture en una región.',
+          'Los studios resuelven la plomería una vez. Las ventures subsiguientes la heredan en el día uno. Resultado: cada dólar desplegado va más lejos en trabajo diferenciador. En nuestra experiencia, esa diferencia sola redirige ~US$300K–US$500K de capital efectivo por venture hacia producto y construcción de tracción en lugar de overhead.',
+        ],
+      },
+      {
+        heading: 'Por qué importa específicamente para Brasil',
+        paragraphs: [
+          'El ecosistema brasileño tiene una escasez estructural que hace al modelo de studio especialmente adecuado: operadores de dominio con 10+ años de cicatrices del mercado brasileño. Personas que saben navegar industrias de servicio fragmentadas, regímenes tributarios complicados y un mercado laboral con dinámicas inusuales — pero que no están nativamente cableadas para leer métricas SaaS o diseñar loops de producto AI-native.',
+          'Un studio puentea eso. Operador de dominio + playbook de Silicon Valley + capital de primer cheque, todo ensamblado en el día uno. El mercado local ofrece lo que es globalmente raro en 2026: volumen masivo de economía de servicios (70% del PIB), baja penetración de producto e infraestructura de IA ahora barata para desplegar sin una Serie A.',
+          'Vemos a Brasil como uno de los setups más limpios de cualquier geografía para outperformance de studios, y los datos iniciales de nuestro portafolio lo confirman.',
+        ],
+      },
+      {
+        heading: 'Cómo Avante implementa el modelo',
+        paragraphs: [
+          'Lanzamos 3–4 ventures por año. Cada una pasa por el mismo sistema de seis etapas (Research → Partner → Build → Traction → Revenue → Compound) con infraestructura de studio compartida entre todas. Los operating partners se mantienen comprometidos hasta el primer hito de revenue, después transitan a supervisión a nivel de consejo.',
+          'El capital desplegado por venture está en el rango de US$500K–US$1.5M en pre-seed, con el studio reteniendo economics de co-founder. Nos medimos no por deal flow sino por IRR por cohort — la única medida honesta de si el modelo está funcionando.',
+        ],
+        callout: {
+          kind: 'quote',
+          text: 'No somos turistas. Hemos construido, escalado y hecho exit. Ahora estamos desplegando ese pattern recognition para construir los próximos líderes de categoría de Brasil.',
+          attribution: 'Equipo Fundador de Avante',
+        },
+      },
+      {
+        heading: 'Fuentes y lecturas adicionales',
+        paragraphs: [
+          'GSSN Annual Report 2025 (Global Startup Studio Network) — la comparación longitudinal de IRR referenciada arriba.',
+          'Cambridge Associates US Venture Capital Index Q4 2025 — para el número de IRR de referencia ~19%.',
+          'LAVCA Brazil VC + Tech Report 2025 — puntos de datos de economía de servicios e inversión en IA.',
         ],
       },
     ],
@@ -380,6 +461,86 @@ const articleFirstTicket: Article = {
         paragraphs: [
           'Intuição em VC pré-tração é majoritariamente pattern-matching contra os próprios vieses. O framework força raciocínio explícito sobre cada filtro, o que faz emergir os desacordos dentro de um time de investimento e expõe os blind spots que o pure pattern-matching esconde.',
           'Também cria memória institucional. Conseguimos olhar para trás em cada investimento da Avante e ver quais filtros passaram, quais foram marginais e onde erramos. Esse loop de feedback é o que faz o framework melhorar com o tempo — e é a verdadeira razão pela qual studios superam: aprendizado estruturado compõe.',
+        ],
+      },
+    ],
+  },
+  es: {
+    title: 'La Ventaja del Primer Cheque: Un Framework',
+    description: 'El mayor determinante de los retornos en VC no es la habilidad de elegir — es si escribiste el primer cheque. Las matemáticas, y el framework de cuatro filtros que Avante usa para actuar sobre ello.',
+    sections: [
+      {
+        paragraphs: [
+          'Existe una concepción errada casi universal sobre cómo funcionan realmente los retornos en VC. Founders, LPs y hasta VCs activos tienden a acreditar la "elección" — la habilidad de identificar grandeza antes del consenso. Los datos cuentan otra historia: la variable dominante en retornos de largo plazo no es qué deals elegiste. Es cuándo entraste en ellos.',
+          'Específicamente: ¿escribiste el primer cheque material, o el tercero o el quinto?',
+        ],
+      },
+      {
+        heading: 'Las matemáticas: decaimiento de ownership a través de las rondas',
+        paragraphs: [
+          'Toma una venture que termina con un exit de mil millones de dólares. El inversor pre-seed del primer cheque con US$500K a US$4M post-money posee aproximadamente 12.5% pre-dilución y ~4–5% post-dilución en el exit, dependiendo de las rondas siguientes. Eso son ~US$40–50M de retorno sobre US$500K. Un resultado de 100×.',
+          'El mismo inversor escribiendo US$5M en la Serie A a US$40M post-money posee 12.5% pre-dilución pero arranca con mucho menos espacio para componer. Después de tres rondas más de dilución, queda con ~3–4% en el exit, retornando US$30–40M sobre US$5M — un respetable 7×, pero una categoría diferente de resultado.',
+          'La brecha es estructural. El primer cheque se paga por asumir riesgo más temprano; las rondas siguientes pagan por menos riesgo y proporcionalmente menos ownership. No hay forma de replicar retornos de primer cheque doblando la apuesta más tarde.',
+        ],
+        callout: {
+          kind: 'stat',
+          text: 'Una posición de primer cheque puede retornar 100×; el mismo exit le paga 7× al inversor de Serie A. Misma empresa, resultados muy distintos.',
+        },
+      },
+      {
+        heading: 'Pero primer cheque sin información es solo apostar',
+        paragraphs: [
+          'La razón por la que la mayoría de los inversores no escribe primeros cheques no es falta de capital. Es que la asimetría de información es brutal. En pre-tracción no hay revenue para testear, ni señal de mercado, ni consenso. Estás evaluando personas, ideas y timing — y equivocarte cuesta caro.',
+          'El movimiento inteligente no es "swingear más" en primeros cheques. Es construir sistemáticamente ventajas informacionales ANTES de la ronda, para que cuando escribas el cheque no estés apostando — estés actuando con convicción ganada por proximidad a los operadores y al mercado.',
+        ],
+      },
+      {
+        heading: 'El framework de cuatro filtros de Avante',
+        paragraphs: [
+          'Cuando evaluamos una potencial inversión de primer cheque (o una venture que estamos por co-fundar), la pasamos por cuatro filtros. Aprobar requiere tres de cuatro. Dos-de-cuatro = estudiar más profundo. Uno-o-cero = pasar.',
+        ],
+      },
+      {
+        heading: 'Filtro 1: Fit operador-mercado',
+        level: 3,
+        paragraphs: [
+          '¿Tiene el founder al menos 7 años de cicatrices en la arena en este mercado exacto? No "conoce el espacio" — ha sido operativamente responsable de outcomes en él. Las economías de servicios en Brasil son particularmente punitivas en este filtro; no puedes fingir conocimiento de fragmentación.',
+          'Este filtro solo elimina el 80% del inbound. Nos hemos equivocado quizá un 5% de las veces.',
+        ],
+      },
+      {
+        heading: 'Filtro 2: IA como núcleo, no acoplada',
+        level: 3,
+        paragraphs: [
+          '¿Es la arquitectura de IA la fundación de la diferenciación del producto, o una feature que podrías remover y aún tener un producto funcional? La última es frágil a la commoditización; la primera compone con cada mejora del modelo.',
+          'Una prueba práctica: si GPT-5 fuera gratis mañana, ¿esta venture se vuelve más valiosa o menos? AI-native se vuelve más valiosa. AI-acoplada se commoditiza.',
+        ],
+      },
+      {
+        heading: 'Filtro 3: Camino a cashflow dentro de 12 meses',
+        level: 3,
+        paragraphs: [
+          '¿Podemos ver un camino creíble al primer dólar de revenue dentro de 12 meses de la fundación? No "podría funcionar eventualmente" — camino creíble, con primeros clientes nombrados en el pipeline.',
+          'Este filtro es el antídoto contra las métricas de vanidad. Elimina decks bonitos sin plan de envío. También fuerza honestidad del founder sobre distribución: la mayoría de las ventures fallan porque nadie compró, no porque el producto no funcionó.',
+        ],
+      },
+      {
+        heading: 'Filtro 4: Composabilidad',
+        level: 3,
+        paragraphs: [
+          'Una vez llegando a la tracción, ¿el moat compone? Efectos de red, switching costs, loops de datos, ventajas regulatorias — al menos un compositor estructural debe ser visible desde el año uno. "Vamos a ser más baratos" no es un moat. Tampoco "vamos a trabajar más duro".',
+          'Este es el filtro que separa un resultado de 5× de uno de 100×. Puedes sobrevivir un resultado débil en los otros tres; si el filtro 4 falla, las matemáticas limitan tu upside no importa qué tan bien ejecutes.',
+        ],
+        callout: {
+          kind: 'tip',
+          text: 'Tres de cuatro filtros = luz verde. Dos de cuatro = investigar más antes de decidir. Uno o cero = pasar limpiamente.',
+        },
+      },
+      {
+        heading: 'Por qué el framework supera a la intuición',
+        paragraphs: [
+          'La intuición en inversión VC pre-tracción es mayoritariamente pattern-matching contra tus propios sesgos. El framework fuerza razonamiento explícito sobre cada filtro, lo que saca a la luz los desacuerdos dentro de un equipo de inversión y expone los blind spots que el pure pattern-matching esconde.',
+          'También crea memoria institucional. Podemos mirar atrás cada inversión de Avante y ver qué filtros pasaron, cuáles fueron marginales y dónde nos equivocamos. Ese loop de feedback es lo que hace que el framework mejore con el tiempo — y es la verdadera razón por la que los studios sobreperforman: el aprendizaje estructurado compone.',
         ],
       },
     ],
@@ -641,6 +802,129 @@ const articleBrazilAIMarket: Article = {
       },
     ],
   },
+  es: {
+    title: 'Reporte del Mercado de IA en Brasil 2026',
+    description: 'Economía de US$2.5T, 215M de personas, 70% de servicios en el PIB, US$4.5B de inversión en IA, ~90% de las PYMEs sub-digitalizadas. El setup para creación de ventures AI-native en el mayor mercado de América Latina.',
+    sections: [
+      {
+        paragraphs: [
+          'Brasil en 2026 está en una posición en la que el resto del mundo desarrollado no está: una economía lo suficientemente grande para importar (US$2.5 billones de PIB, top-10 global), pesada en servicios (70%+ del output) y estructuralmente sub-digitalizada en la capa de pequeñas y medianas empresas (~90% de las PYMEs no tienen software operativo básico). Cuando la infraestructura de IA bajó a un precio donde equipos founders pueden desplegar modelos production-grade sin una Serie A, la restricción que limitaba la oportunidad de software brasileño se invirtió de "¿podemos pagar para construirlo?" a "¿tenemos los operadores para enviarlo?".',
+          'Este reporte es nuestro modelo interno de dónde está la oportunidad AI-native en Brasil ahora mismo. Lo publicamos porque la brecha entre lo que la prensa global de VC escribe sobre Brasil y lo que es realmente entregable aquí es amplia.',
+        ],
+      },
+      {
+        heading: 'El setup estructural: por qué Brasil específicamente, por qué ahora',
+        paragraphs: [
+          'Hay cinco hechos sobre la economía brasileña que, tomados en conjunto, definen la oportunidad AI-native mejor que cualquier lista sectorial:',
+        ],
+        bullets: [
+          'PIB de US$2.5T — top-10 mundial, lo suficientemente grande para que líderes de categoría sean negocios billonarios sin exportar.',
+          '215M de personas — concentración poblacional en São Paulo / Río / Belo Horizonte / Curitiba crea mercados urbanos densos con infraestructura compartida.',
+          '70%+ del PIB en servicios — desproporcionadamente pesado en operaciones y workflows, exactamente el tipo de trabajo que la IA automatiza bien.',
+          '~90% de las PYMEs sin software básico — la sub-digitalización es la oportunidad. El punto de entrada es "tu primer software", no "cámbiate de Salesforce".',
+          'US$4.5B de inversión en IA en 2025 (LAVCA + trackers locales) — el capital está llegando pero está pesado hacia etapa tardía. Pre-tracción está genuinamente sub-atendido.',
+        ],
+      },
+      {
+        heading: 'Por qué las economías de servicios son AI-native',
+        paragraphs: [
+          'En un PIB de economía de producto (piensa en tecnología y bienes de consumo de EE.UU.), la IA es en gran medida una herramienta que hace al software existente más capaz. La disrupción es incremental dentro de categorías de producto establecidas.',
+          'En un PIB de economía de servicios, la IA es otra cosa: puede hacer el trabajo real. Triaje legal, underwriting de seguros, atención al cliente, conciliación contable, screening de reclutamiento, matchmaking inmobiliario — no son "mejorados por software". Son software, una vez que un modelo lo suficientemente capaz se cablea correctamente al workflow.',
+          'El 70%+ de servicios en el PIB de Brasil significa que el software AI-native tiene un área de superficie mucho mayor que en economías pesadas en producto. Cada industria fragmentada de pequeños operadores es candidata a un consolidador AI-native. Ese es el setup estructural.',
+        ],
+      },
+      {
+        heading: 'La capa de talento es genuinamente más profunda de lo que se reporta',
+        paragraphs: [
+          'El talento de ingeniería brasileño es uno de los activos estratégicos consistentemente más subestimados en tech global. Ingenieros de USP, UNICAMP, ITA y un puñado de pools auto-didactas vienen enviando a empresas tech de EE.UU. (Stripe, Shopify, Cloudflare, Datadog, OpenAI) hace una década. La profundidad de talento sénior IC que puede arquitectar productos AI-native end-to-end es, según nuestro headcount interno, comparable a un mercado metropolitano tier-2 de EE.UU. — y cuesta aproximadamente un tercio.',
+          'La restricción de talento no es la ingeniería. Es la combinación más rara de ingeniería sénior + experiencia operativa de dominio + energía de first-time founder. Ese trío es lo que los venture studios ensamblan.',
+        ],
+      },
+      {
+        heading: 'Geometría de capital: el gap está en pre-tracción',
+        paragraphs: [
+          'US$4.5B de inversión en IA en 2025 en Brasil suena saludable, y a nivel de etapa tardía, lo es. Rondas Serie B / C están recibiendo funding de fondos tier-1 globales abriendo asignaciones a LATAM. Ese capital es necesario y bienvenido.',
+          'Lo que está estructuralmente ausente es capital genuino de pre-tracción con profundidad operativa adjunta. Ángeles locales escriben tickets pequeños; family offices quieren post-revenue; VCs globales quieren tracción de Serie A. La etapa 0-a-1 donde los productos aún se están diseñando y la primera receta se está ganando es la parte más delgada del capital stack — y es precisamente la etapa donde el involucramiento operativo estilo-studio crea más valor.',
+        ],
+        callout: {
+          kind: 'stat',
+          text: 'En nuestro modelo, la oportunidad direccionable de venture-building AI-native pre-tracción en Brasil es de aproximadamente 200–300 ventures nuevas por año hasta 2030.',
+        },
+      },
+      {
+        heading: 'Sectores que observamos de cerca',
+        paragraphs: [
+          'Del paisaje más amplio de servicios, seis sectores siguen volviendo al tope de nuestro pipeline porque comparten tres rasgos: alta fragmentación, workflows mayoritariamente manuales y un camino claro hacia revenue recurrente mensual desde el día uno.',
+        ],
+      },
+      {
+        heading: 'Servicios legales',
+        level: 3,
+        paragraphs: [
+          'El sector legal brasileño es famosamente fragmentado (60K+ pequeñas firmas), pesado en documentos y casi enteramente operado vía email y planillas. Triaje AI-native, generación de documentos, control de plazos y búsqueda de jurisprudencia son todos viables. Ventures iniciales aquí están mostrando aumentos de 5× en volumen de triaje a 90% menos costo que equipos de paralegal legados.',
+        ],
+      },
+      {
+        heading: 'Underwriting y siniestros de seguros',
+        level: 3,
+        paragraphs: [
+          'La penetración de seguros en Brasil está por debajo del promedio OCDE pero crece rápido. La infraestructura legada de underwriting fue construida para distribución vía corredor de alto-toque; productos AI-native de pricing y triaje de siniestros pueden atender a los próximos 100M de asegurados con OPEX dramáticamente menor. WIR (una de las empresas de nuestro portafolio) está en esta categoría.',
+        ],
+      },
+      {
+        heading: 'Contabilidad y finanzas PYME',
+        level: 3,
+        paragraphs: [
+          '15M de PYMEs en Brasil, la mayoría aún en contabilidad manual. La combinación de regímenes tributarios complejos + contabilidad AI-native + open banking crea un setup para SaaS vertical que auto-categoriza, auto-concilia y auto-genera obligaciones fiscales. La estructura de margen es excelente porque el trabajo es genuinamente repetible.',
+        ],
+      },
+      {
+        heading: 'Inteligencia de subastas inmobiliarias',
+        level: 3,
+        paragraphs: [
+          'Brasil tiene un mercado peculiar de subastas de deuda judicial y ejecución bancaria que es opaco, pesado en documentos y lleno de ineficiencias. Scraping AI-native + enrichment + scoring crea un arbitraje informacional que retorna capital rápidamente. Tenemos una venture (BR Auction Intel) operando en este espacio.',
+        ],
+      },
+      {
+        heading: 'Administración de salud',
+        level: 3,
+        paragraphs: [
+          'La salud privada brasileña corre sobre una maraña de relaciones operadora-prestador con workflows manuales de siniestros, autorización previa y conciliación. Middleware AI-native que automatiza estos pasos muestra mejoras de 70%+ en time-to-decision donde se desplegó. Este sector está más limitado por la regulación que por la capacidad de IA — equipos pacientes que saben navegar reglas de la ANS ganan.',
+        ],
+      },
+      {
+        heading: 'Reclutamiento y workforce ops',
+        level: 3,
+        paragraphs: [
+          'La legislación laboral brasileña (CLT) hace la contratación y gestión de workforce estructuralmente compleja. Herramientas AI-native de reclutamiento que manejan compliance CLT, automatizan screening e integran con eSocial + folha tienen clara willingness-to-pay de empresas mid-market. Oportunidad de tier medio pero duradera.',
+        ],
+      },
+      {
+        heading: 'Qué significa esto para asignadores de capital',
+        paragraphs: [
+          'Si eres un LP asignando a LATAM en 2026, la exposición de mayor apalancamiento está en pre-tracción con involucramiento operativo. El mercado Serie A está cada vez más competido; el mercado de etapa tardía está dominado por fondos globales; pre-seed y seed con studios hands-on es donde el potencial de IRR es más alto y donde el capital desplegado compone más rápido.',
+          'Para founders, la implicación es más simple: construye AI-native, enfócate en una vertical de servicios fragmentada con primeros clientes nombrados, y prueba unit economics dentro de 12 meses. El capital seguirá.',
+        ],
+      },
+      {
+        heading: 'Riesgos y qué estamos observando',
+        paragraphs: [
+          'El mayor riesgo para la tesis es deriva regulatoria de IA en industrias reguladas (especialmente salud y servicios financieros), donde el costo-y-tiempo-de-lanzamiento podría extenderse materialmente. Lo seguimos mensualmente vía relaciones directas con los reguladores y vía logs de fricción de empresas de portafolio.',
+          'El segundo riesgo es compresión de talento: a medida que fondos globales entran a Brasil, la compensación de ingeniería sénior ha venido subiendo más rápido que el revenue en la mayoría de las ventures de etapa inicial. La infraestructura estilo-studio ayuda a absorberlo, pero conviene observarlo a nivel de portafolio.',
+          'El tercero, y actualmente menor, riesgo es el crowding de capital desplegado en Serie A. No lo vemos como preocupación de corto plazo pero cambiaría las dinámicas de rondas follow-on para ventures de studio si se materializa.',
+        ],
+      },
+      {
+        heading: 'Metodología y fuentes',
+        paragraphs: [
+          'PIB, participación de servicios y datos de PYMEs: reportes del Banco Central do Brasil 2025 + cuentas nacionales del IBGE.',
+          'Números de inversión en IA: LAVCA Brasil + tracking privado de deals de Distrito.',
+          'Evaluaciones de talento: datos de pipeline interno de Avante + señales públicas de LinkedIn + GitHub sobre 800+ ingenieros revisados en los últimos 12 meses.',
+          'Cifras sectoriales de tracción: portafolio Avante + benchmarks comparables de operadores no-portafolio con quienes tenemos conversaciones directas.',
+        ],
+      },
+    ],
+  },
 }
 
 // ─────────────────────────────────────────────────────────────────────
@@ -657,6 +941,7 @@ function makeStub(args: {
   datePublished: string
   en: { title: string; description: string; intro: string }
   pt: { title: string; description: string; intro: string }
+  es: { title: string; description: string; intro: string }
 }): Article {
   const comingSoonEn: ArticleSection = {
     callout: {
@@ -668,6 +953,12 @@ function makeStub(args: {
     callout: {
       kind: 'tip',
       text: 'Este artigo está sendo escrito. A versão completa com dados, frameworks e detalhes de casos será publicada em breve. Inscreva-se pelo formulário de contato para ser notificado quando sair.',
+    },
+  }
+  const comingSoonEs: ArticleSection = {
+    callout: {
+      kind: 'tip',
+      text: 'Este artículo está siendo escrito. La versión completa con datos, frameworks y detalle de casos se publicará pronto. Suscríbete por el formulario de contacto para recibir notificación cuando salga.',
     },
   }
   return {
@@ -687,6 +978,11 @@ function makeStub(args: {
       title: args.pt.title,
       description: args.pt.description,
       sections: [{ paragraphs: [args.pt.intro] }, comingSoonPt],
+    },
+    es: {
+      title: args.es.title,
+      description: args.es.description,
+      sections: [{ paragraphs: [args.es.intro] }, comingSoonEs],
     },
   }
 }
@@ -708,6 +1004,11 @@ const articleAvantePlaybook = makeStub({
     description: 'Nosso sistema repetível para lançar 3-4 ventures por ano: de pesquisa a tração e composição.',
     intro: 'O Playbook Avante é o sistema operacional que produz 3–4 empresas AI-native por ano a partir de um único studio. Seis estágios, inputs deliberadamente constrangidos, infraestrutura repetível. O playbook completo cobre gates por estágio, papéis de owners e as métricas que usamos para decidir se um venture continua para o próximo estágio.',
   },
+  es: {
+    title: 'Construyendo Empresas AI-Native: El Playbook Avante',
+    description: 'Nuestro sistema repetible para lanzar 3-4 ventures por año: de investigación a tracción a composición.',
+    intro: 'El Playbook Avante es el sistema operativo que produce 3–4 empresas AI-native por año desde un único studio. Seis etapas, inputs deliberadamente acotados, infraestructura repetible. El playbook completo cubre gates por etapa, roles de owners y las métricas que usamos para decidir si una venture continúa a la siguiente etapa.',
+  },
 })
 
 const articleCashflow90Days = makeStub({
@@ -726,6 +1027,11 @@ const articleCashflow90Days = makeStub({
     title: 'Estudo de Caso: De Ideia ao Cashflow em 90 Dias',
     description: 'Como co-construímos uma ferramenta de automação de workflow com IA em uma indústria de serviços fragmentada — provando unit economics em 12 semanas.',
     intro: 'Um walkthrough dos primeiros 90 dias de um venture da Avante: do descobrimento de clientes em white-paper aos primeiros contratos pagos à validação de unit economics. Compartilhamos a timeline, o spend, a composição do time, o motion de GTM e os momentos específicos onde a infraestrutura de studio mudou a trajetória do venture.',
+  },
+  es: {
+    title: 'Caso de Estudio: De Idea a Cashflow en 90 Días',
+    description: 'Cómo co-construimos una herramienta de automatización de workflow con IA en una industria de servicios fragmentada — probando unit economics en 12 semanas.',
+    intro: 'Un walkthrough de los primeros 90 días de una venture de Avante: del descubrimiento de clientes en white-paper a los primeros contratos pagados a la validación de unit economics. Compartimos el timeline, el spend, la composición del equipo, el motion de GTM y los momentos específicos donde la infraestructura del studio cambió la trayectoria de la venture.',
   },
 })
 
@@ -746,6 +1052,11 @@ const articleUnitEconomics = makeStub({
     description: 'Por que negócios cashflow-first compõem, e como provar unit economics antes de escalar.',
     intro: 'Unit economics são o sinal mais honesto de se um negócio vai funcionar. A maioria dos ventures iniciais adia o cálculo; a disciplina que separa compositores de queimadores é calcular LTV e CAC desde o contrato um e agir sobre a razão todo mês depois disso. O artigo completo percorre as fórmulas, os erros comuns e os valores de threshold que usamos na Avante.',
   },
+  es: {
+    title: 'Unit Economics 101: LTV:CAC desde el Día Uno',
+    description: 'Por qué los negocios cashflow-first componen, y cómo probar unit economics antes de escalar.',
+    intro: 'Las unit economics son la señal más honesta de si un negocio va a funcionar. La mayoría de las ventures iniciales posterga el cálculo; la disciplina que separa a quienes componen de quienes queman capital es calcular LTV y CAC desde el contrato uno y actuar sobre la razón cada mes después. El artículo completo recorre las fórmulas, los errores comunes y los valores de threshold que usamos en Avante.',
+  },
 })
 
 const articleAIOperatorGuide = makeStub({
@@ -764,6 +1075,11 @@ const articleAIOperatorGuide = makeStub({
     title: 'O Guia do Operador para Automação com IA',
     description: 'Identificando workflows onde IA cria vantagens de 10× — um framework para experts de domínio construindo produtos AI-native.',
     intro: 'A maioria das iniciativas de automação com IA falha não porque o modelo está errado mas porque o workflow escolhido está errado. O guia completo apresenta o filtro de três perguntas que usamos com operadores (especificidade, repetibilidade e valor-por-decisão) para identificar os workflows onde IA entrega uma vantagem de 10× em vez de 10%.',
+  },
+  es: {
+    title: 'La Guía del Operador para Automatización con IA',
+    description: 'Identificando workflows donde la IA crea ventajas de 10× — un framework para expertos de dominio construyendo productos AI-native.',
+    intro: 'La mayoría de las iniciativas de automatización con IA fallan no porque el modelo esté equivocado, sino porque el workflow elegido lo está. La guía completa presenta el filtro de tres preguntas que usamos con operadores (especificidad, repetibilidad y valor-por-decisión) para identificar los workflows donde la IA entrega una ventaja de 10× en lugar de 10%.',
   },
 })
 
@@ -784,6 +1100,11 @@ const articleBrazilServices = makeStub({
     description: 'Workflows manuais, indústrias fragmentadas e baixa penetração de software criam oportunidades massivas para automação com IA.',
     intro: 'Os 70% de serviços no PIB do Brasil parecem um peso de baixo crescimento em uma economia emergente. Leia diferente: é o maior pool de trabalho não-softwarizado de qualquer economia importante. A análise completa quebra os subsetores por mercado endereçável, índice de fragmentação e penetração atual de software para mostrar onde as frentes de disrupção são mais amplas.',
   },
+  es: {
+    title: 'Por Qué la Economía de Servicios de Brasil Está Lista para Disrupción',
+    description: 'Workflows manuales, industrias fragmentadas y baja penetración de software crean oportunidades masivas para automatización con IA.',
+    intro: 'El 70% de servicios en el PIB de Brasil parece un lastre de bajo crecimiento sobre una economía emergente. Léelo distinto: es el mayor pool de trabajo no-softwarizado de cualquier economía importante. El análisis completo descompone los subsectores por mercado direccionable, índice de fragmentación y penetración actual de software para mostrar dónde están más abiertos los frentes de disrupción.',
+  },
 })
 
 const articleGlobalStudioData = makeStub({
@@ -802,6 +1123,11 @@ const articleGlobalStudioData = makeStub({
     title: 'Dados Globais de Venture Studios: 50% de Retornos Anuais',
     description: 'Quebra do Relatório GSSN: por que venture studios lideram todas as classes de ativos e o que isso significa para mercados emergentes.',
     intro: 'O relatório anual da Global Startup Studio Network é o dado longitudinal mais limpo disponível sobre performance de studios. A quebra completa do relatório cobre distribuição de IRR por região, por estágio de follow-on e por setor, mais nossa leitura de quais vantagens estruturais explicam o spread entre studios do topo do quartil e do fundo do quartil.',
+  },
+  es: {
+    title: 'Datos Globales de Venture Studios: 50% de Retornos Anuales',
+    description: 'Desglose del Reporte GSSN: por qué los venture studios lideran todas las clases de activos y qué significa esto para mercados emergentes.',
+    intro: 'El reporte anual de la Global Startup Studio Network es el dato longitudinal más limpio disponible sobre el desempeño de studios. El desglose completo cubre distribución de IRR por región, por etapa de follow-on y por sector, más nuestra lectura de qué ventajas estructurales explican el spread entre los studios del cuartil superior y del cuartil inferior.',
   },
 })
 
@@ -1027,6 +1353,109 @@ const articleOperatingStack: Article = {
       },
     ],
   },
+  es: {
+    title: 'Por Dentro del Stack Operativo de Avante',
+    description:
+      'La mayoría de los studios habla de "infraestructura compartida" sin especificar qué comparten realmente. Este es el stack que Avante comparte — y lo que deliberadamente no — en cada venture del studio.',
+    sections: [
+      {
+        paragraphs: [
+          'Cada venture studio promete ofrecer "infraestructura compartida", "soporte operativo" y "apalancamiento para founders". La mayoría de esas promesas no sobrevive a una mirada cuidadosa sobre qué se comparte efectivamente y qué se entrega caso-a-caso como consejo informal de partner. Los dos son productos muy distintos.',
+          'Avante corre sobre un stack operativo deliberado — un conjunto de capacidades compartidas que cada venture del studio hereda en el día uno, con las fronteras documentadas y claras. Este texto recorre qué está en ese stack, qué deliberadamente no está en él, y por qué creemos que esa distinción importa más que la lista de perks de la portada.',
+        ],
+      },
+      {
+        heading: 'La premisa: comparte donde compone, separa donde diferencia',
+        paragraphs: [
+          'Un venture studio no es una holding y no es una firma de servicios. El frame correcto está más cerca de una plataforma de software: hay una capa compartida de infraestructura que se vuelve más valiosa con cada venture que corre encima de ella, y hay una capa de aplicación donde cada venture tiene que ser radicalmente distinta para ganar su mercado.',
+          'Confundir esas capas es el modo de fallo que ha matado más studios que la escasez de capital. Cuando los studios estandarizan la capa de aplicación — mismos patrones de producto, misma voz de marca, mismo motion de go-to-market — producen ventures que parecen un portafolio de proyectos internos en vez de empresas independientes con chance de liderazgo de categoría. Cuando los studios fragmentan la capa de infraestructura — cada venture reconstruyendo cap tables, nómina, políticas de seguridad desde cero — queman toda la ventaja de eficiencia que justificaba el modelo de studio.',
+          'Avante está construido en torno a la disciplina opuesta: la capa de infraestructura se comparte agresivamente, con owners nombrados y SLAs. La capa de aplicación — producto, marca, GTM — la sostienen los founders de cada venture, con el studio actuando como multiplicador de fuerza en lugar de diseñador.',
+        ],
+        callout: {
+          kind: 'tip',
+          text: 'Un studio que funciona comparte infraestructura con disciplina y comparte decisiones de aplicación con restricción. El patrón inverso es por qué la mayoría de los studios sub-rinden.',
+        },
+      },
+      {
+        heading: 'Capa 1: Capital + arquitectura de cap-table',
+        paragraphs: [
+          'Cada venture Avante lanza con una estructura de primer cheque pre-negociada: studio first-money-in en una banda de ownership definida, con economics de founder protegidas contra la gimnasia de dilución que los mismatches founder-investor típicamente producen en deals de seed brasileños. Los templates de cap-table, las estructuras de vesting y el diseño de option-pool están pre-construidos y revisados por el mismo consejo legal para cada venture. Un founder pasando por la Etapa 2 (Partner) del playbook no gasta tres semanas en decisiones de incorporación — esas decisiones ya están tomadas.',
+          'Concretamente: incorporación estándar en São Paulo con una matriz Delaware C-corp, vesting de founder de cuatro años con cliff de un año, un option pool del 18% post-Serie-A reservado en la fundación, y una subsidiaria operativa brasileña estructurada para transfer pricing limpio. Nada de eso es novedoso; lo que importa es que se decide una vez y se reusa, liberando a los founders para gastar sus primeros 90 días con clientes en lugar de papeleo.',
+        ],
+      },
+      {
+        heading: 'Capa 2: Talento — el recruiter que ya conoce el funnel',
+        paragraphs: [
+          'El error más caro en construcción de venture early-stage en Brasil son las primeras diez contrataciones equivocadas. El sourcing de senior product engineers, operadores de GTM o líderes financieros dentro del mercado local es una búsqueda larga y dependiente de relaciones que los first-time founders están singularmente mal posicionados para correr. Los studios arreglan esto manteniendo un pipeline de talento continuo que cada nueva venture toca en el día uno.',
+          'En el caso de Avante, eso significa un talent partner in-house que ya corre el funnel para las tres ventures anteriores, sabe qué candidatos sénior están abiertos a una venture de studio vs cuáles prefieren una startup direct-funded, y puede entregar una shortlist curada en 7–10 días de la apertura de un rol. Eso no es un servicio de placement. Es una ventaja estructural de reclutamiento que compone con cada cohort.',
+        ],
+        callout: {
+          kind: 'stat',
+          text: '7–10 días de la apertura del rol a shortlist curada de 3–5 candidatos sénior. El benchmark para reclutamiento de first-time founder en Brasil es típicamente 8–14 semanas.',
+        },
+      },
+      {
+        heading: 'Capa 3: Finanzas, legal y seguridad — bien armadas desde el día uno',
+        paragraphs: [
+          'Una porción significativa del capital pre-seed en startups brasileñas se consume no por producto sino por el costo acumulado de equivocarse en sistemas operativos básicos: contabilidad desordenada que tiene que rehacerse antes de una Serie A, relaciones de contractor mal clasificadas que aparecen en auditoría, posturas de seguridad que fallan en la primera vendor review de cliente enterprise.',
+          'Avante corre un único partner contable a través del studio, una única baseline de seguridad de la información (arquitectura y políticas SOC2-ready establecidas en la incorporación en lugar de retroinstaladas antes del primer pilot enterprise), y un consejo legal-laboral compartido que maneja correctamente desde la primera vez las diferencias entre estructuras CLT, PJ y US-employee. Cada venture paga su parte de estas capacidades a costo marginal. Ninguna reconstruye el trabajo.',
+        ],
+      },
+      {
+        heading: 'Capa 4: Templates de go-to-market — y la disciplina para romperlos',
+        paragraphs: [
+          'Cada venture Avante hereda un playbook GTM inicial: el framework de definición de ICP, la estructura de discovery-call refinada en diez cohorts anteriores de founders, los templates de conversión pilot-a-contrato, el test estándar de sensibilidad de pricing, el modelo de comp de ventas que alinea reps con comportamiento de líder de categoría en lugar de cierre transaccional. Esos son puntos de partida, no puntos de llegada. El primer trabajo de cada founder Avante es correr su versión de esos templates contra su mercado real y romper las partes que no encajan.',
+          '¿Por qué dar templates si están hechos para romperse? Porque los templates producen desacuerdo informado más rápido que páginas en blanco. Un founder que ha pasado tres semanas decidiendo por qué el script estándar de discovery está mal para su vertical ha producido más entendimiento de mercado que un founder que ha pasado tres semanas diseñando un script de discovery desde cero.',
+        ],
+      },
+      {
+        heading: 'Capa 5: Distribución — la red que se gana su lugar',
+        paragraphs: [
+          'El ecosistema de operating partners, miembros de consejo y alumni de ventures previas de Avante es un activo significativo pero fácilmente sobreestimado. Usado mal, se vuelve una serie de warm intros que los founders son demasiado educados para rechazar y demasiado distraídos para aprovechar. Usado bien, se vuelve un pipeline estructurado de primeros 30 clientes curado por las personas más propensas a saber qué perfiles de comprador van a engancharse en serio.',
+          'La disciplina de Avante aquí es correr distribución como sprint trimestral con targets nombrados y feedback loops, en lugar de como recurso ambiente perpetuo. Una venture entrando en la Etapa 4 (Tracción) del playbook recibe un sprint con listas explícitas, owners y métricas de conversión. Después de 90 días, el sprint o produjo el patrón de conversación que la venture necesitaba o sacó a la luz un mismatch de mercado que los founders necesitan abordar — ambos outcomes útiles.',
+        ],
+      },
+      {
+        heading: 'Lo que deliberadamente NO se comparte',
+        paragraphs: [
+          'La tentación en cualquier studio es sobre-compartir. Cada nueva pieza de "infraestructura común" se siente como que debería componer. En la práctica, ciertas piezas son corrosivas cuando se comparten y solo útiles cuando cada venture las construye con ownership de founder.',
+        ],
+        bullets: [
+          'Producto. El DNA de producto de cada venture — cómo se siente usarlo, cómo conversa, qué se rehúsa a hacer — tiene que ser autorado por sus founders. Patrones de producto compartidos producen ventures que se leen como un portafolio de clones, lo cual es sentencia de muerte en cualquier mercado con competencia real.',
+          'Marca y tono de voz. Los founders son dueños de esto enteramente. El studio aporta una baseline visual limpia si una venture la quiere; todo lo demás es decisión de la venture.',
+          'Relaciones con clientes. El founder es siempre el dueño sénior de la relación con los primeros diez clientes enterprise. Los equipos de soporte del studio ayudan operativamente pero nunca son dueños de la relación.',
+          'Decisiones de contratación. Avante corre el funnel; los founders toman las decisiones. Tenemos reglas duras contra que el studio anule un veto de founder en una contratación sénior — ese patrón erosionaría la autoridad de founder necesaria para que la venture desarrolle su propia cultura.',
+          'Dirección estratégica. Los operating partners pueden argumentar duro por una posición, pero la estrategia de la venture es decisión del founder. El trabajo del studio es hacer que esa decisión sea lo más bien-informada posible, no tomarla.',
+        ],
+        callout: {
+          kind: 'quote',
+          text: 'Los studios que confunden "infraestructura compartida" con "producto compartido" producen ventures que parecen más proyectos internos que empresas independientes. Esa confusión es la mayor razón única por la que la mayoría de los studios sub-rinde su pitch.',
+          attribution: 'Notas de Operating Partner — Avante',
+        },
+      },
+      {
+        heading: 'Por qué el stack compone',
+        paragraphs: [
+          'El argumento estructural para el modelo de studio — y la razón por la que los datos empíricos de IRR muestran ~50% para studios vs ~19% para VC tradicional en vintages comparables — es que esta capa de infraestructura compone entre cohorts de una forma que la asignación de capital a nivel de fondo simplemente no puede. Cada venture corrida sobre el stack contribuye lecciones que mejoran los templates, refinan el funnel del recruiter, afilan la baseline legal-y-de-seguridad y expanden la red de distribución para el próximo cohort.',
+          'Un first-time founder pasando por el playbook en 2026 hereda el aprendizaje acumulado de cada venture Avante anterior, más el aprendizaje compartido de partners que han construido y hecho exit a escala. Eso no es una ventaja marginal; es categórica. Es también por qué esperamos que la brecha de IRR entre studios y VC tradicional se ensanche en lugar de cerrarse a medida que nuestro portafolio madure.',
+        ],
+      },
+      {
+        heading: 'Los límites honestos',
+        paragraphs: [
+          'Los stacks operativos componen, pero no eliminan el riesgo de ejecución. Un gran stack no salva a una venture de una tesis de mercado equivocada, un equipo fundador desalineado, o un producto que el mercado simplemente no quiere. El stack baja el costo y aumenta la velocidad de testear esas preguntas; no las responde.',
+          'El otro límite honesto: los studios que crecen más rápido de lo que su stack madura terminan degradando la propia ventaja que justifica el modelo. Limitamos deliberadamente al studio a 3–4 ventures por año, con un techo duro de carga de operating-partner por cohort. Crecer más allá sin re-ingenierizar el stack produciría el mismo tipo de fallo de dilución-de-atención que sufren los partners de VC tradicional con 8–12 asientos de consejo.',
+        ],
+      },
+      {
+        heading: 'Cómo lee esto un founder',
+        paragraphs: [
+          'Si eres un founder considerando unirte a un cohort de studio — el de Avante o el de cualquier otro — la pregunta correcta no es "¿qué perks ofrecen?" sino "¿qué está en su stack, quién es dueño de cada capa y qué hay por escrito sobre cómo se entrega?". Un studio cuya respuesta es vaga está vendiendo perks. Un studio cuya respuesta es específica está vendiendo infraestructura. Los dos rinden muy distinto en los primeros 24 meses de una venture.',
+          'Si quieres ver los documentos del stack de Avante en detalle, el formulario de contacto es el punto de partida correcto. Los compartimos en una conversación estructurada en lugar de como download público — no porque sean secretos, sino porque los documentos solo tienen sentido en el contexto de la etapa y el mercado específicos de una venture.',
+        ],
+      },
+    ],
+  },
 }
 
 // ─────────────────────────────────────────────────────────────────────
@@ -1222,6 +1651,98 @@ const articleSiggaCaseStudy: Article = {
         paragraphs: [
           'Detalhes financeiros da Sigga Technologies não são publicamente divulgados. O número de retorno de 10× referenciado aqui reflete a estimativa interna do time da Avante sobre capital deployado ao longo da vida da venture versus o valor de exit realizado. Números específicos de receita, contagem de clientes e preço de aquisição são confidenciais e não estão incluídos neste estudo de caso.',
           'Para contexto independente sobre o mercado brasileiro de software industrial, veja EPE Balanço Energético Brasileiro 2025 e IBGE Contas Nacionais 2025 (ambos linkados no rodapé de fontes).',
+        ],
+      },
+    ],
+  },
+  es: {
+    title: 'Sigga Technologies: De la Fundación al Exit de 10×',
+    description:
+      'Un caso de estudio desde dentro del equipo de Avante. Cómo una apuesta en software industrial brasileño se convirtió en un resultado de 10× — y qué nos enseñó sobre construir líderes de categoría en verticales fragmentadas en Brasil.',
+    sections: [
+      {
+        paragraphs: [
+          'La mayoría de los casos de estudio en venture los escriben personas que miraron desde lejos. Este se escribe desde dentro. Amanda Pinheiro sirvió en el Consejo de Sigga Technologies durante la escala y el exit. Otros miembros de lo que hoy es el equipo de Avante estuvieron operativamente involucrados en varios momentos de inflexión — rondas de fundraising que casi no cierran, un GTM motion que tuvo que rediseñarse dos veces, y un proceso de exit que puso a prueba cada premisa que teníamos sobre quién compraría efectivamente un negocio de software industrial brasileño en escala.',
+          'El resultado fue un exit de 10× — el tipo de retorno que define la vintage de un fondo y resetea tus premisas sobre lo que es posible en verticales fragmentadas en Brasil. Este texto recorre lo que pasó, lo que acertamos, lo que casi rompimos, y cómo esas lecciones ahora moldean cada venture dentro del studio Avante.',
+        ],
+      },
+      {
+        heading: 'La tesis: un mercado que todos decían que era imposible',
+        paragraphs: [
+          'Gestión de activos industriales — el software que ayuda a refinerías, minas, ingenios y plantas papeleras a programar mantenimiento, rastrear equipos y mantener compliance — es una categoría global dominada por unos pocos vendors enterprise con ciclos de implementación largos y ciclos de venta aún más largos. SAP, IBM Maximo, Infor: cada uno con deployment de varios años, precio base de siete dígitos y cartera de clientes en la Fortune 500.',
+          'La base industrial brasileña no se ve así. El país tiene un ecosistema denso de operadores industriales medianos — mineras en Minas Gerais, ingenios de caña en São Paulo, papeleras en el sur — para quienes un deployment de US$2M de Maximo es impensable, pero también son demasiado complejos operativamente para correr en planillas. La sabiduría convencional en 2010 era que ese segmento no era atendible. Demasiado pequeño para los vendors globales. Demasiado complejo para los players locales de ERP genérico. Una tierra de nadie.',
+          'La apuesta fundadora de Sigga fue que la tierra de nadie era en realidad la mayor oportunidad en software industrial brasileño — si lograbas construir un producto profundamente mobile-native, integrado con los backbones SAP que los clientes mayores ya tenían, y con pricing para un P&L brasileño. La tesis era contraria dentro de la industria de software brasileña. Resultó ser exactamente correcta.',
+        ],
+        callout: {
+          kind: 'tip',
+          text: 'Los mercados que "todos dicen que son imposibles" son frecuentemente mercados donde la realidad operativa cambió más rápido que el consenso. El descuento por convicción usualmente es mayor que el descuento por riesgo de ejecución.',
+        },
+      },
+      {
+        heading: 'La primera inflexión: cuando el producto casi no salió',
+        paragraphs: [
+          'A los dieciocho meses, Sigga tenía un producto que funcionaba bellamente en el demo y se rompía silenciosamente en el campo. El motor de sync mobile — la razón de existir del producto entero — penaba con la realidad de la conectividad industrial brasileña: refinerías con 3G intermitente en algunos sectores y blackouts totales de WiFi en otros, minas con zonas de trabajo en pozos profundos, papeleras con interferencia electromagnética alrededor de la maquinaria pesada.',
+          'La decisión de producto correcta fue reconstruir la capa de sync desde cero como offline-first, con un modelo de resolución de conflictos diseñado para desconexiones de horas en vez de segundos. Esa decisión costó aproximadamente seis meses de runway y empujó a la empresa por uno de esos hitos casi-de-muerte que toda venture tiene pero pocos admiten. Fue también, en retrospectiva, la única decisión que construyó el moat.',
+          'Una vez en el aire, la capa de sync reconstruida se volvió la ventaja injusta. Competidores con arquitecturas más limpias en el papel consistentemente perdían bake-offs en campo. La lección: en verticales industriales, "funciona en un deck" y "funciona en una mina de cobre" no son el mismo producto. Las empresas que confunden los dos mueren en la etapa de procurement.',
+        ],
+      },
+      {
+        heading: 'El GTM motion: velocidad enterprise a precios SMB',
+        paragraphs: [
+          'Vender software industrial en Brasil a operadores medianos es un motion extraño. El perfil de comprador es enterprise — procurement multi-stakeholder, RFPs formales, security reviews — pero el tamaño promedio de contrato arranca en números SMB. No puedes pagar el ciclo de venta enterprise de 12 meses, pero tampoco puedes correr un motion transaccional bottom-up porque el comprador no se comporta así.',
+          'La respuesta de Sigga fue un híbrido que, mirando atrás, prefiguró mucho de lo que ahora construimos en los playbooks del studio Avante: un ICP estrecho (operadores industriales con backbones SAP en tres clusters verticales), un pre-sales engineer vertical-específico anclado a cada oportunidad desde la semana uno, y una regla rígida de 90-días-a-piloto. Si no podíamos llegar a un piloto pagado en 90 días, salíamos. Salir suena caro. Quedarse en deals zombis es mucho más caro.',
+          'Ese motion produjo algo raro: un ciclo de venta que se comprimía cada año a medida que el roster de referencia crecía. Para el quinto año, deals estaban cerrando con la fuerza de tres reference calls y un piloto de 30 días — más cercano a un motion SaaS que al motion tradicional de software industrial, manteniendo la profundidad de integración que hacía al producto sticky.',
+        ],
+        callout: {
+          kind: 'stat',
+          text: '90-días-a-piloto o sales: la disciplina que compone velocidad de referencia en cualquier motion vertical SaaS. El pipeline zombi mata más startups que la competencia.',
+        },
+      },
+      {
+        heading: 'Los fundraises: disciplina de capital como arma estratégica',
+        paragraphs: [
+          'Sigga levantó menos capital que el promedio de vintage para una venture de su tamaño y etapa. Eso no fue enteramente una elección — el mercado brasileño de capital de crecimiento entre 2014 y 2019 era más delgado que comparables americanos — pero se convirtió en una ventaja estratégica real. Con menos capital construimos unit economics más conservadoras, estructuras de burn más bajas, y una cultura de disciplina de capital que, cuando el mercado round-to-round se puso más difícil, mantuvo a la empresa con opciones.',
+          'El contraste importa. Varios de los competidores que pudieron haber amenazado a Sigga levantaron rondas iniciales significativamente mayores, escalaron go-to-market más rápido, y se quedaron sin runway antes de que el ciclo de mercado cambiara. Sigga llegó a la ventana de exit con un P&L limpio, un roster largo de referencias, y el tipo de eficiencia de capital que los adquirentes estratégicos efectivamente pagan.',
+          'La lección que ahora repetimos en cada venture Avante: cuando no puedes controlar el timing del mercado, todavía puedes controlar tu perfil de runway. La opcionalidad es el activo más subestimado en construcción de venture early-stage.',
+        ],
+      },
+      {
+        heading: 'El exit: quién compra realmente software industrial brasileño en escala',
+        paragraphs: [
+          'Cuando la conversación de exit se volvió real, la premisa natural fue que el comprador sería uno de los incumbentes globales de enterprise-asset-management — un estratégico buscando llenar un gap en América Latina. La realidad fue distinta. El interés más fuerte vino de players globales adyacentes-a-categoría para quienes Sigga representaba un foothold creíble en una región de rápido crecimiento con una base de clientes brasileña difícil de ensamblar orgánicamente.',
+          'El exit cerró en lo que estimamos como aproximadamente 10× sobre el capital desplegado a lo largo de la vida de la venture — un número que mantenemos privado pero que moldeó materialmente cómo el equipo ahora piensa sobre la distribución de outcomes en verticales fragmentadas en Brasil. La lección: las tesis de exit escritas demasiado estrechas pierden el pool real de compradores. El frame correcto siempre fue "quién necesita esta base de clientes brasileña y esta capacidad de producto", no "quién más está en esta categoría exacta".',
+        ],
+      },
+      {
+        heading: 'Lo que esto nos enseñó — y lo que ahora hacemos en el día uno',
+        paragraphs: [
+          'Sigga moldeó el playbook del studio Avante de formas que van más allá de un solo caso de estudio. Concretamente, cada venture en el studio hereda algunas lecciones duramente ganadas de esa experiencia:',
+        ],
+        bullets: [
+          'Una disciplina de 90-días-a-piloto — si una venture no puede llegar a un piloto pagado dentro de 90 días de una conversación seria, el ICP está mal, el producto está mal, o ambos.',
+          'Eficiencia de capital diseñada de origen, no retroinstalada. Cada venture Avante arranca con un plan de runway que sobrevive a un mercado seco de 18 meses — porque en la historia del venture brasileño, los mercados secos siempre llegan.',
+          'Estándar de ingeniería "funciona en el campo" desde la semana uno. La calidad-de-demo y la calidad-de-producción no son el mismo producto. Las verticales industriales castigan esa confusión más duro que cualquier otra.',
+          'Pensamiento de exit-pool desde el cap-table fundador. El comprador rara vez es "el incumbente obvio". Mapea a los tomadores de decisión reales que se beneficiarían de poseer esta base de clientes, después construye relaciones a través de ese mapa por años antes de que importen.',
+          'Un consejo que aporta músculo operativo, no solo supervisión. El rol de Amanda en el Consejo de Sigga fue directo y operativo — esa plantilla es ahora el default de Avante para cada venture del studio.',
+        ],
+        callout: {
+          kind: 'quote',
+          text: 'Sigga nos enseñó que las verticales más fragmentadas en Brasil no son imposibles — simplemente no están servidas por personas que entienden efectivamente la realidad operativa. Ese es el gap que construimos en cada venture Avante hoy.',
+          attribution: 'Equipo Fundador de Avante',
+        },
+      },
+      {
+        heading: 'Por qué este caso importa para los cohorts actuales de Avante',
+        paragraphs: [
+          'Brasil en 2026 tiene más capital, más operadores de dominio y más infraestructura de IA barata que en cualquier punto de la historia tech del país. El patrón que Sigga corrió — encontrar una vertical fragmentada de servicios industriales, construir mobile-native y profundo en integración, vender con rigor enterprise a pricing SMB, hacer exit a un player global adyacente-a-categoría — ahora es repetible en media docena de verticales brasileñas, con la IA como multiplicador que no existía en 2012.',
+          'Cada venture actualmente dentro del studio Avante se está construyendo con esa filiación en mente. No como un copy-paste de Sigga, sino como una aplicación deliberada de las lecciones que convirtieron a un "mercado que todos decían que era imposible" en un resultado de 10×.',
+        ],
+      },
+      {
+        heading: 'Notas sobre lo que se divulga públicamente',
+        paragraphs: [
+          'Los detalles financieros de Sigga Technologies no son públicamente divulgados. El número de retorno de 10× referenciado aquí refleja la estimación interna del equipo de Avante sobre capital desplegado a lo largo de la vida de la venture versus el valor de exit realizado. Números específicos de revenue, conteo de clientes y precio de adquisición son confidenciales y no están incluidos en este caso de estudio.',
+          'Para contexto independiente sobre el mercado brasileño de software industrial, ver EPE Balance Energético Brasileño 2025 e IBGE Cuentas Nacionales 2025 (ambos linkados en el footer de fuentes).',
         ],
       },
     ],
