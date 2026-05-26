@@ -19,27 +19,48 @@
 
     <!-- Editorial typography: Funnel Display (display) + Bricolage Grotesque (body) + JetBrains Mono (labels).
 
-         Non-blocking load via the `media="print" onload="this.media='all'"`
-         pattern: browser treats it as a non-critical print stylesheet so it
-         downloads in the background instead of blocking initial render.
-         Once the stylesheet arrives the `onload` swaps it back to all media.
-         display=swap is in the URL so we still get fallback fonts immediately
-         and the FOUT is the same as before — what changes is that render
-         is no longer gated on the 1.5s round-trip to fonts.googleapis.com. -->
+         Loaded non-blocking via runtime JS injection. A previous attempt at
+         the `media="print" + onload` swap pattern self-defeated: the prerender
+         pipeline (scripts/prerender.mjs runs headless Chromium and snapshots
+         the post-hydration HTML) fired the onload during build, mutating
+         media="print" → "all" before serialization. The static HTML then
+         shipped with a render-blocking <link> again.
+
+         Approach now: preconnect remains in static HTML (cheap signal to the
+         browser to warm the DNS+TLS to fonts.googleapis.com). The actual
+         <link rel="stylesheet"> is appended at runtime by a script that
+         (1) skips when navigator.webdriver is true — i.e. during prerender,
+         so the static HTML never contains the blocking link; (2) defers
+         injection via requestIdleCallback so it happens after first paint.
+
+         <noscript> path provides synchronous styling for JS-disabled users
+         and any crawler that does not execute JS but does process noscript. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&family=JetBrains+Mono:wght@400;500&display=swap"
-      media="print"
-      onload="this.media='all'"
-    />
     <noscript>
       <link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&family=JetBrains+Mono:wght@400;500&display=swap"
       />
     </noscript>
+    <script>
+      (function () {
+        if (typeof navigator !== 'undefined' && navigator.webdriver) return;
+        var href =
+          'https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&family=JetBrains+Mono:wght@400;500&display=swap';
+        var inject = function () {
+          var link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = href;
+          document.head.appendChild(link);
+        };
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(inject, { timeout: 2000 });
+        } else {
+          setTimeout(inject, 0);
+        }
+      })();
+    </script>
 
     <!-- Favicons + PWA manifest -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
