@@ -17,13 +17,29 @@
     <meta name="theme-color" content="#06070d" />
     <meta name="color-scheme" content="dark" />
 
-    <!-- Editorial typography: Funnel Display (display) + Bricolage Grotesque (body) + JetBrains Mono (labels). -->
+    <!-- Editorial typography: Funnel Display (display) + Bricolage Grotesque (body) + JetBrains Mono (labels).
+
+         Non-blocking load via the `media="print" onload="this.media='all'"`
+         pattern: browser treats it as a non-critical print stylesheet so it
+         downloads in the background instead of blocking initial render.
+         Once the stylesheet arrives the `onload` swaps it back to all media.
+         display=swap is in the URL so we still get fallback fonts immediately
+         and the FOUT is the same as before — what changes is that render
+         is no longer gated on the 1.5s round-trip to fonts.googleapis.com. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&family=JetBrains+Mono:wght@400;500&display=swap"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300;400;500;600;700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600&family=JetBrains+Mono:wght@400;500&display=swap"
+      />
+    </noscript>
 
     <!-- Favicons + PWA manifest -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
