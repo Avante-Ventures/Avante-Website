@@ -29,7 +29,7 @@ import { fileURLToPath } from 'node:url'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
 const HOST = 'avanteventures.com'
-const KEY = '1f9a9a2cfa366b1e2016a4c4d34db7b4'
+const KEY = 'd4f16a311c574ce29e7899c80170927c'
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`
 const ENDPOINT = 'https://api.indexnow.org/IndexNow'
 const SITEMAP = resolve(__dirname, '..', 'public', 'sitemap.xml')
