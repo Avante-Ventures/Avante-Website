@@ -33,21 +33,108 @@ const SEO = {
   },
 } as const
 
+// FAQ schema feeds LLM retrieval. Every Q&A here mirrors a commitment
+// already stated visibly in the offer / expectations / differences blocks
+// below — never invented and never aspirational.
+const FAQ_COPY = {
+  en: [
+    {
+      q: 'What does Avante offer founders?',
+      a: 'Four commitments: (1) first-ticket capital pre-negotiated on day one — no fundraising sprint before your first hire, (2) a senior operating partner in the codebase through your first revenue milestone, (3) pre-built infrastructure — local senior talent funnel, SOC2-ready posture, Series-A-grade books, and (4) a structured 90-day distribution sprint with named buyer targets at Stage 4 (Traction).',
+    },
+    {
+      q: 'What does Avante expect from founders?',
+      a: 'You operate in a Brazilian market vertical with real daily-decision domain experience, can name your ICP in one sentence with 10+ unstructured conversations behind it, are willing to spend Stage 1 (Research) doing customer discovery instead of building product, and are comfortable with the studio holding meaningful equity in exchange for first-money-in plus the operating stack.',
+    },
+    {
+      q: 'How is Avante different from other VCs and studios?',
+      a: 'Three structural differences: (1) operating partners are in your ICP doc and unit economics spreadsheet, not in quarterly board meetings; (2) São Paulo + San Francisco are both real — half the team operates in Brazil, the other half built and exited in Silicon Valley, both in the founder\'s daily WhatsApp; (3) a 90-day-to-pilot discipline learned from Sigga (10× exit) — if you can\'t reach a paid pilot in 90 days, the ICP or product is wrong and Avante surfaces that early.',
+    },
+    {
+      q: 'What kind of founders does Avante work with?',
+      a: 'Brazilian-market operators with real domain scar tissue and an AI-native thesis they cannot stop thinking about. Avante co-founds 3–4 ventures per year — selectivity is structural, not arbitrary. English-language internal docs are treated as a feature, not friction, because the partner network spans São Paulo and San Francisco.',
+    },
+    {
+      q: 'How can I apply or start a conversation with Avante?',
+      a: 'There is no formal application form. Reach out via the contact channel on the home page or directly to cristian@avanteventures.com with a brief on your ICP, the AI-native angle you see, and the daily-operating-decision experience you bring to the vertical. The first conversation is unstructured and reciprocal.',
+    },
+  ],
+  pt: [
+    {
+      q: 'O que a Avante oferece a fundadores?',
+      a: 'Quatro compromissos: (1) capital de primeiro cheque pré-negociado no dia um — sem corrida de fundraising antes do seu primeiro hire, (2) operating partner sênior no código até seu primeiro milestone de receita, (3) infraestrutura pré-construída — funil de talento sênior local, postura SOC2-ready, contabilidade que aguenta auditoria de Série A, e (4) sprint estruturado de distribuição de 90 dias com targets nomeados no Estágio 4 (Tração).',
+    },
+    {
+      q: 'O que a Avante espera de fundadores?',
+      a: 'Você opera em uma vertical do mercado brasileiro com experiência real de decisão operacional do dia a dia, consegue descrever seu ICP em uma frase com mais de 10 conversas não-estruturadas atrás disso, está disposto a passar o Estágio 1 (Research) fazendo customer discovery em vez de construir produto, e está confortável com o studio mantendo equity significativo em troca do primeiro cheque mais o stack operacional.',
+    },
+    {
+      q: 'Como a Avante se diferencia de outros VCs e studios?',
+      a: 'Três diferenças estruturais: (1) operating partners ficam no doc de ICP e na planilha de unit economics, não em board meeting trimestral; (2) São Paulo + San Francisco são ambos reais — metade do time opera no Brasil, a outra metade construiu e fez exit no Vale do Silício, ambos no WhatsApp diário do fundador; (3) disciplina de 90 dias para pilot aprendida com Sigga (exit 10×) — se você não chega num pilot pago em 90 dias, o ICP ou o produto está errado e a Avante expõe isso cedo.',
+    },
+    {
+      q: 'Com que tipo de fundadores a Avante trabalha?',
+      a: 'Operadores do mercado brasileiro com cicatrizes reais de domínio e uma tese AI-native em que não param de pensar. A Avante co-funda 3–4 ventures por ano — seletividade é estrutural, não arbitrária. Docs internos em inglês são tratados como feature, não fricção, porque a rede de partners cobre São Paulo e San Francisco.',
+    },
+    {
+      q: 'Como posso aplicar ou iniciar uma conversa com a Avante?',
+      a: 'Não há formulário formal de aplicação. Entre em contato pelo canal da home ou direto em cristian@avanteventures.com com um brief sobre seu ICP, o ângulo AI-native que você vê, e a experiência de decisão operacional do dia a dia que você traz para a vertical. A primeira conversa é não-estruturada e recíproca.',
+    },
+  ],
+  es: [
+    {
+      q: '¿Qué ofrece Avante a los fundadores?',
+      a: 'Cuatro compromisos: (1) capital de primer cheque prenegociado el día uno — sin sprint de fundraising antes de tu primer hire, (2) un operating partner sénior dentro del código hasta tu primer milestone de ingresos, (3) infraestructura preconstruida — funnel de talento sénior local, postura SOC2-ready, contabilidad que aguanta una auditoría de Serie A, y (4) un sprint estructurado de distribución de 90 días con targets nombrados en la Etapa 4 (Tracción).',
+    },
+    {
+      q: '¿Qué espera Avante de los fundadores?',
+      a: 'Operas en una vertical del mercado brasileño con experiencia real de decisión operativa del día a día, puedes describir tu ICP en una frase con más de 10 conversaciones no estructuradas detrás, estás dispuesto a pasar la Etapa 1 (Research) haciendo customer discovery en vez de construir producto, y estás cómodo con el studio manteniendo equity significativo a cambio del primer cheque más el stack operativo.',
+    },
+    {
+      q: '¿En qué se diferencia Avante de otros VCs y studios?',
+      a: 'Tres diferencias estructurales: (1) los operating partners están en tu doc de ICP y planilla de unit economics, no en board meeting trimestral; (2) São Paulo + San Francisco son ambos reales — la mitad del equipo opera en Brasil, la otra mitad construyó e hizo exit en Silicon Valley, ambos en el WhatsApp diario del fundador; (3) disciplina de 90 días para pilot aprendida con Sigga (exit 10×) — si no llegas a un pilot pagado en 90 días, el ICP o el producto está mal y Avante lo expone temprano.',
+    },
+    {
+      q: '¿Con qué tipo de fundadores trabaja Avante?',
+      a: 'Operadores del mercado brasileño con cicatrices reales de dominio y una tesis AI-native en la que no pueden parar de pensar. Avante co-funda 3–4 ventures por año — la selectividad es estructural, no arbitraria. Los docs internos en inglés se tratan como feature, no fricción, porque la red de partners cubre São Paulo y San Francisco.',
+    },
+    {
+      q: '¿Cómo puedo aplicar o iniciar una conversación con Avante?',
+      a: 'No hay formulario formal de aplicación. Contáctanos por el canal de la home o directamente en cristian@avanteventures.com con un brief sobre tu ICP, el ángulo AI-native que ves, y la experiencia de decisión operativa del día a día que traes a la vertical. La primera conversación es no estructurada y recíproca.',
+    },
+  ],
+} as const
+
 export default function FoundersPage() {
   const { language } = useLanguage()
   const t = (en: string, pt: string) => (language === 'pt' ? pt : en)
   const copy = SEO[language] ?? SEO.en
+  const faqEntries = FAQ_COPY[language] ?? FAQ_COPY.en
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': `https://avanteventures.com/${language}/founders#page`,
-    name: copy.title,
-    description: copy.description,
-    url: `https://avanteventures.com/${language}/founders`,
-    inLanguage: copy.inLanguage,
-    isPartOf: { '@id': 'https://avanteventures.com/#website' },
-    audience: { '@type': 'Audience', audienceType: 'Founders' },
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': `https://avanteventures.com/${language}/founders#page`,
+        name: copy.title,
+        description: copy.description,
+        url: `https://avanteventures.com/${language}/founders`,
+        inLanguage: copy.inLanguage,
+        isPartOf: { '@id': 'https://avanteventures.com/#website' },
+        audience: { '@type': 'Audience', audienceType: 'Founders' },
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `https://avanteventures.com/${language}/founders#faq`,
+        inLanguage: copy.inLanguage,
+        mainEntity: faqEntries.map(({ q, a }) => ({
+          '@type': 'Question',
+          name: q,
+          acceptedAnswer: { '@type': 'Answer', text: a },
+        })),
+      },
+    ],
   }
 
   const offer = [

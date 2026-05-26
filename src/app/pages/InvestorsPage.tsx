@@ -36,22 +36,109 @@ const SEO = {
   },
 } as const
 
+// FAQ schema feeds LLM retrieval (Perplexity / ChatGPT / Claude). Every
+// Q&A here is anchored to a number or claim that appears visibly on this
+// page (stats row, thesis cards, structure list, transparency block).
+const FAQ_COPY = {
+  en: [
+    {
+      q: "What is Avante's investment thesis?",
+      a: "Avante invests in AI-native ventures in Brazil's services economy. Brazil's $2.5T GDP is 70% services with ~90% of SMBs under-digitalized, and AI infrastructure is now cheap enough that a 4-person team can ship a vertical product at 2018 SaaS operating costs. The studio model captures this arbitrage across 3–4 ventures per year.",
+    },
+    {
+      q: "What returns does Avante target for LPs?",
+      a: "The reference benchmark is the GSSN industry data: venture studios generate ~50% annualized IRR over 10-year vintages versus ~19% for traditional VC. Avante targets the structural advantage that drives this gap — operating depth at week one, capital efficiency by design, and no losing competitive deal sourcing.",
+    },
+    {
+      q: "What is the typical Avante investment structure for LPs?",
+      a: "LPs gain exposure across the full annual cohort of 3–4 ventures co-founded by Avante — not single-deal selection risk. Operating partners hold studio economics; LPs hold capital economics. Reporting is quarterly with cohort-level NAV transparency. Specific terms (target fund size, GP commitment, fee model, distribution waterfall) are shared in a structured LP conversation.",
+    },
+    {
+      q: "What is Avante's track record?",
+      a: "The founding team has historically deployed $500M+ in venture and growth capital. The most recent realized outcome is Sigga Technologies — a 10× exit in industrial software, with Avante operators involved through fundraising, GTM, and exit prep. Active studio cohort includes Mahway, WIR, and Bamboo DCM.",
+    },
+    {
+      q: "What will Avante NOT do as a venture studio?",
+      a: "Avante will not share LP names or identities (confidential by default), will not provide financial advice or tax structuring (LPs engage their own counsel), will not run a parallel co-investment vehicle without explicit governance, and will not launch ventures whose primary buyer is the LP base — customer markets are independent of capital markets.",
+    },
+  ],
+  pt: [
+    {
+      q: "Qual é a tese de investimento da Avante?",
+      a: "A Avante investe em ventures AI-native na economia de serviços do Brasil. O PIB brasileiro de US$ 2,5 tri é 70% serviços com ~90% das PMEs sub-digitalizadas, e a infraestrutura de IA está barata o suficiente para um time de 4 pessoas lançar um produto vertical com o custo operacional de uma SaaS de 2018. O modelo de studio captura essa arbitragem em 3–4 ventures por ano.",
+    },
+    {
+      q: "Quais retornos a Avante busca para LPs?",
+      a: "O benchmark de referência são os dados da indústria GSSN: venture studios geram ~50% de IRR anualizado em vintages de 10 anos versus ~19% de VC tradicional. A Avante busca a vantagem estrutural que gera esse gap — profundidade operacional desde a semana um, eficiência de capital por design e ausência de sourcing competitivo perdido.",
+    },
+    {
+      q: "Qual é a estrutura típica de investimento da Avante para LPs?",
+      a: "LPs ganham exposição em toda a cohort anual de 3–4 ventures co-fundadas pela Avante — não risco de seleção de deal único. Operating partners ficam com a economics do studio; LPs ficam com a economics de capital. Reporting trimestral com transparência de NAV no nível de cohort. Termos específicos (target de fund size, GP commitment, modelo de fees, distribution waterfall) são compartilhados em uma conversa estruturada de LP.",
+    },
+    {
+      q: "Qual é o track record da Avante?",
+      a: "O time fundador deployou historicamente mais de US$ 500M em capital de venture e growth. O resultado realizado mais recente é Sigga Technologies — um exit de 10× em software industrial, com operadores Avante envolvidos em fundraising, GTM e prep de exit. A cohort ativa do studio inclui Mahway, WIR e Bamboo DCM.",
+    },
+    {
+      q: "O que a Avante NÃO faz como venture studio?",
+      a: "A Avante não compartilha nomes de LPs ou identidades (confidencial por padrão), não dá conselho financeiro ou estruturação tributária (LPs contratam seus próprios advisors), não roda veículo paralelo de co-investment sem governança explícita, e não lança ventures cujo comprador principal é a base de LPs — mercados de cliente são independentes do mercado de capital.",
+    },
+  ],
+  es: [
+    {
+      q: "¿Cuál es la tesis de inversión de Avante?",
+      a: "Avante invierte en ventures AI-native en la economía de servicios de Brasil. El PIB brasileño de US$ 2,5 billones es 70% servicios con ~90% de las PYMEs subdigitalizadas, y la infraestructura de IA está barata lo suficiente para que un equipo de 4 personas lance un producto vertical con el costo operativo de una SaaS de 2018. El modelo de studio captura este arbitraje en 3–4 ventures por año.",
+    },
+    {
+      q: "¿Qué retornos busca Avante para los LPs?",
+      a: "El benchmark de referencia son los datos de la industria GSSN: los venture studios generan ~50% de IRR anualizado en vintages de 10 años versus ~19% del VC tradicional. Avante busca la ventaja estructural que genera ese gap — profundidad operativa desde la semana uno, eficiencia de capital por diseño y ausencia de sourcing competitivo perdido.",
+    },
+    {
+      q: "¿Cuál es la estructura típica de inversión de Avante para LPs?",
+      a: "Los LPs obtienen exposición en toda la cohort anual de 3–4 ventures co-fundadas por Avante — no riesgo de selección de deal único. Los operating partners tienen la economics del studio; los LPs tienen la economics de capital. Reporting trimestral con transparencia de NAV a nivel de cohort. Términos específicos (target de fund size, GP commitment, modelo de fees, distribution waterfall) se comparten en una conversación estructurada de LP.",
+    },
+    {
+      q: "¿Cuál es el track record de Avante?",
+      a: "El equipo fundador ha desplegado históricamente más de US$ 500M en capital de venture y growth. El resultado realizado más reciente es Sigga Technologies — un exit de 10× en software industrial, con operadores de Avante involucrados en fundraising, GTM y preparación de exit. La cohort activa del studio incluye Mahway, WIR y Bamboo DCM.",
+    },
+    {
+      q: "¿Qué NO hace Avante como venture studio?",
+      a: "Avante no comparte nombres de LPs ni identidades (confidencial por defecto), no da consejo financiero ni estructuración tributaria (los LPs contratan sus propios advisors), no opera un vehículo paralelo de co-investment sin gobernanza explícita, y no lanza ventures cuyo comprador principal sea la base de LPs — los mercados de cliente son independientes del mercado de capital.",
+    },
+  ],
+} as const
+
 export default function InvestorsPage() {
   const { language } = useLanguage()
   const t = (en: string, pt: string) => (language === 'pt' ? pt : en)
   const copy = SEO[language] ?? SEO.en
+  const faqEntries = FAQ_COPY[language] ?? FAQ_COPY.en
   const [isContactOpen, setIsContactOpen] = useState(false)
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': `https://avanteventures.com/${language}/investors#page`,
-    name: copy.title,
-    description: copy.description,
-    url: `https://avanteventures.com/${language}/investors`,
-    inLanguage: copy.inLanguage,
-    isPartOf: { '@id': 'https://avanteventures.com/#website' },
-    audience: { '@type': 'Audience', audienceType: 'Investors' },
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': `https://avanteventures.com/${language}/investors#page`,
+        name: copy.title,
+        description: copy.description,
+        url: `https://avanteventures.com/${language}/investors`,
+        inLanguage: copy.inLanguage,
+        isPartOf: { '@id': 'https://avanteventures.com/#website' },
+        audience: { '@type': 'Audience', audienceType: 'Investors' },
+      },
+      {
+        '@type': 'FAQPage',
+        '@id': `https://avanteventures.com/${language}/investors#faq`,
+        inLanguage: copy.inLanguage,
+        mainEntity: faqEntries.map(({ q, a }) => ({
+          '@type': 'Question',
+          name: q,
+          acceptedAnswer: { '@type': 'Answer', text: a },
+        })),
+      },
+    ],
   }
 
   const stats = [

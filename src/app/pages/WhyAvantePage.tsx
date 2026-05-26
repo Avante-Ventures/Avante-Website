@@ -25,30 +25,118 @@ const SEO_COPY = {
   },
 } as const;
 
+// FAQ schema feeds LLM retrieval (Perplexity / ChatGPT / Claude) more than
+// it feeds Google rich results (which has restricted Q&A since 2023). Every
+// Q&A here is anchored to a number or claim that appears visibly on the
+// page or in the linked long-form articles — never invented.
+const FAQ_COPY = {
+  en: [
+    {
+      q: "What is a venture studio and how is it different from a VC fund?",
+      a: "A venture studio co-founds companies from scratch with shared infrastructure, operating partners, and first-ticket capital. Traditional VC funds invest after companies already exist. The studio operating partner is in the codebase and unit economics from day one; the VC partner sits on the board.",
+    },
+    {
+      q: "What returns do venture studios generate compared to traditional VC?",
+      a: "Industry data shows venture studios generate approximately 50% annualized IRR over 10-year vintages, versus approximately 19% for traditional VC funds in similar periods. The gap is structural — driven by operational depth and entry-stage advantages — not a survivorship artifact.",
+    },
+    {
+      q: "Why do venture studios outperform traditional VC?",
+      a: "Three structural advantages: (1) operating partners are in the codebase and unit economics from day one, (2) shared infrastructure cuts 6–9 months off time-to-traction versus an unaffiliated team with the same capital, (3) first-ticket capital lets the studio shape unit economics before market consensus arrives.",
+    },
+    {
+      q: "At what stage does Avante invest?",
+      a: "First ticket, always. Avante co-founds at pre-traction — before product, before customers — and accompanies operationally through to the next institutional round. Avante does not write follow-on checks into companies founded by others.",
+    },
+    {
+      q: "Why focus on Brazil for AI-native venture building?",
+      a: "Brazil is a $2.5 trillion economy with 215 million people, 70% services GDP, and approximately 90% of SMEs under-digitized. The combination of large fragmented service markets and advancing AI tooling creates the structural setup for AI-native venture creation in Latin America.",
+    },
+  ],
+  pt: [
+    {
+      q: "O que é um venture studio e como se diferencia de um fundo de VC?",
+      a: "Um venture studio co-funda empresas do zero com infraestrutura compartilhada, operating partners e capital de primeiro cheque. Fundos de VC tradicionais investem depois que empresas já existem. O operating partner do studio está no código e na economia unitária desde o dia um; o sócio de VC está no conselho.",
+    },
+    {
+      q: "Quais retornos os venture studios geram em comparação ao VC tradicional?",
+      a: "Dados da indústria mostram que venture studios geram aproximadamente 50% de IRR anualizado em vintages de 10 anos, contra aproximadamente 19% de fundos de VC tradicionais em períodos comparáveis. A diferença é estrutural — derivada de profundidade operacional e vantagens de estágio de entrada — não um artefato de sobrevivência.",
+    },
+    {
+      q: "Por que os venture studios superam o VC tradicional?",
+      a: "Três vantagens estruturais: (1) operating partners estão no código e na economia unitária desde o dia um, (2) infraestrutura compartilhada corta 6–9 meses do time-to-traction versus uma equipe não afiliada com o mesmo capital, (3) capital de primeiro cheque permite ao studio moldar a economia unitária antes do consenso de mercado chegar.",
+    },
+    {
+      q: "Em que estágio a Avante investe?",
+      a: "Primeiro cheque, sempre. A Avante co-funda em pré-tração — antes do produto, antes dos clientes — e acompanha operacionalmente até a próxima rodada institucional. A Avante não emite cheques de follow-on em empresas fundadas por terceiros.",
+    },
+    {
+      q: "Por que focar no Brasil para construção de empresas AI-native?",
+      a: "O Brasil é uma economia de US$ 2,5 trilhões com 215 milhões de pessoas, 70% do PIB em serviços e aproximadamente 90% das PMEs sub-digitalizadas. A combinação de mercados de serviços fragmentados e ferramentas de IA em avanço cria o cenário estrutural para criação de empresas AI-native na América Latina.",
+    },
+  ],
+  es: [
+    {
+      q: "¿Qué es un venture studio y en qué se diferencia de un fondo de VC?",
+      a: "Un venture studio co-funda empresas desde cero con infraestructura compartida, operating partners y capital de primer cheque. Los fondos de VC tradicionales invierten después de que las empresas ya existen. El operating partner del studio está en el código y en la economía unitaria desde el día uno; el socio de VC está en el directorio.",
+    },
+    {
+      q: "¿Qué retornos generan los venture studios comparados con el VC tradicional?",
+      a: "Datos de la industria muestran que los venture studios generan aproximadamente 50% de IRR anualizado en vintages de 10 años, contra aproximadamente 19% de fondos de VC tradicionales en períodos comparables. La diferencia es estructural — derivada de profundidad operativa y ventajas de etapa de entrada — no un artefacto de supervivencia.",
+    },
+    {
+      q: "¿Por qué los venture studios superan al VC tradicional?",
+      a: "Tres ventajas estructurales: (1) los operating partners están en el código y en la economía unitaria desde el día uno, (2) la infraestructura compartida recorta 6–9 meses del time-to-traction frente a un equipo no afiliado con el mismo capital, (3) el capital de primer cheque permite al studio moldear la economía unitaria antes de que llegue el consenso de mercado.",
+    },
+    {
+      q: "¿En qué etapa invierte Avante?",
+      a: "Primer cheque, siempre. Avante co-funda en pre-tracción — antes del producto, antes de los clientes — y acompaña operativamente hasta la siguiente ronda institucional. Avante no emite cheques de follow-on en empresas fundadas por terceros.",
+    },
+    {
+      q: "¿Por qué enfocarse en Brasil para construcción de empresas AI-native?",
+      a: "Brasil es una economía de US$ 2,5 billones con 215 millones de personas, 70% del PIB en servicios y aproximadamente 90% de las PYMEs subdigitalizadas. La combinación de mercados de servicios fragmentados y herramientas de IA en avance crea el escenario estructural para creación de empresas AI-native en América Latina.",
+    },
+  ],
+} as const;
+
 export default function WhyAvantePage() {
   const { t, language } = useLanguage();
   const copy = SEO_COPY[language] ?? SEO_COPY.en;
+  const faqEntries = FAQ_COPY[language] ?? FAQ_COPY.en;
 
   const whyAvanteJsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    "@id": `https://avanteventures.com/${language}/why-avante#article`,
-    "headline": copy.title,
-    "description": copy.description,
-    "url": `https://avanteventures.com/${language}/why-avante`,
-    "image": "https://avanteventures.com/og-image.png",
-    "inLanguage": copy.inLanguage,
-    "author": { "@id": "https://avanteventures.com/#organization" },
-    "publisher": { "@id": "https://avanteventures.com/#organization" },
-    "isPartOf": { "@id": "https://avanteventures.com/#website" },
-    "about": [
-      "Venture Studios",
-      "Brazil Startup Ecosystem",
-      "AI-Native Startups",
-      "Pre-traction Capital",
-      "Returns Comparison",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": `https://avanteventures.com/${language}/why-avante#article`,
+        "headline": copy.title,
+        "description": copy.description,
+        "url": `https://avanteventures.com/${language}/why-avante`,
+        "image": "https://avanteventures.com/og-image.png",
+        "inLanguage": copy.inLanguage,
+        "author": { "@id": "https://avanteventures.com/#organization" },
+        "publisher": { "@id": "https://avanteventures.com/#organization" },
+        "isPartOf": { "@id": "https://avanteventures.com/#website" },
+        "about": [
+          "Venture Studios",
+          "Brazil Startup Ecosystem",
+          "AI-Native Startups",
+          "Pre-traction Capital",
+          "Returns Comparison",
+        ],
+        "datePublished": "2026-01-01",
+      },
+      {
+        "@type": "FAQPage",
+        "@id": `https://avanteventures.com/${language}/why-avante#faq`,
+        "inLanguage": copy.inLanguage,
+        "mainEntity": faqEntries.map(({ q, a }) => ({
+          "@type": "Question",
+          "name": q,
+          "acceptedAnswer": { "@type": "Answer", "text": a },
+        })),
+      },
     ],
-    "datePublished": "2026-01-01",
   };
 
   return (
