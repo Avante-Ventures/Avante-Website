@@ -32,18 +32,23 @@ export default function LibraryPage() {
   const [activeCategory, setActiveCategory] = useState<Category>('all');
   const [newsletterEmail, setNewsletterEmail] = useState('');
 
-  const libraryItems: LibraryItem[] = articles.map((a, i) => ({
-    id: String(i + 1),
-    slug: a.slug,
-    title: a[language === "es" ? "en" : language].title,
-    description: a[language === "es" ? "en" : language].description,
-    category: a.category,
-    type: a.type,
-    readTime: a.readTime,
-    featured: a.featured,
-    date: a.date,
-    isPublished: a.isPublished,
-  }));
+  // Only published articles are listed. Drafts (isPublished:false) still
+  // exist as direct URLs but are excluded from the index, sitemap.xml, and
+  // llms.txt to preserve crawl budget and signal hygiene.
+  const libraryItems: LibraryItem[] = articles
+    .filter((a) => a.isPublished)
+    .map((a, i) => ({
+      id: String(i + 1),
+      slug: a.slug,
+      title: a[language === "es" ? "en" : language].title,
+      description: a[language === "es" ? "en" : language].description,
+      category: a.category,
+      type: a.type,
+      readTime: a.readTime,
+      featured: a.featured,
+      date: a.date,
+      isPublished: a.isPublished,
+    }));
 
   // Editorial discipline: no emoji icons. The dot signature carries the
   // category accent — same pattern used in the masthead family.
@@ -94,21 +99,21 @@ export default function LibraryPage() {
   const SEO_COPY = {
     en: {
       title: "Library: Insights, Research, Playbooks on AI-native Venture Building",
-      description: "Avante Library: research, case studies, and playbooks on venture studios, Brazil's AI market, and operating AI-native startups. 9+ articles.",
+      description: "Avante Library: research, case studies, and playbooks on venture studios, Brazil's AI market, and operating AI-native startups.",
       collectionName: "Avante Library: Insights, Research, Playbooks",
       collectionDescription: "Insights, research reports, case studies, and playbooks on AI-native venture building, Brazil's service economy, and venture studio dynamics.",
       inLanguage: "en",
     },
     pt: {
       title: "Biblioteca: Insights, Pesquisa e Playbooks para Empresas AI-Native",
-      description: "Biblioteca Avante: pesquisas, estudos de caso e playbooks sobre venture studios, mercado de IA no Brasil e operação de startups AI-native. 9+ artigos.",
+      description: "Biblioteca Avante: pesquisas, estudos de caso e playbooks sobre venture studios, mercado de IA no Brasil e operação de startups AI-native.",
       collectionName: "Biblioteca Avante: Insights, Pesquisa, Playbooks",
       collectionDescription: "Insights, relatórios de pesquisa, estudos de caso e playbooks sobre venture building AI-native, economia de serviços do Brasil e dinâmica de venture studios.",
       inLanguage: "pt-BR",
     },
     es: {
       title: "Biblioteca: Insights, Investigación y Playbooks para Empresas AI-Native",
-      description: "Biblioteca Avante: investigación, casos de estudio y playbooks sobre venture studios, mercado de IA en Brasil y operación de startups AI-native. 9+ artículos.",
+      description: "Biblioteca Avante: investigación, casos de estudio y playbooks sobre venture studios, mercado de IA en Brasil y operación de startups AI-native.",
       collectionName: "Biblioteca Avante: Insights, Investigación, Playbooks",
       collectionDescription: "Insights, reportes de investigación, casos de estudio y playbooks sobre venture building AI-native, economía de servicios de Brasil y dinámica de venture studios.",
       inLanguage: "es",

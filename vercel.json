@@ -3,6 +3,9 @@
   "installCommand": "pnpm install --config.dangerously-allow-all-builds=true --no-frozen-lockfile",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/", "destination": "/en", "permanent": true }
+  ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
