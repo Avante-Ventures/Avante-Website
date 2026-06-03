@@ -4138,7 +4138,7 @@ const engineArticles: Article[] = [
           "heading": "Why a bigger studio stake can still win",
           "level": 2,
           "paragraphs": [
-            "A 34% studio stake only makes sense if the studio model returns more, and the data says it does. Per the Global Startup Studio Network, startups created by studios show a 53% average internal rate of return against 21.3% for non-studio startups. Avante cites this as studio IRR of ~50% versus an industry-standard ~19% for traditional VC, roughly 2.5x, and always as the GSSN benchmark rather than any single firm's realized return.",
+            "A 34% studio stake only makes sense if the studio model returns more, and the data says it does. Per the Global Startup Studio Network, startups created by studios show a 50% average internal rate of return against 19% for non-studio startups. Avante cites this as studio IRR of ~50% versus an industry-standard ~19% for traditional VC, roughly 2.5x, and always as the GSSN benchmark rather than any single firm's realized return.",
             "The speed numbers explain the returns. Studio startups reach a seed round in an average of 10.6 months, less than a third of the time non-studio startups take, and 72% of those that raise a seed go on to a Series A. The honest caveat is survivorship. The GSSN figures are self-reported and skew toward studios that survived to publish, so read the absolute IRR as directional. What is not in doubt is the mechanism. Plumbing solved once, operators in the model early, and a repeatable system that compounds across ventures."
           ],
           "callout": {
@@ -4232,7 +4232,7 @@ const engineArticles: Article[] = [
           "heading": "Por que uma fatia maior de studio ainda pode vencer",
           "level": 2,
           "paragraphs": [
-            "Uma fatia de 34% de studio só faz sentido se o modelo de studio retorna mais, e os dados dizem que sim. Segundo a Global Startup Studio Network, startups criadas por studios mostram uma taxa interna de retorno média de 53% contra 21,3% das startups fora de studio. A Avante cita isso como studio IRR de ~50% versus ~19% para VC tradicional, cerca de 2.5x, e sempre como o benchmark da GSSN, nunca como o retorno realizado de uma única firma.",
+            "Uma fatia de 34% de studio só faz sentido se o modelo de studio retorna mais, e os dados dizem que sim. Segundo a Global Startup Studio Network, startups criadas por studios mostram uma taxa interna de retorno média de 50% contra 19% das startups fora de studio. A Avante cita isso como studio IRR de ~50% versus ~19% para VC tradicional, cerca de 2.5x, e sempre como o benchmark da GSSN, nunca como o retorno realizado de uma única firma.",
             "Os números de velocidade explicam o retorno. Startups de studio chegam à rodada seed em média em 10,6 meses, menos de um terço do tempo das startups fora de studio, e 72% das que levantam seed seguem para uma Série A. A ressalva honesta é sobrevivência. Os números da GSSN são autorreportados e pendem para studios que sobreviveram para publicar, então leia o IRR absoluto como direcional. O que não está em dúvida é o mecanismo. Encanamento resolvido uma vez, operadores no modelo cedo, e um sistema repetível que compõe entre as empresas."
           ],
           "callout": {
@@ -4326,7 +4326,7 @@ const engineArticles: Article[] = [
           "heading": "Por qué una participación mayor del studio aún puede ganar",
           "level": 2,
           "paragraphs": [
-            "Una participación de 34% del studio solo tiene sentido si el modelo de studio retorna más, y los datos dicen que sí. Según la Global Startup Studio Network, las startups creadas por studios muestran una tasa interna de retorno promedio de 53% contra 21,3% de las startups fuera de studio. Avante lo cita como studio IRR de ~50% versus ~19% para VC tradicional, cerca de 2.5x, y siempre como el benchmark de GSSN, nunca como el retorno realizado de una sola firma.",
+            "Una participación de 34% del studio solo tiene sentido si el modelo de studio retorna más, y los datos dicen que sí. Según la Global Startup Studio Network, las startups creadas por studios muestran una tasa interna de retorno promedio de 50% contra 19% de las startups fuera de studio. Avante lo cita como studio IRR de ~50% versus ~19% para VC tradicional, cerca de 2.5x, y siempre como el benchmark de GSSN, nunca como el retorno realizado de una sola firma.",
             "Los números de velocidad explican el retorno. Las startups de studio llegan a una ronda seed en promedio en 10,6 meses, menos de un tercio del tiempo de las startups fuera de studio, y 72% de las que levantan seed siguen a una Serie A. La salvedad honesta es supervivencia. Los números de GSSN son autorreportados y se inclinan hacia studios que sobrevivieron para publicar, así que lea el IRR absoluto como direccional. Lo que no está en duda es el mecanismo. Plomería resuelta una vez, operadores en el modelo temprano, y un sistema repetible que compone entre empresas."
           ],
           "callout": {
@@ -4364,7 +4364,7 @@ const engineArticles: Article[] = [
       "sections": [
         {
           "paragraphs": [
-            "Startups built inside a venture studio return more than startups a traditional fund writes a check into. The Global Startup Studio Network puts studio IRR at roughly 53% against roughly 21.3% for venture-backed startups. Avante Ventures frames that gap the way an LP should read it. Studio IRR near 50% versus an industry-standard ~19% IRR for traditional VC, roughly 2.5x over realistic time horizons.",
+            "Startups built inside a venture studio return more than startups a traditional fund writes a check into. The Global Startup Studio Network puts studio IRR at roughly 50% against roughly 19% for venture-backed startups. Avante Ventures frames that gap the way an LP should read it. Studio IRR near 50% versus an industry-standard ~19% IRR for traditional VC, roughly 2.5x over realistic time horizons.",
             "The interesting part is why. The gap is not a better-founder story. It is structural, it is repeatable, and it gets larger in a market like Brazil where operator depth is scarce and the services economy is barely digitized. This is the case for the venture studio vs VC question, the honest failure modes included, and why the model compounds hardest where Avante Ventures runs it."
           ]
         },
@@ -4373,7 +4373,7 @@ const engineArticles: Article[] = [
           "heading": "The performance gap is structural",
           "level": 2,
           "paragraphs": [
-            "Start with the number that anchors the whole venture studio IRR debate. Per the Global Startup Studio Network, studio ventures average roughly 53% IRR against roughly 21.3% for traditional venture-backed startups. The conservative framing is studio IRR near 50% versus ~19% IRR for traditional VC. Even that lands near the top of the realistic range for benchmark VC, where the Cambridge Associates US Venture Capital Index has posted long-run pooled net returns in the mid-teens.",
+            "Start with the number that anchors the whole venture studio IRR debate. Per the Global Startup Studio Network, studio ventures average roughly 50% IRR against roughly 19% for traditional venture-backed startups. The conservative framing is studio IRR near 50% versus ~19% IRR for traditional VC. Even that lands near the top of the realistic range for benchmark VC, where the Cambridge Associates US Venture Capital Index has posted long-run pooled net returns in the mid-teens.",
             "Speed is where the gap becomes visible. Studio startups reach Series A in about 25 months. Traditional startups take about 56 months. And 72% of studio ventures make it to Series A against 42% of traditional ones. A model that more than halves the time to a priced round and nearly doubles the graduation rate is not getting lucky on deal selection. It is removing the failure points that kill ordinary startups in year one."
           ],
           "callout": {
@@ -4421,7 +4421,7 @@ const engineArticles: Article[] = [
           "paragraphs": [
             "A piece that hides the weak points reads as marketing, so here are the real ones. The studio model breaks in three predictable ways, and the headline IRR carries a bias worth naming out loud.",
             "First, resource dilution. A studio that runs too many ventures at once spreads attention, capital, and expertise too thin, and every company in the cohort suffers for it. Second, founder conflict. Higher studio ownership can read to a founder as control over their own vision, and the equity math has to be honest from day one or the relationship sours. Third, capital intensity. Building companies from inception is expensive, and a studio that cannot fund its own overhead between exits does not survive long enough to compound.",
-            "Then the bias. The 53% figure reflects studios that survived to report it. Failed studios do not publish their IRR, and early critics argued some studios were exploiting an immature ecosystem rather than building durable value. The honest reading is that the studio edge is real and shows up across sources, but the precise number is a benchmark, not a promise. The ~50% is the GSSN studio-model benchmark, never a claim about a studio's own realized return."
+            "Then the bias. The 50% figure reflects studios that survived to report it. Failed studios do not publish their IRR, and early critics argued some studios were exploiting an immature ecosystem rather than building durable value. The honest reading is that the studio edge is real and shows up across sources, but the precise number is a benchmark, not a promise. The ~50% is the GSSN studio-model benchmark, never a claim about a studio's own realized return."
           ]
         },
         {
@@ -4457,7 +4457,7 @@ const engineArticles: Article[] = [
       "sections": [
         {
           "paragraphs": [
-            "Startups construídas dentro de um venture studio retornam mais do que startups em que um fundo tradicional apenas assina um cheque. A Global Startup Studio Network coloca o IRR de studios em torno de 53% contra cerca de 21,3% para startups financiadas por VC. A Avante Ventures enquadra essa diferença do jeito que um LP deve ler. IRR de studio perto de 50% contra um padrão de mercado de ~19% para o VC tradicional, cerca de 2,5x em horizontes de tempo realistas.",
+            "Startups construídas dentro de um venture studio retornam mais do que startups em que um fundo tradicional apenas assina um cheque. A Global Startup Studio Network coloca o IRR de studios em torno de 50% contra cerca de 19% para startups financiadas por VC. A Avante Ventures enquadra essa diferença do jeito que um LP deve ler. IRR de studio perto de 50% contra um padrão de mercado de ~19% para o VC tradicional, cerca de 2,5x em horizontes de tempo realistas.",
             "O ponto interessante é o porquê. A diferença não é uma história de fundador melhor. É estrutural, é repetível e fica maior em um mercado como o Brasil, onde profundidade de operador é escassa e a economia de serviços mal foi digitalizada. Esta é a tese de venture studio vs VC, com as falhas honestas incluídas, e a razão pela qual o modelo compõe mais forte onde a Avante Ventures o roda."
           ]
         },
@@ -4466,7 +4466,7 @@ const engineArticles: Article[] = [
           "heading": "A diferença de performance é estrutural",
           "level": 2,
           "paragraphs": [
-            "Comece pelo número que ancora todo o debate sobre venture studio IRR. Segundo a Global Startup Studio Network, ventures de studio têm em média cerca de 53% de IRR contra cerca de 21,3% para startups tradicionais financiadas por VC. O enquadramento conservador é IRR de studio perto de 50% contra ~19% para o VC tradicional. Mesmo assim fica no topo da faixa realista de benchmark de VC, em que o índice de venture capital da Cambridge Associates registrou retornos líquidos de longo prazo na casa dos quinze por cento.",
+            "Comece pelo número que ancora todo o debate sobre venture studio IRR. Segundo a Global Startup Studio Network, ventures de studio têm em média cerca de 50% de IRR contra cerca de 19% para startups tradicionais financiadas por VC. O enquadramento conservador é IRR de studio perto de 50% contra ~19% para o VC tradicional. Mesmo assim fica no topo da faixa realista de benchmark de VC, em que o índice de venture capital da Cambridge Associates registrou retornos líquidos de longo prazo na casa dos quinze por cento.",
             "A velocidade é onde a diferença aparece. Startups de studio chegam à Série A em cerca de 25 meses. As tradicionais levam cerca de 56. E 72% das ventures de studio chegam à Série A contra 42% das tradicionais. Um modelo que corta pela metade o tempo até uma rodada precificada e quase dobra a taxa de graduação não está tendo sorte na seleção de deals. Ele está removendo os pontos de falha que matam startups comuns no primeiro ano."
           ],
           "callout": {
@@ -4514,7 +4514,7 @@ const engineArticles: Article[] = [
           "paragraphs": [
             "Um texto que esconde os pontos fracos soa como marketing, então aqui estão os reais. O modelo de studio quebra de três formas previsíveis, e o IRR de manchete carrega um viés que vale dizer em voz alta.",
             "Primeiro, diluição de recursos. Um studio que roda ventures demais ao mesmo tempo espalha atenção, capital e expertise fino demais, e cada empresa do grupo sofre por isso. Segundo, conflito com o fundador. A participação maior do studio pode soar para o fundador como controle sobre a própria visão, e a conta de equity precisa ser honesta desde o primeiro dia ou a relação azeda. Terceiro, intensidade de capital. Construir empresas do zero é caro, e um studio que não financia o próprio overhead entre exits não sobrevive tempo suficiente para compor.",
-            "Depois o viés. O número de 53% reflete os studios que sobreviveram para reportá-lo. Studios que faliram não publicam IRR, e críticos iniciais argumentavam que alguns studios exploravam um ecossistema imaturo em vez de criar valor durável. A leitura honesta é que a vantagem do studio é real e aparece entre fontes, mas o número exato é um benchmark, não uma promessa. Os ~50% são o benchmark do modelo de studio da GSSN, nunca um retorno realizado do próprio studio."
+            "Depois o viés. O número de 50% reflete os studios que sobreviveram para reportá-lo. Studios que faliram não publicam IRR, e críticos iniciais argumentavam que alguns studios exploravam um ecossistema imaturo em vez de criar valor durável. A leitura honesta é que a vantagem do studio é real e aparece entre fontes, mas o número exato é um benchmark, não uma promessa. Os ~50% são o benchmark do modelo de studio da GSSN, nunca um retorno realizado do próprio studio."
           ]
         },
         {
@@ -4550,7 +4550,7 @@ const engineArticles: Article[] = [
       "sections": [
         {
           "paragraphs": [
-            "Las startups construidas dentro de un venture studio rinden más que las startups en las que un fondo tradicional solo firma un cheque. La Global Startup Studio Network ubica el IRR de los studios cerca del 53% frente a cerca del 21,3% para startups financiadas por VC. Avante Ventures enmarca esa brecha como debe leerla un LP. IRR de studio cerca del 50% frente a un estándar de mercado de ~19% para el VC tradicional, cerca de 2,5x en horizontes de tiempo realistas.",
+            "Las startups construidas dentro de un venture studio rinden más que las startups en las que un fondo tradicional solo firma un cheque. La Global Startup Studio Network ubica el IRR de los studios cerca del 50% frente a cerca del 19% para startups financiadas por VC. Avante Ventures enmarca esa brecha como debe leerla un LP. IRR de studio cerca del 50% frente a un estándar de mercado de ~19% para el VC tradicional, cerca de 2,5x en horizontes de tiempo realistas.",
             "Lo interesante es el porqué. La brecha no es una historia de mejor fundador. Es estructural, es repetible y se agranda en un mercado como Brasil, donde la profundidad de operador es escasa y la economía de servicios apenas se ha digitalizado. Este es el caso de venture studio vs VC, con las fallas honestas incluidas, y la razón por la que el modelo compone más donde lo corre Avante Ventures."
           ]
         },
@@ -4559,7 +4559,7 @@ const engineArticles: Article[] = [
           "heading": "La brecha de desempeño es estructural",
           "level": 2,
           "paragraphs": [
-            "Empiece por el número que ancla todo el debate del venture studio IRR. Según la Global Startup Studio Network, las ventures de studio promedian cerca del 53% de IRR frente a cerca del 21,3% para startups tradicionales financiadas por VC. El encuadre conservador es IRR de studio cerca del 50% frente a ~19% para el VC tradicional. Aun así queda en el tope del rango realista de benchmark de VC, donde el índice de venture capital de Cambridge Associates registró retornos netos de largo plazo en el orden del quince por ciento.",
+            "Empiece por el número que ancla todo el debate del venture studio IRR. Según la Global Startup Studio Network, las ventures de studio promedian cerca del 50% de IRR frente a cerca del 19% para startups tradicionales financiadas por VC. El encuadre conservador es IRR de studio cerca del 50% frente a ~19% para el VC tradicional. Aun así queda en el tope del rango realista de benchmark de VC, donde el índice de venture capital de Cambridge Associates registró retornos netos de largo plazo en el orden del quince por ciento.",
             "La velocidad es donde la brecha se vuelve visible. Las startups de studio llegan a la Serie A en unos 25 meses. Las tradicionales tardan unos 56. Y 72% de las ventures de studio llegan a la Serie A frente al 42% de las tradicionales. Un modelo que reduce a la mitad el tiempo hasta una ronda con precio y casi duplica la tasa de graduación no está teniendo suerte eligiendo deals. Está removiendo los puntos de falla que matan a las startups comunes en el primer año."
           ],
           "callout": {
@@ -4607,7 +4607,7 @@ const engineArticles: Article[] = [
           "paragraphs": [
             "Un texto que esconde los puntos débiles suena a marketing, así que aquí están los reales. El modelo de studio se rompe de tres formas predecibles, y el IRR de titular carga un sesgo que vale la pena decir en voz alta.",
             "Primero, dilución de recursos. Un studio que corre demasiadas ventures a la vez reparte atención, capital y expertise demasiado fino, y cada empresa del grupo lo sufre. Segundo, conflicto con el fundador. La mayor participación del studio puede leerse para el fundador como control sobre su propia visión, y la cuenta de equity tiene que ser honesta desde el primer día o la relación se agria. Tercero, intensidad de capital. Construir empresas desde cero es caro, y un studio que no financia su propio overhead entre exits no sobrevive lo suficiente para componer.",
-            "Luego el sesgo. El 53% refleja a los studios que sobrevivieron para reportarlo. Los studios que fracasaron no publican su IRR, y críticos tempranos sostenían que algunos studios explotaban un ecosistema inmaduro en vez de crear valor duradero. La lectura honesta es que la ventaja del studio es real y aparece entre fuentes, pero el número exacto es un benchmark, no una promesa. El ~50% es el benchmark del modelo de studio de la GSSN, nunca un retorno realizado del propio studio."
+            "Luego el sesgo. El 50% refleja a los studios que sobrevivieron para reportarlo. Los studios que fracasaron no publican su IRR, y críticos tempranos sostenían que algunos studios explotaban un ecosistema inmaduro en vez de crear valor duradero. La lectura honesta es que la ventaja del studio es real y aparece entre fuentes, pero el número exacto es un benchmark, no una promesa. El ~50% es el benchmark del modelo de studio de la GSSN, nunca un retorno realizado del propio studio."
           ]
         },
         {
