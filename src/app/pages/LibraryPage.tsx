@@ -30,7 +30,6 @@ interface LibraryItem {
 export default function LibraryPage() {
   const { t, language } = useLanguage();
   const [activeCategory, setActiveCategory] = useState<Category>('all');
-  const [newsletterEmail, setNewsletterEmail] = useState('');
 
   // Only published articles are listed. Drafts (isPublished:false) still
   // exist as direct URLs but are excluded from the index, sitemap.xml, and
@@ -73,25 +72,6 @@ export default function LibraryPage() {
     return cat?.color || '#FFFFFF';
   };
 
-
-  const handleNewsletterSubscribe = () => {
-    if (!newsletterEmail) return;
-    
-    const subject = encodeURIComponent('Newsletter Subscription Request');
-    const body = encodeURIComponent(
-      `New newsletter subscription request:\n\n` +
-      `Email: ${newsletterEmail}\n\n` +
-      `Source: Avante Library Page`
-    );
-    
-    const mailtoLink = `mailto:cristian@avanteventures.com?subject=${subject}&body=${body}`;
-    window.location.href = mailtoLink;
-    
-    // Clear the input after opening email client
-    setTimeout(() => {
-      setNewsletterEmail('');
-    }, 500);
-  };
 
   // GEO-friendly schema: CollectionPage + ItemList of every published article.
   // Lets LLMs cite specific titles even when the underlying article pages
@@ -733,47 +713,17 @@ export default function LibraryPage() {
 
             <div style={{
               display: 'flex',
-              gap: 'var(--avante-space-3)',
-              maxWidth: '550px',
-              margin: '0 auto',
-              flexWrap: 'wrap',
               justifyContent: 'center'
             }}>
-              <input
-                type="email"
-                placeholder={t('library.cta.placeholder')}
-                value={newsletterEmail}
-                onChange={(e) => setNewsletterEmail(e.target.value)}
-                style={{
-                  flex: '1',
-                  minWidth: '250px',
-                  padding: '18px 24px',
-                  backgroundColor: 'rgba(255, 255, 255, 0.06)',
-                  border: '1px solid rgba(255, 255, 255, 0.12)',
-                  borderRadius: 'var(--avante-radius-12)',
-                  color: 'var(--avante-text-primary)',
-                  fontSize: '15px',
-                  outline: 'none',
-                  transition: 'all 0.3s ease',
-                  backdropFilter: 'blur(10px)'
-                }}
-                onFocus={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
-                  e.currentTarget.style.borderColor = 'rgba(66, 70, 140, 0.6)';
-                  e.currentTarget.style.boxShadow = '0 0 20px rgba(66, 70, 140, 0.3)';
-                }}
-                onBlur={(e) => {
-                  e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.06)';
-                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.12)';
-                  e.currentTarget.style.boxShadow = 'none';
-                }}
-              />
-              <motion.button
+              <motion.a
+                href="https://substack.com/@avante3"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={handleNewsletterSubscribe}
                 style={{
-                  padding: '18px 36px',
+                  display: 'inline-block',
+                  padding: '18px 40px',
                   background: 'linear-gradient(135deg, rgba(66, 70, 140, 1) 0%, rgba(66, 70, 140, 0.9) 100%)',
                   color: '#FFFFFF',
                   borderRadius: 'var(--avante-radius-12)',
@@ -781,6 +731,7 @@ export default function LibraryPage() {
                   fontWeight: 'var(--font-weight-bold)',
                   border: 'none',
                   cursor: 'pointer',
+                  textDecoration: 'none',
                   transition: 'all 0.3s ease',
                   boxShadow: '0 0 30px rgba(66, 70, 140, 0.4)',
                   whiteSpace: 'nowrap'
@@ -793,7 +744,7 @@ export default function LibraryPage() {
                 }}
               >
                 {t('library.cta.button')} →
-              </motion.button>
+              </motion.a>
             </div>
 
             <p style={{
