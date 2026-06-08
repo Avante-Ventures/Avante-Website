@@ -80,9 +80,9 @@
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Avante Ventures — AI-native venture studio for Brazil" />
 
-    <!-- Twitter Card site-level -->
+    <!-- Twitter Card site-level. twitter:image is emitted per-route by
+         SEOHelmet (same reasoning as og:image above) so it isn't duplicated. -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://avanteventures.com/og-image.png" />
 
     <!-- robots is now emitted per-route by SEOHelmet so individual pages
          (e.g. unpublished stub articles) can flip to noindex without

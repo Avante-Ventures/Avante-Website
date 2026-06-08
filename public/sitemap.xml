@@ -412,7 +412,7 @@
   <!-- 9. Global Venture Studio Data (DRAFT) -->
 
   <!-- CONTENT-ENGINE:START (managed by content-engine/merge.py - do not edit by hand) -->
-  <!-- 10 engine article(s) x 3 locales. Generated from content-engine/outputs. Edit the engine, not this block. -->
+  <!-- 11 engine article(s) x 3 locales. Generated from content-engine/outputs. Edit the engine, not this block. -->
   <url>
     <loc>https://avanteventures.com/en/library/ai-infrastructure-cost-curve-latam</loc>
     <lastmod>2026-06-02</lastmod>
@@ -682,6 +682,36 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/studio-vs-accelerator-vs-vc"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/studio-vs-accelerator-vs-vc"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/studio-vs-accelerator-vs-vc"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/en/library/venture-builders-brazil-vs-usa-benchmark</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/venture-builders-brazil-vs-usa-benchmark"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/venture-builders-brazil-vs-usa-benchmark"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/venture-builders-brazil-vs-usa-benchmark"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/venture-builders-brazil-vs-usa-benchmark"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/venture-builders-brazil-vs-usa-benchmark</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/venture-builders-brazil-vs-usa-benchmark"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/venture-builders-brazil-vs-usa-benchmark"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/venture-builders-brazil-vs-usa-benchmark"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/venture-builders-brazil-vs-usa-benchmark"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/venture-builders-brazil-vs-usa-benchmark</loc>
+    <lastmod>2026-06-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/venture-builders-brazil-vs-usa-benchmark"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/venture-builders-brazil-vs-usa-benchmark"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/venture-builders-brazil-vs-usa-benchmark"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/venture-builders-brazil-vs-usa-benchmark"/>
   </url>
   <url>
     <loc>https://avanteventures.com/en/library/why-venture-studios-win-latam</loc>

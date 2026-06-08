@@ -54,6 +54,10 @@ export interface Article {
   es?: ArticleLocaleContent
   /** True if full long-form content is published. False = stub/coming-soon. */
   isPublished: boolean
+  /** Optional per-article social/OG image, absolute path from site root
+   *  (e.g. /og/<slug>.png). Falls back to the global /og-image.png when absent.
+   *  Used for og:image, twitter:image, and the JSON-LD Article.image. */
+  ogImage?: string
 }
 
 // ─────────────────────────────────────────────────────────────────────
@@ -1754,7 +1758,7 @@ const articleSiggaCaseStudy: Article = {
 // ─────────────────────────────────────────────────────────────────────
 
 // === CONTENT-ENGINE:START (managed by content-engine/merge.py — do not edit by hand) ===
-// 10 article(s) generated from content-engine/outputs. Edit the engine, not this block.
+// 11 article(s) generated from content-engine/outputs. Edit the engine, not this block.
 const engineArticles: Article[] = [
   {
     "slug": "ai-infrastructure-cost-curve-latam",
@@ -4344,6 +4348,266 @@ const engineArticles: Article[] = [
             "En la práctica, eso significa que Avante lanza 3-4 ventures por año a través de un sistema de seis etapas. Research, Partner, Build, Traction, Revenue, Compound. Aporta US$ 500K-1.5M por venture a lo largo del pre-seed y conserva economía de co-founder, con operating partners comprometidos hasta el primer hito de ingresos. El patrón recurrente es el flywheel copilot, dato, capital. Construir un copilot de IA para generar dato propietario y usar ese dato para levantar y desplegar capital. Puede leer la tesis completa en [/why-avante](/why-avante) y cómo opera el studio en [/principles](/principles).",
             "Entonces elija por lo que le falta, no por lo que se ve más barato el día uno. El fundador que elige un studio no está comprando un cheque. Está comprando una empresa construida sobre diez años de cicatriz de operación, iniciada el mes en que firma, en lugar del año en que habría terminado de contratar."
           ],
+          "id": "how-avante"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "venture-builders-brazil-vs-usa-benchmark",
+    "category": "research",
+    "type": "Benchmark",
+    "readTime": "11 min",
+    "featured": false,
+    "date": "Jun 2026",
+    "datePublished": "2026-06-08",
+    "isPublished": true,
+    "ogImage": "/og/venture-builders-brazil-vs-usa-benchmark.png",
+    "en": {
+      "title": "Venture Studio Benchmark: The US Track Record and Brazil's Opening",
+      "description": "A benchmark of the studios that built the model in the US and Europe, what it returns, and why Brazil is the open lane for an AI-native one.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Here is the venture studio benchmark in one line. The model builds companies in-house, hands a founder a team and first capital on day one, and takes co-founder economics in return. That structure has a twenty-five year track record across the US and Europe, and almost none of it is in Brazil yet. Idealab started in 1996. The studios that followed produced IPOs, unicorns, and, by the most-cited industry figure, an internal rate of return near 50% against roughly 19% for traditional venture capital.",
+            "This piece is that benchmark read builder by builder, with the numbers that hold up and the ones that do not. Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America, so we read this record as proof and as opening at the same time. The model works. No one is running it AI-native in Brazil. That gap is the entire thesis.",
+            "A venture studio, also called a startup studio or company builder, conceives companies in-house and staffs them, rather than investing in founders who arrive with their own. That single design choice is what the rest of this benchmark measures. You can read the longer version of [why the structure fits Brazil](/why-avante)."
+          ]
+        },
+        {
+          "heading": "A model proven by twenty-five years of builders",
+          "level": 2,
+          "paragraphs": [
+            "The venture studio is not a 2020s invention, and that is the first thing the record tells you. The benchmark builders were founded between 1996 and 2015. This is a proven structure with public exits attached to it, not an experiment running on a pitch deck.",
+            "What unites them is simple. Each one created companies in-house, with operators inside from week one, rather than writing checks into other people's startups and hoping. The track records are specific and, in most cases, independently verifiable. Read the six together as one claim with six data points. Building on purpose, with the build team and the capital under one roof, produces public exits at a rate that pure check-writing does not."
+          ],
+          "bullets": [
+            "Idealab. Founded 1996 by Bill Gross. More than 150 companies created and 45 or more IPOs and acquisitions, per [Caltech](https://board.caltech.edu/board-members/mr-william-t-gross-bs-81) and the firm.",
+            "Rocket Internet. Founded 2007 in Berlin. Over 100 companies built, with Zalando, HelloFresh, and Delivery Hero all reaching public markets.",
+            "eFounders, now Hexa. Founded 2011 in Paris. Roughly 50 companies and about $5B in cumulative value created, per [Hexa](https://www.hexa.com/).",
+            "Human Ventures. Founded 2014 in New York. 60 or more companies and three unicorns, per [Fortune](https://fortune.com/2024/04/15/human-ventures-approaches-50-million-raised-second-fund/).",
+            "Pioneer Square Labs. Founded 2015 in Seattle. More than 35 companies spun out, including Boundless and Recurrent, per [Ascend VC](https://www.ascend.vc/blog/tag/Pioneer+Square+Labs).",
+            "Atomic. Founded 2012. Built Hims and Hers, now public on the NYSE under HIMS."
+          ],
+          "id": "the-proven-model"
+        },
+        {
+          "heading": "What returns does the venture studio model actually generate?",
+          "level": 2,
+          "paragraphs": [
+            "The most-cited number says the studio model returns far more than traditional venture. Per the Global Startup Studio Network, studio-created startups show an average internal rate of return near 50% against roughly 19% for non-studio startups. Avante cites this as studio IRR of ~50% versus an industry-standard ~19% for traditional VC, roughly 2.5x, and always as the GSSN benchmark rather than any single firm's realized return.",
+            "Now the caveat that makes the figure usable instead of embarrassing. Those GSSN numbers are self-reported and trace to a single 2020 to 2022 white paper. The largest independent study of the model, [Big Venture Studio Research](https://inniches.com/big-venture-studio-research) published in December 2024, does not reproduce that magnitude. Read the absolute IRR as directional, not as a promise, and never as a guarantee of any one studio's outcome.",
+            "What survives scrutiny is the scale and the mechanism. Enhance Ventures counted more than 560 studios operating worldwide, so the model has become a category of its own. A studio outperforms for structural reasons you can name. Plumbing solved once. Operators in the unit-economics model in the first weeks. A repeatable system that compounds across ventures. Argue with the exact multiple if you want. The direction of it holds. That is the honest read of the studio benchmark, worth far more as a working mechanism than as a single headline percentage."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Studio IRR of ~50% versus an industry-standard ~19% for traditional VC, roughly 2.5x the IRR over realistic time horizons.",
+            "attribution": "Global Startup Studio Network (GSSN)"
+          },
+          "id": "what-it-returns"
+        },
+        {
+          "heading": "Are there venture studios in Brazil yet?",
+          "level": 2,
+          "paragraphs": [
+            "Here is the part of the benchmark that should interest a Brazilian founder most. None of it is Brazilian. The model that produced Zalando and Hims was built in Berlin, Paris, New York, and Seattle, and the category has barely arrived in Brazil.",
+            "The names most often called Brazilian studios are not studios. [Domo Invest](https://domo.vc/), to take the most cited example, is a traditional venture capital fund rather than a company builder. There is no benchmark AI-native venture studio in Brazil yet. The lane is open, and it is open for a structural reason rather than a lack of talent."
+          ],
+          "bullets": [
+            "The surface is large. Services account for roughly 70% of Brazilian GDP, per IBGE, with low software penetration.",
+            "The buyers are under-digitized businesses that domain operators understand and generalist VCs usually do not.",
+            "The competition for an AI-native, local studio is close to zero."
+          ],
+          "id": "brazil-white-space"
+        },
+        {
+          "heading": "The AI-native edge the benchmarks never had",
+          "level": 2,
+          "paragraphs": [
+            "Every studio in the benchmark shares one quiet limitation. They were all designed before AI could build. Idealab in 1996, Rocket in 2007, even Pioneer Square in 2015, all assume a large engineering team and a Series A to reach scale, because in their era that was the only way to do it.",
+            "That assumption is now wrong, and the cost curve is the reason. AI infrastructure is now cheap enough to deploy without a Series A. A studio venture launches 6-9 months ahead of a comparably funded standalone team, and solving company plumbing once routes roughly $300K-500K of effective capital per venture into product and traction rather than overhead.",
+            "Be honest about the limit. Cheap AI is not a moat by itself, because it lowers the barrier for competitors at the same time. The edge is running the proven studio structure with AI agents inside from day one, in a market where no one else is doing it. That combination is exactly what the benchmark builders never had access to."
+          ],
+          "id": "ai-native-edge"
+        },
+        {
+          "heading": "How Avante runs the playbook",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America, and the benchmark is why the model fits here rather than a hope that it might. The structure is proven abroad. The market is open at home. The cost curve finally allows the build to start lean.",
+            "In practice that means Avante launches 3-4 ventures per year through a six-stage system. Research, Partner, Build, Traction, Revenue, Compound. It deploys $500K-1.5M per venture across pre-seed and retains co-founder economics, with operating partners staying engaged through the first revenue milestone. The recurring pattern is the copilot to data to fund flywheel. Build an AI copilot to generate proprietary data, then use that data to raise and deploy capital. You can see [how the studio operates](/principles).",
+            "The current portfolio follows that pattern. Nexa Tech in judicial assets, WIR in insurance pricing, and BR Auction Intel in real estate auctions. The benchmark says the studio model produces IPOs and unicorns over twenty-five years of patient building. The opening says Brazil has none of it yet, not AI-native. Avante is building from that gap rather than toward it."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "If you are weighing the studio path, judge it on the mechanism, not the headline IRR. Operators inside from week one and plumbing solved once are the parts that survive independent scrutiny."
+          },
+          "id": "how-avante"
+        }
+      ]
+    },
+    "pt": {
+      "title": "Benchmark de Venture Studio: O Histórico dos EUA e a Brecha do Brasil",
+      "description": "Um benchmark dos studios que criaram o modelo nos EUA e na Europa, o que ele retorna, e por que o Brasil é a pista aberta para um AI-native.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Aqui está o benchmark de venture studio em uma linha. O modelo constrói empresas internamente, entrega ao fundador um time e o primeiro capital no dia um e fica com economia de co-founder em troca. Essa estrutura tem um histórico de vinte e cinco anos nos EUA e na Europa, e quase nada disso está no Brasil ainda. A Idealab começou em 1996. Os studios que vieram depois produziram IPOs, unicórnios e, pelo número mais citado do setor, uma taxa interna de retorno perto de 50% contra cerca de 19% do venture capital tradicional.",
+            "Este texto é esse benchmark lido builder por builder, com os números que se sustentam e os que não se sustentam. A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina, então lemos esse histórico como prova e como brecha ao mesmo tempo. O modelo funciona. Ninguém o roda AI-native no Brasil. Essa lacuna é a tese inteira.",
+            "Um venture studio, também chamado de startup studio ou construtor de empresas, concebe empresas internamente e monta os times, em vez de investir em fundadores que chegam com os seus. Essa única escolha de desenho é o que o resto deste benchmark mede. Você pode ler a versão mais longa de [por que a estrutura encaixa no Brasil](/why-avante)."
+          ]
+        },
+        {
+          "heading": "Um modelo provado por vinte e cinco anos de builders",
+          "level": 2,
+          "paragraphs": [
+            "O venture studio não é uma invenção dos anos 2020, e essa é a primeira coisa que o histórico mostra. Os builders de referência foram fundados entre 1996 e 2015. É uma estrutura provada, com saídas públicas anexadas a ela, não um experimento rodando em cima de um deck.",
+            "O que os une é simples. Cada um criou empresas internamente, com operadores dentro desde a primeira semana, em vez de assinar cheques nas startups dos outros e torcer. Os históricos são específicos e, na maioria dos casos, verificáveis de forma independente."
+          ],
+          "bullets": [
+            "Idealab. Fundada em 1996 por Bill Gross. Mais de 150 empresas criadas e 45 ou mais IPOs e aquisições, segundo a [Caltech](https://board.caltech.edu/board-members/mr-william-t-gross-bs-81) e a própria firma.",
+            "Rocket Internet. Fundada em 2007 em Berlim. Mais de 100 empresas construídas, com Zalando, HelloFresh e Delivery Hero chegando ao mercado público.",
+            "eFounders, hoje Hexa. Fundada em 2011 em Paris. Cerca de 50 empresas e aproximadamente US$ 5 bilhões em valor acumulado criado, segundo a [Hexa](https://www.hexa.com/).",
+            "Human Ventures. Fundada em 2014 em Nova York. 60 ou mais empresas e três unicórnios, segundo a [Fortune](https://fortune.com/2024/04/15/human-ventures-approaches-50-million-raised-second-fund/).",
+            "Pioneer Square Labs. Fundada em 2015 em Seattle. Mais de 35 empresas geradas, incluindo Boundless e Recurrent, segundo a [Ascend VC](https://www.ascend.vc/blog/tag/Pioneer+Square+Labs).",
+            "Atomic. Fundada em 2012. Construiu a Hims and Hers, hoje listada na NYSE sob HIMS."
+          ],
+          "id": "the-proven-model"
+        },
+        {
+          "heading": "Que retorno o modelo de venture studio de fato gera?",
+          "level": 2,
+          "paragraphs": [
+            "O número mais citado diz que o modelo de studio retorna muito mais que o venture tradicional. Segundo a Global Startup Studio Network, startups criadas por studios mostram uma taxa interna de retorno média perto de 50% contra cerca de 19% das startups fora de studio. A Avante cita isso como studio IRR de ~50% versus ~19% para VC tradicional, cerca de 2.5x, e sempre como o benchmark da GSSN, nunca como o retorno realizado de uma única firma.",
+            "Agora a ressalva que torna o número usável em vez de constrangedor. Esses dados da GSSN são autorreportados e vêm de um único white paper de 2020 a 2022. O maior estudo independente do modelo, o [Big Venture Studio Research](https://inniches.com/big-venture-studio-research) publicado em dezembro de 2024, não reproduz essa magnitude. Leia o IRR absoluto como direcional, não como promessa, e nunca como garantia do resultado de um studio específico.",
+            "O que sobrevive ao escrutínio é a escala e o mecanismo. A Enhance Ventures contou mais de 560 studios operando no mundo, então o modelo virou uma categoria própria. Um studio supera por razões estruturais que dá para nomear. Encanamento resolvido uma vez. Operadores no modelo de unit economics nas primeiras semanas. Um sistema repetível que compõe entre empresas. Discuta o múltiplo exato se quiser. A direção se mantém. Essa é a leitura honesta do benchmark de studio, que vale muito mais como mecanismo de trabalho do que como uma única porcentagem de manchete."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Studio IRR de ~50% versus ~19% para VC tradicional, cerca de 2.5x o IRR em horizontes de tempo realistas.",
+            "attribution": "Global Startup Studio Network (GSSN)"
+          },
+          "id": "what-it-returns"
+        },
+        {
+          "heading": "Existem venture studios no Brasil?",
+          "level": 2,
+          "paragraphs": [
+            "Aqui está a parte do benchmark que mais deveria interessar a um fundador brasileiro. Nada dele é brasileiro. O modelo que produziu Zalando e Hims foi construído em Berlim, Paris, Nova York e Seattle, e a categoria mal chegou ao Brasil.",
+            "Os nomes mais chamados de studios brasileiros não são studios. A [Domo Invest](https://domo.vc/), para usar o exemplo mais citado, é um fundo de venture capital tradicional, não um construtor de empresas. Não existe um venture studio AI-native de referência no Brasil ainda. A pista está aberta, e está aberta por uma razão estrutural, não por falta de talento."
+          ],
+          "bullets": [
+            "A superfície é grande. Serviços representam cerca de 70% do PIB brasileiro, segundo o IBGE, com baixa penetração de software.",
+            "Os compradores são negócios pouco digitalizados que operadores de domínio entendem e que VCs generalistas em geral não entendem.",
+            "A concorrência por um studio AI-native e local é perto de zero."
+          ],
+          "id": "brazil-white-space"
+        },
+        {
+          "heading": "A vantagem AI-native que os benchmarks nunca tiveram",
+          "level": 2,
+          "paragraphs": [
+            "Todo studio do benchmark tem uma limitação silenciosa em comum. Todos foram desenhados antes de a IA conseguir construir. Idealab em 1996, Rocket em 2007, até a Pioneer Square em 2015, todos assumem um time de engenharia grande e uma Série A para chegar à escala, porque na época deles era o único jeito de fazer.",
+            "Essa premissa hoje está errada, e a curva de custo é a razão. A infraestrutura de IA já está barata o bastante para lançar uma empresa sem uma Série A. Um venture de studio lança 6-9 meses à frente de um time autônomo com financiamento comparável, e resolver o encanamento da empresa uma vez direciona cerca de US$ 300K-500K de capital efetivo por venture para produto e tração em vez de overhead.",
+            "Seja honesto sobre o limite. IA barata não é um moat por si só, porque ela baixa a barreira para os concorrentes ao mesmo tempo. A vantagem é rodar a estrutura provada de studio com agentes de IA dentro desde o dia um, num mercado onde ninguém mais faz isso. Essa combinação é exatamente o que os builders do benchmark nunca tiveram à disposição."
+          ],
+          "id": "ai-native-edge"
+        },
+        {
+          "heading": "Como a Avante roda o playbook",
+          "level": 2,
+          "paragraphs": [
+            "A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina, e o benchmark é a razão de o modelo encaixar aqui, não uma esperança de que talvez encaixe. A estrutura é provada lá fora. O mercado está aberto em casa. A curva de custo finalmente deixa a construção começar enxuta.",
+            "Na prática, isso significa que a Avante lança 3-4 ventures por ano através de um sistema de seis estágios. Research, Partner, Build, Traction, Revenue, Compound. Ela aporta US$ 500K-1.5M por venture ao longo do pré-seed e mantém economia de co-founder, com operating partners engajados até o primeiro marco de receita. O padrão recorrente é o flywheel copilot, dado, capital. Construir um copilot de IA para gerar dado proprietário e usar esse dado para levantar e aplicar capital. Você pode ver [como o studio opera](/principles).",
+            "O portfólio atual segue esse padrão. Nexa Tech em ativos judiciais, WIR em precificação de seguros e BR Auction Intel em leilões de imóveis. O benchmark diz que o modelo de studio produz IPOs e unicórnios ao longo de vinte e cinco anos de construção paciente. A brecha diz que o Brasil ainda não tem nada disso, AI-native. A Avante constrói a partir dessa lacuna, não em direção a ela."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Se você está avaliando o caminho de studio, julgue pelo mecanismo, não pelo IRR de manchete. Operadores dentro desde a primeira semana e encanamento resolvido uma vez são as partes que sobrevivem ao escrutínio independente."
+          },
+          "id": "how-avante"
+        }
+      ]
+    },
+    "es": {
+      "title": "Benchmark de Venture Studio: El Historial de EE. UU. y la Brecha de Brasil",
+      "description": "Un benchmark de los studios que crearon el modelo en EE. UU. y Europa, lo que retorna, y por qué Brasil es el carril abierto para uno AI-native.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Aquí está el benchmark de venture studio en una línea. El modelo construye empresas internamente, entrega al fundador un equipo y el primer capital el día uno y se queda con economía de co-founder a cambio. Esa estructura tiene un historial de veinticinco años en EE. UU. y Europa, y casi nada de eso está en Brasil todavía. Idealab empezó en 1996. Los studios que vinieron después produjeron IPOs, unicornios y, según la cifra más citada del sector, una tasa interna de retorno cerca de 50% contra alrededor de 19% del venture capital tradicional.",
+            "Este texto es ese benchmark leído builder por builder, con los números que se sostienen y los que no. Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina, así que leemos este historial como prueba y como brecha al mismo tiempo. El modelo funciona. Nadie lo corre AI-native en Brasil. Esa brecha es la tesis entera.",
+            "Un venture studio, también llamado startup studio o constructor de empresas, concibe empresas internamente y arma los equipos, en lugar de invertir en fundadores que llegan con los suyos. Esa sola decisión de diseño es lo que el resto de este benchmark mide. Puede leer la versión más larga de [por qué la estructura calza en Brasil](/why-avante)."
+          ]
+        },
+        {
+          "heading": "Un modelo probado por veinticinco años de builders",
+          "level": 2,
+          "paragraphs": [
+            "El venture studio no es un invento de la década de 2020, y eso es lo primero que dice el historial. Los builders de referencia se fundaron entre 1996 y 2015. Es una estructura probada, con salidas públicas adjuntas, no un experimento corriendo sobre un deck.",
+            "Lo que los une es simple. Cada uno creó empresas internamente, con operadores adentro desde la primera semana, en lugar de firmar cheques en las startups de otros y rezar. Los historiales son específicos y, en la mayoría de los casos, verificables de forma independiente."
+          ],
+          "bullets": [
+            "Idealab. Fundada en 1996 por Bill Gross. Más de 150 empresas creadas y 45 o más IPOs y adquisiciones, según [Caltech](https://board.caltech.edu/board-members/mr-william-t-gross-bs-81) y la propia firma.",
+            "Rocket Internet. Fundada en 2007 en Berlín. Más de 100 empresas construidas, con Zalando, HelloFresh y Delivery Hero llegando a los mercados públicos.",
+            "eFounders, hoy Hexa. Fundada en 2011 en París. Cerca de 50 empresas y alrededor de US$ 5 mil millones en valor acumulado creado, según [Hexa](https://www.hexa.com/).",
+            "Human Ventures. Fundada en 2014 en Nueva York. 60 o más empresas y tres unicornios, según [Fortune](https://fortune.com/2024/04/15/human-ventures-approaches-50-million-raised-second-fund/).",
+            "Pioneer Square Labs. Fundada en 2015 en Seattle. Más de 35 empresas generadas, incluidas Boundless y Recurrent, según [Ascend VC](https://www.ascend.vc/blog/tag/Pioneer+Square+Labs).",
+            "Atomic. Fundada en 2012. Construyó Hims and Hers, hoy listada en la NYSE bajo HIMS."
+          ],
+          "id": "the-proven-model"
+        },
+        {
+          "heading": "¿Qué retorno genera de verdad el modelo de venture studio?",
+          "level": 2,
+          "paragraphs": [
+            "La cifra más citada dice que el modelo de studio retorna mucho más que el venture tradicional. Según la Global Startup Studio Network, las startups creadas por studios muestran una tasa interna de retorno promedio cerca de 50% contra alrededor de 19% de las startups fuera de studio. Avante lo cita como studio IRR de ~50% versus ~19% para VC tradicional, cerca de 2.5x, y siempre como el benchmark de GSSN, nunca como el retorno realizado de una sola firma.",
+            "Ahora la salvedad que vuelve el número usable en vez de vergonzoso. Esos datos de GSSN son autorreportados y vienen de un único white paper de 2020 a 2022. El mayor estudio independiente del modelo, el [Big Venture Studio Research](https://inniches.com/big-venture-studio-research) publicado en diciembre de 2024, no reproduce esa magnitud. Lea el IRR absoluto como direccional, no como promesa, y nunca como garantía del resultado de un studio en particular.",
+            "Lo que sobrevive al escrutinio es la escala y el mecanismo. Enhance Ventures contó más de 560 studios operando en el mundo, así que el modelo se volvió una categoría propia. Un studio supera por razones estructurales que se pueden nombrar. Plomería resuelta una vez. Operadores en el modelo de unit economics en las primeras semanas. Un sistema repetible que compone entre empresas. Discuta el múltiplo exacto si quiere. La dirección se mantiene. Esa es la lectura honesta del benchmark de studio, que vale mucho más como mecanismo de trabajo que como un solo porcentaje de titular."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Studio IRR de ~50% versus ~19% para VC tradicional, cerca de 2.5x el IRR en horizontes de tiempo realistas.",
+            "attribution": "Global Startup Studio Network (GSSN)"
+          },
+          "id": "what-it-returns"
+        },
+        {
+          "heading": "¿Hay venture studios en Brasil todavía?",
+          "level": 2,
+          "paragraphs": [
+            "Aquí está la parte del benchmark que más debería interesar a un fundador brasileño. Nada de él es brasileño. El modelo que produjo Zalando y Hims se construyó en Berlín, París, Nueva York y Seattle, y la categoría apenas llegó a Brasil.",
+            "Los nombres que más se llaman studios brasileños no son studios. [Domo Invest](https://domo.vc/), para usar el ejemplo más citado, es un fondo de venture capital tradicional, no un constructor de empresas. No existe un venture studio AI-native de referencia en Brasil todavía. El carril está abierto, y está abierto por una razón estructural, no por falta de talento."
+          ],
+          "bullets": [
+            "La superficie es grande. Los servicios representan cerca del 70% del PIB brasileño, según el IBGE, con baja penetración de software.",
+            "Los compradores son negocios poco digitalizados que los operadores de dominio entienden y que los VCs generalistas por lo general no.",
+            "La competencia por un studio AI-native y local es cercana a cero."
+          ],
+          "id": "brazil-white-space"
+        },
+        {
+          "heading": "La ventaja AI-native que los benchmarks nunca tuvieron",
+          "level": 2,
+          "paragraphs": [
+            "Todo studio del benchmark comparte una limitación silenciosa. Todos se diseñaron antes de que la IA pudiera construir. Idealab en 1996, Rocket en 2007, incluso Pioneer Square en 2015, todos asumen un equipo de ingeniería grande y una Serie A para llegar a escala, porque en su época era la única forma de hacerlo.",
+            "Esa premisa hoy está equivocada, y la curva de costo es la razón. La infraestructura de IA ya está barata como para lanzar una empresa sin una Serie A. Un venture de studio lanza 6-9 meses antes que un equipo autónomo con financiamiento comparable, y resolver la plomería de la empresa una vez dirige cerca de US$ 300K-500K de capital efectivo por venture a producto y tracción en lugar de overhead.",
+            "Sea honesto sobre el límite. La IA barata no es un moat por sí sola, porque baja la barrera para los competidores al mismo tiempo. La ventaja es correr la estructura probada de studio con agentes de IA adentro desde el día uno, en un mercado donde nadie más lo hace. Esa combinación es justo lo que los builders del benchmark nunca tuvieron a su alcance."
+          ],
+          "id": "ai-native-edge"
+        },
+        {
+          "heading": "Cómo Avante corre el playbook",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina, y el benchmark es la razón de que el modelo calce aquí, no una esperanza de que quizás calce. La estructura está probada afuera. El mercado está abierto en casa. La curva de costo por fin deja que la construcción empiece austera.",
+            "En la práctica, eso significa que Avante lanza 3-4 ventures por año a través de un sistema de seis etapas. Research, Partner, Build, Traction, Revenue, Compound. Aporta US$ 500K-1.5M por venture a lo largo del pre-seed y conserva economía de co-founder, con operating partners comprometidos hasta el primer hito de ingresos. El patrón recurrente es el flywheel copilot, dato, capital. Construir un copilot de IA para generar dato propietario y usar ese dato para levantar y desplegar capital. Puede ver [cómo opera el studio](/principles).",
+            "El portafolio actual sigue ese patrón. Nexa Tech en activos judiciales, WIR en precificación de seguros y BR Auction Intel en subastas de inmuebles. El benchmark dice que el modelo de studio produce IPOs y unicornios a lo largo de veinticinco años de construcción paciente. La brecha dice que Brasil aún no tiene nada de eso, AI-native. Avante construye desde esa brecha, no hacia ella."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Si está evaluando el camino de studio, júzguelo por el mecanismo, no por el IRR de titular. Operadores adentro desde la primera semana y plomería resuelta una vez son las partes que sobreviven al escrutinio independiente."
+          },
           "id": "how-avante"
         }
       ]

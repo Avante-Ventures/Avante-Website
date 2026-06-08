@@ -63,6 +63,11 @@ export default function ArticlePage() {
   //     (where applicable) sameAs-linked to Wikipedia / official sites.
   //   - `BreadcrumbList` enables the Home › Library › Article trail
   //     to appear in Google search snippets.
+  // Per-article social/OG image when provided, else the global brand card.
+  const ogImageUrl = article.ogImage
+    ? `https://avanteventures.com${article.ogImage}`
+    : 'https://avanteventures.com/og-image.png'
+
   const combinedJsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -72,7 +77,7 @@ export default function ArticlePage() {
         headline: content.title,
         description: content.description,
         url: articleUrl,
-        image: 'https://avanteventures.com/og-image.png',
+        image: ogImageUrl,
         inLanguage,
         datePublished: article.datePublished,
         dateModified: article.datePublished,
@@ -145,6 +150,7 @@ export default function ArticlePage() {
         title={content.title}
         description={content.description}
         pathname={`/library/${article.slug}`}
+        image={ogImageUrl}
         jsonLd={combinedJsonLd}
         noindex={!article.isPublished}
       />
