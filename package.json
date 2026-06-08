@@ -6,7 +6,7 @@
   "packageManager": "pnpm@11.0.4",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/prerender.mjs",
+    "build": "vite build && node scripts/prerender.mjs && (node scripts/indexnow.mjs || true)",
     "build:vite-only": "vite build",
     "prerender": "node scripts/prerender.mjs",
     "preview": "vite preview",
