@@ -208,7 +208,7 @@ const translations = {
     // Why Avante Page
     'whyavante.backhome': 'Voltar ao Início',
     'whyavante.hero.badge': 'Dados & Fatos',
-    'whyavante.hero.title': 'Venture Studios Retornam 50% ao Ano. VCs Tradicionais Retornam 15%.',
+    'whyavante.hero.title': 'Venture Studios Retornam ~50% ao Ano. VCs Tradicionais Retornam ~19%.',
     'whyavante.hero.subtitle': 'Co-construímos empresas do zero e investimos antes do consenso. Sem esperar por tração. Sem seguir multidões. Dados da GSSN provam: venture building + primeiros tickets superam todas as classes de ativos.',
     
     // Stats
@@ -233,7 +233,7 @@ const translations = {
     'whyavante.comparison.title': 'Venture Studio vs Capital Tradicional',
     'whyavante.comparison.description': 'Enquanto VCs escrevem cheques e esperam, venture studios co-constroem do zero com execução hands-on. A diferença é estrutural—e os retornos refletem isso.',
     'whyavante.returns.title': 'Os Dados: Venture Studios Superam',
-    'whyavante.returns.description': 'Venture studios lideram todas as classes de ativos com 50% de retornos anualizados—o dobro de aceleradoras e 3x de VCs tradicionais. Isso não é sorte. É um modelo operacional superior.',
+    'whyavante.returns.description': 'Venture studios lideram todas as classes de ativos com ~50% de retornos anualizados, o dobro de aceleradoras e cerca de 2.5x de VCs tradicionais. Isso não é sorte. É um modelo operacional superior.',
     'whyavante.returns.source': 'Fonte: GSSN Global Venture Studio Report 2023',
     
     // The Avante Dual Model
@@ -507,7 +507,7 @@ const translations = {
     // Why Avante Page
     'whyavante.backhome': 'Back to Home',
     'whyavante.hero.badge': 'Data & Facts',
-    'whyavante.hero.title': 'Venture Studios Return 50% Annually. Traditional VCs Return 15%.',
+    'whyavante.hero.title': 'Venture Studios Return ~50% Annually. Traditional VCs Return ~19%.',
     'whyavante.hero.subtitle': 'We co-build companies from scratch and invest pre-consensus. No waiting for traction. No following crowds. Data from GSSN proves: venture building + first tickets outperform every asset class.',
     
     // Stats
@@ -532,7 +532,7 @@ const translations = {
     'whyavante.comparison.title': 'Venture Studio vs Traditional Capital',
     'whyavante.comparison.description': 'While VCs write checks and wait, venture studios co-build from scratch with hands-on execution. The difference is structural—and the returns reflect it.',
     'whyavante.returns.title': 'The Data: Venture Studios Outperform',
-    'whyavante.returns.description': 'Venture studios lead all asset classes with 50% annualized returns—double that of accelerators and 3x traditional VC. This isn\'t luck. It\'s a superior operating model.',
+    'whyavante.returns.description': 'Venture studios lead all asset classes with ~50% annualized returns, double that of accelerators and roughly 2.5x traditional VC. This isn\'t luck. It\'s a superior operating model.',
     'whyavante.returns.source': 'Source: GSSN Global Venture Studio Report 2023',
     
     // The Avante Dual Model
@@ -811,7 +811,7 @@ const translations = {
     // Why Avante Page
     'whyavante.backhome': 'Volver al Inicio',
     'whyavante.hero.badge': 'Datos & Hechos',
-    'whyavante.hero.title': 'Los Venture Studios Retornan 50% Anual. Los VCs Tradicionales 15%.',
+    'whyavante.hero.title': 'Los Venture Studios Retornan ~50% Anual. Los VCs Tradicionales ~19%.',
     'whyavante.hero.subtitle': 'Co-construimos empresas desde cero e invertimos pre-consenso. Sin esperar tracción. Sin seguir multitudes. Datos de GSSN lo prueban: venture building + first tickets superan a toda otra clase de activo.',
 
     // Stats
@@ -836,7 +836,7 @@ const translations = {
     'whyavante.comparison.title': 'Venture Studio vs Capital Tradicional',
     'whyavante.comparison.description': 'Mientras los VCs firman cheques y esperan, los venture studios co-construyen desde cero con ejecución hands-on. La diferencia es estructural—y los retornos lo reflejan.',
     'whyavante.returns.title': 'Los Datos: Venture Studios Superan',
-    'whyavante.returns.description': 'Los venture studios lideran todas las clases de activos con 50% de retornos anualizados—el doble de los aceleradores y 3x el VC tradicional. Esto no es suerte. Es un modelo operativo superior.',
+    'whyavante.returns.description': 'Los venture studios lideran todas las clases de activos con ~50% de retornos anualizados, el doble de los aceleradores y cerca de 2.5x el VC tradicional. Esto no es suerte. Es un modelo operativo superior.',
     'whyavante.returns.source': 'Fuente: GSSN Global Venture Studio Report 2023',
 
     // The Avante Dual Model
