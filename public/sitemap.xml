@@ -412,7 +412,7 @@
   <!-- 9. Global Venture Studio Data (DRAFT) -->
 
   <!-- CONTENT-ENGINE:START (managed by content-engine/merge.py - do not edit by hand) -->
-  <!-- 12 engine article(s) x 3 locales. Generated from content-engine/outputs. Edit the engine, not this block. -->
+  <!-- 13 engine article(s) x 3 locales. Generated from content-engine/outputs. Edit the engine, not this block. -->
   <url>
     <loc>https://avanteventures.com/en/library/ai-infrastructure-cost-curve-latam</loc>
     <lastmod>2026-06-02</lastmod>
@@ -592,6 +592,36 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/data-network-effects-vertical-ai"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/data-network-effects-vertical-ai"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/data-network-effects-vertical-ai"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/en/library/infinity-constellation-ai-studio-thesis</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/infinity-constellation-ai-studio-thesis"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/infinity-constellation-ai-studio-thesis"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/infinity-constellation-ai-studio-thesis"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/infinity-constellation-ai-studio-thesis"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/infinity-constellation-ai-studio-thesis</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/infinity-constellation-ai-studio-thesis"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/infinity-constellation-ai-studio-thesis"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/infinity-constellation-ai-studio-thesis"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/infinity-constellation-ai-studio-thesis"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/infinity-constellation-ai-studio-thesis</loc>
+    <lastmod>2026-06-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/infinity-constellation-ai-studio-thesis"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/infinity-constellation-ai-studio-thesis"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/infinity-constellation-ai-studio-thesis"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/infinity-constellation-ai-studio-thesis"/>
   </url>
   <url>
     <loc>https://avanteventures.com/en/library/measuring-studio-performance</loc>

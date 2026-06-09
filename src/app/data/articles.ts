@@ -1758,7 +1758,7 @@ const articleSiggaCaseStudy: Article = {
 // ─────────────────────────────────────────────────────────────────────
 
 // === CONTENT-ENGINE:START (managed by content-engine/merge.py — do not edit by hand) ===
-// 12 article(s) generated from content-engine/outputs. Edit the engine, not this block.
+// 13 article(s) generated from content-engine/outputs. Edit the engine, not this block.
 const engineArticles: Article[] = [
   {
     "slug": "ai-infrastructure-cost-curve-latam",
@@ -3466,6 +3466,244 @@ const engineArticles: Article[] = [
             "Avante Ventures es un venture studio que construye empresas AI-native en Brasil y America Latina. El metodo es un flywheel copilot, dato, capital. Construir un copilot de IA para hacer trabajo real dentro de una vertical, capturar el dato propietario que el trabajo genera, y usar ese activo de dato para captar y desplegar capital. El copilot es la cuna. El efecto de red de datos es el moat. El capital es la composicion.",
             "El studio lanza 3-4 ventures por ano a traves de un sistema de seis etapas. Research, Partner, Build, Traction, Revenue, Compound. El capital por venture es de US$ 500K-1.5M en pre-seed, con economia de co-founder retenida. El modelo esta referenciado en datos de GSSN que muestran un IRR de studio de ~50% frente a ~19% del VC tradicional, cerca de 2.5x, un benchmark del modelo de studio y no una afirmacion sobre el retorno propio de Avante.",
             "La razon de que esto funcione en LATAM es estructural. Los servicios representan cerca de 70% del PIB brasileno con baja penetracion de software, exactamente la superficie donde un producto vertical puede volverse el sistema de registro. Sume operadores de dominio que cargan mas de 10 anos de cicatriz de mercado brasileno, y el dato compone en lugares que los competidores no alcanzan. Los workflows de activos judiciales y el scoring de riesgo en seguros son flujos, no stocks. El modelo va a seguir abaratandose. El moat es todo lo que usted construye para que eso deje de importar. Vea como operamos en [/principles](/principles)."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "infinity-constellation-ai-studio-thesis",
+    "category": "insights",
+    "type": "Market Note",
+    "readTime": "9 min",
+    "featured": true,
+    "date": "Jun 2026",
+    "datePublished": "2026-06-09",
+    "isPublished": true,
+    "en": {
+      "title": "Infinity Constellation Raised $24M to Mass-Produce AI Companies. That Is the Studio Thesis.",
+      "description": "A US studio just raised $24M to build up to eight AI companies a year in professional services. Read against the venture studio model Avante runs in LATAM, the signal is clear. The studio is becoming an asset class.",
+      "sections": [
+        {
+          "paragraphs": [
+            "On June 8 2026, Infinity Constellation told Axios it had raised a $24M Series A to build up to eight AI companies a year inside the professional services market. The round was led by Freestyle, with Backed VC, Rafferty, Oxford Funds, BY Ventures and others, as reported in the [Axios exclusive](https://www.axios.com/pro/all-deals/2026/06/08/infinity-constellation-24-million-multiple-ai-companies) and the company [press release](https://www.prnewswire.com/news-releases/infinity-constellation-raises-24m-series-a-to-take-on-professional-services-302794633.html). This is not a bet on one product. It is a bet on a factory.",
+            "Read it next to the model [Avante Ventures](/why-avante) runs in Brazil and Latin America and the signal is hard to miss. The venture studio, once a niche structure argued about by a handful of believers, is now being capitalized like an asset class. The interesting question is no longer whether the studio model works. It is who runs it, and where."
+          ]
+        },
+        {
+          "id": "what-infinity-raised-to-do",
+          "heading": "What Infinity actually raised money to do",
+          "level": 2,
+          "paragraphs": [
+            "Infinity Constellation, led by CEO Brennan Pothetes and chaired by Francis Pedraza, the founder of [Invisible Technologies](https://www.invisible.co), is going after the $6 trillion global professional services market. Pothetes framed it plainly. Professional services is a $6T industry still built around people billing hours, and that era is ending. The thesis on the [company site](https://www.infinityconstellation.com) is sharper still. The future of the firm is built, not bought.",
+            "The structure is the story. Infinity does not buy legacy firms and bolt AI onto them. It builds new AI-native companies from a central platform, then lets data, pricing, and expertise flow between them. Per Axios, it prefers repeat founders, who take 25% of the newco plus a stake in the holding company itself, so every operator is incentivized to make the next company better. It already runs several live units across executive assistance, compliance, design, hiring, finance, and data."
+          ]
+        },
+        {
+          "id": "this-is-a-studio-story",
+          "heading": "This is a studio story, and the numbers explain why",
+          "level": 2,
+          "paragraphs": [
+            "Strip the branding and Infinity is a venture studio. A central team builds companies on repeat instead of writing checks into other people's companies and hoping. That distinction is not cosmetic. It changes the returns. Per the Global Startup Studio Network, studio ventures average roughly 50% IRR against roughly 19% for traditional venture-backed startups, about 2.5x over realistic time horizons. The same dataset shows studio ventures reaching Series A in about 25 months against 56 for traditional startups, and graduating at 72% versus 42%. A model that halves the time to a priced round and nearly doubles the survival rate is not getting lucky on deal selection. The full case is in our breakdown of [why venture studios win in LATAM](/library/why-venture-studios-win-latam).",
+            "Infinity says the quiet part in product language. One shared brain. Compounding by design. Each company makes the next one faster and smarter. That is the studio flywheel, and it is the exact reason a studio outperforms a fund that gives advice across a dozen boards. For the side-by-side on structure, see [studio versus accelerator versus VC](/library/studio-vs-accelerator-vs-vc)."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Studio IRR near 50% versus an industry-standard ~19% IRR for traditional VC, roughly 2.5x over realistic time horizons.",
+            "attribution": "Global Startup Studio Network (GSSN)"
+          }
+        },
+        {
+          "id": "ai-makes-a-company-a-year-believable",
+          "heading": "AI is what makes a company-a-year believable",
+          "level": 2,
+          "paragraphs": [
+            "A studio launching eight companies a year would have sounded reckless in 2019. Axios put the reason it no longer does in one line. It illustrates how rapidly companies can be spun up in the age of AI. The cost of standing up the first working version of a company has collapsed, because [LLM inference prices have fallen by orders of magnitude](https://a16z.com/llmflation-llm-inference-cost/) and the tooling now does work that used to need a team.",
+            "That is why a serious studio can launch AI-native and reach revenue before it would have historically reached a priced round. Infinity claims one month to first revenue across its units. The same dynamic is what lets a disciplined builder ship without burning a Series A first, which we cover in [how to build AI-native without a Series A](/library/ai-native-without-series-a) and the [AI infrastructure cost curve in LATAM](/library/ai-infrastructure-cost-curve-latam)."
+          ]
+        },
+        {
+          "id": "where-avante-and-infinity-part-ways",
+          "heading": "Where Avante and Infinity part ways: the map",
+          "level": 2,
+          "paragraphs": [
+            "Infinity is attacking the global professional services market from the United States. Avante runs the same playbook where the gap between the size of the opportunity and the level of software is widest. Services account for roughly 70% of Brazilian GDP, and most of that economy is barely digitized. A studio that supplies operating depth on day one compounds hardest exactly there, where that depth is scarce and a generalist fund cannot manufacture it.",
+            "This is the structural edge behind [why Avante builds where it builds](/why-avante). Domain operators with ten or more years of Brazilian-market scar tissue, paired with a Silicon Valley playbook and first-ticket capital, assembled before the company exists. Infinity validates the model. Geography is where the next decade of studio returns gets decided, and the deeper read on that is in [the Brazilian services economy opportunity](/library/brazil-services-economy-opportunity)."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Services account for roughly 70% of Brazilian GDP, with low software penetration. That is the gap a studio is built to close.",
+            "attribution": "Avante Ventures thesis, services share per IBGE"
+          }
+        },
+        {
+          "id": "the-line-the-headline-buries",
+          "heading": "The line the headline buries: data",
+          "level": 2,
+          "paragraphs": [
+            "The funding number gets the headline. The durable advantage is quieter. When repeat founders build inside one shared brain, the data each company generates flows into the next one. That is a moat that a single startup, however well funded, cannot assemble alone. It is also the part most reporting on studios skips.",
+            "Avante names the loop directly. Copilot to data to fund. Build an AI copilot to generate proprietary data, then use that data to raise and deploy capital. A holding company that shares a brain across ventures turns that loop into a portfolio asset rather than a single-company trick. The mechanics are in [the copilot to data to fund flywheel](/library/copilot-to-data-to-fund-flywheel), and why the data compounds into defensibility is in [data network effects in vertical AI](/library/data-network-effects-vertical-ai)."
+          ]
+        },
+        {
+          "id": "what-an-lp-should-take-from-this",
+          "heading": "What an LP should take from a $24M round",
+          "level": 2,
+          "paragraphs": [
+            "Read the Infinity raise as a market signal, not a competitor scare. Serious investors are now funding the studio model at scale, in public, with a number attached. The debate about whether building companies on repeat beats betting on them one at a time is closing. What remains open is execution and geography.",
+            "Avante is the answer for Latin America. A venture studio building AI-native companies in Brazil and Latin America, launching 3-4 ventures per year, deploying $500K-1.5M per venture, and running every one through a six-stage system from Research to Partner to Build to Traction to Revenue to Compound. The same model the market just priced at $24M, pointed at the economy where it should compound hardest. For an LP, the takeaway is not to chase Infinity. It is to ask which studio is positioned where the model has the most room left to compound. Read [how Avante operates](/principles), or [start a conversation](/contact)."
+          ]
+        }
+      ]
+    },
+    "pt": {
+      "title": "A Infinity Constellation levantou US$ 24M para produzir empresas de IA em escala. Essa e a tese do studio.",
+      "description": "Um studio dos EUA acabou de levantar US$ 24M para construir ate oito empresas de IA por ano em servicos profissionais. Lido ao lado do modelo que a Avante opera na America Latina, o sinal e claro. O studio esta virando uma classe de ativos.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Em 8 de junho de 2026, a Infinity Constellation revelou ao Axios que havia levantado uma Serie A de US$ 24M para construir ate oito empresas de IA por ano dentro do mercado de servicos profissionais. A rodada foi liderada pela Freestyle, com Backed VC, Rafferty, Oxford Funds, BY Ventures e outros, segundo a [exclusiva do Axios](https://www.axios.com/pro/all-deals/2026/06/08/infinity-constellation-24-million-multiple-ai-companies) e o [comunicado da empresa](https://www.prnewswire.com/news-releases/infinity-constellation-raises-24m-series-a-to-take-on-professional-services-302794633.html). Isso nao e uma aposta em um produto. E uma aposta em uma fabrica.",
+            "Leia isso ao lado do modelo que a [Avante Ventures](/why-avante) opera no Brasil e na America Latina e o sinal fica dificil de ignorar. O venture studio, antes uma estrutura de nicho discutida por um punhado de convictos, agora esta sendo capitalizado como uma classe de ativos. A pergunta interessante nao e mais se o modelo de studio funciona. E quem o opera, e onde."
+          ]
+        },
+        {
+          "id": "what-infinity-raised-to-do",
+          "heading": "Para o que a Infinity de fato levantou capital",
+          "level": 2,
+          "paragraphs": [
+            "A Infinity Constellation, liderada pelo CEO Brennan Pothetes e presidida por Francis Pedraza, fundador da [Invisible Technologies](https://www.invisible.co), mira o mercado global de servicos profissionais de US$ 6 trilhoes. Pothetes foi direto. Servicos profissionais e uma industria de US$ 6 trilhoes ainda construida em torno de pessoas cobrando por hora, e essa era esta acabando. A tese no [site da empresa](https://www.infinityconstellation.com) e ainda mais afiada. O futuro da firma e construido, nao comprado.",
+            "A estrutura e a historia. A Infinity nao compra firmas tradicionais para parafusar IA nelas. Ela constroi empresas AI-native novas a partir de uma plataforma central, e deixa dados, precificacao e expertise fluirem entre elas. Segundo o Axios, prefere fundadores recorrentes, que ficam com 25% da nova empresa mais participacao na propria holding, para que cada operador tenha incentivo de tornar a proxima empresa melhor. Ja opera varias unidades vivas em assistencia executiva, compliance, design, recrutamento, financas e dados."
+          ]
+        },
+        {
+          "id": "this-is-a-studio-story",
+          "heading": "Isso e uma historia de studio, e os numeros explicam por que",
+          "level": 2,
+          "paragraphs": [
+            "Tire a marca e a Infinity e um venture studio. Um time central constroi empresas em serie em vez de assinar cheques nas empresas dos outros e torcer. Essa distincao nao e cosmetica. Ela muda o retorno. Segundo a Global Startup Studio Network, ventures de studio entregam em media cerca de 50% de IRR contra cerca de 19% das startups tradicionais financiadas por venture capital, cerca de 2,5x ao longo de horizontes realistas. O argumento completo esta na nossa analise de [por que os venture studios vencem na America Latina](/library/why-venture-studios-win-latam).",
+            "A Infinity diz a parte silenciosa em linguagem de produto. Um cerebro compartilhado. Composicao por design. Cada empresa torna a proxima mais rapida e mais inteligente. Esse e o flywheel do studio, e e exatamente por que um studio supera um fundo que da conselhos espalhado por uma duzia de conselhos. Para o comparativo de estrutura, veja [studio versus aceleradora versus VC](/library/studio-vs-accelerator-vs-vc)."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "IRR de studio perto de 50% contra um padrao de mercado de ~19% para o VC tradicional, cerca de 2,5x ao longo de horizontes realistas.",
+            "attribution": "Global Startup Studio Network (GSSN)"
+          }
+        },
+        {
+          "id": "ai-makes-a-company-a-year-believable",
+          "heading": "A IA e o que torna uma empresa por ano algo crivel",
+          "level": 2,
+          "paragraphs": [
+            "Um studio lancando oito empresas por ano teria soado imprudente em 2019. O Axios resumiu o motivo de isso nao soar mais assim em uma linha. Mostra a rapidez com que empresas podem ser criadas na era da IA. O custo de levantar a primeira versao funcional de uma empresa despencou, porque [os precos de inferencia de LLM cairam ordens de magnitude](https://a16z.com/llmflation-llm-inference-cost/) e o ferramental agora faz o trabalho que antes exigia um time.",
+            "Por isso um studio serio consegue nascer AI-native e chegar a receita antes do ponto em que historicamente chegaria a uma rodada precificada. A Infinity afirma um mes ate a primeira receita em suas unidades. A mesma dinamica e o que permite a um construtor disciplinado entregar sem queimar uma Serie A antes, tema que cobrimos em [como construir AI-native sem Serie A](/library/ai-native-without-series-a) e na [curva de custo de infraestrutura de IA na America Latina](/library/ai-infrastructure-cost-curve-latam)."
+          ]
+        },
+        {
+          "id": "where-avante-and-infinity-part-ways",
+          "heading": "Onde Avante e Infinity se separam: o mapa",
+          "level": 2,
+          "paragraphs": [
+            "A Infinity ataca o mercado global de servicos profissionais a partir dos Estados Unidos. A Avante opera o mesmo playbook onde a distancia entre o tamanho da oportunidade e o nivel de software e maior. Servicos representam cerca de 70% do PIB brasileiro, e a maior parte dessa economia mal foi digitalizada. Um studio que entrega profundidade operacional no dia um se compoe mais forte exatamente ali, onde essa profundidade e escassa e um fundo generalista nao consegue fabricar.",
+            "Essa e a vantagem estrutural por tras de [por que a Avante constroi onde constroi](/why-avante). Operadores de dominio com dez anos ou mais de cicatrizes do mercado brasileiro, somados a um playbook do Vale do Silicio e capital de primeiro cheque, montados antes de a empresa existir. A Infinity valida o modelo. Geografia e onde a proxima decada de retorno de studio sera decidida, e a leitura mais profunda disso esta em [a oportunidade da economia de servicos brasileira](/library/brazil-services-economy-opportunity)."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Servicos respondem por cerca de 70% do PIB brasileiro, com baixa penetracao de software. Essa e a lacuna que um studio foi feito para fechar.",
+            "attribution": "Tese da Avante Ventures, participacao de servicos via IBGE"
+          }
+        },
+        {
+          "id": "the-line-the-headline-buries",
+          "heading": "A linha que a manchete esconde: dados",
+          "level": 2,
+          "paragraphs": [
+            "O numero da rodada leva a manchete. A vantagem duravel e mais silenciosa. Quando fundadores recorrentes constroem dentro de um cerebro compartilhado, o dado que cada empresa gera flui para a proxima. Esse e um fosso que uma unica startup, por mais bem financiada que seja, nao consegue montar sozinha. E tambem a parte que a maior parte da cobertura sobre studios pula.",
+            "A Avante nomeia o ciclo diretamente. Copilot, dado, capital. Construir um copilot de IA para gerar dado proprietario, depois usar esse dado para levantar e alocar capital. A mecanica esta em [o flywheel copilot, dado, capital](/library/copilot-to-data-to-fund-flywheel), e por que o dado se compoe em defensabilidade esta em [efeitos de rede de dados em IA vertical](/library/data-network-effects-vertical-ai)."
+          ]
+        },
+        {
+          "id": "what-an-lp-should-take-from-this",
+          "heading": "O que um LP deveria tirar de uma rodada de US$ 24M",
+          "level": 2,
+          "paragraphs": [
+            "Leia a rodada da Infinity como sinal de mercado, nao como susto competitivo. Investidores serios agora financiam o modelo de studio em escala, em publico, com um numero anexado. O debate sobre se construir empresas em serie supera apostar nelas uma a uma esta se fechando. O que continua aberto e execucao e geografia.",
+            "A Avante e a resposta para a America Latina. Um venture studio que constroi empresas AI-native no Brasil e na America Latina, lancando 3-4 ventures por ano, alocando US$ 500K-1,5M por venture, e levando cada uma por um sistema de seis estagios de Research a Partner a Build a Traction a Revenue a Compound. O mesmo modelo que o mercado acabou de precificar em US$ 24M, apontado para a economia onde ele deveria se compor mais forte. Veja [como a Avante opera](/principles), ou [comece uma conversa](/contact)."
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Infinity Constellation levanto US$ 24M para producir empresas de IA en serie. Esa es la tesis del studio.",
+      "description": "Un studio de EE. UU. acaba de levantar US$ 24M para construir hasta ocho empresas de IA al ano en servicios profesionales. Leido junto al modelo que opera Avante en America Latina, la senal es clara. El studio se esta volviendo una clase de activo.",
+      "sections": [
+        {
+          "paragraphs": [
+            "El 8 de junio de 2026, Infinity Constellation revelo a Axios que habia levantado una Serie A de US$ 24M para construir hasta ocho empresas de IA al ano dentro del mercado de servicios profesionales. La ronda fue liderada por Freestyle, con Backed VC, Rafferty, Oxford Funds, BY Ventures y otros, segun la [exclusiva de Axios](https://www.axios.com/pro/all-deals/2026/06/08/infinity-constellation-24-million-multiple-ai-companies) y el [comunicado de la empresa](https://www.prnewswire.com/news-releases/infinity-constellation-raises-24m-series-a-to-take-on-professional-services-302794633.html). Esto no es una apuesta a un producto. Es una apuesta a una fabrica.",
+            "Leelo junto al modelo que opera [Avante Ventures](/why-avante) en Brasil y America Latina y la senal cuesta ignorar. El venture studio, antes una estructura de nicho discutida por un punado de convencidos, hoy se capitaliza como una clase de activo. La pregunta interesante ya no es si el modelo de studio funciona. Es quien lo opera, y donde."
+          ]
+        },
+        {
+          "id": "what-infinity-raised-to-do",
+          "heading": "Para que levanto capital Infinity en realidad",
+          "level": 2,
+          "paragraphs": [
+            "Infinity Constellation, liderada por el CEO Brennan Pothetes y presidida por Francis Pedraza, fundador de [Invisible Technologies](https://www.invisible.co), va por el mercado global de servicios profesionales de US$ 6 billones. Pothetes lo dijo sin rodeos. Servicios profesionales es una industria de US$ 6 billones aun construida alrededor de personas cobrando por hora, y esa era se esta acabando. La tesis en el [sitio de la empresa](https://www.infinityconstellation.com) es aun mas filosa. El futuro de la firma se construye, no se compra.",
+            "La estructura es la historia. Infinity no compra firmas tradicionales para atornillarles IA. Construye empresas AI-native nuevas desde una plataforma central, y deja que datos, precios y expertise fluyan entre ellas. Segun Axios, prefiere fundadores recurrentes, que se quedan con 25% de la nueva empresa mas participacion en la propia holding, para que cada operador tenga incentivo de hacer mejor la siguiente empresa. Ya opera varias unidades vivas en asistencia ejecutiva, compliance, diseno, reclutamiento, finanzas y datos."
+          ]
+        },
+        {
+          "id": "this-is-a-studio-story",
+          "heading": "Esto es una historia de studio, y los numeros explican por que",
+          "level": 2,
+          "paragraphs": [
+            "Quitale la marca e Infinity es un venture studio. Un equipo central construye empresas en serie en vez de firmar cheques en las empresas de otros y esperar. Esa distincion no es cosmetica. Cambia el retorno. Segun la Global Startup Studio Network, las ventures de studio promedian cerca de 50% de IRR contra cerca de 19% de las startups tradicionales financiadas por venture capital, alrededor de 2,5x en horizontes realistas. El mismo conjunto de datos muestra a las ventures de studio llegando a Serie A en unos 25 meses contra 56 de las startups tradicionales, y graduando al 72% frente al 42%. El argumento completo esta en nuestro analisis de [por que los venture studios ganan en America Latina](/library/why-venture-studios-win-latam).",
+            "Infinity dice la parte silenciosa en lenguaje de producto. Un cerebro compartido. Composicion por diseno. Cada empresa hace a la siguiente mas rapida y mas inteligente. Ese es el flywheel del studio, y es justo por que un studio supera a un fondo que da consejos repartido en una docena de directorios. Para el comparativo de estructura, mira [studio versus aceleradora versus VC](/library/studio-vs-accelerator-vs-vc)."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "IRR de studio cercano a 50% contra un estandar de mercado de ~19% para el VC tradicional, alrededor de 2,5x en horizontes realistas.",
+            "attribution": "Global Startup Studio Network (GSSN)"
+          }
+        },
+        {
+          "id": "ai-makes-a-company-a-year-believable",
+          "heading": "La IA es lo que vuelve creible una empresa al ano",
+          "level": 2,
+          "paragraphs": [
+            "Un studio lanzando ocho empresas al ano habria sonado imprudente en 2019. Axios resumio en una linea por que ya no suena asi. Ilustra que tan rapido pueden crearse empresas en la era de la IA. El costo de levantar la primera version funcional de una empresa se desplomo, porque [los precios de inferencia de LLM cayeron ordenes de magnitud](https://a16z.com/llmflation-llm-inference-cost/) y el herramental hoy hace el trabajo que antes exigia un equipo.",
+            "Por eso un studio serio puede nacer AI-native y llegar a ingresos antes del punto en que historicamente habria llegado a una ronda con valoracion. Infinity afirma un mes hasta el primer ingreso en sus unidades. La misma dinamica es la que permite a un constructor disciplinado lanzar sin quemar una Serie A antes, algo que cubrimos en [como construir AI-native sin Serie A](/library/ai-native-without-series-a) y en [la curva de costo de infraestructura de IA en America Latina](/library/ai-infrastructure-cost-curve-latam)."
+          ]
+        },
+        {
+          "id": "where-avante-and-infinity-part-ways",
+          "heading": "Donde Avante e Infinity se separan: el mapa",
+          "level": 2,
+          "paragraphs": [
+            "Infinity ataca el mercado global de servicios profesionales desde Estados Unidos. Avante opera el mismo playbook donde la distancia entre el tamano de la oportunidad y el nivel de software es mayor. Los servicios representan cerca del 70% del PIB brasileno, y la mayor parte de esa economia apenas esta digitalizada. Un studio que aporta profundidad operativa el dia uno se compone mas fuerte justo ahi, donde esa profundidad es escasa y un fondo generalista no puede fabricarla.",
+            "Esa es la ventaja estructural detras de [por que Avante construye donde construye](/why-avante). Operadores de dominio con diez anos o mas de cicatrices del mercado brasileno, sumados a un playbook de Silicon Valley y capital de primer cheque, ensamblados antes de que la empresa exista. Infinity valida el modelo. La geografia es donde se decide la proxima decada de retorno de studio, y la lectura mas profunda esta en [la oportunidad de la economia de servicios brasilena](/library/brazil-services-economy-opportunity)."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Los servicios representan cerca del 70% del PIB brasileno, con baja penetracion de software. Esa es la brecha que un studio fue hecho para cerrar.",
+            "attribution": "Tesis de Avante Ventures, participacion de servicios via IBGE"
+          }
+        },
+        {
+          "id": "the-line-the-headline-buries",
+          "heading": "La linea que el titular esconde: datos",
+          "level": 2,
+          "paragraphs": [
+            "El numero de la ronda se lleva el titular. La ventaja durable es mas silenciosa. Cuando fundadores recurrentes construyen dentro de un cerebro compartido, el dato que cada empresa genera fluye a la siguiente. Ese es un foso que una sola startup, por bien financiada que este, no puede armar sola. Es tambien la parte que la mayoria de la cobertura sobre studios omite.",
+            "Avante nombra el ciclo directamente. Copilot, dato, capital. Construir un copilot de IA para generar dato propietario, luego usar ese dato para levantar y desplegar capital. La mecanica esta en [el flywheel copilot, dato, capital](/library/copilot-to-data-to-fund-flywheel), y por que el dato se compone en defensibilidad esta en [efectos de red de datos en IA vertical](/library/data-network-effects-vertical-ai)."
+          ]
+        },
+        {
+          "id": "what-an-lp-should-take-from-this",
+          "heading": "Que deberia sacar un LP de una ronda de US$ 24M",
+          "level": 2,
+          "paragraphs": [
+            "Lee la ronda de Infinity como senal de mercado, no como susto competitivo. Inversionistas serios hoy financian el modelo de studio a escala, en publico, con un numero adjunto. El debate sobre si construir empresas en serie le gana a apostar a ellas una por una se esta cerrando. Lo que sigue abierto es ejecucion y geografia.",
+            "Avante es la respuesta para America Latina. Un venture studio que construye empresas AI-native en Brasil y America Latina, lanzando 3-4 ventures al ano, desplegando US$ 500K-1,5M por venture, y llevando cada una por un sistema de seis etapas de Research a Partner a Build a Traction a Revenue a Compound. El mismo modelo que el mercado acaba de valorar en US$ 24M, apuntado a la economia donde deberia componerse mas fuerte. Mira [como opera Avante](/principles), o [inicia una conversacion](/contact)."
           ]
         }
       ]
