@@ -1758,7 +1758,7 @@ const articleSiggaCaseStudy: Article = {
 // ─────────────────────────────────────────────────────────────────────
 
 // === CONTENT-ENGINE:START (managed by content-engine/merge.py — do not edit by hand) ===
-// 11 article(s) generated from content-engine/outputs. Edit the engine, not this block.
+// 12 article(s) generated from content-engine/outputs. Edit the engine, not this block.
 const engineArticles: Article[] = [
   {
     "slug": "ai-infrastructure-cost-curve-latam",
@@ -4349,6 +4349,186 @@ const engineArticles: Article[] = [
             "Entonces elija por lo que le falta, no por lo que se ve más barato el día uno. El fundador que elige un studio no está comprando un cheque. Está comprando una empresa construida sobre diez años de cicatriz de operación, iniciada el mes en que firma, en lugar del año en que habría terminado de contratar."
           ],
           "id": "how-avante"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "taste-is-the-moat",
+    "category": "ai",
+    "type": "Essay",
+    "readTime": "8 min",
+    "featured": false,
+    "date": "Jun 2026",
+    "datePublished": "2026-06-09",
+    "isPublished": true,
+    "en": {
+      "title": "When Building Is Cheap, Taste Is the Moat",
+      "description": "AI collapsed the cost of building. Tony Fadell's career explains what becomes scarce next, and where an AI-native company's defensibility actually lives.",
+      "sections": [
+        {
+          "paragraphs": [
+            "The scarce asset in an AI-native company is no longer the ability to build. It is the judgment to decide what is worth building, what to leave out, and why a customer should care. AI has collapsed the cost of production. It has not produced taste, architecture, or customer empathy. Those stay scarce. Scarcity is where margin lives.",
+            "That is the through-line of Tony Fadell's career. He shipped the iPod, helped build the iPhone, and founded Nest, which Google acquired for $3.2 billion in 2014. In a recent conversation about building in the AI era, his argument was blunt. When everyone can produce, the premium moves to the people who know what to produce. We build AI-native companies in Brazil and Latin America for a living, and his frame matches what we see in the field every week.",
+            "This is not a nostalgia piece about a hardware legend. It is a working thesis about where value accrues once the model itself is cheap for everyone."
+          ]
+        },
+        {
+          "id": "cost-of-building",
+          "heading": "The cost of building collapsed",
+          "level": 2,
+          "paragraphs": [
+            "Start with the number that changes everything. For a model of equivalent performance, the cost of inference is falling by roughly 10x a year. Andreessen Horowitz named it LLMflation and measured it. The cost of LLM inference dropped by a factor of 1,000 in three years. Hitting an MMLU score of 42 cost about $60 per million tokens with GPT-3 in November 2021. By late 2024 an open model reached the same score for about $0.06 per million tokens, per [a16z](https://a16z.com/llmflation-llm-inference-cost/). Independent measurement from Epoch AI puts the median decline across benchmarks at about 50x per year, and rising.",
+            "Read the second-order effect, not just the first. When the cost of building falls this fast, building stops being the bottleneck. The bolt-on AI feature, the chat box next to the old product, is now available to everyone at a price that approaches zero. Cheap to build is the same sentence as not defensible. If you can ship it in a weekend, so can the next ten teams. The collapse that makes AI-native companies possible is the same collapse that makes most of them disposable.",
+            "So the interesting question is no longer what the model can do. It is what you decide to do with it, and what you refuse to do."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "The cost to reach a fixed AI capability fell roughly 1,000x in three years, about 10x per year. When production is nearly free, production cannot be the moat.",
+            "attribution": "a16z, Welcome to LLMflation"
+          }
+        },
+        {
+          "id": "taste-is-a-test",
+          "heading": "Taste is a test, not a vibe",
+          "level": 2,
+          "paragraphs": [
+            "Fadell's word for the scarce asset is taste. It sounds soft. It is not. Taste is the discipline of knowing what to leave out.",
+            "His clearest example is the iPhone keyboard. The data did not settle the debate between a physical keyboard and a virtual one. Someone had to decide against the evidence of the moment and ship a glass screen with no keys. Breakthrough 1.0 products cannot be fully validated by user research, because users cannot judge an experience they have never had. In a new category, consensus kills differentiation. Conviction makes it.",
+            "AI sharpens this, because AI makes addition free. You can bolt on every feature, every integration, every clever capability the model exposes. The hard job becomes subtraction. A product that does everything is a product no one can describe, and a product no one can describe does not get bought. The founder's real work is deciding what the product is not.",
+            "One honest caveat. Taste is not the same as ego. Informed taste is judgment accumulated through doing the work and staying close to the customer. Founder delusion wears the same clothes and skips the work. The test is whether the conviction survives contact with real users, not whether it feels bold in the room."
+          ]
+        },
+        {
+          "id": "sell-the-painkiller",
+          "heading": "Sell the painkiller, not the model",
+          "level": 2,
+          "paragraphs": [
+            "The antidote to feature-chasing is to start with pain, then add the new technology. The question is never what the model can do. It is what expensive, frequent, budgeted pain can now be solved differently because the model exists.",
+            "This shows up most clearly in how a company talks. We use agents is not a story. It describes your supply chain, not the customer's life. We cut claims processing from ten days to ten minutes is a story, because it names a pain the buyer already pays for. The strongest AI products are marketed around the human job to be done, not the model capability that powers it.",
+            "The screening question we apply to every venture is simple. Is this a painkiller, a vitamin, or a toy? Painkillers attach to a budget line and a measurable cost. Vitamins are nice and get cut first in a downturn. Toys get demoed and never bought. AI makes toys cheaper to build than ever, which is exactly why the discipline of finding real, budgeted pain matters more than ever."
+          ]
+        },
+        {
+          "id": "whole-system",
+          "heading": "The product is the whole system",
+          "level": 2,
+          "paragraphs": [
+            "Here is the trap that catches AI startups. They believe the product is the model plus an interface. Fadell's whole career argues the opposite. The winning product is the entire customer journey.",
+            "The iPod was not a music player. It needed iTunes and the iTunes Music Store to become the iPod. The iPhone needed the App Store. Nest needed a new retail motion, a new install experience, and design that made a thermostat worth showing a friend. The object was never the product. The system around it was.",
+            "The lesson for AI-native companies is direct. A thin interface over someone else's model owns nothing. Anyone can rent the same model at the same falling price. The company that owns the workflow, the data, the onboarding, and the outcome owns a position. The company that owns only the prompt owns a feature that the model provider can absorb in its next release."
+          ]
+        },
+        {
+          "id": "where-the-moat-lives",
+          "heading": "Where the moat actually lives",
+          "level": 2,
+          "paragraphs": [
+            "Models commoditize. The cost curve guarantees it. When every competitor can call the same model at the same falling price, the model cannot be the moat. Defensibility moves to what the model touches.",
+            "Three places hold up, and none of them come from the model. They come from judgment about how the model meets a specific customer's reality."
+          ],
+          "bullets": [
+            "Proprietary data and network effects. Data generated inside a real workflow, that compounds with every use, and that no competitor can buy. The product gets better as customers use it, and the gap widens on its own.",
+            "Vertical workflow ownership. A company that redesigns one painful, regulated, messy process end to end is harder to displace than a horizontal copilot that floats above everyone's work and owns none of it.",
+            "Trust. AI products are becoming intimate. Copilots, assistants, agents that act. Transparency, permissions, auditability, and human override stop being compliance overhead and become product features that win the deal. The most trusted product often beats the most aggressive one."
+          ]
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "How Avante builds for taste",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America. We do not bet on a model. We build the loop around it. Every venture is AI-native from day one, with a model in the core product loop and a copilot positioned to capture proprietary data inside a real workflow. That is the recurring pattern across the portfolio: copilot to data to fund. Build the copilot, generate the data, use the data to raise and deploy capital. More on the thesis at [why Avante](https://avanteventures.com/why-avante).",
+            "The studio model is itself an exercise in subtraction. We solve company plumbing once, centrally, which routes roughly $300K to $500K of effective capital per venture into product and traction instead of overhead. The same logic that drops inference cost 10x a year, applied to the company itself. Do the expensive thing once and let every venture launch lean. We launch three to four ventures a year through six stages, Research, Partner, Build, Traction, Revenue, Compound, with $500K to $1.5M deployed per venture and co-founder economics retained.",
+            "The structural payoff is the studio model's track record. Venture studios produce roughly 50% IRR versus an industry-standard 19% for traditional VC, per the Global Startup Studio Network, about 2.5x over realistic horizons. That figure is the studio-model benchmark, not a claim about Avante's own realized return. It holds because the model rewards exactly what the AI era rewards: judgment, iteration, and capital efficiency over raw build speed.",
+            "One last Fadell idea, because it sets the right expectation. Category-defining products take three generations. First you make the product, then you fix the product, then you fix the business. The iPod, the iPhone, and Nest were not iconic at launch. They earned it through iteration. The job of a studio is to underwrite that iteration capacity, not to bet on a perfect version one.",
+            "In an AI-saturated market, anyone can build. Few decide well. Taste is not a soft virtue. It is the leverage that turns cheap production into a durable company. Browse the rest of [the Library](https://avanteventures.com/library)."
+          ]
+        }
+      ]
+    },
+    "pt": {
+      "title": "Quando Construir Fica Barato, o Moat é o Critério",
+      "description": "A IA derrubou o custo de construir. A carreira de Tony Fadell explica o que fica escasso em seguida, e onde mora de verdade a defensibilidade de uma empresa AI-native.",
+      "sections": [
+        {
+          "paragraphs": [
+            "O ativo escasso em uma empresa AI-native não é mais a capacidade de construir. É o critério para decidir o que vale a pena construir, o que deixar de fora, e por que um cliente deveria se importar. A IA derrubou o custo de produção. Ela não produziu critério, arquitetura ou empatia com o cliente. Esses continuam escassos. E escassez é onde mora a margem.",
+            "Esse é o fio condutor da carreira de Tony Fadell. Ele entregou o iPod, ajudou a construir o iPhone e fundou a Nest, que o Google comprou por US$ 3,2 bilhões em 2014. Em uma conversa recente sobre construir na era da IA, o argumento dele foi direto. Quando todo mundo consegue produzir, o prêmio migra para quem sabe o que produzir. Nós construímos empresas AI-native no Brasil e na América Latina, e a leitura dele bate com o que vemos no campo toda semana.",
+            "Este não é um texto de nostalgia sobre uma lenda de hardware. É uma tese de trabalho sobre onde o valor se acumula quando o próprio modelo fica barato para todo mundo."
+          ]
+        },
+        {
+          "id": "cost-of-building",
+          "heading": "O custo de construir despencou",
+          "level": 2,
+          "paragraphs": [
+            "Comece pelo número que muda tudo. Para um modelo de desempenho equivalente, o custo de inferência cai cerca de 10x ao ano. A Andreessen Horowitz batizou isso de LLMflation e mediu. O custo de inferência de LLM caiu por um fator de 1.000 em três anos. Atingir um score MMLU de 42 custava cerca de US$ 60 por milhão de tokens com o GPT-3 em novembro de 2021. No fim de 2024, um modelo aberto chegou ao mesmo score por cerca de US$ 0,06 por milhão de tokens, segundo a [a16z](https://a16z.com/llmflation-llm-inference-cost/). A medição independente da Epoch AI coloca a queda mediana entre benchmarks em cerca de 50x ao ano, e subindo.",
+            "Leia o efeito de segunda ordem, não só o primeiro. Quando o custo de construir cai nessa velocidade, construir deixa de ser o gargalo. O recurso de IA acoplado, a caixinha de chat ao lado do produto antigo, agora está disponível para todo mundo a um preço que tende a zero. Barato de construir é a mesma frase que não defensável. Se você entrega em um fim de semana, os próximos dez times também entregam. O mesmo colapso que torna as empresas AI-native possíveis é o que torna a maioria delas descartável.",
+            "Então a pergunta interessante não é mais o que o modelo consegue fazer. É o que você decide fazer com ele, e o que você se recusa a fazer."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O custo de atingir uma capacidade fixa de IA caiu cerca de 1.000x em três anos, perto de 10x ao ano. Quando a produção é quase de graça, a produção não pode ser o moat.",
+            "attribution": "a16z, Welcome to LLMflation"
+          }
+        },
+        {
+          "id": "taste-is-a-test",
+          "heading": "Critério é um teste, não um clima",
+          "level": 2,
+          "paragraphs": [
+            "A palavra de Fadell para o ativo escasso é taste. Soa subjetivo. Não é. Critério é a disciplina de saber o que deixar de fora.",
+            "O exemplo mais claro dele é o teclado do iPhone. Os dados não resolviam o debate entre um teclado físico e um virtual. Alguém teve que decidir contra a evidência daquele momento e entregar uma tela de vidro sem teclas. Produtos 1.0 que abrem categoria não podem ser totalmente validados por pesquisa com usuário, porque o usuário não consegue julgar uma experiência que nunca teve. Em uma categoria nova, o consenso mata a diferenciação. A convicção a constrói.",
+            "A IA agudiza isso, porque a IA torna adicionar algo de graça. Dá para acoplar todo recurso, toda integração, toda capacidade esperta que o modelo expõe. O trabalho difícil vira subtrair. Um produto que faz tudo é um produto que ninguém consegue descrever, e um produto que ninguém descreve não é comprado. O trabalho de verdade do fundador é decidir o que o produto não é.",
+            "Uma ressalva honesta. Critério não é a mesma coisa que ego. Critério informado é julgamento acumulado fazendo o trabalho e ficando perto do cliente. A ilusão do fundador veste a mesma roupa e pula o trabalho. O teste é se a convicção sobrevive ao contato com usuários reais, não se ela parece ousada na sala."
+          ]
+        },
+        {
+          "id": "sell-the-painkiller",
+          "heading": "Venda o analgésico, não o modelo",
+          "level": 2,
+          "paragraphs": [
+            "O antídoto para a caça a recursos é começar pela dor, e só então adicionar a nova tecnologia. A pergunta nunca é o que o modelo consegue fazer. É qual dor cara, frequente e orçada agora pode ser resolvida de outro jeito porque o modelo existe.",
+            "Isso aparece com clareza em como a empresa fala. Nós usamos agentes não é uma história. Descreve a sua cadeia de suprimentos, não a vida do cliente. Nós cortamos o processamento de sinistros de dez dias para dez minutos é uma história, porque nomeia uma dor que o comprador já paga. Os produtos de IA mais fortes são vendidos em torno do trabalho humano a ser feito, não da capacidade do modelo que o move.",
+            "A pergunta de triagem que aplicamos a toda venture é simples. Isso é um analgésico, uma vitamina ou um brinquedo? Analgésicos se prendem a uma linha de orçamento e a um custo mensurável. Vitaminas são agradáveis e são as primeiras a cair numa retração. Brinquedos recebem demonstração e nunca são comprados. A IA torna brinquedos mais baratos de construir do que nunca, e é exatamente por isso que a disciplina de achar dor real e orçada importa mais do que nunca."
+          ]
+        },
+        {
+          "id": "whole-system",
+          "heading": "O produto é o sistema inteiro",
+          "level": 2,
+          "paragraphs": [
+            "Aqui está a armadilha que pega as startups de IA. Elas acreditam que o produto é o modelo mais uma interface. A carreira inteira de Fadell argumenta o contrário. O produto vencedor é a jornada inteira do cliente.",
+            "O iPod não era um tocador de música. Ele precisava do iTunes e da iTunes Music Store para virar o iPod. O iPhone precisava da App Store. A Nest precisou de um novo varejo, de uma nova experiência de instalação e de um design que fizesse um termostato valer a pena mostrar para um amigo. O objeto nunca foi o produto. O sistema ao redor era.",
+            "A lição para empresas AI-native é direta. Uma interface fina sobre o modelo de outra pessoa não é dona de nada. Qualquer um aluga o mesmo modelo ao mesmo preço em queda. A empresa que é dona do workflow, do dado, do onboarding e do resultado é dona de uma posição. A empresa que é dona só do prompt é dona de um recurso que o provedor do modelo absorve no próximo release."
+          ]
+        },
+        {
+          "id": "where-the-moat-lives",
+          "heading": "Onde o moat de fato mora",
+          "level": 2,
+          "paragraphs": [
+            "Modelos viram commodity. A curva de custo garante isso. Quando todo concorrente consegue chamar o mesmo modelo ao mesmo preço em queda, o modelo não pode ser o moat. A defensibilidade migra para o que o modelo toca.",
+            "Três lugares se sustentam, e nenhum deles vem do modelo. Eles vêm do critério sobre como o modelo encontra a realidade de um cliente específico."
+          ],
+          "bullets": [
+            "Dado proprietário e efeitos de rede. Dado gerado dentro de um workflow real, que se acumula a cada uso, e que nenhum concorrente consegue comprar. O produto melhora à medida que os clientes usam, e a vantagem se amplia sozinha.",
+            "Propriedade do workflow vertical. Uma empresa que redesenha um processo doloroso, regulado e bagunçado de ponta a ponta é mais difícil de deslocar do que um copilot horizontal que flutua sobre o trabalho de todos e não é dono de nenhum.",
+            "Confiança. Os produtos de IA estão ficando íntimos. Copilots, assistentes, agentes que agem. Transparência, permissões, auditabilidade e controle humano deixam de ser custo de compliance e viram recursos de produto que ganham a venda. O produto mais confiável costuma vencer o mais agressivo."
+          ]
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "Como a Avante constrói para o critério",
+          "level": 2,
+          "paragraphs": [
+            "A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina. Nós não apostamos em um modelo. Construímos o loop ao redor dele. Toda venture é AI-native desde o dia um, com um modelo no loop central do produto e um copilot posicionado para capturar dado proprietário dentro de um workflow real. Esse é o padrão recorrente do portfólio: flywheel copilot, dado, capital. Construa o copilot, gere o dado, use o dado para levantar e alocar capital. Mais sobre a tese em [por que a Avante](https://avanteventures.com/why-avante).",
+            "O modelo de studio é, em si, um exercício de subtração. Resolvemos o encanamento de empresa uma vez, de forma central, o que direciona cerca de US$ 300 mil a US$ 500 mil de capital efetivo por venture para produto e tração em vez de overhead. A mesma lógica que derruba o custo de inferência 10x ao ano, aplicada à própria empresa. Faça a coisa cara uma vez e deixe cada venture nascer enxuta. Lançamos de três a quatro ventures por ano em seis estágios, Research, Partner, Build, Traction, Revenue, Compound, com US$ 500 mil a US$ 1,5 milhão alocados por venture e economia de co-founder retida.",
+            "O retorno estrutural é o histórico do modelo de studio. Venture studios produzem cerca de 50% de IRR contra os 19% padrão da indústria para o VC tradicional, segundo a Global Startup Studio Network, perto de 2,5x ao longo de horizontes realistas. Esse número é o benchmark do modelo de studio, não uma afirmação sobre o retorno realizado da Avante. Ele se sustenta porque o modelo recompensa exatamente o que a era da IA recompensa: critério, iteração e eficiência de capital acima da velocidade bruta de construir.",
+            "Uma última ideia de Fadell, porque ela calibra a expectativa certa. Produtos que abrem categoria levam três gerações. Primeiro você faz o produto, depois conserta o produto, depois conserta o negócio. O iPod, o iPhone e a Nest não eram icônicos no lançamento. Eles conquistaram isso pela iteração. O trabalho de um studio é financiar essa capacidade de iterar, não apostar em uma versão um perfeita.",
+            "Em um mercado saturado de IA, qualquer um constrói. Poucos decidem bem. Critério não é uma virtude subjetiva. É a alavanca que transforma produção barata em empresa durável. Navegue pelo resto da [Biblioteca](https://avanteventures.com/library)."
+          ]
         }
       ]
     }
