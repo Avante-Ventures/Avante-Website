@@ -673,6 +673,194 @@ function articleTaxonomy(slug: string): {
           COMMON_AVANTE,
         ],
       }
+    // === content-engine slugs (managed block in articles.ts) ===
+    case 'taste-is-the-moat':
+      return {
+        keywords: ['taste', 'product judgment', 'Tony Fadell', 'AI-native product', 'defensibility', 'LLMflation', 'design taste', 'venture studio'],
+        about: [
+          { '@type': 'Thing', name: 'Product design' },
+          { '@type': 'Thing', name: 'Competitive moat' },
+        ],
+        mentions: [
+          { '@type': 'Person', name: 'Tony Fadell', sameAs: 'https://en.wikipedia.org/wiki/Tony_Fadell' },
+          { '@type': 'Organization', name: 'Andreessen Horowitz', sameAs: 'https://a16z.com' },
+          { '@type': 'Organization', name: 'Epoch AI', sameAs: 'https://epochai.org' },
+          { '@type': 'Organization', name: 'Global Startup Studio Network', sameAs: 'https://www.gssn.co' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'ai-native-without-series-a':
+      return {
+        keywords: ['AI-native company', 'Series A', 'AI inference cost', 'LLMflation', 'defensibility', 'vertical AI', 'lean startup', 'venture studio'],
+        about: [
+          { '@type': 'Thing', name: 'AI-native venture building' },
+          { '@type': 'Thing', name: 'Startup financing' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Andreessen Horowitz', sameAs: 'https://a16z.com' },
+          { '@type': 'Organization', name: 'Epoch AI', sameAs: 'https://epochai.org' },
+          { '@type': 'Organization', name: 'OpenAI', sameAs: 'https://openai.com' },
+          { '@type': 'Organization', name: 'Insignia Ventures Partners', sameAs: 'https://www.insignia.vc' },
+          { '@type': 'Organization', name: 'McKinsey & Company', sameAs: 'https://www.mckinsey.com' },
+          { '@type': 'Organization', name: 'Global Startup Studio Network', sameAs: 'https://www.gssn.co' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'copilot-to-data-to-fund-flywheel':
+      return {
+        keywords: ['copilot to data to fund', 'proprietary data', 'data flywheel', 'venture studio flywheel', 'AI copilot', 'defensibility', 'capital strategy'],
+        about: [
+          { '@type': 'Thing', name: 'Data network effects' },
+          { '@type': 'Thing', name: 'Venture studio operating model' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Andreessen Horowitz', sameAs: 'https://a16z.com' },
+          { '@type': 'Organization', name: 'Epoch AI', sameAs: 'https://epochai.org' },
+          { '@type': 'Organization', name: 'Global Startup Studio Network', sameAs: 'https://www.gssn.co' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'data-network-effects-vertical-ai':
+      return {
+        keywords: ['data network effects', 'vertical AI', 'proprietary data', 'process power', 'competitive moat', 'model commoditization', 'defensibility'],
+        about: [
+          { '@type': 'Thing', name: 'Data network effects' },
+          { '@type': 'Thing', name: 'Competitive moat' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Andreessen Horowitz', sameAs: 'https://a16z.com' },
+          { '@type': 'Organization', name: 'Epoch AI', sameAs: 'https://epochai.org' },
+          { '@type': 'Organization', name: 'Insignia Ventures Partners', sameAs: 'https://www.insignia.vc' },
+          { '@type': 'Organization', name: 'Global Startup Studio Network', sameAs: 'https://www.gssn.co' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'ai-infrastructure-cost-curve-latam':
+      return {
+        keywords: ['AI inference cost', 'AI cost curve', 'LATAM venture', 'Series A', 'capital efficiency', 'LLMflation', 'Brazil AI'],
+        about: [
+          { '@type': 'Thing', name: 'AI infrastructure cost' },
+          { '@type': 'Place', name: 'Latin America', sameAs: 'https://en.wikipedia.org/wiki/Latin_America' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Andreessen Horowitz', sameAs: 'https://a16z.com' },
+          { '@type': 'Organization', name: 'Epoch AI', sameAs: 'https://epochai.org' },
+          { '@type': 'Organization', name: 'IBGE', sameAs: 'https://www.ibge.gov.br' },
+          { '@type': 'Organization', name: 'LAVCA', sameAs: 'https://www.lavca.org' },
+          { '@type': 'Organization', name: 'Stanford HAI', sameAs: 'https://hai.stanford.edu' },
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'brazil-services-economy-opportunity':
+      return {
+        keywords: ['Brazil services economy', 'services GDP', 'software penetration', 'Brazilian SMEs', 'vertical software', 'operators'],
+        about: [
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+          { '@type': 'Thing', name: 'Service economy' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Andreessen Horowitz', sameAs: 'https://a16z.com' },
+          { '@type': 'Organization', name: 'LAVCA', sameAs: 'https://www.lavca.org' },
+          { '@type': 'Organization', name: 'Global Startup Studio Network', sameAs: 'https://www.gssn.co' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'brazilian-regulatory-complexity-as-moat':
+      return {
+        keywords: ['Brazilian regulation', 'tax complexity', 'compliance moat', 'regulatory complexity', 'operator advantage', 'vertical AI Brazil'],
+        about: [
+          { '@type': 'Thing', name: 'Regulatory compliance' },
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'IBGE', sameAs: 'https://www.ibge.gov.br' },
+          { '@type': 'Organization', name: 'Global Startup Studio Network', sameAs: 'https://www.gssn.co' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'infinity-constellation-ai-studio-thesis':
+      return {
+        keywords: ['venture studio', 'Infinity Constellation', 'startup studio as asset class', 'AI companies', 'professional services AI', 'studio thesis'],
+        about: [
+          { '@type': 'Thing', name: 'Venture studio model' },
+          { '@type': 'Thing', name: 'Startup studio as an asset class' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Infinity Constellation' },
+          { '@type': 'Organization', name: 'Global Startup Studio Network', sameAs: 'https://www.gssn.co' },
+          { '@type': 'Organization', name: 'University of Oxford', sameAs: 'https://en.wikipedia.org/wiki/University_of_Oxford' },
+          { '@type': 'Organization', name: 'Andreessen Horowitz', sameAs: 'https://a16z.com' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'measuring-studio-performance':
+      return {
+        keywords: ['venture studio metrics', 'IRR', 'TVPI', 'DPI', 'survivorship bias', 'studio performance', 'GSSN benchmark'],
+        about: [
+          { '@type': 'Thing', name: 'Internal rate of return (IRR)', sameAs: 'https://en.wikipedia.org/wiki/Internal_rate_of_return' },
+          { '@type': 'Thing', name: 'Venture studio performance benchmarks' },
+        ],
+        mentions: [
+          { '@type': 'Person', name: 'Ludovic Phalippou' },
+          { '@type': 'Organization', name: 'University of Oxford', sameAs: 'https://en.wikipedia.org/wiki/University_of_Oxford' },
+          { '@type': 'Organization', name: 'Global Startup Studio Network', sameAs: 'https://www.gssn.co' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'operating-partner-economics':
+      return {
+        keywords: ['operating partner', 'venture studio economics', 'ownership', 'dilution', 'hours to ownership', 'co-building', 'VC partner'],
+        about: [
+          { '@type': 'Thing', name: 'Venture studio operating model' },
+          { '@type': 'Thing', name: 'Equity ownership economics' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Global Startup Studio Network', sameAs: 'https://www.gssn.co' },
+          { '@type': 'Organization', name: 'IBGE', sameAs: 'https://www.ibge.gov.br' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'studio-vs-accelerator-vs-vc':
+      return {
+        keywords: ['venture studio', 'accelerator', 'venture capital', 'dilution', 'founder financing', 'Y Combinator', 'choosing a model'],
+        about: [
+          { '@type': 'Thing', name: 'Startup financing models' },
+          { '@type': 'Thing', name: 'Venture studio model' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Global Startup Studio Network', sameAs: 'https://www.gssn.co' },
+          { '@type': 'Organization', name: 'Y Combinator', sameAs: 'https://www.ycombinator.com' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'venture-builders-brazil-vs-usa-benchmark':
+      return {
+        keywords: ['venture studio benchmark', 'US venture studios', 'Brazil venture building', 'studio track record', 'startup studio returns'],
+        about: [
+          { '@type': 'Thing', name: 'Venture studio performance benchmarks' },
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Global Startup Studio Network', sameAs: 'https://www.gssn.co' },
+          { '@type': 'Place', name: 'United States', sameAs: 'https://en.wikipedia.org/wiki/United_States' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'why-venture-studios-win-latam':
+      return {
+        keywords: ['venture studio', 'traditional VC', 'IRR', 'LATAM', 'Brazil', 'studio model', 'venture building', 'GSSN'],
+        about: [
+          { '@type': 'Thing', name: 'Venture studio model' },
+          { '@type': 'Thing', name: 'Internal rate of return (IRR)', sameAs: 'https://en.wikipedia.org/wiki/Internal_rate_of_return' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Global Startup Studio Network', sameAs: 'https://www.gssn.co' },
+          { '@type': 'Organization', name: 'Cambridge Associates', sameAs: 'https://www.cambridgeassociates.com' },
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+          COMMON_AVANTE,
+        ],
+      }
     default:
       return { keywords: [], about: [], mentions: [COMMON_AVANTE] }
   }
