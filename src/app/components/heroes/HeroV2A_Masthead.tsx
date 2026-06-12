@@ -94,7 +94,7 @@ const PORTFOLIO = ['SIGGA', 'MAHWAY', 'WIR', 'BAMBOO DCM', 'ALPHALIT', 'INDINERO
 
 // Wire CTAs to the contact form below: scroll to it, then auto-select
 // the inquiry type after the smooth-scroll has settled (~800ms).
-function scrollToContactAndSelect(inquiryType: 'Founder Inquiry' | 'Investor Inquiry') {
+function scrollToContactAndSelect(inquiryType: 'General' | 'Investor Inquiry') {
   const element = document.getElementById('contact')
   if (!element) return
   element.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -288,7 +288,7 @@ export function HeroV2A_Masthead() {
           <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '40px' }}>
             {/* Primary CTA — gradient fill with editorial mono caps */}
             <button
-              onClick={() => scrollToContactAndSelect('Founder Inquiry')}
+              onClick={() => scrollToContactAndSelect('General')}
               style={{
                 padding: '14px 22px',
                 fontFamily: 'var(--avt-font-body)',
@@ -315,7 +315,7 @@ export function HeroV2A_Masthead() {
                 e.currentTarget.style.boxShadow = '0 8px 24px rgba(236, 95, 114, 0.3)'
               }}
             >
-              {pick('For Founders', 'Para Founders', 'Para Founders')}
+              {pick('Get in touch', 'Fale com a gente', 'Hablemos')}
               <span aria-hidden>→</span>
             </button>
 

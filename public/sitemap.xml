@@ -138,38 +138,6 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/portfolio"/>
   </url>
 
-  <!-- Founders LP page -->
-  <url>
-    <loc>https://avanteventures.com/en/founders</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/founders"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/founders"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/founders"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/founders"/>
-  </url>
-  <url>
-    <loc>https://avanteventures.com/pt/founders</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/founders"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/founders"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/founders"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/founders"/>
-  </url>
-  <url>
-    <loc>https://avanteventures.com/es/founders</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/founders"/>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/founders"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/founders"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/founders"/>
-  </url>
-
   <!-- Investors LP page -->
   <url>
     <loc>https://avanteventures.com/en/investors</loc>

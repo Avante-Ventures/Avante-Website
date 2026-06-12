@@ -119,8 +119,8 @@ export function Footer() {
           )}
         </p>
 
-        {/* ClockRow — Phase D. Live local time in the firm's three operating
-            cities, rendered as 3-column hairline cells. Quietly tells the
+        {/* ClockRow — Phase D. Live local time in the firm's two operating
+            cities, rendered as 2-column hairline cells. Quietly tells the
             visitor where the studio physically is, in real time. */}
         <div style={{ marginTop: 'clamp(48px, 6vw, 80px)' }}>
           <ClockRow />
@@ -135,11 +135,10 @@ export function Footer() {
             gap: '48px',
           }}
         >
-          {/* Column 1: Offices (3 cities for clock-row vibe) */}
+          {/* Column 1: Offices (2 cities for clock-row vibe) */}
           <FooterColumn title={t('Offices', 'Escritórios', 'Oficinas')}>
             <FooterStaticLine>São Paulo · sede</FooterStaticLine>
             <FooterStaticLine>San Francisco</FooterStaticLine>
-            <FooterStaticLine>{t('Cidade de México', 'Cidade do México', 'Ciudad de México')}</FooterStaticLine>
           </FooterColumn>
 
           {/* Column 2: Firm — top-level routes */}
@@ -152,14 +151,12 @@ export function Footer() {
 
           {/* Column 3: For — audiences (doors pattern coming in Phase D) */}
           <FooterColumn title={t('For', 'Para', 'Para')}>
-            <FooterLink to={`/${language}/founders`} label={t('Founders', 'Founders', 'Founders')} />
             <FooterLink to={`/${language}/investors`} label={t('Investors / LPs', 'Investidores / LPs', 'Inversores / LPs')} />
             <FooterMail href="mailto:cristian@avanteventures.com" label={t('Press · Inquiries', 'Imprensa · Consultas', 'Prensa · Consultas')} />
           </FooterColumn>
 
           {/* Column 4: Now — operating reality */}
           <FooterColumn title={t('Now', 'Agora', 'Ahora')}>
-            <FooterStaticLine>{t('Open to LP conversations', 'Aberto a conversas com LPs', 'Abierto a conversaciones con LPs')}</FooterStaticLine>
             <FooterStaticLine>{t('1 active · 4 in pipeline', '1 ativa · 4 no pipeline', '1 activa · 4 en pipeline')}</FooterStaticLine>
             <FooterStaticLine>{t('São Paulo · winter 2026', 'São Paulo · inverno 2026', 'São Paulo · invierno 2026')}</FooterStaticLine>
             <FooterStaticLine

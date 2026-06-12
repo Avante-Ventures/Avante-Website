@@ -476,7 +476,7 @@ export default function InvestorsPage() {
               lineHeight: 1.2,
             }}
           >
-            {t('Schedule an LP conversation.', 'Agendar uma conversa de LP.')}
+            {t('Get in touch.', 'Fale com a gente.')}
           </h2>
           <p
             style={{
@@ -488,8 +488,8 @@ export default function InvestorsPage() {
             }}
           >
             {t(
-              "First call is 45 minutes: thesis walkthrough, team's prior track record in detail, the LP terms document, your questions. We do not run roadshow calls — every conversation is structured and documented.",
-              'A primeira ligação tem 45 minutos: walkthrough da tese, track record anterior do time em detalhe, o documento de termos de LP, suas perguntas. Não rodamos calls de roadshow — cada conversa é estruturada e documentada.'
+              "A first conversation is 45 minutes: thesis walkthrough, the team's prior track record in detail, how the studio is structured, your questions. Every conversation is structured and documented.",
+              'Uma primeira conversa tem 45 minutos: walkthrough da tese, track record anterior do time em detalhe, como o studio é estruturado, suas perguntas. Cada conversa é estruturada e documentada.'
             )}
           </p>
           <Link
@@ -515,7 +515,7 @@ export default function InvestorsPage() {
               e.currentTarget.style.background = 'transparent'
             }}
           >
-            {t('Request an LP conversation', 'Solicitar conversa de LP')}
+            {t('Get in touch', 'Entre em contato')}
           </Link>
         </section>
       </div>
