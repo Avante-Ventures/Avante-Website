@@ -86,8 +86,8 @@ export function ContactFormSection() {
         eyebrow={t('Get in Touch', 'Entre em Contato')}
         title={t("Let's talk.", 'Vamos conversar.')}
         description={t(
-          "Whether you're a founder building or an investor looking for AI-native exposure in Brazil — we'd love to hear from you.",
-          'Seja fundador construindo ou investidor buscando exposição AI-native no Brasil — queremos ouvir você.'
+          "Questions, partnerships, or anything else — we'd love to hear from you.",
+          'Dúvidas, parcerias, ou qualquer outra coisa — queremos ouvir você.'
         )}
       />
 
@@ -295,9 +295,8 @@ export function ContactFormSection() {
                 e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
               }}
             >
-              <option value="Founder Inquiry">Founder Inquiry</option>
-              <option value="Investor Inquiry">Investor Inquiry</option>
               <option value="General">General Inquiry</option>
+              <option value="Investor Inquiry">Investor Inquiry</option>
               <option value="Partnership">Partnership</option>
             </select>
           </div>

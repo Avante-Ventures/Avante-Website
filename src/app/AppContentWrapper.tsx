@@ -650,10 +650,10 @@ export function AppContent() {
               marginTop: 'var(--avante-space-6)'
             }}
           >
-            {/* ContactDoors — Phase D. Three mailto cells (Founders / LPs /
-                Press) presented as the primary contact pattern. The classic
-                ContactFormSection stays below as a fallback for visitors
-                who prefer a form, but the doors lead the section. */}
+            {/* ContactDoors — Phase D. A single general contact door
+                (neutral "Contact") presented as the primary contact pattern.
+                The classic ContactFormSection stays below as a fallback for
+                visitors who prefer a form, but the door leads the section. */}
             <div style={{ marginBottom: 'var(--avante-space-8)' }}>
               <SectionMasthead
                 eyebrow={
@@ -661,31 +661,19 @@ export function AppContent() {
                 }
                 title={
                   language === 'pt' ? (
-                    <>
-                      Se você está construindo,
-                      <br />
-                      nos encontre.
-                    </>
+                    <>Nos encontre.</>
                   ) : language === 'es' ? (
-                    <>
-                      Si estás construyendo,
-                      <br />
-                      encuéntranos.
-                    </>
+                    <>Encuéntranos.</>
                   ) : (
-                    <>
-                      If you’re building,
-                      <br />
-                      find us.
-                    </>
+                    <>Find us.</>
                   )
                 }
                 description={
                   language === 'pt'
-                    ? 'Três portas. Escolha a que encaixa. Cada uma abre para uma pessoa — não um formulário.'
+                    ? 'Uma porta. Abre para uma pessoa — não um formulário.'
                     : language === 'es'
-                      ? 'Tres puertas. Elige la que encaja. Cada una abre a una persona — no un formulario.'
-                      : 'Three doors. Pick the one that fits. Each opens to a person — not a form.'
+                      ? 'Una puerta. Abre a una persona — no un formulario.'
+                      : 'One door. It opens to a person — not a form.'
                 }
                 screenLabel={
                   language === 'pt' ? '§ v — contato' : language === 'es' ? '§ v — contacto' : '§ v — contact'

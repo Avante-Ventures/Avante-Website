@@ -118,7 +118,7 @@ export function HeroBody({ wordmark, bottomTickerSlot }: HeroBodyProps) {
             e.currentTarget.style.backgroundColor = 'transparent'
           }}
         >
-          For Founders
+          Get in touch
         </button>
         <button
           style={{

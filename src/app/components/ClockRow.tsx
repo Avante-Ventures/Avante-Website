@@ -1,13 +1,13 @@
 // ClockRow — Phase D.
 //
-// Three live local clocks (São Paulo, San Francisco, Bogotá) rendered as
-// a 3-column grid with hairline cell borders. Each clock shows: city
+// Two live local clocks (São Paulo, San Francisco) rendered as
+// a 2-column grid with hairline cell borders. Each clock shows: city
 // name in Funnel Display monumental, HH:MM time in JetBrains Mono, the
 // timezone abbreviation, and a one-line address blurb.
 //
 // Tick cadence: every 30 seconds. We display HH:MM, not HH:MM:SS, so
 // there's no visible benefit to per-second updates and meaningful cost
-// (3× Intl.DateTimeFormat calls per tick). We tick once on mount so the
+// (2× Intl.DateTimeFormat calls per tick). We tick once on mount so the
 // clocks aren't blank for the first 30s.
 //
 // Bilingual policy: city names stay in their native form (São Paulo, not
@@ -43,16 +43,6 @@ const CLOCKS: ClockSpec[] = [
       en: 'Bay Area · operating hub',
       pt: 'Bay Area · hub operacional',
       es: 'Bay Area · hub operativo',
-    },
-  },
-  {
-    city: 'Bogotá',
-    tz: 'America/Bogota',
-    tzLabel: 'UTC −05 · COT',
-    addr: {
-      en: 'Andes · LATAM ex-Brazil',
-      pt: 'Andes · LATAM ex-Brasil',
-      es: 'Andes · LATAM ex-Brasil',
     },
   },
 ]
@@ -173,7 +163,7 @@ export function ClockRow() {
           grid-template-columns: 1fr;
         }
         @media (min-width: 720px) {
-          .avt-clocks { grid-template-columns: repeat(3, 1fr); }
+          .avt-clocks { grid-template-columns: repeat(2, 1fr); }
         }
         @media (max-width: 719px) {
           .avt-clock-cell { border-right: none !important; border-bottom: 1px solid var(--avt-hair); }

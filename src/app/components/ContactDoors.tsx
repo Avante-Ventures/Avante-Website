@@ -1,16 +1,15 @@
 // ContactDoors — Phase D.
 //
-// Three mailto-targeted cells: Founders, Investors (LPs), Press. Replaces
-// the all-inclusive single ContactForm CTA pattern with a "pick your door"
+// A single mailto-targeted cell: one general contact door. Replaces the
+// all-inclusive single ContactForm CTA pattern with a "pick your door"
 // editorial pattern that:
-//   • Routes the inquiry to the right inbox without a form (no friction).
-//   • Telegraphs that each audience gets a dedicated reply path.
-//   • Creates a memorable visual moment ("Founders. LPs. Press.") with
-//     monumental Funnel Display titles, 48px on desktop.
+//   • Routes the inquiry to the inbox without a form (no friction).
+//   • Telegraphs a single, dedicated reply path.
+//   • Creates a memorable visual moment ("Contact.") with a monumental
+//     Funnel Display title, 48px on desktop.
 //
-// The middle door (LPs) gets a gradient title to flag that Vintage 1 is
-// the live commercial moment of the firm right now. The other two stay
-// solid white. This is intentional emphasis, not chrome.
+// The door keeps a gradient title so the moment reads as a deliberate
+// focal point rather than flat chrome. This is intentional emphasis.
 //
 // Hover behavior: padding-left grows from 48px → 56px (subtle "the door
 // is opening"), background fills to var(--avt-ink-2). No lift transform —
@@ -19,7 +18,7 @@
 import { useLanguage } from '@/app/hooks/useLanguage'
 
 interface DoorSpec {
-  id: 'founders' | 'lps' | 'press'
+  id: 'contact'
   number: string
   meta: { en: string; pt: string; es: string }
   title: { en: string; pt: string; es: string }
@@ -31,45 +30,21 @@ interface DoorSpec {
 
 const DOORS: DoorSpec[] = [
   {
-    id: 'founders',
+    id: 'contact',
     number: '001',
-    meta: { en: 'door 001', pt: 'porta 001', es: 'puerta 001' },
-    title: { en: 'Founders.', pt: 'Founders.', es: 'Founders.' },
-    body: {
-      en: 'Send the deck, the demo, or the codebase. Replies signed by a partner within seven days. We read every memo. Twice.',
-      pt: 'Envie o deck, o demo, ou o codebase. Respostas assinadas por um partner em sete dias. Lemos cada memo. Duas vezes.',
-      es: 'Envía el deck, el demo, o el codebase. Respuestas firmadas por un partner en siete días. Leemos cada memo. Dos veces.',
-    },
-    email: 'cristian@avanteventures.com',
-  },
-  {
-    id: 'lps',
-    number: '002',
     meta: {
-      en: 'door 002 — open to LPs',
-      pt: 'porta 002 — aberta a LPs',
-      es: 'puerta 002 — abierta a LPs',
+      en: 'door 001 — contact',
+      pt: 'porta 001 — contato',
+      es: 'puerta 001 — contacto',
     },
-    title: { en: 'LPs.', pt: 'LPs.', es: 'LPs.' },
+    title: { en: 'Contact.', pt: 'Contato.', es: 'Contacto.' },
     body: {
-      en: 'We are open to LP conversations. Quarterly portfolio updates and operating dashboards available under NDA. We share more, not less.',
-      pt: 'Estamos abertos a conversas com LPs. Updates trimestrais de portfólio e dashboards operacionais disponíveis sob NDA. Compartilhamos mais, não menos.',
-      es: 'Estamos abiertos a conversaciones con LPs. Updates trimestrales de portafolio y dashboards operativos disponibles bajo NDA. Compartimos más, no menos.',
+      en: 'General inquiries — partnerships, press, or anything else. A partner replies, signed, within seven days. We read every message.',
+      pt: 'Consultas gerais — parcerias, imprensa, ou qualquer outra coisa. Um partner responde, assinado, em sete dias. Lemos cada mensagem.',
+      es: 'Consultas generales — alianzas, prensa, o cualquier otra cosa. Un partner responde, firmado, en siete días. Leemos cada mensaje.',
     },
     email: 'cristian@avanteventures.com',
     emphasize: true,
-  },
-  {
-    id: 'press',
-    number: '003',
-    meta: { en: 'door 003', pt: 'porta 003', es: 'puerta 003' },
-    title: { en: 'Press.', pt: 'Imprensa.', es: 'Prensa.' },
-    body: {
-      en: 'For coverage on the firm or its ventures. We respond within 48h with the founder we’d like you to talk to instead of us.',
-      pt: 'Para cobertura sobre o studio ou suas ventures. Respondemos em 48h com o founder com quem gostaríamos que você falasse no nosso lugar.',
-      es: 'Para cobertura sobre el studio o sus ventures. Respondemos en 48h con el founder con quien preferiríamos que hables en lugar de nosotros.',
-    },
-    email: 'cristian@avanteventures.com',
   },
 ]
 
@@ -95,7 +70,7 @@ export function ContactDoors() {
           href={`mailto:${door.email}?subject=${encodeURIComponent(door.title.en.replace('.', ''))} — Avante`}
           style={{
             padding: '48px',
-            minHeight: '340px',
+            minHeight: '260px',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
@@ -182,7 +157,7 @@ export function ContactDoors() {
           grid-template-columns: 1fr;
         }
         @media (min-width: 900px) {
-          .avt-doors { grid-template-columns: repeat(3, 1fr); }
+          .avt-doors { grid-template-columns: 1fr; }
         }
         @media (max-width: 899px) {
           .avt-door { border-right: none !important; border-bottom: 1px solid var(--avt-hair); }

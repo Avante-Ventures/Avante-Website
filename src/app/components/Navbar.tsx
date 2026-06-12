@@ -21,15 +21,13 @@ import { Link, useLocation } from 'react-router'
 import { useLanguage } from '@/app/hooks/useLanguage'
 import { AvanteLockup } from '@/app/components/AvanteLockup'
 
-// LP-conversation CTA flag — set via Vercel env variable.
-// Values: 'open' (default — pulse + "open" copy), 'closed' (no pulse +
-// "closed" copy), 'hidden' (CTA hidden entirely).
-// Variable name kept (`VITE_VINTAGE_STATUS`) for backward Vercel-env
-// compatibility; copy reworded so we no longer claim a specific Vintage 1
-// fund — the studio is open to LP conversations regardless of fund vehicle.
-const VINTAGE_STATUS = (import.meta.env.VITE_VINTAGE_STATUS ?? 'open') as
-  | 'open'
-  | 'closed'
+// Contact CTA flag — set via Vercel env variable.
+// Values: 'shown' (default — neutral "Contact" CTA) or 'hidden' (CTA hidden
+// entirely). Variable name kept (`VITE_VINTAGE_STATUS`) for backward
+// Vercel-env compatibility; the CTA no longer carries any LP / fund-raise
+// semantics or pulse — it is a plain link to the contact anchor.
+const VINTAGE_STATUS = (import.meta.env.VITE_VINTAGE_STATUS ?? 'shown') as
+  | 'shown'
   | 'hidden'
 
 export function Navbar() {
@@ -192,7 +190,7 @@ export function Navbar() {
             })}
           </div>
 
-          {/* Right cluster: language toggle + Vintage 1 CTA + mobile menu */}
+          {/* Right cluster: language toggle + Contact CTA + mobile menu */}
           <div className="flex items-center" style={{ gap: '12px' }}>
             <LanguageToggleMini language={language} setLanguage={setLanguage} />
 
@@ -213,22 +211,7 @@ export function Navbar() {
                 onMouseEnter={(e) => (e.currentTarget.style.borderColor = '#fff')}
                 onMouseLeave={(e) => (e.currentTarget.style.borderColor = 'var(--avt-hair-2)')}
               >
-                {/* Pulse only while Vintage is actively open. When closed,
-                    we keep the CTA visible (so a returning user sees the state
-                    change clearly) but stop the pulse — it would otherwise
-                    lie about the studio being mid-raise. */}
-                {VINTAGE_STATUS === 'open' && <PulseDot />}
-                {VINTAGE_STATUS === 'open'
-                  ? language === 'pt'
-                    ? 'Aberto a conversas com LPs'
-                    : language === 'es'
-                      ? 'Abierto a LPs'
-                      : 'Open to LP conversations'
-                  : language === 'pt'
-                    ? 'Conversas com LPs pausadas'
-                    : language === 'es'
-                      ? 'Conversaciones con LPs en pausa'
-                      : 'LP conversations paused'}
+                {language === 'pt' ? 'Contato' : language === 'es' ? 'Contacto' : 'Contact'}
               </a>
             )}
 
@@ -317,18 +300,7 @@ export function Navbar() {
                   animation: 'slideIn 0.4s ease 0.4s both',
                 }}
               >
-                {VINTAGE_STATUS === 'open' && <PulseDot />}
-                {VINTAGE_STATUS === 'open'
-                  ? language === 'pt'
-                    ? 'Aberto a conversas com LPs'
-                    : language === 'es'
-                      ? 'Abierto a LPs'
-                      : 'Open to LP conversations'
-                  : language === 'pt'
-                    ? 'Conversas com LPs pausadas'
-                    : language === 'es'
-                      ? 'Conversaciones con LPs en pausa'
-                      : 'LP conversations paused'}
+                {language === 'pt' ? 'Contato' : language === 'es' ? 'Contacto' : 'Contact'}
               </a>
             )}
           </div>
@@ -368,23 +340,6 @@ function ActiveUnderline() {
         bottom: 0,
         height: '1px',
         background: '#fff',
-      }}
-    />
-  )
-}
-
-function PulseDot() {
-  return (
-    <span
-      aria-hidden
-      style={{
-        width: '6px',
-        height: '6px',
-        borderRadius: '99px',
-        background: '#ec5f72',
-        boxShadow: '0 0 10px #ec5f72',
-        animation: 'navPulse 2s ease-in-out infinite',
-        flexShrink: 0,
       }}
     />
   )

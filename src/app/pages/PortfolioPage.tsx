@@ -54,7 +54,7 @@ const VENTURES: Venture[] = [
     est: 'Est. 2024',
   },
   {
-    name: 'NEXA Legal',
+    name: 'Alphajuri',
     description: {
       en: 'AI-native judicial asset platform for the Brazilian precatorios + claims market. Copilot-to-fund flywheel; built from scratch inside Cohort 1.',
       pt: 'Plataforma AI-native de ativos judiciais para o mercado brasileiro de precatórios + claims. Flywheel copilot-to-fund; construído do zero dentro da Cohort 1.',
@@ -252,8 +252,8 @@ export default function PortfolioPage() {
             'Nossas Ventures — e nosso Track Record.'
           )}
           description={t(
-            'Cohort 1 is live (WIR + NEXA Legal). Below: every venture this team has built, co-founded, or invested in — from Innova-era tickets in 2014 (iFood, Sigga, Accera) to today\'s active US Building track (Mahway, Astonishing Labs, Alpha Lit) and the Avante studio cohort.',
-            'Cohort 1 está ativa (WIR + NEXA Legal). Abaixo: cada venture que este time construiu, co-fundou ou investiu — dos cheques da era Innova em 2014 (iFood, Sigga, Accera) ao track US Building ativo hoje (Mahway, Astonishing Labs, Alpha Lit) e a cohort do studio Avante.'
+            'Cohort 1 is live (WIR + Alphajuri). Below: every venture this team has built, co-founded, or invested in — from Innova-era tickets in 2014 (iFood, Sigga, Accera) to today\'s active US Building track (Mahway, Astonishing Labs, Alpha Lit) and the Avante studio cohort.',
+            'Cohort 1 está ativa (WIR + Alphajuri). Abaixo: cada venture que este time construiu, co-fundou ou investiu — dos cheques da era Innova em 2014 (iFood, Sigga, Accera) ao track US Building ativo hoje (Mahway, Astonishing Labs, Alpha Lit) e a cohort do studio Avante.'
           )}
         />
 
