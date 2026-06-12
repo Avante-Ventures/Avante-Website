@@ -8,7 +8,8 @@
 // Why URL-based instead of state: Google + LLMs need DISTINCT URLs per
 // language to index PT content. State-only toggle is invisible to crawlers.
 
-import { createBrowserRouter, Outlet, Navigate, useParams, useNavigation } from "react-router"
+import { useEffect } from 'react'
+import { createBrowserRouter, Outlet, Navigate, useParams, useNavigation, useLocation } from "react-router"
 import HomePage from "./pages/HomePage.tsx"
 import { LanguageProvider, type Language } from "@/app/hooks/useLanguage"
 import { AvtSpinner } from "@/app/components/AvtSpinner"
@@ -50,6 +51,26 @@ function RootRedirect() {
   return <Navigate to={`/${detectLocale()}`} replace />
 }
 
+// Scroll-to-top on navigation. react-router does NOT reset scroll position on
+// navigation, so clicking the Avante logo (or any route link) used to leave the
+// viewport wherever it was: clicking the logo while scrolled into a sub-page
+// changed the route to home but kept you at the footer, so it read as "the link
+// doesn't go back to the main page". We key on location.key (not pathname) so it
+// ALSO fires when re-clicking the logo on the same route, and we skip when there
+// is a hash so in-page anchors (#playbook, #contact) still scroll to their target.
+function ScrollToTopOnNavigate() {
+  const { key, hash } = useLocation()
+  useEffect(() => {
+    if (hash) return
+    // 'instant' opts out of the global `html { scroll-behavior: smooth }`
+    // (index.css / theme.css). On navigation we want an immediate jump to the
+    // top, not a 1s+ glide through the new page; smooth stays for the in-page
+    // anchor clicks (#playbook, #contact) that set it explicitly.
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+  }, [key, hash])
+  return null
+}
+
 function LocaleLayout() {
   const { locale } = useParams<{ locale: string }>()
   // useNavigation() lets us detect when react-router is loading a `lazy:`
@@ -64,6 +85,7 @@ function LocaleLayout() {
   }
   return (
     <LanguageProvider locale={locale as Language}>
+      <ScrollToTopOnNavigate />
       <Outlet />
       {isLoadingRoute && (
         <AvtSpinner
