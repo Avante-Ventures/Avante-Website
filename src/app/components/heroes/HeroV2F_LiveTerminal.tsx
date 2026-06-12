@@ -137,7 +137,7 @@ export function HeroV2F_LiveTerminal() {
           </p>
 
           <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '32px' }}>
-            <button style={{ padding: '14px 26px', fontSize: '15px', fontWeight: 600, color: '#0E1428', background: 'linear-gradient(135deg, #F9B437 0%, #F4A261 100%)', border: 'none', borderRadius: '999px', cursor: 'pointer', boxShadow: '0 8px 24px rgba(249, 180, 55, 0.25)' }}>For Founders →</button>
+            <button style={{ padding: '14px 26px', fontSize: '15px', fontWeight: 600, color: '#0E1428', background: 'linear-gradient(135deg, #F9B437 0%, #F4A261 100%)', border: 'none', borderRadius: '999px', cursor: 'pointer', boxShadow: '0 8px 24px rgba(249, 180, 55, 0.25)' }}>Get in touch →</button>
             <button style={{ padding: '14px 26px', fontSize: '15px', fontWeight: 600, color: '#FFFFFF', background: 'transparent', border: '1.5px solid rgba(255, 255, 255, 0.25)', borderRadius: '999px', cursor: 'pointer' }}>For Investors</button>
           </div>
 
