@@ -380,7 +380,37 @@
   <!-- 9. Global Venture Studio Data (DRAFT) -->
 
   <!-- CONTENT-ENGINE:START (managed by content-engine/merge.py - do not edit by hand) -->
-  <!-- 13 engine article(s) x 3 locales. Generated from content-engine/outputs. Edit the engine, not this block. -->
+  <!-- 23 engine article(s) x 3 locales. Generated from content-engine/outputs. Edit the engine, not this block. -->
+  <url>
+    <loc>https://avanteventures.com/en/library/ai-agents-vs-copilots-b2b</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/ai-agents-vs-copilots-b2b"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/ai-agents-vs-copilots-b2b"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/ai-agents-vs-copilots-b2b"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/ai-agents-vs-copilots-b2b"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/ai-agents-vs-copilots-b2b</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/ai-agents-vs-copilots-b2b"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/ai-agents-vs-copilots-b2b"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/ai-agents-vs-copilots-b2b"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/ai-agents-vs-copilots-b2b"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/ai-agents-vs-copilots-b2b</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/ai-agents-vs-copilots-b2b"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/ai-agents-vs-copilots-b2b"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/ai-agents-vs-copilots-b2b"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/ai-agents-vs-copilots-b2b"/>
+  </url>
   <url>
     <loc>https://avanteventures.com/en/library/ai-infrastructure-cost-curve-latam</loc>
     <lastmod>2026-06-02</lastmod>
@@ -440,6 +470,156 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/ai-native-without-series-a"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/ai-native-without-series-a"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/ai-native-without-series-a"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/en/library/ai-wrapper-trap-defensible-ai-native</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/ai-wrapper-trap-defensible-ai-native"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/ai-wrapper-trap-defensible-ai-native"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/ai-wrapper-trap-defensible-ai-native"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/ai-wrapper-trap-defensible-ai-native"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/ai-wrapper-trap-defensible-ai-native</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/ai-wrapper-trap-defensible-ai-native"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/ai-wrapper-trap-defensible-ai-native"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/ai-wrapper-trap-defensible-ai-native"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/ai-wrapper-trap-defensible-ai-native"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/ai-wrapper-trap-defensible-ai-native</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/ai-wrapper-trap-defensible-ai-native"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/ai-wrapper-trap-defensible-ai-native"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/ai-wrapper-trap-defensible-ai-native"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/ai-wrapper-trap-defensible-ai-native"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/en/library/brazil-ai-agriculture-agritech-opportunity</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/brazil-ai-agriculture-agritech-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/brazil-ai-agriculture-agritech-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/brazil-ai-agriculture-agritech-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/brazil-ai-agriculture-agritech-opportunity"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/brazil-ai-agriculture-agritech-opportunity</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/brazil-ai-agriculture-agritech-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/brazil-ai-agriculture-agritech-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/brazil-ai-agriculture-agritech-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/brazil-ai-agriculture-agritech-opportunity"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/brazil-ai-agriculture-agritech-opportunity</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/brazil-ai-agriculture-agritech-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/brazil-ai-agriculture-agritech-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/brazil-ai-agriculture-agritech-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/brazil-ai-agriculture-agritech-opportunity"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/en/library/brazil-ai-cybersecurity-opportunity</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/brazil-ai-cybersecurity-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/brazil-ai-cybersecurity-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/brazil-ai-cybersecurity-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/brazil-ai-cybersecurity-opportunity"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/brazil-ai-cybersecurity-opportunity</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/brazil-ai-cybersecurity-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/brazil-ai-cybersecurity-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/brazil-ai-cybersecurity-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/brazil-ai-cybersecurity-opportunity"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/brazil-ai-cybersecurity-opportunity</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/brazil-ai-cybersecurity-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/brazil-ai-cybersecurity-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/brazil-ai-cybersecurity-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/brazil-ai-cybersecurity-opportunity"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/en/library/brazil-ai-fintech-market-opportunity</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/brazil-ai-fintech-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/brazil-ai-fintech-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/brazil-ai-fintech-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/brazil-ai-fintech-market-opportunity"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/brazil-ai-fintech-market-opportunity</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/brazil-ai-fintech-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/brazil-ai-fintech-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/brazil-ai-fintech-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/brazil-ai-fintech-market-opportunity"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/brazil-ai-fintech-market-opportunity</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/brazil-ai-fintech-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/brazil-ai-fintech-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/brazil-ai-fintech-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/brazil-ai-fintech-market-opportunity"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/en/library/brazil-receivables-automation-ai-opportunity</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/brazil-receivables-automation-ai-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/brazil-receivables-automation-ai-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/brazil-receivables-automation-ai-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/brazil-receivables-automation-ai-opportunity"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/brazil-receivables-automation-ai-opportunity</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/brazil-receivables-automation-ai-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/brazil-receivables-automation-ai-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/brazil-receivables-automation-ai-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/brazil-receivables-automation-ai-opportunity"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/brazil-receivables-automation-ai-opportunity</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/brazil-receivables-automation-ai-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/brazil-receivables-automation-ai-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/brazil-receivables-automation-ai-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/brazil-receivables-automation-ai-opportunity"/>
   </url>
   <url>
     <loc>https://avanteventures.com/en/library/brazil-services-economy-opportunity</loc>
@@ -562,6 +742,36 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/data-network-effects-vertical-ai"/>
   </url>
   <url>
+    <loc>https://avanteventures.com/en/library/domain-specific-evals-ai-moat</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/domain-specific-evals-ai-moat"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/domain-specific-evals-ai-moat"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/domain-specific-evals-ai-moat"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/domain-specific-evals-ai-moat"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/domain-specific-evals-ai-moat</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/domain-specific-evals-ai-moat"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/domain-specific-evals-ai-moat"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/domain-specific-evals-ai-moat"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/domain-specific-evals-ai-moat"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/domain-specific-evals-ai-moat</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/domain-specific-evals-ai-moat"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/domain-specific-evals-ai-moat"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/domain-specific-evals-ai-moat"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/domain-specific-evals-ai-moat"/>
+  </url>
+  <url>
     <loc>https://avanteventures.com/en/library/infinity-constellation-ai-studio-thesis</loc>
     <lastmod>2026-06-09</lastmod>
     <changefreq>yearly</changefreq>
@@ -590,6 +800,36 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/infinity-constellation-ai-studio-thesis"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/infinity-constellation-ai-studio-thesis"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/infinity-constellation-ai-studio-thesis"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/en/library/lp-allocation-case-venture-studios</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/lp-allocation-case-venture-studios"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/lp-allocation-case-venture-studios"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/lp-allocation-case-venture-studios"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/lp-allocation-case-venture-studios"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/lp-allocation-case-venture-studios</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/lp-allocation-case-venture-studios"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/lp-allocation-case-venture-studios"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/lp-allocation-case-venture-studios"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/lp-allocation-case-venture-studios"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/lp-allocation-case-venture-studios</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/lp-allocation-case-venture-studios"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/lp-allocation-case-venture-studios"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/lp-allocation-case-venture-studios"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/lp-allocation-case-venture-studios"/>
   </url>
   <url>
     <loc>https://avanteventures.com/en/library/measuring-studio-performance</loc>
@@ -740,6 +980,66 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/venture-builders-brazil-vs-usa-benchmark"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/venture-builders-brazil-vs-usa-benchmark"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/venture-builders-brazil-vs-usa-benchmark"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/en/library/venture-studio-founder-economics-latam</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/venture-studio-founder-economics-latam"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/venture-studio-founder-economics-latam"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/venture-studio-founder-economics-latam"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/venture-studio-founder-economics-latam"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/venture-studio-founder-economics-latam</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/venture-studio-founder-economics-latam"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/venture-studio-founder-economics-latam"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/venture-studio-founder-economics-latam"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/venture-studio-founder-economics-latam"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/venture-studio-founder-economics-latam</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/venture-studio-founder-economics-latam"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/venture-studio-founder-economics-latam"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/venture-studio-founder-economics-latam"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/venture-studio-founder-economics-latam"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/en/library/vertical-ai-studio-portfolio-construction</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/vertical-ai-studio-portfolio-construction"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/vertical-ai-studio-portfolio-construction"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/vertical-ai-studio-portfolio-construction"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/vertical-ai-studio-portfolio-construction"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/vertical-ai-studio-portfolio-construction</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/vertical-ai-studio-portfolio-construction"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/vertical-ai-studio-portfolio-construction"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/vertical-ai-studio-portfolio-construction"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/vertical-ai-studio-portfolio-construction"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/vertical-ai-studio-portfolio-construction</loc>
+    <lastmod>2026-06-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/vertical-ai-studio-portfolio-construction"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/vertical-ai-studio-portfolio-construction"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/vertical-ai-studio-portfolio-construction"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/vertical-ai-studio-portfolio-construction"/>
   </url>
   <url>
     <loc>https://avanteventures.com/en/library/why-venture-studios-win-latam</loc>

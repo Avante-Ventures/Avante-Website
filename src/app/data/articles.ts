@@ -1758,8 +1758,276 @@ const articleSiggaCaseStudy: Article = {
 // ─────────────────────────────────────────────────────────────────────
 
 // === CONTENT-ENGINE:START (managed by content-engine/merge.py — do not edit by hand) ===
-// 13 article(s) generated from content-engine/outputs. Edit the engine, not this block.
+// 23 article(s) generated from content-engine/outputs. Edit the engine, not this block.
 const engineArticles: Article[] = [
+  {
+    "slug": "ai-agents-vs-copilots-b2b",
+    "category": "ai",
+    "type": "Playbook",
+    "readTime": "10 min",
+    "featured": false,
+    "date": "Jun 2026",
+    "datePublished": "2026-06-15",
+    "isPublished": true,
+    "en": {
+      "title": "Agents vs Copilots: The Order That Builds a Moat",
+      "description": "A copilot earns trust and starts the data loop. An agent compounds it. Why a B2B venture ships them in that order, not the reverse.",
+      "sections": [
+        {
+          "paragraphs": [
+            "A copilot and an agent are not two products. They are two points on one autonomy spectrum, and the gap between them is where most B2B value and most B2B risk now sit. A copilot keeps a human in the loop on every step. The human prompts, the model proposes, the human approves and acts. An agent moves the human from supervising steps to supervising outcomes. You hand it a goal, it plans and acts across tools and data, and you check the result.",
+            "The AI agents vs copilots debate usually argues about which is more impressive. The better question for a B2B builder is which one to ship first. At Avante Ventures the answer is the copilot, and not because it is safer for its own sake. The copilot is the wedge that earns trust and starts the data loop. The agent is the destination where that data compounds into pricing power. Ship them in that order, and the moat builds itself. Ship the agent first, and you tend to burn the trust you needed to get there."
+          ]
+        },
+        {
+          "id": "the-spectrum",
+          "heading": "The autonomy spectrum, defined",
+          "level": 2,
+          "paragraphs": [
+            "The cleanest test is not technical. It is this. What does the human supervise? A copilot is an assistant that works alongside a person who still reviews, edits, and executes the final action. It is reactive. It waits to be asked, and nothing happens until a human says go. An agent is given a goal and takes multi-step action toward it without a prompt at each turn, which means the human supervises the outcome instead of the keystrokes.",
+            "One [2025 treatment of the distinction](https://medium.com/@kanerika/ai-copilot-vs-ai-agent-when-to-let-ai-assist-vs-act-autonomously-3ed60438f0b4) puts it well. A copilot speeds up a human's existing tasks. An agent takes over and completes an entire process. The spectrum runs from low-to-medium autonomy and a reactive posture on the copilot end to high autonomy and a proactive one on the agent end.",
+            "This matters to a builder, not just a taxonomist, because the moment a system acts without a human gate on each step, the economics and the failure modes both change. A copilot that suggests a wrong answer wastes a click. An agent that takes a wrong action sends the email, books the trip, or files the claim. Same model underneath. Very different blast radius. AI-native means the model does the judgment work inside the loop either way. The open question is how much of the loop you trust it to close alone."
+          ]
+        },
+        {
+          "id": "adoption-signal",
+          "heading": "What the adoption data says",
+          "level": 2,
+          "paragraphs": [
+            "The copilot is already close to universal. The agent is the frontier that is mostly still unbuilt. Two analyst forecasts fix the moment. On agents, [Gartner predicts](https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025) that roughly 40% of enterprise applications will feature task-specific AI agents by 2026, up from less than 5% in 2025. Gartner Senior Director Analyst Anushree Verma describes the arc as a progression from basic assistants embedded in applications today, to task-specific agents by 2026, to multiagent ecosystems by 2029.",
+            "Gartner is explicit that the assistant is the precursor. In their framing, AI assistants depend on human input and do not operate independently, while task-specific agents begin to act on their own. On the other side of the spectrum, IDC's FutureScape 2026 research finds that over 80% of enterprise applications will embed AI copilot capabilities by the end of 2026, and that agent usage at the largest enterprises is set to rise roughly tenfold with API call loads up about a thousandfold.",
+            "Read together, the two numbers tell a builder where to stand. A capability heading for 80% penetration is becoming table stakes, not a moat. A capability growing from under 5% is where the next decade of pricing power gets decided. Enterprise AI agents in 2026 are the steep part of the curve. The copilot is the door almost everyone already walks through."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Roughly 40% of enterprise applications will feature task-specific AI agents by 2026, up from less than 5% in 2025. Copilots will be embedded in over 80% of enterprise applications by the end of 2026.",
+            "attribution": "Gartner, August 2025, and IDC FutureScape 2026, October 2025"
+          }
+        },
+        {
+          "id": "copilot-as-wedge",
+          "heading": "Why the copilot is the wedge",
+          "level": 2,
+          "paragraphs": [
+            "The copilot earns its way into a workflow, and earning the way in is what starts the data loop. It is a low-trust entry point. It asks a customer to risk a click, not a process, and that low bar is exactly why it gets used. Adoption is the only thing that produces data. Every supervised interaction in a regulation-dense workflow leaves behind a structured, labeled record of what an expert accepted, corrected, or rejected. That exhaust is the raw material of a moat.",
+            "The defensibility logic is well established, and it is sharper than most data-moat talk. According to [Andreessen Horowitz](https://a16z.com/the-empty-promise-of-data-moats/), accumulating proprietary data is defensible mainly when the sources are scanty or reticent to supply more than one vendor. That is the precise profile of a regulation-dense vertical. The data is scarce, hard to assemble, and the holder is reluctant to hand it to a second buyer. A copilot is the instrument that mints exactly that kind of data, one supervised step at a time, while the customer is still comfortable supervising every step."
+          ],
+          "bullets": [
+            "Low entry cost. A copilot asks for a click, not a process, so it clears the trust bar that an autonomous agent cannot clear on day one.",
+            "Data exhaust. Every accept, edit, and reject is a labeled judgment from a domain expert, the scarce input an off-the-shelf model never sees.",
+            "Earned trust on a schedule. A copilot that is visibly right nine times in ten for six months is what later makes a customer willing to delegate the whole task.",
+            "The first turn of the flywheel. Enter with a copilot, mint proprietary data, build the trust and the dataset the agent will need. This is copilot to data to fund at the start."
+          ]
+        },
+        {
+          "id": "agent-as-destination",
+          "heading": "Why the agent is the destination",
+          "level": 2,
+          "paragraphs": [
+            "The agent is where pricing power lives, because autonomous action over a proprietary dataset is hard to commoditize. A copilot competes on convenience, and convenience compresses as every application ships one. Recall the IDC figure. Over 80% of enterprise apps will carry a copilot by the end of 2026. A capability that common is not where margin accumulates. An agent that can be trusted to run a multi-step process over data no rival holds is selling an outcome, not a suggestion, and outcomes priced against a proprietary dataset hold their price.",
+            "This is also the turn where the flywheel compounds into capital. The destination of the copilot to data to fund flywheel is an agent acting on the dataset the copilot built. In a judicial-asset workflow, the agent does not just propose a valuation. It can originate and act on the assets the data identifies. The data stops being a feature and becomes an origination engine. That is the point where a venture moves from selling software to deploying capital against its own signal, and it is reachable only because the copilot earned the data and the trust first. The order is the entire argument."
+          ]
+        },
+        {
+          "id": "autonomy-failure",
+          "heading": "Where premature autonomy backfires",
+          "level": 2,
+          "paragraphs": [
+            "Most enterprise workflows are not ready for full autonomy, and shipping an agent too early fails in a way a copilot never does. The market is already pricing this. [Gartner predicts](https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027) that over 40% of agentic AI projects will be canceled by the end of 2027, on escalating costs, unclear business value, and weak risk controls. Verma is blunt about the state of play. Most agentic AI projects today are early-stage experiments driven by hype and often misapplied. Gartner also flags rampant agent washing, estimating that of thousands of vendors claiming agentic AI, only about 130 offer the genuine article.",
+            "The failure is structural. An agent fails silently and expensively when a step goes wrong, because no human was watching that step. A copilot's mistake is caught at the gate. An agent's mistake executes. And readiness is mostly a data problem. Gartner's wider work on AI outcomes finds only about 28% of AI use cases fully meet their ROI expectations, roughly 20% fail outright, and 85% of failures trace to poor or missing data. An agent acting on thin or wrong data does not hesitate. It acts, at scale, on the wrong thing.",
+            "For a B2B venture there is a specific relationship cost. Ship an agent before you have earned the data and the trust to supervise it well, and you erode the customer relationship the whole thesis depends on. A customer who watched an autonomous system make a costly mistake does not grant more autonomy. They revoke it. The premature agent does not just fail a task. It burns the trust the copilot would have built, and trust is the scarce input the flywheel runs on."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Before you ship autonomy, ask one question. Has the copilot earned the trust and the data to supervise the agent well? If not, the agent will fail silently, at scale, on the wrong thing.",
+            "attribution": "The Avante sequencing test"
+          }
+        },
+        {
+          "id": "how-avante",
+          "heading": "How Avante sequences it",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America. It launches 3-4 ventures per year through a six-stage system: Research, Partner, Build, Traction, Revenue, Compound. It deploys $500K-1.5M per venture and retains co-founder economics. The benchmark behind the model is GSSN's finding that studio IRR runs about ~50% versus ~19% for traditional VC, roughly 2.5x. The structural edge is domain operators with 10+ years of Brazilian-market scar tissue, paired with a Silicon Valley playbook and first-ticket capital, assembled on day one.",
+            "Brazil suits the copilot-then-agent sequence because the workflows are both vast and newly ready. Services account for roughly 70% of Brazilian GDP, a deep surface of under-digitized, regulation-dense work where a copilot can mint data no incumbent holds. And the on-ramp just opened. The share of Brazilian industrial firms using AI rose from 16.9% in 2022 to 41.9% in 2024, more than doubling in two years, yet roughly three in four AI-adopting firms still sit at experimental maturity. Fast adoption, shallow operation. That gap is a market full of copilots that have not yet earned their way to agents.",
+            "The studio model is what makes the discipline affordable. Solving company plumbing once routes roughly $300K-500K of effective capital per venture into product and traction instead of overhead, which buys the copilot the runway to reach usage density before the data thesis or the agent has to prove itself. Operating partners stay engaged through the first revenue milestone, the exact window where the copilot has to earn trust before any autonomy ships. A studio venture launches 6-9 months ahead of a comparable standalone team. That is 6-9 months more data and more earned trust before the agent is asked to act. The companies that win the agent era will be the ones that were patient enough to ship the copilot first. Read the model at [/why-avante](/why-avante) and the operating rules at [/principles](/principles)."
+          ]
+        }
+      ]
+    },
+    "pt": {
+      "title": "Agentes vs Copilots: a Ordem que Constrói um Moat",
+      "description": "Um copilot ganha confiança e inicia o loop de dados. Um agente o multiplica. Por que uma venture B2B lança nessa ordem, e não no contrário.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Um copilot e um agente não são dois produtos. São dois pontos de um mesmo espectro de autonomia, e a distância entre eles é onde mora hoje a maior parte do valor e do risco em B2B. O copilot mantém o humano no circuito a cada passo. A pessoa pede, o modelo propõe, a pessoa aprova e executa. O agente tira o humano da supervisão de passos e o coloca na supervisão de resultados. Você entrega um objetivo, ele planeja e age sobre ferramentas e dados, e você confere o que saiu no fim.",
+            "O debate agentes de IA vs copilots quase sempre discute qual é o mais impressionante. A pergunta que importa para quem constrói em B2B é qual lançar primeiro. Na Avante Ventures a resposta é o copilot, e não por ser mais seguro em si. O copilot é a cunha que ganha confiança e abre o loop de dados. O agente é o destino onde esse dado se transforma em poder de precificação. Lance nessa ordem e o moat se constrói sozinho. Lance o agente primeiro e você tende a queimar a confiança de que precisava para chegar lá."
+          ]
+        },
+        {
+          "id": "the-spectrum",
+          "heading": "O espectro de autonomia, definido",
+          "level": 2,
+          "paragraphs": [
+            "O teste mais limpo não é técnico. É este. O que o humano supervisiona? O copilot é um assistente que trabalha ao lado de uma pessoa que ainda revisa, edita e executa a ação final. Ele é reativo. Espera ser acionado, e nada acontece até alguém dar a ordem. O agente recebe um objetivo e age em múltiplos passos sem um comando a cada turno, o que move o humano para a supervisão do resultado, não das teclas.",
+            "Um [tratamento de 2025 sobre a distinção](https://medium.com/@kanerika/ai-copilot-vs-ai-agent-when-to-let-ai-assist-vs-act-autonomously-3ed60438f0b4) resume bem. O copilot acelera as tarefas que o humano já faz. O agente assume e completa um processo inteiro. O espectro vai da autonomia baixa a média e da postura reativa, na ponta do copilot, à autonomia alta e proativa, na ponta do agente.",
+            "Isso importa para quem constrói, não só para quem classifica, porque no instante em que um sistema age sem um portão humano a cada passo, a economia e os modos de falha mudam. Um copilot que sugere uma resposta errada custa um clique. Um agente que toma uma ação errada manda o e-mail, fecha a viagem ou protocola o pedido. O mesmo modelo por baixo. Raio de impacto muito diferente. Ser AI-native significa que o modelo faz o trabalho de julgamento dentro do loop nos dois casos. A pergunta aberta é quanto do loop você confia a ele para fechar sozinho."
+          ]
+        },
+        {
+          "id": "adoption-signal",
+          "heading": "O que os dados de adoção dizem",
+          "level": 2,
+          "paragraphs": [
+            "O copilot já é quase universal. O agente é a fronteira ainda em grande parte por construir. Duas projeções de analistas fixam o momento. Sobre agentes, o [Gartner projeta](https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025) que cerca de 40% das aplicações corporativas terão agentes de IA de tarefa específica até 2026, ante menos de 5% em 2025. A analista sênior do Gartner, Anushree Verma, descreve o arco como uma progressão dos assistentes básicos embarcados nas aplicações hoje, para agentes de tarefa específica até 2026, e para ecossistemas multiagentes até 2029.",
+            "O Gartner é explícito ao dizer que o assistente é o precursor. Na leitura deles, os assistentes de IA dependem de input humano e não operam de forma independente, enquanto os agentes de tarefa específica começam a agir por conta própria. Na outra ponta do espectro, a pesquisa FutureScape 2026 da IDC aponta que mais de 80% das aplicações corporativas terão recursos de copilot de IA embarcados até o fim de 2026, e que o uso de agentes nas maiores empresas deve crescer cerca de dez vezes, com a carga de chamadas de API subindo aproximadamente mil vezes.",
+            "Lidos juntos, os dois números mostram a quem constrói onde se posicionar. Uma capacidade rumo a 80% de penetração vira custo de entrada, não moat. Uma capacidade que sai de menos de 5% é onde se decide a próxima década de poder de precificação. Os agentes de IA empresariais em 2026 são a parte íngreme da curva. O copilot é a porta por onde quase todos já passam."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Cerca de 40% das aplicações corporativas terão agentes de IA de tarefa específica até 2026, ante menos de 5% em 2025. Os copilots estarão embarcados em mais de 80% das aplicações corporativas até o fim de 2026.",
+            "attribution": "Gartner, agosto de 2025, e IDC FutureScape 2026, outubro de 2025"
+          }
+        },
+        {
+          "id": "copilot-as-wedge",
+          "heading": "Por que o copilot é a cunha",
+          "level": 2,
+          "paragraphs": [
+            "O copilot conquista seu lugar dentro de um fluxo de trabalho, e conquistar esse lugar é o que abre o loop de dados. Ele é um ponto de entrada de baixa confiança. Pede ao cliente que arrisque um clique, não um processo, e essa barreira baixa é exatamente o motivo de ser usado. Adoção é a única coisa que produz dado. Cada interação supervisionada em um fluxo denso de regulação deixa para trás um registro estruturado e rotulado do que um especialista aceitou, corrigiu ou rejeitou. Esse rastro é a matéria-prima de um moat.",
+            "A lógica de defensibilidade é bem estabelecida, e é mais afiada do que a conversa comum sobre dado como barreira. Segundo a [Andreessen Horowitz](https://a16z.com/the-empty-promise-of-data-moats/), acumular dado proprietário é defensável sobretudo quando as fontes são escassas ou relutantes em fornecer a mais de um fornecedor. Esse é o perfil exato de um vertical denso de regulação. O dado é raro, difícil de montar, e quem o detém reluta em entregá-lo a um segundo comprador. O copilot é o instrumento que cunha exatamente esse tipo de dado, um passo supervisionado por vez, enquanto o cliente ainda se sente confortável supervisionando cada passo."
+          ],
+          "bullets": [
+            "Custo de entrada baixo. O copilot pede um clique, não um processo, então passa pela barreira de confiança que um agente autônomo não vence no primeiro dia.",
+            "Rastro de dado. Cada aceite, edição e rejeição é um julgamento rotulado de um especialista de domínio, o insumo escasso que um modelo de prateleira nunca vê.",
+            "Confiança conquistada no tempo certo. Um copilot visivelmente certo nove vezes em dez por seis meses é o que depois faz o cliente disposto a delegar a tarefa inteira.",
+            "A primeira volta do flywheel. Entre com um copilot, cunhe dado proprietário, construa a confiança e a base que o agente vai exigir. É o flywheel copilot, dado, capital no seu início."
+          ]
+        },
+        {
+          "id": "agent-as-destination",
+          "heading": "Por que o agente é o destino",
+          "level": 2,
+          "paragraphs": [
+            "O agente é onde mora o poder de precificação, porque ação autônoma sobre uma base proprietária é difícil de comoditizar. O copilot compete em conveniência, e conveniência comprime à medida que toda aplicação passa a embarcar um. Lembre do número da IDC. Mais de 80% das aplicações corporativas terão um copilot até o fim de 2026. Uma capacidade tão comum não é onde a margem se acumula. Um agente em quem se pode confiar para rodar um processo de múltiplos passos sobre dados que nenhum rival possui vende um resultado, não uma sugestão, e resultados precificados contra uma base proprietária sustentam o preço.",
+            "É também a volta em que o flywheel se transforma em capital. O destino do flywheel copilot, dado, capital é um agente agindo sobre a base que o copilot construiu. Em um fluxo de ativos judiciais, o agente não apenas propõe uma avaliação. Ele pode originar e agir sobre os ativos que o dado identifica. O dado deixa de ser uma funcionalidade e vira um motor de originação. É o ponto em que uma venture sai de vender software para alocar capital contra o próprio sinal, e só se chega lá porque o copilot conquistou o dado e a confiança antes. A ordem é o argumento inteiro."
+          ]
+        },
+        {
+          "id": "autonomy-failure",
+          "heading": "Onde a autonomia prematura sai pela culatra",
+          "level": 2,
+          "paragraphs": [
+            "A maioria dos fluxos corporativos não está pronta para autonomia plena, e lançar um agente cedo demais falha de um jeito que o copilot nunca falha. O mercado já está precificando isso. O [Gartner projeta](https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027) que mais de 40% dos projetos de IA agêntica serão cancelados até o fim de 2027, por custos crescentes, valor de negócio pouco claro e controles de risco frágeis. Verma é direta sobre o estado das coisas. A maioria dos projetos de IA agêntica hoje são experimentos em estágio inicial, movidos por hype e muitas vezes mal aplicados. O Gartner ainda aponta o agent washing generalizado, estimando que, dos milhares de fornecedores que se dizem agênticos, apenas cerca de 130 entregam o artigo genuíno.",
+            "A falha é estrutural. Um agente falha de forma silenciosa e cara quando um passo dá errado, porque nenhum humano estava observando aquele passo. O erro de um copilot é barrado no portão. O erro de um agente é executado. E a prontidão é, em grande parte, um problema de dado. O trabalho mais amplo do Gartner sobre resultados de IA aponta que apenas cerca de 28% dos casos de uso de IA cumprem plenamente suas expectativas de ROI, cerca de 20% falham por completo, e 85% das falhas vêm de dado ruim ou ausente. Um agente agindo sobre dado raso ou errado não hesita. Ele age, em escala, sobre a coisa errada.",
+            "Para uma venture B2B há um custo de relacionamento específico. Lance um agente antes de ter conquistado o dado e a confiança para supervisioná-lo bem, e você corrói a relação com o cliente de que toda a tese depende. Um cliente que viu um sistema autônomo cometer um erro caro não concede mais autonomia. Ele a revoga. O agente prematuro não apenas falha em uma tarefa. Ele queima a confiança que o copilot teria construído, e confiança é o insumo escasso de que o flywheel vive."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Antes de lançar autonomia, faça uma pergunta. O copilot já conquistou a confiança e o dado para supervisionar bem o agente? Se não, o agente vai falhar em silêncio, em escala, sobre a coisa errada.",
+            "attribution": "O teste de sequenciamento da Avante"
+          }
+        },
+        {
+          "id": "how-avante",
+          "heading": "Como a Avante sequencia isso",
+          "level": 2,
+          "paragraphs": [
+            "A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina. Lança 3-4 ventures por ano por um sistema de seis estágios: Research, Partner, Build, Traction, Revenue, Compound. Aporta $500K-1.5M por venture e mantém economia de co-founder. O benchmark por trás do modelo é o achado da GSSN de que o IRR de studio fica em torno de ~50% contra ~19% do venture capital tradicional, cerca de 2,5x. A vantagem estrutural são operadores de domínio com mais de 10 anos de cicatriz no mercado brasileiro, somados a um playbook de Vale do Silício e capital de primeiro cheque, montados no dia um.",
+            "O Brasil combina com a sequência copilot e depois agente porque os fluxos de trabalho são ao mesmo tempo vastos e recém-prontos. Os serviços respondem por cerca de 70% do PIB brasileiro, uma superfície profunda de trabalho pouco digitalizado e denso de regulação, onde um copilot pode cunhar dado que nenhum incumbente possui. E a rampa de entrada acabou de abrir. A fatia de empresas industriais brasileiras usando IA subiu de 16,9% em 2022 para 41,9% em 2024, mais que dobrando em dois anos, mas cerca de três em cada quatro empresas que adotam IA ainda estão em maturidade experimental. Adoção rápida, operação rasa. Essa lacuna é um mercado cheio de copilots que ainda não conquistaram seu caminho até os agentes.",
+            "O modelo de studio é o que torna a disciplina acessível. Resolver o encanamento da empresa uma vez direciona cerca de $300K-500K de capital efetivo por venture para produto e tração em vez de overhead, o que dá ao copilot o fôlego para alcançar densidade de uso antes de a tese de dado ou o agente terem de se provar. Os operating partners seguem engajados até o primeiro marco de receita, a janela exata em que o copilot precisa conquistar confiança antes de qualquer autonomia ir ao ar. Uma venture de studio nasce 6-9 meses à frente de um time autônomo comparável. São 6-9 meses a mais de dado e de confiança conquistada antes de o agente ser chamado a agir. As empresas que vencerem a era dos agentes serão as que tiveram paciência de lançar o copilot primeiro. Veja o modelo em [/why-avante](/why-avante) e as regras de operação em [/principles](/principles)."
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Agentes vs Copilots: el Orden que Construye un Moat",
+      "description": "Un copilot gana confianza e inicia el loop de datos. Un agente lo multiplica. Por qué una venture B2B lanza en ese orden, y no al revés.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Un copilot y un agente no son dos productos. Son dos puntos de un mismo espectro de autonomía, y la distancia entre ellos es donde hoy vive la mayor parte del valor y del riesgo en B2B. El copilot mantiene al humano en el circuito en cada paso. La persona pide, el modelo propone, la persona aprueba y ejecuta. El agente saca al humano de la supervisión de pasos y lo lleva a la supervisión de resultados. Usted le entrega un objetivo, él planifica y actúa sobre herramientas y datos, y usted revisa lo que salió al final.",
+            "El debate agentes de IA vs copilots casi siempre discute cuál es el más impresionante. La pregunta que importa para quien construye en B2B es cuál lanzar primero. En Avante Ventures la respuesta es el copilot, y no por ser más seguro en sí mismo. El copilot es la cuña que gana confianza e inicia el loop de datos. El agente es el destino donde ese dato se convierte en poder de fijación de precios. Lance en ese orden y el moat se construye solo. Lance el agente primero y tiende a quemar la confianza que necesitaba para llegar ahí."
+          ]
+        },
+        {
+          "id": "the-spectrum",
+          "heading": "El espectro de autonomía, definido",
+          "level": 2,
+          "paragraphs": [
+            "La prueba más limpia no es técnica. Es esta. ¿Qué supervisa el humano? El copilot es un asistente que trabaja al lado de una persona que todavía revisa, edita y ejecuta la acción final. Es reactivo. Espera a ser activado, y nada ocurre hasta que alguien da la orden. El agente recibe un objetivo y actúa en múltiples pasos sin un comando en cada turno, lo que mueve al humano a supervisar el resultado, no las teclas.",
+            "Un [tratamiento de 2025 sobre la distinción](https://medium.com/@kanerika/ai-copilot-vs-ai-agent-when-to-let-ai-assist-vs-act-autonomously-3ed60438f0b4) lo resume bien. El copilot acelera las tareas que el humano ya hace. El agente asume y completa un proceso entero. El espectro va de la autonomía baja a media y la postura reactiva, en el extremo del copilot, a la autonomía alta y proactiva, en el extremo del agente.",
+            "Esto importa para quien construye, no solo para quien clasifica, porque en el instante en que un sistema actúa sin una compuerta humana en cada paso, la economía y los modos de falla cambian. Un copilot que sugiere una respuesta equivocada cuesta un clic. Un agente que toma una acción equivocada manda el correo, cierra el viaje o radica la solicitud. El mismo modelo por debajo. Un radio de impacto muy distinto. Ser AI-native significa que el modelo hace el trabajo de juicio dentro del loop en ambos casos. La pregunta abierta es cuánto del loop usted confía en que cierre solo."
+          ]
+        },
+        {
+          "id": "adoption-signal",
+          "heading": "Qué dicen los datos de adopción",
+          "level": 2,
+          "paragraphs": [
+            "El copilot ya es casi universal. El agente es la frontera que en gran parte aún está por construir. Dos proyecciones de analistas fijan el momento. Sobre agentes, [Gartner proyecta](https://www.gartner.com/en/newsroom/press-releases/2025-08-26-gartner-predicts-40-percent-of-enterprise-apps-will-feature-task-specific-ai-agents-by-2026-up-from-less-than-5-percent-in-2025) que cerca del 40% de las aplicaciones empresariales tendrán agentes de IA de tarea específica hacia 2026, frente a menos del 5% en 2025. La analista senior de Gartner, Anushree Verma, describe el arco como una progresión de los asistentes básicos embebidos en las aplicaciones hoy, hacia agentes de tarea específica para 2026, y hacia ecosistemas multiagente para 2029.",
+            "Gartner es explícito al decir que el asistente es el precursor. En su lectura, los asistentes de IA dependen de input humano y no operan de forma independiente, mientras que los agentes de tarea específica empiezan a actuar por cuenta propia. En el otro extremo del espectro, la investigación FutureScape 2026 de IDC encuentra que más del 80% de las aplicaciones empresariales tendrán capacidades de copilot de IA embebidas hacia el fin de 2026, y que el uso de agentes en las mayores empresas crecería cerca de diez veces, con la carga de llamadas de API subiendo aproximadamente mil veces.",
+            "Leídos juntos, los dos números le muestran a quien construye dónde pararse. Una capacidad camino al 80% de penetración se vuelve costo de entrada, no moat. Una capacidad que sale de menos del 5% es donde se decide la próxima década de poder de fijación de precios. Los agentes de IA empresariales en 2026 son la parte empinada de la curva. El copilot es la puerta por la que casi todos ya pasan."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Cerca del 40% de las aplicaciones empresariales tendrán agentes de IA de tarea específica hacia 2026, frente a menos del 5% en 2025. Los copilots estarán embebidos en más del 80% de las aplicaciones empresariales hacia el fin de 2026.",
+            "attribution": "Gartner, agosto de 2025, e IDC FutureScape 2026, octubre de 2025"
+          }
+        },
+        {
+          "id": "copilot-as-wedge",
+          "heading": "Por qué el copilot es la cuña",
+          "level": 2,
+          "paragraphs": [
+            "El copilot se gana su lugar dentro de un flujo de trabajo, y ganarse ese lugar es lo que abre el loop de datos. Es un punto de entrada de baja confianza. Le pide al cliente que arriesgue un clic, no un proceso, y esa barrera baja es exactamente la razón por la que se usa. La adopción es lo único que produce datos. Cada interacción supervisada en un flujo denso de regulación deja atrás un registro estructurado y etiquetado de lo que un experto aceptó, corrigió o rechazó. Ese rastro es la materia prima de un moat.",
+            "La lógica de defensibilidad está bien establecida, y es más afilada que la charla común sobre el dato como barrera. Según [Andreessen Horowitz](https://a16z.com/the-empty-promise-of-data-moats/), acumular dato propietario es defendible sobre todo cuando las fuentes son escasas o reacias a entregarlo a más de un proveedor. Ese es el perfil exacto de un vertical denso de regulación. El dato es raro, difícil de armar, y quien lo posee es reacio a entregarlo a un segundo comprador. El copilot es el instrumento que acuña justo ese tipo de dato, un paso supervisado a la vez, mientras el cliente todavía se siente cómodo supervisando cada paso."
+          ],
+          "bullets": [
+            "Costo de entrada bajo. El copilot pide un clic, no un proceso, así que pasa la barrera de confianza que un agente autónomo no supera el primer día.",
+            "Rastro de datos. Cada aceptación, edición y rechazo es un juicio etiquetado de un experto de dominio, el insumo escaso que un modelo de estantería nunca ve.",
+            "Confianza ganada en el momento justo. Un copilot visiblemente acertado nueve de cada diez veces durante seis meses es lo que después hace que el cliente esté dispuesto a delegar la tarea entera.",
+            "La primera vuelta del flywheel. Entre con un copilot, acuñe dato propietario, construya la confianza y la base que el agente va a exigir. Es el flywheel copilot, dato, capital en su inicio."
+          ]
+        },
+        {
+          "id": "agent-as-destination",
+          "heading": "Por qué el agente es el destino",
+          "level": 2,
+          "paragraphs": [
+            "El agente es donde vive el poder de fijación de precios, porque la acción autónoma sobre una base propietaria es difícil de comoditizar. El copilot compite en conveniencia, y la conveniencia se comprime a medida que toda aplicación pasa a embeber uno. Recuerde el número de IDC. Más del 80% de las aplicaciones empresariales tendrán un copilot hacia el fin de 2026. Una capacidad tan común no es donde se acumula el margen. Un agente en quien se puede confiar para correr un proceso de múltiples pasos sobre datos que ningún rival posee vende un resultado, no una sugerencia, y los resultados fijados contra una base propietaria sostienen su precio.",
+            "Es también la vuelta en la que el flywheel se convierte en capital. El destino del flywheel copilot, dato, capital es un agente actuando sobre la base que el copilot construyó. En un flujo de activos judiciales, el agente no solo propone una valoración. Puede originar y actuar sobre los activos que el dato identifica. El dato deja de ser una funcionalidad y se vuelve un motor de originación. Es el punto en que una venture pasa de vender software a asignar capital contra su propia señal, y solo se llega ahí porque el copilot se ganó el dato y la confianza antes. El orden es el argumento entero."
+          ]
+        },
+        {
+          "id": "autonomy-failure",
+          "heading": "Dónde la autonomía prematura es contraproducente",
+          "level": 2,
+          "paragraphs": [
+            "La mayoría de los flujos empresariales no están listos para la autonomía plena, y lanzar un agente demasiado pronto falla de un modo en que el copilot nunca falla. El mercado ya lo está poniendo en precio. [Gartner proyecta](https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027) que más del 40% de los proyectos de IA agéntica serán cancelados hacia el fin de 2027, por costos crecientes, valor de negocio poco claro y controles de riesgo débiles. Verma es directa sobre el estado de las cosas. La mayoría de los proyectos de IA agéntica hoy son experimentos en etapa temprana, movidos por el hype y a menudo mal aplicados. Gartner además señala el agent washing generalizado, estimando que, de los miles de proveedores que se dicen agénticos, solo cerca de 130 entregan el artículo genuino.",
+            "La falla es estructural. Un agente falla de forma silenciosa y cara cuando un paso sale mal, porque ningún humano estaba observando ese paso. El error de un copilot se detiene en la compuerta. El error de un agente se ejecuta. Y la preparación es, en gran parte, un problema de datos. El trabajo más amplio de Gartner sobre resultados de IA encuentra que solo cerca del 28% de los casos de uso de IA cumplen plenamente sus expectativas de ROI, cerca del 20% fallan por completo, y el 85% de las fallas vienen de dato malo o ausente. Un agente actuando sobre dato pobre o equivocado no duda. Actúa, a escala, sobre lo equivocado.",
+            "Para una venture B2B hay un costo de relación específico. Lance un agente antes de haberse ganado el dato y la confianza para supervisarlo bien, y erosiona la relación con el cliente de la que toda la tesis depende. Un cliente que vio a un sistema autónomo cometer un error caro no concede más autonomía. La revoca. El agente prematuro no solo falla en una tarea. Quema la confianza que el copilot habría construido, y la confianza es el insumo escaso del que vive el flywheel."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Antes de lanzar autonomía, hágase una pregunta. ¿El copilot ya se ganó la confianza y el dato para supervisar bien al agente? Si no, el agente fallará en silencio, a escala, sobre lo equivocado.",
+            "attribution": "La prueba de secuenciamiento de Avante"
+          }
+        },
+        {
+          "id": "how-avante",
+          "heading": "Cómo Avante lo secuencia",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina. Lanza 3-4 ventures por año mediante un sistema de seis etapas: Research, Partner, Build, Traction, Revenue, Compound. Despliega $500K-1.5M por venture y retiene economía de co-founder. El benchmark detrás del modelo es el hallazgo de GSSN de que el IRR de studio ronda el ~50% frente al ~19% del venture capital tradicional, cerca de 2,5x. La ventaja estructural son operadores de dominio con más de 10 años de cicatriz en el mercado brasileño, sumados a un playbook de Silicon Valley y capital de primer cheque, ensamblados el día uno.",
+            "Brasil encaja con la secuencia copilot y luego agente porque los flujos de trabajo son a la vez vastos y recién listos. Los servicios representan cerca del 70% del PIB brasileño, una superficie profunda de trabajo poco digitalizado y denso de regulación, donde un copilot puede acuñar dato que ningún incumbente posee. Y la rampa de entrada acaba de abrirse. La porción de empresas industriales brasileñas que usan IA subió del 16,9% en 2022 al 41,9% en 2024, más que duplicándose en dos años, pero cerca de tres de cada cuatro empresas que adoptan IA todavía están en madurez experimental. Adopción rápida, operación superficial. Esa brecha es un mercado lleno de copilots que aún no se han ganado su camino hacia los agentes.",
+            "El modelo de studio es lo que vuelve asequible la disciplina. Resolver la plomería de la empresa una sola vez dirige cerca de $300K-500K de capital efectivo por venture hacia producto y tracción en lugar de overhead, lo que le da al copilot el aire para alcanzar densidad de uso antes de que la tesis de dato o el agente tengan que probarse. Los operating partners siguen comprometidos hasta el primer hito de ingresos, la ventana exacta en que el copilot debe ganarse la confianza antes de que cualquier autonomía salga al aire. Una venture de studio nace 6-9 meses por delante de un equipo autónomo comparable. Son 6-9 meses más de dato y de confianza ganada antes de que se le pida al agente actuar. Las empresas que ganen la era de los agentes serán las que tuvieron la paciencia de lanzar el copilot primero. Vea el modelo en [/why-avante](/why-avante) y las reglas de operación en [/principles](/principles)."
+          ]
+        }
+      ]
+    }
+  },
   {
     "slug": "ai-infrastructure-cost-curve-latam",
     "category": "brazil",
@@ -2334,6 +2602,1392 @@ const engineArticles: Article[] = [
             "La ventaja estructural es el modelo de studio mismo. Los venture studios producen cerca de ~50% IRR contra un estándar de industria de ~19% para el VC tradicional, según la Global Startup Studio Network, cerca de 2,5x el IRR del VC tradicional en horizontes realistas. Ese ~50% es el benchmark del modelo de studio, no un retorno ya realizado. El modelo operativo está hecho para eficiencia de capital, que es exactamente lo que la curva de costo recompensa. La estructura completa está en [Cómo Funcionan las Economías de Socio Operador](/library/operating-partner-economics).",
             "Aquí está la parte que refleja el LLMflation. Resolver la plomería de la empresa una vez enruta cerca de $300K-500K de capital efectivo por venture hacia producto y tracción en vez de overhead. Haga la cosa cara una vez, de forma central, y deje que cada venture lance enjuto. La misma lógica que tira el costo de inferencia 10x al año, aplicada a la empresa misma.",
             "El mercado respalda el foco. Las startups brasileñas levantaron $2,1B en 2025, un alza de 10,5% sobre los $1,9B de 2024, según [Crunchbase](https://news.crunchbase.com/venture/vcs-bullish-latam-startup-funding-rebounds-2025/). Los servicios representan cerca del 70% del PIB brasileño, con baja penetración de software. La ventaja estructural son operadores de dominio con más de 10 años de cicatrices del mercado brasileño, sumados a un playbook de Silicon Valley y capital de primer cheque, montados el día uno. Puede leer la tesis completa en [/why-avante](/why-avante). La inferencia barata es el viento a favor. Nunca fue la empresa."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "ai-wrapper-trap-defensible-ai-native",
+    "category": "ai",
+    "type": "Playbook",
+    "readTime": "10 min",
+    "featured": false,
+    "date": "Jun 2026",
+    "datePublished": "2026-06-15",
+    "isPublished": true,
+    "en": {
+      "title": "The Wrapper Trap: When AI-Native Is Actually Defensible",
+      "description": "A system prompt is not an AI wrapper moat. But a wrapper is not doomed either. Here is the line between thin and thick, and how the data flywheel crosses it.",
+      "sections": [
+        {
+          "paragraphs": [
+            "A system prompt over a foundation-model API is not a moat, and in February 2026 a Google VP put a date on the death of the thin wrapper. The question is no longer whether AI wrappers are defensible in the abstract. It is whether yours owns anything the next model release cannot erase.",
+            "Here is the honest version, because the skeptic is mostly right. A wrapper is not doomed by being a wrapper. It is doomed by being thin. AI-native defensibility comes from owning at least one compounding asset a competitor with the same model and more money cannot copy by next quarter. At Avante Ventures we build for that asset from day one, because the model itself is no longer something you can own."
+          ]
+        },
+        {
+          "id": "the-critique",
+          "heading": "The thin-wrapper critique is correct",
+          "level": 2,
+          "paragraphs": [
+            "The people who sell the models now say the quiet part out loud. On February 21, 2026, [TechCrunch reported](https://techcrunch.com/2026/02/21/google-vp-warns-that-two-types-of-ai-startups-may-not-survive/) that Darren Mowry, the VP running Google's global startup organization across Cloud, DeepMind, and Alphabet, warned that two kinds of AI startups may not survive. The first is the thin wrapper.",
+            "His words are worth quoting exactly. If you are counting on the back-end model to do all the work and you are almost white-labeling that model, the industry does not have a lot of patience for that anymore. Wrapping very thin intellectual property around Gemini or GPT-5 is the trap. The prescription was a phrase worth keeping. Startups need deep, wide moats. His second doomed category was the aggregator, because users want intellectual property built in, not a routing layer the model providers will absorb into their own enterprise features.",
+            "The economics behind the warning are margin compression rolling downhill. [TechCrunch reported in September 2025](https://techcrunch.com/2025/09/14/selling-coffee-beans-to-starbucks-how-the-ai-boom-could-leave-ais-biggest-companies-behind/) that application teams now treat foundation models as a commodity to swap in and out at will. That feels like leverage until you notice every competitor can swap in the same commodity. One founder called the endgame for undifferentiated players like selling coffee beans to Starbucks. Essential to the cup, paid almost nothing for it."
+          ],
+          "callout": {
+            "kind": "quote",
+            "text": "If you're really just counting on the back-end model to do all the work and you're almost white-labeling that model, the industry doesn't have a lot of patience for that anymore.",
+            "attribution": "Darren Mowry, VP, Google global startup organization, TechCrunch, February 2026"
+          }
+        },
+        {
+          "id": "thin-vs-thick",
+          "heading": "Thin versus thick, defined",
+          "level": 2,
+          "paragraphs": [
+            "Thinness has nothing to do with how much code you wrote. It is about what compounds while you sleep. A thick venture owns at least one asset that gets stronger with use and that a well-funded rival cannot rebuild by copying your interface. Everything else is decoration on a rented engine.",
+            "Start with why the engine cannot be the moat. Inference is deflating faster than almost any technology in history. According to [a16z](https://a16z.com/llmflation-llm-inference-cost/), for an LLM of equivalent performance the cost is dropping 10x every year, a factor of 1,000 in three years. GPT-3-level quality went from about $60 per million tokens in late 2021 to roughly $0.06 by late 2024. A capability that gets 10x cheaper every year, available to everyone from multiple vendors, is a utility. You do not build a moat on a utility. You build it on what the utility is bolted to."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "For an LLM of equivalent performance, inference cost is falling 10x every year, a factor of 1,000 in three years. GPT-3-level quality dropped from about $60 per million tokens to roughly $0.06.",
+            "attribution": "a16z, Welcome to LLMflation, November 2024"
+          }
+        },
+        {
+          "id": "the-three-moats",
+          "heading": "The three sources of thickness",
+          "level": 3,
+          "paragraphs": [
+            "Durable defensibility lives in three places, listed in ascending order of strength. Each one carries a failure test, and most founders quietly fail it.",
+            "The reason network effects matter most is the math. NFX, in its [Network Effects Manual](https://www.nfx.com/post/network-effects-manual), credits network effects with roughly 70% of the value created by technology companies since 1994, and rates them the strongest of the four real defensibilities. A proprietary data flywheel is how an AI-native venture builds one, instead of merely claiming it has one."
+          ],
+          "bullets": [
+            "Proprietary data flywheel. A stock of data is not a moat, a flow is. a16z's The Empty Promise of Data Moats shows there is generally no inherent network effect from merely holding more data, and that in a support-chatbot example past roughly 40% query coverage there is no advantage to collecting more. The moat is a loop where each use produces data that measurably improves the product faster than the pile decays.",
+            "Domain-specific evaluations. The hardest asset to copy is a graded definition of what correct means in a regulated, judgment-heavy domain. A general model can draft a clause or price a risk. Knowing which output is right, wrong, or quietly dangerous in a specific Brazilian legal or insurance context is encoded judgment that took operators years to earn. The model vendor cannot ship your evals for you.",
+            "Workflow lock-in. Hamilton Helmer's 7 Powers calls this Process Power and Switching Costs. Once an AI product becomes the system of record for a regulated process, leaving means re-validating a compliance trail, retraining staff, and re-integrating adjacent systems. The cost of leaving is the moat. This is why vertical AI beats horizontal. A general assistant has no workflow to anchor."
+          ]
+        },
+        {
+          "id": "flywheel-crosses",
+          "heading": "How the flywheel crosses the line",
+          "level": 2,
+          "paragraphs": [
+            "The flywheel is the machine that turns a thin entry wedge into a thick position over time. This is the copilot to data to fund flywheel. Ship an AI copilot that does real work inside one vertical. The work generates proprietary data no one else is sitting on. That data sharpens domain evaluations and improves the product, which deepens workflow lock-in, which produces more data. The copilot is the thin-looking wedge on day one. The loop is what makes it thick by year two.",
+            "The 2025 evidence that this is the real dividing line comes from emerging markets, not Silicon Valley. According to [Insignia Ventures](https://review.insignia.vc/2025/04/15/moats-ai/), AI has made building easier and defending exponentially harder, with software reaching $1 million ARR faster than ever before. Their case studies land on these exact mechanisms. A used-car platform compounds a data flywheel from 160-plus data points per vehicle. A lender that pairs a proprietary ERP with financing held a 3% non-performing-loan rate through COVID while the broader fintech industry ran 20 to 30%. Every one of them rented the same model. None of them rented the flywheel."
+          ]
+        },
+        {
+          "id": "the-self-deception",
+          "heading": "The story founders tell that is not true",
+          "level": 2,
+          "paragraphs": [
+            "The most common pitch in AI is a thick-moat story narrated over a thin product. Founders describe a data network effect they have not built, a flywheel that has not reached escape velocity, and a defensibility that lives entirely in the future tense. The honest failure mode has two parts, and they feed each other.",
+            "First, the data loop starves because the company has no distribution. A feedback loop only compounds if enough users feed it. Without a channel to acquire and keep them, a better-distributed competitor with a worse dataset wins, because their worse dataset is growing while yours sits still. Second, proprietary data with no way to keep collecting it is not a moat, it is a stock that decays. A dataset frozen at launch gets lapped by a product that improves with every use.",
+            "The swap test is the discipline that cuts through the story. If you replaced your model vendor tomorrow and your defensibility did not change, the model was never your moat. Find the loop or the workflow that survives the swap before a model release finds it for you."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Run the swap test on your own venture. Replace your model vendor in your head. If your defensibility is unchanged, the model was never the moat, and the data flywheel you are describing is still a promise, not an asset."
+          }
+        },
+        {
+          "id": "how-avante",
+          "heading": "How Avante builds thick from day one",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America, engineered to start thick rather than hope to grow thick later. The method is the copilot to data to fund flywheel run through a six-stage system. Research, Partner, Build, Traction, Revenue, Compound. Each venture is paired on day one with a domain operator carrying 10-plus years of Brazilian-market scar tissue, which is where the proprietary evaluations come from, and with $500K-1.5M of first-ticket capital, which buys the distribution that keeps the data loop fed. The full thesis is at [/why-avante](/why-avante).",
+            "Brazil makes the math work. Services account for roughly 70% of Brazilian GDP per IBGE, the largest piece of the economy and long under-served by software, which is the exact surface where a vertical AI product can become the system of record. The portfolio shows the pattern by domain. Judicial assets, where the workflow data around precatorios and claims is genuinely proprietary. Insurance pricing, where risk-scoring accuracy feeds a usage loop. Real estate auction intelligence, where enriched and scored auction data compounds. In each one the model is the rented engine and the moat is the domain data flow bolted to it.",
+            "Studio-model returns are why we build this way at all, with GSSN data showing studio IRR of roughly 50% versus roughly 19% for traditional VC, about 2.5x, a benchmark for the model rather than a claim on any single fund's realized return. The wrapper critique is correct. That is exactly why a venture should be built so the next model release is a tailwind, not an obituary. See how we operate in [/principles](/principles)."
+          ]
+        }
+      ]
+    },
+    "pt": {
+      "title": "A Armadilha do Wrapper: Quando AI-Native É de Fato Defensável",
+      "description": "Um prompt de sistema não é um moat de wrapper de IA. Mas o wrapper não está condenado. Veja a linha entre fino e espesso, e como o flywheel de dados a cruza.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Um prompt de sistema sobre uma API de modelo de fundação não é um moat, e em fevereiro de 2026 um VP do Google colocou data na morte do wrapper fino. A pergunta deixou de ser se wrappers de IA são defensáveis no abstrato. É se o seu é dono de algo que o próximo lançamento de modelo não consegue apagar.",
+            "A versão honesta, porque o cético está quase sempre certo. Um wrapper não está condenado por ser wrapper. Está condenado por ser fino. A defensabilidade AI-native vem de ser dono de pelo menos um ativo que compõe e que um concorrente com o mesmo modelo e mais dinheiro não consegue copiar até o próximo trimestre. Na Avante Ventures construímos para esse ativo desde o dia um, porque o modelo em si já não é algo que se possa possuir."
+          ]
+        },
+        {
+          "id": "the-critique",
+          "heading": "A crítica ao wrapper fino está certa",
+          "level": 2,
+          "paragraphs": [
+            "Quem vende os modelos agora diz em voz alta a parte que ficava no sussurro. Em 21 de fevereiro de 2026, o [TechCrunch noticiou](https://techcrunch.com/2026/02/21/google-vp-warns-that-two-types-of-ai-startups-may-not-survive/) que Darren Mowry, o VP que lidera a organização global de startups do Google em Cloud, DeepMind e Alphabet, alertou que dois tipos de startup de IA podem não sobreviver. O primeiro é o wrapper fino.",
+            "Vale citar as palavras dele com precisão. Se você está contando com o modelo de back-end para fazer todo o trabalho e está praticamente fazendo white-label desse modelo, a indústria não tem mais muita paciência para isso. Envolver propriedade intelectual muito fina ao redor de Gemini ou GPT-5 é a armadilha. A receita foi uma frase que vale guardar. Startups precisam de moats profundos e largos. A segunda categoria condenada foi o agregador, porque os usuários querem propriedade intelectual embutida, não uma camada de roteamento que os provedores de modelo vão absorver nos próprios recursos corporativos.",
+            "A economia por trás do alerta é a compressão de margem descendo a encosta. O [TechCrunch noticiou em setembro de 2025](https://techcrunch.com/2025/09/14/selling-coffee-beans-to-starbucks-how-the-ai-boom-could-leave-ais-biggest-companies-behind/) que equipes de aplicação agora tratam modelos de fundação como uma commodity para trocar de fornecedor à vontade. Parece alavancagem, até você perceber que todo concorrente troca pela mesma commodity. Um fundador descreveu o desfecho para os indiferenciados como vender grãos de café para a Starbucks. Essencial para a xícara, pago quase nada por isso."
+          ],
+          "callout": {
+            "kind": "quote",
+            "text": "Se você está contando com o modelo de back-end para fazer todo o trabalho e está praticamente fazendo white-label desse modelo, a indústria não tem mais muita paciência para isso.",
+            "attribution": "Darren Mowry, VP da organização global de startups do Google, TechCrunch, fevereiro de 2026"
+          }
+        },
+        {
+          "id": "thin-vs-thick",
+          "heading": "Fino versus espesso, definido",
+          "level": 2,
+          "paragraphs": [
+            "Espessura não tem nada a ver com quanto código você escreveu. Tem a ver com o que compõe enquanto você dorme. Uma venture espessa é dona de pelo menos um ativo que fica mais forte com o uso e que um rival bem financiado não reconstrói copiando a sua interface. Todo o resto é enfeite sobre um motor alugado.",
+            "Comece pelo motivo de o motor não poder ser o moat. A inferência está desinflando mais rápido do que quase qualquer tecnologia da história. Segundo a [a16z](https://a16z.com/llmflation-llm-inference-cost/), para um LLM de desempenho equivalente o custo cai 10x a cada ano, um fator de 1.000 em três anos. A qualidade nível GPT-3 saiu de cerca de US$ 60 por milhão de tokens no fim de 2021 para por volta de US$ 0,06 no fim de 2024. Uma capacidade que fica 10x mais barata por ano, disponível para todos a partir de vários fornecedores, é uma utilidade. Você não constrói moat sobre uma utilidade. Constrói sobre aquilo a que a utilidade está presa."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Para um LLM de desempenho equivalente, o custo de inferência cai 10x a cada ano, um fator de 1.000 em três anos. A qualidade nível GPT-3 caiu de cerca de US$ 60 por milhão de tokens para por volta de US$ 0,06.",
+            "attribution": "a16z, Welcome to LLMflation, novembro de 2024"
+          }
+        },
+        {
+          "id": "the-three-moats",
+          "heading": "As três fontes de espessura",
+          "level": 3,
+          "paragraphs": [
+            "A defensabilidade durável mora em três lugares, em ordem crescente de força. Cada um carrega um teste de falha, e a maioria dos fundadores falha nele em silêncio.",
+            "O motivo de os efeitos de rede importarem mais é a matemática. A NFX, no seu [Network Effects Manual](https://www.nfx.com/post/network-effects-manual), credita aos efeitos de rede cerca de 70% do valor criado por empresas de tecnologia desde 1994, e os classifica como a mais forte das quatro defensabilidades reais. Um flywheel de dados proprietário é como uma venture AI-native constrói um, em vez de apenas alegar que tem."
+          ],
+          "bullets": [
+            "Flywheel de dados proprietário. Um estoque de dados não é moat, um fluxo é. O texto da a16z, The Empty Promise of Data Moats, mostra que em geral não existe efeito de rede inerente em apenas ter mais dado, e que no exemplo de um chatbot de suporte, passados cerca de 40% de cobertura das perguntas, não há vantagem em coletar mais. O moat é um loop em que cada uso produz dado que melhora o produto de forma mensurável mais rápido do que a pilha decai.",
+            "Avaliações específicas de domínio. O ativo mais difícil de copiar é uma definição graduada do que significa correto em um domínio regulado e denso em julgamento. Um modelo genérico redige uma cláusula ou precifica um risco. Saber qual resultado está certo, errado ou silenciosamente perigoso em um contexto jurídico ou de seguros brasileiro é julgamento codificado que operadores levaram anos para conquistar. O fornecedor do modelo não entrega as suas avaliações por você.",
+            "Lock-in de workflow. O 7 Powers de Hamilton Helmer chama isso de Process Power e Switching Costs. Quando um produto de IA vira o sistema de registro de um processo regulado, sair significa revalidar uma trilha de compliance, retreinar a equipe e reintegrar sistemas adjacentes. O custo de sair é o moat. É por isso que a IA vertical vence a horizontal. Um assistente genérico não tem workflow para ancorar."
+          ]
+        },
+        {
+          "id": "flywheel-crosses",
+          "heading": "Como o flywheel cruza a linha",
+          "level": 2,
+          "paragraphs": [
+            "O flywheel é a máquina que transforma uma cunha de entrada fina em uma posição espessa ao longo do tempo. Este é o flywheel copilot, dado, capital. Lance um copilot de IA que faz trabalho real dentro de uma vertical. O trabalho gera dado proprietário que ninguém mais tem. Esse dado afia as avaliações de domínio e melhora o produto, o que aprofunda o lock-in de workflow, o que produz mais dado. O copilot é a cunha de aparência fina no dia um. O loop é o que o torna espesso até o segundo ano.",
+            "A evidência de 2025 de que essa é a verdadeira linha divisória vem de mercados emergentes, não do Vale do Silício. Segundo a [Insignia Ventures](https://review.insignia.vc/2025/04/15/moats-ai/), a IA tornou o construir mais fácil e o defender exponencialmente mais difícil, com software chegando a US$ 1 milhão de ARR mais rápido do que nunca. Os estudos de caso deles caem exatamente nesses mecanismos. Uma plataforma de carros usados compõe um flywheel de dados a partir de mais de 160 pontos de dado por veículo. Um credor que combina um ERP proprietário com financiamento segurou 3% de inadimplência durante a COVID enquanto o setor de fintech mais amplo rodava de 20 a 30%. Todos eles alugaram o mesmo modelo. Nenhum deles alugou o flywheel."
+          ]
+        },
+        {
+          "id": "the-self-deception",
+          "heading": "A história que fundadores contam e não é verdade",
+          "level": 2,
+          "paragraphs": [
+            "O pitch mais comum em IA é uma história de moat espesso narrada sobre um produto fino. Fundadores descrevem um efeito de rede de dados que não construíram, um flywheel que não atingiu velocidade de escape e uma defensabilidade que vive inteiramente no tempo futuro. O modo de falha honesto tem duas partes, e elas se alimentam.",
+            "Primeiro, o loop de dados passa fome porque a empresa não tem distribuição. Um loop de feedback só compõe se usuários suficientes o alimentarem. Sem um canal para adquirir e reter esses usuários, um concorrente mais bem distribuído com um dataset pior vence, porque o dataset pior dele está crescendo enquanto o seu fica parado. Segundo, dado proprietário sem como continuar coletando não é moat, é um estoque que decai. Um dataset congelado no lançamento é ultrapassado por um produto que melhora a cada uso.",
+            "O teste da troca é a disciplina que corta a história ao meio. Se você trocasse de fornecedor de modelo amanhã e a sua defensabilidade não mudasse, o modelo nunca foi o seu moat. Ache o loop ou o workflow que sobrevive à troca antes que um lançamento de modelo o ache por você."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Rode o teste da troca na sua própria venture. Troque de fornecedor de modelo na cabeça. Se a sua defensabilidade não muda, o modelo nunca foi o moat, e o flywheel de dados que você descreve ainda é promessa, não ativo."
+          }
+        },
+        {
+          "id": "how-avante",
+          "heading": "Como a Avante constrói espesso desde o dia um",
+          "level": 2,
+          "paragraphs": [
+            "A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina, projetada para começar espessa em vez de torcer para engrossar depois. O método é o flywheel copilot, dado, capital rodando dentro de um sistema de seis estágios. Research, Partner, Build, Traction, Revenue, Compound. Cada venture é pareada no dia um com um operador de domínio que carrega mais de 10 anos de cicatriz de mercado brasileiro, de onde vêm as avaliações proprietárias, e com US$ 500K-1.5M de capital de primeiro cheque, que compra a distribuição que mantém o loop de dados alimentado. A tese completa está em [/why-avante](/why-avante).",
+            "O Brasil faz a conta fechar. Serviços respondem por cerca de 70% do PIB brasileiro, segundo o IBGE a maior fatia da economia e por muito tempo mal atendida por software, que é exatamente a superfície onde um produto de IA vertical pode virar o sistema de registro. O portfólio mostra o padrão por domínio. Ativos judiciais, onde o dado de workflow em torno de precatórios e claims é genuinamente proprietário. Precificação de seguros, onde a precisão do scoring de risco alimenta um loop de uso. Inteligência de leilões imobiliários, onde dados de leilão enriquecidos e pontuados se compõem. Em cada um deles o modelo é o motor alugado e o moat é o fluxo de dado de domínio preso a ele.",
+            "Os retornos do modelo de studio são o motivo de construirmos assim, com dados da GSSN mostrando IRR de studio de cerca de 50% contra cerca de 19% do VC tradicional, aproximadamente 2.5x, um benchmark do modelo e não uma afirmação sobre o retorno realizado de qualquer fundo específico. A crítica ao wrapper está certa. É justamente por isso que uma venture deve ser construída para que o próximo lançamento de modelo seja vento a favor, não um obituário. Veja como operamos em [/principles](/principles)."
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "La Trampa del Wrapper: Cuando AI-Native Es Realmente Defendible",
+      "description": "Un prompt de sistema no es un moat de wrapper de IA. Pero el wrapper tampoco está condenado. La línea entre fino y grueso, y cómo el flywheel la cruza.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Un prompt de sistema sobre una API de modelo de fundación no es un moat, y en febrero de 2026 un VP de Google le puso fecha a la muerte del wrapper fino. La pregunta ya no es si los wrappers de IA son defendibles en abstracto. Es si el suyo es dueño de algo que el próximo lanzamiento de modelo no pueda borrar.",
+            "La versión honesta, porque el escéptico casi siempre tiene razón. Un wrapper no está condenado por ser wrapper. Está condenado por ser fino. La defensibilidad AI-native viene de ser dueño de al menos un activo que compone y que un competidor con el mismo modelo y más dinero no pueda copiar para el próximo trimestre. En Avante Ventures construimos para ese activo desde el día uno, porque el modelo en sí ya no es algo que se pueda poseer."
+          ]
+        },
+        {
+          "id": "the-critique",
+          "heading": "La crítica al wrapper fino es correcta",
+          "level": 2,
+          "paragraphs": [
+            "Quienes venden los modelos ahora dicen en voz alta la parte que quedaba en susurro. El 21 de febrero de 2026, [TechCrunch reportó](https://techcrunch.com/2026/02/21/google-vp-warns-that-two-types-of-ai-startups-may-not-survive/) que Darren Mowry, el VP que lidera la organización global de startups de Google en Cloud, DeepMind y Alphabet, advirtió que dos tipos de startup de IA podrían no sobrevivir. El primero es el wrapper fino.",
+            "Vale citar sus palabras con precisión. Si usted está contando con el modelo de back-end para hacer todo el trabajo y está prácticamente haciendo white-label de ese modelo, la industria ya no tiene mucha paciencia para eso. Envolver propiedad intelectual muy fina alrededor de Gemini o GPT-5 es la trampa. La receta fue una frase que vale guardar. Las startups necesitan moats profundos y anchos. La segunda categoría condenada fue el agregador, porque los usuarios quieren propiedad intelectual incorporada, no una capa de ruteo que los proveedores de modelo van a absorber en sus propios productos corporativos.",
+            "La economía detrás de la advertencia es la compresión de margen rodando cuesta abajo. [TechCrunch reportó en septiembre de 2025](https://techcrunch.com/2025/09/14/selling-coffee-beans-to-starbucks-how-the-ai-boom-could-leave-ais-biggest-companies-behind/) que los equipos de aplicación ahora tratan los modelos de fundación como un commodity para cambiar de proveedor a voluntad. Parece apalancamiento, hasta que usted nota que todo competidor cambia por el mismo commodity. Un fundador describió el desenlace para los indiferenciados como vender granos de café a Starbucks. Esencial para la taza, le pagaron casi nada por ello."
+          ],
+          "callout": {
+            "kind": "quote",
+            "text": "Si usted está contando con el modelo de back-end para hacer todo el trabajo y está prácticamente haciendo white-label de ese modelo, la industria ya no tiene mucha paciencia para eso.",
+            "attribution": "Darren Mowry, VP de la organización global de startups de Google, TechCrunch, febrero de 2026"
+          }
+        },
+        {
+          "id": "thin-vs-thick",
+          "heading": "Fino versus grueso, definido",
+          "level": 2,
+          "paragraphs": [
+            "El grosor no tiene nada que ver con cuánto código escribió usted. Tiene que ver con qué compone mientras duerme. Una venture gruesa es dueña de al menos un activo que se fortalece con el uso y que un rival bien financiado no reconstruye copiando su interfaz. Todo lo demás es adorno sobre un motor alquilado.",
+            "Empiece por la razón de que el motor no pueda ser el moat. La inferencia se está desinflando más rápido que casi cualquier tecnología de la historia. Según [a16z](https://a16z.com/llmflation-llm-inference-cost/), para un LLM de desempeño equivalente el costo cae 10x cada año, un factor de 1.000 en tres años. La calidad nivel GPT-3 pasó de cerca de US$ 60 por millón de tokens a fines de 2021 a alrededor de US$ 0,06 a fines de 2024. Una capacidad que se vuelve 10x más barata cada año, disponible para todos desde varios proveedores, es una utilidad. Usted no construye un moat sobre una utilidad. Lo construye sobre aquello a lo que la utilidad está sujeta."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Para un LLM de desempeño equivalente, el costo de inferencia cae 10x cada año, un factor de 1.000 en tres años. La calidad nivel GPT-3 bajó de cerca de US$ 60 por millón de tokens a alrededor de US$ 0,06.",
+            "attribution": "a16z, Welcome to LLMflation, noviembre de 2024"
+          }
+        },
+        {
+          "id": "the-three-moats",
+          "heading": "Las tres fuentes de grosor",
+          "level": 3,
+          "paragraphs": [
+            "La defensibilidad durable vive en tres lugares, en orden creciente de fuerza. Cada uno carga una prueba de falla, y la mayoría de los fundadores la falla en silencio.",
+            "La razón de que los efectos de red importen más es la matemática. NFX, en su [Network Effects Manual](https://www.nfx.com/post/network-effects-manual), les acredita a los efectos de red cerca del 70% del valor creado por empresas de tecnología desde 1994, y los clasifica como la más fuerte de las cuatro defensibilidades reales. Un flywheel de datos propietario es como una venture AI-native construye uno, en lugar de solo alegar que lo tiene."
+          ],
+          "bullets": [
+            "Flywheel de datos propietario. Un stock de datos no es un moat, un flujo sí. El texto de a16z, The Empty Promise of Data Moats, muestra que en general no existe un efecto de red inherente por solo tener más dato, y que en el ejemplo de un chatbot de soporte, pasado cerca del 40% de cobertura de las preguntas, no hay ventaja en recolectar más. El moat es un loop donde cada uso produce dato que mejora el producto de forma medible más rápido de lo que la pila se deprecia.",
+            "Evaluaciones específicas de dominio. El activo más difícil de copiar es una definición graduada de qué significa correcto en un dominio regulado y denso en juicio. Un modelo genérico redacta una cláusula o precifica un riesgo. Saber cuál resultado está bien, mal o silenciosamente peligroso en un contexto jurídico o de seguros brasileño es juicio codificado que los operadores tardaron años en ganar. El proveedor del modelo no entrega sus evaluaciones por usted.",
+            "Lock-in de workflow. El 7 Powers de Hamilton Helmer llama a esto Process Power y Switching Costs. Cuando un producto de IA se vuelve el sistema de registro de un proceso regulado, salir significa revalidar un rastro de compliance, recapacitar al equipo y reintegrar sistemas adyacentes. El costo de salir es el moat. Por eso la IA vertical le gana a la horizontal. Un asistente genérico no tiene workflow que anclar."
+          ]
+        },
+        {
+          "id": "flywheel-crosses",
+          "heading": "Cómo el flywheel cruza la línea",
+          "level": 2,
+          "paragraphs": [
+            "El flywheel es la máquina que convierte una cuña de entrada fina en una posición gruesa con el tiempo. Este es el flywheel copilot, dato, capital. Lance un copilot de IA que haga trabajo real dentro de una vertical. El trabajo genera dato propietario que nadie más tiene. Ese dato afina las evaluaciones de dominio y mejora el producto, lo que profundiza el lock-in de workflow, lo que produce más dato. El copilot es la cuña de apariencia fina en el día uno. El loop es lo que lo vuelve grueso para el segundo año.",
+            "La evidencia de 2025 de que esta es la verdadera línea divisoria viene de mercados emergentes, no de Silicon Valley. Según [Insignia Ventures](https://review.insignia.vc/2025/04/15/moats-ai/), la IA hizo el construir más fácil y el defender exponencialmente más difícil, con software llegando a US$ 1 millón de ARR más rápido que nunca. Sus estudios de caso caen exactamente en esos mecanismos. Una plataforma de autos usados compone un flywheel de datos a partir de más de 160 puntos de dato por vehículo. Un prestamista que combina un ERP propietario con financiamiento sostuvo 3% de morosidad durante la COVID mientras el sector fintech más amplio corría de 20 a 30%. Todos ellos alquilaron el mismo modelo. Ninguno de ellos alquiló el flywheel."
+          ]
+        },
+        {
+          "id": "the-self-deception",
+          "heading": "La historia que los fundadores cuentan y no es cierta",
+          "level": 2,
+          "paragraphs": [
+            "El pitch más común en IA es una historia de moat grueso narrada sobre un producto fino. Los fundadores describen un efecto de red de datos que no construyeron, un flywheel que no alcanzó velocidad de escape y una defensibilidad que vive enteramente en tiempo futuro. El modo de falla honesto tiene dos partes, y se alimentan entre sí.",
+            "Primero, el loop de datos pasa hambre porque la empresa no tiene distribución. Un loop de feedback solo compone si suficientes usuarios lo alimentan. Sin un canal para adquirirlos y retenerlos, un competidor mejor distribuido con un dataset peor gana, porque su dataset peor está creciendo mientras el suyo se queda quieto. Segundo, dato propietario sin manera de seguir recolectándolo no es un moat, es un stock que se deprecia. Un dataset congelado en el lanzamiento queda rezagado frente a un producto que mejora con cada uso.",
+            "La prueba del cambio es la disciplina que parte la historia a la mitad. Si usted cambiara de proveedor de modelo mañana y su defensibilidad no cambiara, el modelo nunca fue su moat. Encuentre el loop o el workflow que sobrevive al cambio antes de que un lanzamiento de modelo lo encuentre por usted."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Corra la prueba del cambio sobre su propia venture. Cambie de proveedor de modelo en su cabeza. Si su defensibilidad no cambia, el modelo nunca fue el moat, y el flywheel de datos que usted describe sigue siendo promesa, no activo."
+          }
+        },
+        {
+          "id": "how-avante",
+          "heading": "Cómo Avante construye grueso desde el día uno",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina, diseñada para empezar gruesa en lugar de rogar por engrosar después. El método es el flywheel copilot, dato, capital corriendo dentro de un sistema de seis etapas. Research, Partner, Build, Traction, Revenue, Compound. Cada venture se empareja en el día uno con un operador de dominio que carga más de 10 años de cicatriz de mercado brasileño, de donde vienen las evaluaciones propietarias, y con US$ 500K-1.5M de capital de primer cheque, que compra la distribución que mantiene el loop de datos alimentado. La tesis completa está en [/why-avante](/why-avante).",
+            "Brasil hace que la cuenta cierre. Los servicios representan cerca del 70% del PIB brasileño, según el IBGE la mayor porción de la economía y por mucho tiempo mal atendida por software, que es exactamente la superficie donde un producto de IA vertical puede volverse el sistema de registro. El portafolio muestra el patrón por dominio. Activos judiciales, donde el dato de workflow alrededor de precatorios y claims es genuinamente propietario. Precificación de seguros, donde la precisión del scoring de riesgo alimenta un loop de uso. Inteligencia de subastas inmobiliarias, donde datos de subasta enriquecidos y puntuados se componen. En cada uno de ellos el modelo es el motor alquilado y el moat es el flujo de dato de dominio sujeto a él.",
+            "Los retornos del modelo de studio son la razón por la que construimos así, con datos de GSSN que muestran un IRR de studio de cerca del 50% frente a cerca del 19% del VC tradicional, aproximadamente 2.5x, un benchmark del modelo y no una afirmación sobre el retorno realizado de cualquier fondo específico. La crítica al wrapper es correcta. Por eso mismo una venture debe construirse para que el próximo lanzamiento de modelo sea viento a favor, no un obituario. Vea cómo operamos en [/principles](/principles)."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "brazil-ai-agriculture-agritech-opportunity",
+    "category": "brazil",
+    "type": "Market Analysis",
+    "readTime": "10 min",
+    "featured": false,
+    "date": "Jun 2026",
+    "datePublished": "2026-06-15",
+    "isPublished": true,
+    "en": {
+      "title": "AI in Brazilian Agriculture: The Agtech Build a Studio Would Make",
+      "description": "Brazil AI in agriculture grows past USD 260 million by 2034. A superpower in crops, a thin software layer. Here is where an AI-native venture fits.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Brazil is one of the few places on earth where agtech has both global scale and a deep domestic operator pool, and the software layer sitting on top of all that output is still thin. That gap is the Brazil AI in agriculture market opportunity in one sentence. According to [IMARC Group](https://www.imarcgroup.com/brazil-ai-in-agriculture-market), the market was about USD 60.0 million in 2025 and is projected to reach USD 260.0 million by 2034, a CAGR of 18.53%. Small in absolute dollars today. Growing fast, and sitting on top of an agricultural economy that is anything but small.",
+            "Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America. We read agtech the way an operator does, not a tourist. The size of the prize is the easy part. The harder and more useful question is structural. Where would an AI-native venture actually build, and why does a copilot for the agronomist turn into a financing or insurance vehicle."
+          ]
+        },
+        {
+          "id": "market-size",
+          "heading": "The market, with dated numbers",
+          "level": 2,
+          "paragraphs": [
+            "The AI-specific slice of Brazilian agriculture is still early, and the forecasters disagree on exactly how fast it grows. Report the range honestly. According to [IMARC Group](https://www.imarcgroup.com/brazil-ai-in-agriculture-market), Brazil AI in agriculture was roughly USD 60.0 million in 2025 and is forecast to hit USD 260.0 million by 2034, a CAGR of 18.53% over 2026 to 2034. A second forecaster has published a higher growth rate in the mid-20s percent range to the early 2030s. We could not confirm that figure on its primary report page, so we report it only as a direction, not a citation. Independent estimates split on the slope and agree on the direction, which is steep.",
+            "The surrounding agtech sector is no longer nascent, and that is the number that should move an investor. The Radar Agtech Brasil 2024 study, produced by Embrapa with SP Ventures and Homo Ludens, mapped 1,972 agtechs in 2024, up from 1,125 in 2019, per the [report summary](https://www.academia.edu/145209078/Radar_Agtech_Brasil_2024_Mapping_Startups_Innovation_Environments_and_Investors_in_the_Brazilian_Agro_Ecosystem). That is roughly 75% growth in five years, plus more than 450 mapped innovation environments.",
+            "The shape underneath the number matters more than the number itself. A USD 260 million software forecast sits on top of an agricultural economy that is enormous. Agribusiness was 23.2% of Brazilian GDP in 2024, and the agribusiness GDP grew 1.81% that year, according to [CNA and CEPEA-Esalq](https://www.cnabrasil.org.br/noticias/pib-do-agronegocio-fecha-2024-com-crescimento-de-1-81). The distance between the weight of the underlying activity and the thinness of the software running on it is the entire opening."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Brazil AI in agriculture was about USD 60 million in 2025 and is forecast to reach USD 260 million by 2034, a CAGR of 18.53%.",
+            "attribution": "IMARC Group, 2026 to 2034 forecast"
+          }
+        },
+        {
+          "id": "why-brazil",
+          "heading": "Why Brazil is the rare global-scale agtech market",
+          "level": 2,
+          "paragraphs": [
+            "Most vertical-AI opportunities in LATAM are domestic-scale plays. Agriculture is the exception. Brazil is a top global producer of soy, corn, coffee, sugarcane, beef, and poultry, which means a model trained on Brazilian fields addresses a world-scale problem, not a local one. That is rare. It is also why agtech is one of the few LATAM categories where a venture can build something with global reach from a Brazilian base.",
+            "The second edge is operator depth. Brazil has agronomists, cooperatives, input distributors, and trading desks carrying decades of field knowledge. The scarce input for an AI-native agtech is not engineers or capital. It is people who understand the agronomy, the seasonality, the credit dynamics, and the buyer psychology of one specific crop in one specific region. Those people exist here in numbers, and they are exactly the input a venture studio assembles on day one rather than chasing for eighteen months.",
+            "The third edge is the structural backdrop. Services account for roughly 70% of Brazilian GDP, with low software penetration, a figure we attribute to IBGE. Agribusiness straddles primary production and a long services tail of logistics, trading, finance, and insurance, and that tail is where software penetration is thinnest. The digitization gap that defines the broader Brazilian opportunity shows up sharpest in agriculture's commercial and financial layer, which is precisely where an AI-native venture has the most room to build."
+          ]
+        },
+        {
+          "id": "where-to-build",
+          "heading": "The AI-native openings",
+          "level": 2,
+          "paragraphs": [
+            "Sizing is the warm-up. The real work is deciding where in the chain an AI-native venture builds, and each candidate wedge has to come with a clear answer to one question. What proprietary data does this generate that nobody else has. Four openings pass that test.",
+            "Read them as a sequence, not a menu. The first three are real businesses. The fourth is the one that compounds, because it manufactures the data the others need to underwrite."
+          ],
+          "bullets": [
+            "Yield and risk models on satellite and sensor data. Computer vision on imagery, weather, and in-field sensors to forecast yield, detect disease, and time interventions. The asset is a labeled history of what happened on specific hectares.",
+            "Input financing and crop insurance underwriting. Brazilian farmers need working capital and protection against weather and price. An AI-native underwriter that prices risk off real agronomic data can serve segments that traditional credit and insurance underprice or skip entirely.",
+            "Traceability and carbon. Export markets increasingly demand provenance and emissions data. Software that captures chain of custody and carbon footprint becomes infrastructure, not a feature.",
+            "A copilot for the agronomist. The highest-leverage wedge. A tool that sits in the agronomist's daily workflow and captures field decisions as structured, proprietary data. Every recommendation and every outcome becomes training data no competitor can buy."
+          ]
+        },
+        {
+          "id": "the-flywheel",
+          "heading": "From agronomy copilot to financing vehicle",
+          "level": 2,
+          "paragraphs": [
+            "This is where the Avante pattern fits agriculture almost too neatly. The recurring pattern across our portfolio is the copilot to data to fund flywheel. Build an AI copilot to generate proprietary data, then use that data to raise and deploy capital. In most verticals the link from copilot to capital takes explaining. In agriculture it is obvious.",
+            "Walk the mechanism. A copilot used by agronomists across thousands of hectares generates the exact dataset an underwriter would kill for. Yield history, input usage, weather exposure, default behavior, and outcomes broken down by crop and region. That dataset is what justifies a financing or crop-insurance vehicle. The copilot earns trust and distribution first. The data it captures becomes the underwriting edge. The capital vehicle monetizes that edge. Each turn of the loop makes the next venture cheaper to underwrite than the last.",
+            "The reason this matters for capital allocation is that the data is the moat, not the model. Any competent team can fine-tune a model. Almost nobody can assemble a multi-season record of what actually happened on specific Brazilian hectares, with the outcomes attached. That record is slow to build and impossible to shortcut, which is exactly what makes it defensible."
+          ]
+        },
+        {
+          "id": "hard-realities",
+          "heading": "Seasonality, connectivity, and transfer risk",
+          "level": 2,
+          "paragraphs": [
+            "Agriculture is one of the hardest verticals to build software in, and any honest version of this thesis has to say so before the close. Three frictions decide whether a venture reaches its data loop or stalls trying.",
+            "Start with seasonality. A crop cycle runs months. You often get one real data-collection window per year per crop, which stretches the time to a usable model and forces the sales cycle to move at the speed of the season, not the speed of software. Then connectivity. Large parts of the Brazilian agricultural frontier have weak or no rural coverage, which constrains real-time capture and forces offline-first design. Coverage of Brazilian agriculture keeps flagging the same thing, that high field productivity is held back by uneven technology adoption.",
+            "The third friction is the quiet killer. Models do not transfer cleanly. A model trained on soy in Mato Grosso rarely carries over to coffee in Minas Gerais, or even to a different soil and climate for the same crop. Each crop and region can demand its own data and its own tuning, so a venture can burn its runway on data acquisition before the flywheel ever turns. The implication is not that agtech is a bad bet. It is that the binding constraint is data acquisition, and the winner is whoever solves distribution and trust first so the data starts flowing."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "In a vertical with one data window per crop per year, the first venture goal is a working data loop, not a big raise. Pick one crop and region, earn trust, get the data flowing.",
+            "attribution": "Avante operating view"
+          }
+        },
+        {
+          "id": "how-avante",
+          "heading": "How Avante would approach it",
+          "level": 2,
+          "paragraphs": [
+            "Avante launches 3-4 ventures per year through a six-stage system: Research, Partner, Build, Traction, Revenue, Compound. In agriculture, Research picks the crop and wedge where data flows first. Partner brings in a domain operator with deep agronomic scar tissue, because operator depth is the binding constraint here and you cannot recruit that person cold into an unfunded idea. We deploy $500K-1.5M per venture across pre-seed and retain co-founder economics, and operating partners stay engaged through the first revenue milestone.",
+            "The sequencing is deliberate. Run the copilot to data to fund flywheel against a single crop and region first, then compound into adjacent crops once the data loop works. The first check is small on purpose. In a vertical with brutal seasonality, the goal is to reach a working data loop before raising again, not to fund a large team through three seasons of guessing. Solving the company plumbing once routes roughly $300K-500K of effective capital per venture into product and traction instead of overhead, and a studio venture launches 6-9 months ahead of a comparably funded standalone team.",
+            "The model itself is the wager. The Global Startup Studio Network reports studio IRR of ~50% versus an industry-standard ~19% for traditional VC, roughly 2.5x the IRR of traditional VC over realistic time horizons. That is the GSSN studio-model benchmark, not Avante's own realized return. Where it earns its keep in agriculture is the mechanism. When operator depth and proprietary data are the binding constraints, concentrating scarce talent and shared infrastructure is worth more here than almost anywhere.",
+            "The same flywheel already runs across the portfolio in other domains. Alphajuri in the Brazilian judicial-asset market. WIR in insurance pricing and risk scoring. BR Auction Intel in real estate auction intelligence. Agriculture is a natural next domain for the copilot to data to fund pattern, not a departure from it. The obvious objection is survivorship bias, and it is fair. The ~50% figure counts the studios that lived. Our answer is structural rather than a slogan. The first check is small, the six-stage system is built to kill weak ventures before they consume a priced round, and in agtech the discipline is forced on you by the calendar. The ventures that win Brazilian agriculture will not be the best funded. They will be the ones whose operators already know which field to start in. Read [the studio thesis](/why-avante) and the rest of [the Library](/library)."
+          ]
+        }
+      ]
+    },
+    "pt": {
+      "title": "IA na Agricultura Brasileira: o Build de Agtech que um Studio Faria",
+      "description": "A IA na agricultura no Brasil cresce além de US$ 260 milhões até 2034. Potência em lavoura, camada fina de software. Veja onde encaixa uma venture AI-native.",
+      "sections": [
+        {
+          "paragraphs": [
+            "O Brasil é um dos poucos lugares do mundo onde a agtech tem escala global e um pool profundo de operadores locais ao mesmo tempo, e a camada de software que roda sobre toda essa produção ainda é fina. Essa lacuna resume o mercado de IA na agricultura no Brasil em uma frase. Segundo a [IMARC Group](https://www.imarcgroup.com/brazil-ai-in-agriculture-market), o mercado era de cerca de US$ 60,0 milhões em 2025 e deve chegar a US$ 260,0 milhões até 2034, um CAGR de 18,53%. Pequeno em dólares absolutos hoje. Crescendo rápido, e apoiado em uma economia agrícola que de pequena não tem nada.",
+            "A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina. Lemos agtech como um operador lê, não como turista. O tamanho do prêmio é a parte fácil. A pergunta mais difícil e mais útil é estrutural. Onde uma venture AI-native de fato construiria, e por que um copilot para o agrônomo vira um veículo de financiamento ou de seguro."
+          ]
+        },
+        {
+          "id": "market-size",
+          "heading": "O mercado, com números datados",
+          "level": 2,
+          "paragraphs": [
+            "A fatia especificamente de IA na agricultura brasileira ainda é incipiente, e os analistas divergem sobre a velocidade exata do crescimento. Reporte a faixa com honestidade. Segundo a [IMARC Group](https://www.imarcgroup.com/brazil-ai-in-agriculture-market), a IA na agricultura no Brasil era de aproximadamente US$ 60,0 milhões em 2025 e deve atingir US$ 260,0 milhões até 2034, um CAGR de 18,53% entre 2026 e 2034. Uma segunda casa de pesquisa publicou uma taxa mais alta, na casa dos vinte e poucos por cento, até o início da década de 2030. Não conseguimos confirmar esse número na página primária do relatório, então o tratamos apenas como direção, não como citação. As estimativas independentes discordam sobre a inclinação e concordam sobre a direção, que é íngreme.",
+            "O ecossistema agtech ao redor já não é nascente, e esse é o número que deveria mover um investidor. O estudo Radar Agtech Brasil 2024, produzido pela Embrapa com SP Ventures e Homo Ludens, mapeou 1.972 agtechs em 2024, ante 1.125 em 2019, conforme o [resumo do relatório](https://www.academia.edu/145209078/Radar_Agtech_Brasil_2024_Mapping_Startups_Innovation_Environments_and_Investors_in_the_Brazilian_Agro_Ecosystem). São cerca de 75% de crescimento em cinco anos, além de mais de 450 ambientes de inovação mapeados.",
+            "O formato por trás do número importa mais do que o número em si. Uma projeção de US$ 260 milhões em software se apoia sobre uma economia agrícola gigantesca. O agronegócio foi 23,2% do PIB brasileiro em 2024, e o PIB do agronegócio cresceu 1,81% naquele ano, segundo a [CNA e o CEPEA-Esalq](https://www.cnabrasil.org.br/noticias/pib-do-agronegocio-fecha-2024-com-crescimento-de-1-81). A distância entre o peso da atividade subjacente e a espessura do software que roda sobre ela é toda a abertura."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "A IA na agricultura no Brasil era de cerca de US$ 60 milhões em 2025 e deve chegar a US$ 260 milhões até 2034, um CAGR de 18,53%.",
+            "attribution": "IMARC Group, projeção 2026 a 2034"
+          }
+        },
+        {
+          "id": "why-brazil",
+          "heading": "Por que o Brasil é o raro mercado de agtech em escala global",
+          "level": 2,
+          "paragraphs": [
+            "A maioria das oportunidades de IA vertical na América Latina é jogo de escala doméstica. A agricultura é a exceção. O Brasil é um dos maiores produtores globais de soja, milho, café, cana, carne bovina e frango, o que significa que um modelo treinado em lavouras brasileiras endereça um problema de escala mundial, não local. Isso é raro. É também por isso que a agtech é uma das poucas categorias latino-americanas em que uma venture pode construir algo com alcance global a partir de uma base brasileira.",
+            "A segunda vantagem é a profundidade de operador. O Brasil tem agrônomos, cooperativas, distribuidores de insumos e mesas de trading carregando décadas de conhecimento de campo. O insumo escasso para uma agtech AI-native não é engenheiro nem capital. São pessoas que entendem a agronomia, a sazonalidade, a dinâmica de crédito e a psicologia de compra de uma cultura específica em uma região específica. Essas pessoas existem aqui em quantidade, e são exatamente o insumo que um venture studio reúne no dia um, em vez de perseguir por dezoito meses.",
+            "A terceira vantagem é o pano de fundo estrutural. Os serviços representam cerca de 70% do PIB brasileiro, com baixa penetração de software, número que atribuímos ao IBGE. O agronegócio fica entre a produção primária e uma longa cauda de serviços de logística, trading, finanças e seguro, e é nessa cauda que a penetração de software é mais rala. A lacuna de digitalização que define a oportunidade brasileira mais ampla aparece mais nítida na camada comercial e financeira da agricultura, que é justamente onde uma venture AI-native tem mais espaço para construir."
+          ]
+        },
+        {
+          "id": "where-to-build",
+          "heading": "As aberturas AI-native",
+          "level": 2,
+          "paragraphs": [
+            "Dimensionar é o aquecimento. O trabalho de verdade é decidir onde na cadeia uma venture AI-native constrói, e cada candidato a wedge precisa vir com resposta para uma pergunta. Que dado proprietário isso gera que ninguém mais tem. Quatro aberturas passam nesse teste.",
+            "Leia como sequência, não como cardápio. As três primeiras são negócios reais. A quarta é a que compõe, porque fabrica o dado que as outras precisam para subscrever risco."
+          ],
+          "bullets": [
+            "Modelos de produtividade e risco sobre dados de satélite e sensores. Visão computacional em imagens, clima e sensores em campo para prever safra, detectar doença e cronometrar intervenções. O ativo é um histórico rotulado do que aconteceu em hectares específicos.",
+            "Financiamento de insumos e subscrição de seguro agrícola. O produtor brasileiro precisa de capital de giro e de proteção contra clima e preço. Uma subscritora AI-native que precifica risco a partir de dados agronômicos reais atende segmentos que o crédito e o seguro tradicionais subprecificam ou ignoram.",
+            "Rastreabilidade e carbono. Mercados de exportação exigem cada vez mais procedência e dados de emissão. Software que captura cadeia de custódia e pegada de carbono vira infraestrutura, não funcionalidade.",
+            "Um copilot para o agrônomo. O wedge de maior alavancagem. Uma ferramenta que fica no fluxo diário do agrônomo e captura decisões de campo como dado estruturado e proprietário. Cada recomendação e cada resultado vira dado de treino que nenhum concorrente consegue comprar."
+          ]
+        },
+        {
+          "id": "the-flywheel",
+          "heading": "Do copilot do agrônomo ao veículo de financiamento",
+          "level": 2,
+          "paragraphs": [
+            "É aqui que o padrão da Avante encaixa na agricultura quase bem demais. O padrão recorrente no nosso portfólio é o flywheel copilot, dado, capital. Construir um copilot de IA para gerar dado proprietário, e depois usar esse dado para captar e alocar capital. Na maioria das verticais, o elo entre copilot e capital precisa ser explicado. Na agricultura ele é óbvio.",
+            "Percorra o mecanismo. Um copilot usado por agrônomos em milhares de hectares gera exatamente a base de dados pela qual uma subscritora mataria. Histórico de safra, uso de insumos, exposição climática, comportamento de inadimplência e resultados separados por cultura e região. Essa base é o que justifica um veículo de financiamento ou de seguro agrícola. O copilot conquista confiança e distribuição primeiro. O dado que ele captura vira a vantagem de subscrição. O veículo de capital monetiza essa vantagem. Cada volta do ciclo deixa a próxima venture mais barata de subscrever do que a anterior.",
+            "A razão de isso importar para alocação de capital é que o dado é o moat, não o modelo. Qualquer time competente faz fine-tuning de um modelo. Quase ninguém consegue montar um histórico de várias safras do que de fato aconteceu em hectares brasileiros específicos, com os resultados anexados. Esse histórico é lento de construir e impossível de atalhar, e é justamente isso que o torna defensável."
+          ]
+        },
+        {
+          "id": "hard-realities",
+          "heading": "Sazonalidade, conectividade e risco de transferência",
+          "level": 2,
+          "paragraphs": [
+            "A agricultura é uma das verticais mais difíceis para construir software, e qualquer versão honesta dessa tese precisa dizer isso antes do fechamento. Três atritos decidem se uma venture chega ao seu loop de dados ou empaca tentando.",
+            "Comece pela sazonalidade. Um ciclo de cultura dura meses. Muitas vezes você tem uma única janela real de coleta de dados por ano por cultura, o que estica o tempo até um modelo utilizável e força o ciclo de vendas a andar na velocidade da safra, não na do software. Depois, conectividade. Grande parte da fronteira agrícola brasileira tem cobertura rural fraca ou inexistente, o que limita a captura em tempo real e força um desenho offline-first. A cobertura da agricultura brasileira insiste no mesmo ponto, que a alta produtividade no campo é freada pela adoção desigual de tecnologia.",
+            "O terceiro atrito é o que mata em silêncio. Modelos não transferem de forma limpa. Um modelo treinado em soja no Mato Grosso raramente serve para café em Minas Gerais, ou mesmo para outro solo e clima na mesma cultura. Cada cultura e região pode exigir dado próprio e ajuste próprio, então uma venture pode queimar o caixa em aquisição de dados antes de o flywheel girar. A implicação não é que agtech seja aposta ruim. É que a restrição que prende é a aquisição de dados, e quem vence é quem resolve distribuição e confiança primeiro, para o dado começar a fluir."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Numa vertical com uma janela de dados por cultura por ano, o primeiro objetivo da venture é um loop de dados funcionando, não uma captação grande. Escolha uma cultura e uma região, conquiste confiança, faça o dado fluir.",
+            "attribution": "Visão operacional Avante"
+          }
+        },
+        {
+          "id": "how-avante",
+          "heading": "Como a Avante abordaria",
+          "level": 2,
+          "paragraphs": [
+            "A Avante lança de 3 a 4 ventures por ano por um sistema de seis estágios: Research, Partner, Build, Traction, Revenue, Compound. Na agricultura, Research escolhe a cultura e o wedge onde o dado flui primeiro. Partner traz um operador de domínio com cicatriz agronômica profunda, porque a profundidade de operador é a restrição que prende aqui e essa pessoa não se recruta a frio para uma ideia sem capital. Aplicamos US$ 500K a 1,5M por venture no pré-seed e retemos economia de co-founder, e os operating partners seguem engajados até o primeiro marco de receita.",
+            "O sequenciamento é deliberado. Rode o flywheel copilot, dado, capital contra uma única cultura e região primeiro, e depois componha para culturas adjacentes quando o loop de dados funcionar. O primeiro cheque é pequeno de propósito. Numa vertical de sazonalidade brutal, o objetivo é chegar a um loop de dados funcionando antes de captar de novo, não financiar um time grande por três safras de chute. Resolver o encanamento da empresa uma vez roteia cerca de US$ 300K a 500K de capital efetivo por venture para produto e tração em vez de overhead, e uma venture de studio nasce de 6 a 9 meses à frente de um time autônomo com financiamento comparável.",
+            "O modelo em si é a aposta. A Global Startup Studio Network reporta IRR de studio de ~50% contra um padrão de mercado de ~19% para o VC tradicional, cerca de 2,5x o IRR do VC tradicional em horizontes realistas. Esse é o benchmark do modelo de studio da GSSN, não o retorno realizado da própria Avante. Onde isso se paga na agricultura é o mecanismo. Quando profundidade de operador e dado proprietário são as restrições que prendem, concentrar talento escasso e infraestrutura compartilhada vale mais aqui do que em quase qualquer lugar.",
+            "O mesmo flywheel já roda no portfólio em outros domínios. Alphajuri no mercado brasileiro de ativos judiciais. WIR em precificação de seguro e risk scoring. BR Auction Intel em inteligência de leilões imobiliários. A agricultura é um próximo domínio natural para o padrão copilot, dado, capital, não um desvio dele. A objeção óbvia é viés de sobrevivência, e ela é justa. O número de ~50% conta os studios que sobreviveram. Nossa resposta é estrutural, não slogan. O primeiro cheque é pequeno, o sistema de seis estágios existe para matar ventures fracas antes que consumam uma rodada precificada, e na agtech essa disciplina é imposta pelo calendário. As ventures que vencerem a agricultura brasileira não serão as mais capitalizadas. Serão aquelas cujos operadores já sabem em qual lavoura começar. Leia [a tese do studio](/why-avante) e o resto da [Biblioteca](/library)."
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "IA en la Agricultura Brasileña: el Build de Agtech que Haría un Studio",
+      "description": "La IA en agricultura en Brasil crece más allá de USD 260 millones hacia 2034. Potencia en cultivos, capa fina de software. Aquí encaja una venture AI-native.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Brasil es uno de los pocos lugares del mundo donde la agtech tiene escala global y un pool profundo de operadores locales a la vez, y la capa de software que corre sobre toda esa producción todavía es fina. Esa brecha resume el mercado de IA en agricultura en Brasil en una frase. Según [IMARC Group](https://www.imarcgroup.com/brazil-ai-in-agriculture-market), el mercado era de cerca de USD 60,0 millones en 2025 y se proyecta que llegue a USD 260,0 millones hacia 2034, un CAGR de 18,53%. Pequeño en dólares absolutos hoy. Creciendo rápido, y apoyado en una economía agrícola que de pequeña no tiene nada.",
+            "Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina. Leemos la agtech como la lee un operador, no un turista. El tamaño del premio es la parte fácil. La pregunta más difícil y más útil es estructural. Dónde construiría de verdad una venture AI-native, y por qué un copilot para el agrónomo se vuelve un vehículo de financiamiento o de seguro."
+          ]
+        },
+        {
+          "id": "market-size",
+          "heading": "El mercado, con números fechados",
+          "level": 2,
+          "paragraphs": [
+            "La porción específicamente de IA en la agricultura brasileña todavía es temprana, y los analistas discrepan sobre la velocidad exacta del crecimiento. Reporte el rango con honestidad. Según [IMARC Group](https://www.imarcgroup.com/brazil-ai-in-agriculture-market), la IA en agricultura en Brasil era de aproximadamente USD 60,0 millones en 2025 y se proyecta que alcance USD 260,0 millones hacia 2034, un CAGR de 18,53% entre 2026 y 2034. Una segunda firma de investigación publicó una tasa más alta, en el rango de veintitantos por ciento, hacia inicios de la década de 2030. No pudimos confirmar esa cifra en la página primaria del reporte, así que la reportamos solo como dirección, no como cita. Las estimaciones independientes discrepan sobre la pendiente y coinciden en la dirección, que es empinada.",
+            "El ecosistema agtech alrededor ya no es naciente, y ese es el número que debería mover a un inversionista. El estudio Radar Agtech Brasil 2024, producido por Embrapa con SP Ventures y Homo Ludens, mapeó 1.972 agtechs en 2024, frente a 1.125 en 2019, según el [resumen del reporte](https://www.academia.edu/145209078/Radar_Agtech_Brasil_2024_Mapping_Startups_Innovation_Environments_and_Investors_in_the_Brazilian_Agro_Ecosystem). Son cerca de 75% de crecimiento en cinco años, más de 450 ambientes de innovación mapeados.",
+            "La forma detrás del número importa más que el número en sí. Una proyección de USD 260 millones en software se apoya sobre una economía agrícola enorme. El agronegocio fue 23,2% del PIB brasileño en 2024, y el PIB del agronegocio creció 1,81% ese año, según [CNA y CEPEA-Esalq](https://www.cnabrasil.org.br/noticias/pib-do-agronegocio-fecha-2024-com-crescimento-de-1-81). La distancia entre el peso de la actividad subyacente y la delgadez del software que corre sobre ella es toda la apertura."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "La IA en agricultura en Brasil era de cerca de USD 60 millones en 2025 y se proyecta a USD 260 millones hacia 2034, un CAGR de 18,53%.",
+            "attribution": "IMARC Group, proyección 2026 a 2034"
+          }
+        },
+        {
+          "id": "why-brazil",
+          "heading": "Por qué Brasil es el raro mercado de agtech a escala global",
+          "level": 2,
+          "paragraphs": [
+            "La mayoría de las oportunidades de IA vertical en LATAM son jugadas de escala doméstica. La agricultura es la excepción. Brasil es uno de los mayores productores globales de soja, maíz, café, caña, carne de res y pollo, lo que significa que un modelo entrenado en campos brasileños aborda un problema de escala mundial, no local. Eso es raro. Y por eso la agtech es una de las pocas categorías latinoamericanas en que una venture puede construir algo con alcance global desde una base brasileña.",
+            "La segunda ventaja es la profundidad de operador. Brasil tiene agrónomos, cooperativas, distribuidores de insumos y mesas de trading que cargan décadas de conocimiento de campo. El insumo escaso para una agtech AI-native no es el ingeniero ni el capital. Son personas que entienden la agronomía, la estacionalidad, la dinámica de crédito y la psicología de compra de un cultivo específico en una región específica. Esas personas existen aquí en cantidad, y son exactamente el insumo que un venture studio reúne el día uno, en lugar de perseguirlo durante dieciocho meses.",
+            "La tercera ventaja es el telón de fondo estructural. Los servicios representan cerca de 70% del PIB brasileño, con baja penetración de software, una cifra que atribuimos al IBGE. El agronegocio queda entre la producción primaria y una larga cola de servicios de logística, trading, finanzas y seguro, y es en esa cola donde la penetración de software es más rala. La brecha de digitalización que define la oportunidad brasileña más amplia aparece más nítida en la capa comercial y financiera de la agricultura, que es justo donde una venture AI-native tiene más espacio para construir."
+          ]
+        },
+        {
+          "id": "where-to-build",
+          "heading": "Las aberturas AI-native",
+          "level": 2,
+          "paragraphs": [
+            "Dimensionar es el calentamiento. El trabajo de verdad es decidir dónde en la cadena construye una venture AI-native, y cada candidato a wedge tiene que venir con respuesta a una pregunta. Qué dato propietario genera esto que nadie más tiene. Cuatro aperturas pasan esa prueba.",
+            "Léalas como secuencia, no como menú. Las tres primeras son negocios reales. La cuarta es la que compone, porque fabrica el dato que las demás necesitan para suscribir riesgo."
+          ],
+          "bullets": [
+            "Modelos de rendimiento y riesgo sobre datos de satélite y sensores. Visión computacional en imágenes, clima y sensores en campo para pronosticar cosecha, detectar enfermedad y cronometrar intervenciones. El activo es un historial etiquetado de lo que pasó en hectáreas específicas.",
+            "Financiamiento de insumos y suscripción de seguro agrícola. El productor brasileño necesita capital de trabajo y protección contra clima y precio. Una suscriptora AI-native que tarifica el riesgo a partir de datos agronómicos reales atiende segmentos que el crédito y el seguro tradicionales tarifican mal o ignoran.",
+            "Trazabilidad y carbono. Los mercados de exportación exigen cada vez más procedencia y datos de emisión. El software que captura cadena de custodia y huella de carbono se vuelve infraestructura, no una funcionalidad.",
+            "Un copilot para el agrónomo. El wedge de mayor apalancamiento. Una herramienta que se queda en el flujo diario del agrónomo y captura decisiones de campo como dato estructurado y propietario. Cada recomendación y cada resultado se vuelve dato de entrenamiento que ningún competidor puede comprar."
+          ]
+        },
+        {
+          "id": "the-flywheel",
+          "heading": "Del copilot del agrónomo al vehículo de financiamiento",
+          "level": 2,
+          "paragraphs": [
+            "Aquí es donde el patrón de Avante encaja en la agricultura casi demasiado bien. El patrón recurrente en nuestro portafolio es el flywheel copilot, dato, capital. Construir un copilot de IA para generar dato propietario, y después usar ese dato para levantar y desplegar capital. En la mayoría de las verticales el vínculo entre copilot y capital necesita explicación. En la agricultura es obvio.",
+            "Recorra el mecanismo. Un copilot usado por agrónomos en miles de hectáreas genera exactamente la base de datos por la que una suscriptora mataría. Historial de cosecha, uso de insumos, exposición climática, comportamiento de mora y resultados separados por cultivo y región. Esa base es lo que justifica un vehículo de financiamiento o de seguro agrícola. El copilot gana confianza y distribución primero. El dato que captura se vuelve la ventaja de suscripción. El vehículo de capital monetiza esa ventaja. Cada vuelta del ciclo deja la próxima venture más barata de suscribir que la anterior.",
+            "La razón de que esto importe para la asignación de capital es que el dato es el moat, no el modelo. Cualquier equipo competente hace fine-tuning de un modelo. Casi nadie logra armar un historial de varias cosechas de lo que de verdad pasó en hectáreas brasileñas específicas, con los resultados anexados. Ese historial es lento de construir e imposible de atajar, y es justo eso lo que lo vuelve defendible."
+          ]
+        },
+        {
+          "id": "hard-realities",
+          "heading": "Estacionalidad, conectividad y riesgo de transferencia",
+          "level": 2,
+          "paragraphs": [
+            "La agricultura es una de las verticales más difíciles para construir software, y cualquier versión honesta de esta tesis tiene que decirlo antes del cierre. Tres fricciones deciden si una venture llega a su loop de datos o se atasca intentándolo.",
+            "Empiece por la estacionalidad. Un ciclo de cultivo dura meses. Muchas veces usted tiene una sola ventana real de recolección de datos por año por cultivo, lo que estira el tiempo hasta un modelo utilizable y obliga al ciclo de ventas a moverse a la velocidad de la cosecha, no a la del software. Después, conectividad. Buena parte de la frontera agrícola brasileña tiene cobertura rural débil o inexistente, lo que limita la captura en tiempo real y obliga a un diseño offline-first. La cobertura de la agricultura brasileña insiste en lo mismo, que la alta productividad en el campo está frenada por la adopción desigual de tecnología.",
+            "La tercera fricción es la que mata en silencio. Los modelos no transfieren de forma limpia. Un modelo entrenado en soja en Mato Grosso rara vez sirve para café en Minas Gerais, ni siquiera para otro suelo y clima en el mismo cultivo. Cada cultivo y región puede exigir su propio dato y su propio ajuste, así que una venture puede quemar su caja en adquisición de datos antes de que el flywheel gire. La implicación no es que la agtech sea una mala apuesta. Es que la restricción que ata es la adquisición de datos, y quien gana es quien resuelve distribución y confianza primero, para que el dato empiece a fluir."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "En una vertical con una ventana de datos por cultivo por año, el primer objetivo de la venture es un loop de datos funcionando, no una ronda grande. Elija un cultivo y una región, gane confianza, haga fluir el dato.",
+            "attribution": "Visión operativa Avante"
+          }
+        },
+        {
+          "id": "how-avante",
+          "heading": "Cómo Avante lo abordaría",
+          "level": 2,
+          "paragraphs": [
+            "Avante lanza de 3 a 4 ventures por año a través de un sistema de seis etapas: Research, Partner, Build, Traction, Revenue, Compound. En agricultura, Research elige el cultivo y el wedge donde el dato fluye primero. Partner trae a un operador de dominio con cicatriz agronómica profunda, porque la profundidad de operador es la restricción que ata aquí y a esa persona no se la recluta en frío para una idea sin capital. Desplegamos USD 500K a 1,5M por venture en el pre-seed y retenemos economía de co-founder, y los operating partners siguen comprometidos hasta el primer hito de ingresos.",
+            "La secuencia es deliberada. Corra el flywheel copilot, dato, capital contra un solo cultivo y región primero, y después componga hacia cultivos adyacentes cuando el loop de datos funcione. El primer cheque es pequeño a propósito. En una vertical de estacionalidad brutal, el objetivo es llegar a un loop de datos funcionando antes de levantar de nuevo, no financiar un equipo grande por tres cosechas de adivinanza. Resolver la plomería de la empresa una vez enruta cerca de USD 300K a 500K de capital efectivo por venture hacia producto y tracción en lugar de overhead, y una venture de studio nace de 6 a 9 meses por delante de un equipo independiente con financiamiento comparable.",
+            "El modelo en sí es la apuesta. La Global Startup Studio Network reporta un IRR de studio de ~50% frente a un estándar de mercado de ~19% para el VC tradicional, cerca de 2,5x el IRR del VC tradicional en horizontes realistas. Ese es el benchmark del modelo de studio de la GSSN, no el retorno realizado de la propia Avante. Donde se paga en agricultura es el mecanismo. Cuando la profundidad de operador y el dato propietario son las restricciones que atan, concentrar talento escaso e infraestructura compartida vale más aquí que en casi cualquier lugar.",
+            "El mismo flywheel ya corre en el portafolio en otros dominios. Alphajuri en el mercado brasileño de activos judiciales. WIR en tarificación de seguro y risk scoring. BR Auction Intel en inteligencia de remates inmobiliarios. La agricultura es un próximo dominio natural para el patrón copilot, dato, capital, no un desvío de él. La objeción obvia es el sesgo de supervivencia, y es justa. El número de ~50% cuenta los studios que sobrevivieron. Nuestra respuesta es estructural, no un eslogan. El primer cheque es pequeño, el sistema de seis etapas existe para matar ventures débiles antes de que consuman una ronda con precio fijado, y en la agtech esa disciplina la impone el calendario. Las ventures que ganen la agricultura brasileña no serán las mejor capitalizadas. Serán aquellas cuyos operadores ya saben en qué cultivo empezar. Lea [la tesis del studio](/why-avante) y el resto de la [Biblioteca](/library)."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "brazil-ai-cybersecurity-opportunity",
+    "category": "brazil",
+    "type": "Market Analysis",
+    "readTime": "10 min",
+    "featured": false,
+    "date": "Jun 2026",
+    "datePublished": "2026-06-15",
+    "isPublished": true,
+    "en": {
+      "title": "AI in Brazilian Cybersecurity: Where a Studio Would Build",
+      "description": "Brazil cybersecurity compounds toward USD 7 billion by 2030 with LGPD as the forcing function. Where an AI-native venture builds, and where a thin layer dies.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Brazil is the most attacked country in Latin America and runs one of the heaviest data-protection regimes in the hemisphere, yet its security teams are thin and its budget is fragmented. That is the Brazil AI in cybersecurity market opportunity in one sentence. The threat curve, a regulator with real teeth, and a five-figure analyst shortage are already doing the selling. What is missing is software built for how Brazilian teams actually defend, in Portuguese, against Brazilian threats.",
+            "Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America. We read this market the way an operator does, not the way a market-size chart does. The number that matters is not the headline. It is the slice an AI-native venture can win and defend, and the proprietary data it generates on the way there."
+          ]
+        },
+        {
+          "id": "market-size",
+          "heading": "The market, with dated numbers",
+          "level": 2,
+          "paragraphs": [
+            "The honest answer is a range, not a single number, because the research firms disagree by billions. Anyone quoting one figure as the market is selling you the rosiest one.",
+            "According to [MarketsandMarkets](https://www.marketsandmarkets.com/Market-Reports/brazil-cybersecurity-market-155811757.html), Brazil cybersecurity grows from USD 4.61 billion in 2025 to USD 6.98 billion by 2030, an 8.6% CAGR. [Mordor Intelligence](https://www.mordorintelligence.com/industry-reports/brazil-cybersecurity-market) puts it at USD 4.05 billion in 2026, off a USD 3.68 billion base in 2025, reaching USD 6.57 billion by 2031 at a 10.13% CAGR. The narrower IT and telecom security slice runs hotter. [Grand View Research](https://www.grandviewresearch.com/horizon/outlook/it-telecom-cyber-security-market/brazil) sizes that subsegment at USD 1.61 billion by 2030 at a 13.6% CAGR.",
+            "Two things follow. The credible whole-market figures cluster near USD 4 billion today, growing 8 to 10% a year to roughly USD 6.5 to 7 billion by 2030, not the 20%-plus that some sizings imply. And the AI-exposed slices grow faster than the blended market, which is exactly where a new venture should aim. The discipline is sizing the slice you can win, not the whole pie."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Credible estimates put Brazil cybersecurity near USD 4 billion in 2025, growing to roughly USD 6.5 to 7 billion by 2030 at an 8 to 10% CAGR. Report the range, not the rosiest figure.",
+            "attribution": "MarketsandMarkets and Mordor Intelligence, 2025"
+          }
+        },
+        {
+          "id": "the-driver",
+          "heading": "Why LGPD and the threat curve change the game",
+          "level": 2,
+          "paragraphs": [
+            "The driver is not AI hype. It is a law with teeth meeting an attack volume that thin local teams cannot absorb by hand.",
+            "Brazil's Lei Geral de Protecao de Dados, Federal Law No. 13,709, is enforced by the Autoridade Nacional de Protecao de Dados, the ANPD. Penalties reach up to 2% of a company's Brazilian revenue, capped at BRL 50 million, roughly USD 10 million, per violation, according to [Compliance Hub](https://compliancehub.wiki/breaches-and-fines-under-brazils-lei-geral-de-protecao-de-dados-lgpd-2/). The agency is no longer dormant. The [IAPP](https://iapp.org/news/a/lessons-from-brazilian-dpa-sanctions-to-date) counts seven sanctioning decisions published as of October 2024, including an order forcing Meta to halt processing personal data for AI training under a daily fine. Resolution CD/ANPD 15 now requires incident disclosure within three business days. Compliance stopped being theater. It became a recurring cost with a deadline.",
+            "The threat side is heavier. FortiGuard Labs recorded 63 billion attempted cyberattacks across Latin America and the Caribbean in the first half of 2023 alone, and Brazil led the region with 23 billion attempts, ahead of Mexico at 14 billion, [as reported by Mexico Business News](https://mexicobusiness.news/cybersecurity/news/fortiguard-reports-cyberattack-attempts-during-1h23). Ransomware is climbing into critical infrastructure. Confirmed ransomware hits on Brazilian utilities went from zero a decade ago to 16 in 2024, per [Mordor Intelligence](https://www.mordorintelligence.com/industry-reports/brazil-cybersecurity-market).",
+            "Then the part that makes AI non-optional. Brazil graduates fewer than 8,000 cybersecurity specialists a year against more than 37,000 open roles, and managed-security costs run up to 35% higher outside the big metros. A regulator with a three-day clock, 23 billion attack attempts in six months, and a chronic analyst shortfall is the precise setup where software that cuts analyst load gets bought, not just demoed."
+          ]
+        },
+        {
+          "id": "where-to-build",
+          "heading": "The AI-native openings",
+          "level": 2,
+          "paragraphs": [
+            "The openings sit where AI compresses analyst hours and where Portuguese-language, Brazil-specific context is the wedge a global vendor will not bother to tune. Four stand out."
+          ],
+          "bullets": [
+            "SOC triage and alert-reduction copilots. Cut false positives and rank what a thin team looks at first. A direct answer to the sub-8,000-analyst gap.",
+            "Fraud and account-takeover detection on Pix rails. Pix clears around 3 billion transactions a month with about 70% of traffic starting on smartphones, a uniquely Brazilian attack surface generic tools never modeled.",
+            "Phishing and social-engineering defense tuned for Brazilian Portuguese. Language-native detection beats a translated global model on local lures.",
+            "LGPD compliance automation. Continuous evidence collection, incident disclosure against the ANPD three-day rule, and audit-log retention against Central Bank Resolution 4658."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "The test for each opening is the same. It is a workflow a local team runs daily, it produces structured data as a byproduct, and it is too small or too Portuguese for a global vendor to prioritize."
+          }
+        },
+        {
+          "id": "the-flywheel",
+          "heading": "Why security telemetry fits the data-to-fund flywheel",
+          "level": 2,
+          "paragraphs": [
+            "Security is one of the cleanest fits for the copilot to data to fund flywheel because the work product is data. A triage copilot does not just save hours. Every alert a Brazilian analyst confirms or dismisses, every Pix fraud pattern flagged, every phishing lure caught in Portuguese becomes labeled, proprietary training data.",
+            "That corpus is local, current, and refreshed by the exact customers a global vendor cannot reach. The model trained on it gets better at Brazilian threats than any generic tool, which wins the next customer, which deepens the data. That is a data network effect, not a slogan. It is the difference between a wrapper and a company.",
+            "This is the recurring Avante pattern. Build an AI copilot to generate proprietary data, then use that data to raise and deploy capital. The same logic that compounds a judicial-asset platform like Alphajuri or an insurance-pricing API like WIR applies to a threat-detection copilot. The moat is the data exhaust, not the model weights."
+          ]
+        },
+        {
+          "id": "incumbents-and-trust",
+          "heading": "The incumbent and trust problem",
+          "level": 2,
+          "paragraphs": [
+            "Security is trust-heavy and talent-scarce, and both cut against a newcomer. Global incumbents own the enterprise tier and the brand a CISO defaults to. The SMB base, where most of Brazil's millions of service firms sit, has low willingness to pay for security until after an incident. A thin AI layer with no proprietary threat data and no workflow lock-in has no moat and a hard channel problem. It struggles to be trusted with the keys and struggles to get paid.",
+            "The defensible version inverts each of those. It does not sell a generic dashboard. It embeds in a daily workflow, triage or Pix fraud review or LGPD evidence, so switching means losing accumulated context. It earns trust inside one vertical where the operator already has relationships, instead of cold-selling enterprise CISOs against Palo Alto or CrowdStrike. And it compounds Brazilian threat data until it is measurably better at the local problem than any global tool. Skip those three and the channel kills you. Build them and the same friction that blocks foreign incumbents becomes the wall that protects you."
+          ]
+        },
+        {
+          "id": "how-avante",
+          "heading": "How Avante would approach it",
+          "level": 2,
+          "paragraphs": [
+            "Avante would not start from the market chart. It would start from an operator with 10 or more years of Brazilian-market scar tissue in security or fraud, pair them with the studio playbook and a first ticket of capital on day one, and run the six-stage system: Research, Partner, Build, Traction, Revenue, Compound. Avante deploys $500K-1.5M per venture across pre-seed and retains co-founder economics. Because AI infrastructure is now cheap enough to deploy without a Series A, a security copilot can reach revenue on that first check rather than waiting for a funding round that, in this cycle, may not come.",
+            "A word on capital, since it sets the constraint. LATAM venture funding peaked near USD 16 billion in 2021 and reset hard, with quarterly funding around USD 1.35 billion in Q1 2024 as confidence returned, per [Nearshore Americas](https://nearshoreamericas.com/vc-investors-regain-confidence-in-latam-startup-funding-reached-1-35bn-in-q1-2024/). That reset argues for capital efficiency at formation, not against the geography.",
+            "The structural case sits underneath all of it. Services are roughly 70% of Brazilian GDP, per IBGE, with low software penetration, so the buyers of vertical security software are everywhere and underserved. Venture studios post a studio IRR of roughly 50% against the industry-standard roughly 19% for traditional VC, per the Global Startup Studio Network, about 2.5 times the return over realistic horizons. The point is not the multiple. It is that the model is built for exactly this market, where the regulator, the threat curve, and the talent gap are already forcing the spend. Read the [studio thesis](/why-avante), or the rest of the [Library](/library) for related Brazil market work. The builder who pairs operator depth with proprietary Brazilian threat data does not have to win the whole market. Just the slice no global tool will ever bother to learn."
+          ]
+        }
+      ]
+    },
+    "pt": {
+      "title": "IA na Cibersegurança Brasileira: Onde um Studio Construiria",
+      "description": "O mercado de cibersegurança no Brasil avança rumo a US$ 7 bilhões até 2030, com a LGPD como gatilho. Onde uma venture AI-native constrói de verdade.",
+      "sections": [
+        {
+          "paragraphs": [
+            "O Brasil é o país mais atacado da América Latina e opera um dos regimes de proteção de dados mais pesados do hemisfério. Mesmo assim, os times de segurança são enxutos e o orçamento é fragmentado. Esse é o mercado de IA em cibersegurança no Brasil em uma frase. A curva de ameaças, um regulador com dentes de verdade e um déficit de milhares de analistas já estão fazendo a venda. O que falta é software construído para como os times brasileiros de fato defendem, em português, contra ameaças brasileiras.",
+            "A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina. Lemos esse mercado como um operador lê, não como um gráfico de tamanho de mercado lê. O número que importa não é a manchete. É a fatia que uma venture AI-native consegue vencer e defender, e o dado proprietário que ela gera no caminho."
+          ]
+        },
+        {
+          "id": "market-size",
+          "heading": "O mercado, com números datados",
+          "level": 2,
+          "paragraphs": [
+            "A resposta honesta é uma faixa, não um número único, porque as consultorias divergem em bilhões. Quem cita uma cifra só como sendo o mercado está te vendendo a mais otimista.",
+            "Segundo a [MarketsandMarkets](https://www.marketsandmarkets.com/Market-Reports/brazil-cybersecurity-market-155811757.html), a cibersegurança no Brasil cresce de US$ 4,61 bilhões em 2025 para US$ 6,98 bilhões até 2030, um CAGR de 8,6%. A [Mordor Intelligence](https://www.mordorintelligence.com/industry-reports/brazil-cybersecurity-market) estima US$ 4,05 bilhões em 2026, sobre uma base de US$ 3,68 bilhões em 2025, chegando a US$ 6,57 bilhões até 2031 a um CAGR de 10,13%. A fatia mais estreita de segurança em TI e telecom cresce mais rápido. A [Grand View Research](https://www.grandviewresearch.com/horizon/outlook/it-telecom-cyber-security-market/brazil) dimensiona esse subsegmento em US$ 1,61 bilhão até 2030, a um CAGR de 13,6%.",
+            "Duas conclusões. As cifras críveis para o mercado inteiro se concentram perto de US$ 4 bilhões hoje, crescendo de 8% a 10% ao ano para algo entre US$ 6,5 e 7 bilhões até 2030, e não os mais de 20% que algumas estimativas sugerem. E as fatias expostas à IA crescem mais rápido que o mercado consolidado, que é exatamente onde uma venture nova deve mirar. A disciplina é dimensionar a fatia que dá para vencer, não a torta inteira."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Estimativas críveis colocam a cibersegurança no Brasil perto de US$ 4 bilhões em 2025, crescendo para algo entre US$ 6,5 e 7 bilhões até 2030 a um CAGR de 8% a 10%. Reporte a faixa, não a cifra mais otimista.",
+            "attribution": "MarketsandMarkets e Mordor Intelligence, 2025"
+          }
+        },
+        {
+          "id": "the-driver",
+          "heading": "Por que a LGPD e a curva de ameaças mudam o jogo",
+          "level": 2,
+          "paragraphs": [
+            "O gatilho não é hype de IA. É uma lei com dentes encontrando um volume de ataques que times locais enxutos não conseguem absorver na mão.",
+            "A Lei Geral de Proteção de Dados, Lei Federal nº 13.709, é fiscalizada pela Autoridade Nacional de Proteção de Dados, a ANPD. As penalidades chegam a 2% do faturamento da empresa no Brasil, limitadas a R$ 50 milhões, cerca de US$ 10 milhões, por infração, segundo o [Compliance Hub](https://compliancehub.wiki/breaches-and-fines-under-brazils-lei-geral-de-protecao-de-dados-lgpd-2/). A agência não está mais dormente. O [IAPP](https://iapp.org/news/a/lessons-from-brazilian-dpa-sanctions-to-date) contabiliza sete decisões sancionadoras publicadas até outubro de 2024, incluindo uma ordem que obrigou a Meta a suspender o tratamento de dados pessoais para treino de IA sob multa diária. A Resolução CD/ANPD 15 agora exige a comunicação de incidentes em até três dias úteis. Conformidade deixou de ser teatro. Virou um custo recorrente com prazo.",
+            "O lado das ameaças é mais pesado. O FortiGuard Labs registrou 63 bilhões de tentativas de ataque cibernético na América Latina e no Caribe só no primeiro semestre de 2023, e o Brasil liderou a região com 23 bilhões de tentativas, à frente do México com 14 bilhões, [conforme reportado pela Mexico Business News](https://mexicobusiness.news/cybersecurity/news/fortiguard-reports-cyberattack-attempts-during-1h23). O ransomware está subindo para a infraestrutura crítica. Incidentes confirmados de ransomware em concessionárias brasileiras saltaram de zero há uma década para 16 em 2024, segundo a [Mordor Intelligence](https://www.mordorintelligence.com/industry-reports/brazil-cybersecurity-market).",
+            "E então a parte que torna a IA não opcional. O Brasil forma menos de 8.000 especialistas em cibersegurança por ano contra mais de 37.000 vagas abertas, e o custo de segurança gerenciada chega a ser 35% maior fora das grandes capitais. Um regulador com prazo de três dias, 23 bilhões de tentativas de ataque em seis meses e um déficit crônico de analistas é o cenário exato em que software que reduz a carga do analista é comprado, não apenas demonstrado."
+          ]
+        },
+        {
+          "id": "where-to-build",
+          "heading": "As aberturas AI-native",
+          "level": 2,
+          "paragraphs": [
+            "As aberturas estão onde a IA comprime horas de analista e onde o contexto em português e específico do Brasil é a cunha que um fornecedor global não vai se dar ao trabalho de calibrar. Quatro se destacam."
+          ],
+          "bullets": [
+            "Copilotos de triagem de SOC e redução de alertas. Cortam falsos positivos e priorizam o que um time enxuto deve olhar primeiro. Resposta direta ao déficit de menos de 8.000 analistas.",
+            "Detecção de fraude e tomada de conta sobre os trilhos do Pix. O Pix processa cerca de 3 bilhões de transações por mês, com aproximadamente 70% do tráfego começando em smartphones, uma superfície de ataque unicamente brasileira que ferramentas genéricas nunca modelaram.",
+            "Defesa contra phishing e engenharia social calibrada para o português do Brasil. Detecção nativa na língua supera um modelo global traduzido nas iscas locais.",
+            "Automação de conformidade com a LGPD. Coleta contínua de evidências, comunicação de incidentes contra a regra dos três dias da ANPD e retenção de logs de auditoria contra a Resolução 4658 do Banco Central."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "O teste para cada abertura é o mesmo. É um fluxo de trabalho que um time local roda todo dia, gera dado estruturado como subproduto, e é pequeno demais ou brasileiro demais para um fornecedor global priorizar."
+          }
+        },
+        {
+          "id": "the-flywheel",
+          "heading": "Por que a telemetria de segurança encaixa no flywheel dado para capital",
+          "level": 2,
+          "paragraphs": [
+            "Segurança é um dos encaixes mais limpos para o flywheel copilot, dado, capital porque o produto do trabalho é dado. Um copiloto de triagem não só economiza horas. Cada alerta que um analista brasileiro confirma ou descarta, cada padrão de fraude no Pix sinalizado, cada isca de phishing capturada em português vira dado de treino proprietário e rotulado.",
+            "Esse acervo é local, atual e renovado pelos mesmos clientes que um fornecedor global não alcança. O modelo treinado nele fica melhor em ameaças brasileiras do que qualquer ferramenta genérica, o que conquista o próximo cliente, o que aprofunda o dado. Isso é efeito de rede de dados, não slogan. É a diferença entre um wrapper e uma empresa.",
+            "Esse é o padrão recorrente da Avante. Construir um copiloto de IA para gerar dado proprietário, e usar esse dado para captar e alocar capital. A mesma lógica que faz uma plataforma de ativos judiciais como a Alphajuri ou uma API de precificação de seguros como a WIR compor aplica a um copiloto de detecção de ameaças. O moat é o dado que sobra, não os pesos do modelo."
+          ]
+        },
+        {
+          "id": "incumbents-and-trust",
+          "heading": "O problema de incumbentes e confiança",
+          "level": 2,
+          "paragraphs": [
+            "Segurança é intensiva em confiança e escassa em talento, e os dois pesam contra um entrante. Os incumbentes globais dominam o tier enterprise e a marca que um CISO escolhe por padrão. A base SMB, onde está a maioria dos milhões de empresas de serviço do Brasil, tem baixa disposição a pagar por segurança até depois de um incidente. Uma camada fina de IA sem dado de ameaça proprietário e sem trava de fluxo de trabalho não tem moat e tem um problema sério de canal. Custa a ser confiada com as chaves e custa a ser paga.",
+            "A versão defensável inverte cada um desses pontos. Ela não vende um dashboard genérico. Ela se encaixa em um fluxo de trabalho diário, triagem ou revisão de fraude no Pix ou evidência de LGPD, de modo que trocar significa perder contexto acumulado. Ela ganha confiança dentro de um vertical onde o operador já tem relacionamento, em vez de vender a frio para CISOs enterprise contra Palo Alto ou CrowdStrike. E ela compõe dado de ameaça brasileiro até ser mensuravelmente melhor no problema local do que qualquer ferramenta global. Pule esses três e o canal te mata. Construa-os e a mesma fricção que barra os incumbentes estrangeiros vira o muro que te protege."
+          ]
+        },
+        {
+          "id": "how-avante",
+          "heading": "Como a Avante abordaria",
+          "level": 2,
+          "paragraphs": [
+            "A Avante não começaria pelo gráfico de mercado. Começaria por um operador com 10 anos ou mais de cicatriz de mercado brasileiro em segurança ou fraude, o pareando com o playbook do studio e um primeiro cheque de capital no dia um, e rodaria o sistema de seis estágios: Research, Partner, Build, Traction, Revenue, Compound. A Avante aloca US$ 500 mil a US$ 1,5 milhão por venture ao longo do pre-seed e mantém economia de co-founder. Como a infraestrutura de IA agora é barata o suficiente para subir sem uma Série A, um copiloto de segurança pode chegar à receita com esse primeiro cheque, em vez de esperar uma rodada que, neste ciclo, pode não vir.",
+            "Uma palavra sobre capital, já que ela define a restrição. O funding de venture na América Latina chegou ao pico perto de US$ 16 bilhões em 2021 e teve uma correção forte, com aporte trimestral em torno de US$ 1,35 bilhão no primeiro trimestre de 2024 conforme a confiança voltava, segundo a [Nearshore Americas](https://nearshoreamericas.com/vc-investors-regain-confidence-in-latam-startup-funding-reached-1-35bn-in-q1-2024/). Essa correção é argumento a favor de eficiência de capital na formação, não contra a geografia.",
+            "O caso estrutural está embaixo de tudo isso. Serviços são cerca de 70% do PIB brasileiro, segundo o IBGE, com baixa penetração de software, então os compradores de software vertical de segurança estão em todo lugar e mal atendidos. Venture studios registram um IRR de studio de cerca de 50% contra os cerca de 19% padrão da indústria para o VC tradicional, segundo a Global Startup Studio Network, cerca de 2,5 vezes o retorno em horizontes realistas. O ponto não é o múltiplo. É que o modelo foi feito exatamente para este mercado, onde o regulador, a curva de ameaças e o déficit de talento já estão forçando o gasto. Leia a [tese do studio](/why-avante), ou o resto da [Library](/library) para trabalhos relacionados sobre o mercado brasileiro. Quem combina profundidade de operador com dado de ameaça brasileiro proprietário não precisa vencer o mercado inteiro. Só a fatia que nenhuma ferramenta global jamais vai se dar ao trabalho de aprender."
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "IA en la Ciberseguridad Brasileña: Dónde Construiría un Studio",
+      "description": "El mercado de ciberseguridad en Brasil avanza hacia USD 7 mil millones para 2030, con la LGPD como detonante. Dónde construye una venture AI-native.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Brasil es el país más atacado de América Latina y opera uno de los regímenes de protección de datos más pesados del hemisferio. Aun así, sus equipos de seguridad son delgados y su presupuesto está fragmentado. Ese es el mercado de IA en ciberseguridad en Brasil en una frase. La curva de amenazas, un regulador con dientes de verdad y un déficit de miles de analistas ya están haciendo la venta. Lo que falta es software construido para cómo los equipos brasileños defienden de verdad, en portugués, contra amenazas brasileñas.",
+            "Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina. Leemos este mercado como lo lee un operador, no como lo lee un gráfico de tamaño de mercado. El número que importa no es el titular. Es la porción que una venture AI-native puede ganar y defender, y el dato propietario que genera en el camino."
+          ]
+        },
+        {
+          "id": "market-size",
+          "heading": "El mercado, con números fechados",
+          "level": 2,
+          "paragraphs": [
+            "La respuesta honesta es un rango, no un número único, porque las consultoras difieren por miles de millones. Quien cita una sola cifra como si fuera el mercado le está vendiendo la más optimista.",
+            "Según [MarketsandMarkets](https://www.marketsandmarkets.com/Market-Reports/brazil-cybersecurity-market-155811757.html), la ciberseguridad en Brasil crece de USD 4.61 mil millones en 2025 a USD 6.98 mil millones para 2030, un CAGR de 8.6%. [Mordor Intelligence](https://www.mordorintelligence.com/industry-reports/brazil-cybersecurity-market) la sitúa en USD 4.05 mil millones en 2026, sobre una base de USD 3.68 mil millones en 2025, llegando a USD 6.57 mil millones para 2031 a un CAGR de 10.13%. La porción más estrecha de seguridad en TI y telecom crece más rápido. [Grand View Research](https://www.grandviewresearch.com/horizon/outlook/it-telecom-cyber-security-market/brazil) dimensiona ese subsegmento en USD 1.61 mil millones para 2030, a un CAGR de 13.6%.",
+            "Dos conclusiones. Las cifras creíbles para el mercado entero se concentran cerca de USD 4 mil millones hoy, creciendo de 8% a 10% al año hacia algo entre USD 6.5 y 7 mil millones para 2030, y no el más de 20% que algunas estimaciones sugieren. Y las porciones expuestas a la IA crecen más rápido que el mercado consolidado, que es exactamente donde debe apuntar una venture nueva. La disciplina es dimensionar la porción que se puede ganar, no el pastel entero."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Las estimaciones creíbles ubican la ciberseguridad en Brasil cerca de USD 4 mil millones en 2025, creciendo hacia algo entre USD 6.5 y 7 mil millones para 2030 a un CAGR de 8% a 10%. Reporte el rango, no la cifra más optimista.",
+            "attribution": "MarketsandMarkets y Mordor Intelligence, 2025"
+          }
+        },
+        {
+          "id": "the-driver",
+          "heading": "Por qué la LGPD y la curva de amenazas cambian el juego",
+          "level": 2,
+          "paragraphs": [
+            "El detonante no es el hype de la IA. Es una ley con dientes que se encuentra con un volumen de ataques que los equipos locales delgados no pueden absorber a mano.",
+            "La Lei Geral de Proteção de Dados, Ley Federal nº 13.709, es fiscalizada por la Autoridade Nacional de Proteção de Dados, la ANPD. Las sanciones llegan al 2% de la facturación de la empresa en Brasil, con un tope de BRL 50 millones, cerca de USD 10 millones, por infracción, según [Compliance Hub](https://compliancehub.wiki/breaches-and-fines-under-brazils-lei-geral-de-protecao-de-dados-lgpd-2/). La agencia ya no está dormida. El [IAPP](https://iapp.org/news/a/lessons-from-brazilian-dpa-sanctions-to-date) contabiliza siete decisiones sancionadoras publicadas hasta octubre de 2024, entre ellas una orden que obligó a Meta a suspender el tratamiento de datos personales para entrenamiento de IA bajo una multa diaria. La Resolución CD/ANPD 15 ahora exige comunicar incidentes en un plazo de tres días hábiles. El cumplimiento dejó de ser teatro. Se volvió un costo recurrente con fecha límite.",
+            "El lado de las amenazas es más pesado. FortiGuard Labs registró 63 mil millones de intentos de ciberataque en América Latina y el Caribe solo en el primer semestre de 2023, y Brasil lideró la región con 23 mil millones de intentos, por delante de México con 14 mil millones, [según reportó Mexico Business News](https://mexicobusiness.news/cybersecurity/news/fortiguard-reports-cyberattack-attempts-during-1h23). El ransomware está subiendo hacia la infraestructura crítica. Los incidentes confirmados de ransomware en empresas de servicios públicos brasileñas pasaron de cero hace una década a 16 en 2024, según [Mordor Intelligence](https://www.mordorintelligence.com/industry-reports/brazil-cybersecurity-market).",
+            "Y luego la parte que vuelve la IA no opcional. Brasil gradúa a menos de 8.000 especialistas en ciberseguridad al año contra más de 37.000 vacantes abiertas, y el costo de seguridad gestionada llega a ser 35% mayor fuera de las grandes capitales. Un regulador con un plazo de tres días, 23 mil millones de intentos de ataque en seis meses y un déficit crónico de analistas es el escenario exacto donde el software que reduce la carga del analista se compra, no solo se demuestra."
+          ]
+        },
+        {
+          "id": "where-to-build",
+          "heading": "Las aberturas AI-native",
+          "level": 2,
+          "paragraphs": [
+            "Las aberturas están donde la IA comprime horas de analista y donde el contexto en portugués y específico de Brasil es la cuña que un proveedor global no se va a molestar en calibrar. Cuatro se destacan."
+          ],
+          "bullets": [
+            "Copilotos de triaje de SOC y reducción de alertas. Cortan falsos positivos y priorizan lo que un equipo delgado debe mirar primero. Respuesta directa al déficit de menos de 8.000 analistas.",
+            "Detección de fraude y robo de cuentas sobre los rieles de Pix. Pix procesa cerca de 3 mil millones de transacciones al mes, con aproximadamente 70% del tráfico iniciando en smartphones, una superficie de ataque únicamente brasileña que las herramientas genéricas nunca modelaron.",
+            "Defensa contra phishing e ingeniería social calibrada para el portugués de Brasil. La detección nativa en el idioma supera a un modelo global traducido en los señuelos locales.",
+            "Automatización de cumplimiento de la LGPD. Recolección continua de evidencia, comunicación de incidentes contra la regla de tres días de la ANPD y retención de logs de auditoría contra la Resolución 4658 del Banco Central."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "La prueba para cada abertura es la misma. Es un flujo de trabajo que un equipo local corre todos los días, genera dato estructurado como subproducto, y es demasiado pequeño o demasiado brasileño para que un proveedor global lo priorice."
+          }
+        },
+        {
+          "id": "the-flywheel",
+          "heading": "Por qué la telemetría de seguridad encaja en el flywheel dato a capital",
+          "level": 2,
+          "paragraphs": [
+            "La seguridad es uno de los encajes más limpios para el flywheel copilot, dato, capital porque el producto del trabajo es dato. Un copiloto de triaje no solo ahorra horas. Cada alerta que un analista brasileño confirma o descarta, cada patrón de fraude en Pix señalado, cada señuelo de phishing capturado en portugués se vuelve dato de entrenamiento propietario y etiquetado.",
+            "Ese acervo es local, actual y renovado por los mismos clientes que un proveedor global no alcanza. El modelo entrenado con él se vuelve mejor en amenazas brasileñas que cualquier herramienta genérica, lo que gana al próximo cliente, lo que profundiza el dato. Eso es un efecto de red de datos, no un eslogan. Es la diferencia entre un wrapper y una empresa.",
+            "Ese es el patrón recurrente de Avante. Construir un copiloto de IA para generar dato propietario, y usar ese dato para levantar y desplegar capital. La misma lógica que hace componer a una plataforma de activos judiciales como Alphajuri o a una API de precificación de seguros como WIR aplica a un copiloto de detección de amenazas. El moat es el dato que sobra, no los pesos del modelo."
+          ]
+        },
+        {
+          "id": "incumbents-and-trust",
+          "heading": "El problema de incumbentes y confianza",
+          "level": 2,
+          "paragraphs": [
+            "La seguridad es intensiva en confianza y escasa en talento, y ambas pesan contra un entrante. Los incumbentes globales dominan el tier enterprise y la marca que un CISO elige por defecto. La base SMB, donde está la mayoría de los millones de empresas de servicio de Brasil, tiene baja disposición a pagar por seguridad hasta después de un incidente. Una capa delgada de IA sin dato de amenaza propietario y sin amarre de flujo de trabajo no tiene moat y tiene un problema serio de canal. Le cuesta que le confíen las llaves y le cuesta cobrar.",
+            "La versión defendible invierte cada uno de esos puntos. No vende un dashboard genérico. Se encaja en un flujo de trabajo diario, triaje o revisión de fraude en Pix o evidencia de LGPD, de modo que cambiar significa perder contexto acumulado. Gana confianza dentro de un vertical donde el operador ya tiene relaciones, en vez de vender en frío a CISOs enterprise contra Palo Alto o CrowdStrike. Y compone dato de amenaza brasileño hasta ser mensurablemente mejor en el problema local que cualquier herramienta global. Sáltese esos tres y el canal lo mata. Constrúyalos y la misma fricción que frena a los incumbentes extranjeros se vuelve el muro que lo protege."
+          ]
+        },
+        {
+          "id": "how-avante",
+          "heading": "Cómo Avante lo abordaría",
+          "level": 2,
+          "paragraphs": [
+            "Avante no empezaría por el gráfico de mercado. Empezaría por un operador con 10 años o más de cicatriz de mercado brasileño en seguridad o fraude, lo emparejaría con el playbook del studio y un primer cheque de capital en el día uno, y correría el sistema de seis etapas: Research, Partner, Build, Traction, Revenue, Compound. Avante despliega USD 500K-1.5M por venture a lo largo del pre-seed y retiene economía de co-founder. Como la infraestructura de IA ahora es lo bastante barata para desplegar sin una Serie A, un copiloto de seguridad puede llegar a ingresos con ese primer cheque, en vez de esperar una ronda que, en este ciclo, puede no llegar.",
+            "Una palabra sobre el capital, ya que fija la restricción. El funding de venture en América Latina llegó a su pico cerca de USD 16 mil millones en 2021 y tuvo una corrección fuerte, con aporte trimestral en torno a USD 1.35 mil millones en el primer trimestre de 2024 a medida que volvía la confianza, según [Nearshore Americas](https://nearshoreamericas.com/vc-investors-regain-confidence-in-latam-startup-funding-reached-1-35bn-in-q1-2024/). Esa corrección es argumento a favor de la eficiencia de capital en la formación, no contra la geografía.",
+            "El caso estructural está debajo de todo esto. Los servicios son cerca del 70% del PIB brasileño, según el IBGE, con baja penetración de software, así que los compradores de software vertical de seguridad están en todas partes y mal atendidos. Los venture studios registran un IRR de studio de cerca de 50% contra el cerca de 19% estándar de la industria para el VC tradicional, según la Global Startup Studio Network, cerca de 2.5 veces el retorno en horizontes realistas. El punto no es el múltiplo. Es que el modelo fue hecho exactamente para este mercado, donde el regulador, la curva de amenazas y el déficit de talento ya están forzando el gasto. Lea la [tesis del studio](/why-avante), o el resto de la [Library](/library) para trabajos relacionados sobre el mercado brasileño. Quien combina profundidad de operador con dato de amenaza brasileño propietario no necesita ganar el mercado entero. Solo la porción que ninguna herramienta global jamás se va a molestar en aprender."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "brazil-ai-fintech-market-opportunity",
+    "category": "brazil",
+    "type": "Market Analysis",
+    "readTime": "10 min",
+    "featured": false,
+    "date": "Jun 2026",
+    "datePublished": "2026-06-15",
+    "isPublished": true,
+    "en": {
+      "title": "AI in Brazilian Fintech: Where a Studio Would Actually Build",
+      "description": "Brazil AI in fintech scales past USD 2 billion by 2034. Pix and Open Finance moved the moat from rails to underwriting. Here is where to build.",
+      "sections": [
+        {
+          "paragraphs": [
+            "The Brazil AI in fintech market is worth about USD 457 million today and is forecast to reach USD 2.17 billion by 2034, per IMARC. That is a real number, and it is smaller than most pitches imply. The interesting part is not the size. It is that Brazil runs two pieces of public financial infrastructure, Pix and Open Finance, that most countries do not have, and they move the entire question of where an AI fintech can defend itself.",
+            "Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America. We are skeptical of AI fintech as a category, because most of it is a thin layer on a bank API with no moat. This piece is about the exceptions. Where the public rails, a real workflow, and a proprietary data loop combine into something a generalist cannot copy."
+          ]
+        },
+        {
+          "id": "market-size",
+          "heading": "The market, with dated numbers",
+          "level": 2,
+          "paragraphs": [
+            "Start with the honest number, not the rosiest one. IMARC sizes the Brazil AI in fintech market at USD 457.1 million in 2025, growing to USD 2,165.7 million by 2034 at an 18.30% CAGR, per [IMARC Group](https://www.imarcgroup.com/brazil-ai-in-fintech-market). That AI-specific slice sits inside a larger fintech market IMARC puts at USD 5.5 billion in 2025, heading to USD 19.1 billion by 2034 at 14.92%, per [IMARC Group](https://www.imarcgroup.com/brazil-fintech-market). Other research houses publish a smaller base. That spread is normal for a young category, and pretending it is a settled figure is the first tell of a weak market read.",
+            "Two facts survive the range. The AI slice is under half a billion dollars today, so anyone selling a giant addressable market for AI fintech in Brazil is rounding up. And the AI layer is forecast to grow faster than the fintech market it rides on, 18.30% against 14.92%. That gap is the signal. AI is taking share inside fintech, not merely growing alongside it.",
+            "So the right framing is not how big the market is. It is where inside a small, fast-compounding category the durable businesses get built. Sizing is the warm-up. The structure is the content."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Brazil AI in fintech is forecast to grow from USD 457M in 2025 to USD 2.17B by 2034 at 18.30% CAGR, faster than the 14.92% growth of the USD 5.5B fintech market it sits inside.",
+            "attribution": "IMARC Group, 2026"
+          }
+        },
+        {
+          "id": "the-rails",
+          "heading": "Why Pix and Open Finance change the game",
+          "level": 2,
+          "paragraphs": [
+            "Brazil is structurally different from most fintech markets, and the reason is the public infrastructure, not the market size. Pix, the instant-payment rail Banco Central do Brasil launched in November 2020, passed 175 million users by May 2025 and is used by 93% of the Brazilian adult population, with 62% naming it their most frequent way to pay, per [data summarizing Banco Central figures](https://en.wikipedia.org/wiki/Pix_(payment_system)). By July 2024 it was moving close to R$2.5 trillion a month. By the end of 2024 it was 47% of all non-cash transactions and the fastest-growing payment instrument of the year, up 52%, per [Banco Central reporting](https://brazileconomy.com.br/financas/2025/08/pix-movimenta-r-264-trilhoes-em-2024-e-se-consolida-como-principal-meio-de-pagamento/).",
+            "The price tells the strategic story. Pix is free for individuals and 0.33% for merchants, against 1.13% for debit and 2.34% for credit. A rail that cheap and that widely adopted does not stay a differentiator. It becomes the floor everyone builds on.",
+            "Open Finance is the rail that matters most for AI. Brazil reached 62 million active Open Finance consents by January 2025, up 44% year over year, with roughly 2.3 billion successful API calls every week, per [DPL News citing FEBRABAN](https://dplnews.com/brasil-consentimentos-de-open-finance-chegam-a-62-milhoes-2025-marca-entrada-de-novas-funcionalidades/). A fintech in the United States or Europe spends years and serious money assembling the data access a Brazilian fintech can request through a standardized consent. That is the shift. When the rails are public and shared, the rails are not the advantage. The advantage moves to what a venture does with the data. Underwriting quality and workflow depth become the moat. Payment plumbing does not."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Brazil reached 62 million active Open Finance consents by January 2025, up 44% year over year, with about 2.3 billion API calls every week.",
+            "attribution": "FEBRABAN, via DPL News"
+          }
+        },
+        {
+          "id": "where-to-build",
+          "heading": "The AI-native openings",
+          "level": 2,
+          "paragraphs": [
+            "The openings worth chasing share one shape. Each turns Brazil's standardized data layer into a decision that used to need a human expert or a thick proprietary dataset. Four stand out.",
+            "The common thread runs underneath all four. The rail is public but the data loop is not. Two ventures can request the same Open Finance consent. Only one of them turns six months of repayment outcomes into a sharper model and a workflow the customer will not leave. That asymmetry is where the durable business hides, so read each opening below as a place to build a loop, not a feature."
+          ],
+          "bullets": [
+            "Credit and risk underwriting on thin files. Tens of millions of Brazilians and small firms have almost no formal credit history. Open Finance consent plus Pix cash-flow data lets a model underwrite a borrower a bureau score would reject. The moat is the repayment data the lender accumulates, not the model itself.",
+            "Fraud and AML. Pix moving close to R$2.5 trillion a month created a real-time fraud surface. AI that scores transactions and flags laundering against live rails is a workflow that both incumbents and regulators want.",
+            "Treasury and reconciliation. Brazilian businesses run on a tangle of Pix, boletos, cards, and a layered tax regime. AI that reconciles flows and forecasts cash against the actual rails replaces spreadsheet work that never scaled.",
+            "SMB embedded finance. Services are roughly 70% of Brazilian GDP, mostly small operators. Embedding credit and payments inside the software those firms already use turns a vertical tool into a financial-data engine."
+          ]
+        },
+        {
+          "id": "the-flywheel",
+          "heading": "Why lending fits the data-to-fund flywheel",
+          "level": 2,
+          "paragraphs": [
+            "Lending is the canonical case for the copilot to data to fund flywheel, the recurring pattern across Avante ventures. The mechanics are clean. Build an AI copilot that helps a lender or a borrower reach a credit decision. The copilot generates proprietary performance data, every loan approved and then repaid or defaulted. That outcome data is exactly what a capital vehicle needs to underwrite at scale. So the copilot does not just sell software. It manufactures the dataset that justifies raising and deploying a fund.",
+            "This is why lending turns the flywheel harder than fraud or reconciliation. Fraud scoring produces signals. Reconciliation produces efficiency. Lending produces repayment outcomes, and a repayment outcome is a financial asset. A venture that owns the underwriting workflow and the data it throws off can move from selling a tool to deploying capital against its own edge.",
+            "Avante runs this pattern across the portfolio, and the vertical is the only thing that changes. Alphajuri runs it in the Brazilian judicial-debt market, where a copilot for precatórios and claims generates the data to underwrite those assets. WIR runs the same logic in insurance pricing and risk scoring. BR Auction Intel runs it in real estate auction intelligence. Same flywheel, different asset."
+          ]
+        },
+        {
+          "id": "crowded-and-regulated",
+          "heading": "The crowding and regulation problem",
+          "level": 2,
+          "paragraphs": [
+            "The honest objection is that fintech is the most crowded and most regulated category in LATAM, and a thin AI layer on a bank API has no moat. The funding data backs the crowding. Fintech captured 61% of all Latin American venture funding in 2025 on just 29% of deals, per [Cuantico VP's LatAm VC Report 2026](https://reports.cuanticovp.com/preliminary-findings-from-the-latam-vc-report-2026-more-capital-fewer-startups/), dated February 18, 2026. Total regional VC was USD 4.126 billion across 681 rounds, up 13.8% year over year, and Brazil alone took USD 2.032 billion, 52.9% of the region, across 363 deals. The three largest rounds of the year were all Mexican fintechs.",
+            "That is the problem and the filter at once. Nubank and other incumbents already own enormous data loops, so a generic AI wrapper competes with them on their strongest ground and loses. The same data shows pre-seed funding fell 40% in 2025, from USD 110 million to USD 66 million. Early capital got scarcer even as late-stage fintech boomed. A venture that needs a frothy seed market to find product-market fit is built for the wrong cycle.",
+            "The way through is not a thinner layer. It is a workflow and a data loop a generalist cannot copy, in a vertical the incumbents find too small or too operationally messy to chase. Defensibility comes from owning one specific underwriting decision end to end. Not from access to an API every competitor can also call."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Fintech took 61% of LATAM venture funding in 2025 on only 29% of deals, while pre-seed funding fell 40% from USD 110M to USD 66M.",
+            "attribution": "Cuantico VP, LatAm VC Report 2026"
+          }
+        },
+        {
+          "id": "how-avante",
+          "heading": "How Avante would approach it",
+          "level": 2,
+          "paragraphs": [
+            "The first move is to refuse the obvious one. We would not build a horizontal AI fintech to fight Nubank on data scale, because that is a fight the incumbent already won. Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America. It launches 3-4 ventures per year through a six-stage system: Research, Partner, Build, Traction, Revenue, Compound. It deploys $500K-1.5M per venture across pre-seed and retains co-founder economics. Applied to fintech, that model points one way. Pick a single underwriting decision in an underserved vertical, pair a domain operator who has lived that credit market with the public rails, and build the workflow that produces a proprietary data loop.",
+            "The structural facts make this buildable now. Pix and Open Finance supply the data access that used to require a Series A to assemble. Solving the company plumbing once routes roughly $300K-500K of effective capital per venture into product and traction rather than overhead. A studio venture launches 6-9 months ahead of a comparably funded standalone team. The scarce input is not capital or models, both of which are cheap. It is operators with 10+ years of scar tissue in a specific Brazilian credit market, paired with a Silicon Valley playbook and first-ticket capital on day one. See [the studio thesis](/why-avante) for how that gets assembled.",
+            "The performance case for the model is the studio benchmark, not an Avante track record. The Global Startup Studio Network reports studio IRR of ~50% versus an industry-standard ~19% for traditional VC, roughly 2.5x the IRR of traditional VC over realistic time horizons. That is the GSSN figure for the studio model, never any single firm's realized return. Where it bears on fintech is the mechanism. In a category this crowded, the edge is operator depth and a data loop, exactly the inputs a studio concentrates.",
+            "The close is blunt. Most AI fintech ideas in Brazil will fail, because they are wrappers on a public rail anyone can call. The few that win will own a workflow and the repayment data it generates. Browse [the Library](/library) for the rest of how we think about building in Brazil."
+          ]
+        }
+      ]
+    },
+    "pt": {
+      "title": "IA no Fintech Brasileiro: Onde um Studio de Fato Construiria",
+      "description": "A IA em fintech no Brasil avança além de US$ 2 bilhões até 2034. Pix e Open Finance moveram o moat dos trilhos para o crédito. Veja onde construir.",
+      "sections": [
+        {
+          "paragraphs": [
+            "O mercado de IA em fintech no Brasil vale cerca de US$ 457 milhões hoje e deve chegar a US$ 2,17 bilhões até 2034, segundo a IMARC. É um número real, e é menor do que a maioria dos pitches sugere. O interessante não é o tamanho. É que o Brasil opera duas peças de infraestrutura financeira pública, Pix e Open Finance, que a maioria dos países não tem, e elas mudam toda a pergunta sobre onde uma fintech de IA consegue se defender.",
+            "A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina. Somos céticos quanto à IA em fintech como categoria, porque a maior parte dela é uma camada fina sobre uma API bancária sem moat. Este texto é sobre as exceções. Onde os trilhos públicos, um workflow de verdade e um loop de dados proprietário se combinam em algo que um generalista não consegue copiar."
+          ]
+        },
+        {
+          "id": "market-size",
+          "heading": "O mercado, com números datados",
+          "level": 2,
+          "paragraphs": [
+            "Comece pelo número honesto, não pelo mais otimista. A IMARC dimensiona o mercado de IA em fintech no Brasil em US$ 457,1 milhões em 2025, crescendo para US$ 2.165,7 milhões até 2034 a um CAGR de 18,30%, segundo a [IMARC Group](https://www.imarcgroup.com/brazil-ai-in-fintech-market). Essa fatia específica de IA está dentro de um mercado de fintech maior, que a IMARC estima em US$ 5,5 bilhões em 2025, rumo a US$ 19,1 bilhões até 2034 a 14,92%, segundo a [IMARC Group](https://www.imarcgroup.com/brazil-fintech-market). Outras casas de pesquisa publicam uma base menor. Essa variação é normal numa categoria jovem, e fingir que é um número fechado é o primeiro sinal de uma leitura fraca de mercado.",
+            "Dois fatos sobrevivem à variação. A fatia de IA está abaixo de meio bilhão de dólares hoje, então quem vende um mercado endereçável gigante para IA em fintech no Brasil está arredondando para cima. E a camada de IA deve crescer mais rápido do que o mercado de fintech sobre o qual ela cavalga, 18,30% contra 14,92%. Essa diferença é o sinal. A IA está ganhando participação dentro do fintech, não apenas crescendo junto.",
+            "Então o enquadramento certo não é o tamanho do mercado. É onde, dentro de uma categoria pequena e de rápida composição, os negócios duráveis são construídos. O dimensionamento é o aquecimento. A estrutura é o conteúdo."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "A IA em fintech no Brasil deve crescer de US$ 457 milhões em 2025 para US$ 2,17 bilhões até 2034 a um CAGR de 18,30%, mais rápido que os 14,92% do mercado de fintech de US$ 5,5 bilhões em que está inserida.",
+            "attribution": "IMARC Group, 2026"
+          }
+        },
+        {
+          "id": "the-rails",
+          "heading": "Por que Pix e Open Finance mudam o jogo",
+          "level": 2,
+          "paragraphs": [
+            "O Brasil é estruturalmente diferente da maioria dos mercados de fintech, e o motivo é a infraestrutura pública, não o tamanho do mercado. O Pix, o trilho de pagamento instantâneo que o Banco Central do Brasil lançou em novembro de 2020, passou de 175 milhões de usuários até maio de 2025 e é usado por 93% da população adulta brasileira, com 62% apontando-o como a forma mais frequente de pagar, segundo [dados que resumem números do Banco Central](https://en.wikipedia.org/wiki/Pix_(payment_system)). Em julho de 2024 já movimentava cerca de R$ 2,5 trilhões por mês. No fim de 2024 era 47% de todas as transações que não usam dinheiro em espécie e o meio de pagamento que mais cresceu no ano, alta de 52%, segundo [reportagem sobre dados do Banco Central](https://brazileconomy.com.br/financas/2025/08/pix-movimenta-r-264-trilhoes-em-2024-e-se-consolida-como-principal-meio-de-pagamento/).",
+            "O preço conta a história estratégica. O Pix é gratuito para pessoas físicas e custa 0,33% para o lojista, contra 1,13% no débito e 2,34% no crédito. Um trilho tão barato e tão adotado não permanece um diferencial. Ele vira o piso sobre o qual todo mundo constrói.",
+            "O Open Finance é o trilho que mais importa para a IA. O Brasil chegou a 62 milhões de consentimentos ativos de Open Finance até janeiro de 2025, alta de 44% no ano, com cerca de 2,3 bilhões de chamadas de API bem-sucedidas toda semana, segundo o [DPL News citando a FEBRABAN](https://dplnews.com/brasil-consentimentos-de-open-finance-chegam-a-62-milhoes-2025-marca-entrada-de-novas-funcionalidades/). Uma fintech nos Estados Unidos ou na Europa gasta anos e muito dinheiro montando o acesso a dados que uma fintech brasileira consegue solicitar por meio de um consentimento padronizado. Essa é a virada. Quando os trilhos são públicos e compartilhados, os trilhos não são a vantagem. A vantagem migra para o que a empresa faz com o dado. Qualidade de crédito e profundidade de workflow viram o moat. Encanamento de pagamento não."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O Brasil chegou a 62 milhões de consentimentos ativos de Open Finance até janeiro de 2025, alta de 44% no ano, com cerca de 2,3 bilhões de chamadas de API por semana.",
+            "attribution": "FEBRABAN, via DPL News"
+          }
+        },
+        {
+          "id": "where-to-build",
+          "heading": "As aberturas AI-native",
+          "level": 2,
+          "paragraphs": [
+            "As aberturas que valem a pena perseguir têm um formato em comum. Cada uma transforma a camada de dados padronizada do Brasil numa decisão que antes exigia um especialista humano ou uma base de dados proprietária densa. Quatro se destacam.",
+            "O fio condutor corre por baixo das quatro. O trilho é público, mas o loop de dados não é. Duas empresas podem solicitar o mesmo consentimento de Open Finance. Só uma delas transforma seis meses de resultados de pagamento num modelo mais afiado e num workflow que o cliente não vai abandonar. Essa assimetria é onde o negócio durável se esconde, então leia cada abertura abaixo como um lugar para construir um loop, não uma funcionalidade."
+          ],
+          "bullets": [
+            "Crédito e análise de risco em fichas magras. Dezenas de milhões de brasileiros e pequenas empresas quase não têm histórico formal de crédito. O consentimento de Open Finance somado aos dados de fluxo de caixa do Pix permite a um modelo dar crédito a um tomador que o score de bureau recusaria. O moat é o dado de pagamento que o credor acumula, não o modelo em si.",
+            "Fraude e PLD. O Pix movimentando cerca de R$ 2,5 trilhões por mês criou uma superfície de fraude em tempo real. IA que pontua transações e sinaliza lavagem contra trilhos ao vivo é um workflow que tanto os incumbentes quanto os reguladores querem.",
+            "Tesouraria e conciliação. As empresas brasileiras rodam num emaranhado de Pix, boletos, cartões e um regime tributário em camadas. IA que concilia fluxos e projeta caixa contra os trilhos reais substitui o trabalho de planilha que nunca escalou.",
+            "Finanças embarcadas para PMEs. Serviços são cerca de 70% do PIB brasileiro, em sua maioria pequenos operadores. Embarcar crédito e pagamentos dentro do software que essas empresas já usam transforma uma ferramenta vertical num motor de dados financeiros."
+          ]
+        },
+        {
+          "id": "the-flywheel",
+          "heading": "Por que crédito encaixa no flywheel dado para capital",
+          "level": 2,
+          "paragraphs": [
+            "Crédito é o caso canônico do flywheel copilot, dado, capital, o padrão recorrente entre as empresas da Avante. A mecânica é limpa. Construa um copilot de IA que ajuda um credor ou um tomador a chegar a uma decisão de crédito. O copilot gera dados proprietários de performance, cada empréstimo aprovado e depois pago ou inadimplido. Esse dado de resultado é exatamente o que um veículo de capital precisa para dar crédito em escala. Então o copilot não vende apenas software. Ele fabrica a base de dados que justifica levantar e alocar um fundo.",
+            "É por isso que o crédito gira o flywheel com mais força do que fraude ou conciliação. Pontuação de fraude produz sinais. Conciliação produz eficiência. Crédito produz resultados de pagamento, e um resultado de pagamento é um ativo financeiro. Uma empresa que controla o workflow de crédito e o dado que ele gera pode passar de vender uma ferramenta para alocar capital contra a própria vantagem.",
+            "A Avante roda esse padrão em todo o portfólio, e a única coisa que muda é o vertical. A Alphajuri roda no mercado brasileiro de dívida judicial, onde um copilot para precatórios e créditos gera o dado para precificar esses ativos. A WIR roda a mesma lógica em precificação de seguros e análise de risco. A BR Auction Intel roda em inteligência de leilões de imóveis. Mesmo flywheel, ativo diferente."
+          ]
+        },
+        {
+          "id": "crowded-and-regulated",
+          "heading": "O problema de concorrência e regulação",
+          "level": 2,
+          "paragraphs": [
+            "A objeção honesta é que fintech é a categoria mais concorrida e mais regulada da América Latina, e uma camada fina de IA sobre uma API bancária não tem moat. Os dados de funding confirmam a concorrência. Fintech capturou 61% de todo o investimento de venture da América Latina em 2025 com apenas 29% dos deals, segundo o [LatAm VC Report 2026 da Cuantico VP](https://reports.cuanticovp.com/preliminary-findings-from-the-latam-vc-report-2026-more-capital-fewer-startups/), de 18 de fevereiro de 2026. O total regional foi de US$ 4,126 bilhões em 681 rodadas, alta de 13,8% no ano, e o Brasil sozinho levou US$ 2,032 bilhões, 52,9% da região, em 363 deals. As três maiores rodadas do ano foram todas de fintechs mexicanas.",
+            "Isso é o problema e o filtro ao mesmo tempo. O Nubank e outros incumbentes já controlam loops de dados enormes, então um wrapper genérico de IA compete com eles no terreno mais forte deles e perde. Os mesmos dados mostram que o funding pre-seed caiu 40% em 2025, de US$ 110 milhões para US$ 66 milhões. O capital inicial ficou mais escasso justamente enquanto o fintech de estágio avançado disparava. Uma empresa que precisa de um mercado de seed aquecido para achar product-market fit foi construída para o ciclo errado.",
+            "O caminho não é uma camada mais fina. É um workflow e um loop de dados que um generalista não consegue copiar, num vertical que os incumbentes acham pequeno demais ou operacionalmente bagunçado demais para perseguir. A defensabilidade vem de controlar uma decisão de crédito específica de ponta a ponta. Não do acesso a uma API que todo concorrente também pode chamar."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Fintech levou 61% do investimento de venture da América Latina em 2025 com apenas 29% dos deals, enquanto o funding pre-seed caiu 40%, de US$ 110 milhões para US$ 66 milhões.",
+            "attribution": "Cuantico VP, LatAm VC Report 2026"
+          }
+        },
+        {
+          "id": "how-avante",
+          "heading": "Como a Avante abordaria",
+          "level": 2,
+          "paragraphs": [
+            "O primeiro movimento é recusar o óbvio. Não construiríamos uma fintech de IA horizontal para brigar com o Nubank em escala de dados, porque essa é uma briga que o incumbente já venceu. A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina. Lança 3-4 ventures por ano por meio de um sistema de seis estágios: Research, Partner, Build, Traction, Revenue, Compound. Aloca $500K-1.5M por venture ao longo do pre-seed e retém economia de co-founder. Aplicado a fintech, o modelo aponta um caminho. Escolher uma única decisão de crédito num vertical mal atendido, juntar um operador de domínio que viveu aquele mercado de crédito com os trilhos públicos e construir o workflow que produz um loop de dados proprietário.",
+            "Os fatos estruturais tornam isso construível agora. Pix e Open Finance fornecem o acesso a dados que antes exigia uma Série A para montar. Resolver o encanamento da empresa uma vez direciona cerca de $300K-500K de capital efetivo por venture para produto e tração em vez de overhead. Um venture de studio é lançado 6-9 meses à frente de um time autônomo com financiamento comparável. O insumo escasso não é capital nem modelos, ambos baratos. São operadores com mais de 10 anos de cicatrizes num mercado de crédito brasileiro específico, juntos a um playbook do Vale do Silício e capital de primeiro cheque no dia um. Veja [a tese do studio](/why-avante) para entender como isso é montado.",
+            "O argumento de performance do modelo é o benchmark do studio, não um histórico da Avante. A Global Startup Studio Network reporta IRR de studio de ~50% contra um ~19% padrão da indústria para o VC tradicional, cerca de 2,5x o IRR do VC tradicional em horizontes de tempo realistas. Esse é o número da GSSN para o modelo de studio, nunca o retorno realizado de uma firma específica. Onde isso pesa em fintech é o mecanismo. Numa categoria tão concorrida, a vantagem é profundidade de operador e um loop de dados, exatamente os insumos que um studio concentra.",
+            "O fechamento é direto. A maioria das ideias de IA em fintech no Brasil vai fracassar, porque são wrappers sobre um trilho público que qualquer um pode chamar. As poucas que vencerem vão controlar um workflow e o dado de pagamento que ele gera. Explore [a Library](/library) para o resto de como pensamos sobre construir no Brasil."
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "IA en el Fintech Brasileño: Dónde un Studio Realmente Construiría",
+      "description": "La IA en fintech en Brasil supera los USD 2 mil millones hacia 2034. Pix y Open Finance movieron el moat de los rieles al crédito. Dónde construir.",
+      "sections": [
+        {
+          "paragraphs": [
+            "El mercado de IA en fintech en Brasil vale cerca de USD 457 millones hoy y se proyecta en USD 2,17 mil millones hacia 2034, según IMARC. Es un número real, y es menor de lo que la mayoría de los pitches sugiere. Lo interesante no es el tamaño. Es que Brasil opera dos piezas de infraestructura financiera pública, Pix y Open Finance, que la mayoría de los países no tiene, y mueven toda la pregunta sobre dónde una fintech de IA puede defenderse.",
+            "Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina. Somos escépticos frente a la IA en fintech como categoría, porque la mayor parte es una capa fina sobre una API bancaria sin moat. Este texto trata de las excepciones. Donde los rieles públicos, un workflow de verdad y un loop de datos propietario se combinan en algo que un generalista no puede copiar."
+          ]
+        },
+        {
+          "id": "market-size",
+          "heading": "El mercado, con números fechados",
+          "level": 2,
+          "paragraphs": [
+            "Empiece por el número honesto, no por el más optimista. IMARC dimensiona el mercado de IA en fintech en Brasil en USD 457,1 millones en 2025, creciendo a USD 2.165,7 millones hacia 2034 a un CAGR de 18,30%, según [IMARC Group](https://www.imarcgroup.com/brazil-ai-in-fintech-market). Esa porción específica de IA está dentro de un mercado fintech mayor, que IMARC estima en USD 5,5 mil millones en 2025, rumbo a USD 19,1 mil millones hacia 2034 a 14,92%, según [IMARC Group](https://www.imarcgroup.com/brazil-fintech-market). Otras casas de investigación publican una base menor. Esa variación es normal en una categoría joven, y fingir que es un número cerrado es la primera señal de una lectura débil de mercado.",
+            "Dos hechos sobreviven a la variación. La porción de IA está por debajo de medio mil millones de dólares hoy, así que quien vende un mercado direccionable gigante para IA en fintech en Brasil está redondeando hacia arriba. Y la capa de IA debe crecer más rápido que el mercado fintech sobre el que cabalga, 18,30% contra 14,92%. Esa diferencia es la señal. La IA está ganando participación dentro del fintech, no solo creciendo al lado.",
+            "Entonces el encuadre correcto no es el tamaño del mercado. Es dónde, dentro de una categoría pequeña y de rápida composición, se construyen los negocios duraderos. El dimensionamiento es el calentamiento. La estructura es el contenido."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "La IA en fintech en Brasil debe crecer de USD 457 millones en 2025 a USD 2,17 mil millones hacia 2034 a un CAGR de 18,30%, más rápido que el 14,92% del mercado fintech de USD 5,5 mil millones en que está inserta.",
+            "attribution": "IMARC Group, 2026"
+          }
+        },
+        {
+          "id": "the-rails",
+          "heading": "Por qué Pix y Open Finance cambian el juego",
+          "level": 2,
+          "paragraphs": [
+            "Brasil es estructuralmente distinto de la mayoría de los mercados fintech, y la razón es la infraestructura pública, no el tamaño del mercado. Pix, el riel de pago instantáneo que el Banco Central do Brasil lanzó en noviembre de 2020, superó los 175 millones de usuarios hacia mayo de 2025 y lo usa el 93% de la población adulta brasileña, con un 62% que lo nombra su forma más frecuente de pagar, según [datos que resumen cifras del Banco Central](https://en.wikipedia.org/wiki/Pix_(payment_system)). En julio de 2024 ya movía cerca de R$ 2,5 billones por mes. A fines de 2024 era el 47% de todas las transacciones que no usan efectivo y el medio de pago que más creció en el año, un alza del 52%, según [reportes sobre datos del Banco Central](https://brazileconomy.com.br/financas/2025/08/pix-movimenta-r-264-trilhoes-em-2024-e-se-consolida-como-principal-meio-de-pagamento/).",
+            "El precio cuenta la historia estratégica. Pix es gratis para personas físicas y cuesta 0,33% para el comercio, contra 1,13% en débito y 2,34% en crédito. Un riel tan barato y tan adoptado no se queda como diferencial. Se vuelve el piso sobre el que todos construyen.",
+            "Open Finance es el riel que más importa para la IA. Brasil llegó a 62 millones de consentimientos activos de Open Finance hacia enero de 2025, un alza del 44% en el año, con cerca de 2,3 mil millones de llamadas de API exitosas cada semana, según [DPL News citando a FEBRABAN](https://dplnews.com/brasil-consentimentos-de-open-finance-chegam-a-62-milhoes-2025-marca-entrada-de-novas-funcionalidades/). Una fintech en Estados Unidos o Europa gasta años y mucho dinero armando el acceso a datos que una fintech brasileña puede solicitar mediante un consentimiento estandarizado. Ese es el giro. Cuando los rieles son públicos y compartidos, los rieles no son la ventaja. La ventaja migra a lo que la empresa hace con el dato. Calidad de crédito y profundidad de workflow se vuelven el moat. La plomería de pagos no."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Brasil llegó a 62 millones de consentimientos activos de Open Finance hacia enero de 2025, un alza del 44% en el año, con cerca de 2,3 mil millones de llamadas de API por semana.",
+            "attribution": "FEBRABAN, vía DPL News"
+          }
+        },
+        {
+          "id": "where-to-build",
+          "heading": "Las aberturas AI-native",
+          "level": 2,
+          "paragraphs": [
+            "Las aberturas que valen la pena perseguir comparten una forma. Cada una convierte la capa de datos estandarizada de Brasil en una decisión que antes exigía un experto humano o una base de datos propietaria densa. Cuatro se destacan.",
+            "El hilo conductor corre por debajo de las cuatro. El riel es público, pero el loop de datos no. Dos empresas pueden solicitar el mismo consentimiento de Open Finance. Solo una convierte seis meses de resultados de pago en un modelo más afilado y en un workflow que el cliente no va a abandonar. Esa asimetría es donde se esconde el negocio duradero, así que lea cada abertura de abajo como un lugar para construir un loop, no una funcionalidad."
+          ],
+          "bullets": [
+            "Crédito y análisis de riesgo en perfiles delgados. Decenas de millones de brasileños y pequeñas empresas casi no tienen historial formal de crédito. El consentimiento de Open Finance sumado a los datos de flujo de caja de Pix permite a un modelo dar crédito a un solicitante que el score de buró rechazaría. El moat es el dato de pago que el prestamista acumula, no el modelo en sí.",
+            "Fraude y PLD. Pix moviendo cerca de R$ 2,5 billones por mes creó una superficie de fraude en tiempo real. IA que puntúa transacciones y marca lavado contra rieles en vivo es un workflow que tanto los incumbentes como los reguladores quieren.",
+            "Tesorería y conciliación. Las empresas brasileñas funcionan sobre una maraña de Pix, boletos, tarjetas y un régimen tributario en capas. IA que concilia flujos y proyecta caja contra los rieles reales reemplaza el trabajo de planilla que nunca escaló.",
+            "Finanzas embebidas para pymes. Los servicios son cerca del 70% del PIB brasileño, en su mayoría pequeños operadores. Embeber crédito y pagos dentro del software que esas empresas ya usan convierte una herramienta vertical en un motor de datos financieros."
+          ]
+        },
+        {
+          "id": "the-flywheel",
+          "heading": "Por qué el crédito encaja en el flywheel dato a capital",
+          "level": 2,
+          "paragraphs": [
+            "El crédito es el caso canónico del flywheel copilot, dato, capital, el patrón recurrente entre las empresas de Avante. La mecánica es limpia. Construya un copilot de IA que ayuda a un prestamista o a un solicitante a llegar a una decisión de crédito. El copilot genera datos propietarios de desempeño, cada préstamo aprobado y luego pagado o en mora. Ese dato de resultado es exactamente lo que un vehículo de capital necesita para dar crédito a escala. Entonces el copilot no solo vende software. Fabrica la base de datos que justifica levantar y desplegar un fondo.",
+            "Por eso el crédito gira el flywheel con más fuerza que el fraude o la conciliación. El puntaje de fraude produce señales. La conciliación produce eficiencia. El crédito produce resultados de pago, y un resultado de pago es un activo financiero. Una empresa que controla el workflow de crédito y el dato que este genera puede pasar de vender una herramienta a desplegar capital contra su propia ventaja.",
+            "Avante corre este patrón en todo el portafolio, y lo único que cambia es el vertical. Alphajuri lo corre en el mercado brasileño de deuda judicial, donde un copilot para precatorios y créditos genera el dato para valorar esos activos. WIR corre la misma lógica en valoración de seguros y análisis de riesgo. BR Auction Intel lo corre en inteligencia de subastas inmobiliarias. Mismo flywheel, activo distinto."
+          ]
+        },
+        {
+          "id": "crowded-and-regulated",
+          "heading": "El problema de saturación y regulación",
+          "level": 2,
+          "paragraphs": [
+            "La objeción honesta es que fintech es la categoría más saturada y más regulada de América Latina, y una capa fina de IA sobre una API bancaria no tiene moat. Los datos de funding confirman la saturación. Fintech capturó el 61% de toda la inversión de venture de América Latina en 2025 con apenas el 29% de los deals, según el [LatAm VC Report 2026 de Cuantico VP](https://reports.cuanticovp.com/preliminary-findings-from-the-latam-vc-report-2026-more-capital-fewer-startups/), del 18 de febrero de 2026. El total regional fue de USD 4,126 mil millones en 681 rondas, un alza del 13,8% en el año, y Brasil solo se llevó USD 2,032 mil millones, el 52,9% de la región, en 363 deals. Las tres mayores rondas del año fueron todas de fintechs mexicanas.",
+            "Eso es el problema y el filtro a la vez. Nubank y otros incumbentes ya controlan loops de datos enormes, así que un wrapper genérico de IA compite con ellos en su terreno más fuerte y pierde. Los mismos datos muestran que el funding pre-seed cayó 40% en 2025, de USD 110 millones a USD 66 millones. El capital inicial se volvió más escaso justo cuando el fintech de etapa avanzada se disparaba. Una empresa que necesita un mercado de seed caliente para encontrar product-market fit fue construida para el ciclo equivocado.",
+            "El camino no es una capa más fina. Es un workflow y un loop de datos que un generalista no puede copiar, en un vertical que los incumbentes consideran demasiado pequeño o demasiado desordenado operativamente para perseguir. La defensibilidad viene de controlar una decisión de crédito específica de punta a punta. No del acceso a una API que todo competidor también puede llamar."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Fintech se llevó el 61% de la inversión de venture de América Latina en 2025 con apenas el 29% de los deals, mientras el funding pre-seed cayó 40%, de USD 110 millones a USD 66 millones.",
+            "attribution": "Cuantico VP, LatAm VC Report 2026"
+          }
+        },
+        {
+          "id": "how-avante",
+          "heading": "Cómo Avante lo abordaría",
+          "level": 2,
+          "paragraphs": [
+            "El primer movimiento es rechazar el obvio. No construiríamos una fintech de IA horizontal para pelear con Nubank en escala de datos, porque esa es una pelea que el incumbente ya ganó. Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina. Lanza 3-4 ventures por año mediante un sistema de seis etapas: Research, Partner, Build, Traction, Revenue, Compound. Despliega $500K-1.5M por venture a lo largo del pre-seed y retiene economía de co-founder. Aplicado a fintech, el modelo apunta a un solo camino. Elegir una sola decisión de crédito en un vertical mal atendido, juntar a un operador de dominio que vivió ese mercado de crédito con los rieles públicos y construir el workflow que produce un loop de datos propietario.",
+            "Los hechos estructurales lo hacen construible ahora. Pix y Open Finance entregan el acceso a datos que antes exigía una Serie A para armar. Resolver la plomería de la empresa una sola vez direcciona cerca de $300K-500K de capital efectivo por venture hacia producto y tracción en lugar de overhead. Un venture de studio se lanza 6-9 meses por delante de un equipo autónomo con financiamiento comparable. El insumo escaso no es capital ni modelos, ambos baratos. Son operadores con más de 10 años de cicatrices en un mercado de crédito brasileño específico, junto a un playbook de Silicon Valley y capital de primer cheque el día uno. Vea [la tesis del studio](/why-avante) para entender cómo se arma eso.",
+            "El argumento de desempeño del modelo es el benchmark del studio, no un historial de Avante. La Global Startup Studio Network reporta un IRR de studio de ~50% contra un ~19% estándar de la industria para el VC tradicional, cerca de 2,5x el IRR del VC tradicional en horizontes de tiempo realistas. Ese es el número de GSSN para el modelo de studio, nunca el retorno realizado de una firma específica. Donde pesa en fintech es el mecanismo. En una categoría tan saturada, la ventaja es profundidad de operador y un loop de datos, exactamente los insumos que un studio concentra.",
+            "El cierre es directo. La mayoría de las ideas de IA en fintech en Brasil van a fracasar, porque son wrappers sobre un riel público que cualquiera puede llamar. Las pocas que ganen van a controlar un workflow y el dato de pago que este genera. Explore [la Library](/library) para el resto de cómo pensamos sobre construir en Brasil."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "brazil-receivables-automation-ai-opportunity",
+    "category": "brazil",
+    "type": "Market Analysis",
+    "readTime": "9 min",
+    "featured": false,
+    "date": "Jun 2026",
+    "datePublished": "2026-06-15",
+    "isPublished": true,
+    "en": {
+      "title": "AI Receivables Automation in Brazil: A Quiet, Fundable Build",
+      "description": "Brazil receivables automation heads toward USD 591 million by 2033. A dense payments stack makes it a clean data-to-fund flywheel. Here is the build.",
+      "sections": [
+        {
+          "paragraphs": [
+            "The Brazil accounts receivable automation market is sized somewhere between USD 147 million and USD 591 million by the early 2030s, depending on which analyst you trust. That spread is the first honest thing to say about it. The sizing is not the reason to build. The reason is underneath the number.",
+            "Brazil runs on a dense, regulated payments stack that emits structured transaction data almost no other market produces. AI receivables automation in Brazil is interesting because that data is the raw material for a financing loop, not because collections software is a large software line. Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America, and receivables is one of the cleanest expressions of the pattern we build for."
+          ]
+        },
+        {
+          "id": "market-size",
+          "heading": "The market, with dated numbers",
+          "level": 2,
+          "paragraphs": [
+            "Analyst estimates of the Brazil accounts receivable automation market diverge by roughly 4x, so reporting the range is the only honest move. Grand View Research projects the market toward USD 591.1 million by 2033 at a 14.1% CAGR, per [Grand View Research](https://www.grandviewresearch.com/horizon/outlook/accounts-receivable-automation-market/brazil). IMARC Group is far more conservative, putting it at USD 66.15 million in 2025 and USD 146.96 million by 2034 at a 9.27% CAGR, per [IMARC Group](https://www.imarcgroup.com/brazil-accounts-receivable-automation-market).",
+            "Both agree on direction and double-digit growth. They disagree on the base, which is what happens to any category buried inside ERPs and banks where the software line is hard to isolate. So treat the AR software market as real but modest. The money is not in selling collections software at category-average margins. It is in what the software learns while it runs.",
+            "The demand signal is louder than the market estimate. Toku, an AR automation startup founded in 2020, raised a USD 48 million Series A in April 2025 led by Oak HC/FT, explicitly to expand across Brazil, Mexico, and Chile, per [PYMNTS](https://www.pymnts.com/accounts-receivable/2025/toku-raises-48-million-to-expand-ar-automation-platform-in-latin-america/). It already serves more than 450 enterprises across insurance, credit, education, real estate, and utilities. A generalist growth-equity firm writing that check into LATAM receivables is the market saying the category is fundable. Services are roughly 70% of Brazilian GDP, per IBGE, and the firms inside that number all run on receivables."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Estimates of the Brazil AR automation market range from USD 147 million by 2034 to USD 591 million by 2033. The AR startup Toku raised a USD 48 million Series A in April 2025 to expand in Brazil, Mexico, and Chile.",
+            "attribution": "Grand View Research, IMARC Group, PYMNTS"
+          }
+        },
+        {
+          "id": "the-stack",
+          "heading": "Why the Brazilian payments stack is the asset",
+          "level": 2,
+          "paragraphs": [
+            "Brazil has built one of the most instrumented payments environments on earth in under a decade, and instrumentation is exactly what makes AI useful. Most markets force a fintech to reconstruct payment behavior from messy bank feeds. Brazil hands it over as registered data.",
+            "Start with Pix, the central bank instant-payment rail launched in November 2020. By August 2024 it had accumulated 168.15 million users, 153.11 million individuals and 15.04 million companies, and set a single-day record of 227.1 million transactions on September 6, 2024, per [Agência Brasil](https://agenciabrasil.ebc.com.br/en/economia/noticia/2024-09/pix-breaks-record-and-exceeds-227-million-transactions-one-day). Across 2024 Pix moved about R$ 26 trillion, up 54% on the prior year, per [CNN Brasil](https://www.cnnbrasil.com.br/economia/financas/pix-cresce-54-e-atinge-recorde-de-transacoes-em-r-26-tri-em-2024/). It clears at 0.22% of transaction value against 2.2% for credit cards, per the [BIS](https://www.bis.org/publ/qtrpdf/r_qt2403c.htm).",
+            "Then the receivables layer, which is the part most foreign observers miss. Brazil treats trade receivables as registered, depositable, tradable instruments. The duplicata escritural regime, grounded in Law 13.775/2018 and tightened by Resolução BCB 339 in 2023, requires emission, registration, and central deposit of electronic duplicatas through authorized registries, per [Conjur](https://www.conjur.com.br/2025-set-14/resolucao-339-do-bc-disciplina-o-instituto-da-duplicata-escritural/). Card receivables already register through entities like CERC and B3.",
+            "The scale of the underlying asset is the headline. The duplicata market moves about R$ 10 trillion per year in Brazil, and only 10% of those titles are effectively traded, per [B3](https://www.b3.com.br/pt_br/noticias/duplicatas-8AA8D0CC9851DC300198CCDE8E2018B7.htm), which became an authorized registry in November 2024. Ninety percent of a R$ 10 trillion flow sits outside active financing. Stack the layers and every B2B transaction in Brazil leaves a structured, timestamped, regulator-grade trail. That trail is the asset."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Brazil's duplicata market moves about R$ 10 trillion a year, and only 10% of those titles are effectively traded. Pix moved roughly R$ 26 trillion in 2024 across 168 million users.",
+            "attribution": "B3, Agência Brasil, CNN Brasil"
+          }
+        },
+        {
+          "id": "where-to-build",
+          "heading": "The AI-native openings",
+          "level": 2,
+          "paragraphs": [
+            "There are four places an AI-native receivables venture can build. The point is that they compound into one system rather than sitting as four separate features."
+          ],
+          "bullets": [
+            "Predictive collections and dunning. Use payment-behavior history to predict which invoices will slip and to sequence outreach by channel and timing per payer. Brazil is a WhatsApp-first collections market, so well-timed automated dunning is a real wedge, not a cosmetic one.",
+            "Cash application and reconciliation. Match incoming Pix, boleto, and card settlements to open invoices automatically. This is the unglamorous core Toku already sells, and it is the data-capture layer for everything above it.",
+            "Credit and risk scoring on payment behavior. A payer who always settles a boleto two days late behaves differently from one who pays on Pix the same day. Registered receivables plus settlement history is a credit signal a competitor cannot buy off the shelf.",
+            "Embedded receivables finance. Once the system knows who pays and when, it can underwrite advances against registered duplicatas at the point of need. The asset is already registered and depositable, so the legal plumbing exists."
+          ]
+        },
+        {
+          "id": "the-flywheel",
+          "heading": "Collections copilot to receivables finance",
+          "level": 2,
+          "paragraphs": [
+            "The cleanest version of the copilot to data to fund flywheel lives in receivables. Ship a collections copilot that does real work, reconciling settlements and running smart dunning. Operators adopt it because it gets them paid faster, not because it is AI.",
+            "That copilot then accumulates proprietary payment-behavior data on thousands of payers, the exact structured signal Brazil's registered-receivables regime makes legible. That data underwrites a receivables-financing vehicle that advances cash against the very duplicatas the copilot already tracks. The software earns the data. The data underwrites the capital. The capital deepens the moat.",
+            "This is the same shape Avante has built in adjacent Brazilian domains where regulated financial and legal-asset workflows throw off fundable data loops. Alphajuri runs it in judicial assets, a copilot for precatórios and claims. WIR runs it in insurance pricing and risk. BR Auction Intel runs it in real estate auction data. Receivables may be the purest version, because the asset is already registered, already standardized, and already worth R$ 10 trillion a year in flow."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "The test for this build is not model accuracy. It is whether the copilot earns enough payment-behavior data to underwrite the financing vehicle that follows it."
+          }
+        },
+        {
+          "id": "distribution-problem",
+          "heading": "Why distribution and trust decide it",
+          "level": 2,
+          "paragraphs": [
+            "The honest failure mode is not model quality. It is distribution and trust, and a builder who ignores that loses to incumbents with worse technology.",
+            "AR automation is a feature inside larger ERPs like Totvs and SAP and a service banks already bundle. Switching costs in finance operations are high, because reconciliation sits on top of the accounting close and nobody rips that out casually. Selling to conservative Brazilian finance teams is slow. A CFO does not adopt a collections tool off a demo. They adopt it after a referral, a pilot, and a quarter of clean reconciliations.",
+            "So the moat is not the model. It is the wedge that earns adoption, the data that adoption produces, and the trust that lets a young company move money. Toku reinforces the point. It raised growth equity on 450 enterprise relationships and live ERP-to-bank integrations, not on a novel algorithm. In receivables, distribution is the technology."
+          ]
+        },
+        {
+          "id": "how-avante",
+          "heading": "How Avante would approach it",
+          "level": 2,
+          "paragraphs": [
+            "Receivables automation is a textbook studio build, because the hard parts here are operator-grade, not engineering-grade. The scarce input is a founder with 10+ years of Brazilian-market scar tissue in payments, credit, or finance operations, someone who knows how a Brazilian CFO actually buys and how the duplicata regime actually clears.",
+            "Avante pairs that operator with a Silicon Valley playbook and first-ticket capital on day one, deploying $500K-1.5M per venture and retaining co-founder economics. The venture runs the six-stage system, Research, Partner, Build, Traction, Revenue, Compound, and reaches first revenue 6-9 months ahead of a comparably funded standalone team.",
+            "The model is grounded in returns, not optimism. The Global Startup Studio Network reports venture-studio IRR near ~50% versus roughly ~19% for traditional VC, about 2.5x over realistic horizons. That is the GSSN studio-model benchmark, not Avante's own realized return. Avante launches 3-4 ventures per year, and a Brazilian receivables venture is exactly the profile it is built to launch, an AI-native company in a regulated, data-rich, services-heavy market. Read more on [why a venture studio](/why-avante) or browse related market reads in the [Avante Library](/library). The data loop is the moat. The demo is not."
+          ]
+        }
+      ]
+    },
+    "pt": {
+      "title": "Automação de Recebíveis com IA no Brasil: um Build Silencioso e Financiável",
+      "description": "A automação de recebíveis no Brasil caminha para US$ 591 milhões até 2033. Um stack de pagamentos denso a torna um flywheel limpo de dado para capital.",
+      "sections": [
+        {
+          "paragraphs": [
+            "O mercado de automação de contas a receber no Brasil é estimado entre US$ 147 milhões e US$ 591 milhões no início da próxima década, a depender do analista em quem você confia. Esse intervalo é a primeira coisa honesta a se dizer sobre ele. O tamanho não é a razão para construir. A razão está embaixo do número.",
+            "O Brasil roda sobre um stack de pagamentos denso e regulado que gera dados de transação estruturados como quase nenhum outro mercado produz. A automação de recebíveis com IA no Brasil interessa porque esse dado é a matéria-prima de um ciclo de financiamento, e não porque software de cobrança seja uma linha de receita grande. A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina, e recebíveis é uma das expressões mais limpas do padrão que construímos."
+          ]
+        },
+        {
+          "id": "market-size",
+          "heading": "O mercado, com números datados",
+          "level": 2,
+          "paragraphs": [
+            "As estimativas de analistas para o mercado brasileiro de automação de contas a receber divergem em cerca de 4x, então reportar o intervalo é o único movimento honesto. A Grand View Research projeta o mercado rumo a US$ 591,1 milhões até 2033, a um CAGR de 14,1%, segundo a [Grand View Research](https://www.grandviewresearch.com/horizon/outlook/accounts-receivable-automation-market/brazil). O IMARC Group é bem mais conservador, colocando-o em US$ 66,15 milhões em 2025 e US$ 146,96 milhões até 2034, a um CAGR de 9,27%, segundo o [IMARC Group](https://www.imarcgroup.com/brazil-accounts-receivable-automation-market).",
+            "Os dois concordam na direção e no crescimento de dois dígitos. Divergem na base, o que acontece com qualquer categoria enterrada dentro de ERPs e bancos, onde a linha de software é difícil de isolar. Então trate o mercado de software de cobrança como real, mas modesto. O dinheiro não está em vender software de cobrança a margens médias da categoria. Está no que o software aprende enquanto roda.",
+            "O sinal de demanda é mais alto que a estimativa de mercado. A Toku, uma startup de automação de recebíveis fundada em 2020, levantou uma Série A de US$ 48 milhões em abril de 2025, liderada pela Oak HC/FT, explicitamente para expandir por Brasil, México e Chile, segundo o [PYMNTS](https://www.pymnts.com/accounts-receivable/2025/toku-raises-48-million-to-expand-ar-automation-platform-in-latin-america/). Ela já atende mais de 450 empresas em seguros, crédito, educação, imobiliário e utilities. Uma firma generalista de growth equity assinando esse cheque em recebíveis na América Latina é o mercado dizendo que a categoria é financiável. Serviços são cerca de 70% do PIB brasileiro, segundo o IBGE, e as empresas dentro desse número todas rodam sobre recebíveis."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "As estimativas para o mercado brasileiro de automação de recebíveis vão de US$ 147 milhões até 2034 a US$ 591 milhões até 2033. A startup Toku levantou uma Série A de US$ 48 milhões em abril de 2025 para expandir em Brasil, México e Chile.",
+            "attribution": "Grand View Research, IMARC Group, PYMNTS"
+          }
+        },
+        {
+          "id": "the-stack",
+          "heading": "Por que o stack de pagamentos brasileiro é o ativo",
+          "level": 2,
+          "paragraphs": [
+            "O Brasil construiu um dos ambientes de pagamento mais instrumentados do planeta em menos de uma década, e instrumentação é exatamente o que torna a IA útil. A maioria dos mercados obriga uma fintech a reconstruir o comportamento de pagamento a partir de extratos bancários bagunçados. O Brasil entrega isso como dado registrado.",
+            "Comece pelo Pix, o trilho de pagamento instantâneo do banco central lançado em novembro de 2020. Até agosto de 2024 ele havia acumulado 168,15 milhões de usuários, 153,11 milhões de pessoas físicas e 15,04 milhões de empresas, e marcou um recorde de 227,1 milhões de transações em um único dia, em 6 de setembro de 2024, segundo a [Agência Brasil](https://agenciabrasil.ebc.com.br/en/economia/noticia/2024-09/pix-breaks-record-and-exceeds-227-million-transactions-one-day). Em 2024 o Pix movimentou cerca de R$ 26 trilhões, alta de 54% sobre o ano anterior, segundo a [CNN Brasil](https://www.cnnbrasil.com.br/economia/financas/pix-cresce-54-e-atinge-recorde-de-transacoes-em-r-26-tri-em-2024/). Ele liquida a 0,22% do valor da transação contra 2,2% do cartão de crédito, segundo o [BIS](https://www.bis.org/publ/qtrpdf/r_qt2403c.htm).",
+            "Depois vem a camada de recebíveis, a parte que a maioria dos observadores estrangeiros não enxerga. O Brasil trata recebíveis comerciais como instrumentos registrados, depositáveis e negociáveis. O regime da duplicata escritural, ancorado na Lei 13.775/2018 e endurecido pela Resolução BCB 339 de 2023, exige emissão, registro e depósito centralizado de duplicatas eletrônicas em registradoras autorizadas, segundo o [Conjur](https://www.conjur.com.br/2025-set-14/resolucao-339-do-bc-disciplina-o-instituto-da-duplicata-escritural/). Recebíveis de cartão já registram em entidades como CERC e B3.",
+            "A escala do ativo subjacente é a manchete. O mercado de duplicatas movimenta cerca de R$ 10 trilhões por ano no Brasil, e apenas 10% desses títulos são efetivamente negociados, segundo a [B3](https://www.b3.com.br/pt_br/noticias/duplicatas-8AA8D0CC9851DC300198CCDE8E2018B7.htm), que virou registradora autorizada em novembro de 2024. Noventa por cento de um fluxo de R$ 10 trilhões está fora do financiamento ativo. Empilhe as camadas e cada transação B2B no Brasil deixa um rastro estruturado, com data e hora, em grau regulatório. Esse rastro é o ativo."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O mercado de duplicatas no Brasil movimenta cerca de R$ 10 trilhões por ano, e apenas 10% desses títulos são efetivamente negociados. O Pix movimentou cerca de R$ 26 trilhões em 2024 com 168 milhões de usuários.",
+            "attribution": "B3, Agência Brasil, CNN Brasil"
+          }
+        },
+        {
+          "id": "where-to-build",
+          "heading": "As aberturas AI-native",
+          "level": 2,
+          "paragraphs": [
+            "Há quatro lugares onde uma empresa AI-native de recebíveis pode construir. O ponto é que eles se acumulam em um único sistema, em vez de ficarem como quatro recursos separados."
+          ],
+          "bullets": [
+            "Cobrança e dunning preditivos. Use o histórico de comportamento de pagamento para prever quais faturas vão atrasar e para sequenciar a abordagem por canal e horário, payer a payer. O Brasil é um mercado de cobrança WhatsApp-first, então um dunning automático e bem cronometrado é uma cunha de verdade, não cosmética.",
+            "Aplicação de caixa e reconciliação. Concilie automaticamente Pix, boleto e liquidações de cartão com faturas em aberto. É o núcleo pouco glamouroso que a Toku já vende, e é a camada de captura de dado para tudo acima dele.",
+            "Crédito e score de risco sobre comportamento de pagamento. Um pagador que sempre liquida um boleto dois dias atrasado se comporta diferente de um que paga no Pix no mesmo dia. Recebível registrado mais histórico de liquidação é um sinal de crédito que o concorrente não compra pronto na prateleira.",
+            "Antecipação de recebíveis embarcada. Quando o sistema sabe quem paga e quando, ele pode subscrever adiantamentos contra duplicatas registradas no ponto da necessidade. O ativo já está registrado e depositável, então o encanamento jurídico existe."
+          ]
+        },
+        {
+          "id": "the-flywheel",
+          "heading": "Do copilot de cobrança à antecipação de recebíveis",
+          "level": 2,
+          "paragraphs": [
+            "A versão mais limpa do flywheel copilot, dado, capital vive em recebíveis. Lance um copilot de cobrança que faz trabalho de verdade, conciliando liquidações e rodando dunning inteligente. Operadores adotam porque ele os faz receber mais rápido, não porque é IA.",
+            "Esse copilot então acumula dado proprietário de comportamento de pagamento sobre milhares de pagadores, exatamente o sinal estruturado que o regime brasileiro de recebíveis registrados torna legível. Esse dado subscreve um veículo de antecipação de recebíveis que adianta caixa contra as próprias duplicatas que o copilot já acompanha. O software ganha o dado. O dado subscreve o capital. O capital aprofunda o moat.",
+            "É o mesmo formato que a Avante construiu em domínios brasileiros adjacentes, onde fluxos financeiros e jurídicos regulados geram ciclos de dado financiáveis. A Alphajuri roda isso em ativos judiciais, um copilot para precatórios e claims. A WIR roda em precificação e risco de seguros. A BR Auction Intel roda em dados de leilões imobiliários. Recebíveis talvez seja a versão mais pura, porque o ativo já está registrado, já é padronizado e já vale R$ 10 trilhões por ano em fluxo."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "O teste deste build não é a acurácia do modelo. É se o copilot conquista dado de comportamento de pagamento suficiente para subscrever o veículo de antecipação que vem depois dele."
+          }
+        },
+        {
+          "id": "distribution-problem",
+          "heading": "Por que distribuição e confiança decidem",
+          "level": 2,
+          "paragraphs": [
+            "O modo de falha honesto não é a qualidade do modelo. É distribuição e confiança, e quem ignora isso perde para incumbentes com tecnologia pior.",
+            "Automação de recebíveis é um recurso dentro de ERPs maiores como Totvs e SAP e um serviço que bancos já empacotam. O custo de troca em operações financeiras é alto, porque a reconciliação fica em cima do fechamento contábil e ninguém arranca isso por capricho. Vender para times financeiros brasileiros conservadores é lento. Um CFO não adota uma ferramenta de cobrança a partir de uma demo. Ele adota depois de uma indicação, de um piloto e de um trimestre de reconciliações limpas.",
+            "Então o moat não é o modelo. É a cunha que conquista adoção, o dado que a adoção produz e a confiança que permite a uma empresa jovem mover dinheiro. A Toku reforça o ponto. Ela levantou growth equity sobre 450 relações com empresas e integrações ERP-para-banco ao vivo, não sobre um algoritmo inédito. Em recebíveis, distribuição é a tecnologia."
+          ]
+        },
+        {
+          "id": "how-avante",
+          "heading": "Como a Avante abordaria",
+          "level": 2,
+          "paragraphs": [
+            "Automação de recebíveis é um build de studio de manual, porque as partes difíceis aqui são de operador, não de engenharia. O insumo escasso é um fundador com mais de 10 anos de calos do mercado brasileiro em pagamentos, crédito ou operações financeiras, alguém que sabe como um CFO brasileiro de fato compra e como o regime da duplicata de fato liquida.",
+            "A Avante junta esse operador a um playbook de Vale do Silício e capital de primeiro cheque no dia um, aportando $500K-1.5M por empresa e retendo economia de co-founder. A empresa roda o sistema de seis estágios, Research, Partner, Build, Traction, Revenue, Compound, e chega à primeira receita 6-9 meses à frente de um time autônomo com financiamento comparável.",
+            "O modelo é ancorado em retornos, não em otimismo. A Global Startup Studio Network reporta IRR de venture studio perto de ~50% contra cerca de ~19% do VC tradicional, cerca de 2,5x em horizontes realistas. Esse é o benchmark do modelo de studio da GSSN, não o retorno realizado da própria Avante. A Avante lança 3-4 empresas por ano, e uma empresa brasileira de recebíveis é exatamente o perfil que ela foi feita para lançar, uma empresa AI-native em um mercado regulado, rico em dado e pesado em serviços. Veja mais sobre [por que um venture studio](/why-avante) ou navegue por leituras de mercado relacionadas na [Avante Library](/library). O ciclo de dado é o moat. A demo não é."
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Automatización de Cobranzas con IA en Brasil: un Build Silencioso y Financiable",
+      "description": "La automatización de cobranzas en Brasil avanza hacia USD 591 millones para 2033. Un stack de pagos denso la hace un flywheel limpio de dato a capital.",
+      "sections": [
+        {
+          "paragraphs": [
+            "El mercado de automatización de cuentas por cobrar en Brasil se estima entre USD 147 millones y USD 591 millones para inicios de la próxima década, según el analista en quien usted confíe. Ese rango es lo primero honesto que se puede decir de él. El tamaño no es la razón para construir. La razón está debajo del número.",
+            "Brasil corre sobre un stack de pagos denso y regulado que genera datos de transacción estructurados como casi ningún otro mercado produce. La automatización de cobranzas con IA en Brasil importa porque ese dato es la materia prima de un ciclo de financiamiento, no porque el software de cobranza sea una línea de ingresos grande. Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina, y cobranzas es una de las expresiones más limpias del patrón que construimos."
+          ]
+        },
+        {
+          "id": "market-size",
+          "heading": "El mercado, con cifras fechadas",
+          "level": 2,
+          "paragraphs": [
+            "Las estimaciones de analistas para el mercado brasileño de automatización de cuentas por cobrar divergen en cerca de 4x, así que reportar el rango es el único movimiento honesto. Grand View Research proyecta el mercado hacia USD 591,1 millones para 2033, a un CAGR de 14,1%, según [Grand View Research](https://www.grandviewresearch.com/horizon/outlook/accounts-receivable-automation-market/brazil). IMARC Group es mucho más conservador, ubicándolo en USD 66,15 millones en 2025 y USD 146,96 millones para 2034, a un CAGR de 9,27%, según [IMARC Group](https://www.imarcgroup.com/brazil-accounts-receivable-automation-market).",
+            "Ambos coinciden en la dirección y en el crecimiento de dos dígitos. Difieren en la base, lo que pasa con cualquier categoría enterrada dentro de ERPs y bancos, donde la línea de software es difícil de aislar. Entonces trate el mercado de software de cobranza como real pero modesto. El dinero no está en vender software de cobranza a márgenes promedio de la categoría. Está en lo que el software aprende mientras corre.",
+            "La señal de demanda es más fuerte que la estimación de mercado. Toku, una startup de automatización de cuentas por cobrar fundada en 2020, levantó una Serie A de USD 48 millones en abril de 2025, liderada por Oak HC/FT, explícitamente para expandirse por Brasil, México y Chile, según [PYMNTS](https://www.pymnts.com/accounts-receivable/2025/toku-raises-48-million-to-expand-ar-automation-platform-in-latin-america/). Ya atiende a más de 450 empresas en seguros, crédito, educación, inmobiliario y utilities. Una firma generalista de growth equity firmando ese cheque en cobranzas de América Latina es el mercado diciendo que la categoría es financiable. Los servicios son cerca del 70% del PIB brasileño, según el IBGE, y las empresas dentro de ese número todas corren sobre cuentas por cobrar."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Las estimaciones para el mercado brasileño de automatización de cobranzas van de USD 147 millones para 2034 a USD 591 millones para 2033. La startup Toku levantó una Serie A de USD 48 millones en abril de 2025 para expandirse en Brasil, México y Chile.",
+            "attribution": "Grand View Research, IMARC Group, PYMNTS"
+          }
+        },
+        {
+          "id": "the-stack",
+          "heading": "Por qué el stack de pagos brasileño es el activo",
+          "level": 2,
+          "paragraphs": [
+            "Brasil construyó uno de los entornos de pago más instrumentados del planeta en menos de una década, y la instrumentación es exactamente lo que vuelve útil a la IA. La mayoría de los mercados obliga a una fintech a reconstruir el comportamiento de pago a partir de extractos bancarios desordenados. Brasil lo entrega como dato registrado.",
+            "Empiece por Pix, el riel de pago instantáneo del banco central lanzado en noviembre de 2020. Para agosto de 2024 había acumulado 168,15 millones de usuarios, 153,11 millones de personas físicas y 15,04 millones de empresas, y marcó un récord de 227,1 millones de transacciones en un solo día, el 6 de septiembre de 2024, según [Agência Brasil](https://agenciabrasil.ebc.com.br/en/economia/noticia/2024-09/pix-breaks-record-and-exceeds-227-million-transactions-one-day). En 2024 Pix movió cerca de R$ 26 billones, un alza del 54% sobre el año previo, según [CNN Brasil](https://www.cnnbrasil.com.br/economia/financas/pix-cresce-54-e-atinge-recorde-de-transacoes-em-r-26-tri-em-2024/). Liquida al 0,22% del valor de la transacción contra 2,2% de la tarjeta de crédito, según el [BIS](https://www.bis.org/publ/qtrpdf/r_qt2403c.htm).",
+            "Luego viene la capa de cuentas por cobrar, la parte que la mayoría de los observadores extranjeros no ve. Brasil trata las cuentas por cobrar comerciales como instrumentos registrados, depositables y negociables. El régimen de la duplicata escritural, anclado en la Ley 13.775/2018 y endurecido por la Resolución BCB 339 de 2023, exige emisión, registro y depósito centralizado de duplicatas electrónicas en registradoras autorizadas, según [Conjur](https://www.conjur.com.br/2025-set-14/resolucao-339-do-bc-disciplina-o-instituto-da-duplicata-escritural/). Las cuentas por cobrar de tarjeta ya se registran en entidades como CERC y B3.",
+            "La escala del activo subyacente es el titular. El mercado de duplicatas mueve cerca de R$ 10 billones por año en Brasil, y solo el 10% de esos títulos se negocia efectivamente, según [B3](https://www.b3.com.br/pt_br/noticias/duplicatas-8AA8D0CC9851DC300198CCDE8E2018B7.htm), que se volvió registradora autorizada en noviembre de 2024. Noventa por ciento de un flujo de R$ 10 billones está fuera del financiamiento activo. Apile las capas y cada transacción B2B en Brasil deja un rastro estructurado, con fecha y hora, en grado regulatorio. Ese rastro es el activo."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "El mercado de duplicatas en Brasil mueve cerca de R$ 10 billones por año, y solo el 10% de esos títulos se negocia efectivamente. Pix movió cerca de R$ 26 billones en 2024 con 168 millones de usuarios.",
+            "attribution": "B3, Agência Brasil, CNN Brasil"
+          }
+        },
+        {
+          "id": "where-to-build",
+          "heading": "Las aperturas AI-native",
+          "level": 2,
+          "paragraphs": [
+            "Hay cuatro lugares donde una empresa AI-native de cobranzas puede construir. El punto es que se acumulan en un solo sistema, en vez de quedar como cuatro funciones separadas."
+          ],
+          "bullets": [
+            "Cobranza y dunning predictivos. Use el historial de comportamiento de pago para predecir qué facturas se van a atrasar y para secuenciar el contacto por canal y horario, pagador por pagador. Brasil es un mercado de cobranza WhatsApp-first, así que un dunning automático y bien cronometrado es una cuña real, no cosmética.",
+            "Aplicación de caja y conciliación. Concilie de forma automática Pix, boleto y liquidaciones de tarjeta con facturas abiertas. Es el núcleo poco glamoroso que Toku ya vende, y es la capa de captura de dato para todo lo de arriba.",
+            "Crédito y score de riesgo sobre comportamiento de pago. Un pagador que siempre liquida un boleto dos días tarde se comporta distinto de uno que paga por Pix el mismo día. Cuenta por cobrar registrada más historial de liquidación es una señal de crédito que un competidor no compra lista en la estantería.",
+            "Financiamiento de cuentas por cobrar embebido. Cuando el sistema sabe quién paga y cuándo, puede suscribir adelantos contra duplicatas registradas en el punto de necesidad. El activo ya está registrado y es depositable, así que la plomería legal existe."
+          ]
+        },
+        {
+          "id": "the-flywheel",
+          "heading": "Del copilot de cobranza al financiamiento de cuentas por cobrar",
+          "level": 2,
+          "paragraphs": [
+            "La versión más limpia del flywheel copilot, dato, capital vive en cuentas por cobrar. Lance un copilot de cobranza que hace trabajo real, conciliando liquidaciones y corriendo dunning inteligente. Los operadores lo adoptan porque los hace cobrar más rápido, no porque es IA.",
+            "Ese copilot luego acumula dato propietario de comportamiento de pago sobre miles de pagadores, exactamente la señal estructurada que el régimen brasileño de cuentas por cobrar registradas vuelve legible. Ese dato suscribe un vehículo de financiamiento de cuentas por cobrar que adelanta caja contra las mismas duplicatas que el copilot ya rastrea. El software gana el dato. El dato suscribe el capital. El capital profundiza el moat.",
+            "Es la misma forma que Avante construyó en dominios brasileños adyacentes, donde flujos financieros y jurídicos regulados generan ciclos de dato financiables. Alphajuri lo corre en activos judiciales, un copilot para precatórios y claims. WIR lo corre en fijación de precios y riesgo de seguros. BR Auction Intel lo corre en datos de subastas inmobiliarias. Cuentas por cobrar quizá sea la versión más pura, porque el activo ya está registrado, ya está estandarizado y ya vale R$ 10 billones por año en flujo."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "La prueba de este build no es la precisión del modelo. Es si el copilot gana suficiente dato de comportamiento de pago para suscribir el vehículo de financiamiento que viene después de él."
+          }
+        },
+        {
+          "id": "distribution-problem",
+          "heading": "Por qué la distribución y la confianza deciden",
+          "level": 2,
+          "paragraphs": [
+            "El modo de falla honesto no es la calidad del modelo. Es distribución y confianza, y quien lo ignora pierde ante incumbentes con peor tecnología.",
+            "La automatización de cobranzas es una función dentro de ERPs mayores como Totvs y SAP y un servicio que los bancos ya empaquetan. El costo de cambio en operaciones financieras es alto, porque la conciliación se apoya sobre el cierre contable y nadie arranca eso por capricho. Vender a equipos financieros brasileños conservadores es lento. Un CFO no adopta una herramienta de cobranza desde una demo. La adopta tras una referencia, un piloto y un trimestre de conciliaciones limpias.",
+            "Entonces el moat no es el modelo. Es la cuña que gana adopción, el dato que la adopción produce y la confianza que permite a una empresa joven mover dinero. Toku refuerza el punto. Levantó growth equity sobre 450 relaciones con empresas e integraciones ERP-a-banco en vivo, no sobre un algoritmo inédito. En cuentas por cobrar, la distribución es la tecnología."
+          ]
+        },
+        {
+          "id": "how-avante",
+          "heading": "Cómo Avante lo abordaría",
+          "level": 2,
+          "paragraphs": [
+            "La automatización de cobranzas es un build de studio de manual, porque las partes difíciles aquí son de operador, no de ingeniería. El insumo escaso es un fundador con más de 10 años de cicatrices del mercado brasileño en pagos, crédito u operaciones financieras, alguien que sabe cómo compra de verdad un CFO brasileño y cómo liquida de verdad el régimen de la duplicata.",
+            "Avante junta a ese operador con un playbook de Silicon Valley y capital de primer cheque desde el día uno, desplegando $500K-1.5M por empresa y reteniendo economía de co-founder. La empresa corre el sistema de seis etapas, Research, Partner, Build, Traction, Revenue, Compound, y llega a su primer ingreso 6-9 meses antes que un equipo autónomo con financiamiento comparable.",
+            "El modelo está anclado en retornos, no en optimismo. La Global Startup Studio Network reporta IRR de venture studio cerca de ~50% contra cerca de ~19% del VC tradicional, alrededor de 2,5x en horizontes realistas. Ese es el benchmark del modelo de studio de la GSSN, no el retorno realizado de la propia Avante. Avante lanza 3-4 empresas por año, y una empresa brasileña de cuentas por cobrar es exactamente el perfil que está hecha para lanzar, una empresa AI-native en un mercado regulado, rico en dato y pesado en servicios. Lea más sobre [por qué un venture studio](/why-avante) o explore lecturas de mercado relacionadas en la [Avante Library](/library). El ciclo de dato es el moat. La demo no.",
+            "El cierre es simple. En cobranzas brasileñas, quien controla el dato de pago controla el crédito."
           ]
         }
       ]
@@ -3472,6 +5126,286 @@ const engineArticles: Article[] = [
     }
   },
   {
+    "slug": "domain-specific-evals-ai-moat",
+    "category": "ai",
+    "type": "Playbook",
+    "readTime": "10 min",
+    "featured": false,
+    "date": "Jun 2026",
+    "datePublished": "2026-06-15",
+    "isPublished": true,
+    "en": {
+      "title": "Domain Evals: The Moat That Survives Model Churn",
+      "description": "Models commoditize. The encoded judgment of what correct means does not. Why a domain eval suite is an underrated AI-native moat.",
+      "sections": [
+        {
+          "paragraphs": [
+            "A domain-specific evals AI moat is the most underrated form of defensibility an AI-native company can build. Models commoditize and prompts get copied within a quarter. The encoded judgment of what correct means inside a regulated, high-stakes workflow does not. That judgment, captured as a test suite of real cases, edge cases, and expert-labeled outcomes, is expensive to assemble, compounds with usage, and is the asset competitors cannot screenshot.",
+            "It also buys you a second thing almost nobody prices in. The freedom to swap base models as inference prices collapse, without gambling on quality. At Avante Ventures, the venture studio we run building AI-native companies in Brazil and Latin America, the eval suite is where a copilot's accumulating usage turns into a quality lead you can prove rather than assert."
+          ]
+        },
+        {
+          "id": "the-claim",
+          "heading": "Why evals are a moat, not a chore",
+          "level": 2,
+          "paragraphs": [
+            "Most teams treat evaluation as QA hygiene. That framing is why they lose. An AI-native product makes a claim about the world every time it runs. A copilot that scores judicial-debt recovery, prices an insurance risk, or ranks an auction property can be right or wrong, and wrong is expensive. The mechanism that decides right from wrong is the eval suite, which makes it the product, not the paperwork around it.",
+            "The standard moat conversation stops at proprietary data, and that is where it goes wrong. Data is raw material. An eval set is the encoded definition of correctness applied to that material. Two ventures can hold near-identical data and ship opposite quality, because one runs a rigorous, adversarial, operator-labeled suite and the other is guessing in production. The eval suite is the LLM evals defensibility layer that turns a pile of cases into a measurable lead."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "If removing the model breaks your product rather than degrading a feature, you are AI-native. And the first question that follows is not how fast you ship. It is how you know the output is correct."
+          }
+        },
+        {
+          "id": "model-agnostic",
+          "heading": "How evals make you model-agnostic",
+          "level": 2,
+          "paragraphs": [
+            "A model-agnostic AI startup is one that can change its engine on a Tuesday and prove quality held by Wednesday. The eval suite is what makes that possible. Run the new model against the suite. Adopt it only if scores hold or improve. The proprietary eval set is what converts a volatile cost curve into pricing power instead of exposure.",
+            "This matters because base-model price and quality reshuffle every few months. A venture that hard-codes its quality to one provider is betting its margin on that provider's roadmap. A venture with a domain eval suite treats every new model as a candidate, not a commitment. The cost of being model-agnostic is near zero when you can prove quality on every swap. It is enormous when you cannot, because then a switch is a leap of faith and you will not take it."
+          ],
+          "bullets": [
+            "Owned eval suite: swap to a cheaper or better model the week it ships, validate in hours, capture the savings or the quality gain.",
+            "No eval suite: stay locked to one provider out of fear, or switch blind and discover the regression in front of a customer.",
+            "The asset is not the prompt or the model. It is the encoded, operator-labeled definition of correct that every model must pass."
+          ]
+        },
+        {
+          "id": "the-cost-curve",
+          "heading": "Why the cost curve makes this urgent",
+          "level": 2,
+          "paragraphs": [
+            "Inference prices are falling fast and unevenly, which is precisely why you should not anchor quality to one model. Epoch AI found the price to reach a fixed capability has dropped between [9x and 900x per year](https://epoch.ai/data-insights/llm-inference-price-trends) depending on the benchmark, with a median near 50x. Matching GPT-4 on PhD-level science questions got about 40x cheaper per year. The drops are accelerating. Measured from January 2024 onward, the median rate jumps to roughly 200x per year.",
+            "a16z put a single number on it. The cost of inference at a fixed quality level fell from [60 dollars per million tokens in 2021 to about 6 cents](https://a16z.com/llmflation-llm-inference-cost/) by late 2024, a roughly 1,000x decline in three years. When the floor moves that fast, the only way to keep capturing the savings is to be ready to switch. Readiness is an eval suite. Without one, every price drop is a deal you watch a competitor take. This is the AI eval set proprietary advantage that compounds quietly while the cost curve does the loud work."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "The cost of LLM inference at a fixed quality level fell from 60 dollars per million tokens in 2021 to about 6 cents by late 2024. Roughly 1,000x in three years.",
+            "attribution": "a16z, Welcome to LLMflation, 2024"
+          }
+        },
+        {
+          "id": "three-layers",
+          "heading": "Where evals sit among the moats",
+          "level": 3,
+          "paragraphs": [
+            "The durable moat for a vertical AI venture is a stack, not a single model. Insignia Ventures put it bluntly. [The barrier to building has never been lower while defending what you built has become exponentially harder](https://review.insignia.vc/2025/04/15/moats-ai/). They documented AI image-editing startups that scaled past 5 million dollars in ARR and then watched their value erode overnight when an incumbent shipped the same feature. Generic capability is a commodity. The defensible layers sit underneath it."
+          ],
+          "bullets": [
+            "Proprietary data: the cases, outcomes, and labels competitors cannot buy. Necessary, most discussed, not sufficient alone.",
+            "Domain-specific evals: the encoded judgment of what correct means, run against every model and every release. The layer that turns accumulating usage into a provable quality lead.",
+            "Workflow lock-in: the product becomes where work is authored and the system of record, so switching costs rise."
+          ]
+        },
+        {
+          "id": "evals-are-hard",
+          "heading": "The quiet trap of bad evals",
+          "level": 2,
+          "paragraphs": [
+            "A bad eval set is worse than no eval set, because it gives you confidence pointed in the wrong direction. Anthropic, a lab whose entire business is measuring models, wrote that [a true science of evals remains underdeveloped](https://www.anthropic.com/research/statistical-approach-to-model-evals) and that an apparent edge can be luck of the draw rather than real capability. If they call the science underdeveloped, a vertical startup should assume its first eval set is wrong in ways it cannot yet see.",
+            "Here is the failure mode in plain terms. An eval set encodes a definition of correct. If that definition is subtly off, you optimize hard toward the wrong target and feel good doing it. A judicial-debt valuation that looks right to an engineer can be legally wrong in a way only a precatório specialist catches. An insurance score can pass a generic accuracy check and still misprice the tail that bankrupts the book. Building a good eval set demands the exact resource most AI startups lack. Deep domain operators who can label adversarial edge cases correctly. A team without that input does not build a weak instrument. It builds a precise one aimed at the wrong target, and ships with conviction."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "A true science of evals remains underdeveloped, and an apparent model edge can be luck of the draw rather than real capability. The warning comes from a frontier lab, not a skeptic.",
+            "attribution": "Anthropic research on evaluating models, 2024"
+          }
+        },
+        {
+          "id": "how-avante",
+          "heading": "How Avante builds evals with operators",
+          "level": 2,
+          "paragraphs": [
+            "The eval-as-moat thesis is exactly why the studio model fits this moment. A correct eval set requires deep domain input, and that input is what most AI startups are short of. Avante Ventures pairs a Silicon Valley playbook and first-ticket capital with operators who carry 10+ years of Brazilian-market scar tissue, assembled on day one. The operating partner who knows the domain is in the build from the Partner stage, which is where eval design has to start, not after launch.",
+            "The structure is deliberate. Avante launches 3-4 ventures per year through a six-stage system. Research, Partner, Build, Traction, Revenue, Compound. Each venture gets $500K-1.5M across pre-seed while the studio retains co-founder economics. The model has a track record behind it. Per the Global Startup Studio Network, venture studios show roughly ~50% IRR versus ~19% for traditional VC, about 2.5x over realistic horizons. That figure is the studio-model benchmark, not a claim about any single fund's realized return.",
+            "The market it points at is concrete. Services account for roughly 70% of Brazilian GDP, and per [consolidated IBGE data](https://www.infomoney.com.br/colunistas/iee/responsavel-por-70-do-pib-setor-de-servicos-esta-sob-cerco/) they drive about 80% of formal job creation. These are regulated, judgment-heavy workflows where correct is domain-defined and adversarial. Exactly where a domain eval suite is hardest to build and most defensible once built. The portfolio runs one pattern in such domains. Build a copilot to generate proprietary data, encode domain correctness as evals so the quality lead is provable, then use the data and the credibility to raise and deploy capital. The copilot to data to fund flywheel shows up in judicial-asset valuation at Alphajuri, insurance risk scoring at WIR, and auction-property scoring at BR Auction Intel. AI infrastructure is now cheap enough to deploy without a Series A. The bottleneck moved. It is no longer compute. It is the encoded judgment of what correct means, and the operators who can define it. That is the case we make in full on [why a studio builds this way](/why-avante)."
+          ]
+        }
+      ]
+    },
+    "pt": {
+      "title": "Evals de Domínio: o Moat que Sobrevive à Troca de Modelos",
+      "description": "Modelos viram commodity. O julgamento codificado do que é correto não. Por que uma suíte de evals de domínio é um moat AI-native subestimado.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Os evals de domínio são o moat de IA mais subestimado que uma empresa AI-native pode construir. Modelos viram commodity e prompts são copiados em um trimestre. O julgamento codificado do que significa correto dentro de um fluxo regulado e de alto risco não vira. Esse julgamento, capturado como uma suíte de testes com casos reais, casos de borda e resultados rotulados por especialistas, é caro de montar, composta com o uso e é o ativo que o concorrente não consegue copiar com um print.",
+            "Ele também compra uma segunda coisa que quase ninguém precifica. A liberdade de trocar o modelo base conforme o preço de inferência despenca, sem apostar na qualidade. Na Avante Ventures, o venture studio que tocamos construindo empresas AI-native no Brasil e na América Latina, a suíte de evals é onde o uso acumulado de um copiloto vira uma vantagem de qualidade que você prova, e não apenas afirma."
+          ]
+        },
+        {
+          "id": "the-claim",
+          "heading": "Por que evals são moat, não tarefa chata",
+          "level": 2,
+          "paragraphs": [
+            "A maioria dos times trata avaliação como higiene de QA. É por isso que perdem. Um produto AI-native faz uma afirmação sobre o mundo toda vez que roda. Um copiloto que pontua recuperação de dívida judicial, precifica um risco de seguro ou ranqueia um imóvel de leilão pode estar certo ou errado, e errado custa caro. O mecanismo que decide certo de errado é a suíte de evals. Isso a torna o produto, não a papelada em volta dele.",
+            "A conversa padrão sobre moat para na proprietary data, e é aí que ela erra. Dado é matéria-prima. Um conjunto de evals é a definição codificada de correção aplicada a essa matéria. Dois negócios podem ter dados quase idênticos e entregar qualidade oposta, porque um roda uma suíte rigorosa, adversarial e rotulada por operador e o outro está adivinhando em produção. A suíte de evals é a camada de defensabilidade de evals de LLM que transforma uma pilha de casos em uma vantagem mensurável."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Se tirar o modelo quebra o seu produto em vez de degradar uma funcionalidade, você é AI-native. E a primeira pergunta que vem depois não é quão rápido você entrega. É como você sabe que a saída está correta."
+          }
+        },
+        {
+          "id": "model-agnostic",
+          "heading": "Como evals te tornam independente de modelo",
+          "level": 2,
+          "paragraphs": [
+            "Uma startup de IA independente de modelo é aquela que troca o motor numa terça e prova que a qualidade se manteve na quarta. A suíte de evals é o que torna isso possível. Rode o novo modelo contra a suíte. Adote apenas se as notas se mantiverem ou melhorarem. O conjunto de evals proprietário é o que converte uma curva de custo volátil em poder de preço em vez de exposição.",
+            "Isso importa porque preço e qualidade do modelo base se reorganizam a cada poucos meses. Um negócio que fixa sua qualidade em um único provedor está apostando a margem no roadmap daquele provedor. Um negócio com uma suíte de evals de domínio trata todo modelo novo como candidato, não como compromisso. O custo de ser independente de modelo é quase zero quando você consegue provar qualidade em cada troca. É enorme quando você não consegue, porque então a troca vira um salto de fé e você não vai dar."
+          ],
+          "bullets": [
+            "Com suíte própria: troque para um modelo mais barato ou melhor na semana em que ele sai, valide em horas, capture a economia ou o ganho de qualidade.",
+            "Sem suíte: fique preso a um provedor por medo, ou troque às cegas e descubra a regressão na frente de um cliente.",
+            "O ativo não é o prompt nem o modelo. É a definição codificada e rotulada por operador do que é correto, que todo modelo precisa passar."
+          ]
+        },
+        {
+          "id": "the-cost-curve",
+          "heading": "Por que a curva de custo torna isso urgente",
+          "level": 2,
+          "paragraphs": [
+            "Os preços de inferência caem rápido e de forma desigual, e é exatamente por isso que você não deveria ancorar a qualidade em um único modelo. A Epoch AI mostrou que o preço para atingir uma capacidade fixa caiu entre [9x e 900x por ano](https://epoch.ai/data-insights/llm-inference-price-trends) conforme o benchmark, com mediana perto de 50x. Igualar o GPT-4 em questões de ciência de nível doutorado ficou cerca de 40x mais barato por ano. As quedas estão acelerando. Medindo de janeiro de 2024 em diante, a mediana salta para cerca de 200x por ano.",
+            "A a16z colocou um número único nisso. O custo de inferência em um nível fixo de qualidade caiu de [60 dólares por milhão de tokens em 2021 para cerca de 6 centavos](https://a16z.com/llmflation-llm-inference-cost/) no fim de 2024, uma queda de aproximadamente 1.000x em três anos. Quando o piso se move tão rápido, o único jeito de continuar capturando a economia é estar pronto para trocar. Estar pronto é ter uma suíte de evals. Sem ela, toda queda de preço é um negócio que você vê um concorrente fechar. Essa é a vantagem do conjunto de evals proprietário, que se compõe em silêncio enquanto a curva de custo faz o trabalho barulhento."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O custo de inferência de LLM em um nível fixo de qualidade caiu de 60 dólares por milhão de tokens em 2021 para cerca de 6 centavos no fim de 2024. Cerca de 1.000x em três anos.",
+            "attribution": "a16z, Welcome to LLMflation, 2024"
+          }
+        },
+        {
+          "id": "three-layers",
+          "heading": "Onde os evals ficam entre os moats",
+          "level": 3,
+          "paragraphs": [
+            "O moat durável de um negócio de IA vertical é uma pilha, não um único modelo. A Insignia Ventures foi direta. [A barreira para construir nunca foi tão baixa, enquanto defender o que você construiu ficou exponencialmente mais difícil](https://review.insignia.vc/2025/04/15/moats-ai/). Eles documentaram startups de edição de imagem com IA que passaram de 5 milhões de dólares em ARR e depois viram seu valor evaporar da noite para o dia quando um incumbente lançou a mesma funcionalidade. Capacidade genérica é commodity. As camadas defensáveis ficam embaixo dela."
+          ],
+          "bullets": [
+            "Proprietary data: os casos, resultados e rótulos que o concorrente não compra. Necessário, o mais comentado, mas não suficiente sozinho.",
+            "Evals de domínio: o julgamento codificado do que é correto, rodado contra cada modelo e cada release. A camada que transforma uso acumulado em vantagem de qualidade comprovável.",
+            "Workflow lock-in: o produto vira onde o trabalho é feito e o sistema de registro, então o custo de troca sobe."
+          ]
+        },
+        {
+          "id": "evals-are-hard",
+          "heading": "A armadilha silenciosa dos evals ruins",
+          "level": 2,
+          "paragraphs": [
+            "Um conjunto de evals ruim é pior do que nenhum, porque te dá confiança apontada na direção errada. A Anthropic, um laboratório cujo negócio inteiro é medir modelos, escreveu que [uma verdadeira ciência de evals ainda é subdesenvolvida](https://www.anthropic.com/research/statistical-approach-to-model-evals) e que uma vantagem aparente pode ser sorte do sorteio, e não capacidade real. Se eles chamam a ciência de subdesenvolvida, um negócio vertical deveria assumir que seu primeiro conjunto de evals está errado de formas que ainda não consegue ver.",
+            "Eis o modo de falha em termos simples. Um conjunto de evals codifica uma definição de correto. Se essa definição está sutilmente errada, você otimiza forte em direção ao alvo errado e se sente bem fazendo isso. Uma valuação de dívida judicial que parece certa para um engenheiro pode estar juridicamente errada de um jeito que só um especialista em precatórios pega. Um score de seguro pode passar num teste genérico de acurácia e ainda assim precificar mal a cauda que quebra a carteira. Construir um bom conjunto de evals exige o recurso exato que falta à maioria das startups de IA. Operadores de domínio profundos que sabem rotular casos de borda adversariais corretamente. Um time sem esse insumo não constrói um instrumento fraco. Constrói um instrumento preciso mirado no alvo errado, e entrega com convicção."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Uma verdadeira ciência de evals ainda é subdesenvolvida, e uma vantagem aparente de modelo pode ser sorte do sorteio em vez de capacidade real. O alerta vem de um laboratório de fronteira, não de um cético.",
+            "attribution": "Pesquisa da Anthropic sobre avaliação de modelos, 2024"
+          }
+        },
+        {
+          "id": "how-avante",
+          "heading": "Como a Avante constrói evals com operadores",
+          "level": 2,
+          "paragraphs": [
+            "A tese de eval como moat é exatamente por que o modelo de studio cabe neste momento. Um conjunto de evals correto exige insumo de domínio profundo, e esse insumo é o que falta à maioria das startups de IA. A Avante Ventures combina um playbook do Vale do Silício e capital de primeiro cheque com operadores que carregam mais de 10 anos de calo do mercado brasileiro, montados no dia um. O operating partner que conhece o domínio está na construção desde a etapa Partner, que é onde o design de evals tem que começar, não depois do lançamento.",
+            "A estrutura é deliberada. A Avante lança de 3 a 4 ventures por ano por meio de um sistema de seis etapas. Research, Partner, Build, Traction, Revenue, Compound. Cada venture recebe entre 500 mil e 1,5 milhão de dólares no pré-seed enquanto o studio retém economia de co-founder. O modelo tem histórico por trás. Segundo a Global Startup Studio Network, venture studios mostram cerca de ~50% de IRR contra ~19% do venture capital tradicional, cerca de 2,5x em horizontes realistas. Esse número é o benchmark do modelo de studio, não uma afirmação sobre o retorno realizado de um fundo específico.",
+            "O mercado que isso mira é concreto. Os serviços respondem por cerca de 70% do PIB brasileiro, e segundo [dados consolidados do IBGE](https://www.infomoney.com.br/colunistas/iee/responsavel-por-70-do-pib-setor-de-servicos-esta-sob-cerco/) movimentam cerca de 80% da geração de emprego formal. São fluxos regulados e pesados em julgamento, onde correto é definido pelo domínio e é adversarial. Exatamente onde uma suíte de evals de domínio é mais difícil de construir e mais defensável depois de pronta. O portfólio roda um padrão nesses domínios. Construir um copiloto para gerar proprietary data, codificar a correção do domínio como evals para que a vantagem de qualidade seja comprovável, e então usar o dado e a credibilidade para captar e alocar capital. O flywheel copilot, dado, capital aparece na valuação de ativos judiciais na Alphajuri, na precificação de risco de seguro na WIR e na pontuação de imóveis de leilão na BR Auction Intel. A infraestrutura de IA já está barata o bastante para implantar sem uma Série A. O gargalo mudou. Não é mais computação. É o julgamento codificado do que significa correto, e os operadores que sabem defini-lo. É esse o argumento que detalhamos em [por que um studio constrói assim](/why-avante)."
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Evals de Dominio: el Moat que Sobrevive al Cambio de Modelos",
+      "description": "Los modelos se vuelven commodity. El juicio codificado de qué es correcto no. Por qué una suite de evals de dominio es un moat AI-native subestimado.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Los evals de dominio son el moat de IA más subestimado que una empresa AI-native puede construir. Los modelos se vuelven commodity y los prompts se copian en un trimestre. El juicio codificado de qué significa correcto dentro de un flujo regulado y de alto riesgo no se copia. Ese juicio, capturado como una suite de pruebas con casos reales, casos de borde y resultados etiquetados por expertos, es caro de armar, se compone con el uso y es el activo que un competidor no puede replicar con una captura de pantalla.",
+            "También compra una segunda cosa que casi nadie pone en precio. La libertad de cambiar el modelo base mientras el costo de inferencia se desploma, sin apostar la calidad. En Avante Ventures, el venture studio que operamos construyendo empresas AI-native en Brasil y América Latina, la suite de evals es donde el uso acumulado de un copiloto se convierte en una ventaja de calidad que usted prueba, no que simplemente afirma."
+          ]
+        },
+        {
+          "id": "the-claim",
+          "heading": "Por qué los evals son moat, no una tarea tediosa",
+          "level": 2,
+          "paragraphs": [
+            "La mayoría de los equipos trata la evaluación como higiene de QA. Por eso pierden. Un producto AI-native hace una afirmación sobre el mundo cada vez que corre. Un copiloto que puntúa recuperación de deuda judicial, cotiza un riesgo de seguro o rankea un inmueble en subasta puede estar bien o mal, y mal cuesta caro. El mecanismo que decide lo correcto de lo incorrecto es la suite de evals. Eso la convierte en el producto, no en el papeleo que lo rodea.",
+            "La conversación estándar sobre el moat se detiene en la proprietary data, y ahí es donde se equivoca. El dato es materia prima. Un conjunto de evals es la definición codificada de corrección aplicada a esa materia. Dos negocios pueden tener datos casi idénticos y entregar calidad opuesta, porque uno corre una suite rigurosa, adversarial y etiquetada por operador y el otro está adivinando en producción. La suite de evals es la capa de defensibilidad de evals de LLM que convierte un montón de casos en una ventaja medible."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Si quitar el modelo rompe su producto en lugar de degradar una funcionalidad, usted es AI-native. Y la primera pregunta que sigue no es qué tan rápido entrega. Es cómo sabe que la salida es correcta."
+          }
+        },
+        {
+          "id": "model-agnostic",
+          "heading": "Como los evals te hacen independiente del modelo",
+          "level": 2,
+          "paragraphs": [
+            "Una startup de IA independiente del modelo es la que cambia el motor un martes y prueba que la calidad se mantuvo el miércoles. La suite de evals es lo que lo hace posible. Corra el nuevo modelo contra la suite. Adóptelo solo si las notas se mantienen o mejoran. El conjunto de evals propietario es lo que convierte una curva de costo volátil en poder de precio en lugar de exposición.",
+            "Esto importa porque el precio y la calidad del modelo base se reordenan cada pocos meses. Un negocio que fija su calidad a un solo proveedor está apostando su margen al roadmap de ese proveedor. Un negocio con una suite de evals de dominio trata cada modelo nuevo como candidato, no como compromiso. El costo de ser independiente del modelo es casi cero cuando usted puede probar calidad en cada cambio. Es enorme cuando no puede, porque entonces el cambio se vuelve un acto de fe y no lo va a dar."
+          ],
+          "bullets": [
+            "Con suite propia: cambie a un modelo más barato o mejor la semana en que sale, valide en horas, capture el ahorro o la ganancia de calidad.",
+            "Sin suite: quédese atado a un proveedor por miedo, o cambie a ciegas y descubra la regresión frente a un cliente.",
+            "El activo no es el prompt ni el modelo. Es la definición codificada y etiquetada por operador de qué es correcto, que todo modelo debe pasar."
+          ]
+        },
+        {
+          "id": "the-cost-curve",
+          "heading": "Por qué la curva de costo lo vuelve urgente",
+          "level": 2,
+          "paragraphs": [
+            "Los precios de inferencia caen rápido y de forma despareja, y por eso mismo usted no debería anclar la calidad a un solo modelo. Epoch AI encontró que el precio para alcanzar una capacidad fija cayó entre [9x y 900x por año](https://epoch.ai/data-insights/llm-inference-price-trends) según el benchmark, con una mediana cerca de 50x. Igualar a GPT-4 en preguntas de ciencia de nivel doctoral se volvió cerca de 40x más barato por año. Las caídas se aceleran. Midiendo desde enero de 2024 en adelante, la mediana salta a cerca de 200x por año.",
+            "a16z le puso un número único. El costo de inferencia en un nivel fijo de calidad cayó de [60 dólares por millón de tokens en 2021 a cerca de 6 centavos](https://a16z.com/llmflation-llm-inference-cost/) a fines de 2024, una caída de aproximadamente 1.000x en tres años. Cuando el piso se mueve tan rápido, la única forma de seguir capturando el ahorro es estar listo para cambiar. Estar listo es tener una suite de evals. Sin ella, cada caída de precio es un negocio que usted ve cerrar a un competidor. Esa es la ventaja del conjunto de evals propietario, que se compone en silencio mientras la curva de costo hace el trabajo ruidoso."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "El costo de inferencia de LLM en un nivel fijo de calidad cayó de 60 dólares por millón de tokens en 2021 a cerca de 6 centavos a fines de 2024. Cerca de 1.000x en tres años.",
+            "attribution": "a16z, Welcome to LLMflation, 2024"
+          }
+        },
+        {
+          "id": "three-layers",
+          "heading": "Donde se ubican los evals entre los moats",
+          "level": 3,
+          "paragraphs": [
+            "El moat durable de un negocio de IA vertical es un stack, no un solo modelo. Insignia Ventures fue directa. [La barrera para construir nunca fue tan baja, mientras defender lo que usted construyó se volvió exponencialmente más difícil](https://review.insignia.vc/2025/04/15/moats-ai/). Documentaron startups de edición de imagen con IA que pasaron los 5 millones de dólares en ARR y luego vieron su valor evaporarse de un día para otro cuando un actor establecido lanzó la misma funcionalidad. La capacidad genérica es commodity. Las capas defensables están debajo de ella."
+          ],
+          "bullets": [
+            "Proprietary data: los casos, resultados y etiquetas que un competidor no compra. Necesario, lo más comentado, pero no suficiente por sí solo.",
+            "Evals de dominio: el juicio codificado de qué es correcto, corrido contra cada modelo y cada release. La capa que convierte el uso acumulado en una ventaja de calidad comprobable.",
+            "Workflow lock-in: el producto se vuelve donde se hace el trabajo y el sistema de registro, entonces el costo de cambio sube."
+          ]
+        },
+        {
+          "id": "evals-are-hard",
+          "heading": "La trampa silenciosa de los evals malos",
+          "level": 2,
+          "paragraphs": [
+            "Un conjunto de evals malo es peor que ninguno, porque le da confianza apuntada en la dirección equivocada. Anthropic, un laboratorio cuyo negocio entero es medir modelos, escribió que [una verdadera ciencia de evals sigue subdesarrollada](https://www.anthropic.com/research/statistical-approach-to-model-evals) y que una ventaja aparente puede ser suerte del sorteo, no capacidad real. Si ellos llaman subdesarrollada a la ciencia, un negocio vertical debería asumir que su primer conjunto de evals está mal de formas que todavía no puede ver.",
+            "Este es el modo de falla en términos simples. Un conjunto de evals codifica una definición de correcto. Si esa definición está sutilmente mal, usted optimiza fuerte hacia el objetivo equivocado y se siente bien haciéndolo. Una valuación de deuda judicial que le parece correcta a un ingeniero puede estar jurídicamente mal de un modo que solo un especialista capta. Un score de seguro puede pasar una prueba genérica de exactitud y aún así cotizar mal la cola que quiebra la cartera. Construir un buen conjunto de evals exige el recurso exacto que le falta a la mayoría de las startups de IA. Operadores de dominio profundos que sepan etiquetar casos de borde adversariales correctamente. Un equipo sin ese insumo no construye un instrumento débil. Construye uno preciso apuntado al objetivo equivocado, y entrega con convicción."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Una verdadera ciencia de evals sigue subdesarrollada, y una ventaja aparente de modelo puede ser suerte del sorteo en lugar de capacidad real. La advertencia viene de un laboratorio de frontera, no de un escéptico.",
+            "attribution": "Investigación de Anthropic sobre evaluación de modelos, 2024"
+          }
+        },
+        {
+          "id": "how-avante",
+          "heading": "Como Avante construye evals con operadores",
+          "level": 2,
+          "paragraphs": [
+            "La tesis de eval como moat es exactamente por qué el modelo de studio encaja en este momento. Un conjunto de evals correcto exige insumo de dominio profundo, y ese insumo es lo que le falta a la mayoría de las startups de IA. Avante Ventures combina un playbook de Silicon Valley y capital de primer cheque con operadores que cargan más de 10 años de cicatrices del mercado brasileño, ensamblados el día uno. El operating partner que conoce el dominio está en la construcción desde la etapa Partner, que es donde el diseño de evals tiene que empezar, no después del lanzamiento.",
+            "La estructura es deliberada. Avante lanza de 3 a 4 ventures por año mediante un sistema de seis etapas. Research, Partner, Build, Traction, Revenue, Compound. Cada venture recibe entre 500 mil y 1,5 millones de dólares en el pre-seed mientras el studio retiene economía de co-founder. El modelo tiene historial detrás. Según la Global Startup Studio Network, los venture studios muestran cerca de ~50% de IRR frente a ~19% del venture capital tradicional, cerca de 2,5x en horizontes realistas. Ese número es el benchmark del modelo de studio, no una afirmación sobre el retorno realizado de un fondo en particular.",
+            "El mercado al que apunta es concreto. Los servicios representan cerca del 70% del PIB brasileño, y según [datos consolidados del IBGE](https://www.infomoney.com.br/colunistas/iee/responsavel-por-70-do-pib-setor-de-servicos-esta-sob-cerco/) mueven cerca del 80% de la generación de empleo formal. Son flujos regulados y cargados de juicio, donde lo correcto lo define el dominio y es adversarial. Justo donde una suite de evals de dominio es más difícil de construir y más defensable una vez lista. El portafolio corre un patrón en esos dominios. Construir un copiloto para generar proprietary data, codificar la corrección del dominio como evals para que la ventaja de calidad sea comprobable, y luego usar el dato y la credibilidad para levantar y desplegar capital. El flywheel copilot, dato, capital aparece en la valuación de activos judiciales en Alphajuri, en la cotización de riesgo de seguro en WIR y en la puntuación de inmuebles en subasta en BR Auction Intel. La infraestructura de IA ya está barata como para desplegar sin una Serie A. El cuello de botella se movió. Ya no es cómputo. Es el juicio codificado de qué significa correcto, y los operadores que saben definirlo. Ese es el argumento que detallamos en [por qué un studio construye así](/why-avante)."
+          ]
+        }
+      ]
+    }
+  },
+  {
     "slug": "infinity-constellation-ai-studio-thesis",
     "category": "insights",
     "type": "Market Note",
@@ -3704,6 +5638,247 @@ const engineArticles: Article[] = [
           "paragraphs": [
             "Lee la ronda de Infinity como señal de mercado, no como susto competitivo. Inversionistas serios hoy financian el modelo de studio a escala, en público, con un número adjunto. El debate sobre si construir empresas en serie le gana a apostar a ellas una por una se está cerrando. Lo que sigue abierto es ejecución y geografía.",
             "Avante es la respuesta para América Latina. Un venture studio que construye empresas AI-native en Brasil y América Latina, lanzando 3-4 ventures al año, desplegando US$ 500K-1,5M por venture, y llevando cada una por un sistema de seis etapas de Research a Partner a Build a Traction a Revenue a Compound. El mismo modelo que el mercado acaba de valorar en US$ 24M, apuntado a la economía donde debería componerse más fuerte. Mira [cómo opera Avante](/principles), o [inicia una conversación](/contact)."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "lp-allocation-case-venture-studios",
+    "category": "research",
+    "type": "Research Report",
+    "readTime": "11 min",
+    "featured": false,
+    "date": "Jun 2026",
+    "datePublished": "2026-06-15",
+    "isPublished": true,
+    "en": {
+      "title": "The LP Case for a Dedicated Venture Studio Allocation",
+      "description": "Studio IRR runs near 50% against roughly 19% for traditional VC. How an LP should size, underwrite, and stress-test a venture studio allocation.",
+      "sections": [
+        {
+          "paragraphs": [
+            "The honest question for an allocator is not whether venture studios beat venture capital. It is whether to carve a dedicated studio sleeve inside a venture program, and how to size and underwrite it once you do. The headline that pulls people into that conversation is the Global Startup Studio Network benchmark of roughly 50% IRR versus roughly 19% for traditional VC, about 2.5x over realistic horizons. That number is a prior about the model. It is not an underwritable expected return for any one fund.",
+            "This is the venture studio LP allocation case argued from the LP chair, not the founder's. We will state the return gap and its source, show what the J-curve looks like for a studio, lay out the four things an LP actually underwrites, treat the survivorship problem in the benchmark without flinching, and then size the position against the manager risk it carries. Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America, and a young one, so this is also the lens we ask our own LPs to use on us."
+          ]
+        },
+        {
+          "id": "return-case",
+          "heading": "The return case, stated honestly",
+          "level": 2,
+          "paragraphs": [
+            "Every studio pitch leans on one figure, and it traces to a single source. The Global Startup Studio Network white paper [Disrupting the Venture Landscape](https://insightstudios.s3.amazonaws.com/Disrupting-the-Venture-Landscape_GSSN-White-Paper-1.pdf) puts studio-built companies at a net IRR that downstream summaries round to roughly 50%, against roughly 19% for the traditional venture benchmark, attributed to GSSN. [Alloy Partners](https://www.alloypartners.com/articles/venture-studios-vs-venture-capital), citing the same GSSN data, frames the same gap. For an LP the discipline is to read that as the studio-model benchmark, roughly 2.5x the IRR of traditional VC over realistic time horizons, attributed to GSSN. It is not any individual studio's realized track record, and Avante does not claim it as ours.",
+            "The funnel underneath the IRR is the more useful number, because it is what an allocator can actually diligence. Per the GSSN paper, 84% of companies coming out of studios raise a seed round. Of those, 72% advance from seed to Series A. Net it out and 60% of all studio-created companies reach Series A, against a 33% success rate for an Idealab-style benchmark portfolio of seed-funded companies from 2008 to 2010. The same paper notes that the startup idea accounts for only about 28% of a startup's success. That single line is the whole thesis. Execution is the scarce input, and a studio industrializes execution rather than betting on the next clever idea."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Studio-built companies show a net IRR near 50% versus roughly 19% for traditional VC, about 2.5x over realistic horizons. The studio-model benchmark, not any single studio's realized return.",
+            "attribution": "Global Startup Studio Network"
+          }
+        },
+        {
+          "id": "j-curve",
+          "heading": "What the J-curve looks like for a studio",
+          "level": 2,
+          "paragraphs": [
+            "The J-curve is the first thing an LP feels, and the studio version has a genuinely different shape. A traditional fund draws capital, charges fees, and marks early positions at cost or below for years before any write-up. That trough is the cost of a blind pool discovered over a three-year investment window. A studio deploys differently. It does not hunt for external deals. It builds the companies it owns from day one, so the team is assembled and the first product is in market before any priced round exists.",
+            "That can pull the inflection forward. The studio knows the venture exists because it created it, which compresses the gap between first dollar and first markable position. The honest caveat is that fund-level fees and the long road to actual cash distributions still apply. A studio does not escape the J-curve. It reshapes the venture-level part of it. An LP should underwrite the shape it is buying, not assume the curve disappears."
+          ]
+        },
+        {
+          "id": "underwriting",
+          "heading": "What an LP actually underwrites",
+          "level": 2,
+          "paragraphs": [
+            "No allocator buys the 50% headline. You underwrite four concrete things, and the real diligence lives in each one."
+          ],
+          "bullets": [
+            "Portfolio construction at the studio level. A studio that launches 3 to 4 ventures a year is a concentrated book by design. You are underwriting the pipeline, the thesis discipline, and how many genuinely independent shots the sleeve will own across the commitment.",
+            "Manager concentration risk. A blind-pool fund spreads you across a manager's external sourcing. A single studio is a near-binary bet on one operating team's ability to repeat. This is the largest risk in the position.",
+            "Fee and carry versus 2-and-20. Studios take more ownership because they act as institutional co-founder. Per Alloy Partners, that is commonly 20% to 60% or more of a venture against 10% to 30% for a traditional VC. The gross-to-net bridge does not look like a 2-and-20 fund, and you have to model it as its own thing.",
+            "Where the overhead lands. A studio funds shared infrastructure, operating partners, and pre-idea research out of the same economics. You are deciding whether that cost is a drag or the exact machinery that produces the funnel advantage."
+          ]
+        },
+        {
+          "id": "survivorship",
+          "heading": "The survivorship problem in the benchmark",
+          "level": 2,
+          "paragraphs": [
+            "Here is where candor earns the allocation rather than the pitch deck. The studio outperformance figure is dataset-dependent, and the dataset is young. A sharp [analysis of the studio data](https://www.linkedin.com/feed/update/urn:li:activity:7378401918135738369/) makes the case plainly. The roughly 60% IRR often quoted comes from under 20 fully exited fund vehicles, most older than ten years. The sample is self-selected toward studios that survived long enough to report, which is textbook survivorship bias.",
+            "There is a second trap worth naming. Comparing an average studio IRR to a top-quartile VC IRR is not a fair fight. The gap between median and top-quartile VC performance from 2001 to 2022 was roughly 2.1x, and venture is a power-law business where the average is a weak summary of anything. Even the traditional benchmark is lumpy. The [Cambridge Associates US PE/VC commentary for 2024](https://www.cambridgeassociates.com/insight/us-pe-vc-benchmark-commentary-calendar-year-2024/) shows the US Venture Capital Index returning 6.2% in 2024 after two negative years, with vintage returns spanning 0.7% to 25.3%. The honest read is that the studio sample is not yet large enough to use with full statistical confidence, even as the best evidence we have. Treat the 50% as a directional prior, not a number you can mark a sleeve to."
+          ]
+        },
+        {
+          "id": "sizing",
+          "heading": "Sizing the allocation against manager risk",
+          "level": 2,
+          "paragraphs": [
+            "Once you accept a young benchmark and a concentrated structure, the sizing logic gets simple. A studio sleeve is a satellite, not a core holding. An LP underwriting a single studio is taking real manager risk, not buying an index, and the position should be sized the way you would size any concentrated, illiquid, single-manager bet. The diversification has to come from elsewhere in the venture program.",
+            "What the sleeve buys is not lower portfolio risk. It is exposure to a different return mechanism, ownership and control from day one rather than price discovery on someone else's deal. An LP who wants the studio premium without the single-manager exposure would need a portfolio of studios, a vehicle that barely exists today, or would take the concentration consciously and size for it. There is no version of this where you get the premium and the diversification for free."
+          ]
+        },
+        {
+          "id": "how-avante",
+          "heading": "How Avante presents to LPs",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America, and the pitch to an LP starts with where the model bites hardest. According to IBGE data reported in [MercoPress](https://en.mercopress.com/2024/07/13/ibge-finds-2-interannual-growth-in-services), services account for about 70% of Brazil's GDP, a base still lightly penetrated by software. Capital is thin on the ground. LATAM venture investment fell to roughly 3.6 billion dollars across 694 deals in 2024, one of the lowest levels in five years, before recovering into 2025. A thin capital market rewards building ventures over competing to fund them.",
+            "The structure behind that claim is specific. Avante launches 3-4 ventures per year through a six-stage system, Research, Partner, Build, Traction, Revenue, Compound, deploying $500K-1.5M per venture and retaining co-founder economics. The recurring pattern is the copilot to data to fund flywheel. Build an AI copilot to generate proprietary data, then use that data to raise and deploy capital. The portfolio reads by domain. Alphajuri in judicial assets, WIR in insurance pricing with AXA, BR Auction Intel in real-estate auctions. None of it carries a number we cannot defend.",
+            "So the LP case is narrow and it should be. We do not ask anyone to underwrite 50% IRR. We ask them to underwrite one operating team, in one underbuilt market, running a repeatable system, and to size that bet like the concentrated position it is. The full thesis sits at [/why-avante](/why-avante) and the operating model at [/principles](/principles). An allocator who reads the benchmark as a prior and the team as the asset is reading it the way we do."
+          ]
+        }
+      ]
+    },
+    "pt": {
+      "title": "O Argumento para o LP Alocar de Forma Dedicada em Venture Studio",
+      "description": "O IRR de studios fica perto de 50% contra cerca de 19% do VC tradicional. Como um LP deve dimensionar, avaliar e testar uma alocação em studio.",
+      "sections": [
+        {
+          "paragraphs": [
+            "A pergunta honesta para quem aloca capital não é se venture studios batem o venture capital. É se vale separar uma fatia dedicada a studio dentro do programa de venture, e como dimensionar e avaliar essa fatia depois de decidir. O número que abre essa conversa é o benchmark da Global Startup Studio Network. IRR perto de 50% contra cerca de 19% do VC tradicional, cerca de 2,5x em horizontes realistas. Esse número é uma premissa sobre o modelo. Não é um retorno esperado que se possa subscrever para um fundo específico.",
+            "Este é o argumento da alocação de LP em venture studio visto da cadeira do LP, não da cadeira do fundador. Vamos declarar a diferença de retorno e sua fonte, mostrar como é a curva J de um studio, listar as quatro coisas que um LP de fato avalia, tratar do problema de sobrevivência no benchmark sem rodeios, e então dimensionar a posição diante do risco de gestor que ela carrega. A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina, e ainda jovem, então esta é também a lente que pedimos aos nossos próprios LPs usarem ao olhar para nós."
+          ]
+        },
+        {
+          "id": "return-case",
+          "heading": "O argumento de retorno, dito com honestidade",
+          "level": 2,
+          "paragraphs": [
+            "Todo pitch de studio se apoia em um número, e ele vem de uma fonte só. O white paper da Global Startup Studio Network, [Disrupting the Venture Landscape](https://insightstudios.s3.amazonaws.com/Disrupting-the-Venture-Landscape_GSSN-White-Paper-1.pdf), coloca as empresas construídas por studios em um IRR líquido que os resumos arredondam para perto de 50%, contra cerca de 19% do benchmark de venture tradicional, atribuído à GSSN. A [Alloy Partners](https://www.alloypartners.com/articles/venture-studios-vs-venture-capital), citando os dados da GSSN, enquadra a mesma diferença. Para um LP a disciplina é ler isso como o benchmark do modelo de studio, cerca de 2,5x o IRR do VC tradicional em horizontes realistas, atribuído à GSSN. Não é o histórico realizado de nenhum studio em particular, e a Avante não reivindica esse número como seu.",
+            "O funil por trás do IRR é o dado mais útil, porque é o que um alocador consegue de fato investigar. Segundo o paper da GSSN, 84% das empresas que saem de studios levantam uma rodada seed. Dessas, 72% avançam de seed para Série A. No líquido, 60% de todas as empresas criadas por studios chegam à Série A, contra uma taxa de sucesso de 33% em uma carteira de referência no estilo Idealab, de empresas seed entre 2008 e 2010. O mesmo paper observa que a ideia da startup responde por apenas cerca de 28% do sucesso dela. Essa linha sozinha é a tese inteira. A execução é o insumo escasso, e um studio industrializa a execução em vez de apostar na próxima ideia esperta."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Empresas construídas por studios mostram IRR líquido perto de 50% contra cerca de 19% do VC tradicional, cerca de 2,5x em horizontes realistas. É o benchmark do modelo de studio, não o retorno realizado de um studio específico.",
+            "attribution": "Global Startup Studio Network"
+          }
+        },
+        {
+          "id": "j-curve",
+          "heading": "Como é a curva J de um studio",
+          "level": 2,
+          "paragraphs": [
+            "A curva J é a primeira coisa que um LP sente, e a versão de studio tem um formato genuinamente diferente. Um fundo tradicional chama capital, cobra taxas e marca posições iniciais a custo ou abaixo dele por anos antes de qualquer reavaliação para cima. Esse fundo de poço é o custo de uma carteira cega descoberta ao longo de uma janela de investimento de três anos. Um studio aplica o capital de outro jeito. Ele não caça deals externos. Ele constrói as empresas que controla desde o dia um, então o time está montado e o primeiro produto está no mercado antes de existir qualquer rodada precificada.",
+            "Isso pode antecipar o ponto de inflexão. O studio sabe que a venture existe porque foi ele quem a criou, o que comprime o intervalo entre o primeiro real investido e a primeira posição marcável. A ressalva honesta é que as taxas no nível do fundo e o longo caminho até distribuições de caixa reais continuam valendo. Um studio não escapa da curva J. Ele remodela a parte dela que fica no nível da venture. Um LP deve avaliar o formato que está comprando, não supor que a curva some."
+          ]
+        },
+        {
+          "id": "underwriting",
+          "heading": "O que um LP realmente avalia",
+          "level": 2,
+          "paragraphs": [
+            "Nenhum alocador compra a manchete dos 50%. Você avalia quatro coisas concretas, e a investigação de verdade vive em cada uma delas."
+          ],
+          "bullets": [
+            "Construção de portfólio no nível do studio. Um studio que lança 3 a 4 ventures por ano é uma carteira concentrada por desenho. Você está avaliando o pipeline, a disciplina de tese e quantas apostas de fato independentes a fatia vai deter ao longo do compromisso.",
+            "Risco de concentração de gestor. Um fundo de carteira cega te espalha pela originação externa de um gestor. Um único studio é uma aposta quase binária na capacidade de um time operacional repetir o feito. Esse é o maior risco da posição.",
+            "Taxas e carry diante do 2-and-20. Studios pegam mais participação porque atuam como co-founder institucional. Segundo a Alloy Partners, isso costuma ser de 20% a 60% ou mais de uma venture contra 10% a 30% de um VC tradicional. A ponte do bruto para o líquido não se parece com um fundo 2-and-20, e você tem que modelá-la como algo próprio.",
+            "Onde o overhead cai. Um studio financia infraestrutura compartilhada, operating partners e pesquisa pré-ideia com a mesma economia. Você está decidindo se esse custo é um peso ou justamente a máquina que produz a vantagem do funil."
+          ]
+        },
+        {
+          "id": "survivorship",
+          "heading": "O problema de sobrevivência no benchmark",
+          "level": 2,
+          "paragraphs": [
+            "É aqui que a franqueza, e não o pitch, conquista a alocação. O número de outperformance dos studios depende do conjunto de dados, e o conjunto é jovem. Uma [análise afiada dos dados de studio](https://www.linkedin.com/feed/update/urn:li:activity:7378401918135738369/) coloca o ponto sem rodeios. O IRR perto de 60% que se cita com frequência vem de menos de 20 veículos de fundo totalmente liquidados, a maioria com mais de dez anos. A amostra é autosselecionada para studios que sobreviveram tempo suficiente para reportar, o que é viés de sobrevivência de manual.",
+            "Há uma segunda armadilha que vale nomear. Comparar um IRR médio de studio com um IRR de VC do quartil superior não é luta justa. A diferença entre o desempenho mediano e o do quartil superior em VC entre 2001 e 2022 foi de cerca de 2,1x, e venture é um negócio de lei de potência onde a média é um resumo fraco de qualquer coisa. Até o benchmark tradicional é irregular. O [comentário de PE/VC dos EUA da Cambridge Associates para 2024](https://www.cambridgeassociates.com/insight/us-pe-vc-benchmark-commentary-calendar-year-2024/) mostra o US Venture Capital Index rendendo 6,2% em 2024 depois de dois anos negativos, com retornos por safra indo de 0,7% a 25,3%. A leitura honesta é que a amostra de studios ainda não é grande o bastante para ser usada com plena confiança estatística, mesmo sendo a melhor evidência que temos. Trate os 50% como uma premissa direcional, não como um número ao qual você possa marcar uma fatia."
+          ]
+        },
+        {
+          "id": "sizing",
+          "heading": "Dimensionar a alocação diante do risco de gestor",
+          "level": 2,
+          "paragraphs": [
+            "Quando você aceita um benchmark jovem e uma estrutura concentrada, a lógica de dimensionamento fica simples. A fatia de studio é satélite, não posição central. Um LP que subscreve um único studio está assumindo risco de gestor de verdade, não comprando um índice, e a posição deve ser dimensionada como qualquer aposta concentrada, ilíquida e de gestor único. A diversificação tem que vir de outro lugar do programa de venture.",
+            "O que a fatia compra não é menos risco de portfólio. É exposição a um mecanismo de retorno diferente, propriedade e controle desde o dia um em vez de descoberta de preço no deal de outra pessoa. Um LP que quer o prêmio de studio sem a exposição de gestor único precisaria de um portfólio de studios, um veículo que mal existe hoje, ou assumiria a concentração de forma consciente e a dimensionaria. Não há versão disso em que você ganha o prêmio e a diversificação de graça."
+          ]
+        },
+        {
+          "id": "how-avante",
+          "heading": "Como a Avante se apresenta a LPs",
+          "level": 2,
+          "paragraphs": [
+            "A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina, e o pitch a um LP começa por onde o modelo morde mais forte. Segundo dados do IBGE reportados pela [MercoPress](https://en.mercopress.com/2024/07/13/ibge-finds-2-interannual-growth-in-services), os serviços respondem por cerca de 70% do PIB do Brasil, uma base ainda pouco penetrada por software. O capital é escasso no chão. O investimento de venture na América Latina caiu para cerca de 3,6 bilhões de dólares em 694 deals em 2024, um dos níveis mais baixos em cinco anos, antes de se recuperar em 2025. Um mercado de capital escasso recompensa construir ventures em vez de competir para financiá-las.",
+            "A estrutura por trás dessa afirmação é específica. A Avante lança 3-4 ventures por ano através de um sistema de seis estágios, Research, Partner, Build, Traction, Revenue, Compound, aplicando US$ 500K-1,5M por venture e retendo economia de co-founder. O padrão recorrente é o flywheel copilot, dado, capital. Construir um copiloto de IA para gerar dado proprietário, e então usar esse dado para captar e aplicar capital. O portfólio se lê por domínio. Alphajuri em ativos judiciais, WIR em precificação de seguros com a AXA, BR Auction Intel em leilões de imóveis. Nada disso carrega um número que a gente não consiga defender.",
+            "Então o argumento ao LP é estreito, e deve ser mesmo. A gente não pede a ninguém para subscrever 50% de IRR. A gente pede para subscrever um time operacional, em um mercado pouco construído, rodando um sistema repetível, e para dimensionar essa aposta como a posição concentrada que ela é. A tese completa está em [/why-avante](/why-avante) e o modelo operacional em [/principles](/principles). O alocador que lê o benchmark como premissa e o time como o ativo está lendo do jeito que nós lemos."
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "El Argumento para que un LP Asigne de Forma Dedicada a Venture Studio",
+      "description": "El IRR de los studios ronda el 50% frente a cerca del 19% del VC tradicional. Cómo un LP debe dimensionar, evaluar y estresar una asignación a studio.",
+      "sections": [
+        {
+          "paragraphs": [
+            "La pregunta honesta para quien asigna capital no es si los venture studios le ganan al venture capital. Es si conviene separar una porción dedicada a studio dentro del programa de venture, y cómo dimensionarla y evaluarla una vez que lo decide. El número que abre esa conversación es el benchmark de la Global Startup Studio Network. IRR cercano al 50% frente a cerca del 19% del VC tradicional, alrededor de 2,5x en horizontes realistas. Ese número es una premisa sobre el modelo. No es un retorno esperado que se pueda suscribir para un fondo en particular.",
+            "Este es el argumento de la asignación de LP en venture studio visto desde la silla del LP, no la del fundador. Vamos a plantear la diferencia de retorno y su fuente, mostrar cómo se ve la curva J de un studio, enumerar las cuatro cosas que un LP realmente evalúa, tratar el problema de supervivencia en el benchmark sin rodeos, y luego dimensionar la posición frente al riesgo de gestor que carga. Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina, y todavía joven, así que esta es también la lente que le pedimos a nuestros propios LPs que usen al mirarnos."
+          ]
+        },
+        {
+          "id": "return-case",
+          "heading": "El argumento de retorno, dicho con honestidad",
+          "level": 2,
+          "paragraphs": [
+            "Todo pitch de studio se apoya en un número, y viene de una sola fuente. El white paper de la Global Startup Studio Network, [Disrupting the Venture Landscape](https://insightstudios.s3.amazonaws.com/Disrupting-the-Venture-Landscape_GSSN-White-Paper-1.pdf), ubica a las empresas construidas por studios en un IRR neto que los resúmenes redondean a cerca del 50%, frente a cerca del 19% del benchmark de venture tradicional, atribuido a GSSN. [Alloy Partners](https://www.alloypartners.com/articles/venture-studios-vs-venture-capital), citando los datos de GSSN, enmarca la misma diferencia. Para un LP la disciplina es leer eso como el benchmark del modelo de studio, alrededor de 2,5x el IRR del VC tradicional en horizontes realistas, atribuido a GSSN. No es el historial realizado de ningún studio en particular, y Avante no reclama ese número como propio.",
+            "El embudo detrás del IRR es el dato más útil, porque es lo que un asignador puede de verdad investigar. Según el paper de GSSN, el 84% de las empresas que salen de studios levantan una ronda seed. De esas, el 72% avanza de seed a Serie A. En neto, el 60% de todas las empresas creadas por studios llega a Serie A, frente a una tasa de éxito del 33% en una cartera de referencia al estilo Idealab, de empresas seed entre 2008 y 2010. El mismo paper observa que la idea de la startup explica solo cerca del 28% de su éxito. Esa línea sola es la tesis entera. La ejecución es el insumo escaso, y un studio industrializa la ejecución en lugar de apostar a la próxima idea ingeniosa."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Las empresas construidas por studios muestran un IRR neto cercano al 50% frente a cerca del 19% del VC tradicional, alrededor de 2,5x en horizontes realistas. Es el benchmark del modelo de studio, no el retorno realizado de un studio específico.",
+            "attribution": "Global Startup Studio Network"
+          }
+        },
+        {
+          "id": "j-curve",
+          "heading": "Cómo se ve la curva J de un studio",
+          "level": 2,
+          "paragraphs": [
+            "La curva J es lo primero que siente un LP, y la versión de studio tiene una forma genuinamente distinta. Un fondo tradicional llama capital, cobra comisiones y marca las posiciones iniciales a costo o por debajo durante años antes de cualquier revaluación al alza. Ese pozo es el costo de una cartera ciega descubierta a lo largo de una ventana de inversión de tres años. Un studio despliega el capital de otra manera. No caza deals externos. Construye las empresas que controla desde el día uno, así que el equipo está armado y el primer producto está en el mercado antes de que exista cualquier ronda con precio.",
+            "Eso puede adelantar el punto de inflexión. El studio sabe que la venture existe porque él la creó, lo que comprime el intervalo entre el primer dólar invertido y la primera posición marcable. La salvedad honesta es que las comisiones a nivel del fondo y el largo camino hasta distribuciones de caja reales siguen aplicando. Un studio no escapa de la curva J. Reformula la parte que queda a nivel de la venture. Un LP debe evaluar la forma que está comprando, no suponer que la curva desaparece."
+          ]
+        },
+        {
+          "id": "underwriting",
+          "heading": "Qué evalúa realmente un LP",
+          "level": 2,
+          "paragraphs": [
+            "Ningún asignador compra el titular del 50%. Usted evalúa cuatro cosas concretas, y la investigación de verdad vive en cada una de ellas."
+          ],
+          "bullets": [
+            "Construcción de portafolio a nivel del studio. Un studio que lanza 3 a 4 ventures por año es una cartera concentrada por diseño. Usted evalúa el pipeline, la disciplina de tesis y cuántas apuestas de verdad independientes tendrá la porción a lo largo del compromiso.",
+            "Riesgo de concentración de gestor. Un fondo de cartera ciega lo reparte por la originación externa de un gestor. Un solo studio es una apuesta casi binaria a la capacidad de un equipo operativo de repetir el resultado. Es el mayor riesgo de la posición.",
+            "Comisiones y carry frente al 2-and-20. Los studios toman más participación porque actúan como co-founder institucional. Según Alloy Partners, eso suele ser del 20% al 60% o más de una venture frente al 10% al 30% de un VC tradicional. El puente del bruto al neto no se parece a un fondo 2-and-20, y hay que modelarlo como algo propio.",
+            "Dónde cae el overhead. Un studio financia infraestructura compartida, operating partners e investigación previa a la idea con la misma economía. Usted decide si ese costo es un lastre o justamente la maquinaria que produce la ventaja del embudo."
+          ]
+        },
+        {
+          "id": "survivorship",
+          "heading": "El problema de supervivencia en el benchmark",
+          "level": 2,
+          "paragraphs": [
+            "Aquí es donde la franqueza, y no el pitch, gana la asignación. El número de outperformance de los studios depende del conjunto de datos, y el conjunto es joven. Un [análisis agudo de los datos de studio](https://www.linkedin.com/feed/update/urn:li:activity:7378401918135738369/) plantea el punto sin rodeos. El IRR cercano al 60% que se cita seguido viene de menos de 20 vehículos de fondo totalmente liquidados, la mayoría con más de diez años. La muestra está autoseleccionada hacia studios que sobrevivieron lo suficiente para reportar, lo que es sesgo de supervivencia de manual.",
+            "Hay una segunda trampa que vale nombrar. Comparar un IRR promedio de studio con un IRR de VC del cuartil superior no es pelea justa. La diferencia entre el desempeño mediano y el del cuartil superior en VC entre 2001 y 2022 fue de cerca de 2,1x, y el venture es un negocio de ley de potencia donde el promedio es un resumen débil de cualquier cosa. Hasta el benchmark tradicional es irregular. El [comentario de PE/VC de EE. UU. de Cambridge Associates para 2024](https://www.cambridgeassociates.com/insight/us-pe-vc-benchmark-commentary-calendar-year-2024/) muestra al US Venture Capital Index rindiendo 6,2% en 2024 tras dos años negativos, con retornos por añada que van del 0,7% al 25,3%. La lectura honesta es que la muestra de studios todavía no es lo bastante grande para usarse con plena confianza estadística, aun siendo la mejor evidencia que tenemos. Trate el 50% como una premisa direccional, no como un número al que pueda marcar una porción."
+          ]
+        },
+        {
+          "id": "sizing",
+          "heading": "Dimensionar la asignación frente al riesgo de gestor",
+          "level": 2,
+          "paragraphs": [
+            "Cuando usted acepta un benchmark joven y una estructura concentrada, la lógica de dimensionamiento se vuelve simple. La porción de studio es satélite, no posición central. Un LP que suscribe un solo studio está asumiendo riesgo de gestor real, no comprando un índice, y la posición debe dimensionarse como cualquier apuesta concentrada, ilíquida y de gestor único. La diversificación tiene que venir de otro lado del programa de venture.",
+            "Lo que la porción compra no es menos riesgo de portafolio. Es exposición a un mecanismo de retorno distinto, propiedad y control desde el día uno en lugar de descubrimiento de precio en el deal de otra persona. Un LP que quiere la prima de studio sin la exposición de gestor único necesitaría un portafolio de studios, un vehículo que apenas existe hoy, o asumiría la concentración de forma consciente y la dimensionaría. No hay versión de esto donde usted se lleve la prima y la diversificación gratis."
+          ]
+        },
+        {
+          "id": "how-avante",
+          "heading": "Cómo se presenta Avante ante LPs",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina, y el pitch a un LP arranca por donde el modelo muerde más fuerte. Según datos del IBGE reportados por [MercoPress](https://en.mercopress.com/2024/07/13/ibge-finds-2-interannual-growth-in-services), los servicios representan cerca del 70% del PIB de Brasil, una base todavía poco penetrada por software. El capital escasea en el terreno. La inversión de venture en América Latina cayó a cerca de 3,6 mil millones de dólares en 694 deals en 2024, uno de los niveles más bajos en cinco años, antes de recuperarse en 2025. Un mercado de capital escaso premia construir ventures en lugar de competir por financiarlas.",
+            "La estructura detrás de esa afirmación es específica. Avante lanza 3-4 ventures por año a través de un sistema de seis etapas, Research, Partner, Build, Traction, Revenue, Compound, desplegando US$ 500K-1,5M por venture y reteniendo economía de co-founder. El patrón recurrente es el flywheel copilot, dato, capital. Construir un copiloto de IA para generar dato propietario, y luego usar ese dato para levantar y desplegar capital. El portafolio se lee por dominio. Alphajuri en activos judiciales, WIR en precificación de seguros con AXA, BR Auction Intel en remates inmobiliarios. Nada de eso carga un número que no podamos defender.",
+            "Así que el argumento al LP es estrecho, y debe serlo. No le pedimos a nadie que suscriba 50% de IRR. Le pedimos que suscriba un equipo operativo, en un mercado poco construido, corriendo un sistema repetible, y que dimensione esa apuesta como la posición concentrada que es. La tesis completa está en [/why-avante](/why-avante) y el modelo operativo en [/principles](/principles). El asignador que lee el benchmark como premisa y al equipo como el activo lo está leyendo igual que nosotros."
           ]
         }
       ]
@@ -5027,6 +7202,527 @@ const engineArticles: Article[] = [
             "text": "Si está evaluando el camino de studio, júzguelo por el mecanismo, no por el IRR de titular. Operadores adentro desde la primera semana y plomería resuelta una vez son las partes que sobreviven al escrutinio independiente."
           },
           "id": "how-avante"
+        }
+      ]
+    }
+  },
+  {
+    "slug": "venture-studio-founder-economics-latam",
+    "category": "insights",
+    "type": "Insight",
+    "readTime": "10 min",
+    "featured": false,
+    "date": "Jun 2026",
+    "datePublished": "2026-06-15",
+    "isPublished": true,
+    "en": {
+      "title": "The Founder Side of the Venture Studio Deal in LATAM",
+      "description": "A studio takes founder equity early. When that trade pays a LATAM operator, when it does not, and the numbers to run before signing.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Most writing about venture studios defends the model to LPs. This is the other view. You are a strong operator in Brazil or the broader LATAM market, and a studio offers to co-found your company in exchange for a real slice of equity on day one. The question is whether to take it or raise solo and keep the cap table.",
+            "The answer is a trade, not a verdict. You give up points early. You gain a co-founder, shared plumbing, and first-ticket capital that compress six to nine months of company setup. The trade pays only when the studio actually removes risk and time. When it does not, the right move is to walk. This piece runs the venture studio founder economics from your side, names the honest failure mode, and shows why the math tilts harder toward the studio in LATAM than in the US."
+          ]
+        },
+        {
+          "id": "the-trade",
+          "heading": "The trade a founder is actually making",
+          "level": 2,
+          "paragraphs": [
+            "The venture studio founder equity question is not should I give up equity. It is what do I get for it, and would I have gotten there alone. A studio is not an investor writing a check from the sidelines. It is a co-founder with a balance sheet, a team, and a system, and it prices that role accordingly.",
+            "So the real decision is a swap. You trade a large early slice of a company that does not exist yet for a higher chance that it will exist and reach a priced round on a shorter clock. Get that framing right and the rest of the analysis follows. Get it wrong, treat the studio as expensive money, and you will either overpay a weak studio or walk away from a strong one for the wrong reason."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Run one test before anything else. Subtract the studio's contribution from your plan. If the company would look about the same without it, keep the cap table and raise alone."
+          }
+        },
+        {
+          "id": "what-you-give",
+          "heading": "What you give up, in points",
+          "level": 2,
+          "paragraphs": [
+            "Start with the give, because it is large and it compounds. Studios take materially more equity at founding than a seed fund takes per round. The Startup VC puts studio stakes at 30% to 60% of a new company at founding, against 10% to 20% per round for a seed-stage VC. Alder VC pegs the working range at 15% to 50%, with many studios defaulting to 30% to 40%, while a solo founder who raises from VCs starts at 80% to 100% before any dilution.",
+            "The cap table is where this gets concrete. Alder VC walks the math. A founder partnering with a 25% studio holds about 75% at incorporation, roughly 60% after a seed round, and about 48% after Series A. A founder with a 40% studio holds 60%, then 48%, then about 38% on the same path. Their line is the one to sit with. The 10-point gap at Series A is not academic. It changes how institutional investors read your incentive alignment.",
+            "None of that is a reason to refuse a studio. It is a reason to demand that the studio earn the difference. You are not paying for money. Money is the cheap part. You are paying for the months and the risk a real studio takes off the table, and the only question that matters is whether it does."
+          ],
+          "bullets": [
+            "Studio at founding. 15% to 50%, often 30% to 40%. The Startup VC sees 30% to 60% in aggressive cases.",
+            "Seed VC. 10% to 20% per round, no operating role, no first build.",
+            "Solo founder. 80% to 100% at incorporation, and every month and dollar of setup is yours to fund."
+          ]
+        },
+        {
+          "id": "what-you-get",
+          "heading": "What you get, in months and capital",
+          "level": 2,
+          "paragraphs": [
+            "What offsets the dilution is time you do not have to buy back later. The clearest founder-side account on record is from Merantix Capital. In a May 2025 essay titled Why on Earth Should a Founder Take a Venture Studio Deal, Adrian Locher lays out the model without spin. Roughly EUR 1M for 15% preferred plus 10% common, about 25% for first capital and full operating support. His words. We write smaller checks than a mega-fund, and our founders may take slightly more dilution upfront.",
+            "The payoff he claims is efficiency. Founders can stretch EUR 1M in ways others need EUR 3M to EUR 5M, because the studio supplies corporate design partners, domain experts, and a talent pipeline that produces hundreds of qualified candidates within days. His traction claim is specific enough to check. Four of the last five Merantix studio startups reached EUR 500K in revenue within the first six months. The mechanism is shared plumbing. Engineering, design, recruiting, and go-to-market already exist, so you do not rebuild them from zero while burning your first ticket.",
+            "The portfolio-level data points the same way. The Global Startup Studio Network reports that studio startups reach Series A in about 25.2 months against 56 months for traditional ones, and that 72% of studio ventures that reach the seed round go on to Series A. A model that more than halves the time to a priced round is not getting lucky on deal selection. It is removing the early failure points that kill ordinary startups in year one. That compressed clock is the time you buy back, and a studio venture launches 6-9 months ahead of a comparably funded standalone team."
+          ]
+        },
+        {
+          "id": "when-it-pays",
+          "heading": "When the split pays, and when it does not",
+          "level": 2,
+          "paragraphs": [
+            "The split pays only when the studio truly removes risk and time. A passive studio that takes founder equity for a brand and a desk is a worse deal than raising solo, and this is the part most studio writing skips. Locher draws the line himself. The model suits repeat operators and long-term thinkers willing to trade early equity for later advantage. It is the wrong deal for founders who want full independence or are uncomfortable co-building, for whom the dilution is simply unnecessary.",
+            "Before you sign, stress-test three things. First, depth. If the studio cannot name the operators who will be in your build and what they shipped before, the equity is buying advice, not hours. Second, capital. If the first ticket does not actually compress your next raise, you traded points for a logo. Third, conflict. A studio juggling too many ventures on thin talent can starve any one company of the attention the equity was supposed to pay for.",
+            "The headline that makes studios able to fund this much support is the model return, and it cuts both ways for you. Per the Global Startup Studio Network, the studio model produces roughly 50% IRR against an industry-standard roughly 19% for traditional VC. A studio only earns that if its companies reach priced rounds and exits, which is why a real one puts operators in your unit-economics model in week two, not month nine. If it does not, the math is simple and unforgiving. Keep your cap table and raise alone."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Studio IRR near 50% versus an industry-standard ~19% IRR for traditional VC, roughly 2.5x over realistic time horizons. The studio only earns it by removing your risk, not by holding your equity.",
+            "attribution": "Global Startup Studio Network"
+          }
+        },
+        {
+          "id": "latam-context",
+          "heading": "Why the math shifts in LATAM",
+          "level": 2,
+          "paragraphs": [
+            "The studio trade is more attractive in Brazil and the broader LATAM market than in the US, because the two things a studio supplies are exactly the two the region is short of. Capital depth is thin. LAVCA reports that venture capital invested across Latin America reached about USD 4.5 billion across 751 deals in 2024, a fraction of US deployment in the same year. In a market where a solo founder can spend nine months just finding a first check, a studio that hands you capital and a co-founder on day one removes more risk than the same studio would in a deep capital market.",
+            "The opportunity is large for the same structural reason. Services account for roughly 70% of Brazilian GDP, a figure attributed to IBGE, and that services economy grew 3.1% in 2024 while staying barely digitized. Domain operators with 10+ years of Brazilian-market scar tissue are scarce, and rarely paired with a Silicon Valley playbook. AI infrastructure is now cheap enough to deploy without a Series A, so the binding constraint is no longer money for servers. It is operator depth and a first ticket, assembled on day one.",
+            "That is the LATAM tilt in one line. The studio's contribution is worth more where the open market supplies less of it. The same 25% that looks expensive in a deep US market can be the cheapest path to a priced round in a region where capital and senior operators are both scarce."
+          ]
+        },
+        {
+          "id": "how-avante",
+          "heading": "How Avante structures the founder deal",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America. It launches 3-4 ventures per year through a six-stage system. Research, Partner, Build, Traction, Revenue, Compound. Capital per venture runs $500K-1.5M across pre-seed, and Avante retains co-founder economics rather than a passive minority. Operating partners stay engaged through the first revenue milestone, then move to board-level oversight.",
+            "The efficiency comes from solving the company plumbing once and reusing it, which routes roughly $300K-500K of effective capital per venture into product and traction rather than overhead. The recurring pattern is the copilot to data to fund flywheel. Build an AI copilot to generate proprietary data, then use that data to raise and deploy capital. It shows up by domain across the portfolio. Alphajuri in judicial assets. WIR in insurance pricing with AXA. BR Auction Intel in real-estate auctions. The studio thesis behind all of it is laid out at [/why-avante](/why-avante), and the operating discipline at [/principles](/principles).",
+            "So bring it back to the test you started with. Subtract Avante from your plan. Would the company reach a priced round as fast, and as cheaply, alone. Where the answer is no, the founder split is the better deal by a wide margin. Where it is yes, you should keep the cap table. A studio worth its equity wants you to run that math, because it already knows how its companies answer it."
+          ]
+        }
+      ]
+    },
+    "pt": {
+      "title": "O Lado do Fundador no Deal de Venture Studio na América Latina",
+      "description": "Um studio pega equity do fundador cedo. Quando essa troca compensa para um operador da América Latina, quando não, e as contas antes de assinar.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Quase tudo que se escreve sobre venture studio defende o modelo para os LPs. Aqui é a visão oposta. Você é um operador forte no Brasil ou na América Latina, e um studio se oferece para co-fundar a sua empresa em troca de uma fatia real de equity no primeiro dia. A pergunta é se vale aceitar ou levantar sozinho e ficar com o cap table inteiro.",
+            "A resposta é uma troca, não um veredito. Você abre mão de pontos cedo. Em troca, ganha um co-founder, infraestrutura compartilhada e capital de primeiro cheque que comprimem seis a nove meses de montagem da empresa. A troca só compensa quando o studio de fato tira risco e tempo da mesa. Quando não tira, o certo é recusar. Este texto roda a economia do fundador venture studio do seu lado, nomeia o modo de falha honesto e mostra por que a conta pende mais para o studio na América Latina do que nos Estados Unidos."
+          ]
+        },
+        {
+          "id": "the-trade",
+          "heading": "A troca que o fundador realmente faz",
+          "level": 2,
+          "paragraphs": [
+            "A pergunta sobre equity de fundador em venture studio não é se devo abrir mão de equity. É o que recebo em troca, e se eu teria chegado lá sozinho. Um studio não é um investidor assinando um cheque da arquibancada. É um co-founder com balanço, time e sistema, e ele precifica esse papel de acordo.",
+            "Então a decisão real é uma permuta. Você troca uma fatia inicial grande de uma empresa que ainda não existe por uma chance maior de que ela exista e chegue a uma rodada precificada num relógio mais curto. Acerte esse enquadramento e o resto da análise vem junto. Erre, trate o studio como dinheiro caro, e você vai ou pagar demais por um studio fraco ou recusar um studio forte pelo motivo errado."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Faça um teste antes de qualquer coisa. Subtraia a contribuição do studio do seu plano. Se a empresa ficaria praticamente igual sem ele, fique com o cap table e levante sozinho."
+          }
+        },
+        {
+          "id": "what-you-give",
+          "heading": "O que você abre mão, em pontos",
+          "level": 2,
+          "paragraphs": [
+            "Comece pelo que se entrega, porque é muito e acumula. Studios pegam bem mais equity na fundação do que um fundo de seed pega por rodada. O The Startup VC coloca a fatia de studio em 30% a 60% de uma empresa nova na fundação, contra 10% a 20% por rodada de um VC de seed. O Alder VC fixa a faixa de trabalho em 15% a 50%, com muitos studios em 30% a 40%, enquanto um fundador solo que levanta com VCs começa em 80% a 100% antes de qualquer diluição.",
+            "O cap table é onde isso fica concreto. O Alder VC mostra a conta. Um fundador que entra com um studio de 25% fica com cerca de 75% na constituição, perto de 60% após uma rodada de seed, e cerca de 48% após a Série A. Um fundador com um studio de 40% fica com 60%, depois 48%, depois cerca de 38% no mesmo caminho. A frase deles é a que vale sentar e digerir. A diferença de 10 pontos na Série A não é acadêmica. Ela muda como o investidor institucional lê o seu alinhamento de incentivo.",
+            "Nada disso é motivo para recusar um studio. É motivo para exigir que o studio mereça a diferença. Você não está pagando por dinheiro. Dinheiro é a parte barata. Você está pagando pelos meses e pelo risco que um studio de verdade tira da mesa, e a única pergunta que importa é se ele tira mesmo."
+          ],
+          "bullets": [
+            "Studio na fundação. 15% a 50%, em geral 30% a 40%. O The Startup VC vê 30% a 60% em casos agressivos.",
+            "VC de seed. 10% a 20% por rodada, sem papel operacional, sem o primeiro build.",
+            "Fundador solo. 80% a 100% na constituição, e cada mês e cada real de montagem é você que banca."
+          ]
+        },
+        {
+          "id": "what-you-get",
+          "heading": "O que você ganha, em meses e capital",
+          "level": 2,
+          "paragraphs": [
+            "O que compensa a diluição é tempo que você não precisa recomprar depois. O relato mais claro do lado do fundador é da Merantix Capital. Num ensaio de maio de 2025 chamado Why on Earth Should a Founder Take a Venture Studio Deal, Adrian Locher expõe o modelo sem floreio. Cerca de EUR 1M por 15% preferencial mais 10% ordinário, perto de 25% por capital inicial e suporte operacional completo. Nas palavras dele. Escrevemos cheques menores que um mega-fundo, e nossos fundadores podem tomar um pouco mais de diluição no início.",
+            "O retorno que ele defende é eficiência. Fundadores conseguem esticar EUR 1M de um jeito que outros precisam de EUR 3M a EUR 5M, porque o studio fornece parceiros corporativos de design, especialistas de domínio e um pipeline de talento que entrega centenas de candidatos qualificados em poucos dias. A afirmação de tração é específica o bastante para checar. Quatro das últimas cinco startups de studio da Merantix chegaram a EUR 500K de receita nos primeiros seis meses. O mecanismo é a infraestrutura compartilhada. Engenharia, design, recrutamento e go-to-market já existem, então você não reconstrói tudo do zero queimando o primeiro cheque.",
+            "O dado no nível de portfólio aponta na mesma direção. A Global Startup Studio Network reporta que startups de studio chegam à Série A em cerca de 25,2 meses contra 56 meses das tradicionais, e que 72% das ventures de studio que chegam ao seed seguem para a Série A. Um modelo que mais do que corta pela metade o tempo até uma rodada precificada não está com sorte na seleção de deals. Está removendo os pontos de falha que matam startups comuns no primeiro ano. Esse relógio comprimido é o tempo que você recompra, e uma venture de studio nasce 6-9 meses à frente de um time independente com financiamento comparável."
+          ]
+        },
+        {
+          "id": "when-it-pays",
+          "heading": "Quando a divisão compensa, e quando não",
+          "level": 2,
+          "paragraphs": [
+            "A divisão só compensa quando o studio realmente tira risco e tempo. Um studio passivo que pega equity do fundador por uma marca e uma mesa é um deal pior do que levantar sozinho, e essa é a parte que quase todo texto de studio pula. Locher traça a linha ele mesmo. O modelo serve a operadores repetentes e a quem pensa no longo prazo, disposto a trocar equity cedo por vantagem depois. É o deal errado para fundadores que querem independência total ou que se incomodam em co-construir, para quem a diluição é simplesmente desnecessária.",
+            "Antes de assinar, teste três coisas sob estresse. Primeiro, profundidade. Se o studio não consegue nomear os operadores que estarão no seu build e o que eles entregaram antes, a equity está comprando conselho, não horas. Segundo, capital. Se o primeiro cheque não comprime de fato a sua próxima captação, você trocou pontos por um logo. Terceiro, conflito. Um studio fazendo malabarismo com ventures demais e talento de menos pode deixar qualquer empresa sem a atenção que a equity deveria pagar.",
+            "O número que torna os studios capazes de bancar tanto suporte é o retorno do modelo, e ele corta dos dois lados para você. Segundo a Global Startup Studio Network, o modelo de studio produz cerca de 50% de IRR contra um padrão de indústria de cerca de 19% para o VC tradicional. Um studio só ganha isso se as empresas dele chegam a rodadas precificadas e a exits, e por isso um studio de verdade coloca operadores no seu modelo de unit economics na segunda semana, não no nono mês. Se não coloca, a conta é simples e implacável. Fique com o seu cap table e levante sozinho."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "IRR de studio perto de 50% contra um padrão de indústria de ~19% de IRR para o VC tradicional, cerca de 2,5x em horizontes realistas. O studio só ganha isso removendo o seu risco, não segurando a sua equity.",
+            "attribution": "Global Startup Studio Network"
+          }
+        },
+        {
+          "id": "latam-context",
+          "heading": "Por que a conta muda na América Latina",
+          "level": 2,
+          "paragraphs": [
+            "A troca de studio é mais atraente no Brasil e na América Latina do que nos Estados Unidos, porque as duas coisas que um studio fornece são exatamente as duas que faltam na região. A profundidade de capital é rasa. A LAVCA reporta que o venture capital investido na América Latina chegou a cerca de USD 4,5 bilhões em 751 deals em 2024, uma fração do que foi alocado nos Estados Unidos no mesmo ano. Num mercado onde um fundador solo pode gastar nove meses só achando o primeiro cheque, um studio que entrega capital e um co-founder no primeiro dia tira mais risco do que o mesmo studio tiraria num mercado de capital profundo.",
+            "A oportunidade é grande pelo mesmo motivo estrutural. Serviços respondem por cerca de 70% do PIB brasileiro, número atribuído ao IBGE, e essa economia de serviços cresceu 3,1% em 2024 seguindo pouco digitalizada. Operadores de domínio com 10+ anos de calo de mercado brasileiro são escassos, e raramente combinados com um playbook do Vale do Silício. A infraestrutura de IA já está barata o suficiente para implantar sem uma Série A, então a restrição que prende não é mais dinheiro para servidor. É profundidade de operador e um primeiro cheque, montados no primeiro dia.",
+            "Esse é o pendor da América Latina em uma frase. A contribuição do studio vale mais onde o mercado aberto fornece menos dela. Os mesmos 25% que parecem caros num mercado americano profundo podem ser o caminho mais barato até uma rodada precificada numa região onde capital e operadores sênior são ambos escassos."
+          ]
+        },
+        {
+          "id": "how-avante",
+          "heading": "Como a Avante estrutura o deal do fundador",
+          "level": 2,
+          "paragraphs": [
+            "A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina. Ela lança 3-4 ventures por ano por um sistema de seis estágios. Research, Partner, Build, Traction, Revenue, Compound. O capital por venture fica entre $500K-1.5M no pre-seed, e a Avante mantém economia de co-founder em vez de uma minoria passiva. Os operating partners ficam engajados até o primeiro marco de receita, depois passam para supervisão de conselho.",
+            "A eficiência vem de resolver a infraestrutura da empresa uma vez e reusar, o que direciona cerca de $300K-500K de capital efetivo por venture para produto e tração em vez de overhead. O padrão recorrente é o flywheel copilot, dado, capital. Construa um copilot de IA para gerar dado proprietário, depois use esse dado para levantar e alocar capital. Ele aparece por domínio no portfólio. Alphajuri em ativos judiciais. WIR em precificação de seguros com a AXA. BR Auction Intel em leilões de imóveis. A tese de studio por trás de tudo isso está em [/why-avante](/why-avante), e a disciplina operacional em [/principles](/principles).",
+            "Então volte ao teste com que você começou. Subtraia a Avante do seu plano. A empresa chegaria a uma rodada precificada com a mesma velocidade, e tão barato, sozinha. Onde a resposta é não, a divisão com o fundador é o melhor deal por uma larga margem. Onde é sim, fique com o cap table. Um studio que vale a equity quer que você faça essa conta, porque já sabe como as empresas dele respondem."
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "El Lado del Fundador en el Deal de Venture Studio en LATAM",
+      "description": "Un studio toma equity del fundador temprano. Cuando esa decisión conviene a un operador de LATAM, cuando no, y los números antes de firmar.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Casi todo lo que se escribe sobre venture studio defiende el modelo ante los LPs. Esta es la vista opuesta. Usted es un operador fuerte en Brasil o en LATAM, y un studio se ofrece a co-fundar su empresa a cambio de una porción real de equity desde el primer día. La pregunta es si conviene aceptar o levantar solo y quedarse con todo el cap table.",
+            "La respuesta es un intercambio, no un veredicto. Usted cede puntos temprano. A cambio gana un co-founder, infraestructura compartida y capital de primer cheque que comprimen seis a nueve meses de armado de la empresa. El intercambio solo conviene cuando el studio de verdad quita riesgo y tiempo. Cuando no lo quita, lo correcto es rechazarlo. Este texto corre la economía del fundador venture studio desde su lado, nombra el modo de falla honesto y muestra por qué la cuenta se inclina más hacia el studio en LATAM que en Estados Unidos."
+          ]
+        },
+        {
+          "id": "the-trade",
+          "heading": "El intercambio que el fundador realmente hace",
+          "level": 2,
+          "paragraphs": [
+            "La pregunta sobre equity de fundador en venture studio no es si debo ceder equity. Es qué recibo a cambio, y si habría llegado ahí solo. Un studio no es un inversionista que firma un cheque desde la tribuna. Es un co-founder con balance, equipo y sistema, y cobra ese rol en consecuencia.",
+            "Entonces la decisión real es una permuta. Usted cambia una porción inicial grande de una empresa que todavía no existe por una probabilidad mayor de que exista y llegue a una ronda con precio en un reloj más corto. Acierte ese encuadre y el resto del análisis se acomoda. Equivóquese, trate al studio como dinero caro, y va a pagar de más por un studio débil o a rechazar uno fuerte por la razón equivocada."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Haga una prueba antes que nada. Reste la contribución del studio de su plan. Si la empresa se vería casi igual sin él, quédese con el cap table y levante solo."
+          }
+        },
+        {
+          "id": "what-you-give",
+          "heading": "A qué renuncias, en puntos",
+          "level": 2,
+          "paragraphs": [
+            "Empiece por lo que se entrega, porque es mucho y se acumula. Los studios toman bastante más equity en la fundación que un fondo de seed por ronda. The Startup VC ubica la porción del studio en 30% a 60% de una empresa nueva en la fundación, contra 10% a 20% por ronda de un VC de seed. Alder VC fija el rango de trabajo en 15% a 50%, con muchos studios en 30% a 40%, mientras un fundador solo que levanta con VCs arranca en 80% a 100% antes de cualquier dilución.",
+            "El cap table es donde esto se vuelve concreto. Alder VC muestra la cuenta. Un fundador que entra con un studio de 25% se queda con cerca de 75% en la constitución, cerca de 60% tras una ronda de seed, y cerca de 48% tras la Serie A. Un fundador con un studio de 40% se queda con 60%, luego 48%, luego cerca de 38% en el mismo camino. Su frase es la que vale sentarse a digerir. La diferencia de 10 puntos en la Serie A no es académica. Cambia cómo el inversionista institucional lee su alineación de incentivo.",
+            "Nada de esto es razón para rechazar un studio. Es razón para exigir que el studio se gane la diferencia. Usted no está pagando por dinero. El dinero es la parte barata. Está pagando por los meses y el riesgo que un studio de verdad quita de la mesa, y la única pregunta que importa es si lo quita."
+          ],
+          "bullets": [
+            "Studio en la fundación. 15% a 50%, por lo general 30% a 40%. The Startup VC ve 30% a 60% en casos agresivos.",
+            "VC de seed. 10% a 20% por ronda, sin rol operativo, sin el primer build.",
+            "Fundador solo. 80% a 100% en la constitución, y cada mes y cada dólar de armado lo financia usted."
+          ]
+        },
+        {
+          "id": "what-you-get",
+          "heading": "Qué recibes, en meses y capital",
+          "level": 2,
+          "paragraphs": [
+            "Lo que compensa la dilución es tiempo que no tiene que recomprar después. El relato más claro del lado del fundador es de Merantix Capital. En un ensayo de mayo de 2025 titulado Why on Earth Should a Founder Take a Venture Studio Deal, Adrian Locher expone el modelo sin adornos. Cerca de EUR 1M por 15% preferente más 10% ordinario, cerca de 25% por capital inicial y soporte operativo completo. En sus palabras. Escribimos cheques más chicos que un mega-fondo, y nuestros fundadores pueden tomar algo más de dilución al inicio.",
+            "El retorno que defiende es eficiencia. Los fundadores pueden estirar EUR 1M de un modo que otros necesitan EUR 3M a EUR 5M, porque el studio aporta socios corporativos de diseño, expertos de dominio y un pipeline de talento que entrega cientos de candidatos calificados en pocos días. Su afirmación de tracción es bastante específica para verificar. Cuatro de las últimas cinco startups de studio de Merantix llegaron a EUR 500K de ingresos en los primeros seis meses. El mecanismo es la infraestructura compartida. Ingeniería, diseño, reclutamiento y go-to-market ya existen, así que usted no reconstruye todo desde cero quemando el primer cheque.",
+            "El dato a nivel de portafolio apunta en la misma dirección. La Global Startup Studio Network reporta que las startups de studio llegan a la Serie A en cerca de 25,2 meses contra 56 meses de las tradicionales, y que 72% de las ventures de studio que llegan al seed siguen a la Serie A. Un modelo que más que parte por la mitad el tiempo hasta una ronda con precio no tiene suerte en la selección de deals. Está removiendo los puntos de falla que matan startups comunes en el primer año. Ese reloj comprimido es el tiempo que usted recompra, y una venture de studio nace 6-9 meses por delante de un equipo independiente con financiamiento comparable."
+          ]
+        },
+        {
+          "id": "when-it-pays",
+          "heading": "Cuando el reparto conviene, y cuando no",
+          "level": 2,
+          "paragraphs": [
+            "El reparto solo conviene cuando el studio de verdad quita riesgo y tiempo. Un studio pasivo que toma equity del fundador por una marca y un escritorio es un deal peor que levantar solo, y esa es la parte que casi todo texto de studio se salta. Locher traza la línea él mismo. El modelo sirve a operadores repetidos y a quien piensa en el largo plazo, dispuesto a cambiar equity temprano por ventaja después. Es el deal equivocado para fundadores que quieren independencia total o a quienes les incomoda co-construir, para quienes la dilución es sencillamente innecesaria.",
+            "Antes de firmar, ponga tres cosas bajo estrés. Primero, profundidad. Si el studio no puede nombrar a los operadores que estarán en su build y qué entregaron antes, la equity está comprando consejo, no horas. Segundo, capital. Si el primer cheque no comprime de verdad su próxima ronda, cambió puntos por un logo. Tercero, conflicto. Un studio haciendo malabares con demasiadas ventures y poco talento puede dejar a cualquier empresa sin la atención que la equity debía pagar.",
+            "El número que vuelve a los studios capaces de financiar tanto soporte es el retorno del modelo, y corta para ambos lados para usted. Según la Global Startup Studio Network, el modelo de studio produce cerca de 50% de IRR contra un estándar de industria de cerca de 19% para el VC tradicional. Un studio solo gana eso si sus empresas llegan a rondas con precio y a exits, y por eso uno de verdad pone operadores en su modelo de unit economics en la segunda semana, no en el noveno mes. Si no lo hace, la cuenta es simple e implacable. Quédese con su cap table y levante solo."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "IRR de studio cerca de 50% contra un estándar de industria de ~19% de IRR para el VC tradicional, cerca de 2,5x en horizontes realistas. El studio solo lo gana removiendo su riesgo, no reteniendo su equity.",
+            "attribution": "Global Startup Studio Network"
+          }
+        },
+        {
+          "id": "latam-context",
+          "heading": "Por qué la cuenta cambia en LATAM",
+          "level": 2,
+          "paragraphs": [
+            "El intercambio de studio es más atractivo en Brasil y en LATAM que en Estados Unidos, porque las dos cosas que aporta un studio son exactamente las dos que escasean en la región. La profundidad de capital es delgada. LAVCA reporta que el venture capital invertido en América Latina llegó a cerca de USD 4,5 mil millones en 751 deals en 2024, una fracción de lo desplegado en Estados Unidos el mismo año. En un mercado donde un fundador solo puede gastar nueve meses solo en encontrar el primer cheque, un studio que le entrega capital y un co-founder el primer día quita más riesgo del que quitaría el mismo studio en un mercado de capital profundo.",
+            "La oportunidad es grande por la misma razón estructural. Los servicios representan cerca de 70% del PIB brasileño, cifra atribuida al IBGE, y esa economía de servicios creció 3,1% en 2024 mientras seguía poco digitalizada. Operadores de dominio con 10+ años de cicatrices del mercado brasileño son escasos, y rara vez combinados con un playbook de Silicon Valley. La infraestructura de IA ya está barata para desplegar sin una Serie A, así que la restricción que ata ya no es dinero para servidores. Es profundidad de operador y un primer cheque, armados el primer día.",
+            "Ese es el sesgo de LATAM en una frase. La contribución del studio vale más donde el mercado abierto aporta menos de ella. El mismo 25% que parece caro en un mercado estadounidense profundo puede ser el camino más barato a una ronda con precio en una región donde el capital y los operadores senior escasean a la vez."
+          ]
+        },
+        {
+          "id": "how-avante",
+          "heading": "Cómo Avante estructura el deal del fundador",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina. Lanza 3-4 ventures por año por un sistema de seis etapas. Research, Partner, Build, Traction, Revenue, Compound. El capital por venture va entre $500K-1.5M en el pre-seed, y Avante retiene economía de co-founder en vez de una minoría pasiva. Los operating partners siguen comprometidos hasta el primer hito de ingresos, y luego pasan a supervisión de directorio.",
+            "La eficiencia viene de resolver la infraestructura de la empresa una vez y reusarla, lo que dirige cerca de $300K-500K de capital efectivo por venture a producto y tracción en vez de overhead. El patrón recurrente es el flywheel copilot, dato, capital. Construya un copilot de IA para generar dato propietario, luego use ese dato para levantar y desplegar capital. Aparece por dominio en el portafolio. Alphajuri en activos judiciales. WIR en precios de seguros con AXA. BR Auction Intel en subastas de inmuebles. La tesis de studio detrás de todo eso está en [/why-avante](/why-avante), y la disciplina operativa en [/principles](/principles).",
+            "Entonces vuelva a la prueba con que empezó. Reste a Avante de su plan. La empresa llegaría a una ronda con precio con la misma velocidad, y tan barato, sola. Donde la respuesta es no, el reparto con el fundador es el mejor deal por amplio margen. Donde es sí, quédese con el cap table. Un studio que vale su equity quiere que usted haga esa cuenta, porque ya sabe cómo responden sus empresas."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "vertical-ai-studio-portfolio-construction",
+    "category": "research",
+    "type": "Research Report",
+    "readTime": "11 min",
+    "featured": false,
+    "date": "Jun 2026",
+    "datePublished": "2026-06-15",
+    "isPublished": true,
+    "en": {
+      "title": "How a Venture Studio Picks Which Verticals to Build",
+      "description": "With only 3-4 builds a year, vertical selection is the studio's highest-leverage call. The four-part test a slot must pass, and when to walk.",
+      "sections": [
+        {
+          "paragraphs": [
+            "A venture studio that launches 3-4 ventures a year spends a quarter of its annual portfolio every time it picks a vertical. Get the vertical wrong and that is not a rounding error. It is three months of build capacity and $500K-1.5M aimed at a market the studio cannot win. So portfolio construction reduces to one decision made three or four times a year. Which vertical earns a build slot, and which large market gets passed over even when it looks tempting. This is selection at the studio level, a different question from defending any one venture's moat.",
+            "Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America, and the question of how studios pick verticals is one we answer in front of every build. The short version is a four-part test. A vertical earns a slot only when it combines a large under-digitized services market, an available domain operator with deep scar tissue, a workflow where AI changes the unit economics, and a path to proprietary data that compounds. Miss one and the slot is better spent elsewhere.",
+            "The backdrop is the vertical AI thesis. Vertical AI that owns an industry workflow is proving more defensible and better valued than horizontal copilots, and Brazil happens to supply an unusual number of qualifying verticals. You can read the longer thesis at [/why-avante](/why-avante). What follows is the test itself, and the discipline of using it to say no."
+          ]
+        },
+        {
+          "id": "the-constraint",
+          "heading": "Why selection is the whole game",
+          "level": 2,
+          "paragraphs": [
+            "A venture studio is supply-constrained on purpose, and that constraint is the reason selection decides everything. With three or four slots a year, the studio cannot let portfolio math absorb its misses the way a fund writing 30 checks can. Every slot is a real bet that has to clear the bar before it is spent.",
+            "The model earns its return premium precisely because it concentrates. Per the Global Startup Studio Network, studio ventures posted an average internal rate of return that rounds to roughly 50% against roughly 19% for traditional venture-backed startups, which Avante cites as studio IRR of ~50% versus an industry-standard ~19% for traditional VC, roughly 2.5x over realistic time horizons. That is the studio-model benchmark, never any single studio's realized return. The honest caveat is that this figure runs on a self-reported sample of surviving studios, so read it as the ceiling the model can reach, not a number any one studio is owed. The traditional-VC figure traces to institutional benchmarks like the [Cambridge Associates US Venture Capital index](https://www.cambridgeassociates.com/private-investment-benchmarks/), built from quarterly fund financials across four decades.",
+            "That premium only holds when the operating partner can go deep. A studio venture reaches Series A in 25.2 months against 56 for a traditional startup, and 72% of studio ventures reach Series A versus 42% of traditional ones, per [GSSN data via Bundl](https://www.bundl.com/articles/why-venture-studio-startups-have-higher-long-term-success-rates). Depth does not scale to dozens of bets at once. So the studio buys its edge by saying no far more often than it says yes. Selection is not the step before the work. It is the work."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Studio IRR of ~50% versus an industry-standard ~19% for traditional VC, roughly 2.5x the IRR over realistic time horizons.",
+            "attribution": "Global Startup Studio Network (GSSN)"
+          }
+        },
+        {
+          "id": "the-test",
+          "heading": "The four-part test for a vertical",
+          "level": 2,
+          "paragraphs": [
+            "A vertical earns a build slot when four conditions hold at once. This is a gate, not a scorecard. A vertical that is strong on three dimensions and closed on the fourth still fails, because the missing condition is usually the one that decides the outcome."
+          ],
+          "bullets": [
+            "A large, under-digitized services market. The vertical has to be big enough to matter and far enough behind on software that the work still runs on phone calls, spreadsheets, and PDFs. A huge market already well served by software is a knife fight, not an opening.",
+            "An available domain operator with deep scar tissue. The studio needs a co-founder with 10+ years inside the industry, carrying the regulatory, relationship, and process knowledge no deck can teach. If that operator is not findable and recruitable, the vertical fails no matter how good the market looks.",
+            "A workflow where AI changes the unit economics. AI has to convert a labor-heavy task into software, not bolt on a feature. Per a16z, that shift can expand revenue per customer by 2-10x, on top of the 2-5x that fintech embedding already delivered.",
+            "A path to proprietary data that compounds. The workflow has to throw off data the studio can accumulate and that makes the product better with use. Without a compounding loop, a well-funded incumbent or a horizontal model eventually catches up."
+          ]
+        },
+        {
+          "id": "vertical-thesis",
+          "heading": "Why vertical AI clears the bar",
+          "level": 2,
+          "paragraphs": [
+            "The test points at vertical AI rather than horizontal copilots because vertical AI is proving both more defensible and better valued. The evidence is no longer theoretical. Per [Bessemer Venture Partners in September 2024](https://www.bvp.com/atlas/part-i-the-future-of-ai-is-vertical), LLM-native vertical companies were reaching 80% of traditional SaaS average contract value, posting roughly 400% year-over-year growth, and holding roughly 65% gross margins, with vertical AI market capitalization predicted to be at least 10x the size of legacy vertical SaaS.",
+            "What separates a durable company from a thin wrapper is ownership of the workflow plus a data loop. Bessemer ties vertical AI moats to proprietary data, depth of product integration, and economic value delivered, not to model access, which everyone shares. a16z frames the same point through the system of record. The company that owns the workflow captures the labor budget, not just the software budget, and [U.S. software spending of $313B is only about 3% of the $10.5T spent on labor](https://a16z.com/vertical-saas-now-with-ai-inside/). Toast reached $1.5B ARR with over 80% of revenue from embedded financial services, which is what owning a vertical workflow looks like at scale.",
+            "The data loop is the part founders overstate most, so the test stays strict about it. Per the [NfX Network Effects Manual](https://www.nfx.com/post/network-effects-manual), network effects account for roughly 70% of the value created by tech companies since 1994, yet data advantages are weaker than commonly believed. Data is a real moat only when usage continuously updates a dataset central to the product, the way Waze improves with every trip, not marginal the way a recommendation feed is. For the studio, that distinction is the fourth condition made concrete. A vertical passes only when its workflow generates data that is both proprietary and load-bearing."
+          ]
+        },
+        {
+          "id": "brazil-supply",
+          "heading": "Why Brazil supplies so many candidates",
+          "level": 2,
+          "paragraphs": [
+            "Brazil produces an unusual number of verticals that clear the first condition, because services account for roughly 70% of Brazilian GDP with low software penetration across those sectors. That figure comes from [IBGE data reported in July 2024](https://en.mercopress.com/2024/07/13/ibge-finds-2-interannual-growth-in-services), with the services share sitting 12.7% above its pre-pandemic level. A large, growing base of economic activity still run on manual workflows is a deep bench of exactly what the test screens for first.",
+            "The capital backdrop tells the studio these markets are open rather than crowded. LATAM startups raised $4.2B in 2024, up 27% from the prior year, with Brazil capturing close to half of all regional funding, per [Crunchbase](https://news.crunchbase.com/venture/latin-america-startup-funding-eoy-2024/). Funding is recovering from a weak 2023 and remains well below the 2021 peak, which means most verticals do not yet have a well-capitalized incumbent owning the data loop. That is the window. It does not stay open forever.",
+            "The structural edge that lets a studio act is operator depth. Domain operators with 10+ years of Brazilian-market scar tissue, paired with a Silicon Valley playbook and first-ticket capital assembled on day one, is what a generalist fund cannot replicate from a board seat. AI infrastructure is now cheap enough to deploy without a Series A, which is why a studio can run 3-4 vertical bets a year in Brazil instead of one capital-heavy wager. The pattern repeats. Build an AI copilot to generate proprietary data, then use that data to raise and deploy capital."
+          ]
+        },
+        {
+          "id": "when-to-pass",
+          "heading": "When to pass on a big market",
+          "level": 2,
+          "paragraphs": [
+            "The discipline of the test shows up in the passes, not the builds. A studio can pattern-match itself into a crowded vertical where a well-funded incumbent already owns the data loop. The market is large, the workflow is clearly broken, an operator is even available, and three of the four conditions light up green. The fourth is closed. Someone got there first, their proprietary dataset is already compounding, and a new entrant would be feeding a loop it cannot win.",
+            "That is a pass, and it should be an easy one. Per the [NfX Network Effects Manual](https://www.nfx.com/post/network-effects-manual), the company whose dataset is central and continuously updated by usage holds an advantage a later entrant cannot simply outspend. Entering a vertical where the data path is already closed spends a scarce slot on a second-place finish.",
+            "The size of the market does not rescue the decision. A studio with only 3-4 slots a year cannot afford one that produces a structurally capped outcome. The honest failure mode of studio portfolio construction is confusing a big market for an open one. Disciplined selection means walking away from a large, broken, tempting market precisely because the condition that compounds is the one that is gone."
+          ]
+        },
+        {
+          "id": "how-avante",
+          "heading": "How Avante runs the selection",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America, and the four-part test is how it decides where to build. Avante launches 3-4 ventures per year through a six-stage system. Research, Partner, Build, Traction, Revenue, Compound. The Research stage is where the test meets candidate verticals. The Partner stage answers the second condition, because no build starts without a domain operator carrying real scar tissue. Capital deployed is $500K-1.5M per venture across pre-seed, and Avante retains co-founder economics.",
+            "The operating discipline backs the selection. Operating partners stay engaged through the first revenue milestone, then move to board-level oversight. Solving company plumbing once routes roughly $300K-500K of effective capital per venture into product and traction rather than overhead, and a studio venture launches 6-9 months ahead of a comparably funded standalone team. That is the payoff for spending the slot well.",
+            "The portfolio reads as the test applied three times, by domain. Alphajuri builds in judicial assets, the precatorios and claims market, where the workflow is document-heavy and the data compounds with every case. WIR, with AXA, builds in insurance pricing and risk scoring, where an async API owns a workflow and the loss data is load-bearing. BR Auction Intel builds in real estate auctions, scraping, enriching, and scoring properties where the dataset improves with coverage. Each cleared the same four conditions before it earned a slot. The operating model lives at [/principles](/principles). The work of a studio is not building. Most of the work is choosing what not to build."
+          ]
+        }
+      ]
+    },
+    "pt": {
+      "title": "Como um Venture Studio Escolhe em Quais Verticais Construir",
+      "description": "Com 3 a 4 builds por ano, escolher a vertical é a decisão de maior alavancagem do studio. O teste de quatro partes antes de gastar um slot.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Um venture studio que lança 3 a 4 ventures por ano gasta um quarto do portfólio anual cada vez que escolhe uma vertical. Errar a vertical não é um erro pequeno. São três meses de capacidade de build e $500K-1.5M apontados para um mercado onde o studio não consegue vencer. Por isso a construção de portfólio se resume a uma decisão tomada três ou quatro vezes por ano. Qual vertical merece um slot de build, e qual mercado grande fica de fora mesmo quando parece tentador. Esta é a seleção no nível do studio, uma pergunta diferente de defender o moat de uma única empresa.",
+            "A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina, e a pergunta de como os studios escolhem verticais é uma que respondemos antes de cada build. A versão curta é um teste de quatro partes. Uma vertical merece um slot apenas quando combina um grande mercado de serviços pouco digitalizado, um operador de domínio disponível com profunda bagagem de cicatrizes, um workflow onde a IA muda a economia unitária, e um caminho para dados proprietários que compõem com o tempo. Falhe em um e o slot rende mais em outro lugar.",
+            "O pano de fundo é a tese de IA vertical. A IA vertical que domina um workflow de um setor está se provando mais defensável e melhor avaliada do que os copilots horizontais, e o Brasil por acaso oferece um número incomum de verticais qualificadas. A tese completa está em [/why-avante](/why-avante). O que vem a seguir é o teste em si, e a disciplina de usá-lo para dizer não."
+          ]
+        },
+        {
+          "id": "the-constraint",
+          "heading": "Por que a seleção é o jogo inteiro",
+          "level": 2,
+          "paragraphs": [
+            "Um venture studio é restrito em oferta de propósito, e essa restrição é a razão pela qual a seleção decide tudo. Com três ou quatro slots por ano, o studio não pode deixar a matemática de portfólio absorver seus erros do jeito que um fundo que assina 30 cheques pode. Cada slot é uma aposta real que precisa passar no teste antes de ser gasto.",
+            "O modelo conquista seu prêmio de retorno justamente porque concentra. Segundo a Global Startup Studio Network, ventures de studio registraram uma taxa interna de retorno média que arredonda para perto de 50% contra cerca de 19% para startups financiadas por venture capital tradicional, o que a Avante cita como IRR de studio de ~50% versus ~19% padrão da indústria para VC tradicional, cerca de 2,5x em horizontes de tempo realistas. Esse é o benchmark do modelo de studio, nunca o retorno realizado de um studio específico. A ressalva honesta é que esse número roda sobre uma amostra autodeclarada de studios sobreviventes, então leia como o teto que o modelo alcança, não como um valor devido a um studio qualquer. O número de VC tradicional vem de benchmarks institucionais como o [índice de Venture Capital dos EUA da Cambridge Associates](https://www.cambridgeassociates.com/private-investment-benchmarks/), construído a partir de demonstrações financeiras trimestrais ao longo de quatro décadas.",
+            "Esse prêmio só se sustenta quando o operating partner consegue ir fundo. Uma venture de studio chega à Série A em 25,2 meses contra 56 de uma startup tradicional, e 72% das ventures de studio alcançam a Série A versus 42% das tradicionais, segundo [dados da GSSN via Bundl](https://www.bundl.com/articles/why-venture-studio-startups-have-higher-long-term-success-rates). Profundidade não escala para dezenas de apostas ao mesmo tempo. Então o studio compra sua vantagem dizendo não com muito mais frequência do que diz sim. A seleção não é a etapa antes do trabalho. Ela é o trabalho."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "IRR de studio de ~50% versus ~19% padrão da indústria para VC tradicional, cerca de 2,5x o IRR em horizontes de tempo realistas.",
+            "attribution": "Global Startup Studio Network (GSSN)"
+          }
+        },
+        {
+          "id": "the-test",
+          "heading": "O teste de quatro partes para uma vertical",
+          "level": 2,
+          "paragraphs": [
+            "Uma vertical merece um slot de build quando quatro condições valem ao mesmo tempo. Isto é um portão, não um placar. Uma vertical forte em três dimensões e fechada na quarta ainda falha, porque a condição que falta costuma ser a que decide o resultado."
+          ],
+          "bullets": [
+            "Um grande mercado de serviços pouco digitalizado. A vertical precisa ser grande o bastante para importar e atrasada o bastante em software para que o trabalho ainda rode em ligações, planilhas e PDFs. Um mercado enorme já bem servido por software é uma briga de faca, não uma abertura.",
+            "Um operador de domínio disponível com profunda bagagem de cicatrizes. O studio precisa de um co-founder com mais de 10 anos dentro do setor, carregando o conhecimento regulatório, de relacionamento e de processo que nenhum deck ensina. Se esse operador não puder ser encontrado e recrutado, a vertical falha por melhor que o mercado pareça.",
+            "Um workflow onde a IA muda a economia unitária. A IA tem que converter uma tarefa intensiva em mão de obra em software, não acrescentar um recurso. Segundo a a16z, essa virada pode expandir a receita por cliente em 2-10x, além dos 2-5x que a integração de fintech já entregou.",
+            "Um caminho para dados proprietários que compõem. O workflow tem que gerar dados que o studio possa acumular e que melhorem o produto com o uso. Sem um ciclo que se compõe, um incumbente bem financiado ou um modelo horizontal acaba alcançando."
+          ]
+        },
+        {
+          "id": "vertical-thesis",
+          "heading": "Por que a IA vertical passa no teste",
+          "level": 2,
+          "paragraphs": [
+            "O teste aponta para a IA vertical e não para os copilots horizontais porque a IA vertical está se provando mais defensável e melhor avaliada. A evidência já não é teórica. Segundo a [Bessemer Venture Partners em setembro de 2024](https://www.bvp.com/atlas/part-i-the-future-of-ai-is-vertical), empresas verticais LLM-native estavam alcançando 80% do valor médio de contrato do SaaS tradicional, crescendo cerca de 400% ano a ano, e mantendo margens brutas de cerca de 65%, com a capitalização de mercado da IA vertical prevista para ser ao menos 10x o tamanho do SaaS vertical legado.",
+            "O que separa uma empresa durável de um wrapper raso é a posse do workflow somada a um ciclo de dados. A Bessemer liga os moats de IA vertical a dados proprietários, profundidade de integração do produto e valor econômico entregue, não ao acesso ao modelo, que todos compartilham. A a16z enquadra o mesmo ponto pelo sistema de registro. A empresa que domina o workflow captura o orçamento de mão de obra, não só o de software, e os [$313B gastos em software nos EUA são apenas cerca de 3% dos $10,5T gastos em mão de obra](https://a16z.com/vertical-saas-now-with-ai-inside/). A Toast chegou a $1,5B de ARR com mais de 80% da receita vindo de serviços financeiros embarcados, que é o que dominar um workflow vertical parece em escala.",
+            "O ciclo de dados é a parte que os fundadores mais exageram, então o teste é rigoroso nisso. Segundo o [Network Effects Manual da NfX](https://www.nfx.com/post/network-effects-manual), os efeitos de rede respondem por cerca de 70% do valor criado por empresas de tecnologia desde 1994, mas as vantagens de dados são mais fracas do que se imagina. Dado só é moat de verdade quando o uso atualiza continuamente um conjunto de dados central para o produto, do jeito que o Waze melhora a cada viagem, e não marginal como um feed de recomendação. Para o studio, essa distinção é a quarta condição tornada concreta. Uma vertical passa apenas quando seu workflow gera dados ao mesmo tempo proprietários e estruturais."
+          ]
+        },
+        {
+          "id": "brazil-supply",
+          "heading": "Por que o Brasil oferece tantos candidatos",
+          "level": 2,
+          "paragraphs": [
+            "O Brasil produz um número incomum de verticais que passam na primeira condição, porque os serviços representam cerca de 70% do PIB brasileiro com baixa penetração de software nesses setores. Esse dado vem de [números do IBGE divulgados em julho de 2024](https://en.mercopress.com/2024/07/13/ibge-finds-2-interannual-growth-in-services), com a fatia de serviços 12,7% acima do nível pré-pandemia. Uma base grande e crescente de atividade econômica ainda rodando em workflows manuais é um banco profundo de exatamente o que o teste procura primeiro.",
+            "O pano de fundo de capital diz ao studio que esses mercados estão abertos, não lotados. Startups da América Latina captaram $4,2B em 2024, alta de 27% sobre o ano anterior, com o Brasil ficando com quase metade de todo o funding da região, segundo o [Crunchbase](https://news.crunchbase.com/venture/latin-america-startup-funding-eoy-2024/). O funding está se recuperando de um 2023 fraco e segue bem abaixo do pico de 2021, o que significa que a maioria das verticais ainda não tem um incumbente bem capitalizado dominando o ciclo de dados. Essa é a janela. Ela não fica aberta para sempre.",
+            "A vantagem estrutural que permite o studio agir é a profundidade do operador. Operadores de domínio com mais de 10 anos de cicatrizes do mercado brasileiro, somados a um playbook do Vale do Silício e capital de primeiro cheque montados no dia um, é o que um fundo generalista não consegue replicar de uma cadeira de conselho. A infraestrutura de IA hoje é barata o bastante para implantar sem uma Série A, e é por isso que um studio consegue rodar 3-4 apostas verticais por ano no Brasil em vez de uma única aposta pesada em capital. O padrão se repete. Construa um copilot de IA para gerar dados proprietários, depois use esses dados para captar e aplicar capital."
+          ]
+        },
+        {
+          "id": "when-to-pass",
+          "heading": "Quando recusar um mercado grande",
+          "level": 2,
+          "paragraphs": [
+            "A disciplina do teste aparece nas recusas, não nos builds. Um studio pode se viciar em padrão e entrar numa vertical lotada onde um incumbente bem financiado já domina o ciclo de dados. O mercado é grande, o workflow está claramente quebrado, há até um operador disponível, e três das quatro condições acendem verde. A quarta está fechada. Alguém chegou primeiro, o conjunto de dados proprietário dele já está se compondo, e um novo entrante estaria alimentando um ciclo que não tem como vencer.",
+            "Isso é uma recusa, e deveria ser fácil. Segundo o [Network Effects Manual da NfX](https://www.nfx.com/post/network-effects-manual), a empresa cujo conjunto de dados é central e atualizado continuamente pelo uso tem uma vantagem que um entrante posterior não supera só gastando mais. Entrar numa vertical onde o caminho dos dados já está fechado gasta um slot escasso num segundo lugar.",
+            "O tamanho do mercado não salva a decisão. Um studio com apenas 3-4 slots por ano não pode bancar um que produz um resultado estruturalmente limitado. O modo de falha honesto da construção de portfólio de um studio é confundir um mercado grande com um mercado aberto. Seleção disciplinada significa abrir mão de um mercado grande, quebrado e tentador justamente porque a condição que se compõe é a que se foi."
+          ]
+        },
+        {
+          "id": "how-avante",
+          "heading": "Como a Avante conduz a seleção",
+          "level": 2,
+          "paragraphs": [
+            "A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina, e o teste de quatro partes é como ela decide onde construir. A Avante lança 3-4 ventures por ano através de um sistema de seis estágios. Research, Partner, Build, Traction, Revenue, Compound. O estágio Research é onde o teste encontra as verticais candidatas. O estágio Partner responde a segunda condição, porque nenhum build começa sem um operador de domínio carregando cicatrizes reais. O capital aplicado é $500K-1.5M por venture no pré-seed, e a Avante retém economia de co-founder.",
+            "A disciplina operacional sustenta a seleção. Os operating partners ficam engajados até o primeiro marco de receita, depois passam à supervisão no nível do conselho. Resolver o encanamento da empresa uma vez direciona cerca de $300K-500K de capital efetivo por venture para produto e tração em vez de overhead, e uma venture de studio é lançada 6-9 meses à frente de um time autônomo com financiamento comparável. Esse é o retorno de gastar bem o slot.",
+            "O portfólio se lê como o teste aplicado três vezes, por domínio. A Alphajuri constrói em ativos judiciais, o mercado de precatórios e claims, onde o workflow é intensivo em documentos e os dados se compõem a cada caso. A WIR, com a AXA, constrói em precificação de seguros e risk scoring, onde uma API assíncrona domina um workflow e os dados de sinistro são estruturais. A BR Auction Intel constrói em leilões imobiliários, fazendo scrape, enriquecimento e scoring de imóveis onde o conjunto de dados melhora com a cobertura. Cada uma passou pelas mesmas quatro condições antes de merecer um slot. O modelo operacional está em [/principles](/principles). O trabalho de um studio não é construir. A maior parte do trabalho é escolher o que não construir."
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Cómo un Venture Studio Elige en Qué Verticales Construir",
+      "description": "Con 3 a 4 builds al año, elegir la vertical es la decisión de mayor apalancamiento del studio. El test de cuatro partes antes de gastar un cupo.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Un venture studio que lanza 3 a 4 ventures al año gasta un cuarto del portafolio anual cada vez que elige una vertical. Equivocar la vertical no es un error menor. Son tres meses de capacidad de build y $500K-1.5M apuntados a un mercado donde el studio no puede ganar. Por eso la construcción de portafolio se reduce a una decisión tomada tres o cuatro veces al año. Qué vertical merece un cupo de build, y qué mercado grande se deja pasar aunque parezca tentador. Esta es la selección a nivel del studio, una pregunta distinta de defender el moat de una sola empresa.",
+            "Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina, y la pregunta de cómo los studios eligen verticales es una que respondemos antes de cada build. La versión corta es un test de cuatro partes. Una vertical merece un cupo solo cuando combina un gran mercado de servicios poco digitalizado, un operador de dominio disponible con profunda cicatriz de experiencia, un workflow donde la IA cambia la economía unitaria, y un camino hacia datos propietarios que se acumulan con el tiempo. Falle uno y el cupo rinde más en otra parte.",
+            "El telón de fondo es la tesis de IA vertical. La IA vertical que domina el workflow de una industria se está probando más defendible y mejor valorada que los copilots horizontales, y Brasil por casualidad ofrece un número inusual de verticales que califican. La tesis completa está en [/why-avante](/why-avante). Lo que sigue es el test en sí, y la disciplina de usarlo para decir que no."
+          ]
+        },
+        {
+          "id": "the-constraint",
+          "heading": "Por qué la selección es todo el juego",
+          "level": 2,
+          "paragraphs": [
+            "Un venture studio está restringido en oferta a propósito, y esa restricción es la razón por la que la selección lo decide todo. Con tres o cuatro cupos al año, el studio no puede dejar que la matemática de portafolio absorba sus errores como lo hace un fondo que firma 30 cheques. Cada cupo es una apuesta real que debe pasar el test antes de gastarse.",
+            "El modelo gana su prima de retorno justamente porque concentra. Según la Global Startup Studio Network, las ventures de studio registraron una tasa interna de retorno promedio que redondea a cerca del 50% frente a cerca del 19% de las startups financiadas por venture capital tradicional, lo que Avante cita como IRR de studio de ~50% versus ~19% estándar de la industria para VC tradicional, cerca de 2,5x en horizontes de tiempo realistas. Ese es el benchmark del modelo de studio, nunca el retorno realizado de un studio en particular. La salvedad honesta es que esa cifra corre sobre una muestra autodeclarada de studios sobrevivientes, así que léela como el techo que el modelo alcanza, no como un número que se le deba a un studio cualquiera. La cifra de VC tradicional proviene de benchmarks institucionales como el [índice de Venture Capital de EE. UU. de Cambridge Associates](https://www.cambridgeassociates.com/private-investment-benchmarks/), construido a partir de estados financieros trimestrales a lo largo de cuatro décadas.",
+            "Esa prima solo se sostiene cuando el operating partner puede ir a fondo. Una venture de studio llega a Serie A en 25,2 meses frente a 56 de una startup tradicional, y 72% de las ventures de studio alcanzan la Serie A frente a 42% de las tradicionales, según [datos de GSSN vía Bundl](https://www.bundl.com/articles/why-venture-studio-startups-have-higher-long-term-success-rates). La profundidad no escala a docenas de apuestas a la vez. Así que el studio compra su ventaja diciendo que no mucho más seguido de lo que dice que sí. La selección no es el paso previo al trabajo. Es el trabajo."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "IRR de studio de ~50% versus ~19% estándar de la industria para VC tradicional, cerca de 2,5x el IRR en horizontes de tiempo realistas.",
+            "attribution": "Global Startup Studio Network (GSSN)"
+          }
+        },
+        {
+          "id": "the-test",
+          "heading": "El test de cuatro partes para una vertical",
+          "level": 2,
+          "paragraphs": [
+            "Una vertical merece un cupo de build cuando cuatro condiciones se cumplen al mismo tiempo. Esto es una puerta, no un marcador. Una vertical fuerte en tres dimensiones y cerrada en la cuarta igual falla, porque la condición que falta suele ser la que decide el resultado."
+          ],
+          "bullets": [
+            "Un gran mercado de servicios poco digitalizado. La vertical tiene que ser grande para importar y atrasada en software para que el trabajo aún corra en llamadas, hojas de cálculo y PDFs. Un mercado enorme ya bien servido por software es una pelea a cuchillo, no una apertura.",
+            "Un operador de dominio disponible con profunda cicatriz de experiencia. El studio necesita un co-founder con más de 10 años dentro de la industria, que cargue el conocimiento regulatorio, de relaciones y de proceso que ningún deck enseña. Si ese operador no se puede encontrar ni reclutar, la vertical falla por bueno que se vea el mercado.",
+            "Un workflow donde la IA cambia la economía unitaria. La IA tiene que convertir una tarea intensiva en mano de obra en software, no agregar una función. Según a16z, ese giro puede expandir los ingresos por cliente 2-10x, sobre los 2-5x que la integración de fintech ya entregó.",
+            "Un camino hacia datos propietarios que se acumulan. El workflow tiene que generar datos que el studio pueda acumular y que mejoren el producto con el uso. Sin un ciclo que se acumula, un incumbente bien financiado o un modelo horizontal termina alcanzando."
+          ]
+        },
+        {
+          "id": "vertical-thesis",
+          "heading": "Por qué la IA vertical pasa el test",
+          "level": 2,
+          "paragraphs": [
+            "El test apunta a la IA vertical y no a los copilots horizontales porque la IA vertical se está probando más defendible y mejor valorada. La evidencia ya no es teórica. Según [Bessemer Venture Partners en septiembre de 2024](https://www.bvp.com/atlas/part-i-the-future-of-ai-is-vertical), las empresas verticales LLM-native alcanzaban 80% del valor promedio de contrato del SaaS tradicional, crecían cerca de 400% año contra año, y mantenían márgenes brutos de cerca de 65%, con la capitalización de mercado de la IA vertical proyectada en al menos 10x el tamaño del SaaS vertical heredado.",
+            "Lo que separa a una empresa duradera de un wrapper superficial es la posesión del workflow más un ciclo de datos. Bessemer liga los moats de IA vertical a datos propietarios, profundidad de integración del producto y valor económico entregado, no al acceso al modelo, que todos comparten. a16z plantea el mismo punto a través del sistema de registro. La empresa que domina el workflow captura el presupuesto de mano de obra, no solo el de software, y los [$313B gastados en software en EE. UU. son apenas cerca del 3% de los $10,5T gastados en mano de obra](https://a16z.com/vertical-saas-now-with-ai-inside/). Toast llegó a $1,5B de ARR con más del 80% de los ingresos viniendo de servicios financieros embebidos, que es como se ve dominar un workflow vertical a escala.",
+            "El ciclo de datos es la parte que los fundadores más exageran, así que el test es estricto en eso. Según el [Network Effects Manual de NfX](https://www.nfx.com/post/network-effects-manual), los efectos de red explican cerca del 70% del valor creado por las empresas de tecnología desde 1994, pero las ventajas de datos son más débiles de lo que se cree. El dato solo es moat de verdad cuando el uso actualiza de forma continua un conjunto de datos central para el producto, como Waze que mejora con cada viaje, y no marginal como un feed de recomendación. Para el studio, esa distinción es la cuarta condición vuelta concreta. Una vertical pasa solo cuando su workflow genera datos a la vez propietarios y estructurales."
+          ]
+        },
+        {
+          "id": "brazil-supply",
+          "heading": "Por qué Brasil ofrece tantos candidatos",
+          "level": 2,
+          "paragraphs": [
+            "Brasil produce un número inusual de verticales que pasan la primera condición, porque los servicios representan cerca del 70% del PIB brasileño con baja penetración de software en esos sectores. Ese dato viene de [cifras del IBGE divulgadas en julio de 2024](https://en.mercopress.com/2024/07/13/ibge-finds-2-interannual-growth-in-services), con la porción de servicios 12,7% por encima del nivel prepandemia. Una base grande y creciente de actividad económica todavía corriendo en workflows manuales es un banco profundo de exactamente lo que el test busca primero.",
+            "El telón de fondo de capital le dice al studio que estos mercados están abiertos, no saturados. Las startups de América Latina captaron $4,2B en 2024, un alza de 27% sobre el año previo, con Brasil quedándose con casi la mitad de todo el funding de la región, según [Crunchbase](https://news.crunchbase.com/venture/latin-america-startup-funding-eoy-2024/). El funding se recupera de un 2023 débil y sigue muy por debajo del pico de 2021, lo que significa que la mayoría de las verticales aún no tiene un incumbente bien capitalizado dominando el ciclo de datos. Esa es la ventana. No queda abierta para siempre.",
+            "La ventaja estructural que permite al studio actuar es la profundidad del operador. Operadores de dominio con más de 10 años de cicatriz del mercado brasileño, sumados a un playbook de Silicon Valley y capital de primer cheque montados el día uno, es lo que un fondo generalista no puede replicar desde un asiento de directorio. La infraestructura de IA hoy es barata para desplegar sin una Serie A, y por eso un studio puede correr 3-4 apuestas verticales al año en Brasil en vez de una sola apuesta pesada en capital. El patrón se repite. Construya un copilot de IA para generar datos propietarios, luego use esos datos para captar y desplegar capital."
+          ]
+        },
+        {
+          "id": "when-to-pass",
+          "heading": "Cuándo rechazar un mercado grande",
+          "level": 2,
+          "paragraphs": [
+            "La disciplina del test aparece en los rechazos, no en los builds. Un studio puede caer en el reconocimiento de patrones y entrar en una vertical saturada donde un incumbente bien financiado ya domina el ciclo de datos. El mercado es grande, el workflow está claramente roto, hasta hay un operador disponible, y tres de las cuatro condiciones se encienden en verde. La cuarta está cerrada. Alguien llegó primero, su conjunto de datos propietario ya se está acumulando, y un nuevo entrante estaría alimentando un ciclo que no puede ganar.",
+            "Eso es un rechazo, y debería ser fácil. Según el [Network Effects Manual de NfX](https://www.nfx.com/post/network-effects-manual), la empresa cuyo conjunto de datos es central y se actualiza de forma continua por el uso tiene una ventaja que un entrante posterior no supera solo gastando más. Entrar en una vertical donde el camino de los datos ya está cerrado gasta un cupo escaso en un segundo lugar.",
+            "El tamaño del mercado no rescata la decisión. Un studio con apenas 3-4 cupos al año no puede darse el lujo de uno que produce un resultado estructuralmente limitado. El modo de falla honesto de la construcción de portafolio de un studio es confundir un mercado grande con uno abierto. La selección disciplinada significa renunciar a un mercado grande, roto y tentador justamente porque la condición que se acumula es la que ya no está."
+          ]
+        },
+        {
+          "id": "how-avante",
+          "heading": "Cómo Avante conduce la selección",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina, y el test de cuatro partes es como decide dónde construir. Avante lanza 3-4 ventures al año a través de un sistema de seis etapas. Research, Partner, Build, Traction, Revenue, Compound. La etapa Research es donde el test se encuentra con las verticales candidatas. La etapa Partner responde la segunda condición, porque ningún build arranca sin un operador de dominio que cargue cicatrices reales. El capital desplegado es $500K-1.5M por venture en el preseed, y Avante retiene economía de co-founder.",
+            "La disciplina operativa sostiene la selección. Los operating partners siguen comprometidos hasta el primer hito de ingresos, luego pasan a la supervisión a nivel de directorio. Resolver la plomería de la empresa una vez dirige cerca de $300K-500K de capital efectivo por venture hacia producto y tracción en vez de overhead, y una venture de studio se lanza 6-9 meses por delante de un equipo autónomo con financiamiento comparable. Ese es el retorno de gastar bien el cupo.",
+            "El portafolio se lee como el test aplicado tres veces, por dominio. Alphajuri construye en activos judiciales, el mercado de precatorios y claims, donde el workflow es intensivo en documentos y los datos se acumulan con cada caso. WIR, con AXA, construye en precios de seguros y risk scoring, donde una API asíncrona domina un workflow y los datos de siniestros son estructurales. BR Auction Intel construye en subastas inmobiliarias, haciendo scrape, enriquecimiento y scoring de propiedades donde el conjunto de datos mejora con la cobertura. Cada una pasó las mismas cuatro condiciones antes de merecer un cupo. El modelo operativo está en [/principles](/principles). El trabajo de un studio no es construir. La mayor parte del trabajo es elegir qué no construir."
+          ]
         }
       ]
     }
