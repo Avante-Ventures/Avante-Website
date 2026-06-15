@@ -289,7 +289,7 @@ export default function ArticlePage() {
 
         {/* Body */}
         {content.sections.map((section, i) => (
-          <Section key={i} section={section} />
+          <Section key={i} section={section} locale={language} />
         ))}
 
         {/* Tier 3 / use 10 — Newsletter signature. Closes the article as a
@@ -393,7 +393,63 @@ export default function ArticlePage() {
 // Section renderer
 // ─────────────────────────────────────────────────────────────────────
 
-function Section({ section }: { section: ArticleSection }) {
+// Parse inline markdown links [label](href) into real anchors so the content
+// engine's in-body links (106 internal + external citations) render as
+// crawlable <a> tags instead of literal text. Internal hrefs (starting with
+// "/") render as locale-prefixed SPA <Link>s; safe external hrefs open in a new
+// tab; anything else (e.g. javascript:/data:) stays literal. Plain text passes
+// through untouched.
+const MD_LINK = /\[([^\]]+)\]\(([^)]+)\)/g
+const SAFE_EXTERNAL = /^(https?:|mailto:|tel:)/i
+const LOCALE_PREFIXED = /^\/(en|pt|es)(\/|$)/
+
+function renderRichText(text: string, locale: string): Array<string | JSX.Element> {
+  const nodes: Array<string | JSX.Element> = []
+  let lastIndex = 0
+  let key = 0
+  const linkStyle = {
+    color: '#F9B437',
+    textDecoration: 'underline',
+    textUnderlineOffset: '2px',
+  }
+  for (const match of text.matchAll(MD_LINK)) {
+    const start = match.index ?? 0
+    if (start > lastIndex) nodes.push(text.slice(lastIndex, start))
+    const [, label, href] = match
+    const isInternal = href.startsWith('/') && !href.startsWith('//')
+    if (isInternal) {
+      // Routes are mounted under /:locale, so a bare /library/<slug> must carry
+      // the active locale or React Router resolves it from root (locale becomes
+      // "library") and LocaleLayout redirects to the homepage.
+      const to = LOCALE_PREFIXED.test(href) ? href : `/${locale}${href}`
+      nodes.push(
+        <Link key={key++} to={to} style={linkStyle}>
+          {label}
+        </Link>,
+      )
+    } else if (SAFE_EXTERNAL.test(href)) {
+      nodes.push(
+        <a
+          key={key++}
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={linkStyle}
+        >
+          {label}
+        </a>,
+      )
+    } else {
+      // Unknown or unsafe scheme — never promote to an href; keep it literal.
+      nodes.push(match[0])
+    }
+    lastIndex = start + match[0].length
+  }
+  if (lastIndex < text.length) nodes.push(text.slice(lastIndex))
+  return nodes
+}
+
+function Section({ section, locale }: { section: ArticleSection; locale: string }) {
   const Heading = (section.level ?? 2) === 3 ? 'h3' : 'h2'
   return (
     <section style={{ marginBottom: '40px' }}>
@@ -422,7 +478,7 @@ function Section({ section }: { section: ArticleSection }) {
             margin: '0 0 18px 0',
           }}
         >
-          {p}
+          {renderRichText(p, locale)}
         </p>
       ))}
 
@@ -444,7 +500,7 @@ function Section({ section }: { section: ArticleSection }) {
                 lineHeight: 1.7,
               }}
             >
-              {b}
+              {renderRichText(b, locale)}
             </li>
           ))}
         </ul>

@@ -123,7 +123,7 @@ const articleVentureStudios: Article = {
         paragraphs: [
           "Brazil's startup ecosystem has a structural shortage that makes the studio model especially well-suited: domain operators with 10+ years of Brazilian-market scar tissue. These are people who know how to navigate fragmented service industries, complicated tax regimes, and a labor market with unusual dynamics — but they're not natively wired to read SaaS metrics or design AI-native product loops.",
           "A studio bridges that. Domain operator + Silicon Valley playbook + first-ticket capital, all assembled day one. The local market offers what's globally rare in 2026: massive service-economy volume (70% of GDP), low product penetration, and AI infrastructure now cheap enough to deploy without a Series A.",
-          "We see Brazil as one of the cleanest setups of any geography for studio outperformance, and the early data from our portfolio bears that out.",
+          "We see Brazil as one of the cleanest setups of any geography for studio outperformance, and the early data from our portfolio bears that out. The full sector-by-sector picture is in [where the AI-native opportunity sits in Brazil](/library/brazil-ai-market-report-2026).",
         ],
       },
       {
@@ -566,7 +566,7 @@ const articleBrazilAIMarket: Article = {
     sections: [
       {
         paragraphs: [
-          'Brazil in 2026 is in a position the rest of the developed world isn\'t: an economy large enough to matter ($2.5 trillion in GDP, ranked top-10 globally), service-economy-heavy (70%+ of output), and structurally under-digitized at the small and mid-business layer (~90% of SMEs lack basic operational software). When AI infrastructure dropped to a price point where founder teams can deploy production-grade models without a Series A, the constraint binding Brazilian software opportunity flipped from "can we afford to build it" to "do we have the operators to ship it."',
+          'Brazil in 2026 is in a position the rest of the developed world isn\'t: an economy large enough to matter ($2.5 trillion in GDP, ranked top-10 globally), service-economy-heavy (70%+ of output), and structurally under-digitized at the small and mid-business layer (~90% of SMEs lack basic operational software). When AI infrastructure dropped to a price point where founder teams can [deploy production-grade models without a Series A](/library/ai-infrastructure-cost-curve-latam), the constraint binding Brazilian software opportunity flipped from "can we afford to build it" to "do we have the operators to ship it."',
           'This report is our internal model of where the AI-native opportunity sits in Brazil right now. We\'re publishing it because the gap between what the global VC press writes about Brazil and what\'s actually shippable here is wide.',
         ],
       },
@@ -612,7 +612,7 @@ const articleBrazilAIMarket: Article = {
       {
         heading: 'Sectors we watch closely',
         paragraphs: [
-          'Out of the broader services landscape, six sectors keep returning to the top of our pipeline because they share three traits: high fragmentation, mostly-manual workflows, and a clear path to monthly recurring revenue from day one.',
+          'Out of the broader services landscape, six sectors keep returning to the top of our pipeline because they share three traits: high fragmentation, mostly-manual workflows, and a clear path to monthly recurring revenue from day one. The reason a focused entrant can defend these verticals is the [data network effect that compounds inside vertical AI](/library/data-network-effects-vertical-ai).',
         ],
       },
       {
@@ -660,7 +660,7 @@ const articleBrazilAIMarket: Article = {
       {
         heading: 'What this means for capital allocators',
         paragraphs: [
-          'If you\'re an LP allocating to LATAM in 2026, the highest-leverage exposure is at pre-traction with operational involvement. The Series A market is increasingly competed; the late-stage market is global-fund-dominated; pre-seed and seed with hands-on studios is where IRR potential is highest and where capital deployed compounds fastest.',
+          'If you\'re an LP allocating to LATAM in 2026, the highest-leverage exposure is at pre-traction with operational involvement. The Series A market is increasingly competed; the late-stage market is global-fund-dominated; pre-seed and seed with hands-on studios is where IRR potential is highest and where capital deployed compounds fastest. The structural reason studios win this stage is laid out in [why venture studios win in LATAM](/library/why-venture-studios-win-latam).',
           'For founders, the implication is simpler: build AI-native, focus on a fragmented service vertical with named first customers, and prove unit economics inside 12 months. Capital will follow.',
         ],
       },
@@ -1824,7 +1824,7 @@ const engineArticles: Article[] = [
           "heading": "Why the timing favors Brazil",
           "level": 2,
           "paragraphs": [
-            "Start with the structural fact. Services account for roughly 70% of Brazilian GDP, with low software penetration. That base is still under-digitized, and it is still growing. The services sector expanded 3.1% in 2024, its fourth straight year of growth, according to [IBGE](https://agenciabrasil.ebc.com.br/economia/noticia/2025-02/setor-de-servicos-cresce-31-em-2024-mostra-ibge). A large, growing, software-thin economy is exactly what an AI-native team can now address without a Series A.",
+            "Start with the structural fact. Services account for roughly 70% of Brazilian GDP, with low software penetration. That base is still under-digitized, and it is still growing. The services sector expanded 3.1% in 2024, its fourth straight year of growth, according to [IBGE](https://agenciabrasil.ebc.com.br/economia/noticia/2025-02/setor-de-servicos-cresce-31-em-2024-mostra-ibge). A large, growing, software-thin economy is exactly what an AI-native team can now address without a Series A. We map that opportunity sector by sector in the [Brazil AI Market Report 2026](/library/brazil-ai-market-report-2026).",
             "Now the capital backdrop. LATAM venture funding reset hard after 2021 and is recovering off a low base. In 2024 the region drew about 4.5 billion dollars across 751 deals, an 8% increase year over year, with Brazil taking 44% and Mexico 26%, per [LAVCA industry data](https://www.lavca.org/research/2024-lavca-industry-data-analysis/). For scale, that full-year regional total is a rounding error next to a single large US AI round. LATAM founders have never competed on capital depth.",
             "The timing argument follows directly. A cheaper cost curve neutralizes the exact disadvantage that thin capital used to impose. When the build no longer requires a 20-person team and a Series A to fund it, the infrastructure playing field flattens, and the edge that remains is domain operator depth. Brazil has that in abundance. AI infrastructure is now cheap enough to deploy without a Series A."
           ]
@@ -3273,7 +3273,7 @@ const engineArticles: Article[] = [
           "paragraphs": [
             "Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America. The method is a [copilot to data to fund flywheel](/library/copilot-to-data-to-fund-flywheel). Build an AI copilot to do real work inside a vertical, capture the proprietary data the work generates, then use that data asset to raise and deploy capital. The copilot is the wedge. The data network effect is the moat. The capital is the compounding.",
             "The studio deploys US$500K-1.5M per venture across a six-stage system, with GSSN data showing studio IRR of ~50% versus ~19% for traditional VC, roughly 2.5x, a benchmark for the studio model rather than a claim on Avante's own return. The full operating mechanics are at [how operating-partner economics work](/library/operating-partner-economics).",
-            "The reason this works in LATAM is structural. Services account for roughly 70% of Brazilian GDP with low software penetration, the exact surface where a vertical product can become the system of record. Pair that with domain operators carrying 10+ years of Brazilian-market scar tissue, and the data compounds in places competitors cannot reach. Judicial-asset workflows and insurance risk scoring are flows, not stocks. The model will keep getting cheaper. The moat is everything you build so that no longer matters. See how we operate in [/principles](/principles)."
+            "The reason this works in LATAM is structural. Services account for roughly 70% of Brazilian GDP with low software penetration, the exact surface where a vertical product can become the system of record. Pair that with domain operators carrying 10+ years of Brazilian-market scar tissue, and the data compounds in places competitors cannot reach. Judicial-asset workflows and insurance risk scoring are flows, not stocks. Both are sectors we break down in [Brazil's 2026 AI market landscape](/library/brazil-ai-market-report-2026). The model will keep getting cheaper. The moat is everything you build so that no longer matters. See how we operate in [/principles](/principles)."
           ]
         }
       ]
@@ -4788,7 +4788,7 @@ const engineArticles: Article[] = [
         {
           "paragraphs": [
             "Here is the venture studio benchmark in one line. The model builds companies in-house, hands a founder a team and first capital on day one, and takes co-founder economics in return. That structure has a twenty-five year track record across the US and Europe, and almost none of it is in Brazil yet. Idealab started in 1996. The studios that followed produced IPOs, unicorns, and, by the most-cited industry figure, an internal rate of return near 50% against roughly 19% for traditional venture capital.",
-            "This piece is that benchmark read builder by builder, with the numbers that hold up and the ones that do not. Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America, so we read this record as proof and as opening at the same time. The model works. No one is running it AI-native in Brazil. That gap is the entire thesis.",
+            "This piece is that benchmark read builder by builder, with the numbers that hold up and the ones that do not. Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America, so we read this record as proof and as opening at the same time. The model works. No one is running it AI-native in Brazil. That gap is the entire thesis. We size that gap across verticals in the [Brazilian AI market report](/library/brazil-ai-market-report-2026).",
             "A venture studio, also called a startup studio or company builder, conceives companies in-house and staffs them, rather than investing in founders who arrive with their own. That single design choice is what the rest of this benchmark measures. You can read the longer version of [why the structure fits Brazil](/why-avante)."
           ]
         },
@@ -5111,7 +5111,7 @@ const engineArticles: Article[] = [
           "heading": "Why Brazil amplifies the model",
           "level": 2,
           "paragraphs": [
-            "The studio edge compounds where two things are true at once. The market is large and under-digitized, and operator depth is scarce enough to be decisive. Brazil is the textbook case. Services account for roughly 70% of Brazilian GDP, and software penetration across those service sectors is low. That is precisely the terrain where an operator-led studio can build vertical AI companies a generalist fund could not even source, let alone staff.",
+            "The studio edge compounds where two things are true at once. The market is large and under-digitized, and operator depth is scarce enough to be decisive. Brazil is the textbook case. Services account for roughly 70% of Brazilian GDP, and software penetration across those service sectors is low. That is precisely the terrain where an operator-led studio can build vertical AI companies a generalist fund could not even source, let alone staff. The specific sectors where that edge is sharpest are mapped in [Brazil's AI market report for 2026](/library/brazil-ai-market-report-2026).",
             "The capital backdrop helps too. LATAM venture funding is recovering rather than saturated, with funding ticking higher through 2024 and early-stage rounds taking the largest share. The deeper shift is on the cost side. [AI infrastructure is now cheap enough to deploy without a Series A](/library/ai-infrastructure-cost-curve-latam), which is the reason a studio can launch 3-4 ventures per year here instead of one capital-heavy bet. Read the broader thesis at [/why-avante](/why-avante).",
             "The edge that ties it together is people. Domain operators with 10+ years of Brazilian-market scar tissue, paired with a Silicon Valley playbook and first-ticket capital, assembled on day one. The recurring portfolio pattern is the [copilot to data to fund flywheel](/library/copilot-to-data-to-fund-flywheel). Build an AI copilot to generate proprietary data, then use that data to raise and deploy capital."
           ],
