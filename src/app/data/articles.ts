@@ -1768,6 +1768,7 @@ const engineArticles: Article[] = [
     "featured": false,
     "date": "Jun 2026",
     "datePublished": "2026-06-15",
+    "ogImage": "/og/ai-agents-vs-copilots-b2b.png",
     "isPublished": true,
     "en": {
       "title": "Agents vs Copilots: The Order That Builds a Moat",
@@ -2615,6 +2616,7 @@ const engineArticles: Article[] = [
     "featured": false,
     "date": "Jun 2026",
     "datePublished": "2026-06-15",
+    "ogImage": "/og/ai-wrapper-trap-defensible-ai-native.png",
     "isPublished": true,
     "en": {
       "title": "The Wrapper Trap: When AI-Native Is Actually Defensible",
@@ -2889,6 +2891,7 @@ const engineArticles: Article[] = [
     "featured": false,
     "date": "Jun 2026",
     "datePublished": "2026-06-15",
+    "ogImage": "/og/brazil-ai-agriculture-agritech-opportunity.png",
     "isPublished": true,
     "en": {
       "title": "AI in Brazilian Agriculture: The Agtech Build a Studio Would Make",
@@ -3163,6 +3166,7 @@ const engineArticles: Article[] = [
     "featured": false,
     "date": "Jun 2026",
     "datePublished": "2026-06-15",
+    "ogImage": "/og/brazil-ai-cybersecurity-opportunity.png",
     "isPublished": true,
     "en": {
       "title": "AI in Brazilian Cybersecurity: Where a Studio Would Build",
@@ -3428,6 +3432,7 @@ const engineArticles: Article[] = [
     "featured": false,
     "date": "Jun 2026",
     "datePublished": "2026-06-15",
+    "ogImage": "/og/brazil-ai-fintech-market-opportunity.png",
     "isPublished": true,
     "en": {
       "title": "AI in Brazilian Fintech: Where a Studio Would Actually Build",
@@ -3717,6 +3722,7 @@ const engineArticles: Article[] = [
     "featured": false,
     "date": "Jun 2026",
     "datePublished": "2026-06-15",
+    "ogImage": "/og/brazil-receivables-automation-ai-opportunity.png",
     "isPublished": true,
     "en": {
       "title": "AI Receivables Automation in Brazil: A Quiet, Fundable Build",
@@ -5133,6 +5139,7 @@ const engineArticles: Article[] = [
     "featured": false,
     "date": "Jun 2026",
     "datePublished": "2026-06-15",
+    "ogImage": "/og/domain-specific-evals-ai-moat.png",
     "isPublished": true,
     "en": {
       "title": "Domain Evals: The Moat That Survives Model Churn",
@@ -5651,6 +5658,7 @@ const engineArticles: Article[] = [
     "featured": false,
     "date": "Jun 2026",
     "datePublished": "2026-06-15",
+    "ogImage": "/og/lp-allocation-case-venture-studios.png",
     "isPublished": true,
     "en": {
       "title": "The LP Case for a Dedicated Venture Studio Allocation",
@@ -7214,6 +7222,7 @@ const engineArticles: Article[] = [
     "featured": false,
     "date": "Jun 2026",
     "datePublished": "2026-06-15",
+    "ogImage": "/og/venture-studio-founder-economics-latam.png",
     "isPublished": true,
     "en": {
       "title": "The Founder Side of the Venture Studio Deal in LATAM",
@@ -7479,6 +7488,7 @@ const engineArticles: Article[] = [
     "featured": false,
     "date": "Jun 2026",
     "datePublished": "2026-06-15",
+    "ogImage": "/og/vertical-ai-studio-portfolio-construction.png",
     "isPublished": true,
     "en": {
       "title": "How a Venture Studio Picks Which Verticals to Build",
