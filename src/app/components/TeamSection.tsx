@@ -24,18 +24,19 @@ const TeamSectionComponent = () => {
       title: 'Co-Founder & Partner - Avante',
       image: imgAmandaPinheiro,
       highlights: [
-        'Board Member Sigga Technologies (10x exit)',
-        'Deep expertise in AI-native venture building',
-        'Former C-Level at insurance and fintech companies'
+        'CFO at Innova Capital and Unbox Capital',
+        '$500M+ managed in venture',
+        'Investor Relations certificate — Columbia',
+        'Deep expertise in AI-native venture building'
       ],
       accentColor: '#98509A'
     },
     {
       name: 'Felipe Moraes',
-      title: 'Strategic Advisor and founder of Bamboo DCM',
+      title: 'Strategic Partner and Founder of Bamboo DCM',
       image: imgFelipeMoraes,
       highlights: [
-        'Strategic Partner and Founder of Bamboo DCM',
+        'Founder of Bamboo DCM',
         'Board Member WIR'
       ],
       accentColor: '#F4A261'
@@ -45,9 +46,8 @@ const TeamSectionComponent = () => {
       title: 'Partner & Co-Founder - Mahway',
       image: imgJessMah,
       highlights: [
-        'Founding CEO of inDinero (100+ employees, profitable)',
-        'Sequoia Scout',
-        'Built and scaled inDinero (Fintech) for 10+ years'
+        'Founding CEO of inDinero — scaled to 100+ employees, profitable, over 10+ years',
+        'Sequoia Scout'
       ],
       accentColor: '#F9B437'
     },
