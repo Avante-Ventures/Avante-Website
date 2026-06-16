@@ -80,7 +80,7 @@ export default function ArticlePage() {
         image: ogImageUrl,
         inLanguage,
         datePublished: article.datePublished,
-        dateModified: article.datePublished,
+        dateModified: article.dateModified ?? article.datePublished,
         articleSection: article.category,
         wordCount: estimateWordCount(content.sections),
         author: [

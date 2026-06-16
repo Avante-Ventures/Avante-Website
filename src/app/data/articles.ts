@@ -44,6 +44,8 @@ export interface Article {
   date: string
   /** YYYY-MM-DD for JSON-LD datePublished */
   datePublished: string
+  /** YYYY-MM-DD for JSON-LD dateModified; falls back to datePublished when absent */
+  dateModified?: string
   en: ArticleLocaleContent
   pt: ArticleLocaleContent
   /** Optional Spanish translation. When absent, ES viewers see EN with a

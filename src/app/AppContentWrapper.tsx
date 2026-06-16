@@ -554,7 +554,7 @@ export function AppContent() {
                       language === 'pt'
                         ? 'O que não fazemos é o que somos.'
                         : language === 'es'
-                          ? 'Lo que no haremos es lo que somos.'
+                          ? 'Lo que no hacemos es lo que somos.'
                           : 'What we will not do is what we are.',
                     body:
                       language === 'pt'

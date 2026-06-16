@@ -154,7 +154,7 @@ const VENTURES: Venture[] = [
     accent: '#F18B46',
     tag: 'Retail Tech',
     est: 'Est. 2014',
-    highlight: 'MOI 5×',
+    highlight: 'MOI 4×',
   },
   // ─────────── US ALUMNI ───────────
   {
@@ -638,7 +638,7 @@ function PortfolioSummaryStrip({ t }: { t: (en: string, pt: string) => string })
     { value: t('Year 1', 'Ano 1'), label: t('of Building', 'de Building') },
     { value: '2', label: t('Ventures · Cohort 1', 'Ventures · Cohort 1') },
     { value: t('Since 2010', 'Desde 2010'), label: t('Building & Investing', 'Building & Investing') },
-    { value: '$500MM+', label: t('Deployed lifetime', 'Investidos historicamente') },
+    { value: '$500M+', label: t('Deployed lifetime', 'Investidos historicamente') },
   ]
   return (
     <div
