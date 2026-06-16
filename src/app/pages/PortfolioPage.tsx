@@ -15,6 +15,7 @@ import { Link } from 'react-router'
 
 // Ventures data — Round 9 restructure (full deck-aligned taxonomy).
 //   'cohort1'           = Avante studio Cohort 1 — active Year 1 builds
+//   'discovery'         = discovery-phase venture being explored pre-Cohort
 //   'partner-cofounded' = boutiques co-founded by an Avante partner
 //   'us-building'       = ventures built by Jess + Andrea in the US (Mahway brand family)
 //   'investing'         = pre-Avante investments by founding team (Innova era)
@@ -24,7 +25,7 @@ import { Link } from 'react-router'
 interface Venture {
   name: string
   description: { en: string; pt: string }
-  status: 'cohort1' | 'partner-cofounded' | 'us-building' | 'investing' | 'us-alumni'
+  status: 'cohort1' | 'discovery' | 'partner-cofounded' | 'us-building' | 'investing' | 'us-alumni'
   accent: string
   url?: string
   /** Short category chip rendered in the card eyebrow row. */
@@ -51,7 +52,7 @@ const VENTURES: Venture[] = [
     status: 'cohort1',
     accent: '#F9B437',
     tag: 'InsurTech',
-    est: 'Est. 2024',
+    est: 'Est. 2025',
   },
   {
     name: 'Alphajuri',
@@ -63,6 +64,17 @@ const VENTURES: Venture[] = [
     accent: '#F4A261',
     tag: 'LegalTech',
     est: 'Est. 2024',
+  },
+  // ─────────── DISCOVERY ───────────
+  {
+    name: 'BR Auction Intel',
+    description: {
+      en: 'Builds in real estate auctions — scraping, enriching, and scoring properties, where the dataset compounds as coverage grows.',
+      pt: 'Constrói em leilões imobiliários — scrape, enriquecimento e scoring de imóveis, onde o conjunto de dados melhora conforme a cobertura cresce.',
+    },
+    status: 'discovery',
+    accent: '#4FA3A5',
+    tag: 'Real Estate Auctions',
   },
   // ─────────── PARTNER CO-FOUNDED ───────────
   {
@@ -142,7 +154,7 @@ const VENTURES: Venture[] = [
     accent: '#98509A',
     tag: 'Maintenance SaaS',
     est: 'Est. 2013',
-    highlight: 'MOI 11×',
+    highlight: 'MOI 10×',
   },
   {
     name: 'Accera',
@@ -276,6 +288,7 @@ export default function PortfolioPage() {
         {(
           [
             { status: 'cohort1', label: t('Cohort 1', 'Cohort 1'), accent: '#F9B437' },
+            { status: 'discovery', label: t('Discovery', 'Discovery'), accent: '#4FA3A5' },
             { status: 'partner-cofounded', label: t('Partner Co-founded', 'Co-fundada por Partner'), accent: '#F4A261' },
             { status: 'us-building', label: t('US Building Track Record', 'Track Record US Building'), accent: '#a8429b' },
             { status: 'investing', label: t('Investing Track Record', 'Track Record de Investimento'), accent: '#ec5f72' },
