@@ -38,9 +38,9 @@ const PRINCIPLES: Principle[] = [
       es: 'Operadores que ya han entregado algo difícil.',
     },
     body: {
-      en: "We back founders with deep operating scars in their vertical — serial founders with 20-year vertical depth, first-time founders with a decade of being the operator who actually shipped, intrapreneurs who have lived inside the buyer. Pedigree is a poor proxy for that. Operating scars are the cheapest form of risk-reduction at the seed stage.",
-      pt: 'Apostamos em founders com cicatrizes operacionais profundas na sua vertical — serial founders com 20 anos de profundidade vertical, founders de primeira vez com uma década sendo o operador que realmente entregou, intrapreneurs que viveram dentro do comprador. Pedigree é uma proxy pobre para isso. Cicatriz operacional é a forma mais barata de redução de risco no seed.',
-      es: 'Apostamos por founders con cicatrices operativas profundas en su vertical — serial founders con 20 años de profundidad vertical, founders de primera vez con una década siendo el operador que realmente entregó, intrapreneurs que vivieron dentro del comprador. El pedigree es una proxy pobre para eso. La cicatriz operativa es la forma más barata de reducción de riesgo en seed.',
+      en: "We back founders with deep operating scars in their vertical: serial founders with 20-year vertical depth, first-time founders with a decade of being the operator who actually shipped, intrapreneurs who have lived inside the buyer. Pedigree is a poor proxy for that. Operating scars are the cheapest form of risk-reduction at the seed stage.",
+      pt: 'Apostamos em founders com cicatrizes operacionais profundas na sua vertical: serial founders com 20 anos de profundidade vertical, founders de primeira vez com uma década sendo o operador que realmente entregou, intrapreneurs que viveram dentro do comprador. Pedigree é uma proxy pobre para isso. Cicatriz operacional é a forma mais barata de redução de risco no seed.',
+      es: 'Apostamos por founders con cicatrices operativas profundas en su vertical: serial founders con 20 años de profundidad vertical, founders de primera vez con una década siendo el operador que realmente entregó, intrapreneurs que vivieron dentro del comprador. El pedigree es una proxy pobre para eso. La cicatriz operativa es la forma más barata de reducción de riesgo en seed.',
     },
   },
   {
@@ -51,9 +51,9 @@ const PRINCIPLES: Principle[] = [
       es: 'Flywheel de engine de IA enfocado en B2B.',
     },
     body: {
-      en: "We build AI engines, not AI features — vertical-specific models that get smarter with every customer transaction. The flywheel: customer N's data trains the model that closes customer N+1, faster and at higher margin. B2B because the data feedback loop and pricing leverage are simply better than consumer.",
-      pt: 'Construímos engines de IA, não features de IA — modelos vertical-específicos que ficam mais inteligentes a cada transação. O flywheel: o dado do cliente N treina o modelo que fecha o cliente N+1, mais rápido e com margem maior. B2B porque o loop de dados e a alavanca de pricing são simplesmente melhores que consumer.',
-      es: 'Construimos engines de IA, no features de IA — modelos vertical-específicos que se vuelven más inteligentes con cada transacción. El flywheel: el dato del cliente N entrena el modelo que cierra al cliente N+1, más rápido y con mejor margen. B2B porque el loop de datos y el apalancamiento de pricing son simplemente mejores que consumer.',
+      en: "We build AI engines, not AI features: vertical-specific models that get smarter with every customer transaction. The flywheel: customer N's data trains the model that closes customer N+1, faster and at higher margin. B2B because the data feedback loop and pricing leverage are simply better than consumer.",
+      pt: 'Construímos engines de IA, não features de IA: modelos vertical-específicos que ficam mais inteligentes a cada transação. O flywheel: o dado do cliente N treina o modelo que fecha o cliente N+1, mais rápido e com margem maior. B2B porque o loop de dados e a alavanca de pricing são simplesmente melhores que consumer.',
+      es: 'Construimos engines de IA, no features de IA: modelos vertical-específicos que se vuelven más inteligentes con cada transacción. El flywheel: el dato del cliente N entrena el modelo que cierra al cliente N+1, más rápido y con mejor margen. B2B porque el loop de datos y el apalancamiento de pricing son simplemente mejores que consumer.',
     },
   },
   {
@@ -64,9 +64,9 @@ const PRINCIPLES: Principle[] = [
       es: 'Velocidad al mercado, validada con capital.',
     },
     body: {
-      en: 'We optimize for time-to-revenue, not time-to-product. A venture that ships in 4 months but takes 24 to find a paying customer is a 24-month venture. Speed without revenue validation is theatre. Capital deploys in tranches that reward each market signal — the next dollar follows the customer signature, not the calendar.',
-      pt: 'Otimizamos por time-to-revenue, não time-to-product. Uma venture que sobe produto em 4 meses mas leva 24 para achar um cliente pagante é uma venture de 24 meses. Velocidade sem validação de receita é teatro. O capital entra em tranches que recompensam cada sinal de mercado — o próximo dólar segue a assinatura do cliente, não o calendário.',
-      es: 'Optimizamos por time-to-revenue, no time-to-product. Una venture que sube producto en 4 meses pero tarda 24 en encontrar un cliente pagador es una venture de 24 meses. Velocidad sin validación de revenue es teatro. El capital entra en tranches que recompensan cada señal de mercado — el siguiente dólar sigue la firma del cliente, no el calendario.',
+      en: 'We optimize for time-to-revenue, not time-to-product. A venture that ships in 4 months but takes 24 to find a paying customer is a 24-month venture. Speed without revenue validation is theatre. Capital deploys in tranches that reward each market signal. The next dollar follows the customer signature, not the calendar.',
+      pt: 'Otimizamos por time-to-revenue, não time-to-product. Uma venture que sobe produto em 4 meses mas leva 24 para achar um cliente pagante é uma venture de 24 meses. Velocidade sem validação de receita é teatro. O capital entra em tranches que recompensam cada sinal de mercado. O próximo dólar segue a assinatura do cliente, não o calendário.',
+      es: 'Optimizamos por time-to-revenue, no time-to-product. Una venture que sube producto en 4 meses pero tarda 24 en encontrar un cliente pagador es una venture de 24 meses. Velocidad sin validación de revenue es teatro. El capital entra en tranches que recompensan cada señal de mercado. El siguiente dólar sigue la firma del cliente, no el calendario.',
     },
   },
   {
@@ -90,9 +90,9 @@ const PRINCIPLES: Principle[] = [
       es: 'Primeros clientes en los primeros 90 días.',
     },
     body: {
-      en: 'The first 90 days after launch separate ventures with real ICP fit from ventures with deck fit. We expect first paying clients — or signed LOIs in regulated verticals where compliance gates the contract. The form of the signal flexes by industry; the requirement that one exists, does not.',
-      pt: 'Os primeiros 90 dias depois do lançamento separam ventures com ICP fit real de ventures com fit-de-deck. Esperamos os primeiros clientes pagantes — ou LOIs assinadas em verticais reguladas onde compliance trava o contrato. A forma do sinal flexiona por indústria; a exigência de que ele exista, não.',
-      es: 'Los primeros 90 días después del lanzamiento separan ventures con ICP fit real de ventures con fit-de-deck. Esperamos los primeros clientes pagadores — o LOIs firmadas en verticales reguladas donde compliance bloquea el contrato. La forma de la señal flexiona por industria; el requisito de que exista, no.',
+      en: 'The first 90 days after launch separate ventures with real ICP fit from ventures with deck fit. We expect first paying clients, or signed LOIs in regulated verticals where compliance gates the contract. The form of the signal flexes by industry; the requirement that one exists, does not.',
+      pt: 'Os primeiros 90 dias depois do lançamento separam ventures com ICP fit real de ventures com fit-de-deck. Esperamos os primeiros clientes pagantes, ou LOIs assinadas em verticais reguladas onde compliance trava o contrato. A forma do sinal flexiona por indústria; a exigência de que ele exista, não.',
+      es: 'Los primeros 90 días después del lanzamiento separan ventures con ICP fit real de ventures con fit-de-deck. Esperamos los primeros clientes pagadores, o LOIs firmadas en verticales reguladas donde compliance bloquea el contrato. La forma de la señal flexiona por industria; el requisito de que exista, no.',
     },
   },
   {
@@ -129,9 +129,9 @@ const PRINCIPLES: Principle[] = [
       es: 'Los founders cierran los primeros 10 contratos enterprise. Nunca los reemplazamos.',
     },
     body: {
-      en: 'A specific commitment, not a slogan. The first ten enterprise customers must be closed by the founder personally — name on the contract, direct line for escalations, in the room for renewals. The studio brand never appears on a customer call. Studio support is operational behind the scenes, never relational on the front.',
-      pt: 'Um compromisso específico, não um slogan. Os primeiros dez clientes enterprise precisam ser fechados pelo founder pessoalmente — nome no contrato, linha direta para escalações, na sala nas renovações. A marca do studio nunca aparece numa call com cliente. Suporte do studio é operacional nos bastidores, nunca relacional na frente.',
-      es: 'Un compromiso específico, no un slogan. Los primeros diez clientes enterprise tienen que ser cerrados por el founder personalmente — nombre en el contrato, línea directa para escalaciones, en la sala en las renovaciones. La marca del studio nunca aparece en una call con cliente. El soporte del studio es operativo tras bastidores, nunca relacional en el frente.',
+      en: 'A specific commitment, not a slogan. The first ten enterprise customers must be closed by the founder personally: name on the contract, direct line for escalations, in the room for renewals. The studio brand never appears on a customer call. Studio support is operational behind the scenes, never relational on the front.',
+      pt: 'Um compromisso específico, não um slogan. Os primeiros dez clientes enterprise precisam ser fechados pelo founder pessoalmente: nome no contrato, linha direta para escalações, na sala nas renovações. A marca do studio nunca aparece numa call com cliente. Suporte do studio é operacional nos bastidores, nunca relacional na frente.',
+      es: 'Un compromiso específico, no un slogan. Los primeros diez clientes enterprise tienen que ser cerrados por el founder personalmente: nombre en el contrato, línea directa para escalaciones, en la sala en las renovaciones. La marca del studio nunca aparece en una call con cliente. El soporte del studio es operativo tras bastidores, nunca relacional en el frente.',
     },
   },
   {
@@ -142,9 +142,9 @@ const PRINCIPLES: Principle[] = [
       es: 'Ejecución nativa de Brasil. Estándares nativos de SF.',
     },
     body: {
-      en: 'The São Paulo team operates the venture in market. The San Francisco team brings the bar — product reviews, hiring filters, capital discipline calibrated against US-tier outcomes. Neither side dilutes the other. Both anchors are real.',
-      pt: 'O time de São Paulo opera a venture em mercado. O time de San Francisco traz a régua — product reviews, filtros de contratação, disciplina de capital calibrada contra outcomes de tier US. Nenhum lado dilui o outro. Ambas as âncoras são reais.',
-      es: 'El equipo de São Paulo opera la venture en mercado. El equipo de San Francisco trae la vara — product reviews, filtros de contratación, disciplina de capital calibrada contra outcomes de tier US. Ningún lado diluye al otro. Ambas anclas son reales.',
+      en: 'The São Paulo team operates the venture in market. The San Francisco team brings the bar: product reviews, hiring filters, capital discipline calibrated against US-tier outcomes. Neither side dilutes the other. Both anchors are real.',
+      pt: 'O time de São Paulo opera a venture em mercado. O time de San Francisco traz a régua: product reviews, filtros de contratação, disciplina de capital calibrada contra outcomes de tier US. Nenhum lado dilui o outro. Ambas as âncoras são reais.',
+      es: 'El equipo de São Paulo opera la venture en mercado. El equipo de San Francisco trae la vara: product reviews, filtros de contratación, disciplina de capital calibrada contra outcomes de tier US. Ningún lado diluye al otro. Ambas anclas son reales.',
     },
   },
   {
@@ -155,9 +155,9 @@ const PRINCIPLES: Principle[] = [
       es: 'Lo que no hacemos es lo que somos.',
     },
     body: {
-      en: 'A studio that cannot articulate its negative space cannot articulate its positive. We turn down 95% of inbound — services-disguised-as-software, AI-feature wrappers, hype-first markets, founder profiles that score on charisma instead of judgment. Saying no is the discipline.',
-      pt: 'Um studio que não consegue articular seu espaço negativo não consegue articular o positivo. Recusamos 95% do inbound — serviços disfarçados de software, wrappers de feature de IA, mercados hype-first, perfis de founder que pontuam em carisma em vez de julgamento. Dizer não é a disciplina.',
-      es: 'Un studio que no puede articular su espacio negativo no puede articular el positivo. Rechazamos 95% del inbound — servicios disfrazados de software, wrappers de feature de IA, mercados hype-first, perfiles de founder que puntúan en carisma en vez de juicio. Decir no es la disciplina.',
+      en: 'A studio that cannot articulate its negative space cannot articulate its positive. We turn down 95% of inbound: services-disguised-as-software, AI-feature wrappers, hype-first markets, founder profiles that score on charisma instead of judgment. Saying no is the discipline.',
+      pt: 'Um studio que não consegue articular seu espaço negativo não consegue articular o positivo. Recusamos 95% do inbound: serviços disfarçados de software, wrappers de feature de IA, mercados hype-first, perfis de founder que pontuam em carisma em vez de julgamento. Dizer não é a disciplina.',
+      es: 'Un studio que no puede articular su espacio negativo no puede articular el positivo. Rechazamos 95% del inbound: servicios disfrazados de software, wrappers de feature de IA, mercados hype-first, perfiles de founder que puntúan en carisma en vez de juicio. Decir no es la disciplina.',
     },
   },
 ]

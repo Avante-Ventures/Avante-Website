@@ -86,8 +86,8 @@ export function ContactFormSection() {
         eyebrow={t('Get in Touch', 'Entre em Contato')}
         title={t("Let's talk.", 'Vamos conversar.')}
         description={t(
-          "Questions, partnerships, or anything else — we'd love to hear from you.",
-          'Dúvidas, parcerias, ou qualquer outra coisa — queremos ouvir você.'
+          "Questions, partnerships, or anything else, we'd love to hear from you.",
+          'Dúvidas, parcerias, ou qualquer outra coisa, queremos ouvir você.'
         )}
       />
 

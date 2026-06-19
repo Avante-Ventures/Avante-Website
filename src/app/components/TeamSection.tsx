@@ -26,7 +26,7 @@ const TeamSectionComponent = () => {
       highlights: [
         'CFO at Innova Capital and Unbox Capital',
         '$500M+ managed in venture',
-        'Investor Relations certificate — Columbia',
+        'Investor Relations certificate, Columbia',
         'Deep expertise in AI-native venture building'
       ],
       accentColor: '#98509A'
@@ -46,7 +46,7 @@ const TeamSectionComponent = () => {
       title: 'Partner & Co-Founder - Mahway',
       image: imgJessMah,
       highlights: [
-        'Founding CEO of inDinero — scaled to 100+ employees, profitable, over 10+ years',
+        'Founding CEO of inDinero: scaled to 100+ employees, profitable, over 10+ years',
         'Sequoia Scout'
       ],
       accentColor: '#F9B437'
@@ -92,8 +92,8 @@ const TeamSectionComponent = () => {
             'Vale do Silício encontra o Brasil.'
           )}
           description={t(
-            'Operators who have built, scaled, and exited — now writing the playbook for Brazil.',
-            'Operadores que construíram, escalaram e saíram — agora escrevendo o playbook para o Brasil.'
+            'Operators who have built, scaled, and exited, now writing the playbook for Brazil.',
+            'Operadores que construíram, escalaram e saíram, agora escrevendo o playbook para o Brasil.'
           )}
         />
 

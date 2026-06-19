@@ -1,4 +1,4 @@
-// AvtAvatar — Tier 2 / use 05.
+// AvtAvatar: Tier 2 / use 05.
 //
 // Square avatar with hairline border. Renders the team member's photo
 // when present; otherwise renders a centered "A" mark in the gradient.
@@ -14,7 +14,7 @@ import { AvanteLockup } from '@/app/components/AvanteLockup'
 export interface AvtAvatarProps {
   /** Image URL (webp/png/jpg). When undefined or empty, renders the placeholder. */
   src?: string
-  /** Alt text — used when image renders, ignored for placeholder (the lockup
+  /** Alt text, used when image renders, ignored for placeholder (the lockup
    *  carries its own ariaLabel). */
   alt?: string
   /** Square edge length in px. Default 120. Mobile screens may want 80-96. */

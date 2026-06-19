@@ -1,17 +1,17 @@
-// VenturePipeline — Round 8 redesign.
+// VenturePipeline, Round 8 redesign.
 //
-// The previous cards read flat and identical — same eyebrow, same bullet
+// The previous cards read flat and identical, same eyebrow, same bullet
 // list, same color. Operators flipping through them couldn't tell which
 // venture was further along or which had personality.
 //
 // New design language:
 //   1. Big monogram (the venture's first letter as a 96px gradient glyph).
 //      Each venture earns its own visual identity from glyph alone.
-//   2. Color-tinted gradient background per venture — not all gold.
+//   2. Color-tinted gradient background per venture, not all gold.
 //   3. Stage indicator: 5-segment progress bar showing where the venture
 //      sits in the studio playbook (Research → Partner → Build → Traction
 //      → Revenue). Reads at a glance.
-//   4. Launch ETA badge — "Q2 2026" mono uppercase. Reduces "vaporware"
+//   4. Launch ETA badge: "Q2 2026" mono uppercase. Reduces "vaporware"
 //      perception of the whole pipeline by anchoring each card to a date.
 //   5. Hover: card lifts + glow blooms in the venture's color, monogram
 //      scales 1.05× with a 200ms transition. Reads as "this thing is alive."
@@ -290,7 +290,7 @@ export function VenturePipeline() {
               ))}
             </ul>
 
-            {/* Stage indicator — 5-segment progress bar */}
+            {/* Stage indicator: 5-segment progress bar */}
             <div
               style={{
                 position: 'relative',

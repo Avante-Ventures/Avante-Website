@@ -1,12 +1,12 @@
-// Internal preview — Concept 2A (7/10 base) + 3 new map treatments.
+// Internal preview: Concept 2A (7/10 base) + 3 new map treatments.
 //
 // User confirmed Concept 2A is on the right track but missed the visual
 // geographic anchor. Three new variants experiment with how to put maps
 // back without making them feel like stock decoration:
 //   - 2A base (text-only masthead, current 7/10 reference)
-//   - 2D: Geo Strip Masthead — both maps recolored, small, with city pins
-//   - 2E: Brazil Hero / SF Inset — Brazil prominent, SF small inset
-//   - 2F: Live Operations Terminal — no maps, Bloomberg-style status feed
+//   - 2D: Geo Strip Masthead, both maps recolored, small, with city pins
+//   - 2E: Brazil Hero / SF Inset, Brazil prominent, SF small inset
+//   - 2F: Live Operations Terminal, no maps, Bloomberg-style status feed
 
 import { Helmet } from 'react-helmet-async'
 import { HeroV2A_Masthead } from '@/app/components/heroes/HeroV2A_Masthead'
@@ -25,21 +25,21 @@ const CONCEPTS = [
   },
   {
     letter: '2D',
-    name: 'Geo Strip Masthead — maps return, recolored',
+    name: 'Geo Strip Masthead: maps return, recolored',
     pitch:
       'Both maps return as a small horizontal strip ABOVE the wordmark. USA (gold-tinted, ~50px) → animated dotted gradient ribbon → Brazil (purple-tinted, ~70px). City pins pulse on each. The maps are now branded artifacts, not stock decoration. Text dateline tucked below in tighter caps.',
     Component: HeroV2D_GeoStrip,
   },
   {
     letter: '2E',
-    name: 'Brazil Hero / SF Inset — hierarchy matches the brand',
+    name: 'Brazil Hero / SF Inset: hierarchy matches the brand',
     pitch:
       'Brazil BIG (~280px tall, purple glow) on the right column with SP/Rio/BH pins floating + a labeled "São Paulo · HQ" badge. Top-right corner: small SF inset card with a tiny USA map and "+ San Francisco · Capital · Playbook source". The visual hierarchy literally is the brand promise.',
     Component: HeroV2E_BrazilHero,
   },
   {
     letter: '2F',
-    name: 'Live Operations Terminal — no maps, but undeniable',
+    name: 'Live Operations Terminal: no maps, but undeniable',
     pitch:
       'Replaces the dateline with a Bloomberg-style live status panel. Cycles every 4s through "SP · 3 ventures incubating", "SF · capital partner", "GLOBAL · 50% target IRR", "NEXT · Q3 2026 cohort accepting founders". Geography is implied by city codes. Reads as "active operation, not a brochure."',
     Component: HeroV2F_LiveTerminal,
@@ -51,7 +51,7 @@ export default function HeroConceptsPage() {
     <LanguageProvider locale="en">
       <div style={{ background: '#08091A', color: '#FFFFFF' }}>
         <Helmet>
-          <title>Hero Concepts — 2A + map proposals (internal preview)</title>
+          <title>Hero Concepts: 2A + map proposals (internal preview)</title>
           <meta name="robots" content="noindex,nofollow" />
           <meta name="googlebot" content="noindex,nofollow" />
         </Helmet>
@@ -100,7 +100,7 @@ export default function HeroConceptsPage() {
             2A is the 7/10 baseline (text-only masthead). 2D returns the maps as
             branded artifacts in a strip masthead. 2E makes Brazil the visual
             hero with SF as inset. 2F drops the maps entirely for a live
-            operations terminal. Pick one — or combine (e.g. "2D masthead + 2E
+            operations terminal. Pick one, or combine (e.g. "2D masthead + 2E
             Brazil right column" is the most ambitious combo).
           </p>
 

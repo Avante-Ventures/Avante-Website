@@ -16,24 +16,24 @@ const ProofSectionComponent = () => {
       value: '2014',
       color: '#42468C',
       context: t(
-        'iFood — early investment by our team (pre-unicorn era)',
-        'iFood — investimento inicial pelo nosso time (era pré-unicórnio)'
+        'iFood: early investment by our team (pre-unicorn era)',
+        'iFood: investimento inicial pelo nosso time (era pré-unicórnio)'
       ),
     },
     {
       value: '10x',
       color: '#98509A',
       context: t(
-        'Exit multiple — Sigga Technologies (Board: Amanda Pinheiro)',
-        'Múltiplo de exit — Sigga Technologies (Conselho: Amanda Pinheiro)'
+        'Exit multiple: Sigga Technologies (Board: Amanda Pinheiro)',
+        'Múltiplo de exit: Sigga Technologies (Conselho: Amanda Pinheiro)'
       ),
     },
     {
       value: '4x',
       color: '#F18B46',
       context: t(
-        'MOI — Accera investment (Innova Capital era)',
-        'MOI — investimento Accera (era Innova Capital)'
+        'MOI: Accera investment (Innova Capital era)',
+        'MOI: investimento Accera (era Innova Capital)'
       ),
     },
     {

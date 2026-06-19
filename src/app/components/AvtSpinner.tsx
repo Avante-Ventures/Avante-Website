@@ -7,14 +7,14 @@
 //
 // Why the brand mark instead of a generic ring spinner: every loading
 // moment is a brand impression. Stripe's wordmark pulse, Linear's logo
-// fade, GitHub's spinning octocat — same playbook. The cost is zero
+// fade, GitHub's spinning octocat, same playbook. The cost is zero
 // (already shipping the asset) and the perceived loading time drops
 // because the user reads "Avante is loading" not "system is busy".
 
 import { AvanteLockup } from '@/app/components/AvanteLockup'
 
 export interface AvtSpinnerProps {
-  /** Visual size — pulls from AvanteLockup token table. Default `lg`. */
+  /** Visual size: pulls from AvanteLockup token table. Default `lg`. */
   size?: 'md' | 'lg' | 'xl'
   /** Optional caption rendered below the mark in mono uppercase. */
   caption?: string

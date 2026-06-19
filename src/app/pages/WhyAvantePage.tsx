@@ -37,7 +37,7 @@ const FAQ_COPY = {
     },
     {
       q: "What returns do venture studios generate compared to traditional VC?",
-      a: "Industry data shows venture studios generate approximately 50% annualized IRR over 10-year vintages, versus approximately 19% for traditional VC funds in similar periods. The gap is structural — driven by operational depth and entry-stage advantages — not a survivorship artifact.",
+      a: "Industry data shows venture studios generate approximately 50% annualized IRR over 10-year vintages, versus approximately 19% for traditional VC funds in similar periods. The gap is structural, driven by operational depth and entry-stage advantages, not a survivorship artifact.",
     },
     {
       q: "Why do venture studios outperform traditional VC?",
@@ -45,7 +45,7 @@ const FAQ_COPY = {
     },
     {
       q: "At what stage does Avante invest?",
-      a: "First ticket, always. Avante co-founds at pre-traction — before product, before customers — and accompanies operationally through to the next institutional round. Avante does not write follow-on checks into companies founded by others.",
+      a: "First ticket, always. Avante co-founds at pre-traction (before product, before customers) and accompanies operationally through to the next institutional round. Avante does not write follow-on checks into companies founded by others.",
     },
     {
       q: "Why focus on Brazil for AI-native venture building?",
@@ -59,7 +59,7 @@ const FAQ_COPY = {
     },
     {
       q: "Quais retornos os venture studios geram em comparação ao VC tradicional?",
-      a: "Dados da indústria mostram que venture studios geram aproximadamente 50% de IRR anualizado em vintages de 10 anos, contra aproximadamente 19% de fundos de VC tradicionais em períodos comparáveis. A diferença é estrutural — derivada de profundidade operacional e vantagens de estágio de entrada — não um artefato de sobrevivência.",
+      a: "Dados da indústria mostram que venture studios geram aproximadamente 50% de IRR anualizado em vintages de 10 anos, contra aproximadamente 19% de fundos de VC tradicionais em períodos comparáveis. A diferença é estrutural, derivada de profundidade operacional e vantagens de estágio de entrada, não um artefato de sobrevivência.",
     },
     {
       q: "Por que os venture studios superam o VC tradicional?",
@@ -67,7 +67,7 @@ const FAQ_COPY = {
     },
     {
       q: "Em que estágio a Avante investe?",
-      a: "Primeiro cheque, sempre. A Avante co-funda em pré-tração — antes do produto, antes dos clientes — e acompanha operacionalmente até a próxima rodada institucional. A Avante não emite cheques de follow-on em empresas fundadas por terceiros.",
+      a: "Primeiro cheque, sempre. A Avante co-funda em pré-tração (antes do produto, antes dos clientes) e acompanha operacionalmente até a próxima rodada institucional. A Avante não emite cheques de follow-on em empresas fundadas por terceiros.",
     },
     {
       q: "Por que focar no Brasil para construção de empresas AI-native?",
@@ -81,7 +81,7 @@ const FAQ_COPY = {
     },
     {
       q: "¿Qué retornos generan los venture studios comparados con el VC tradicional?",
-      a: "Datos de la industria muestran que los venture studios generan aproximadamente 50% de IRR anualizado en vintages de 10 años, contra aproximadamente 19% de fondos de VC tradicionales en períodos comparables. La diferencia es estructural — derivada de profundidad operativa y ventajas de etapa de entrada — no un artefacto de supervivencia.",
+      a: "Datos de la industria muestran que los venture studios generan aproximadamente 50% de IRR anualizado en vintages de 10 años, contra aproximadamente 19% de fondos de VC tradicionales en períodos comparables. La diferencia es estructural, derivada de profundidad operativa y ventajas de etapa de entrada, no un artefacto de supervivencia.",
     },
     {
       q: "¿Por qué los venture studios superan al VC tradicional?",
@@ -89,7 +89,7 @@ const FAQ_COPY = {
     },
     {
       q: "¿En qué etapa invierte Avante?",
-      a: "Primer cheque, siempre. Avante co-funda en pre-tracción — antes del producto, antes de los clientes — y acompaña operativamente hasta la siguiente ronda institucional. Avante no emite cheques de follow-on en empresas fundadas por terceros.",
+      a: "Primer cheque, siempre. Avante co-funda en pre-tracción (antes del producto, antes de los clientes) y acompaña operativamente hasta la siguiente ronda institucional. Avante no emite cheques de follow-on en empresas fundadas por terceros.",
     },
     {
       q: "¿Por qué enfocarse en Brasil para construcción de empresas AI-native?",
@@ -396,8 +396,8 @@ export default function WhyAvantePage() {
             }
             description={
               language === 'pt'
-                ? 'Os mesmos vintages, métricas comparáveis. Os números são da indústria — não nossos.'
-                : 'Same vintages, comparable metrics. The numbers are industry data — not ours.'
+                ? 'Os mesmos vintages, métricas comparáveis. Os números são da indústria, não nossos.'
+                : 'Same vintages, comparable metrics. The numbers are industry data, not ours.'
             }
           />
 
@@ -790,7 +790,7 @@ export default function WhyAvantePage() {
                 maxWidth: '700px',
                 margin: '0 auto'
               }}>
-                This dual approach allows us to capture alpha at every stage—building from scratch where opportunity is clearest, and investing early where exceptional teams are already proving the model.
+                This dual approach allows us to capture alpha at every stage: building from scratch where opportunity is clearest, and investing early where exceptional teams are already proving the model.
               </p>
             </div>
           </div>

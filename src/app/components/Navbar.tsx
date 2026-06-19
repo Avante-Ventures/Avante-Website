@@ -1,4 +1,4 @@
-// Navbar — Phase B editorial refactor.
+// Navbar: Phase B editorial refactor.
 //
 // Old (rev a3): glass card pill, gradient pixel logo, large gradient CTA
 // "Contact" pill. Read like a SaaS marketing site.
@@ -21,11 +21,11 @@ import { Link, useLocation } from 'react-router'
 import { useLanguage } from '@/app/hooks/useLanguage'
 import { AvanteLockup } from '@/app/components/AvanteLockup'
 
-// Contact CTA flag — set via Vercel env variable.
-// Values: 'shown' (default — neutral "Contact" CTA) or 'hidden' (CTA hidden
+// Contact CTA flag, set via Vercel env variable.
+// Values: 'shown' (default: neutral "Contact" CTA) or 'hidden' (CTA hidden
 // entirely). Variable name kept (`VITE_VINTAGE_STATUS`) for backward
 // Vercel-env compatibility; the CTA no longer carries any LP / fund-raise
-// semantics or pulse — it is a plain link to the contact anchor.
+// semantics or pulse; it is a plain link to the contact anchor.
 const VINTAGE_STATUS = (import.meta.env.VITE_VINTAGE_STATUS ?? 'shown') as
   | 'shown'
   | 'hidden'
@@ -138,7 +138,7 @@ export function Navbar() {
           className="flex items-center justify-between px-6 lg:px-12"
           style={{ height: '72px', maxWidth: '1440px', margin: '0 auto' }}
         >
-          {/* Lockup — links to home with current locale */}
+          {/* Lockup: links to home with current locale */}
           <Link
             to={`/${language}`}
             aria-label="Avante — Home"
@@ -147,7 +147,7 @@ export function Navbar() {
             <AvanteLockup size="sm" />
           </Link>
 
-          {/* Center nav links — desktop only */}
+          {/* Center nav links, desktop only */}
           <div className="hidden lg:flex items-center" style={{ gap: '36px' }}>
             {navLinks.map((link) => {
               const active = isLinkActive(link)

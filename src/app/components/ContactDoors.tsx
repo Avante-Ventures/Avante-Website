@@ -39,9 +39,9 @@ const DOORS: DoorSpec[] = [
     },
     title: { en: 'Contact.', pt: 'Contato.', es: 'Contacto.' },
     body: {
-      en: 'General inquiries — partnerships, press, or anything else. A partner replies, signed, within seven days. We read every message.',
-      pt: 'Consultas gerais — parcerias, imprensa, ou qualquer outra coisa. Um partner responde, assinado, em sete dias. Lemos cada mensagem.',
-      es: 'Consultas generales — alianzas, prensa, o cualquier otra cosa. Un partner responde, firmado, en siete días. Leemos cada mensaje.',
+      en: 'General inquiries: partnerships, press, or anything else. A partner replies, signed, within seven days. We read every message.',
+      pt: 'Consultas gerais: parcerias, imprensa, ou qualquer outra coisa. Um partner responde, assinado, em sete dias. Lemos cada mensagem.',
+      es: 'Consultas generales: alianzas, prensa, o cualquier otra cosa. Un partner responde, firmado, en siete días. Leemos cada mensaje.',
     },
     email: 'cristian@avanteventures.com',
     emphasize: true,

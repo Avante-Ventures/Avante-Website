@@ -19,8 +19,8 @@ incompatibles (`1` vs `2` vs `3` ventures activas), una promesa de reducción de
 que el propio equipo documentó como no garantizable y que sigue publicada en el ticker, y una
 oficina (Bogotá) anunciada en el ticker que no existe en ninguna otra parte del sitio.
 
-Segundo, hay **deuda de contenido e i18n**: las biografías y títulos del equipo —el contenido
-de mayor peso de confianza— están codificados solo en inglés y se renderizan sin traducir en la
+Segundo, hay **deuda de contenido e i18n**: las biografías y títulos del equipo, el contenido
+de mayor peso de confianza, están codificados solo en inglés y se renderizan sin traducir en la
 versión en portugués; tres enlaces de artículos apuntan a `/contact`, una ruta inexistente que
 da 404; y la página 404 no emite metadatos (sin `noindex`, título genérico, HTTP 200). El resto
 es **código muerto duplicado** (`TeamGrid`, `VenturesGrid`, `LogoGrid`, `ProofSection` y ~20
@@ -41,8 +41,8 @@ en vivo y arreglar el enlace roto antes que limpiar el código muerto.
 | **Total**   |       **34**       |
 
 Leyenda de acción:
-- **NECESITA DATOS DEL DUEÑO** — no se puede autoarreglar; requiere que el equipo confirme el hecho real (título, métrica, año, número de oficinas).
-- **AUTO-ARREGLABLE** — cambio mecánico/cosmético que se puede aplicar sin nueva información.
+- **NECESITA DATOS DEL DUEÑO**: no se puede autoarreglar; requiere que el equipo confirme el hecho real (título, métrica, año, número de oficinas).
+- **AUTO-ARREGLABLE**: cambio mecánico/cosmético que se puede aplicar sin nueva información.
 
 ---
 
@@ -52,7 +52,7 @@ Leyenda de acción:
 - **Archivo:** `src/app/pages/PortfolioPage.tsx:157` (y comentario en `:342`)
 - **Severidad:** Critical
 - **Qué está mal:** La tarjeta de Accera muestra `highlight: 'MOI 5×'`, pero el timeline de la misma página (`:916`), el `EditorialTicker.tsx:41` (en vivo en la home), `ProofSection.tsx:32` y `TeamGrid.tsx:22` dicen `4×`. Es un múltiplo financiero contradictorio, visible para inversores, sobre el track record del equipo. El valor `4×` es el dominante en el sitio.
-- **Fix sugerido:** Cambiar `:157` a `'MOI 4×'` y actualizar el comentario en `:342`, salvo que el dueño confirme que el múltiplo realizado correcto es `5×` — en cuyo caso hay que actualizar todas las demás referencias a `5×`.
+- **Fix sugerido:** Cambiar `:157` a `'MOI 4×'` y actualizar el comentario en `:342`, salvo que el dueño confirme que el múltiplo realizado correcto es `5×`, en cuyo caso hay que actualizar todas las demás referencias a `5×`.
 - **Acción:** **NECESITA DATOS DEL DUEÑO** (confirmar el múltiplo real de Accera).
 
 ---
@@ -62,7 +62,7 @@ Leyenda de acción:
 ### 2. Múltiplo de Sigga: `11×` en la tarjeta de portafolio vs `10×` en todo el resto del sitio
 - **Archivo:** `src/app/pages/PortfolioPage.tsx:145` (y comentario en `:342`)
 - **Severidad:** High
-- **Qué está mal:** La tarjeta de Sigga muestra `'MOI 11×'`, único caso en todo el código. El resto —el ancla featured de la misma página (`:779`), el timeline (`:917`), la descripción SEO (`:178/184/190`), `EditorialTicker`, `ProofSection`, `InvestorsPage`, el artículo de caso de estudio y hasta el slug `sigga-case-study-10x-exit`— dice `10×`. Contradicción a pocos píxeles de distancia en la misma página.
+- **Qué está mal:** La tarjeta de Sigga muestra `'MOI 11×'`, único caso en todo el código. El resto, el ancla featured de la misma página (`:779`), el timeline (`:917`), la descripción SEO (`:178/184/190`), `EditorialTicker`, `ProofSection`, `InvestorsPage`, el artículo de caso de estudio y hasta el slug `sigga-case-study-10x-exit`, dice `10×`. Contradicción a pocos píxeles de distancia en la misma página.
 - **Fix sugerido:** Cambiar `:145` a `'MOI 10×'` (o `'Exit 10×'`) y actualizar el comentario en `:342`. Si `11×` fuera correcto, actualizar todas las demás referencias.
 - **Acción:** **NECESITA DATOS DEL DUEÑO** (confirmar el múltiplo real de Sigga).
 
@@ -87,7 +87,7 @@ Leyenda de acción:
 - **Fix sugerido:** Si solo hay dos oficinas, cambiar el ticker a `'SP · SF'`. Si Bogotá es real, añadir un tercer reloj y actualizar el resto del sitio a tres ciudades.
 - **Acción:** **NECESITA DATOS DEL DUEÑO** (confirmar número real de oficinas).
 
-### 6. Títulos y biografías del equipo codificados solo en inglés — se renderizan sin traducir en el sitio PT
+### 6. Títulos y biografías del equipo codificados solo en inglés, se renderizan sin traducir en el sitio PT
 - **Archivo:** `src/app/components/TeamSection.tsx:24-64` (datos); render en `:227` y `:271`
 - **Severidad:** High
 - **Qué está mal:** `TeamSection` define el helper `t(en, pt)` y lo usa para el eyebrow/título/descripción, pero cada `title` y cada entrada de `highlights` son literales en inglés que evitan `t()`. En `/pt` el visitante ve los títulos y credenciales del equipo en inglés ("Co-Founder & Partner - Avante", "CFO at Innova Capital and Unbox Capital", "$500M+ managed in venture", etc.). Es el contenido de mayor peso de confianza de la home, sin traducir para usuarios en portugués.
@@ -136,7 +136,7 @@ Leyenda de acción:
 ### 12. Jess Mah: dos títulos distintos y descripciones inDinero/Mahway divergentes entre TeamSection y TeamGrid
 - **Archivo:** `src/app/components/TeamSection.tsx:46,49`; `src/app/components/TeamGrid.tsx:45,46`
 - **Severidad:** Medium
-- **Qué está mal:** `TeamSection` la lista como "Partner & Co-Founder - Mahway" con "Sequoia Scout"; `TeamGrid` como "Strategic Advisor" con "YC, inDinero founder, Forbes 30 Under 30". Títulos (core partner vs advisor) y credenciales (Sequoia Scout vs YC/Forbes) divergen. (Nota: `TeamGrid` es código muerto — ver §28.)
+- **Qué está mal:** `TeamSection` la lista como "Partner & Co-Founder - Mahway" con "Sequoia Scout"; `TeamGrid` como "Strategic Advisor" con "YC, inDinero founder, Forbes 30 Under 30". Títulos (core partner vs advisor) y credenciales (Sequoia Scout vs YC/Forbes) divergen. (Nota: `TeamGrid` es código muerto, ver §28.)
 - **Fix sugerido:** Reconciliar el rol y unificar la lista de credenciales entre ambos componentes (o borrar `TeamGrid`).
 - **Acción:** **NECESITA DATOS DEL DUEÑO** (confirmar título y credenciales de Jess).
 
@@ -171,7 +171,7 @@ Leyenda de acción:
 ### 17. Componente duplicado obsoleto: `ProofSection.tsx` huérfano duplica métricas de track record (incluye Accera `4×` conflictivo)
 - **Archivo:** `src/app/components/ProofSection.tsx:23-47`
 - **Severidad:** Medium
-- **Qué está mal:** `ProofSection` nunca se importa/renderiza (los comentarios en `PortfolioPage.tsx:336-344` confirman que las métricas se reubicaron a las tarjetas de portafolio para "evitar proof duplicado"). El huérfano conserva su propia copia de `10× / 4× / $500MM+`. Carga Accera en `4×`, que ya discrepa con el `5×` de `PortfolioPage` (ver §1) — reactivarlo expondría el conflicto.
+- **Qué está mal:** `ProofSection` nunca se importa/renderiza (los comentarios en `PortfolioPage.tsx:336-344` confirman que las métricas se reubicaron a las tarjetas de portafolio para "evitar proof duplicado"). El huérfano conserva su propia copia de `10× / 4× / $500MM+`. Carga Accera en `4×`, que ya discrepa con el `5×` de `PortfolioPage` (ver §1), y reactivarlo expondría el conflicto.
 - **Fix sugerido:** Borrar `ProofSection.tsx` para que estas métricas vivan solo en las tarjetas de portafolio.
 - **Acción:** **AUTO-ARREGLABLE** (borrar código muerto).
 
@@ -218,7 +218,7 @@ Leyenda de acción:
 
 ### Formato / nombres / métricas
 
-### 23. `$500M+` vs `$500MM+` — misma cifra, dos abreviaturas de magnitud distintas
+### 23. `$500M+` vs `$500MM+`, misma cifra, dos abreviaturas de magnitud distintas
 - **Archivo:** `src/app/pages/InvestorsPage.tsx:164` (`M+`) vs `ProofSection.tsx:40`, `EditorialTicker.tsx:39`, `TeamGrid.tsx:22`, `PortfolioPage.tsx:641` (`MM+`)
 - **Severidad:** Low
 - **Qué está mal:** La misma cifra de capital desplegado por el equipo fundador se escribe con `M` y con `MM`; puede leerse como dos magnitudes distintas.
@@ -260,7 +260,7 @@ Leyenda de acción:
 ### 28. Label "Building & Investing" dejado en inglés en la rama PT
 - **Archivo:** `src/app/pages/PortfolioPage.tsx:640`
 - **Severidad:** Low
-- **Qué está mal:** `t('Building & Investing', 'Building & Investing')` — el argumento PT es idéntico al EN, mientras el `value` compañero sí está traducido (`Since 2010` → `Desde 2010`). Borderline: el studio mantiene "Building" como anglicismo de marca en otros lugares.
+- **Qué está mal:** `t('Building & Investing', 'Building & Investing')`: el argumento PT es idéntico al EN, mientras el `value` compañero sí está traducido (`Since 2010` → `Desde 2010`). Borderline: el studio mantiene "Building" como anglicismo de marca en otros lugares.
 - **Fix sugerido:** Proveer traducción PT (p. ej. "Construindo & Investindo"), o confirmar que es un anglicismo de marca intencional.
 - **Acción:** **NECESITA DATOS DEL DUEÑO** (decisión de marca).
 
@@ -299,7 +299,7 @@ Leyenda de acción:
 ### 33. `LogoGrid.tsx` huérfano referencia un nombre de venture (`Clareo`) que no existe en ninguna otra parte
 - **Archivo:** `src/app/components/LogoGrid.tsx:8-11`
 - **Severidad:** Low
-- **Qué está mal:** Nunca renderizado (el strip en vivo es `SocialProofStrip`). Lista "Clareo — Litigation Finance"; "Clareo" no aparece en ningún otro archivo — la venture real de litigation finance es "Alpha Lit". `LogoCarousel.tsx` es un tercer strip también huérfano.
+- **Qué está mal:** Nunca renderizado (el strip en vivo es `SocialProofStrip`). Lista "Clareo — Litigation Finance"; "Clareo" no aparece en ningún otro archivo, la venture real de litigation finance es "Alpha Lit". `LogoCarousel.tsx` es un tercer strip también huérfano.
 - **Fix sugerido:** Borrar `LogoGrid.tsx` y `LogoCarousel.tsx`, o reemplazar "Clareo" por "Alpha Lit".
 - **Acción:** **AUTO-ARREGLABLE** (borrar código muerto).
 
@@ -314,31 +314,31 @@ Leyenda de acción:
 
 ## Orden de arreglo recomendado
 
-**Fase 1 — Métricas en vivo que dañan credibilidad ante inversores (requieren confirmación del dueño, luego edición mínima):**
-1. §1 (Critical) Accera `5×` vs `4×` — confirmar múltiplo real y unificar.
-2. §2 (High) Sigga `11×` vs `10×` — confirmar y unificar a `10×`.
-3. §4 (High) Reducción de costos 90% WIR en el ticker — reformular o quitar.
-4. §5 (High) Oficinas `SP · SF · BOG` vs dos ciudades — confirmar número de oficinas.
-5. §7 (Medium) Conteo de ventures activas `1`/`2`/`3` — fijar canónico.
+**Fase 1: Métricas en vivo que dañan credibilidad ante inversores (requieren confirmación del dueño, luego edición mínima):**
+1. §1 (Critical) Accera `5×` vs `4×`, confirmar múltiplo real y unificar.
+2. §2 (High) Sigga `11×` vs `10×`, confirmar y unificar a `10×`.
+3. §4 (High) Reducción de costos 90% WIR en el ticker, reformular o quitar.
+4. §5 (High) Oficinas `SP · SF · BOG` vs dos ciudades, confirmar número de oficinas.
+5. §7 (Medium) Conteo de ventures activas `1`/`2`/`3`, fijar canónico.
 
-**Fase 2 — Roto funcional / SEO de alto valor:**
-6. §3 (High) Enlaces `/contact` 404 en artículos (EN/PT/ES) — repuntar a ruta válida.
-7. §6 (High) Bios del equipo sin traducir en PT — envolver en `t(en, pt)`.
-8. §14 (Medium) Metadatos de la 404 — añadir `<SEOHelmet noindex>`.
-9. §15 (Medium) JSON-LD de fundadores obsoleto — sincronizar con `TeamSection`.
+**Fase 2: Roto funcional / SEO de alto valor:**
+6. §3 (High) Enlaces `/contact` 404 en artículos (EN/PT/ES), repuntar a ruta válida.
+7. §6 (High) Bios del equipo sin traducir en PT, envolver en `t(en, pt)`.
+8. §14 (Medium) Metadatos de la 404, añadir `<SEOHelmet noindex>`.
+9. §15 (Medium) JSON-LD de fundadores obsoleto, sincronizar con `TeamSection`.
 
-**Fase 3 — Consistencia de contenido (mayoría auto-arreglable):**
+**Fase 3: Consistencia de contenido (mayoría auto-arreglable):**
 10. §10 (Medium) Renumerar el teaser de principles de la home.
 11. §9 (Medium) Año de Accera `2014` vs `2018`.
 12. §8 (Medium) Membresía de BR Auction Intel.
 13. §11–§13, §18–§20 Reconciliar atribuciones y bios del equipo (mayoría se resuelve borrando `TeamGrid`, §31).
 
-**Fase 4 — Eliminar código muerto (desbloquea y previene futuras contradicciones):**
+**Fase 4: Eliminar código muerto (desbloquea y previene futuras contradicciones):**
 14. §16 (Medium) Borrar el bloque hero `{false && ...}` y/o restaurar el import.
 15. §17, §31, §32, §33, §34 Borrar `ProofSection`, `TeamGrid`, `VenturesGrid`, `LogoGrid`/`LogoCarousel`, `WirWebsite` y demás huérfanos. **Hacer esto elimina la raíz de §12, §13, §18, §19, §23, §24 y §27 de un solo golpe.**
 
-**Fase 5 — Pulido cosmético:**
-16. §21, §22, §23, §24, §25, §28, §29, §30 — formato, casing, fechas y traducciones puntuales.
+**Fase 5: Pulido cosmético:**
+16. §21, §22, §23, §24, §25, §28, §29, §30: formato, casing, fechas y traducciones puntuales.
 
 > Nota estratégica: borrar el código muerto (Fase 4) antes que reconciliar bios manualmente
 > (Fase 3) ahorra trabajo, porque la mayoría de las contradicciones de títulos del equipo

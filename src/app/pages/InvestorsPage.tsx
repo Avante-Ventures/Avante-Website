@@ -47,19 +47,19 @@ const FAQ_COPY = {
     },
     {
       q: "What returns does Avante target for LPs?",
-      a: "The reference benchmark is the GSSN industry data: venture studios generate ~50% annualized IRR over 10-year vintages versus ~19% for traditional VC. Avante targets the structural advantage that drives this gap — operating depth at week one, capital efficiency by design, and no losing competitive deal sourcing.",
+      a: "The reference benchmark is the GSSN industry data: venture studios generate ~50% annualized IRR over 10-year vintages versus ~19% for traditional VC. Avante targets the structural advantage that drives this gap: operating depth at week one, capital efficiency by design, and no losing competitive deal sourcing.",
     },
     {
       q: "What is the typical Avante investment structure for LPs?",
-      a: "LPs gain exposure across the full annual cohort of 3–4 ventures co-founded by Avante — not single-deal selection risk. Operating partners hold studio economics; LPs hold capital economics. Reporting is quarterly with cohort-level NAV transparency. Specific terms (target fund size, GP commitment, fee model, distribution waterfall) are shared in a structured LP conversation.",
+      a: "LPs gain exposure across the full annual cohort of 3–4 ventures co-founded by Avante, not single-deal selection risk. Operating partners hold studio economics; LPs hold capital economics. Reporting is quarterly with cohort-level NAV transparency. Specific terms (target fund size, GP commitment, fee model, distribution waterfall) are shared in a structured LP conversation.",
     },
     {
       q: "What is Avante's track record?",
-      a: "The founding team has historically deployed $500M+ in venture and growth capital. The most recent realized outcome is Sigga Technologies — a 10× exit in industrial software, with Avante operators involved through fundraising, GTM, and exit prep. Active studio cohort includes Mahway, WIR, and Bamboo DCM.",
+      a: "The founding team has historically deployed $500M+ in venture and growth capital. The most recent realized outcome is Sigga Technologies, a 10× exit in industrial software, with Avante operators involved through fundraising, GTM, and exit prep. Active studio cohort includes Mahway, WIR, and Bamboo DCM.",
     },
     {
       q: "What will Avante NOT do as a venture studio?",
-      a: "Avante will not share LP names or identities (confidential by default), will not provide financial advice or tax structuring (LPs engage their own counsel), will not run a parallel co-investment vehicle without explicit governance, and will not launch ventures whose primary buyer is the LP base — customer markets are independent of capital markets.",
+      a: "Avante will not share LP names or identities (confidential by default), will not provide financial advice or tax structuring (LPs engage their own counsel), will not run a parallel co-investment vehicle without explicit governance, and will not launch ventures whose primary buyer is the LP base. Customer markets are independent of capital markets.",
     },
   ],
   pt: [
@@ -69,19 +69,19 @@ const FAQ_COPY = {
     },
     {
       q: "Quais retornos a Avante busca para LPs?",
-      a: "O benchmark de referência são os dados da indústria GSSN: venture studios geram ~50% de IRR anualizado em vintages de 10 anos versus ~19% de VC tradicional. A Avante busca a vantagem estrutural que gera esse gap — profundidade operacional desde a semana um, eficiência de capital por design e ausência de sourcing competitivo perdido.",
+      a: "O benchmark de referência são os dados da indústria GSSN: venture studios geram ~50% de IRR anualizado em vintages de 10 anos versus ~19% de VC tradicional. A Avante busca a vantagem estrutural que gera esse gap: profundidade operacional desde a semana um, eficiência de capital por design e ausência de sourcing competitivo perdido.",
     },
     {
       q: "Qual é a estrutura típica de investimento da Avante para LPs?",
-      a: "LPs ganham exposição em toda a cohort anual de 3–4 ventures co-fundadas pela Avante — não risco de seleção de deal único. Operating partners ficam com a economics do studio; LPs ficam com a economics de capital. Reporting trimestral com transparência de NAV no nível de cohort. Termos específicos (target de fund size, GP commitment, modelo de fees, distribution waterfall) são compartilhados em uma conversa estruturada de LP.",
+      a: "LPs ganham exposição em toda a cohort anual de 3–4 ventures co-fundadas pela Avante, não risco de seleção de deal único. Operating partners ficam com a economics do studio; LPs ficam com a economics de capital. Reporting trimestral com transparência de NAV no nível de cohort. Termos específicos (target de fund size, GP commitment, modelo de fees, distribution waterfall) são compartilhados em uma conversa estruturada de LP.",
     },
     {
       q: "Qual é o track record da Avante?",
-      a: "O time fundador deployou historicamente mais de US$ 500M em capital de venture e growth. O resultado realizado mais recente é Sigga Technologies — um exit de 10× em software industrial, com operadores Avante envolvidos em fundraising, GTM e prep de exit. A cohort ativa do studio inclui Mahway, WIR e Bamboo DCM.",
+      a: "O time fundador deployou historicamente mais de US$ 500M em capital de venture e growth. O resultado realizado mais recente é Sigga Technologies, um exit de 10× em software industrial, com operadores Avante envolvidos em fundraising, GTM e prep de exit. A cohort ativa do studio inclui Mahway, WIR e Bamboo DCM.",
     },
     {
       q: "O que a Avante NÃO faz como venture studio?",
-      a: "A Avante não compartilha nomes de LPs ou identidades (confidencial por padrão), não dá conselho financeiro ou estruturação tributária (LPs contratam seus próprios advisors), não roda veículo paralelo de co-investment sem governança explícita, e não lança ventures cujo comprador principal é a base de LPs — mercados de cliente são independentes do mercado de capital.",
+      a: "A Avante não compartilha nomes de LPs ou identidades (confidencial por padrão), não dá conselho financeiro ou estruturação tributária (LPs contratam seus próprios advisors), não roda veículo paralelo de co-investment sem governança explícita, e não lança ventures cujo comprador principal é a base de LPs. Mercados de cliente são independentes do mercado de capital.",
     },
   ],
   es: [
@@ -91,19 +91,19 @@ const FAQ_COPY = {
     },
     {
       q: "¿Qué retornos busca Avante para los LPs?",
-      a: "El benchmark de referencia son los datos de la industria GSSN: los venture studios generan ~50% de IRR anualizado en vintages de 10 años versus ~19% del VC tradicional. Avante busca la ventaja estructural que genera ese gap — profundidad operativa desde la semana uno, eficiencia de capital por diseño y ausencia de sourcing competitivo perdido.",
+      a: "El benchmark de referencia son los datos de la industria GSSN: los venture studios generan ~50% de IRR anualizado en vintages de 10 años versus ~19% del VC tradicional. Avante busca la ventaja estructural que genera ese gap: profundidad operativa desde la semana uno, eficiencia de capital por diseño y ausencia de sourcing competitivo perdido.",
     },
     {
       q: "¿Cuál es la estructura típica de inversión de Avante para LPs?",
-      a: "Los LPs obtienen exposición en toda la cohort anual de 3–4 ventures co-fundadas por Avante — no riesgo de selección de deal único. Los operating partners tienen la economics del studio; los LPs tienen la economics de capital. Reporting trimestral con transparencia de NAV a nivel de cohort. Términos específicos (target de fund size, GP commitment, modelo de fees, distribution waterfall) se comparten en una conversación estructurada de LP.",
+      a: "Los LPs obtienen exposición en toda la cohort anual de 3–4 ventures co-fundadas por Avante, no riesgo de selección de deal único. Los operating partners tienen la economics del studio; los LPs tienen la economics de capital. Reporting trimestral con transparencia de NAV a nivel de cohort. Términos específicos (target de fund size, GP commitment, modelo de fees, distribution waterfall) se comparten en una conversación estructurada de LP.",
     },
     {
       q: "¿Cuál es el track record de Avante?",
-      a: "El equipo fundador ha desplegado históricamente más de US$ 500M en capital de venture y growth. El resultado realizado más reciente es Sigga Technologies — un exit de 10× en software industrial, con operadores de Avante involucrados en fundraising, GTM y preparación de exit. La cohort activa del studio incluye Mahway, WIR y Bamboo DCM.",
+      a: "El equipo fundador ha desplegado históricamente más de US$ 500M en capital de venture y growth. El resultado realizado más reciente es Sigga Technologies, un exit de 10× en software industrial, con operadores de Avante involucrados en fundraising, GTM y preparación de exit. La cohort activa del studio incluye Mahway, WIR y Bamboo DCM.",
     },
     {
       q: "¿Qué NO hace Avante como venture studio?",
-      a: "Avante no comparte nombres de LPs ni identidades (confidencial por defecto), no da consejo financiero ni estructuración tributaria (los LPs contratan sus propios advisors), no opera un vehículo paralelo de co-investment sin gobernanza explícita, y no lanza ventures cuyo comprador principal sea la base de LPs — los mercados de cliente son independientes del mercado de capital.",
+      a: "Avante no comparte nombres de LPs ni identidades (confidencial por defecto), no da consejo financiero ni estructuración tributaria (los LPs contratan sus propios advisors), no opera un vehículo paralelo de co-investment sin gobernanza explícita, y no lanza ventures cuyo comprador principal sea la base de LPs. Los mercados de cliente son independientes del mercado de capital.",
     },
   ],
 } as const
@@ -201,8 +201,8 @@ export default function InvestorsPage() {
       'Studio escreve primeiro cheque em 3–4 ventures por ano.'
     ),
     t(
-      'LPs gain exposure across the full cohort — not single-deal selection risk.',
-      'LPs ganham exposição em toda a cohort — não risco de seleção de deal único.'
+      'LPs gain exposure across the full cohort, not single-deal selection risk.',
+      'LPs ganham exposição em toda a cohort, não risco de seleção de deal único.'
     ),
     t(
       'Operating partners hold studio economics; LPs hold capital economics. Aligned incentives, separated workload.',
@@ -261,12 +261,12 @@ export default function InvestorsPage() {
         <SectionMasthead
           eyebrow={t('For LPs', 'Para LPs')}
           title={t(
-            'Strategic exposure to AI-native Brazil — through a studio with a 10× exit already in the ground.',
-            'Exposição estratégica ao Brasil AI-native — através de um studio com um exit de 10× já no chão.'
+            'Strategic exposure to AI-native Brazil, through a studio with a 10× exit already in the ground.',
+            'Exposição estratégica ao Brasil AI-native, através de um studio com um exit de 10× já no chão.'
           )}
           description={t(
-            'This page is the public version of how we describe ourselves to LPs. The private version goes deeper on terms, vintage, and pacing — but the thesis, the structure, and the discipline are the same in both.',
-            'Esta página é a versão pública de como nos descrevemos para LPs. A versão privada vai mais fundo em termos, vintage e pacing — mas a tese, estrutura e disciplina são as mesmas em ambas.'
+            'This page is the public version of how we describe ourselves to LPs. The private version goes deeper on terms, vintage, and pacing, but the thesis, the structure, and the discipline are the same in both.',
+            'Esta página é a versão pública de como nos descrevemos para LPs. A versão privada vai mais fundo em termos, vintage e pacing, mas a tese, estrutura e disciplina são as mesmas em ambas.'
           )}
         />
 
@@ -372,8 +372,8 @@ export default function InvestorsPage() {
             compact
             eyebrow={t('Structure', 'Estrutura')}
             title={t(
-              'How the studio is set up — at a public level.',
-              'Como o studio é estruturado — em nível público.'
+              'How the studio is set up, at a public level.',
+              'Como o studio é estruturado, em nível público.'
             )}
             description={t(
               'Specific commercial terms are shared in a private LP conversation. The architecture below is what every conversation starts from.',

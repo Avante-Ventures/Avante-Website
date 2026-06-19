@@ -10,7 +10,7 @@
 // exactly once via IntersectionObserver. We use 0.4 threshold so the cord
 // is comfortably in-view (not just barely peeking) before it fires.
 //
-// Use freely as a section divider replacement — the editorial cord reads
+// Use freely as a section divider replacement: the editorial cord reads
 // more deliberate than a standard `<hr>` and reinforces the brand language.
 
 import { useEffect, useRef } from 'react'
@@ -18,7 +18,7 @@ import { useEffect, useRef } from 'react'
 export interface AvtCordProps {
   /** Final width of the drawn line as a CSS length (e.g. "62%", "420px"). */
   width?: string
-  /** Vertical spacing override. Default 0 — wrap in a parent if you need padding. */
+  /** Vertical spacing override. Default 0. Wrap in a parent if you need padding. */
   style?: React.CSSProperties
   /** Override threshold for IntersectionObserver firing. Default 0.4. */
   threshold?: number

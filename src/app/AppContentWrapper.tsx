@@ -497,10 +497,10 @@ export function AppContent() {
                 }
                 description={
                   language === 'pt'
-                    ? 'Não são valores. São regras que constrangem comportamento — as decisões que já tomamos para gastar tempo operacional nas que ainda restam.'
+                    ? 'Não são valores. São regras que constrangem comportamento: as decisões que já tomamos para gastar tempo operacional nas que ainda restam.'
                     : language === 'es'
-                      ? 'No son valores. Son reglas que limitan el comportamiento — las decisiones que ya tomamos para gastar tiempo operativo en las que quedan.'
-                      : 'Not values. Rules that constrain behavior — the decisions we have already made so we can spend operating time on the ones that are left.'
+                      ? 'No son valores. Son reglas que limitan el comportamiento: las decisiones que ya tomamos para gastar tiempo operativo en las que quedan.'
+                      : 'Not values. Rules that constrain behavior: the decisions we have already made so we can spend operating time on the ones that are left.'
                 }
               />
 
@@ -670,10 +670,10 @@ export function AppContent() {
                 }
                 description={
                   language === 'pt'
-                    ? 'Uma porta. Abre para uma pessoa — não um formulário.'
+                    ? 'Uma porta. Abre para uma pessoa, não um formulário.'
                     : language === 'es'
-                      ? 'Una puerta. Abre a una persona — no un formulario.'
-                      : 'One door. It opens to a person — not a form.'
+                      ? 'Una puerta. Abre a una persona, no un formulario.'
+                      : 'One door. It opens to a person, not a form.'
                 }
                 screenLabel={
                   language === 'pt' ? '§ v — contato' : language === 'es' ? '§ v — contacto' : '§ v — contact'

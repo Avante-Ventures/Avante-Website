@@ -1,6 +1,6 @@
 # SEO + GEO — Pasos pendientes (tu lado)
 
-El stack técnico (Phase 0-5) está deployed. Lo que falta requiere tu cuenta personal — no puedo hacerlo por ti.
+El stack técnico (Phase 0-5) está deployed. Lo que falta requiere tu cuenta personal, no puedo hacerlo por ti.
 
 ## 1. Google Search Console (10 min) — ALTA PRIORIDAD
 
@@ -37,7 +37,7 @@ Antes de publicar el link en LinkedIn, valida el OG image preview:
 
 - **LinkedIn Post Inspector**: https://www.linkedin.com/post-inspector/inspect/https%3A%2F%2Favanteventures.com%2Fen
 - **Twitter Card Validator**: https://cards-dev.twitter.com/validator (pega `https://avanteventures.com/en`)
-- **WhatsApp** simplemente compártelo a un chat de prueba — debería mostrar OG image + título + descripción
+- **WhatsApp** simplemente compártelo a un chat de prueba, debería mostrar OG image + título + descripción
 
 Si el preview se ve mal: dime y regenero el `og-image.png` con composición distinta.
 
@@ -54,7 +54,7 @@ Las citas tardan 2-12 semanas en aparecer porque los LLMs se reentrenan / re-cra
 
 ## 5. Contenido (Phase 6 del plan original) — OPCIONAL pero ALTO ROI
 
-El stack técnico está listo. Pero **GEO = LLMs citan contenido específico**. Tu Library page lista 9 artículos con títulos+descripciones — pero no contenido completo.
+El stack técnico está listo. Pero **GEO = LLMs citan contenido específico**. Tu Library page lista 9 artículos con títulos+descripciones, pero no contenido completo.
 
 Para que los LLMs realmente te citen como fuente autorizada:
 - Escribe **3-5 artículos completos** (1000+ palabras) sobre tus theses
@@ -70,7 +70,7 @@ Cuando tengas los drafts en md/google docs/lo que sea, pásamelos y los integro 
 | Fase | Qué hace | Verificable en |
 |---|---|---|
 | 0 | robots.txt, sitemap.xml, llms.txt, humans.txt, manifest, OG image, favicons, JSON-LD Org+WebSite | `curl https://avanteventures.com/robots.txt` |
-| 1 | Prerender de las 6 rutas + redirect — HTML estático con contenido completo (no JS-only) | `curl https://avanteventures.com/en/why-avante \| grep "<h1"` |
+| 1 | Prerender de las 6 rutas + redirect, HTML estático con contenido completo (no JS-only) | `curl https://avanteventures.com/en/why-avante \| grep "<h1"` |
 | 2 | Per-page `<title>`, `<description>`, canonical, OG, JSON-LD per route (WebPage / Article / CollectionPage) | `curl ... \| grep -oE '"@type":"[^"]+"'` |
 | 3 | URLs `/en/*` y `/pt/*` con hreflang + sitemap bilingüe + llms.txt bilingüe | `curl https://avanteventures.com/pt \| grep "Venture Studio AI-Native no Brasil"` |
 | 4 | WebP en lugar de PNG (-90% en pesos) + code-split de Why/Library | Bundle inicial home: ~265 KB gzipped |

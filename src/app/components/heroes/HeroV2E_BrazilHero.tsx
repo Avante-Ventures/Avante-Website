@@ -86,7 +86,7 @@ export function HeroV2E_BrazilHero() {
           </h1>
 
           <p style={{ fontSize: 'clamp(15px, 1.4vw, 19px)', lineHeight: 1.6, color: 'rgba(255, 255, 255, 0.65)', maxWidth: '500px', margin: '0 0 32px 0' }}>
-            Silicon Valley playbooks. Brazil-native execution. We bring SF venture-building standards to operators on the ground in São Paulo — and write the first ticket.
+            Silicon Valley playbooks. Brazil-native execution. We bring SF venture-building standards to operators on the ground in São Paulo, and write the first ticket.
           </p>
 
           <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap', marginBottom: '32px' }}>

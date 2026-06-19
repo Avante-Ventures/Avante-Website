@@ -1,11 +1,11 @@
-// CompoundingChart — the signature visual moment of the site.
+// CompoundingChart: the signature visual moment of the site.
 //
 // Visual brief: a minimal "compounding curve" chart drawn with 7 dots
 // arranged on an exponential curve from bottom-left to top-right, connected
 // by a faint guide line. Each dot represents a hypothetical cohort year;
 // later dots are larger, communicating the studio's compounding thesis
-// without literal data labels. The chart is tactile, not informational —
-// the math is the message.
+// without literal data labels. The chart is tactile, not informational.
+// The math is the message.
 //
 // Animation: on scroll-into-view (IntersectionObserver, plays once), the
 // guide curve draws itself first using stroke-dasharray, then the dots
@@ -47,7 +47,7 @@ const DOTS = [
 ]
 
 // Smooth path through the dots using cubic Bézier curves (catmull-rom-like).
-// Hand-tuned control points — generates a clean exponential-feeling curve.
+// Hand-tuned control points that generate a clean exponential-feeling curve.
 const CURVE_PATH =
   'M 10,85 C 16,82 19,80 24,76 C 30,72 34,68 38,64 C 44,58 48,54 52,50 C 58,44 62,40 66,36 C 72,30 76,26 80,22 C 86,17 90,14 94,12'
 
@@ -62,7 +62,7 @@ export function CompoundingChart({
 
   const eyebrowText =
     eyebrow ?? t('Built to compound', 'Construído para compor', 'Construido para componer')
-  // Caption — Round 8 update: replaced "Vintage 1, year 2" anchor with
+  // Caption, Round 8 update: replaced "Vintage 1, year 2" anchor with
   // an operating thesis statement ("Building 3-4 companies per year.
   // Cashflow-focused machines.") that frames the compounding curve as
   // a function of execution discipline rather than vintage age.
@@ -79,7 +79,7 @@ export function CompoundingChart({
 
   // Animation strategy: CSS @keyframes that play ONCE on mount, regardless
   // of IntersectionObserver state. This means SSR / prerender / Playwright
-  // screenshot all show the chart in its final state — never blank. The
+  // screenshot all show the chart in its final state, never blank. The
   // animation is pure enhancement; the chart is never gated by JS state.
   // prefers-reduced-motion disables the keyframes via @media query.
 
@@ -93,7 +93,7 @@ export function CompoundingChart({
         gap: compact ? '14px' : '20px',
       }}
     >
-      {/* Eyebrow — same gold-dot signature as the masthead family */}
+      {/* Eyebrow, same gold-dot signature as the masthead family */}
       <figcaption
         style={{
           display: 'inline-flex',
@@ -131,12 +131,12 @@ export function CompoundingChart({
           overflow: 'visible',
         }}
         aria-label={t(
-          'Avante studio compounding curve — illustrative, not data',
-          'Curva de compounding do studio Avante — ilustrativa, não dados'
+          'Avante studio compounding curve: illustrative, not data',
+          'Curva de compounding do studio Avante: ilustrativa, não dados'
         )}
         role="img"
       >
-        {/* Radial gradient for the LAST dot — communicates jerarquía narrativa.
+        {/* Radial gradient for the LAST dot, communicates jerarquía narrativa.
             Dots 1-6 are gold; dot 7 transitions gold center → purple edge,
             signaling "the future is where the model goes non-linear" without
             disrupting the unified palette.                                  */}
@@ -148,7 +148,7 @@ export function CompoundingChart({
           </radialGradient>
         </defs>
         {/* CSS keyframes: curve draws + dots pop in. Plays once on mount.
-            Animations are enhancement only — final state is the rendered
+            Animations are enhancement only; final state is the rendered
             state, so prerender/SSR/Playwright always see the full chart. */}
         <style>{`
           @keyframes avt-curve-draw {
@@ -185,7 +185,7 @@ export function CompoundingChart({
           strokeLinecap="round"
         />
 
-        {/* Compounding curve path — draws itself once on mount */}
+        {/* Compounding curve path, draws itself once on mount */}
         <path
           className="avt-curve"
           d={CURVE_PATH}
@@ -201,7 +201,7 @@ export function CompoundingChart({
 
         {/* The 7 compounding dots, staggered via animation-delay inline.
             The last dot uses the radial gradient (gold → purple) to signal
-            narrative hierarchy — the future cohort is where compounding
+            narrative hierarchy. The future cohort is where compounding
             transitions to category-leadership outcomes.                    */}
         {DOTS.map((dot, i) => {
           const stagger = 600 + i * 90

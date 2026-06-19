@@ -102,10 +102,10 @@ export default function NotFoundPage() {
         }}
       >
         {language === 'pt'
-          ? 'Talvez a URL esteja incorreta, ou movemos esta página enquanto você não estava olhando. Em qualquer caso — voltar ao início é o caminho mais curto.'
+          ? 'Talvez a URL esteja incorreta, ou movemos esta página enquanto você não estava olhando. Em qualquer caso, voltar ao início é o caminho mais curto.'
           : language === 'es'
-            ? 'Tal vez la URL está mal escrita, o tal vez movimos esta página mientras no mirabas. En cualquier caso — volver al inicio es el camino más corto.'
-            : 'Maybe the URL is mistyped, or maybe we moved this page while you weren’t looking. Either way — heading home is the shortest path.'}
+            ? 'Tal vez la URL está mal escrita, o tal vez movimos esta página mientras no mirabas. En cualquier caso, volver al inicio es el camino más corto.'
+            : 'Maybe the URL is mistyped, or maybe we moved this page while you weren’t looking. Either way, heading home is the shortest path.'}
       </p>
 
       <Link

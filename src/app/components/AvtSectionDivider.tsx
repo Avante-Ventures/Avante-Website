@@ -3,7 +3,7 @@
 // Editorial section divider. Renders a centered gradient "A" mark flanked
 // by two thin gradient hairlines that fade to transparent at the page
 // edges. Replaces standard `<hr>` with something that reads like a
-// section break in a printed magazine — quiet but emphatic.
+// section break in a printed magazine, quiet but emphatic.
 //
 // Used on long-form routes (/why-avante, /principles) to mark conceptual
 // transitions between blocks of body content. Not intended for high-density
@@ -18,7 +18,7 @@ import { AvanteLockup } from '@/app/components/AvanteLockup'
 export interface AvtSectionDividerProps {
   /** Vertical padding around the divider. Default 48px each side. */
   spacing?: number
-  /** Mark size — usually `sm` (small breaks) or `md` (major breaks). */
+  /** Mark size, usually `sm` (small breaks) or `md` (major breaks). */
   size?: 'sm' | 'md'
 }
 

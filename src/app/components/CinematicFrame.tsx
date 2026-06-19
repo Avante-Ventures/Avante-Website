@@ -5,7 +5,7 @@
 // The photograph itself is a CSS background (cover, center) so the frame
 // crops gracefully across aspect ratios.
 //
-// Borrowed from the Figma's cinematic moments — these are the "stop and
+// Borrowed from the Figma's cinematic moments. These are the "stop and
 // breathe" visual beats between data-dense sections. They give the page
 // permission to slow down without wasting a full hero.
 //
@@ -38,7 +38,7 @@ export interface CinematicFrameProps {
   /** Bottom-right slot inside the frame. E.g. "21:9 · 06:14 BRT". */
   slotRight?: ReactNode
   /** When true, renders a faint "A" watermark in the bottom-left of the
-   *  frame as an editorial sigil. Defaults to true — opt out for frames
+   *  frame as an editorial sigil. Defaults to true; opt out for frames
    *  where it would conflict with the photography subject. */
   watermark?: boolean
   /** Extra inline styling for the outer wrapper. */

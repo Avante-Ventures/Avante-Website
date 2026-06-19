@@ -8,7 +8,7 @@ import react from '@vitejs/plugin-react'
 // Resolves Figma Make's `figma:asset/<hash>.png` virtual imports to files in
 // src/assets/. Phase 4 enhancement: when a `.webp` sibling exists for the
 // requested PNG (created by scripts/optimize-images.mjs), serve that
-// instead — gives a 60-95% size reduction with no component-side changes.
+// instead, gives a 60-95% size reduction with no component-side changes.
 // The browser's Content-Type comes from the resolved file path so MIME
 // stays correct (image/webp).
 function figmaAssetResolver() {

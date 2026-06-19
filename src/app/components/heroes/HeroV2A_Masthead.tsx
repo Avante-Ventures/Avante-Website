@@ -279,9 +279,9 @@ export function HeroV2A_Masthead() {
             }}
           >
             {pick(
-              'Silicon Valley playbooks. Brazil-native execution. We bring SF venture-building standards to operators on the ground in São Paulo — and write the first ticket.',
-              'Playbooks do Vale do Silício. Execução nativa do Brasil. Trazemos os padrões de venture-building de SF para operadores em campo em São Paulo — e escrevemos o primeiro cheque.',
-              'Playbooks de Silicon Valley. Ejecución nativa de Brasil. Traemos los estándares de venture-building de SF a operadores sobre el terreno en São Paulo — y escribimos el primer cheque.'
+              'Silicon Valley playbooks. Brazil-native execution. We bring SF venture-building standards to operators on the ground in São Paulo, and write the first ticket.',
+              'Playbooks do Vale do Silício. Execução nativa do Brasil. Trazemos os padrões de venture-building de SF para operadores em campo em São Paulo, e escrevemos o primeiro cheque.',
+              'Playbooks de Silicon Valley. Ejecución nativa de Brasil. Traemos los estándares de venture-building de SF a operadores sobre el terreno en São Paulo, y escribimos el primer cheque.'
             )}
           </p>
 

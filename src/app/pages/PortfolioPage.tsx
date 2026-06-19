@@ -69,8 +69,8 @@ const VENTURES: Venture[] = [
   {
     name: 'BR Auction Intel',
     description: {
-      en: 'Builds in real estate auctions — scraping, enriching, and scoring properties, where the dataset compounds as coverage grows.',
-      pt: 'Constrói em leilões imobiliários — scrape, enriquecimento e scoring de imóveis, onde o conjunto de dados melhora conforme a cobertura cresce.',
+      en: 'Builds in real estate auctions: scraping, enriching, and scoring properties, where the dataset compounds as coverage grows.',
+      pt: 'Constrói em leilões imobiliários: scrape, enriquecimento e scoring de imóveis, onde o conjunto de dados melhora conforme a cobertura cresce.',
     },
     status: 'discovery',
     accent: '#4FA3A5',
@@ -122,8 +122,8 @@ const VENTURES: Venture[] = [
   {
     name: 'Alpha Lit',
     description: {
-      en: 'Fintech platform that originates, bundles, and sells equity in litigation finance portfolios — opening access to a $16B+ asset class.',
-      pt: 'Plataforma fintech que origina, agrega e vende equity em portfólios de litigation finance — abrindo acesso a uma classe de ativos de $16B+.',
+      en: 'Fintech platform that originates, bundles, and sells equity in litigation finance portfolios, opening access to a $16B+ asset class.',
+      pt: 'Plataforma fintech que origina, agrega e vende equity em portfólios de litigation finance, abrindo acesso a uma classe de ativos de $16B+.',
     },
     status: 'us-building',
     accent: '#E6C54C',
@@ -260,12 +260,12 @@ export default function PortfolioPage() {
         <SectionMasthead
           eyebrow={t('Portfolio · Year 1 of Building', 'Portfólio · Ano 1 de Building')}
           title={t(
-            'Our Ventures — and our Track Record.',
-            'Nossas Ventures — e nosso Track Record.'
+            'Our Ventures, and our Track Record.',
+            'Nossas Ventures, e nosso Track Record.'
           )}
           description={t(
-            'Cohort 1 is live (WIR + Alphajuri). Below: every venture this team has built, co-founded, or invested in — from Innova-era tickets in 2014 (iFood, Sigga, Accera) to today\'s active US Building track (Mahway, Astonishing Labs, Alpha Lit) and the Avante studio cohort.',
-            'Cohort 1 está ativa (WIR + Alphajuri). Abaixo: cada venture que este time construiu, co-fundou ou investiu — dos cheques da era Innova em 2014 (iFood, Sigga, Accera) ao track US Building ativo hoje (Mahway, Astonishing Labs, Alpha Lit) e a cohort do studio Avante.'
+            'Cohort 1 is live (WIR + Alphajuri). Below: every venture this team has built, co-founded, or invested in, from Innova-era tickets in 2014 (iFood, Sigga, Accera) to today\'s active US Building track (Mahway, Astonishing Labs, Alpha Lit) and the Avante studio cohort.',
+            'Cohort 1 está ativa (WIR + Alphajuri). Abaixo: cada venture que este time construiu, co-fundou ou investiu, dos cheques da era Innova em 2014 (iFood, Sigga, Accera) ao track US Building ativo hoje (Mahway, Astonishing Labs, Alpha Lit) e a cohort do studio Avante.'
           )}
         />
 
@@ -340,8 +340,8 @@ export default function PortfolioPage() {
             }}
           >
             {t(
-              'We launch 3–4 new ventures per year inside the studio. The active cohort listed here is intentionally narrow — a discipline, not a scarcity. New cohort additions are introduced after a venture has cleared Stage 3 (Build) of the playbook.',
-              'Lançamos 3–4 novas ventures por ano dentro do studio. A cohort ativa aqui listada é deliberadamente enxuta — disciplina, não escassez. Novas ventures aparecem na lista depois de passar pelo Estágio 3 (Build) do playbook.'
+              'We launch 3–4 new ventures per year inside the studio. The active cohort listed here is intentionally narrow, a discipline, not a scarcity. New cohort additions are introduced after a venture has cleared Stage 3 (Build) of the playbook.',
+              'Lançamos 3–4 novas ventures por ano dentro do studio. A cohort ativa aqui listada é deliberadamente enxuta, uma disciplina, não escassez. Novas ventures aparecem na lista depois de passar pelo Estágio 3 (Build) do playbook.'
             )}
           </p>
         </div>
@@ -394,8 +394,8 @@ export default function PortfolioPage() {
             }}
           >
             {t(
-              'Pipeline ventures are pre-launch — names, taglines, and scope are subject to change as theses sharpen. Track Record above reflects realized outcomes from the founding team\'s prior work, not Pipeline performance.',
-              'Ventures de pipeline estão pré-lançamento — nomes, taglines e escopo podem mudar conforme as teses afinam. O Track Record acima reflete resultados realizados do trabalho prévio do time fundador, não performance do Pipeline.'
+              'Pipeline ventures are pre-launch: names, taglines, and scope are subject to change as theses sharpen. Track Record above reflects realized outcomes from the founding team\'s prior work, not Pipeline performance.',
+              'Ventures de pipeline estão pré-lançamento: nomes, taglines e escopo podem mudar conforme as teses afinam. O Track Record acima reflete resultados realizados do trabalho prévio do time fundador, não performance do Pipeline.'
             )}
           </p>
         </section>

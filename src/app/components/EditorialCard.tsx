@@ -1,13 +1,13 @@
-// EditorialCard — Phase C editorial refactor.
+// EditorialCard: Phase C editorial refactor.
 //
 // Old: rounded 14px card with soft glass background, 17px title, 10px
 // eyebrow. Read like a SaaS feature card.
 //
-// New: hairline-bordered newspaper item. 2px corner radius (almost flat —
+// New: hairline-bordered newspaper item. 2px corner radius (almost flat,
 // preserves a hint of softness for screen-to-screen continuity), Funnel
 // Display title at 22-28px, JetBrains Mono eyebrow with 0.22em tracking,
 // gradient highlight chip when present. Background defaults to fully
-// transparent so containers control their own surface — the card adds
+// transparent so containers control their own surface, the card adds
 // only structure (border + spacing), not visual weight.
 //
 // API preservation: the prop set is unchanged. Consumers across the site
@@ -16,8 +16,8 @@
 //
 // One quietly powerful behavior worth noting: the hover applies a tinted
 // background derived from the `accent` color via hex8 (`${accent}0E` =
-// 0E hex = 14/255 alpha = 5.5%). Same trick as before, kept intact —
-// the accent color itself drives a tonally consistent hover.
+// 0E hex = 14/255 alpha = 5.5%). Same trick as before, kept intact.
+// The accent color itself drives a tonally consistent hover.
 
 import type { CSSProperties } from 'react'
 import { Link } from 'react-router'
@@ -125,7 +125,7 @@ export function EditorialCard({
                 gap: '8px',
               }}
             >
-              {/* Tier 3 / use 12 — Pulsing "A" live indicator. Renders only
+              {/* Tier 3 / use 12: Pulsing "A" live indicator. Renders only
                   when `livePulse` is true (e.g., active cohort ventures).
                   Replaces the conventional green dot with brand-aligned pulse. */}
               {livePulse && (

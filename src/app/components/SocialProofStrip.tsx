@@ -41,7 +41,7 @@ const SocialProofStripComponent = () => {
         overflow: 'hidden'
       }}
     >
-      {/* Background glow removed per Ive's panel — was ambient, not structural */}
+      {/* Background glow removed per Ive's panel: was ambient, not structural */}
 
       <div
         style={{ 
@@ -51,7 +51,7 @@ const SocialProofStripComponent = () => {
           margin: '0 auto'
         }}
       >
-        {/* Eyebrow — gold-dot signature, matching the masthead family */}
+        {/* Eyebrow: gold-dot signature, matching the masthead family */}
         <div
           style={{
             display: 'flex',
@@ -162,7 +162,7 @@ interface LogoItemProps {
 // Uniform "muted-ghost" logo treatment: grayscale + dim by default, full
 // color + opacity on hover. Avoids the previous inconsistent look where some
 // logos rendered white-on-transparent (filter: brightness(0) invert(1)) and
-// others kept native colors via the `darkBackground` flag — visually noisy.
+// others kept native colors via the `darkBackground` flag, visually noisy.
 const LogoItem = memo(({ src, alt }: LogoItemProps) => {
   return (
     <div

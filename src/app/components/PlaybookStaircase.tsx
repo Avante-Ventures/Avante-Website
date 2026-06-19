@@ -160,7 +160,7 @@ export function PlaybookStaircase() {
         </svg>
       </div>
       
-      {/* Grid Layout — gridTemplateColumns is set via the .playbook-grid CSS
+      {/* Grid Layout: gridTemplateColumns is set via the .playbook-grid CSS
           class below (1col mobile, 2col tablet, 3col desktop). Inline style
           here would override media queries and force 1col on desktop. */}
       <div

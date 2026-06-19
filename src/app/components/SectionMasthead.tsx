@@ -1,4 +1,4 @@
-// SectionMasthead — Phase C editorial refactor.
+// SectionMasthead. Phase C editorial refactor.
 //
 // Old: 28-44px section title in Bricolage-via-system, modest. Read like
 // SaaS section headers.
@@ -7,7 +7,7 @@
 // The eyebrow keeps its gold-dot signature (a runtime "tag" the brand
 // learned in earlier sprints) but switches to JetBrains Mono for the
 // editorial publication voice. Description switches to Funnel Display
-// weight 400 — lighter, larger, reads like a magazine standfirst.
+// weight 400, lighter, larger, reads like a magazine standfirst.
 //
 // New optional prop: `screenNum` ("§ II — thesis" + "02 / 05" pair on the
 // right). When passed, renders a pre-title meta row that anchors the
@@ -157,7 +157,7 @@ export function SectionMasthead({
             ...stage(60),
           }}
         >
-          {/* Tier 1 / use 01 — The gold dot signature is replaced by a mini
+          {/* Tier 1 / use 01. The gold dot signature is replaced by a mini
               "A" lockup mark in xs/inline variant. Carries brand identity
               into every section header rather than abstract ornament. */}
           <AvanteLockup size="xs" markOnly variant="inline" ariaLabel="Avante section mark" />
@@ -168,7 +168,7 @@ export function SectionMasthead({
       <h2
         style={{
           fontFamily: 'var(--avt-font-display)',
-          // Monumental but responsive. Compact bounded to 56px max — used
+          // Monumental but responsive. Compact bounded to 56px max, used
           // when the masthead is nested inside a card or smaller container.
           fontSize: compact
             ? 'clamp(28px, 4vw, 56px)'

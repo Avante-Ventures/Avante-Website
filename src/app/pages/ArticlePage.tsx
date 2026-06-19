@@ -292,6 +292,14 @@ export default function ArticlePage() {
           <Section key={i} section={section} locale={language} />
         ))}
 
+        {content.faqs && content.faqs.length > 0 && (
+          <FaqBlock
+            faqs={content.faqs}
+            locale={language}
+            heading={t('Frequently asked questions', 'Perguntas frequentes', 'Preguntas frecuentes')}
+          />
+        )}
+
         {/* Tier 3 / use 10 — Newsletter signature. Closes the article as a
             signed editorial letter from the firm rather than an anonymous
             blog post. Sits between the body and the "Browse Library" CTA. */}
@@ -506,8 +514,88 @@ function Section({ section, locale }: { section: ArticleSection; locale: string 
         </ul>
       )}
 
+      {section.table && <ComparisonTable {...section.table} locale={locale} />}
+
       {section.callout && <Callout {...section.callout} />}
     </section>
+  )
+}
+
+function ComparisonTable({
+  headers,
+  rows,
+  caption,
+  locale,
+}: NonNullable<ArticleSection['table']> & { locale: string }) {
+  return (
+    <div style={{ margin: '24px 0', overflowX: 'auto' }}>
+      <table
+        style={{
+          width: '100%',
+          borderCollapse: 'collapse',
+          fontSize: '15px',
+          lineHeight: 1.55,
+          color: 'rgba(255, 255, 255, 0.85)',
+          minWidth: '480px',
+        }}
+      >
+        {caption && (
+          <caption
+            style={{
+              captionSide: 'bottom',
+              fontSize: '13px',
+              color: 'var(--avt-meta)',
+              textAlign: 'left',
+              padding: '10px 0 0 0',
+            }}
+          >
+            {caption}
+          </caption>
+        )}
+        <thead>
+          <tr>
+            {headers.map((h, i) => (
+              <th
+                key={i}
+                style={{
+                  textAlign: 'left',
+                  padding: '12px 14px',
+                  borderBottom: '1px solid rgba(249, 180, 55, 0.4)',
+                  color: '#FCD96E',
+                  fontFamily: 'var(--avt-font-mono)',
+                  fontSize: '12px',
+                  letterSpacing: '0.04em',
+                  textTransform: 'uppercase',
+                  fontWeight: 600,
+                }}
+              >
+                {renderRichText(h, locale)}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row, ri) => (
+            <tr key={ri}>
+              {row.map((cell, ci) => (
+                <td
+                  key={ci}
+                  style={{
+                    padding: '12px 14px',
+                    borderBottom: '1px solid var(--avt-hair)',
+                    fontWeight: ci === 0 ? 600 : 400,
+                    color: ci === 0 ? '#FFFFFF' : 'rgba(255, 255, 255, 0.82)',
+                    verticalAlign: 'top',
+                  }}
+                >
+                  {renderRichText(cell, locale)}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   )
 }
 
@@ -575,6 +663,67 @@ function Callout({
         </p>
       )}
     </div>
+  )
+}
+
+function FaqBlock({
+  faqs,
+  locale,
+  heading,
+}: {
+  faqs: { q: string; a: string }[]
+  locale: string
+  heading: string
+}) {
+  return (
+    <section style={{ marginTop: '56px' }}>
+      <h2
+        style={{
+          fontSize: '28px',
+          fontWeight: 600,
+          color: '#FFFFFF',
+          lineHeight: 1.3,
+          letterSpacing: '-0.015em',
+          margin: '0 0 8px 0',
+        }}
+      >
+        {heading}
+      </h2>
+      <dl style={{ margin: 0 }}>
+        {faqs.map((f, i) => (
+          <div
+            key={i}
+            style={{
+              marginTop: '20px',
+              paddingTop: '20px',
+              borderTop: '1px solid var(--avt-hair)',
+            }}
+          >
+            <dt
+              style={{
+                fontSize: '18px',
+                fontWeight: 600,
+                color: '#FFFFFF',
+                lineHeight: 1.4,
+                margin: '0 0 10px 0',
+              }}
+            >
+              {f.q}
+            </dt>
+            <dd
+              style={{
+                margin: 0,
+                fontSize: '16px',
+                lineHeight: 1.7,
+                color: 'rgba(255, 255, 255, 0.82)',
+              }}
+            >
+              {renderRichText(f.a, locale)}
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </section>
   )
 }
 

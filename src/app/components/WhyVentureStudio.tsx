@@ -445,7 +445,7 @@ export function WhyVentureStudio() {
               fontWeight: 'var(--font-weight-regular)'
             }}
           >
-            Co-building from day one means more ownership, better alignment, and real control over strategic direction. Not just capital—execution partners.
+            Co-building from day one means more ownership, better alignment, and real control over strategic direction. Not just capital: execution partners.
           </p>
         </div>
       </div>

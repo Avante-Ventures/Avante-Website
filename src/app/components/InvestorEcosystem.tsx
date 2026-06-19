@@ -43,8 +43,8 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
             'Bem-vindo ao ecossistema Avante.'
           )}
           description={t(
-            'Beyond returns — strategic access to the AI revolution in Brazil.',
-            'Além dos retornos — acesso estratégico à revolução da IA no Brasil.'
+            'Beyond returns: strategic access to the AI revolution in Brazil.',
+            'Além dos retornos: acesso estratégico à revolução da IA no Brasil.'
           )}
         />
 

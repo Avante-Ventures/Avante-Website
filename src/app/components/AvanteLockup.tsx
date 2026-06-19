@@ -3,13 +3,13 @@
 // composition that scales to monumental sizes (footer = 280px wide A) and
 // shrinks cleanly to navbar (22px wide A).
 //
-// The mark itself is shipped as a PNG in /redesign-assets/avante-A.png — a
+// The mark itself is shipped as a PNG in /redesign-assets/avante-A.png, a
 // tightly cropped silhouette of the "A" with the gradient already applied.
 // We import via figma:asset to get hashed-cache + Vite asset pipeline rather
 // than referencing it as a public URL (so it ships into the bundle).
 //
 // Sizes follow the Figma rhythm: sm (navbar) / md / lg / xl (hero) / mono
-// (footer monumental). Word weight stays 500 — the mark carries the gravity.
+// (footer monumental). Word weight stays 500; the mark carries the gravity.
 
 import { CSSProperties, ReactNode } from 'react'
 
@@ -18,7 +18,7 @@ type LockupSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'mono'
 /**
  * Visual variant of the mark.
  *  - `default`    : full-color gradient PNG.
- *  - `watermark`  : low-opacity (8%) gradient — for backgrounds, frame
+ *  - `watermark`  : low-opacity (8%) gradient, for backgrounds, frame
  *                   bottom-corners, decorative use.
  *  - `inline`     : same as default but with no marginBottom (vertically
  *                   centered for inline-with-text usage like bullets +
@@ -29,7 +29,7 @@ type LockupVariant = 'default' | 'watermark' | 'inline'
 interface AvanteLockupProps {
   /** Visual size preset. `xs` is bullet (14px A), `mono` is footer (280px A). */
   size?: LockupSize
-  /** Visual variant — gradient default, watermark, or inline-aligned. */
+  /** Visual variant: gradient default, watermark, or inline-aligned. */
   variant?: LockupVariant
   /** Optional override for the word ("vante" by default). */
   word?: ReactNode
@@ -50,8 +50,8 @@ interface AvanteLockupProps {
 // visual gap, we (a) keep `gap` at 0 and (b) apply a negative `wordPull`
 // on the word to slide it into the asset padding.
 //
-// Fix 5 (TOC panel — Spiekermann): with `align-items: flex-end`, the "A"
-// PNG bounding box hits the container's bottom — but the asset has ~14%
+// Fix 5 (TOC panel, Spiekermann): with `align-items: flex-end`, the "A"
+// PNG bounding box hits the container's bottom, but the asset has ~14%
 // bottom padding inside the box, so the visible glyph baseline ends ABOVE
 // the wordmark baseline (the "v" descender visibly drops below the "A").
 // Negative margin-bottom extends the box DOWN past the flex baseline,

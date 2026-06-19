@@ -23,7 +23,7 @@ export interface SEOHelmetProps {
   image?: string
   /** Page-specific JSON-LD object (Article, CollectionPage, etc.) */
   jsonLd?: object
-  /** When true, emits robots noindex,follow — used for stub articles that
+  /** When true, emits robots noindex,follow, used for stub articles that
    *  do not yet have full content. Prevents thin-content from dragging the
    *  domain authority while still allowing the page to be discoverable
    *  through internal links. */
@@ -42,7 +42,7 @@ const HREFLANG_MAP: Record<string, string> = {
 const OG_LOCALE_MAP: Record<string, string> = {
   en: 'en_US',
   pt: 'pt_BR',
-  es: 'es_419', // Latin American Spanish — matches our LATAM positioning
+  es: 'es_419', // Latin American Spanish, matches our LATAM positioning
 }
 
 export function SEOHelmet({
@@ -85,7 +85,7 @@ export function SEOHelmet({
         }
       />
 
-      {/* hreflang alternates — tell Google + LLMs which version is which */}
+      {/* hreflang alternates: tell Google + LLMs which version is which */}
       {SUPPORTED_LOCALES.map((loc) => (
         <link
           key={loc}
