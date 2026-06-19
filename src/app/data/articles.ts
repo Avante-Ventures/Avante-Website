@@ -6503,12 +6503,45 @@ const engineArticles: Article[] = [
     "en": {
       "title": "Venture Studio vs VC vs Accelerator: An Honest Guide (2026)",
       "description": "Venture studio vs VC vs accelerator: how each prices dilution, control, and speed, and which path a founder should pick. The honest terms for all three.",
+      "faqs": [
+        {
+          "q": "What is the difference between a venture studio, an accelerator, and a VC?",
+          "a": "A venture studio co-builds the company with you and takes the largest early stake (often around 34%) because it supplies the idea, the build team, first capital, and operators. An accelerator takes a small stake (around 7%) for a fixed program and a network. A VC writes a priced check (typically 15% to 25% plus a board seat) but leaves you to build. The real trade is how much gets built for you versus how much equity you keep."
+        },
+        {
+          "q": "Venture studio vs VC: which is better for an early-stage founder?",
+          "a": "It depends on what you lack. Pick a VC if you already have a team and a product and mainly need capital and governance. Pick a venture studio if you are pre-team or pre-product and want operators building alongside you from day one, and you accept giving up more equity for that depth."
+        },
+        {
+          "q": "Do venture studios deliver better returns than VCs?",
+          "a": "Industry data from the Global Startup Studio Network puts the studio model at roughly 2.5x the IRR of traditional venture capital, driven by faster time to Series A and higher graduation rates. Avante reads that as a directional model benchmark attributed to GSSN, not a guaranteed return for any single venture."
+        },
+        {
+          "q": "How much equity does a venture studio take?",
+          "a": "Usually the largest early stake of the three paths, commonly around 34%, because the studio hands over the most: the idea, the building team, first capital, and operators co-building day to day. An accelerator takes far less (around 7%) because it sells a program, not a company."
+        },
+        {
+          "q": "When should a founder pick an accelerator instead?",
+          "a": "An accelerator fits a founder who already has a team and an early product and wants structured mentorship, a cohort network, and a demo day, while keeping most equity and control. It sells access and a program, not company-building."
+        }
+      ],
       "sections": [
         {
           "paragraphs": [
             "The choice between a venture studio, an accelerator, and traditional VC is not about which one is best. It is about which one prices the three things you are actually trading. Dilution, control, and speed to first traction. An accelerator like Y Combinator takes 7% for a small check and a fixed program. A priced VC round costs 15% to 25% and a board seat but leaves you owning the idea. A venture studio takes the largest early stake, often around 34%, because it hands you the most. The idea, the build team, first capital, and operators co-building day to day.",
             "This guide gives the real terms for each path and names who should pick what. Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America, so we have a view. We have also tried to be fair to the paths we did not choose."
-          ]
+          ],
+          "table": {
+            "caption": "How venture studio, accelerator, and VC price dilution, control, and speed.",
+            "headers": ["", "Venture studio", "Accelerator", "VC"],
+            "rows": [
+              ["Equity taken", "Largest, often ~34%", "Small, ~7%", "Priced round, ~15 to 25%"],
+              ["What you get", "Idea, build team, first capital, operators co-building", "Program, network, demo day", "Capital plus a board seat"],
+              ["Best for", "Pre-team or pre-product founders who want operators on day one", "Founders with a team and an early product wanting structure", "Teams with a product who mainly need capital and governance"],
+              ["Speed to traction", "Fastest: operators build from day one", "Fixed cohort timeline", "You build; the pace is on you"],
+              ["Control kept", "Lowest, the studio co-owns more", "High", "High, minus a board seat"]
+            ]
+          }
         },
         {
           "heading": "The three things you are actually trading",
@@ -6597,12 +6630,45 @@ const engineArticles: Article[] = [
     "pt": {
       "title": "Venture Studio vs VC vs Aceleradora: Um Guia Honesto (2026)",
       "description": "Venture studio vs VC vs aceleradora: como cada um precifica diluição, controle e velocidade, e qual caminho um fundador deve escolher. Os termos reais dos três.",
+      "faqs": [
+        {
+          "q": "Qual a diferença entre venture studio, aceleradora e VC?",
+          "a": "Um venture studio co-constrói a empresa com você e fica com a maior fatia inicial (em geral perto de 34%) porque entrega a ideia, o time de construção, o primeiro capital e operadores. Uma aceleradora pega uma fatia pequena (cerca de 7%) por um programa fixo e uma rede. Um VC faz um cheque precificado (tipicamente 15% a 25% mais uma cadeira no conselho), mas deixa você construir. A troca real é quanto é construído para você versus quanto equity você mantém."
+        },
+        {
+          "q": "Venture studio vs VC: qual é melhor para um fundador early-stage?",
+          "a": "Depende do que falta a você. Escolha um VC se já tem time e produto e precisa sobretudo de capital e governança. Escolha um venture studio se está pré-time ou pré-produto e quer operadores construindo ao seu lado desde o dia um, aceitando ceder mais equity por essa profundidade."
+        },
+        {
+          "q": "Venture studios dão retorno melhor que VCs?",
+          "a": "Dados da Global Startup Studio Network colocam o modelo de studio em cerca de 2,5x o IRR do venture capital tradicional, puxado por menor tempo até a Série A e maior taxa de graduação. A Avante lê isso como um benchmark direcional do modelo, atribuído à GSSN, não como retorno garantido de qualquer venture isolada."
+        },
+        {
+          "q": "Quanto de equity um venture studio pega?",
+          "a": "Em geral a maior fatia inicial das três vias, comumente perto de 34%, porque o studio entrega o máximo: a ideia, o time de construção, o primeiro capital e operadores co-construindo no dia a dia. Uma aceleradora pega bem menos (cerca de 7%) porque vende um programa, não uma empresa."
+        },
+        {
+          "q": "Quando um fundador deve escolher uma aceleradora?",
+          "a": "Uma aceleradora serve a um fundador que já tem time e um produto inicial e quer mentoria estruturada, uma rede de cohort e um demo day, mantendo a maior parte do equity e do controle. Ela vende acesso e um programa, não a construção da empresa."
+        }
+      ],
       "sections": [
         {
           "paragraphs": [
             "A escolha entre um venture studio, uma aceleradora e VC tradicional não é sobre qual deles é melhor. É sobre qual deles cobra o preço certo pelas três coisas que você está de fato trocando. Diluição, controle e velocidade até a primeira tração. Uma aceleradora como a Y Combinator fica com 7% por um cheque pequeno e um programa de prazo fixo. Uma rodada de VC precificada custa de 15% a 25% e uma cadeira no conselho, mas deixa a ideia com você. Um venture studio fica com a maior fatia inicial, com frequência em torno de 34%, porque entrega o máximo. A ideia, o time que constrói, o primeiro capital e operadores construindo lado a lado todos os dias.",
             "Este guia traz os termos reais de cada caminho e diz quem deve escolher o quê. A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina, então temos uma posição. Também tentamos ser justos com os caminhos que não escolhemos."
-          ]
+          ],
+          "table": {
+            "caption": "Como venture studio, aceleradora e VC cobram diluição, controle e velocidade.",
+            "headers": ["", "Venture studio", "Aceleradora", "VC"],
+            "rows": [
+              ["Equity que pega", "A maior, em geral ~34%", "Pequena, ~7%", "Rodada precificada, ~15 a 25%"],
+              ["O que você recebe", "Ideia, time de construção, primeiro capital, operadores co-construindo", "Programa, rede, demo day", "Capital mais uma cadeira no conselho"],
+              ["Melhor para", "Fundadores pré-time ou pré-produto que querem operadores no dia um", "Fundadores com time e produto inicial que querem estrutura", "Times com produto que precisam sobretudo de capital e governança"],
+              ["Velocidade até tração", "A mais rápida: operadores constroem desde o dia um", "Cronograma fixo de cohort", "Você constrói; o ritmo é seu"],
+              ["Controle mantido", "O menor, o studio co-detém mais", "Alto", "Alto, menos uma cadeira no conselho"]
+            ]
+          }
         },
         {
           "heading": "As três coisas que você está de fato trocando",
@@ -6691,12 +6757,45 @@ const engineArticles: Article[] = [
     "es": {
       "title": "Venture Studio vs VC vs Aceleradora: Una Guía Honesta (2026)",
       "description": "Venture studio vs VC vs aceleradora: cómo cada uno cobra dilución, control y velocidad, y qué camino debe elegir un fundador. Los términos reales de los tres.",
+      "faqs": [
+        {
+          "q": "¿Cuál es la diferencia entre un venture studio, una aceleradora y un VC?",
+          "a": "Un venture studio co-construye la empresa contigo y se queda con la mayor participación inicial (a menudo cerca del 34%) porque aporta la idea, el equipo de construcción, el primer capital y operadores. Una aceleradora toma una participación pequeña (alrededor del 7%) por un programa fijo y una red. Un VC hace un cheque con precio (típicamente 15% a 25% más un asiento en el directorio), pero te deja construir. El trade real es cuánto se construye para ti versus cuánto equity conservas."
+        },
+        {
+          "q": "Venture studio vs VC: ¿cuál es mejor para un fundador early-stage?",
+          "a": "Depende de lo que te falte. Elige un VC si ya tienes equipo y producto y sobre todo necesitas capital y gobierno. Elige un venture studio si estás pre-equipo o pre-producto y quieres operadores construyendo a tu lado desde el día uno, aceptando ceder más equity por esa profundidad."
+        },
+        {
+          "q": "¿Los venture studios dan mejor retorno que los VC?",
+          "a": "Datos de la Global Startup Studio Network ubican al modelo de studio en cerca de 2,5x el IRR del venture capital tradicional, impulsado por menor tiempo a la Serie A y mayor tasa de graduación. Avante lo lee como un benchmark direccional del modelo, atribuido a GSSN, no como retorno garantizado de ninguna venture aislada."
+        },
+        {
+          "q": "¿Cuánto equity toma un venture studio?",
+          "a": "Por lo general la mayor participación inicial de las tres vías, comúnmente cerca del 34%, porque el studio entrega lo máximo: la idea, el equipo de construcción, el primer capital y operadores co-construyendo día a día. Una aceleradora toma mucho menos (alrededor del 7%) porque vende un programa, no una empresa."
+        },
+        {
+          "q": "¿Cuándo debe un fundador elegir una aceleradora?",
+          "a": "Una aceleradora le sirve a un fundador que ya tiene equipo y un producto inicial y quiere mentoría estructurada, una red de cohort y un demo day, conservando la mayor parte del equity y el control. Vende acceso y un programa, no la construcción de la empresa."
+        }
+      ],
       "sections": [
         {
           "paragraphs": [
             "La elección entre un venture studio, una aceleradora y VC tradicional no es sobre cuál es mejor. Es sobre cuál pone el precio correcto a las tres cosas que de verdad está intercambiando. Dilución, control y velocidad hasta la primera tracción. Una aceleradora como Y Combinator se queda con 7% por un cheque pequeño y un programa de duración fija. Una ronda de VC con valuación cuesta entre 15% y 25% y un asiento en el directorio, pero deja la idea en sus manos. Un venture studio toma la mayor porción inicial, a menudo cerca de 34%, porque entrega lo máximo. La idea, el equipo que construye, el primer capital y operadores co-construyendo día a día.",
             "Esta guía da los términos reales de cada camino y dice quién debe elegir cuál. Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina, así que tenemos una postura. También intentamos ser justos con los caminos que no elegimos."
-          ]
+          ],
+          "table": {
+            "caption": "Cómo venture studio, aceleradora y VC cobran dilución, control y velocidad.",
+            "headers": ["", "Venture studio", "Aceleradora", "VC"],
+            "rows": [
+              ["Equity que toma", "La mayor, a menudo ~34%", "Pequeña, ~7%", "Ronda con precio, ~15 a 25%"],
+              ["Qué recibes", "Idea, equipo de construcción, primer capital, operadores co-construyendo", "Programa, red, demo day", "Capital más un asiento en el directorio"],
+              ["Mejor para", "Fundadores pre-equipo o pre-producto que quieren operadores el día uno", "Fundadores con equipo y producto inicial que quieren estructura", "Equipos con producto que necesitan sobre todo capital y gobierno"],
+              ["Velocidad a tracción", "La más rápida: operadores construyen desde el día uno", "Cronograma fijo de cohort", "Tú construyes; el ritmo es tuyo"],
+              ["Control mantenido", "El menor, el studio co-posee más", "Alto", "Alto, menos un asiento en el directorio"]
+            ]
+          }
         },
         {
           "heading": "Las tres cosas que de verdad estás intercambiando",

@@ -134,6 +134,20 @@ export default function ArticlePage() {
           },
         ],
       },
+      ...(content.faqs && content.faqs.length > 0
+        ? [
+            {
+              '@type': 'FAQPage',
+              '@id': `${articleUrl}#faq`,
+              inLanguage,
+              mainEntity: content.faqs.map((f) => ({
+                '@type': 'Question',
+                name: f.q,
+                acceptedAnswer: { '@type': 'Answer', text: f.a },
+              })),
+            },
+          ]
+        : []),
     ],
   }
 
