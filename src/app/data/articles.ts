@@ -8137,8 +8137,249 @@ const engineArticles: Article[] = [
 ]
 // === CONTENT-ENGINE:END ===
 
+// Hand-authored pillar (outside the engine block so merge.py never clobbers it).
+const articleWhatIsVentureStudio: Article = {
+  slug: 'what-is-a-venture-studio',
+  category: 'insights',
+  type: 'Guide',
+  readTime: '8 min',
+  featured: false,
+  date: 'Jun 2026',
+  datePublished: '2026-06-19',
+  isPublished: true,
+  en: {
+    title: 'What Is a Venture Studio? The Model, Explained (2026)',
+    description: 'A venture studio builds startups in-house, on repeat, supplying the idea, team, capital, and operators. How it works, how it differs from a VC, accelerator, or incubator, and why it is growing in LATAM.',
+    sections: [
+      {
+        paragraphs: [
+          'A venture studio is an organization that builds startups in-house, on repeat. Instead of writing checks into other people’s companies, a central team supplies the idea, the founding capital, the build team, and operators who co-build each company day to day. The studio takes the largest early stake in return, often around 34%, because it hands over the most.',
+          'Studios are sometimes called startup studios, venture builders, or company builders. The label varies; the mechanism does not. One team launches a handful of companies a year, and each one makes the next faster to build. This guide explains how the model works, how it differs from a VC, an accelerator, and an incubator, and why it compounds fastest in markets like Brazil and Latin America.',
+        ],
+      },
+      {
+        heading: 'How a venture studio works',
+        level: 2,
+        paragraphs: [
+          'A studio runs an assembly line for companies. A shared team handles the work every early startup repeats: incorporation, hiring, finance, design, go-to-market. Solving that plumbing once routes more capital into product and traction instead of overhead, and a studio venture typically launches several months ahead of a comparably funded standalone team.',
+          'Discipline matters more than volume. Serious studios cap at three to four new ventures a year so operators can sit inside each company, not advise it from a board seat. That is the core difference from a fund: a studio operator is in the product decisions, the first hires, and the first paying customers.',
+        ],
+        bullets: [
+          'Supplies the idea, first capital, build team, and operators',
+          'Launches 3 to 4 ventures per year, by design',
+          'Takes the largest early stake, commonly around 34%',
+          'Each venture compounds the playbook for the next',
+        ],
+      },
+      {
+        heading: 'Venture studio vs VC vs accelerator',
+        level: 2,
+        paragraphs: [
+          'The three paths price the same three things differently: how much equity you give up, how much control you keep, and how fast you reach traction. A VC writes a priced check and governs from a board seat. An accelerator sells a program and a network for a small stake. A studio builds the company around you for a larger one. We break the trade-offs down, with the real terms for each, in [venture studio vs VC vs accelerator](/library/studio-vs-accelerator-vs-vc).',
+        ],
+      },
+      {
+        heading: 'Venture studio vs incubator: not the same thing',
+        level: 2,
+        paragraphs: [
+          'An incubator gives early companies space, mentorship, and shared services, but the founders still bring their own idea and team. A venture studio originates the company itself and staffs it. An incubator supports founders who already exist; a studio creates them. That single difference, who supplies the founding work, is what separates the two.',
+        ],
+      },
+      {
+        heading: 'Do venture studios actually work?',
+        level: 2,
+        paragraphs: [
+          'The model’s track record is the reason it spread. Industry data from the Global Startup Studio Network puts studio-built companies at roughly 2.5x the IRR of traditional venture capital, driven by faster time to Series A and higher graduation rates. Read it as a directional model benchmark attributed to GSSN, not a guaranteed return. We unpack the data, and the honest failure modes, in [why venture studios outperform traditional VC](/library/why-venture-studios-win-latam).',
+        ],
+      },
+      {
+        heading: 'Why the model is growing in LATAM',
+        level: 2,
+        paragraphs: [
+          'The studio edge is largest where operator depth is scarce and the economy is barely digitized, which describes Latin America precisely. Brazil’s economy is roughly 70% services and largely under-digitized, and AI infrastructure is now cheap enough to launch vertical companies without a Series A. That combination lets a studio run several regulated-vertical bets a year instead of one capital-heavy wager. Avante Ventures builds AI-native companies in Brazil and LATAM on exactly this thesis.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'What is a venture studio in simple terms?',
+        a: 'A venture studio is a company that builds startups in-house, on repeat. A central team supplies the idea, first capital, build team, and operators, then takes the largest early stake (often around 34%) in each company it launches.',
+      },
+      {
+        q: 'What is the difference between a venture studio and a VC?',
+        a: 'A VC invests capital into companies other people found and governs from a board seat. A venture studio creates the company itself and puts operators inside it day to day. One allocates capital; the other builds.',
+      },
+      {
+        q: 'How is a venture studio different from an incubator or accelerator?',
+        a: 'An incubator and an accelerator support founders who already have an idea and a team, with space, mentorship, a network, or a program. A venture studio originates the company and staffs it. The studio supplies the founding work; the others support it.',
+      },
+      {
+        q: 'How much equity does a venture studio take?',
+        a: 'Usually the largest early stake of any early-stage path, commonly around 34%, because it hands over the most: the idea, the build team, first capital, and operators co-building day to day.',
+      },
+      {
+        q: 'Are venture studios profitable?',
+        a: 'Industry data from the Global Startup Studio Network points to roughly 2.5x the IRR of traditional venture capital across realistic horizons, though the figure is self-reported and survivor-weighted, so it is best read as a directional model benchmark rather than a guarantee.',
+      },
+    ],
+  },
+  pt: {
+    title: 'O Que É um Venture Studio? O Modelo Explicado (2026)',
+    description: 'Um venture studio constrói startups internamente, em série, fornecendo a ideia, o time, o capital e operadores. Como funciona, como difere de VC, aceleradora e incubadora, e por que cresce na América Latina.',
+    sections: [
+      {
+        paragraphs: [
+          'Um venture studio é uma organização que constrói startups internamente, em série. Em vez de assinar cheques nas empresas dos outros, um time central fornece a ideia, o capital inicial, o time de construção e operadores que co-constroem cada empresa no dia a dia. O studio fica com a maior fatia inicial em troca, em geral perto de 34%, porque entrega o máximo.',
+          'Studios às vezes são chamados de startup studios, venture builders ou company builders. O rótulo varia; o mecanismo não. Um time lança um punhado de empresas por ano, e cada uma torna a próxima mais rápida de construir. Este guia explica como o modelo funciona, como difere de um VC, uma aceleradora e uma incubadora, e por que compõe mais rápido em mercados como o Brasil e a América Latina.',
+        ],
+      },
+      {
+        heading: 'Como funciona um venture studio',
+        level: 2,
+        paragraphs: [
+          'Um studio roda uma linha de montagem de empresas. Um time compartilhado cuida do trabalho que toda startup inicial repete: constituição, contratação, finanças, design, go-to-market. Resolver esse encanamento uma vez direciona mais capital para produto e tração em vez de overhead, e uma venture de studio costuma lançar vários meses à frente de um time autônomo com financiamento comparável.',
+          'Disciplina importa mais que volume. Studios sérios se limitam a três ou quatro novas ventures por ano para que operadores fiquem dentro de cada empresa, não a aconselhem de uma cadeira no conselho. Essa é a diferença central para um fundo: o operador de studio está nas decisões de produto, nas primeiras contratações e nos primeiros clientes pagantes.',
+        ],
+        bullets: [
+          'Fornece a ideia, o primeiro capital, o time de construção e operadores',
+          'Lança 3 a 4 ventures por ano, por design',
+          'Fica com a maior fatia inicial, comumente perto de 34%',
+          'Cada venture compõe o playbook para a próxima',
+        ],
+      },
+      {
+        heading: 'Venture studio vs VC vs aceleradora',
+        level: 2,
+        paragraphs: [
+          'As três vias cobram de forma diferente as mesmas três coisas: quanto equity você cede, quanto controle você mantém e quão rápido chega à tração. Um VC faz um cheque precificado e governa de uma cadeira no conselho. Uma aceleradora vende um programa e uma rede por uma fatia pequena. Um studio constrói a empresa ao seu redor por uma maior. Detalhamos os trade-offs, com os termos reais de cada um, em [venture studio vs VC vs aceleradora](/library/studio-vs-accelerator-vs-vc).',
+        ],
+      },
+      {
+        heading: 'Venture studio vs incubadora: não é a mesma coisa',
+        level: 2,
+        paragraphs: [
+          'Uma incubadora dá às empresas iniciais espaço, mentoria e serviços compartilhados, mas os fundadores ainda trazem a própria ideia e o próprio time. Um venture studio origina a empresa e a monta. Uma incubadora apoia fundadores que já existem; um studio os cria. Essa única diferença, quem fornece o trabalho fundador, é o que separa os dois.',
+        ],
+      },
+      {
+        heading: 'Venture studios funcionam de verdade?',
+        level: 2,
+        paragraphs: [
+          'O histórico do modelo é a razão de ele ter se espalhado. Dados da Global Startup Studio Network colocam as empresas construídas por studios em cerca de 2,5x o IRR do venture capital tradicional, puxado por menor tempo até a Série A e maior taxa de graduação. Leia como um benchmark direcional do modelo atribuído à GSSN, não como retorno garantido. Destrinchamos os dados, e as falhas honestas do modelo, em [por que os venture studios superam o VC tradicional](/library/why-venture-studios-win-latam).',
+        ],
+      },
+      {
+        heading: 'Por que o modelo cresce na América Latina',
+        level: 2,
+        paragraphs: [
+          'A vantagem do studio é maior onde a profundidade de operador é escassa e a economia é pouco digitalizada, o que descreve a América Latina com precisão. A economia do Brasil é cerca de 70% serviços e amplamente sub-digitalizada, e a infraestrutura de IA hoje é barata o bastante para lançar empresas verticais sem uma Série A. Essa combinação permite a um studio rodar várias apostas em verticais reguladas por ano em vez de uma única aposta pesada em capital. A Avante Ventures constrói empresas AI-native no Brasil e na América Latina exatamente sobre essa tese.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: 'O que é um venture studio em termos simples?',
+        a: 'Um venture studio é uma empresa que constrói startups internamente, em série. Um time central fornece a ideia, o primeiro capital, o time de construção e operadores, e então fica com a maior fatia inicial (em geral perto de 34%) em cada empresa que lança.',
+      },
+      {
+        q: 'Qual a diferença entre um venture studio e um VC?',
+        a: 'Um VC investe capital em empresas que outras pessoas fundam e governa de uma cadeira no conselho. Um venture studio cria a própria empresa e coloca operadores dentro dela no dia a dia. Um aloca capital; o outro constrói.',
+      },
+      {
+        q: 'Como um venture studio difere de uma incubadora ou aceleradora?',
+        a: 'Uma incubadora e uma aceleradora apoiam fundadores que já têm ideia e time, com espaço, mentoria, rede ou um programa. Um venture studio origina a empresa e a monta. O studio fornece o trabalho fundador; os outros o apoiam.',
+      },
+      {
+        q: 'Quanto de equity um venture studio pega?',
+        a: 'Em geral a maior fatia inicial de qualquer via early-stage, comumente perto de 34%, porque entrega o máximo: a ideia, o time de construção, o primeiro capital e operadores co-construindo no dia a dia.',
+      },
+      {
+        q: 'Venture studios são lucrativos?',
+        a: 'Dados da Global Startup Studio Network apontam cerca de 2,5x o IRR do venture capital tradicional em horizontes realistas, embora o número seja autorreportado e enviesado por sobreviventes, então é melhor lido como um benchmark direcional do modelo, não uma garantia.',
+      },
+    ],
+  },
+  es: {
+    title: '¿Qué Es un Venture Studio? El Modelo, Explicado (2026)',
+    description: 'Un venture studio construye startups internamente, en serie, aportando la idea, el equipo, el capital y operadores. Cómo funciona, en qué se diferencia de un VC, aceleradora e incubadora, y por qué crece en América Latina.',
+    sections: [
+      {
+        paragraphs: [
+          'Un venture studio es una organización que construye startups internamente, en serie. En vez de firmar cheques en las empresas de otros, un equipo central aporta la idea, el capital inicial, el equipo de construcción y operadores que co-construyen cada empresa día a día. El studio se queda con la mayor participación inicial a cambio, en general cerca del 34%, porque entrega lo máximo.',
+          'A los studios a veces se les llama startup studios, venture builders o company builders. La etiqueta varía; el mecanismo no. Un equipo lanza un puñado de empresas al año, y cada una hace que la siguiente sea más rápida de construir. Esta guía explica cómo funciona el modelo, en qué se diferencia de un VC, una aceleradora y una incubadora, y por qué compone más rápido en mercados como Brasil y América Latina.',
+        ],
+      },
+      {
+        heading: 'Cómo funciona un venture studio',
+        level: 2,
+        paragraphs: [
+          'Un studio corre una línea de montaje de empresas. Un equipo compartido se encarga del trabajo que toda startup inicial repite: constitución, contratación, finanzas, diseño, go-to-market. Resolver esa plomería una sola vez dirige más capital a producto y tracción en vez de overhead, y una venture de studio suele lanzar varios meses por delante de un equipo independiente con financiamiento comparable.',
+          'La disciplina importa más que el volumen. Los studios serios se limitan a tres o cuatro nuevas ventures al año para que los operadores estén dentro de cada empresa, no la asesoren desde un asiento del directorio. Esa es la diferencia central con un fondo: el operador de studio está en las decisiones de producto, en las primeras contrataciones y en los primeros clientes que pagan.',
+        ],
+        bullets: [
+          'Aporta la idea, el primer capital, el equipo de construcción y operadores',
+          'Lanza 3 a 4 ventures al año, por diseño',
+          'Se queda con la mayor participación inicial, comúnmente cerca del 34%',
+          'Cada venture compone el playbook para la siguiente',
+        ],
+      },
+      {
+        heading: 'Venture studio vs VC vs aceleradora',
+        level: 2,
+        paragraphs: [
+          'Las tres vías cobran distinto las mismas tres cosas: cuánto equity cedes, cuánto control conservas y qué tan rápido llegas a tracción. Un VC hace un cheque con precio y gobierna desde un asiento del directorio. Una aceleradora vende un programa y una red por una participación pequeña. Un studio construye la empresa a tu alrededor por una mayor. Desglosamos los trade-offs, con los términos reales de cada uno, en [venture studio vs VC vs aceleradora](/library/studio-vs-accelerator-vs-vc).',
+        ],
+      },
+      {
+        heading: 'Venture studio vs incubadora: no son lo mismo',
+        level: 2,
+        paragraphs: [
+          'Una incubadora da a las empresas iniciales espacio, mentoría y servicios compartidos, pero los fundadores aún traen su propia idea y su equipo. Un venture studio origina la empresa y la dota de equipo. Una incubadora apoya a fundadores que ya existen; un studio los crea. Esa única diferencia, quién aporta el trabajo fundador, es lo que separa a los dos.',
+        ],
+      },
+      {
+        heading: '¿Los venture studios funcionan de verdad?',
+        level: 2,
+        paragraphs: [
+          'El historial del modelo es la razón de su expansión. Datos de la Global Startup Studio Network ubican a las empresas construidas por studios en cerca de 2,5x el IRR del venture capital tradicional, impulsado por menor tiempo a la Serie A y mayor tasa de graduación. Léelo como un benchmark direccional del modelo atribuido a GSSN, no como retorno garantizado. Desglosamos los datos, y las fallas honestas del modelo, en [por qué los venture studios superan al VC tradicional](/library/why-venture-studios-win-latam).',
+        ],
+      },
+      {
+        heading: 'Por qué el modelo crece en América Latina',
+        level: 2,
+        paragraphs: [
+          'La ventaja del studio es mayor donde la profundidad de operador es escasa y la economía está poco digitalizada, lo que describe a América Latina con precisión. La economía de Brasil es cerca de 70% servicios y está ampliamente sub-digitalizada, y la infraestructura de IA hoy es barata para lanzar empresas verticales sin una Serie A. Esa combinación permite a un studio correr varias apuestas en verticales reguladas al año en vez de una sola apuesta pesada en capital. Avante Ventures construye empresas AI-native en Brasil y América Latina exactamente sobre esta tesis.',
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: '¿Qué es un venture studio en términos simples?',
+        a: 'Un venture studio es una empresa que construye startups internamente, en serie. Un equipo central aporta la idea, el primer capital, el equipo de construcción y operadores, y luego se queda con la mayor participación inicial (en general cerca del 34%) en cada empresa que lanza.',
+      },
+      {
+        q: '¿Cuál es la diferencia entre un venture studio y un VC?',
+        a: 'Un VC invierte capital en empresas que otros fundan y gobierna desde un asiento del directorio. Un venture studio crea la propia empresa y pone operadores dentro de ella día a día. Uno asigna capital; el otro construye.',
+      },
+      {
+        q: '¿En qué se diferencia un venture studio de una incubadora o aceleradora?',
+        a: 'Una incubadora y una aceleradora apoyan a fundadores que ya tienen idea y equipo, con espacio, mentoría, red o un programa. Un venture studio origina la empresa y la dota de equipo. El studio aporta el trabajo fundador; los otros lo apoyan.',
+      },
+      {
+        q: '¿Cuánto equity toma un venture studio?',
+        a: 'Por lo general la mayor participación inicial de cualquier vía early-stage, comúnmente cerca del 34%, porque entrega lo máximo: la idea, el equipo de construcción, el primer capital y operadores co-construyendo día a día.',
+      },
+      {
+        q: '¿Los venture studios son rentables?',
+        a: 'Datos de la Global Startup Studio Network apuntan a cerca de 2,5x el IRR del venture capital tradicional en horizontes realistas, aunque la cifra es autorreportada y sesgada por sobrevivientes, así que se lee mejor como un benchmark direccional del modelo, no una garantía.',
+      },
+    ],
+  },
+}
+
 export const articles: Article[] = [
   ...engineArticles, // generated by content-engine/merge.py
+  articleWhatIsVentureStudio,
   articleVentureStudios,
   articleFirstTicket,
   articleBrazilAIMarket,

@@ -1080,6 +1080,18 @@ function articleTaxonomy(slug: string): {
           COMMON_AVANTE,
         ],
       }
+    case 'what-is-a-venture-studio':
+      return {
+        keywords: ['what is a venture studio', 'venture studio', 'venture builder', 'startup studio', 'company builder', 'venture studio model', 'venture studio vs vc'],
+        about: [
+          { '@type': 'Thing', name: 'Venture studio' },
+          { '@type': 'Thing', name: 'Startup studio model' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Global Startup Studio Network', sameAs: 'https://www.gssn.co' },
+          COMMON_AVANTE,
+        ],
+      }
     default:
       return { keywords: [], about: [], mentions: [COMMON_AVANTE] }
   }
