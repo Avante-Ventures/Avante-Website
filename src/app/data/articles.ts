@@ -8137,6 +8137,690 @@ const engineArticles: Article[] = [
 ]
 // === CONTENT-ENGINE:END ===
 
+// Hand-authored override (durable; merge.py never touches outside the sentinels).
+const articleStudioVsAcceleratorVsVc: Article = {
+    "slug": "studio-vs-accelerator-vs-vc",
+    "category": "insights",
+    "type": "Comparison",
+    "readTime": "11 min",
+    "featured": false,
+    "date": "Jun 2026",
+    "datePublished": "2026-06-02",
+    "isPublished": true,
+    "en": {
+      "title": "Venture Studio vs VC vs Accelerator: An Honest Guide (2026)",
+      "description": "Venture studio vs VC vs accelerator: how each prices dilution, control, and speed, and which path a founder should pick. The honest terms for all three.",
+      "faqs": [
+        {
+          "q": "What is the difference between a venture studio, an accelerator, and a VC?",
+          "a": "A venture studio co-builds the company with you and takes the largest early stake (often around 34%) because it supplies the idea, the build team, first capital, and operators. An accelerator takes a small stake (around 7%) for a fixed program and a network. A VC writes a priced check (typically 15% to 25% plus a board seat) but leaves you to build. The real trade is how much gets built for you versus how much equity you keep."
+        },
+        {
+          "q": "Venture studio vs VC: which is better for an early-stage founder?",
+          "a": "It depends on what you lack. Pick a VC if you already have a team and a product and mainly need capital and governance. Pick a venture studio if you are pre-team or pre-product and want operators building alongside you from day one, and you accept giving up more equity for that depth."
+        },
+        {
+          "q": "Do venture studios deliver better returns than VCs?",
+          "a": "Industry data from the Global Startup Studio Network puts the studio model at roughly 2.5x the IRR of traditional venture capital, driven by faster time to Series A and higher graduation rates. Avante reads that as a directional model benchmark attributed to GSSN, not a guaranteed return for any single venture."
+        },
+        {
+          "q": "How much equity does a venture studio take?",
+          "a": "Usually the largest early stake of the three paths, commonly around 34%, because the studio hands over the most: the idea, the building team, first capital, and operators co-building day to day. An accelerator takes far less (around 7%) because it sells a program, not a company."
+        },
+        {
+          "q": "When should a founder pick an accelerator instead?",
+          "a": "An accelerator fits a founder who already has a team and an early product and wants structured mentorship, a cohort network, and a demo day, while keeping most equity and control. It sells access and a program, not company-building."
+        }
+      ],
+      "sections": [
+        {
+          "paragraphs": [
+            "The choice between a venture studio, an accelerator, and traditional VC is not about which one is best. It is about which one prices the three things you are actually trading. Dilution, control, and speed to first traction. An accelerator like Y Combinator takes 7% for a small check and a fixed program. A priced VC round costs 15% to 25% and a board seat but leaves you owning the idea. A venture studio takes the largest early stake, often around 34%, because it hands you the most. The idea, the build team, first capital, and operators co-building day to day.",
+            "This guide gives the real terms for each path and names who should pick what. Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America, so we have a view. We have also tried to be fair to the paths we did not choose."
+          ],
+          "table": {
+            "caption": "How venture studio, accelerator, and VC price dilution, control, and speed.",
+            "headers": ["", "Venture studio", "Accelerator", "VC"],
+            "rows": [
+              ["Equity taken", "Largest, often ~34%", "Small, ~7%", "Priced round, ~15 to 25%"],
+              ["What you get", "Idea, build team, first capital, operators co-building", "Program, network, demo day", "Capital plus a board seat"],
+              ["Best for", "Pre-team or pre-product founders who want operators on day one", "Founders with a team and an early product wanting structure", "Teams with a product who mainly need capital and governance"],
+              ["Speed to traction", "Fastest: operators build from day one", "Fixed cohort timeline", "You build; the pace is on you"],
+              ["Control kept", "Lowest, the studio co-owns more", "High", "High, minus a board seat"]
+            ]
+          }
+        },
+        {
+          "heading": "The three things you are actually trading",
+          "level": 2,
+          "paragraphs": [
+            "Strip away the labels and every path sets the same three dials. How much of the company you give up. How much control you keep. How fast you reach traction. The reason the equity numbers look so different is that the paths supply different amounts of the actual work.",
+            "An accelerator and a studio can both ask for equity, but they are not selling the same thing. The accelerator sells a program and a network. The studio sells a company built around you. Read the trade as how much do I need built for me, not as cheap versus expensive."
+          ],
+          "bullets": [
+            "Dilution. The percentage of the company you hand over at the start, before any of the upside is proven.",
+            "Control. Whether you keep the board, the roadmap, and the right to say no.",
+            "Speed. How many months until you have a product in market and a first cohort of customers."
+          ],
+          "id": "three-axes"
+        },
+        {
+          "heading": "Venture studio: most support, most dilution",
+          "level": 3,
+          "paragraphs": [
+            "A studio takes the biggest early stake because it does the most before you have anything to show. The average studio takes a 34% equity stake in the companies it co-founds, with the highest stakes near 80%, per the Global Startup Studio Network. In return you get an idea that has already been pressure-tested, a build team on day one, first-ticket capital, and operating partners who are in the unit-economics model in the first weeks rather than reviewing a deck once a quarter.",
+            "This fits one founder profile in particular. A domain expert with no team and no built product. They are trading the largest slice of equity for the one thing they cannot assemble alone. A working company. The cost is real and so is the conflict question, since the same entity supplies the idea, the capital, and the operators."
+          ],
+          "id": "studio"
+        },
+        {
+          "heading": "Accelerator: a program and a small check",
+          "level": 3,
+          "paragraphs": [
+            "An accelerator buys a small, fixed slice for a small check and a fixed-length program. Y Combinator invests $500,000 in total. The first $125,000 buys 7% on a post-money SAFE, and the remaining $375,000 rides on an uncapped SAFE that converts at your next priced round. Techstars runs a similar shape, with 2025 terms of $220,000. A $20,000 agreement for 5% of common stock plus a $200,000 uncapped SAFE.",
+            "The math is good when you need the network and the stamp more than the cash. It is expensive when you already have a team and traction, because you are paying 6% to 7% for a program you may have outgrown."
+          ],
+          "id": "accelerator"
+        },
+        {
+          "heading": "VC: capital and a board seat, you keep the idea",
+          "level": 3,
+          "paragraphs": [
+            "VC trades a larger slice than an accelerator for real capital and governance, while leaving you owning the original idea and team. A priced seed or Series A round typically costs 15% to 25% per round plus a board seat. You keep the company you came in with. You also accept a board member whose job is to push growth on a clock that may not match your business.",
+            "This is the right path for a team that already has a working product and wants fuel, not a co-builder. It is also the path for a founder who wants to keep maximum ownership and is willing to move slower to do it."
+          ],
+          "id": "vc"
+        },
+        {
+          "heading": "Which founder should pick which",
+          "level": 2,
+          "paragraphs": [
+            "The decision is less about preference and more about what you are missing. Match the path to the gap, not to the lowest dilution number."
+          ],
+          "bullets": [
+            "Solo domain expert, no team, no product. A venture studio. You are trading the most equity for the most build.",
+            "Technical team with a working prototype. An accelerator or VC. You are paying for capital and network, not for the build.",
+            "Founder who wants maximum ownership and control. Bootstrap or raise VC, and accept slower time to traction as the cost of keeping the cap table clean."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "If you can already build and ship without help, a studio stake is overpriced for you. If you cannot, an accelerator check will not close the gap. Buy what you are actually short on."
+          },
+          "id": "who-picks-what"
+        },
+        {
+          "heading": "Why a bigger studio stake can still win",
+          "level": 2,
+          "paragraphs": [
+            "A 34% studio stake only makes sense if the studio model returns more, and the data says it does. Per the Global Startup Studio Network, startups created by studios show a [50% average internal rate of return against 19% for non-studio startups](/library/why-venture-studios-win-latam). Avante cites this as studio IRR of ~50% versus an industry-standard ~19% for traditional VC, roughly 2.5x, and always as the GSSN benchmark rather than any single firm's realized return.",
+            "The speed numbers explain the returns. Studio startups reach a seed round in an average of 10.6 months, less than a third of the time non-studio startups take, and 72% of those that raise a seed go on to a Series A. The honest caveat is survivorship. The GSSN figures are self-reported and skew toward studios that survived to publish, so read the absolute IRR as directional. What is not in doubt is the mechanism. Plumbing solved once, operators in the model early, and a repeatable system that compounds across ventures."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Studio IRR of ~50% versus an industry-standard ~19% for traditional VC, roughly 2.5x the IRR over realistic time horizons.",
+            "attribution": "Global Startup Studio Network (GSSN)"
+          },
+          "id": "dilution-vs-ev"
+        },
+        {
+          "heading": "Where Avante fits",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America, and Brazil is the reason the model fits. Services account for roughly 70% of Brazilian GDP, with low software penetration, which is a large surface of under-digitized businesses understood by domain operators rather than generalist VCs. AI infrastructure is now cheap enough to deploy without a Series A, so the build can start lean.",
+            "In practice that means Avante launches 3-4 ventures per year through a six-stage system, deploying $500K-1.5M per venture with [operating partners staying engaged through the first revenue milestone](/library/operating-partner-economics). The recurring pattern is the [copilot to data to fund flywheel](/library/copilot-to-data-to-fund-flywheel). Build an AI copilot to generate proprietary data, then use that data to raise and deploy capital. You can read the full thesis on [/why-avante](/why-avante) and how the studio operates on [/principles](/principles).",
+            "So choose by what you lack, not by what looks cheapest on day one. The founder who picks a studio is not buying a check. They are buying a company built around ten years of scar tissue, started the month they sign instead of the year they would have finished hiring."
+          ],
+          "id": "how-avante"
+        }
+      ]
+    },
+    "pt": {
+      "title": "Venture Studio vs VC vs Aceleradora: Um Guia Honesto (2026)",
+      "description": "Venture studio vs VC vs aceleradora: como cada um precifica diluição, controle e velocidade, e qual caminho um fundador deve escolher. Os termos reais dos três.",
+      "faqs": [
+        {
+          "q": "Qual a diferença entre venture studio, aceleradora e VC?",
+          "a": "Um venture studio co-constrói a empresa com você e fica com a maior fatia inicial (em geral perto de 34%) porque entrega a ideia, o time de construção, o primeiro capital e operadores. Uma aceleradora pega uma fatia pequena (cerca de 7%) por um programa fixo e uma rede. Um VC faz um cheque precificado (tipicamente 15% a 25% mais uma cadeira no conselho), mas deixa você construir. A troca real é quanto é construído para você versus quanto equity você mantém."
+        },
+        {
+          "q": "Venture studio vs VC: qual é melhor para um fundador early-stage?",
+          "a": "Depende do que falta a você. Escolha um VC se já tem time e produto e precisa sobretudo de capital e governança. Escolha um venture studio se está pré-time ou pré-produto e quer operadores construindo ao seu lado desde o dia um, aceitando ceder mais equity por essa profundidade."
+        },
+        {
+          "q": "Venture studios dão retorno melhor que VCs?",
+          "a": "Dados da Global Startup Studio Network colocam o modelo de studio em cerca de 2,5x o IRR do venture capital tradicional, puxado por menor tempo até a Série A e maior taxa de graduação. A Avante lê isso como um benchmark direcional do modelo, atribuído à GSSN, não como retorno garantido de qualquer venture isolada."
+        },
+        {
+          "q": "Quanto de equity um venture studio pega?",
+          "a": "Em geral a maior fatia inicial das três vias, comumente perto de 34%, porque o studio entrega o máximo: a ideia, o time de construção, o primeiro capital e operadores co-construindo no dia a dia. Uma aceleradora pega bem menos (cerca de 7%) porque vende um programa, não uma empresa."
+        },
+        {
+          "q": "Quando um fundador deve escolher uma aceleradora?",
+          "a": "Uma aceleradora serve a um fundador que já tem time e um produto inicial e quer mentoria estruturada, uma rede de cohort e um demo day, mantendo a maior parte do equity e do controle. Ela vende acesso e um programa, não a construção da empresa."
+        }
+      ],
+      "sections": [
+        {
+          "paragraphs": [
+            "A escolha entre um venture studio, uma aceleradora e VC tradicional não é sobre qual deles é melhor. É sobre qual deles cobra o preço certo pelas três coisas que você está de fato trocando. Diluição, controle e velocidade até a primeira tração. Uma aceleradora como a Y Combinator fica com 7% por um cheque pequeno e um programa de prazo fixo. Uma rodada de VC precificada custa de 15% a 25% e uma cadeira no conselho, mas deixa a ideia com você. Um venture studio fica com a maior fatia inicial, com frequência em torno de 34%, porque entrega o máximo. A ideia, o time que constrói, o primeiro capital e operadores construindo lado a lado todos os dias.",
+            "Este guia traz os termos reais de cada caminho e diz quem deve escolher o quê. A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina, então temos uma posição. Também tentamos ser justos com os caminhos que não escolhemos."
+          ],
+          "table": {
+            "caption": "Como venture studio, aceleradora e VC cobram diluição, controle e velocidade.",
+            "headers": ["", "Venture studio", "Aceleradora", "VC"],
+            "rows": [
+              ["Equity que pega", "A maior, em geral ~34%", "Pequena, ~7%", "Rodada precificada, ~15 a 25%"],
+              ["O que você recebe", "Ideia, time de construção, primeiro capital, operadores co-construindo", "Programa, rede, demo day", "Capital mais uma cadeira no conselho"],
+              ["Melhor para", "Fundadores pré-time ou pré-produto que querem operadores no dia um", "Fundadores com time e produto inicial que querem estrutura", "Times com produto que precisam sobretudo de capital e governança"],
+              ["Velocidade até tração", "A mais rápida: operadores constroem desde o dia um", "Cronograma fixo de cohort", "Você constrói; o ritmo é seu"],
+              ["Controle mantido", "O menor, o studio co-detém mais", "Alto", "Alto, menos uma cadeira no conselho"]
+            ]
+          }
+        },
+        {
+          "heading": "As três coisas que você está de fato trocando",
+          "level": 2,
+          "paragraphs": [
+            "Tire os rótulos e todo caminho ajusta os mesmos três botões. Quanto da empresa você entrega. Quanto de controle você mantém. Em quanto tempo você chega à tração. A razão de os números de equity serem tão diferentes é que cada caminho entrega uma quantidade diferente do trabalho real.",
+            "Aceleradora e studio podem pedir equity, mas não vendem a mesma coisa. A aceleradora vende um programa e uma rede. O studio vende uma empresa construída em torno de você. Leia a troca como quanto eu preciso que construam para mim, não como barato contra caro."
+          ],
+          "bullets": [
+            "Diluição. O percentual da empresa que você entrega no começo, antes de qualquer upside estar provado.",
+            "Controle. Se você mantém o conselho, o roadmap e o direito de dizer não.",
+            "Velocidade. Quantos meses até ter um produto no mercado e uma primeira leva de clientes."
+          ],
+          "id": "three-axes"
+        },
+        {
+          "heading": "Venture studio: mais apoio, mais diluição",
+          "level": 3,
+          "paragraphs": [
+            "O studio fica com a maior fatia inicial porque faz mais antes de você ter algo a mostrar. O studio médio fica com 34% de equity nas empresas que co-funda, com as maiores participações perto de 80%, segundo a Global Startup Studio Network. Em troca, você recebe uma ideia já testada sob pressão, um time de construção no dia um, capital de primeiro cheque e operating partners que estão na planilha de unit economics nas primeiras semanas, não revisando um deck uma vez por trimestre.",
+            "Isso encaixa em um perfil de fundador em especial. Um especialista de domínio sem time e sem produto construído. Ele troca a maior fatia de equity pela única coisa que não consegue montar sozinho. Uma empresa que funciona. O custo é real e a questão do conflito também, já que a mesma entidade entrega a ideia, o capital e os operadores."
+          ],
+          "id": "studio"
+        },
+        {
+          "heading": "Aceleradora: um programa e um cheque pequeno",
+          "level": 3,
+          "paragraphs": [
+            "Uma aceleradora compra uma fatia pequena e fixa por um cheque pequeno e um programa de prazo fixo. A Y Combinator investe US$ 500 mil no total. Os primeiros US$ 125 mil compram 7% num SAFE post-money, e os US$ 375 mil restantes vêm num SAFE sem cap que converte na sua próxima rodada precificada. A Techstars segue um formato parecido, com termos de 2025 de US$ 220 mil. Um acordo de US$ 20 mil por 5% em ações ordinárias mais um SAFE sem cap de US$ 200 mil.",
+            "A conta fecha quando você precisa da rede e do selo mais do que do dinheiro. Fica cara quando você já tem time e tração, porque está pagando de 6% a 7% por um programa que talvez já tenha superado."
+          ],
+          "id": "accelerator"
+        },
+        {
+          "heading": "VC: capital e cadeira no conselho, a ideia fica com você",
+          "level": 3,
+          "paragraphs": [
+            "O VC troca uma fatia maior que a da aceleradora por capital de verdade e governança, deixando com você a ideia e o time originais. Uma rodada seed ou Série A precificada custa em geral de 15% a 25% por rodada mais uma cadeira no conselho. Você mantém a empresa com que entrou. Você também aceita um conselheiro cujo trabalho é empurrar crescimento num relógio que talvez não combine com o seu negócio.",
+            "É o caminho certo para um time que já tem produto funcionando e quer combustível, não um co-construtor. É também o caminho para o fundador que quer manter o máximo de propriedade e topa andar mais devagar para isso."
+          ],
+          "id": "vc"
+        },
+        {
+          "heading": "Qual fundador deve escolher o quê",
+          "level": 2,
+          "paragraphs": [
+            "A decisão é menos sobre preferência e mais sobre o que está faltando. Case o caminho com a lacuna, não com o menor número de diluição."
+          ],
+          "bullets": [
+            "Especialista de domínio solo, sem time, sem produto. Um venture studio. Você troca o máximo de equity pelo máximo de construção.",
+            "Time técnico com protótipo funcionando. Uma aceleradora ou VC. Você paga por capital e rede, não pela construção.",
+            "Fundador que quer máximo de propriedade e controle. Faça bootstrap ou levante VC, e aceite uma tração mais lenta como o preço de manter o cap table limpo."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Se você já constrói e entrega sem ajuda, a fatia de um studio está cara demais para você. Se você não consegue, o cheque de uma aceleradora não vai fechar a lacuna. Compre aquilo de que você realmente sente falta."
+          },
+          "id": "who-picks-what"
+        },
+        {
+          "heading": "Por que uma fatia maior de studio ainda pode vencer",
+          "level": 2,
+          "paragraphs": [
+            "Uma fatia de 34% de studio só faz sentido se o modelo de studio retorna mais, e os dados dizem que sim. Segundo a Global Startup Studio Network, startups criadas por studios mostram uma [taxa interna de retorno média de 50% contra 19% das startups fora de studio](/library/why-venture-studios-win-latam). A Avante cita isso como studio IRR de ~50% versus ~19% para VC tradicional, cerca de 2.5x, e sempre como o benchmark da GSSN, nunca como o retorno realizado de uma única firma.",
+            "Os números de velocidade explicam o retorno. Startups de studio chegam à rodada seed em média em 10,6 meses, menos de um terço do tempo das startups fora de studio, e 72% das que levantam seed seguem para uma Série A. A ressalva honesta é sobrevivência. Os números da GSSN são autorreportados e pendem para studios que sobreviveram para publicar, então leia o IRR absoluto como direcional. O que não está em dúvida é o mecanismo. Encanamento resolvido uma vez, operadores no modelo cedo, e um sistema repetível que compõe entre as empresas."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Studio IRR de ~50% versus ~19% para VC tradicional, cerca de 2.5x o IRR em horizontes de tempo realistas.",
+            "attribution": "Global Startup Studio Network (GSSN)"
+          },
+          "id": "dilution-vs-ev"
+        },
+        {
+          "heading": "Onde a Avante se encaixa",
+          "level": 2,
+          "paragraphs": [
+            "A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina, e o Brasil é a razão de o modelo encaixar. Serviços representam cerca de 70% do PIB brasileiro, com baixa penetração de software, o que é uma superfície enorme de negócios pouco digitalizados entendidos por operadores de domínio, não por VCs generalistas. A infraestrutura de IA já está barata o bastante para lançar uma empresa sem uma Série A, então a construção pode começar enxuta.",
+            "Na prática, isso significa que a Avante lança 3-4 ventures por ano através de um sistema de seis estágios, aportando US$ 500K-1.5M por venture com [operating partners engajados até o primeiro marco de receita](/library/operating-partner-economics). O padrão recorrente é o [flywheel copilot, dado, capital](/library/copilot-to-data-to-fund-flywheel). Construir um copilot de IA para gerar dado proprietário e usar esse dado para levantar e aplicar capital. Você pode ler a tese completa em [/why-avante](/why-avante) e como o studio opera em [/principles](/principles).",
+            "Então escolha pelo que falta a você, não pelo que parece mais barato no dia um. O fundador que escolhe um studio não está comprando um cheque. Está comprando uma empresa construída sobre dez anos de cicatriz de operação, iniciada no mês em que assina, em vez do ano em que teria terminado de contratar."
+          ],
+          "id": "how-avante"
+        }
+      ]
+    },
+    "es": {
+      "title": "Venture Studio vs VC vs Aceleradora: Una Guía Honesta (2026)",
+      "description": "Venture studio vs VC vs aceleradora: cómo cada uno cobra dilución, control y velocidad, y qué camino debe elegir un fundador. Los términos reales de los tres.",
+      "faqs": [
+        {
+          "q": "¿Cuál es la diferencia entre un venture studio, una aceleradora y un VC?",
+          "a": "Un venture studio co-construye la empresa contigo y se queda con la mayor participación inicial (a menudo cerca del 34%) porque aporta la idea, el equipo de construcción, el primer capital y operadores. Una aceleradora toma una participación pequeña (alrededor del 7%) por un programa fijo y una red. Un VC hace un cheque con precio (típicamente 15% a 25% más un asiento en el directorio), pero te deja construir. El trade real es cuánto se construye para ti versus cuánto equity conservas."
+        },
+        {
+          "q": "Venture studio vs VC: ¿cuál es mejor para un fundador early-stage?",
+          "a": "Depende de lo que te falte. Elige un VC si ya tienes equipo y producto y sobre todo necesitas capital y gobierno. Elige un venture studio si estás pre-equipo o pre-producto y quieres operadores construyendo a tu lado desde el día uno, aceptando ceder más equity por esa profundidad."
+        },
+        {
+          "q": "¿Los venture studios dan mejor retorno que los VC?",
+          "a": "Datos de la Global Startup Studio Network ubican al modelo de studio en cerca de 2,5x el IRR del venture capital tradicional, impulsado por menor tiempo a la Serie A y mayor tasa de graduación. Avante lo lee como un benchmark direccional del modelo, atribuido a GSSN, no como retorno garantizado de ninguna venture aislada."
+        },
+        {
+          "q": "¿Cuánto equity toma un venture studio?",
+          "a": "Por lo general la mayor participación inicial de las tres vías, comúnmente cerca del 34%, porque el studio entrega lo máximo: la idea, el equipo de construcción, el primer capital y operadores co-construyendo día a día. Una aceleradora toma mucho menos (alrededor del 7%) porque vende un programa, no una empresa."
+        },
+        {
+          "q": "¿Cuándo debe un fundador elegir una aceleradora?",
+          "a": "Una aceleradora le sirve a un fundador que ya tiene equipo y un producto inicial y quiere mentoría estructurada, una red de cohort y un demo day, conservando la mayor parte del equity y el control. Vende acceso y un programa, no la construcción de la empresa."
+        }
+      ],
+      "sections": [
+        {
+          "paragraphs": [
+            "La elección entre un venture studio, una aceleradora y VC tradicional no es sobre cuál es mejor. Es sobre cuál pone el precio correcto a las tres cosas que de verdad está intercambiando. Dilución, control y velocidad hasta la primera tracción. Una aceleradora como Y Combinator se queda con 7% por un cheque pequeño y un programa de duración fija. Una ronda de VC con valuación cuesta entre 15% y 25% y un asiento en el directorio, pero deja la idea en sus manos. Un venture studio toma la mayor porción inicial, a menudo cerca de 34%, porque entrega lo máximo. La idea, el equipo que construye, el primer capital y operadores co-construyendo día a día.",
+            "Esta guía da los términos reales de cada camino y dice quién debe elegir cuál. Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina, así que tenemos una postura. También intentamos ser justos con los caminos que no elegimos."
+          ],
+          "table": {
+            "caption": "Cómo venture studio, aceleradora y VC cobran dilución, control y velocidad.",
+            "headers": ["", "Venture studio", "Aceleradora", "VC"],
+            "rows": [
+              ["Equity que toma", "La mayor, a menudo ~34%", "Pequeña, ~7%", "Ronda con precio, ~15 a 25%"],
+              ["Qué recibes", "Idea, equipo de construcción, primer capital, operadores co-construyendo", "Programa, red, demo day", "Capital más un asiento en el directorio"],
+              ["Mejor para", "Fundadores pre-equipo o pre-producto que quieren operadores el día uno", "Fundadores con equipo y producto inicial que quieren estructura", "Equipos con producto que necesitan sobre todo capital y gobierno"],
+              ["Velocidad a tracción", "La más rápida: operadores construyen desde el día uno", "Cronograma fijo de cohort", "Tú construyes; el ritmo es tuyo"],
+              ["Control mantenido", "El menor, el studio co-posee más", "Alto", "Alto, menos un asiento en el directorio"]
+            ]
+          }
+        },
+        {
+          "heading": "Las tres cosas que de verdad estás intercambiando",
+          "level": 2,
+          "paragraphs": [
+            "Quite las etiquetas y todo camino ajusta las mismas tres perillas. Cuánto de la empresa entrega. Cuánto control conserva. En cuánto tiempo llega a la tracción. La razón de que los números de equity se vean tan distintos es que cada camino entrega una cantidad distinta del trabajo real.",
+            "Aceleradora y studio pueden pedir equity, pero no venden lo mismo. La aceleradora vende un programa y una red. El studio vende una empresa construida alrededor de usted. Lea el intercambio como cuánto necesito que construyan para mí, no como barato contra caro."
+          ],
+          "bullets": [
+            "Dilución. El porcentaje de la empresa que entrega al inicio, antes de que el upside esté probado.",
+            "Control. Si conserva el directorio, el roadmap y el derecho a decir que no.",
+            "Velocidad. Cuántos meses hasta tener un producto en el mercado y una primera camada de clientes."
+          ],
+          "id": "three-axes"
+        },
+        {
+          "heading": "Venture studio: más apoyo, más dilución",
+          "level": 3,
+          "paragraphs": [
+            "El studio toma la mayor porción inicial porque hace más antes de que usted tenga algo que mostrar. El studio promedio se queda con 34% de equity en las empresas que co-funda, con las participaciones más altas cerca de 80%, según la Global Startup Studio Network. A cambio recibe una idea ya probada bajo presión, un equipo de construcción el día uno, capital de primer cheque y operating partners que están en el modelo de unit economics en las primeras semanas, no revisando un deck una vez por trimestre.",
+            "Esto calza con un perfil de fundador en particular. Un experto de dominio sin equipo y sin producto construido. Intercambia la mayor porción de equity por lo único que no puede armar solo. Una empresa que funciona. El costo es real y la cuestión del conflicto también, ya que la misma entidad entrega la idea, el capital y los operadores."
+          ],
+          "id": "studio"
+        },
+        {
+          "heading": "Aceleradora: un programa y un cheque pequeño",
+          "level": 3,
+          "paragraphs": [
+            "Una aceleradora compra una porción pequeña y fija por un cheque pequeño y un programa de duración fija. Y Combinator invierte US$ 500 mil en total. Los primeros US$ 125 mil compran 7% en un SAFE post-money, y los US$ 375 mil restantes van en un SAFE sin cap que convierte en su próxima ronda con valuación. Techstars sigue un formato parecido, con términos de 2025 de US$ 220 mil. Un acuerdo de US$ 20 mil por 5% en acciones comunes más un SAFE sin cap de US$ 200 mil.",
+            "La cuenta cierra cuando necesita la red y el sello más que el dinero. Sale cara cuando ya tiene equipo y tracción, porque está pagando entre 6% y 7% por un programa que quizás ya superó."
+          ],
+          "id": "accelerator"
+        },
+        {
+          "heading": "VC: capital y un asiento en el directorio, la idea es tuya",
+          "level": 3,
+          "paragraphs": [
+            "El VC intercambia una porción mayor que la de la aceleradora por capital de verdad y gobernanza, dejándole la idea y el equipo originales. Una ronda seed o Serie A con valuación cuesta en general entre 15% y 25% por ronda más un asiento en el directorio. Usted conserva la empresa con la que entró. También acepta un miembro del directorio cuyo trabajo es empujar crecimiento en un reloj que quizás no calce con su negocio.",
+            "Es el camino correcto para un equipo que ya tiene producto funcionando y quiere combustible, no un co-constructor. Es también el camino del fundador que quiere conservar el máximo de propiedad y está dispuesto a ir más lento por ello."
+          ],
+          "id": "vc"
+        },
+        {
+          "heading": "Qué fundador debe elegir cuál",
+          "level": 2,
+          "paragraphs": [
+            "La decisión es menos sobre preferencia y más sobre lo que le falta. Empate el camino con la brecha, no con el menor número de dilución."
+          ],
+          "bullets": [
+            "Experto de dominio solo, sin equipo, sin producto. Un venture studio. Intercambia el máximo de equity por el máximo de construcción.",
+            "Equipo técnico con prototipo funcionando. Una aceleradora o VC. Paga por capital y red, no por la construcción.",
+            "Fundador que quiere el máximo de propiedad y control. Haga bootstrap o levante VC, y acepte una tracción más lenta como el precio de mantener el cap table limpio."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Si ya construye y lanza sin ayuda, la porción de un studio está cara para usted. Si no puede, el cheque de una aceleradora no va a cerrar la brecha. Compre aquello que de verdad le falta."
+          },
+          "id": "who-picks-what"
+        },
+        {
+          "heading": "Por qué una participación mayor del studio aún puede ganar",
+          "level": 2,
+          "paragraphs": [
+            "Una participación de 34% del studio solo tiene sentido si el modelo de studio retorna más, y los datos dicen que sí. Según la Global Startup Studio Network, las startups creadas por studios muestran una [tasa interna de retorno promedio de 50% contra 19% de las startups fuera de studio](/library/why-venture-studios-win-latam). Avante lo cita como studio IRR de ~50% versus ~19% para VC tradicional, cerca de 2.5x, y siempre como el benchmark de GSSN, nunca como el retorno realizado de una sola firma.",
+            "Los números de velocidad explican el retorno. Las startups de studio llegan a una ronda seed en promedio en 10,6 meses, menos de un tercio del tiempo de las startups fuera de studio, y 72% de las que levantan seed siguen a una Serie A. La salvedad honesta es supervivencia. Los números de GSSN son autorreportados y se inclinan hacia studios que sobrevivieron para publicar, así que lea el IRR absoluto como direccional. Lo que no está en duda es el mecanismo. Plomería resuelta una vez, operadores en el modelo temprano, y un sistema repetible que compone entre empresas."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Studio IRR de ~50% versus ~19% para VC tradicional, cerca de 2.5x el IRR en horizontes de tiempo realistas.",
+            "attribution": "Global Startup Studio Network (GSSN)"
+          },
+          "id": "dilution-vs-ev"
+        },
+        {
+          "heading": "Dónde encaja Avante",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina, y Brasil es la razón de que el modelo calce. Los servicios representan cerca del 70% del PIB brasileño, con baja penetración de software, que es una superficie enorme de negocios poco digitalizados entendidos por operadores de dominio, no por VCs generalistas. La infraestructura de IA ya está barata como para lanzar una empresa sin una Serie A, así que la construcción puede empezar austera.",
+            "En la práctica, eso significa que Avante lanza 3-4 ventures por año a través de un sistema de seis etapas, aportando US$ 500K-1.5M por venture con [operating partners comprometidos hasta el primer hito de ingresos](/library/operating-partner-economics). El patrón recurrente es el [flywheel copilot, dato, capital](/library/copilot-to-data-to-fund-flywheel). Construir un copilot de IA para generar dato propietario y usar ese dato para levantar y desplegar capital. Puede leer la tesis completa en [/why-avante](/why-avante) y cómo opera el studio en [/principles](/principles).",
+            "Entonces elija por lo que le falta, no por lo que se ve más barato el día uno. El fundador que elige un studio no está comprando un cheque. Está comprando una empresa construida sobre diez años de cicatriz de operación, iniciada el mes en que firma, en lugar del año en que habría terminado de contratar."
+          ],
+          "id": "how-avante"
+        }
+      ]
+    }
+  }
+
+// Hand-authored override (durable; merge.py never touches outside the sentinels).
+const articleWhyVentureStudiosWinLatam: Article = {
+    "slug": "why-venture-studios-win-latam",
+    "category": "research",
+    "type": "Research Report",
+    "readTime": "11 min",
+    "featured": false,
+    "date": "Jun 2026",
+    "datePublished": "2026-06-02",
+    "isPublished": true,
+    "en": {
+      "title": "LATAM Venture Studios: Why They Outperform VC in Brazil",
+      "description": "Studio IRR runs near 50% against roughly 19% for traditional VC. The structural reason, the honest failure modes, and why Brazil amplifies the model.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Startups built inside a venture studio return more than startups a traditional fund writes a check into. The Global Startup Studio Network puts studio IRR at roughly 50% against roughly 19% for venture-backed startups. Avante Ventures frames that gap the way an LP should read it. Studio IRR near 50% versus an industry-standard ~19% IRR for traditional VC, roughly 2.5x over realistic time horizons.",
+            "The interesting part is why. The gap is not a better-founder story. It is structural, it is repeatable, and it gets larger in a market like Brazil where operator depth is scarce and the services economy is barely digitized. This is the case for the venture studio vs VC question, the honest failure modes included, and why the model compounds hardest where Avante Ventures runs it."
+          ]
+        },
+        {
+          "id": "performance-gap",
+          "heading": "The performance gap is structural",
+          "level": 2,
+          "paragraphs": [
+            "Start with the number that anchors the whole venture studio IRR debate. Per the Global Startup Studio Network, studio ventures average roughly 50% IRR against roughly 19% for traditional venture-backed startups. The conservative framing is studio IRR near 50% versus ~19% IRR for traditional VC. Even that lands near the top of the realistic range for benchmark VC, where the Cambridge Associates US Venture Capital Index has posted long-run pooled net returns in the mid-teens.",
+            "Speed is where the gap becomes visible. Studio startups reach Series A in about 25 months. Traditional startups take about 56 months. And 72% of studio ventures make it to Series A against 42% of traditional ones. A model that more than halves the time to a priced round and nearly doubles the graduation rate is not getting lucky on deal selection. It is removing the failure points that kill ordinary startups in year one."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Studio IRR near 50% versus an industry-standard ~19% IRR for traditional VC, roughly 2.5x over realistic time horizons.",
+            "attribution": "Global Startup Studio Network, via Bundl and M Accelerator"
+          }
+        },
+        {
+          "id": "mechanism-depth",
+          "heading": "Operational depth, by design",
+          "level": 3,
+          "paragraphs": [
+            "A studio operating partner is inside the unit-economics model in the first weeks, not nine months after a board seat is negotiated. That is the first mechanism, and it is the one a generalist fund cannot copy. The studio supplies engineering, design, recruiting, and go-to-market from a central team that has shipped this work before.",
+            "Read that against the alternative. A venture partner spread across 8 to 12 boards gives advice. A studio operator gives hours. When the people who have built companies are in the room writing the first pricing page, the early mistakes that sink ordinary startups simply do not get made."
+          ]
+        },
+        {
+          "id": "mechanism-time",
+          "heading": "Time efficiency at the portfolio level",
+          "level": 3,
+          "paragraphs": [
+            "The 25 months versus 56 months figure is the cleanest proxy for the studio's time advantage. The plumbing already exists, so the riskiest early period gets compressed. A studio venture launches 6-9 months ahead of a comparably funded standalone team.",
+            "Hexa, formerly eFounders, built its entire thesis on exactly this. Treat company-building as a reusable system, not a sequence of one-off bets, and every new venture starts further down the field than the last one did."
+          ]
+        },
+        {
+          "id": "mechanism-capital",
+          "heading": "Capital efficiency through repeatable systems",
+          "level": 3,
+          "paragraphs": [
+            "Solve the company plumbing once and reuse it, and more of each dollar reaches product and traction instead of undifferentiated setup. In practice that discipline routes roughly $300K-500K of effective capital per venture into the work that actually moves the business.",
+            "The higher graduation rate follows from there. When 72% of studio ventures reach Series A against 42% of traditional ones, it is because fewer months and fewer dollars were burned rebuilding the same foundation a sixth time."
+          ],
+          "bullets": [
+            "Shared infrastructure means one engineering and design backbone amortized across every venture, not rebuilt per company.",
+            "Operating partners stay engaged through the first revenue milestone, then transition to board-level oversight.",
+            "Capital deployed is $500K-1.5M per venture across pre-seed, with Avante retaining co-founder economics."
+          ]
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Where the studio model breaks",
+          "level": 2,
+          "paragraphs": [
+            "A piece that hides the weak points reads as marketing, so here are the real ones. The studio model breaks in three predictable ways, and the headline IRR carries a bias worth naming out loud.",
+            "First, resource dilution. A studio that runs too many ventures at once spreads attention, capital, and expertise too thin, and every company in the cohort suffers for it. Second, founder conflict. Higher studio ownership can read to a founder as control over their own vision, and the equity math has to be honest from day one or the relationship sours. Third, capital intensity. Building companies from inception is expensive, and a studio that cannot fund its own overhead between exits does not survive long enough to compound.",
+            "Then the bias. The 50% figure reflects studios that survived to report it. Failed studios do not publish their IRR, and early critics argued some studios were exploiting an immature ecosystem rather than building durable value. The honest reading is that the studio edge is real and shows up across sources, but the precise number is a benchmark, not a promise. The ~50% is the GSSN studio-model benchmark, never a claim about a studio's own realized return."
+          ]
+        },
+        {
+          "id": "brazil",
+          "heading": "Why Brazil amplifies the model",
+          "level": 2,
+          "paragraphs": [
+            "The studio edge compounds where two things are true at once. The market is large and under-digitized, and operator depth is scarce enough to be decisive. Brazil is the textbook case. Services account for roughly 70% of Brazilian GDP, and software penetration across those service sectors is low. That is precisely the terrain where an operator-led studio can build vertical AI companies a generalist fund could not even source, let alone staff. The specific sectors where that edge is sharpest are mapped in [Brazil's AI market report for 2026](/library/brazil-ai-market-report-2026).",
+            "The capital backdrop helps too. LATAM venture funding is recovering rather than saturated, with funding ticking higher through 2024 and early-stage rounds taking the largest share. The deeper shift is on the cost side. [AI infrastructure is now cheap enough to deploy without a Series A](/library/ai-infrastructure-cost-curve-latam), which is the reason a studio can launch 3-4 ventures per year here instead of one capital-heavy bet. Read the broader thesis at [/why-avante](/why-avante).",
+            "The edge that ties it together is people. Domain operators with 10+ years of Brazilian-market scar tissue, paired with a Silicon Valley playbook and first-ticket capital, assembled on day one. The recurring portfolio pattern is the [copilot to data to fund flywheel](/library/copilot-to-data-to-fund-flywheel). Build an AI copilot to generate proprietary data, then use that data to raise and deploy capital."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Services account for roughly 70% of Brazilian GDP, with low software penetration across those sectors.",
+            "attribution": "IBGE, via MercoPress and Reuters, 2024"
+          }
+        },
+        {
+          "id": "how-avante",
+          "heading": "How Avante implements it",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America. The model is deliberate, not opportunistic. It launches 3-4 ventures per year through a six-stage system. Research, Partner, Build, Traction, Revenue, Compound. Each venture gets $500K-1.5M across pre-seed, and Avante keeps co-founder economics rather than a passive minority stake.",
+            "What that looks like in practice is operators inside the company, not on a quarterly call. Operating partners stay engaged through the first revenue milestone, then move to board-level oversight. The current portfolio runs across judicial asset infrastructure, insurance pricing, and real estate auction intelligence, each one a vertical where [Brazilian domain depth is the moat](/library/data-network-effects-vertical-ai). See how that maps to the operating model at [/principles](/principles).",
+            "The studio premium is not a secret. It is the predictable result of putting experienced builders inside a company on day one, in a market where almost no one else can. Brazil does not just allow the venture studio model to work. It is where the model pays the most."
+          ]
+        }
+      ]
+    },
+    "pt": {
+      "title": "Venture Studios na LATAM: Por que Superam o VC no Brasil",
+      "description": "O IRR de studios fica perto de 50% contra cerca de 19% do VC tradicional. A razão estrutural, as falhas do modelo e por que o Brasil amplifica tudo.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Startups construídas dentro de um venture studio retornam mais do que startups em que um fundo tradicional apenas assina um cheque. A Global Startup Studio Network coloca o IRR de studios em torno de 50% contra cerca de 19% para startups financiadas por VC. A Avante Ventures enquadra essa diferença do jeito que um LP deve ler. IRR de studio perto de 50% contra um padrão de mercado de ~19% para o VC tradicional, cerca de 2,5x em horizontes de tempo realistas.",
+            "O ponto interessante é o porquê. A diferença não é uma história de fundador melhor. É estrutural, é repetível e fica maior em um mercado como o Brasil, onde profundidade de operador é escassa e a economia de serviços mal foi digitalizada. Esta é a tese de venture studio vs VC, com as falhas honestas incluídas, e a razão pela qual o modelo compõe mais forte onde a Avante Ventures o roda."
+          ]
+        },
+        {
+          "id": "performance-gap",
+          "heading": "A diferença de performance é estrutural",
+          "level": 2,
+          "paragraphs": [
+            "Comece pelo número que ancora todo o debate sobre venture studio IRR. Segundo a Global Startup Studio Network, ventures de studio têm em média cerca de 50% de IRR contra cerca de 19% para startups tradicionais financiadas por VC. O enquadramento conservador é IRR de studio perto de 50% contra ~19% para o VC tradicional. Mesmo assim fica no topo da faixa realista de benchmark de VC, em que o índice de venture capital da Cambridge Associates registrou retornos líquidos de longo prazo na casa dos quinze por cento.",
+            "A velocidade é onde a diferença aparece. Startups de studio chegam à Série A em cerca de 25 meses. As tradicionais levam cerca de 56. E 72% das ventures de studio chegam à Série A contra 42% das tradicionais. Um modelo que corta pela metade o tempo até uma rodada precificada e quase dobra a taxa de graduação não está tendo sorte na seleção de deals. Ele está removendo os pontos de falha que matam startups comuns no primeiro ano."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "IRR de studio perto de 50% contra um padrão de mercado de ~19% para o VC tradicional, cerca de 2,5x em horizontes de tempo realistas.",
+            "attribution": "Global Startup Studio Network, via Bundl e M Accelerator"
+          }
+        },
+        {
+          "id": "mechanism-depth",
+          "heading": "Profundidade operacional, por design",
+          "level": 3,
+          "paragraphs": [
+            "Um operating partner de studio está dentro do modelo de unit economics nas primeiras semanas, não nove meses depois de negociar um assento no conselho. Esse é o primeiro mecanismo, e é o que um fundo generalista não consegue copiar. O studio fornece engenharia, design, recrutamento e go-to-market a partir de um time central que já entregou esse trabalho antes.",
+            "Compare com a alternativa. Um sócio de VC espalhado por 8 a 12 conselhos dá conselho. Um operador de studio dá horas. Quando quem já construiu empresas está na sala escrevendo a primeira página de preços, os erros iniciais que afundam startups comuns simplesmente não acontecem."
+          ]
+        },
+        {
+          "id": "mechanism-time",
+          "heading": "Eficiência de tempo no nível do portfólio",
+          "level": 3,
+          "paragraphs": [
+            "Os 25 meses contra 56 meses são o melhor indicador da vantagem de tempo do studio. O encanamento já existe, então o período inicial mais arriscado é comprimido. Uma venture de studio nasce 6-9 meses à frente de um time autônomo com financiamento comparável.",
+            "A Hexa, antiga eFounders, construiu toda a tese exatamente nisso. Trate a construção de empresas como um sistema reutilizável, não uma sequência de apostas avulsas, e cada nova venture começa mais adiante no campo do que a anterior."
+          ]
+        },
+        {
+          "id": "mechanism-capital",
+          "heading": "Eficiência de capital com sistemas repetíveis",
+          "level": 3,
+          "paragraphs": [
+            "Resolva o encanamento da empresa uma vez e reutilize, e mais de cada dólar chega a produto e tração em vez de setup indiferenciado. Na prática, essa disciplina direciona cerca de $300K-500K de capital efetivo por venture para o trabalho que de fato move o negócio.",
+            "A maior taxa de graduação vem daí. Quando 72% das ventures de studio chegam à Série A contra 42% das tradicionais, é porque menos meses e menos dólares foram queimados reconstruindo a mesma fundação pela sexta vez."
+          ],
+          "bullets": [
+            "Infraestrutura compartilhada significa uma espinha dorsal de engenharia e design amortizada entre todas as ventures, não refeita por empresa.",
+            "Operating partners permanecem engajados até o primeiro marco de receita, depois passam para supervisão no nível do conselho.",
+            "O capital aportado é de $500K-1.5M por venture no pré-seed, com a Avante retendo economia de co-founder."
+          ]
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Onde o modelo de studio quebra",
+          "level": 2,
+          "paragraphs": [
+            "Um texto que esconde os pontos fracos soa como marketing, então aqui estão os reais. O modelo de studio quebra de três formas previsíveis, e o IRR de manchete carrega um viés que vale dizer em voz alta.",
+            "Primeiro, diluição de recursos. Um studio que roda ventures demais ao mesmo tempo espalha atenção, capital e expertise fino demais, e cada empresa do grupo sofre por isso. Segundo, conflito com o fundador. A participação maior do studio pode soar para o fundador como controle sobre a própria visão, e a conta de equity precisa ser honesta desde o primeiro dia ou a relação azeda. Terceiro, intensidade de capital. Construir empresas do zero é caro, e um studio que não financia o próprio overhead entre exits não sobrevive tempo suficiente para compor.",
+            "Depois o viés. O número de 50% reflete os studios que sobreviveram para reportá-lo. Studios que faliram não publicam IRR, e críticos iniciais argumentavam que alguns studios exploravam um ecossistema imaturo em vez de criar valor durável. A leitura honesta é que a vantagem do studio é real e aparece entre fontes, mas o número exato é um benchmark, não uma promessa. Os ~50% são o benchmark do modelo de studio da GSSN, nunca um retorno realizado do próprio studio."
+          ]
+        },
+        {
+          "id": "brazil",
+          "heading": "Por que o Brasil amplifica o modelo",
+          "level": 2,
+          "paragraphs": [
+            "A vantagem do studio compõe onde duas coisas são verdadeiras ao mesmo tempo. O mercado é grande e pouco digitalizado, e a profundidade de operador é escassa o bastante para ser decisiva. O Brasil é o caso de manual. Serviços representam cerca de 70% do PIB brasileiro, e a penetração de software nesses setores de serviço é baixa. É exatamente o terreno em que um studio liderado por operadores pode construir empresas de IA vertical que um fundo generalista nem conseguiria originar, quanto mais montar o time.",
+            "O pano de fundo de capital também ajuda. O funding de venture na América Latina está se recuperando, não saturado, com o aporte subindo ao longo de 2024 e as rodadas early-stage levando a maior fatia. A mudança mais profunda está no custo. [A infraestrutura de IA já está barata o suficiente para entrar em operação sem uma Série A](/library/ai-infrastructure-cost-curve-latam), e é por isso que um studio consegue lançar 3-4 ventures por ano aqui em vez de uma aposta única e pesada em capital. Leia a tese completa em [/why-avante](/why-avante).",
+            "A vantagem que amarra tudo são as pessoas. Operadores de domínio com mais de 10 anos de cicatriz do mercado brasileiro, somados a um playbook do Vale do Silício e capital de primeiro cheque, montados no primeiro dia. O padrão recorrente do portfólio é o [flywheel copilot, dado, capital](/library/copilot-to-data-to-fund-flywheel). Construir um copilot de IA para gerar dado proprietário, depois usar esse dado para levantar e aportar capital."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Serviços representam cerca de 70% do PIB brasileiro, com baixa penetração de software nesses setores.",
+            "attribution": "IBGE, via MercoPress e Reuters, 2024"
+          }
+        },
+        {
+          "id": "how-avante",
+          "heading": "Como a Avante implementa",
+          "level": 2,
+          "paragraphs": [
+            "A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina. O modelo é deliberado, não oportunista. São 3-4 ventures lançadas por ano através de um sistema de seis estágios. Research, Partner, Build, Traction, Revenue, Compound. Cada venture recebe $500K-1.5M no pré-seed, e a Avante mantém economia de co-founder em vez de uma fatia minoritária passiva.",
+            "Na prática, isso significa operadores dentro da empresa, não em uma call trimestral. Os operating partners ficam engajados até o primeiro marco de receita, depois migram para a supervisão no nível do conselho. O portfólio atual cobre infraestrutura de ativos judiciais, precificação de seguros e inteligência de leilões imobiliários, cada um um vertical em que a [profundidade de domínio brasileira é o moat](/library/data-network-effects-vertical-ai). Veja como isso se conecta ao modelo operacional em [/principles](/principles).",
+            "O prêmio do studio não é segredo. É o resultado previsível de colocar construtores experientes dentro de uma empresa no primeiro dia, em um mercado onde quase ninguém mais consegue. O Brasil não apenas permite que o modelo de venture studio funcione. É onde o modelo paga mais."
+          ]
+        }
+      ]
+    },
+    "es": {
+      "title": "Venture Studios en LATAM: Por qué Superan al VC en Brasil",
+      "description": "El IRR de los studios ronda el 50% frente a cerca del 19% del VC tradicional. La razón estructural, las fallas del modelo y por qué Brasil lo amplifica.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Las startups construidas dentro de un venture studio rinden más que las startups en las que un fondo tradicional solo firma un cheque. La Global Startup Studio Network ubica el IRR de los studios cerca del 50% frente a cerca del 19% para startups financiadas por VC. Avante Ventures enmarca esa brecha como debe leerla un LP. IRR de studio cerca del 50% frente a un estándar de mercado de ~19% para el VC tradicional, cerca de 2,5x en horizontes de tiempo realistas.",
+            "Lo interesante es el porqué. La brecha no es una historia de mejor fundador. Es estructural, es repetible y se agranda en un mercado como Brasil, donde la profundidad de operador es escasa y la economía de servicios apenas se ha digitalizado. Este es el caso de venture studio vs VC, con las fallas honestas incluidas, y la razón por la que el modelo compone más donde lo corre Avante Ventures."
+          ]
+        },
+        {
+          "id": "performance-gap",
+          "heading": "La brecha de desempeño es estructural",
+          "level": 2,
+          "paragraphs": [
+            "Empiece por el número que ancla todo el debate del venture studio IRR. Según la Global Startup Studio Network, las ventures de studio promedian cerca del 50% de IRR frente a cerca del 19% para startups tradicionales financiadas por VC. El encuadre conservador es IRR de studio cerca del 50% frente a ~19% para el VC tradicional. Aun así queda en el tope del rango realista de benchmark de VC, donde el índice de venture capital de Cambridge Associates registró retornos netos de largo plazo en el orden del quince por ciento.",
+            "La velocidad es donde la brecha se vuelve visible. Las startups de studio llegan a la Serie A en unos 25 meses. Las tradicionales tardan unos 56. Y 72% de las ventures de studio llegan a la Serie A frente al 42% de las tradicionales. Un modelo que reduce a la mitad el tiempo hasta una ronda con precio y casi duplica la tasa de graduación no está teniendo suerte eligiendo deals. Está removiendo los puntos de falla que matan a las startups comunes en el primer año."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "IRR de studio cerca del 50% frente a un estándar de mercado de ~19% para el VC tradicional, cerca de 2,5x en horizontes de tiempo realistas.",
+            "attribution": "Global Startup Studio Network, vía Bundl y M Accelerator"
+          }
+        },
+        {
+          "id": "mechanism-depth",
+          "heading": "Profundidad operativa, por diseño",
+          "level": 3,
+          "paragraphs": [
+            "Un operating partner de studio está dentro del modelo de unit economics en las primeras semanas, no nueve meses después de negociar un asiento en el board. Ese es el primer mecanismo, y es el que un fondo generalista no puede copiar. El studio aporta ingeniería, diseño, reclutamiento y go-to-market desde un equipo central que ya entregó este trabajo antes.",
+            "Compárelo con la alternativa. Un socio de VC repartido entre 8 y 12 boards da consejo. Un operador de studio da horas. Cuando quienes ya construyeron empresas están en la sala escribiendo la primera página de precios, los errores tempranos que hunden a las startups comunes simplemente no se cometen."
+          ]
+        },
+        {
+          "id": "mechanism-time",
+          "heading": "Eficiencia de tiempo a nivel de portafolio",
+          "level": 3,
+          "paragraphs": [
+            "Los 25 meses frente a 56 meses son el mejor indicador de la ventaja de tiempo del studio. La plomería ya existe, así que el período inicial más riesgoso se comprime. Una venture de studio nace 6-9 meses por delante de un equipo independiente con financiamiento comparable.",
+            "Hexa, antes eFounders, construyó toda su tesis exactamente en esto. Trate la construcción de empresas como un sistema reutilizable, no una secuencia de apuestas sueltas, y cada nueva venture arranca más adelante en la cancha que la anterior."
+          ]
+        },
+        {
+          "id": "mechanism-capital",
+          "heading": "Eficiencia de capital con sistemas repetibles",
+          "level": 3,
+          "paragraphs": [
+            "Resuelva la plomería de la empresa una vez y reutilícela, y más de cada dólar llega a producto y tracción en lugar de setup indiferenciado. En la práctica, esa disciplina dirige cerca de $300K-500K de capital efectivo por venture al trabajo que de verdad mueve el negocio.",
+            "La mayor tasa de graduación se desprende de ahí. Cuando 72% de las ventures de studio llegan a la Serie A frente al 42% de las tradicionales, es porque se quemaron menos meses y menos dólares reconstruyendo la misma base por sexta vez."
+          ],
+          "bullets": [
+            "La infraestructura compartida significa una columna de ingeniería y diseño amortizada entre todas las ventures, no rehecha por empresa.",
+            "Los operating partners siguen comprometidos hasta el primer hito de ingresos, luego pasan a supervisión a nivel de board.",
+            "El capital aportado es de $500K-1.5M por venture en pre-seed, con Avante reteniendo economía de co-founder."
+          ]
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Dónde se rompe el modelo de studio",
+          "level": 2,
+          "paragraphs": [
+            "Un texto que esconde los puntos débiles suena a marketing, así que aquí están los reales. El modelo de studio se rompe de tres formas predecibles, y el IRR de titular carga un sesgo que vale la pena decir en voz alta.",
+            "Primero, dilución de recursos. Un studio que corre demasiadas ventures a la vez reparte atención, capital y expertise demasiado fino, y cada empresa del grupo lo sufre. Segundo, conflicto con el fundador. La mayor participación del studio puede leerse para el fundador como control sobre su propia visión, y la cuenta de equity tiene que ser honesta desde el primer día o la relación se agria. Tercero, intensidad de capital. Construir empresas desde cero es caro, y un studio que no financia su propio overhead entre exits no sobrevive lo suficiente para componer.",
+            "Luego el sesgo. El 50% refleja a los studios que sobrevivieron para reportarlo. Los studios que fracasaron no publican su IRR, y críticos tempranos sostenían que algunos studios explotaban un ecosistema inmaduro en vez de crear valor duradero. La lectura honesta es que la ventaja del studio es real y aparece entre fuentes, pero el número exacto es un benchmark, no una promesa. El ~50% es el benchmark del modelo de studio de la GSSN, nunca un retorno realizado del propio studio."
+          ]
+        },
+        {
+          "id": "brazil",
+          "heading": "Por qué Brasil amplifica el modelo",
+          "level": 2,
+          "paragraphs": [
+            "La ventaja del studio compone donde dos cosas son ciertas al mismo tiempo. El mercado es grande y poco digitalizado, y la profundidad de operador es escasa al punto de ser decisiva. Brasil es el caso de manual. Los servicios representan cerca del 70% del PIB brasileño, y la penetración de software en esos sectores de servicio es baja. Es exactamente el terreno donde un studio liderado por operadores puede construir empresas de IA vertical que un fondo generalista ni siquiera podría originar, mucho menos armar el equipo.",
+            "El telón de fondo de capital también ayuda. El financiamiento de venture en LATAM se está recuperando, no saturado, con la inversión subiendo a lo largo de 2024 y las rondas early-stage llevándose la mayor tajada. El cambio más profundo está en el costo. [La infraestructura de IA ya es lo bastante barata para entrar en operación sin una Serie A](/library/ai-infrastructure-cost-curve-latam), y por eso un studio puede lanzar 3-4 ventures por año aquí en lugar de una sola apuesta pesada en capital. Lea la tesis completa en [/why-avante](/why-avante).",
+            "La ventaja que amarra todo es la gente. Operadores de dominio con más de 10 años de cicatriz del mercado brasileño, sumados a un playbook de Silicon Valley y capital de primer cheque, armados el primer día. El patrón recurrente del portafolio es el [flywheel copilot, dato, capital](/library/copilot-to-data-to-fund-flywheel). Construir un copilot de IA para generar dato propietario, luego usar ese dato para levantar y desplegar capital."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Los servicios representan cerca del 70% del PIB brasileño, con baja penetración de software en esos sectores.",
+            "attribution": "IBGE, vía MercoPress y Reuters, 2024"
+          }
+        },
+        {
+          "id": "how-avante",
+          "heading": "Cómo lo implementa Avante",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina. El modelo es deliberado, no oportunista. Lanza 3-4 ventures por año a través de un sistema de seis etapas. Research, Partner, Build, Traction, Revenue, Compound. Cada venture recibe $500K-1.5M en pre-seed, y Avante mantiene economía de co-founder en lugar de una participación minoritaria pasiva.",
+            "En la práctica, eso significa operadores dentro de la empresa, no en una llamada trimestral. Los operating partners siguen comprometidos hasta el primer hito de ingresos, luego migran a la supervisión a nivel de board. El portafolio actual abarca infraestructura de activos judiciales, precificación de seguros e inteligencia de subastas inmobiliarias, cada uno un vertical donde la [profundidad de dominio brasileña es el moat](/library/data-network-effects-vertical-ai). Vea cómo se conecta al modelo operativo en [/principles](/principles).",
+            "El premio del studio no es secreto. Es el resultado predecible de poner constructores experimentados dentro de una empresa el primer día, en un mercado donde casi nadie más puede. Brasil no solo permite que el modelo de venture studio funcione. Es donde el modelo paga más."
+          ]
+        }
+      ]
+    }
+  }
+
 // Hand-authored pillar (outside the engine block so merge.py never clobbers it).
 const articleWhatIsVentureStudio: Article = {
   slug: 'what-is-a-venture-studio',
@@ -8378,8 +9062,10 @@ const articleWhatIsVentureStudio: Article = {
 }
 
 export const articles: Article[] = [
-  ...engineArticles, // generated by content-engine/merge.py
+  ...engineArticles.filter((a) => a.slug !== 'studio-vs-accelerator-vs-vc' && a.slug !== 'why-venture-studios-win-latam'), // engine versions overridden by hand-authored consts below
   articleWhatIsVentureStudio,
+  articleStudioVsAcceleratorVsVc,
+  articleWhyVentureStudiosWinLatam,
   articleVentureStudios,
   articleFirstTicket,
   articleBrazilAIMarket,
