@@ -1767,7 +1767,7 @@ const articleSiggaCaseStudy: Article = {
 // ─────────────────────────────────────────────────────────────────────
 
 // === CONTENT-ENGINE:START (managed by content-engine/merge.py — do not edit by hand) ===
-// 23 article(s) generated from content-engine/outputs. Edit the engine, not this block.
+// 24 article(s) generated from content-engine/outputs. Edit the engine, not this block.
 const engineArticles: Article[] = [
   {
     "slug": "ai-agents-vs-copilots-b2b",
@@ -7704,6 +7704,352 @@ const engineArticles: Article[] = [
             "La eficiencia viene de resolver la infraestructura de la empresa una vez y reusarla, lo que dirige cerca de $300K-500K de capital efectivo por venture a producto y tracción en vez de overhead. El patrón recurrente es el flywheel copilot, dato, capital. Construya un copilot de IA para generar dato propietario, luego use ese dato para levantar y desplegar capital. Aparece por dominio en el portafolio. Alphajuri en activos judiciales. WIR en precios de seguros con AXA. BR Auction Intel en subastas de inmuebles. La tesis de studio detrás de todo eso está en [/why-avante](/why-avante), y la disciplina operativa en [/principles](/principles).",
             "Entonces vuelva a la prueba con que empezó. Reste a Avante de su plan. La empresa llegaría a una ronda con precio con la misma velocidad, y tan barato, sola. Donde la respuesta es no, el reparto con el fundador es el mejor deal por amplio margen. Donde es sí, quédese con el cap table. Un studio que vale su equity quiere que usted haga esa cuenta, porque ya sabe cómo responden sus empresas."
           ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "venture-studio-vs-vc-explained",
+    "category": "insights",
+    "type": "Comparison",
+    "readTime": "11 min",
+    "featured": false,
+    "date": "Jun 2026",
+    "datePublished": "2026-06-21",
+    "isPublished": true,
+    "en": {
+      "title": "Venture Studio vs VC: An Honest Guide for Founders",
+      "description": "Venture studio vs VC compared on dilution, control, and speed to traction. The real terms for each path, the GSSN return gap, and which founder picks which.",
+      "sections": [
+        {
+          "paragraphs": [
+            "The choice of venture studio vs VC comes down to three trades, not a winner. How much of the company you give up, how much control you keep, and how fast you reach first traction. A priced VC round costs 15% to 25% and a board seat but leaves you owning the idea. A venture studio takes a much larger early stake, often 30% to 50% or more, because it supplies the idea, the build team, first-ticket capital, and operators co-building day to day.",
+            "This is the founder's decision guide, with the real terms for each path and a clear answer for who should pick what. Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America, so we have a side. We have also tried to be honest about the path we did not take, because for many founders VC is the right call."
+          ]
+        },
+        {
+          "heading": "Venture studio vs VC, in one line",
+          "level": 2,
+          "paragraphs": [
+            "Venture studio vs VC is a question of what you are missing, not which model is superior. VC sells fuel and governance to a team that already has a product. A studio sells a company built around you when you do not yet have one. The equity gap between them is not a markup. It is the price of how much actual work each side does before you have anything to show.",
+            "Pick VC if you have a working product, a team, and capital options and want maximum ownership. Pick a studio if what you lack is the team, the first capital, or the operating muscle to get a product into market at all."
+          ],
+          "id": "the-pair"
+        },
+        {
+          "heading": "The three things you are actually trading",
+          "level": 2,
+          "paragraphs": [
+            "Strip the labels and both paths set the same three dials. The reason the equity numbers look so far apart is that each path hands you a different amount of the build. Read the trade as how much do I need built for me, not as cheap versus expensive."
+          ],
+          "bullets": [
+            "Dilution. The share of the company you give up at the start, before any upside is proven. VC runs 15% to 25% per priced round. A studio takes 30% to 50% or more, once, up front.",
+            "Control. Whether you keep the board, the roadmap, and the right to say no. VC costs you a board seat. A studio co-owns more of the company itself.",
+            "Speed to traction. Months until a product is in market with first customers. Studio ventures reach Series A in about 25 months on average against 56 for standalone startups."
+          ],
+          "id": "three-axes"
+        },
+        {
+          "heading": "What VC really costs and gives you",
+          "level": 3,
+          "paragraphs": [
+            "VC trades a defined slice of equity for capital and governance, and leaves the original idea and team with you. A priced seed or Series A round typically costs 15% to 25% per round plus a board seat, inside the broader 10% to 25% dilution band founders plan for across rounds. What you buy is fuel, not a co-builder. You keep the company you walked in with, and you accept a board member whose job is to push growth on a clock that may not match your business.",
+            "Accelerators sit at the low-dilution end and are the cleanest contrast. Y Combinator invests $500,000 total. The first $125,000 buys 7% on a post-money SAFE, and the remaining $375,000 rides on an uncapped SAFE. Techstars matched the shape in 2025 at $220,000, with $20,000 for 5% of common stock plus a $200,000 uncapped SAFE. VC and accelerators both assume you can build. They price capital and a network, not the build itself.",
+            "This is the right path for a technical team that already ships and wants to keep maximum ownership, willing to move slower to do it. If you can build without help, a studio stake is overpriced for you, and even an accelerator check will not close a gap you do not have."
+          ],
+          "id": "vc-terms"
+        },
+        {
+          "heading": "What a venture studio really costs and gives you",
+          "level": 3,
+          "paragraphs": [
+            "A studio takes the largest early stake of any path because it does the most before you have anything to show. Studios commonly take 30% to 60% equity against 10% to 20% for traditional VC, with the average studio stake reported near 34%. In return you get an idea already pressure-tested, a build team on day one, first-ticket capital, and operating partners in the unit-economics model in the first weeks rather than reviewing a deck once a quarter. With a studio the [equity conversation happens at the very beginning](/library/venture-studio-founder-economics-latam), which is a feature of the structure, not a failed negotiation.",
+            "The honest version names the catch. The larger stake is real dilution, and the same entity supplies the idea, the capital, and the operators, which is a genuine conflict question worth asking out loud. The studio case only holds when the studio supplies what you genuinely lack. A founder who already has a team, an idea, and capital options is usually better served by VC."
+          ],
+          "id": "studio-terms"
+        },
+        {
+          "heading": "Why the studio return gap justifies the bigger stake",
+          "level": 2,
+          "paragraphs": [
+            "A 30%-plus early stake only makes sense if the model returns more, and the published data says it does, with a caveat a serious reader should weigh. Per the Global Startup Studio Network, the venture studio model has produced studio IRR of ~50% versus an industry-standard ~19% for traditional VC, roughly 2.5x over realistic time horizons. We cite this as the GSSN studio benchmark, never as any single firm's realized return, and certainly not as our own. For the VC side, the [Cambridge Associates US Venture Capital Index](https://www.spglobal.com/spdji/en/products/cambridge-associates/reports/us-venture-capital/) puts median funds near 10% to 15% net IRR with top-quartile funds at 20% to 30%-plus, which is the range that makes the studio number stand out.",
+            "The speed numbers explain the returns. Studio ventures reach Series A in about 25 months against 56 for standalone startups, and a far higher share of them get there at all. Solve company plumbing once and the next venture inherits it. The honest caveat is survivorship. GSSN figures are self-reported and skew toward studios that lived to publish them, so read the absolute IRR as directional. Critics also note that strong per-company numbers do not always make studios great fund returners. What is not in doubt is the mechanism. Operators in the model early, plumbing solved once, a system that compounds."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Studio IRR of ~50% versus an industry-standard ~19% for traditional VC, roughly 2.5x the IRR over realistic time horizons.",
+            "attribution": "Global Startup Studio Network (GSSN)"
+          },
+          "id": "return-gap"
+        },
+        {
+          "heading": "Which founder should pick which",
+          "level": 2,
+          "paragraphs": [
+            "The decision is less about preference and more about the gap you are filling. Match the path to what you lack, not to the lowest dilution number on the page. The studio case collapses the moment you already have the team, the idea, and the capital, because then the larger stake buys you nothing you cannot assemble yourself."
+          ],
+          "bullets": [
+            "Solo domain expert, no team, no built product. A venture studio. You trade the most equity for the most build, and you get operators on day one.",
+            "Technical team with a working prototype and capital options. VC. You are paying for fuel and governance, not for a co-builder, so the lower dilution is correct.",
+            "Founder who wants maximum ownership above all. Bootstrap or raise VC, and accept slower time to traction as the price of a clean cap table."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Buy what you are actually short on. If you can already build and ship, a studio stake is overpriced. If you cannot, an accelerator check will not close the gap."
+          },
+          "id": "who-picks-what"
+        },
+        {
+          "heading": "Where Avante fits",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America, and Brazil is the reason the model fits. Services account for roughly 70% of Brazilian GDP, with low software penetration, which is a large surface of under-digitized businesses understood by domain operators rather than generalist VCs. Brazil drew about half of all Latin American startup investment in 2024, near $2.14 billion, so the capital is concentrated where the operator depth is. AI infrastructure is now cheap enough to deploy without a Series A, so the build starts lean.",
+            "In practice that means Avante launches 3-4 ventures per year through a six-stage system of Research, Partner, Build, Traction, Revenue, and Compound, deploying $500K-1.5M per venture and keeping co-founder economics. The recurring pattern is the copilot to data to fund flywheel. Build an AI copilot to generate proprietary data, then use that data to raise and deploy capital. The deeper case for why this works in Brazil is in [why venture studios win in LATAM](/library/why-venture-studios-win-latam), and the operating model is on [/principles](/principles).",
+            "So choose by what you lack, not by what looks cheapest on day one. The founder who picks a studio is not buying a check. They are buying a company built on ten years of operator scar tissue, started the month they sign instead of the year they would have finished hiring."
+          ],
+          "id": "how-avante"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is the difference in venture studio vs VC?",
+          "a": "A venture studio co-builds the company with you and takes a large early stake, often 30% to 50% or more, because it supplies the idea, a build team, first-ticket capital, and operators working day to day. VC trades 15% to 25% per priced round and a board seat for capital, and leaves you owning the idea and team you came in with. You are trading ownership for how much gets built for you."
+        },
+        {
+          "q": "On venture studio vs VC, how much equity does each take?",
+          "a": "A venture studio commonly takes 30% to 60% of equity, with the average near 34%, against 10% to 20% for traditional VC across a priced round. The studio stake looks expensive until you account for what it includes, namely the idea, the build team, first capital, and operators. The question is not the percentage, it is what you receive for it."
+        },
+        {
+          "q": "Do venture studios actually return more than VC?",
+          "a": "On the published benchmark, yes. The Global Startup Studio Network reports studio IRR of ~50% versus an industry-standard ~19% for traditional VC, roughly 2.5x. The figure is self-reported and survivorship-skewed, so treat the absolute number as directional, while the underlying mechanism of operators co-building early is well established."
+        },
+        {
+          "q": "When should a founder choose VC over a venture studio?",
+          "a": "Choose VC when you already have a working product, a team, and capital options and want to keep maximum ownership. VC costs less equity precisely because you carry the build risk yourself, so a priced round of 15% to 25% is the better trade. A studio only earns its larger stake when it supplies what you genuinely lack."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Venture Studio vs VC: Um Guia Honesto para Fundadores",
+      "description": "Venture studio vs VC comparados em diluição, controle e velocidade até a tração. Os termos reais de cada caminho, o gap de retorno da GSSN e quem escolhe o quê.",
+      "sections": [
+        {
+          "paragraphs": [
+            "A escolha de venture studio vs VC se resume a três trocas, não a um vencedor. Quanto da empresa você entrega, quanto de controle você mantém e em quanto tempo você chega à primeira tração. Uma rodada de VC precificada custa de 15% a 25% e uma cadeira no conselho, mas deixa a ideia com você. Um venture studio fica com uma fatia inicial bem maior, com frequência de 30% a 50% ou mais, porque entrega a ideia, o time que constrói, o capital de primeiro cheque e operadores construindo lado a lado todos os dias.",
+            "Este é o guia de decisão do fundador, com os termos reais de cada caminho e uma resposta clara sobre quem deve escolher o quê. A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina, então temos um lado. Também tentamos ser honestos sobre o caminho que não seguimos, porque para muitos fundadores o VC é a escolha certa."
+          ]
+        },
+        {
+          "heading": "Venture studio vs VC, em uma linha",
+          "level": 2,
+          "paragraphs": [
+            "Venture studio vs VC é uma questão do que falta a você, não de qual modelo é superior. O VC vende combustível e governança para um time que já tem produto. O studio vende uma empresa construída em torno de você quando você ainda não tem uma. O gap de equity entre os dois não é um adicional de preço. É o preço de quanto trabalho real cada lado faz antes de você ter algo a mostrar.",
+            "Escolha VC se você tem produto funcionando, time e opções de capital e quer o máximo de propriedade. Escolha um studio se o que falta é o time, o primeiro capital ou o músculo operacional para colocar um produto no mercado."
+          ],
+          "id": "the-pair"
+        },
+        {
+          "heading": "As três coisas que você está de fato trocando",
+          "level": 2,
+          "paragraphs": [
+            "Tire os rótulos e os dois caminhos ajustam os mesmos três botões. A razão de os números de equity ficarem tão distantes é que cada caminho entrega uma quantidade diferente da construção. Leia a troca como quanto eu preciso que construam para mim, não como barato contra caro."
+          ],
+          "bullets": [
+            "Diluição. A parte da empresa que você entrega no começo, antes de qualquer upside estar provado. O VC fica em 15% a 25% por rodada precificada. Um studio fica com 30% a 50% ou mais, de uma vez, lá na frente.",
+            "Controle. Se você mantém o conselho, o roadmap e o direito de dizer não. O VC custa uma cadeira no conselho. O studio co-detém mais da própria empresa.",
+            "Velocidade até a tração. Meses até um produto no mercado com os primeiros clientes. Ventures de studio chegam à Série A em cerca de 25 meses, em média, contra 56 das startups isoladas."
+          ],
+          "id": "three-axes"
+        },
+        {
+          "heading": "O que o VC de fato custa e entrega",
+          "level": 3,
+          "paragraphs": [
+            "O VC troca uma fatia definida de equity por capital e governança, e deixa a ideia e o time originais com você. Uma rodada seed ou Série A precificada custa em geral de 15% a 25% por rodada mais uma cadeira no conselho, dentro da faixa mais ampla de 10% a 25% de diluição que os fundadores planejam ao longo das rodadas. O que você compra é combustível, não um co-construtor. Você mantém a empresa com que entrou e aceita um conselheiro cujo trabalho é empurrar crescimento num relógio que talvez não combine com o seu negócio.",
+            "As aceleradoras ficam na ponta de baixa diluição e são o contraste mais limpo. A Y Combinator investe US$ 500 mil no total. Os primeiros US$ 125 mil compram 7% num SAFE post-money, e os US$ 375 mil restantes vêm num SAFE sem cap. A Techstars igualou o formato em 2025 com US$ 220 mil, sendo US$ 20 mil por 5% em ações ordinárias mais um SAFE sem cap de US$ 200 mil. VC e aceleradoras partem do princípio de que você sabe construir. Eles precificam capital e rede, não a construção em si.",
+            "Esse é o caminho certo para um time técnico que já entrega e quer manter o máximo de propriedade, disposto a ir mais devagar para isso. Se você já constrói sem ajuda, a fatia de um studio está cara demais para você, e nem o cheque de uma aceleradora fecha uma lacuna que você não tem."
+          ],
+          "id": "vc-terms"
+        },
+        {
+          "heading": "O que um venture studio de fato custa e entrega",
+          "level": 3,
+          "paragraphs": [
+            "O studio fica com a maior fatia inicial de qualquer caminho porque faz mais antes de você ter algo a mostrar. Studios costumam ficar com 30% a 60% de equity contra 10% a 20% do VC tradicional, com a fatia média de studio reportada perto de 34%. Em troca você recebe uma ideia já testada sob pressão, um time de construção no dia um, capital de primeiro cheque e operating partners na planilha de unit economics nas primeiras semanas, não revisando um deck uma vez por trimestre. Com um studio, a [conversa de equity acontece logo no começo](/library/venture-studio-founder-economics-latam), o que é uma característica da estrutura, não uma negociação malsucedida.",
+            "A versão honesta nomeia o porém. A fatia maior é diluição real, e a mesma entidade entrega a ideia, o capital e os operadores, o que é uma questão de conflito legítima de se colocar em voz alta. O caso do studio só se sustenta quando ele entrega o que de fato falta a você. Um fundador que já tem time, ideia e opções de capital costuma ser melhor servido pelo VC."
+          ],
+          "id": "studio-terms"
+        },
+        {
+          "heading": "Por que o gap de retorno do studio justifica a fatia maior",
+          "level": 2,
+          "paragraphs": [
+            "Uma fatia inicial acima de 30% só faz sentido se o modelo retorna mais, e os dados publicados dizem que sim, com uma ressalva que um leitor sério deve pesar. Segundo a Global Startup Studio Network, o modelo de venture studio produziu studio IRR de ~50% versus ~19% para VC tradicional, cerca de 2.5x em horizontes de tempo realistas. Citamos isso como o benchmark de studio da GSSN, nunca como o retorno realizado de uma firma específica, e muito menos como o nosso. Do lado do VC, o [índice de Venture Capital da Cambridge Associates nos EUA](https://www.spglobal.com/spdji/en/products/cambridge-associates/reports/us-venture-capital/) coloca os fundos medianos perto de 10% a 15% de IRR líquido, com o quartil superior em 20% a 30% ou mais, que é a faixa que faz o número do studio se destacar.",
+            "Os números de velocidade explicam o retorno. Ventures de studio chegam à Série A em cerca de 25 meses contra 56 das startups isoladas, e uma fatia bem maior delas chega lá. Resolva o encanamento da empresa uma vez e a próxima venture o herda. A ressalva honesta é sobrevivência. Os números da GSSN são autorreportados e pendem para studios que sobreviveram para publicá-los, então leia o IRR absoluto como direcional. Críticos também notam que números fortes por empresa nem sempre fazem do studio um bom gerador de retorno de fundo. O que não está em dúvida é o mecanismo. Operadores no modelo cedo, encanamento resolvido uma vez, um sistema que compõe."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Studio IRR de ~50% versus ~19% para VC tradicional, cerca de 2.5x o IRR em horizontes de tempo realistas.",
+            "attribution": "Global Startup Studio Network (GSSN)"
+          },
+          "id": "return-gap"
+        },
+        {
+          "heading": "Qual fundador deve escolher o quê",
+          "level": 2,
+          "paragraphs": [
+            "A decisão é menos sobre preferência e mais sobre a lacuna que você está preenchendo. Case o caminho com o que falta, não com o menor número de diluição da página. O caso do studio cai no momento em que você já tem o time, a ideia e o capital, porque aí a fatia maior não compra nada que você não consiga montar sozinho."
+          ],
+          "bullets": [
+            "Especialista de domínio solo, sem time, sem produto construído. Um venture studio. Você troca o máximo de equity pelo máximo de construção e ganha operadores no dia um.",
+            "Time técnico com protótipo funcionando e opções de capital. VC. Você paga por combustível e governança, não por um co-construtor, então a diluição menor está certa.",
+            "Fundador que quer o máximo de propriedade acima de tudo. Faça bootstrap ou levante VC, e aceite uma tração mais lenta como o preço de um cap table limpo."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Compre aquilo de que você realmente sente falta. Se você já constrói e entrega, a fatia de um studio está cara. Se você não consegue, o cheque de uma aceleradora não fecha a lacuna."
+          },
+          "id": "who-picks-what"
+        },
+        {
+          "heading": "Onde a Avante se encaixa",
+          "level": 2,
+          "paragraphs": [
+            "A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina, e o Brasil é a razão de o modelo encaixar. Serviços representam cerca de 70% do PIB brasileiro, com baixa penetração de software, o que é uma superfície enorme de negócios pouco digitalizados entendidos por operadores de domínio, não por VCs generalistas. O Brasil atraiu cerca de metade de todo o investimento em startups da América Latina em 2024, perto de US$ 2,14 bilhões, então o capital está concentrado onde está a profundidade operacional. A infraestrutura de IA já está barata o bastante para lançar sem uma Série A, então a construção começa enxuta.",
+            "Na prática, isso significa que a Avante lança 3-4 ventures por ano através de um sistema de seis estágios de Research, Partner, Build, Traction, Revenue e Compound, aportando US$ 500K-1.5M por venture e mantendo economia de co-founder. O padrão recorrente é o flywheel copilot, dado, capital. Construir um copilot de IA para gerar dado proprietário e usar esse dado para levantar e aplicar capital. O argumento mais profundo de por que isso funciona no Brasil está em [por que os venture studios vencem na América Latina](/library/why-venture-studios-win-latam), e o modelo operacional está em [/principles](/principles).",
+            "Então escolha pelo que falta a você, não pelo que parece mais barato no dia um. O fundador que escolhe um studio não está comprando um cheque. Está comprando uma empresa construída sobre dez anos de cicatriz de operação, iniciada no mês em que assina, em vez do ano em que teria terminado de contratar."
+          ],
+          "id": "how-avante"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Qual a diferença entre venture studio vs VC?",
+          "a": "Um venture studio constrói a empresa junto com você e fica com uma fatia inicial grande, com frequência de 30% a 50% ou mais, porque entrega a ideia, um time de produto, o primeiro capital e operadores no dia a dia. O VC troca de 15% a 25% por rodada precificada e uma cadeira no conselho por capital, e deixa com você a ideia e o time com que entrou. Você troca participação por quanto é construído para você."
+        },
+        {
+          "q": "Em venture studio vs VC, quanto de equity cada um pega?",
+          "a": "Um venture studio costuma ficar com 30% a 60% de equity, com a média perto de 34%, contra 10% a 20% do VC tradicional numa rodada precificada. A fatia do studio parece cara até você considerar o que ela inclui, ou seja, a ideia, o time de construção, o primeiro capital e operadores. A pergunta não é o percentual, é o que você recebe por ele."
+        },
+        {
+          "q": "Venture studios de fato retornam mais que VC?",
+          "a": "No benchmark publicado, sim. A Global Startup Studio Network reporta studio IRR de ~50% versus ~19% para VC tradicional, cerca de 2.5x. O número é autorreportado e enviesado por sobrevivência, então trate o valor absoluto como direcional, enquanto o mecanismo de operadores co-construindo cedo é bem estabelecido."
+        },
+        {
+          "q": "Quando um fundador deve escolher VC em vez de um venture studio?",
+          "a": "Escolha VC quando você já tem produto funcionando, time e opções de capital e quer manter o máximo de propriedade. O VC custa menos equity justamente porque você carrega o risco de construção, então uma rodada precificada de 15% a 25% é a melhor troca. Um studio só merece a fatia maior quando entrega o que de fato falta a você."
+        }
+      ]
+    },
+    "es": {
+      "title": "Venture Studio vs VC: Una Guía Honesta para Fundadores",
+      "description": "Venture studio vs VC comparados en dilución, control y velocidad hacia la tracción. Los términos reales de cada camino y la brecha de retorno de GSSN.",
+      "sections": [
+        {
+          "paragraphs": [
+            "La decisión de venture studio vs VC se reduce a tres intercambios, no a un ganador. Cuánto de la empresa entrega, cuánto control conserva y en cuánto tiempo llega a la primera tracción. Una ronda de VC con valuación cuesta entre 15% y 25% y un asiento en el directorio, pero deja la idea en sus manos. Un venture studio toma una participación inicial mucho mayor, a menudo de 30% a 50% o más, porque aporta la idea, el equipo que construye, el capital de primer cheque y operadores co-construyendo día a día.",
+            "Esta es la guía de decisión del fundador, con los términos reales de cada camino y una respuesta clara sobre quién debe elegir cuál. Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina, así que tenemos una postura. También intentamos ser honestos sobre el camino que no tomamos, porque para muchos fundadores el VC es la elección correcta."
+          ]
+        },
+        {
+          "heading": "Venture studio vs VC, en una línea",
+          "level": 2,
+          "paragraphs": [
+            "Venture studio vs VC es una pregunta sobre lo que le falta, no sobre cuál modelo es superior. El VC vende combustible y gobernanza a un equipo que ya tiene producto. El studio vende una empresa construida alrededor de usted cuando todavía no tiene una. La brecha de equity entre ambos no es un sobreprecio. Es el precio de cuánto trabajo real hace cada lado antes de que usted tenga algo que mostrar.",
+            "Elija VC si tiene producto funcionando, equipo y opciones de capital y quiere el máximo de propiedad. Elija un studio si lo que le falta es el equipo, el primer capital o el músculo operativo para poner un producto en el mercado."
+          ],
+          "id": "the-pair"
+        },
+        {
+          "heading": "Las tres cosas que de verdad estás intercambiando",
+          "level": 2,
+          "paragraphs": [
+            "Quite las etiquetas y los dos caminos ajustan las mismas tres perillas. La razón de que los números de equity se vean tan distantes es que cada camino entrega una cantidad diferente de la construcción. Lea el intercambio como cuánto necesito que construyan para mí, no como barato contra caro."
+          ],
+          "bullets": [
+            "Dilución. La parte de la empresa que entrega al inicio, antes de que el upside esté probado. El VC va de 15% a 25% por ronda con valuación. Un studio toma de 30% a 50% o más, de una vez, al principio.",
+            "Control. Si conserva el directorio, el roadmap y el derecho a decir que no. El VC le cuesta un asiento en el directorio. El studio co-posee más de la empresa misma.",
+            "Velocidad hacia la tracción. Meses hasta un producto en el mercado con los primeros clientes. Las ventures de studio llegan a Serie A en cerca de 25 meses en promedio, contra 56 de las startups aisladas."
+          ],
+          "id": "three-axes"
+        },
+        {
+          "heading": "Qué cuesta y qué entrega de verdad el VC",
+          "level": 3,
+          "paragraphs": [
+            "El VC intercambia una porción definida de equity por capital y gobernanza, y deja la idea y el equipo originales en sus manos. Una ronda seed o Serie A con valuación cuesta en general entre 15% y 25% por ronda más un asiento en el directorio, dentro de la banda más amplia de 10% a 25% de dilución que los fundadores planean a lo largo de las rondas. Lo que compra es combustible, no un co-constructor. Conserva la empresa con la que entró y acepta un miembro del directorio cuyo trabajo es empujar crecimiento en un reloj que quizás no calce con su negocio.",
+            "Las aceleradoras están en el extremo de baja dilución y son el contraste más limpio. Y Combinator invierte US$ 500 mil en total. Los primeros US$ 125 mil compran 7% en un SAFE post-money, y los US$ 375 mil restantes van en un SAFE sin cap. Techstars igualó el formato en 2025 con US$ 220 mil, de los cuales US$ 20 mil por 5% en acciones comunes más un SAFE sin cap de US$ 200 mil. El VC y las aceleradoras parten del supuesto de que usted sabe construir. Ponen precio al capital y a la red, no a la construcción en sí.",
+            "Este es el camino correcto para un equipo técnico que ya lanza y quiere conservar el máximo de propiedad, dispuesto a ir más lento por ello. Si ya construye sin ayuda, la participación de un studio está cara para usted, y ni el cheque de una aceleradora cierra una brecha que usted no tiene."
+          ],
+          "id": "vc-terms"
+        },
+        {
+          "heading": "Qué cuesta y qué entrega de verdad un venture studio",
+          "level": 3,
+          "paragraphs": [
+            "El studio toma la mayor participación inicial de cualquier camino porque hace más antes de que usted tenga algo que mostrar. Los studios suelen tomar de 30% a 60% de equity contra 10% a 20% del VC tradicional, con la participación promedio de studio reportada cerca de 34%. A cambio recibe una idea ya probada bajo presión, un equipo de construcción el día uno, capital de primer cheque y operating partners en el modelo de unit economics en las primeras semanas, no revisando un deck una vez por trimestre. Con un studio, la [conversación de equity ocurre justo al principio](/library/venture-studio-founder-economics-latam), lo cual es una característica de la estructura, no una negociación fallida.",
+            "La versión honesta nombra el pero. La participación mayor es dilución real, y la misma entidad aporta la idea, el capital y los operadores, lo cual es una cuestión de conflicto legítima de plantear en voz alta. El caso del studio solo se sostiene cuando aporta lo que de verdad le falta. Un fundador que ya tiene equipo, idea y opciones de capital suele estar mejor servido por el VC."
+          ],
+          "id": "studio-terms"
+        },
+        {
+          "heading": "Por qué la brecha de retorno del studio justifica la participación mayor",
+          "level": 2,
+          "paragraphs": [
+            "Una participación inicial por encima del 30% solo tiene sentido si el modelo retorna más, y los datos publicados dicen que sí, con una salvedad que un lector serio debe pesar. Según la Global Startup Studio Network, el modelo de venture studio ha producido studio IRR de ~50% versus ~19% para VC tradicional, cerca de 2.5x en horizontes de tiempo realistas. Lo citamos como el benchmark de studio de GSSN, nunca como el retorno realizado de una firma específica, y menos como el nuestro. Del lado del VC, el [índice de Venture Capital de Cambridge Associates en EE.UU.](https://www.spglobal.com/spdji/en/products/cambridge-associates/reports/us-venture-capital/) ubica a los fondos medianos cerca de 10% a 15% de IRR neto, con el cuartil superior en 20% a 30% o más, que es el rango que hace destacar el número del studio.",
+            "Los números de velocidad explican el retorno. Las ventures de studio llegan a Serie A en cerca de 25 meses contra 56 de las startups aisladas, y una porción mucho mayor de ellas llega. Resuelva la plomería de la empresa una vez y la siguiente venture la hereda. La salvedad honesta es supervivencia. Los números de GSSN son autorreportados y se inclinan hacia studios que sobrevivieron para publicarlos, así que lea el IRR absoluto como direccional. Críticos también notan que números fuertes por empresa no siempre hacen del studio un buen generador de retorno de fondo. Lo que no está en duda es el mecanismo. Operadores en el modelo temprano, plomería resuelta una vez, un sistema que compone."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Studio IRR de ~50% versus ~19% para VC tradicional, cerca de 2.5x el IRR en horizontes de tiempo realistas.",
+            "attribution": "Global Startup Studio Network (GSSN)"
+          },
+          "id": "return-gap"
+        },
+        {
+          "heading": "Qué fundador debe elegir cuál",
+          "level": 2,
+          "paragraphs": [
+            "La decisión es menos sobre preferencia y más sobre la brecha que está llenando. Empate el camino con lo que le falta, no con el menor número de dilución de la página. El caso del studio se cae en el momento en que usted ya tiene el equipo, la idea y el capital, porque entonces la participación mayor no compra nada que usted no pueda armar solo."
+          ],
+          "bullets": [
+            "Experto de dominio solo, sin equipo, sin producto construido. Un venture studio. Intercambia el máximo de equity por el máximo de construcción y obtiene operadores el día uno.",
+            "Equipo técnico con prototipo funcionando y opciones de capital. VC. Paga por combustible y gobernanza, no por un co-constructor, así que la dilución menor es la correcta.",
+            "Fundador que quiere el máximo de propiedad por encima de todo. Haga bootstrap o levante VC, y acepte una tracción más lenta como el precio de un cap table limpio."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Compre aquello que de verdad le falta. Si ya construye y lanza, la participación de un studio está cara. Si no puede, el cheque de una aceleradora no cierra la brecha."
+          },
+          "id": "who-picks-what"
+        },
+        {
+          "heading": "Dónde encaja Avante",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina, y Brasil es la razón de que el modelo calce. Los servicios representan cerca del 70% del PIB brasileño, con baja penetración de software, que es una superficie enorme de negocios poco digitalizados entendidos por operadores de dominio, no por VCs generalistas. Brasil atrajo cerca de la mitad de toda la inversión en startups de América Latina en 2024, cerca de US$ 2,14 mil millones, así que el capital está concentrado donde está la profundidad operativa. La infraestructura de IA ya está barata como para lanzar sin una Serie A, así que la construcción empieza austera.",
+            "En la práctica, eso significa que Avante lanza 3-4 ventures por año a través de un sistema de seis etapas de Research, Partner, Build, Traction, Revenue y Compound, aportando US$ 500K-1.5M por venture y conservando economía de co-founder. El patrón recurrente es el flywheel copilot, dato, capital. Construir un copilot de IA para generar dato propietario y usar ese dato para levantar y desplegar capital. El argumento más profundo de por qué esto funciona en la región está en [por qué los venture studios ganan en América Latina](/library/why-venture-studios-win-latam), y el modelo operativo está en [/principles](/principles).",
+            "Entonces elija por lo que le falta, no por lo que se ve más barato el día uno. El fundador que elige un studio no está comprando un cheque. Está comprando una empresa construida sobre diez años de cicatriz de operación, iniciada el mes en que firma, en lugar del año en que habría terminado de contratar."
+          ],
+          "id": "how-avante"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Cuál es la diferencia en venture studio vs VC?",
+          "a": "Un venture studio construye la empresa con usted y toma una participación inicial grande, a menudo de 30% a 50% o más, porque aporta la idea, un equipo de producto, el primer capital y operadores en el día a día. El VC intercambia entre 15% y 25% por ronda con valuación y un asiento en el directorio por capital, y le deja la idea y el equipo con los que entró. Intercambia propiedad por cuánto se construye para usted."
+        },
+        {
+          "q": "En venture studio vs VC, ¿cuánto equity toma cada uno?",
+          "a": "Un venture studio suele tomar de 30% a 60% de equity, con el promedio cerca de 34%, contra 10% a 20% del VC tradicional en una ronda con valuación. La participación del studio parece cara hasta que considera lo que incluye, es decir, la idea, el equipo de construcción, el primer capital y operadores. La pregunta no es el porcentaje, es qué recibe a cambio."
+        },
+        {
+          "q": "¿De verdad los venture studios retornan más que el VC?",
+          "a": "En el benchmark publicado, sí. La Global Startup Studio Network reporta studio IRR de ~50% versus ~19% para VC tradicional, cerca de 2.5x. La cifra es autorreportada y está sesgada por supervivencia, así que trate el valor absoluto como direccional, mientras que el mecanismo de operadores co-construyendo temprano está bien establecido."
+        },
+        {
+          "q": "¿Cuándo debe un fundador elegir VC en lugar de un venture studio?",
+          "a": "Elija VC cuando ya tiene producto funcionando, equipo y opciones de capital y quiere conservar el máximo de propiedad. El VC cuesta menos equity precisamente porque usted carga el riesgo de construcción, así que una ronda con valuación de 15% a 25% es el mejor intercambio. Un studio solo merece la participación mayor cuando aporta lo que de verdad le falta."
         }
       ]
     }

@@ -380,7 +380,7 @@
   <!-- 9. Global Venture Studio Data (DRAFT) -->
 
   <!-- CONTENT-ENGINE:START (managed by content-engine/merge.py - do not edit by hand) -->
-  <!-- 23 engine article(s) x 3 locales. Generated from content-engine/outputs. Edit the engine, not this block. -->
+  <!-- 24 engine article(s) x 3 locales. Generated from content-engine/outputs. Edit the engine, not this block. -->
   <url>
     <loc>https://avanteventures.com/en/library/ai-agents-vs-copilots-b2b</loc>
     <lastmod>2026-06-15</lastmod>
@@ -1010,6 +1010,36 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/venture-studio-founder-economics-latam"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/venture-studio-founder-economics-latam"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/venture-studio-founder-economics-latam"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/en/library/venture-studio-vs-vc-explained</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/venture-studio-vs-vc-explained"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/venture-studio-vs-vc-explained"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/venture-studio-vs-vc-explained"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/venture-studio-vs-vc-explained"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/venture-studio-vs-vc-explained</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/venture-studio-vs-vc-explained"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/venture-studio-vs-vc-explained"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/venture-studio-vs-vc-explained"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/venture-studio-vs-vc-explained"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/venture-studio-vs-vc-explained</loc>
+    <lastmod>2026-06-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/venture-studio-vs-vc-explained"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/venture-studio-vs-vc-explained"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/venture-studio-vs-vc-explained"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/venture-studio-vs-vc-explained"/>
   </url>
   <url>
     <loc>https://avanteventures.com/en/library/vertical-ai-studio-portfolio-construction</loc>

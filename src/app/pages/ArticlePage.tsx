@@ -1040,6 +1040,20 @@ function articleTaxonomy(slug: string): {
           COMMON_AVANTE,
         ],
       }
+    case 'venture-studio-vs-vc-explained':
+      return {
+        keywords: ['venture studio vs VC', 'venture studio', 'venture capital', 'dilution', 'founder financing', 'board seat', 'startup studio'],
+        about: [
+          { '@type': 'Thing', name: 'Startup financing models' },
+          { '@type': 'Thing', name: 'Venture studio model' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Global Startup Studio Network', sameAs: 'https://www.gssn.co' },
+          { '@type': 'Organization', name: 'Y Combinator', sameAs: 'https://www.ycombinator.com' },
+          { '@type': 'Organization', name: 'Cambridge Associates', sameAs: 'https://www.cambridgeassociates.com' },
+          COMMON_AVANTE,
+        ],
+      }
     case 'studio-vs-accelerator-vs-vc':
       return {
         keywords: ['venture studio', 'accelerator', 'venture capital', 'dilution', 'founder financing', 'Y Combinator', 'choosing a model'],
