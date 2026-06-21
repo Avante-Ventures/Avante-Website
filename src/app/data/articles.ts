@@ -2049,11 +2049,11 @@ const engineArticles: Article[] = [
     "isPublished": true,
     "en": {
       "title": "The AI Cost Curve Lets LATAM Ventures Skip the Series A",
-      "description": "Inference cost is collapsing about 10x a year. That routes capital from infrastructure to product and neutralizes LATAM's historic capital disadvantage right on time.",
+      "description": "The AI cost curve is collapsing inference cost about 10x a year. That routes capital from infrastructure to product and neutralizes LATAM's historic capital disadvantage right on time.",
       "sections": [
         {
           "paragraphs": [
-            "The cost to run a model of a given capability is falling by roughly an order of magnitude per year, and that single fact rewrites the math of building an AI startup. Stanford's AI Index found the inference cost for a GPT-3.5-level system dropped more than 280-fold between November 2022 and October 2024. When the build gets that cheap, the money that used to fund a 20-person engineering team moves to product and distribution instead.",
+            "The AI cost curve, the cost to run a model of a given capability, is falling by roughly an order of magnitude per year, and that single fact rewrites the math of building an AI startup. Stanford's AI Index found the inference cost for a GPT-3.5-level system dropped more than 280-fold between November 2022 and October 2024. When the build gets that cheap, the money that used to fund a 20-person engineering team moves to product and distribution instead.",
             "For Brazil and the broader LATAM market, the timing matters. Founders here never had the capital depth of their US peers. A falling AI inference cost curve neutralizes that disadvantage just as Brazil's services economy stays under-digitized. This is the case for why a LATAM venture can now [launch without a Series A](/library/ai-native-without-series-a), and why Avante Ventures treats that as a structural opening rather than a slogan."
           ]
         },
@@ -2127,6 +2127,20 @@ const engineArticles: Article[] = [
             "The benchmark behind the model is blunt. Venture studios materially outperform traditional venture capital on IRR, at a studio IRR of ~50% versus an industry-standard ~19% for traditional VC, per the Global Startup Studio Network (GSSN). That is roughly 2.5x the IRR of traditional VC over realistic time horizons, and it is the studio-model benchmark, not Avante's own realized return.",
             "The cost curve makes the build cheap. Domain operators with 10+ years of Brazilian-market scar tissue, and the proprietary data they generate, are what make it defensible. The first one is a gift the whole market receives. The second is the only part a competitor cannot buy with a credit card. Read the full thesis at [/why-avante](/why-avante), or browse related market analysis in the [/library](/library)."
           ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is the AI cost curve?",
+          "a": "The AI cost curve is the steady fall in what it costs to run a model of a given capability. Stanford's AI Index found the inference cost for a GPT-3.5-level system dropped more than 280-fold between late 2022 and late 2024, roughly an order of magnitude per year. As inference, vector search, and managed infrastructure all commoditize, the money that used to fund a large engineering build moves to product and distribution."
+        },
+        {
+          "q": "Can you build an AI startup without raising a Series A?",
+          "a": "Increasingly yes, because the falling AI cost curve removes the biggest reason the round existed. When inference is cheap, the capital that once paid for a 20-person infrastructure team now funds product and go-to-market. With a focused budget of roughly $500K to $1.5M per venture, a studio can route $300K to $500K straight to product instead of burning it on infrastructure."
+        },
+        {
+          "q": "Why does the AI cost curve favor LATAM and Brazil?",
+          "a": "Because it neutralizes the disadvantage LATAM founders always had. They never matched the capital depth of US peers, and a cheaper cost curve makes that gap matter less just as Brazil's services economy, around 70% of GDP, stays under-digitized. Cheap inference is not a moat though, since it lowers the barrier for competitors too. The durable advantage is proprietary data, not cheap tokens."
         }
       ]
     },
@@ -2216,6 +2230,20 @@ const engineArticles: Article[] = [
             "A curva de custo barateou o build para todo mundo de uma vez. O que ela não fez foi entregar a ninguém operadores de domínio com mais de 10 anos de cicatriz no mercado brasileiro. Esse é o insumo que segue escasso, e é o que a Avante monta antes da primeira linha de código."
           ]
         }
+      ],
+      "faqs": [
+        {
+          "q": "O que é a curva de custo da IA?",
+          "a": "A curva de custo da IA é a queda contínua do que custa rodar um modelo de uma dada capacidade. O AI Index de Stanford apontou que o custo de inferência de um sistema no nível do GPT-3.5 caiu mais de 280 vezes entre o fim de 2022 e o fim de 2024, cerca de uma ordem de grandeza por ano. Conforme inferência, busca vetorial e infraestrutura gerenciada viram commodity, o dinheiro que antes pagava uma grande equipe de engenharia vai para produto e distribuição."
+        },
+        {
+          "q": "Dá para construir uma startup de IA sem levantar uma Série A?",
+          "a": "Cada vez mais sim, porque a curva de custo em queda elimina a maior razão pela qual a rodada existia. Com inferência barata, o capital que antes pagava um time de infraestrutura de 20 pessoas agora financia produto e go-to-market. Com um orçamento focado de cerca de US$ 500 mil a US$ 1,5 milhão por venture, um studio pode direcionar US$ 300 mil a US$ 500 mil direto para produto em vez de queimar em infraestrutura."
+        },
+        {
+          "q": "Por que a curva de custo da IA favorece a América Latina e o Brasil?",
+          "a": "Porque neutraliza a desvantagem que os fundadores da região sempre tiveram. Eles nunca tiveram a profundidade de capital dos pares dos EUA, e uma curva de custo mais barata faz esse buraco pesar menos justamente quando a economia de serviços do Brasil, cerca de 70% do PIB, segue subdigitalizada. Inferência barata não é um moat, porém, porque também baixa a barreira para concorrentes. A vantagem durável é dado proprietário, não token barato."
+        }
       ]
     },
     "es": {
@@ -2303,6 +2331,20 @@ const engineArticles: Article[] = [
             "El benchmark detrás del modelo es la razón por la que el studio existe. La Global Startup Studio Network ubica el IRR de studio en cerca de ~50% frente a un ~19% estándar del sector para VC tradicional, cerca de 2,5x a lo largo de horizontes realistas. Ese es el benchmark del modelo de studio, no el retorno realizado de la propia Avante. Lea la tesis completa en [/why-avante](/why-avante) y análisis de mercado relacionados en [/library](/library).",
             "La curva de costo abarató el build para todos a la vez. Lo que no hizo fue entregarle a nadie operadores de dominio con más de 10 años de cicatriz en el mercado brasileño. Ese es el insumo que sigue escaso, y es el que Avante ensambla antes de la primera línea de código."
           ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Qué es la curva de costo de la IA?",
+          "a": "La curva de costo de la IA es la caída sostenida de lo que cuesta correr un modelo de una capacidad dada. El AI Index de Stanford encontró que el costo de inferencia de un sistema al nivel de GPT-3.5 cayó más de 280 veces entre fines de 2022 y fines de 2024, cerca de un orden de magnitud por año. A medida que la inferencia, la búsqueda vectorial y la infraestructura gestionada se vuelven commodity, el dinero que antes pagaba un gran equipo de ingeniería se mueve a producto y distribución."
+        },
+        {
+          "q": "¿Se puede construir una startup de IA sin levantar una Serie A?",
+          "a": "Cada vez más sí, porque la curva de costo a la baja elimina la mayor razón por la que existía la ronda. Con inferencia barata, el capital que antes pagaba un equipo de infraestructura de 20 personas ahora financia producto y go-to-market. Con un presupuesto enfocado de cerca de US$ 500 mil a US$ 1,5 millones por venture, un studio puede dirigir US$ 300 mil a US$ 500 mil directo a producto en lugar de quemarlo en infraestructura."
+        },
+        {
+          "q": "¿Por qué la curva de costo de la IA favorece a LATAM y Brasil?",
+          "a": "Porque neutraliza la desventaja que los fundadores de la región siempre tuvieron. Nunca igualaron la profundidad de capital de sus pares de EE. UU., y una curva de costo más barata hace que esa brecha pese menos justo cuando la economía de servicios de Brasil, cerca del 70% del PIB, sigue subdigitalizada. La inferencia barata no es un moat, sin embargo, porque también baja la barrera para competidores. La ventaja durable es el dato propietario, no el token barato."
         }
       ]
     }
@@ -6501,47 +6543,14 @@ const engineArticles: Article[] = [
     "datePublished": "2026-06-02",
     "isPublished": true,
     "en": {
-      "title": "Venture Studio vs VC vs Accelerator: An Honest Guide (2026)",
-      "description": "Venture studio vs VC vs accelerator: how each prices dilution, control, and speed, and which path a founder should pick. The honest terms for all three.",
-      "faqs": [
-        {
-          "q": "What is the difference between a venture studio, an accelerator, and a VC?",
-          "a": "A venture studio co-builds the company with you and takes the largest early stake (often around 34%) because it supplies the idea, the build team, first capital, and operators. An accelerator takes a small stake (around 7%) for a fixed program and a network. A VC writes a priced check (typically 15% to 25% plus a board seat) but leaves you to build. The real trade is how much gets built for you versus how much equity you keep."
-        },
-        {
-          "q": "Venture studio vs VC: which is better for an early-stage founder?",
-          "a": "It depends on what you lack. Pick a VC if you already have a team and a product and mainly need capital and governance. Pick a venture studio if you are pre-team or pre-product and want operators building alongside you from day one, and you accept giving up more equity for that depth."
-        },
-        {
-          "q": "Do venture studios deliver better returns than VCs?",
-          "a": "Industry data from the Global Startup Studio Network puts the studio model at roughly 2.5x the IRR of traditional venture capital, driven by faster time to Series A and higher graduation rates. Avante reads that as a directional model benchmark attributed to GSSN, not a guaranteed return for any single venture."
-        },
-        {
-          "q": "How much equity does a venture studio take?",
-          "a": "Usually the largest early stake of the three paths, commonly around 34%, because the studio hands over the most: the idea, the building team, first capital, and operators co-building day to day. An accelerator takes far less (around 7%) because it sells a program, not a company."
-        },
-        {
-          "q": "When should a founder pick an accelerator instead?",
-          "a": "An accelerator fits a founder who already has a team and an early product and wants structured mentorship, a cohort network, and a demo day, while keeping most equity and control. It sells access and a program, not company-building."
-        }
-      ],
+      "title": "Venture Studio vs Accelerator vs VC: An Honest Guide for Founders",
+      "description": "Venture studio vs accelerator vs VC, compared on dilution, control, and speed. The real terms for each, and a clear answer for which founder should pick which.",
       "sections": [
         {
           "paragraphs": [
-            "The choice between a venture studio, an accelerator, and traditional VC is not about which one is best. It is about which one prices the three things you are actually trading. Dilution, control, and speed to first traction. An accelerator like Y Combinator takes 7% for a small check and a fixed program. A priced VC round costs 15% to 25% and a board seat but leaves you owning the idea. A venture studio takes the largest early stake, often around 34%, because it hands you the most. The idea, the build team, first capital, and operators co-building day to day.",
+            "Venture studio vs accelerator vs VC is not about which is best. It is about which path prices the three things you actually trade. Dilution, control, and speed to first traction. An accelerator like Y Combinator takes 7% for a small check and a fixed program. A priced VC round costs 15% to 25% and a board seat but leaves you owning the idea. A venture studio takes the largest early stake, often around 34%, because it hands you the most. The idea, the build team, first capital, and operators co-building day to day.",
             "This guide gives the real terms for each path and names who should pick what. Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America, so we have a view. We have also tried to be fair to the paths we did not choose."
-          ],
-          "table": {
-            "caption": "How venture studio, accelerator, and VC price dilution, control, and speed.",
-            "headers": ["", "Venture studio", "Accelerator", "VC"],
-            "rows": [
-              ["Equity taken", "Largest, often ~34%", "Small, ~7%", "Priced round, ~15 to 25%"],
-              ["What you get", "Idea, build team, first capital, operators co-building", "Program, network, demo day", "Capital plus a board seat"],
-              ["Best for", "Pre-team or pre-product founders who want operators on day one", "Founders with a team and an early product wanting structure", "Teams with a product who mainly need capital and governance"],
-              ["Speed to traction", "Fastest: operators build from day one", "Fixed cohort timeline", "You build; the pace is on you"],
-              ["Control kept", "Lowest, the studio co-owns more", "High", "High, minus a board seat"]
-            ]
-          }
+          ]
         },
         {
           "heading": "The three things you are actually trading",
@@ -6625,50 +6634,35 @@ const engineArticles: Article[] = [
           ],
           "id": "how-avante"
         }
+      ],
+      "faqs": [
+        {
+          "q": "What is the difference between a venture studio, an accelerator, and VC?",
+          "a": "A venture studio co-builds the company with you and takes the largest early stake, often around 34%, because it supplies the idea, a build team, first capital, and operators working day to day. An accelerator like Y Combinator takes about 7% for a small check and a fixed program. A priced VC round costs 15% to 25% and a board seat but leaves you owning the idea. You are trading ownership for support."
+        },
+        {
+          "q": "How much equity does a venture studio take?",
+          "a": "Studios take the largest early stake of the three models, often near 34% and sometimes higher, in return for handing the founder the idea, the build team, first capital, and operators. That looks expensive next to an accelerator's 7%, but the studio is pricing far more than money. The question is not the percentage, it is what you get for it."
+        },
+        {
+          "q": "Should a founder choose a venture studio or an accelerator?",
+          "a": "A solo domain expert with deep insight but no team and no built product is the natural fit for a venture studio, which supplies everything around the insight. A technical team with a working prototype is usually better served by an accelerator or a priced VC round, which cost less ownership because the founder already carries the build risk. Match the model to what you are missing, not to the headline dilution."
+        },
+        {
+          "q": "Why can a venture studio justify taking more equity?",
+          "a": "Because the model has produced higher returns. The Global Startup Studio Network reports venture studios have generated roughly ~50% IRR versus about ~19% for traditional VC. When the build is de-risked by operators co-building from day one, the larger early stake is the price of a higher probability of reaching traction at all."
+        }
       ]
     },
     "pt": {
-      "title": "Venture Studio vs VC vs Aceleradora: Um Guia Honesto (2026)",
-      "description": "Venture studio vs VC vs aceleradora: como cada um precifica diluição, controle e velocidade, e qual caminho um fundador deve escolher. Os termos reais dos três.",
-      "faqs": [
-        {
-          "q": "Qual a diferença entre venture studio, aceleradora e VC?",
-          "a": "Um venture studio co-constrói a empresa com você e fica com a maior fatia inicial (em geral perto de 34%) porque entrega a ideia, o time de construção, o primeiro capital e operadores. Uma aceleradora pega uma fatia pequena (cerca de 7%) por um programa fixo e uma rede. Um VC faz um cheque precificado (tipicamente 15% a 25% mais uma cadeira no conselho), mas deixa você construir. A troca real é quanto é construído para você versus quanto equity você mantém."
-        },
-        {
-          "q": "Venture studio vs VC: qual é melhor para um fundador early-stage?",
-          "a": "Depende do que falta a você. Escolha um VC se já tem time e produto e precisa sobretudo de capital e governança. Escolha um venture studio se está pré-time ou pré-produto e quer operadores construindo ao seu lado desde o dia um, aceitando ceder mais equity por essa profundidade."
-        },
-        {
-          "q": "Venture studios dão retorno melhor que VCs?",
-          "a": "Dados da Global Startup Studio Network colocam o modelo de studio em cerca de 2,5x o IRR do venture capital tradicional, puxado por menor tempo até a Série A e maior taxa de graduação. A Avante lê isso como um benchmark direcional do modelo, atribuído à GSSN, não como retorno garantido de qualquer venture isolada."
-        },
-        {
-          "q": "Quanto de equity um venture studio pega?",
-          "a": "Em geral a maior fatia inicial das três vias, comumente perto de 34%, porque o studio entrega o máximo: a ideia, o time de construção, o primeiro capital e operadores co-construindo no dia a dia. Uma aceleradora pega bem menos (cerca de 7%) porque vende um programa, não uma empresa."
-        },
-        {
-          "q": "Quando um fundador deve escolher uma aceleradora?",
-          "a": "Uma aceleradora serve a um fundador que já tem time e um produto inicial e quer mentoria estruturada, uma rede de cohort e um demo day, mantendo a maior parte do equity e do controle. Ela vende acesso e um programa, não a construção da empresa."
-        }
-      ],
+      "title": "Studio, Aceleradora ou VC: Um Guia Honesto para Escolher",
+      "description": "Studio, aceleradora e VC trocam diluição, controle e velocidade de formas diferentes. Os termos reais de cada um e qual fundador escolhe o quê.",
       "sections": [
         {
           "paragraphs": [
             "A escolha entre um venture studio, uma aceleradora e VC tradicional não é sobre qual deles é melhor. É sobre qual deles cobra o preço certo pelas três coisas que você está de fato trocando. Diluição, controle e velocidade até a primeira tração. Uma aceleradora como a Y Combinator fica com 7% por um cheque pequeno e um programa de prazo fixo. Uma rodada de VC precificada custa de 15% a 25% e uma cadeira no conselho, mas deixa a ideia com você. Um venture studio fica com a maior fatia inicial, com frequência em torno de 34%, porque entrega o máximo. A ideia, o time que constrói, o primeiro capital e operadores construindo lado a lado todos os dias.",
             "Este guia traz os termos reais de cada caminho e diz quem deve escolher o quê. A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina, então temos uma posição. Também tentamos ser justos com os caminhos que não escolhemos."
-          ],
-          "table": {
-            "caption": "Como venture studio, aceleradora e VC cobram diluição, controle e velocidade.",
-            "headers": ["", "Venture studio", "Aceleradora", "VC"],
-            "rows": [
-              ["Equity que pega", "A maior, em geral ~34%", "Pequena, ~7%", "Rodada precificada, ~15 a 25%"],
-              ["O que você recebe", "Ideia, time de construção, primeiro capital, operadores co-construindo", "Programa, rede, demo day", "Capital mais uma cadeira no conselho"],
-              ["Melhor para", "Fundadores pré-time ou pré-produto que querem operadores no dia um", "Fundadores com time e produto inicial que querem estrutura", "Times com produto que precisam sobretudo de capital e governança"],
-              ["Velocidade até tração", "A mais rápida: operadores constroem desde o dia um", "Cronograma fixo de cohort", "Você constrói; o ritmo é seu"],
-              ["Controle mantido", "O menor, o studio co-detém mais", "Alto", "Alto, menos uma cadeira no conselho"]
-            ]
-          }
+          ]
         },
         {
           "heading": "As três coisas que você está de fato trocando",
@@ -6752,50 +6746,35 @@ const engineArticles: Article[] = [
           ],
           "id": "how-avante"
         }
+      ],
+      "faqs": [
+        {
+          "q": "Qual a diferença entre venture studio, aceleradora e VC?",
+          "a": "Um venture studio constrói a empresa junto com você e fica com a maior fatia inicial, muitas vezes perto de 34%, porque entrega a ideia, um time de produto, o primeiro capital e operadores no dia a dia. Uma aceleradora como a Y Combinator fica com cerca de 7% por um cheque pequeno e um programa fixo. Uma rodada de VC precificada custa de 15% a 25% e uma cadeira no conselho, mas deixa a ideia com você. Você troca participação por apoio."
+        },
+        {
+          "q": "Quanto de equity um venture studio costuma pegar?",
+          "a": "O studio fica com a maior fatia inicial dos três modelos, muitas vezes perto de 34% e às vezes mais, em troca de entregar ao fundador a ideia, o time de construção, o primeiro capital e operadores. Parece caro ao lado dos 7% de uma aceleradora, mas o studio está precificando muito mais do que dinheiro. A pergunta não é o percentual, é o que você recebe por ele."
+        },
+        {
+          "q": "Como escolher entre venture studio e aceleradora?",
+          "a": "Um especialista solo com visão profunda mas sem time e sem produto pronto é o encaixe natural de um venture studio, que fornece tudo ao redor da visão. Um time técnico com protótipo funcionando costuma ser melhor servido por uma aceleradora ou uma rodada de VC, que custam menos participação porque o fundador já carrega o risco de construção. Escolha pelo que falta, não pela diluição da manchete."
+        },
+        {
+          "q": "Por que um venture studio justifica pegar mais equity?",
+          "a": "Porque o modelo gerou retornos maiores. A Global Startup Studio Network reporta que venture studios produziram cerca de ~50% de IRR contra aproximadamente ~19% do VC tradicional. Quando a construção é de-riscada por operadores desde o primeiro dia, a fatia inicial maior é o preço de uma probabilidade mais alta de chegar à tração."
+        }
       ]
     },
     "es": {
-      "title": "Venture Studio vs VC vs Aceleradora: Una Guía Honesta (2026)",
-      "description": "Venture studio vs VC vs aceleradora: cómo cada uno cobra dilución, control y velocidad, y qué camino debe elegir un fundador. Los términos reales de los tres.",
-      "faqs": [
-        {
-          "q": "¿Cuál es la diferencia entre un venture studio, una aceleradora y un VC?",
-          "a": "Un venture studio co-construye la empresa contigo y se queda con la mayor participación inicial (a menudo cerca del 34%) porque aporta la idea, el equipo de construcción, el primer capital y operadores. Una aceleradora toma una participación pequeña (alrededor del 7%) por un programa fijo y una red. Un VC hace un cheque con precio (típicamente 15% a 25% más un asiento en el directorio), pero te deja construir. El trade real es cuánto se construye para ti versus cuánto equity conservas."
-        },
-        {
-          "q": "Venture studio vs VC: ¿cuál es mejor para un fundador early-stage?",
-          "a": "Depende de lo que te falte. Elige un VC si ya tienes equipo y producto y sobre todo necesitas capital y gobierno. Elige un venture studio si estás pre-equipo o pre-producto y quieres operadores construyendo a tu lado desde el día uno, aceptando ceder más equity por esa profundidad."
-        },
-        {
-          "q": "¿Los venture studios dan mejor retorno que los VC?",
-          "a": "Datos de la Global Startup Studio Network ubican al modelo de studio en cerca de 2,5x el IRR del venture capital tradicional, impulsado por menor tiempo a la Serie A y mayor tasa de graduación. Avante lo lee como un benchmark direccional del modelo, atribuido a GSSN, no como retorno garantizado de ninguna venture aislada."
-        },
-        {
-          "q": "¿Cuánto equity toma un venture studio?",
-          "a": "Por lo general la mayor participación inicial de las tres vías, comúnmente cerca del 34%, porque el studio entrega lo máximo: la idea, el equipo de construcción, el primer capital y operadores co-construyendo día a día. Una aceleradora toma mucho menos (alrededor del 7%) porque vende un programa, no una empresa."
-        },
-        {
-          "q": "¿Cuándo debe un fundador elegir una aceleradora?",
-          "a": "Una aceleradora le sirve a un fundador que ya tiene equipo y un producto inicial y quiere mentoría estructurada, una red de cohort y un demo day, conservando la mayor parte del equity y el control. Vende acceso y un programa, no la construcción de la empresa."
-        }
-      ],
+      "title": "Studio, Aceleradora o VC: Una Guía Honesta para Elegir",
+      "description": "Studio, aceleradora y VC intercambian dilución, control y velocidad de forma distinta. Los términos reales de cada uno y qué fundador elige cuál.",
       "sections": [
         {
           "paragraphs": [
             "La elección entre un venture studio, una aceleradora y VC tradicional no es sobre cuál es mejor. Es sobre cuál pone el precio correcto a las tres cosas que de verdad está intercambiando. Dilución, control y velocidad hasta la primera tracción. Una aceleradora como Y Combinator se queda con 7% por un cheque pequeño y un programa de duración fija. Una ronda de VC con valuación cuesta entre 15% y 25% y un asiento en el directorio, pero deja la idea en sus manos. Un venture studio toma la mayor porción inicial, a menudo cerca de 34%, porque entrega lo máximo. La idea, el equipo que construye, el primer capital y operadores co-construyendo día a día.",
             "Esta guía da los términos reales de cada camino y dice quién debe elegir cuál. Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina, así que tenemos una postura. También intentamos ser justos con los caminos que no elegimos."
-          ],
-          "table": {
-            "caption": "Cómo venture studio, aceleradora y VC cobran dilución, control y velocidad.",
-            "headers": ["", "Venture studio", "Aceleradora", "VC"],
-            "rows": [
-              ["Equity que toma", "La mayor, a menudo ~34%", "Pequeña, ~7%", "Ronda con precio, ~15 a 25%"],
-              ["Qué recibes", "Idea, equipo de construcción, primer capital, operadores co-construyendo", "Programa, red, demo day", "Capital más un asiento en el directorio"],
-              ["Mejor para", "Fundadores pre-equipo o pre-producto que quieren operadores el día uno", "Fundadores con equipo y producto inicial que quieren estructura", "Equipos con producto que necesitan sobre todo capital y gobierno"],
-              ["Velocidad a tracción", "La más rápida: operadores construyen desde el día uno", "Cronograma fijo de cohort", "Tú construyes; el ritmo es tuyo"],
-              ["Control mantenido", "El menor, el studio co-posee más", "Alto", "Alto, menos un asiento en el directorio"]
-            ]
-          }
+          ]
         },
         {
           "heading": "Las tres cosas que de verdad estás intercambiando",
@@ -6878,6 +6857,24 @@ const engineArticles: Article[] = [
             "Entonces elija por lo que le falta, no por lo que se ve más barato el día uno. El fundador que elige un studio no está comprando un cheque. Está comprando una empresa construida sobre diez años de cicatriz de operación, iniciada el mes en que firma, en lugar del año en que habría terminado de contratar."
           ],
           "id": "how-avante"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Cuál es la diferencia entre un venture studio, una aceleradora y un VC?",
+          "a": "Un venture studio construye la empresa contigo y se queda con la mayor participación inicial, muchas veces cerca del 34%, porque aporta la idea, un equipo de producto, el primer capital y operadores en el día a día. Una aceleradora como Y Combinator toma alrededor del 7% por un cheque pequeño y un programa fijo. Una ronda de VC con valuación cuesta del 15% al 25% y un asiento en el directorio, pero la idea sigue siendo tuya. Cambias propiedad por apoyo."
+        },
+        {
+          "q": "¿Cuánto equity toma un venture studio?",
+          "a": "El studio toma la mayor participación inicial de los tres modelos, muchas veces cerca del 34% y a veces más, a cambio de entregar al fundador la idea, el equipo de construcción, el primer capital y operadores. Parece caro al lado del 7% de una aceleradora, pero el studio está cobrando por mucho más que dinero. La pregunta no es el porcentaje, es qué recibes a cambio."
+        },
+        {
+          "q": "¿Qué debe elegir un fundador, un venture studio o una aceleradora?",
+          "a": "Un experto en su dominio, sin equipo y sin producto construido, encaja naturalmente en un venture studio, que aporta todo alrededor de esa visión. Un equipo técnico con un prototipo funcionando suele estar mejor con una aceleradora o una ronda de VC, que cuestan menos propiedad porque el fundador ya carga el riesgo de construcción. Elige según lo que te falta, no según la dilución del titular."
+        },
+        {
+          "q": "¿Por qué un venture studio puede justificar tomar más equity?",
+          "a": "Porque el modelo ha producido retornos más altos. La Global Startup Studio Network reporta que los venture studios han generado cerca de ~50% de IRR frente a aproximadamente ~19% del VC tradicional. Cuando la construcción se des-riesga con operadores desde el primer día, la mayor participación inicial es el precio de una probabilidad más alta de llegar a la tracción."
         }
       ]
     }
@@ -7855,7 +7852,7 @@ const engineArticles: Article[] = [
     "datePublished": "2026-06-02",
     "isPublished": true,
     "en": {
-      "title": "LATAM Venture Studios: Why They Outperform VC in Brazil",
+      "title": "Why Venture Studios Outperform Traditional VC in LATAM",
       "description": "Studio IRR runs near 50% against roughly 19% for traditional VC. The structural reason, the honest failure modes, and why Brazil amplifies the model.",
       "sections": [
         {
@@ -7948,7 +7945,7 @@ const engineArticles: Article[] = [
       ]
     },
     "pt": {
-      "title": "Venture Studios na LATAM: Por que Superam o VC no Brasil",
+      "title": "Por que Venture Studios Superam o VC Tradicional na América Latina",
       "description": "O IRR de studios fica perto de 50% contra cerca de 19% do VC tradicional. A razão estrutural, as falhas do modelo e por que o Brasil amplifica tudo.",
       "sections": [
         {
@@ -8041,7 +8038,7 @@ const engineArticles: Article[] = [
       ]
     },
     "es": {
-      "title": "Venture Studios en LATAM: Por qué Superan al VC en Brasil",
+      "title": "Por qué los Venture Studios Superan al VC Tradicional en LATAM",
       "description": "El IRR de los studios ronda el 50% frente a cerca del 19% del VC tradicional. La razón estructural, las fallas del modelo y por qué Brasil lo amplifica.",
       "sections": [
         {
