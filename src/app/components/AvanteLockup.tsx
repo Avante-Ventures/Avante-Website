@@ -126,9 +126,9 @@ export function AvanteLockup({
       {!markOnly && (
         <span
           style={{
-            fontFamily: 'var(--avt-font-display)',
+            fontFamily: 'var(--avt-font-serif)',
             fontWeight: 500,
-            letterSpacing: '-0.04em',
+            letterSpacing: '-0.02em',
             color: '#fff',
             fontSize: tokens.word,
             // Pull the word into the asset's right-side padding so the

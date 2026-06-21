@@ -167,14 +167,14 @@ export function SectionMasthead({
 
       <h2
         style={{
-          fontFamily: 'var(--avt-font-display)',
+          fontFamily: 'var(--avt-font-serif)',
           // Monumental but responsive. Compact bounded to 56px max, used
           // when the masthead is nested inside a card or smaller container.
           fontSize: compact
             ? 'clamp(28px, 4vw, 56px)'
             : 'clamp(40px, 7vw, 112px)',
-          lineHeight: 0.95,
-          letterSpacing: '-0.04em',
+          lineHeight: 1.02,
+          letterSpacing: '-0.015em',
           color: '#FFFFFF',
           fontWeight: 500,
           margin: 0,
@@ -190,11 +190,11 @@ export function SectionMasthead({
       {description && (
         <p
           style={{
-            fontFamily: 'var(--avt-font-display)',
+            fontFamily: 'var(--avt-font-serif)',
             fontSize: compact ? 'clamp(15px, 1.6vw, 18px)' : 'clamp(18px, 2vw, 24px)',
             fontWeight: 400,
-            lineHeight: 1.35,
-            letterSpacing: '-0.01em',
+            lineHeight: 1.4,
+            letterSpacing: '0',
             color: '#cdd2ee',
             margin: compact ? '20px 0 0 0' : '32px 0 0 0',
             maxWidth: centered ? '880px' : '720px',

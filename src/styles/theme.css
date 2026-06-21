@@ -58,6 +58,9 @@ section[id] {
   --avt-font-display: 'Funnel Display', system-ui, sans-serif;
   --avt-font-body: 'Bricolage Grotesque', system-ui, sans-serif;
   --avt-font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  /* Serious editorial serif (display headlines + wordmark) — added for the
+     "more serious" typographic direction. Newsreader = editorial/documentary. */
+  --avt-font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
 
   /* Page-level layout tokens (Fix 4 — TOC panel: padding consistency).
      Each route used to define its own `padding: clamp(...)` triplet,
@@ -234,7 +237,6 @@ section[id] {
   --color-avante-text-secondary: var(--avante-text-secondary);
   --color-avante-text-muted: var(--avante-text-muted);
   --color-avante-accent-magenta: var(--avante-accent-magenta);
-  --color-avante-accent-teal: var(--avante-accent-teal);
 }
 
 @layer base {
@@ -393,17 +395,17 @@ section[id] {
    ========================================================================== */
 
 .avt-display {
-  font-family: var(--avt-font-display);
+  font-family: var(--avt-font-serif);
   font-weight: 500;
-  letter-spacing: -0.04em;
-  line-height: 0.92;
+  letter-spacing: -0.015em;
+  line-height: 1.02;
 }
 
 .avt-display-tight {
-  font-family: var(--avt-font-display);
+  font-family: var(--avt-font-serif);
   font-weight: 500;
-  letter-spacing: -0.05em;
-  line-height: 0.88;
+  letter-spacing: -0.02em;
+  line-height: 0.98;
 }
 
 .avt-body {

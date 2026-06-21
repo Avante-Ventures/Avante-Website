@@ -497,6 +497,43 @@ export default function WhyAvantePage() {
           </p>
         </section>
 
+        {/* Related reading: exact-anchor internal links to the venture-studio cluster.
+            High-authority page (/why-avante) -> cluster children, to defend the #1 ranking. */}
+        <section style={{ marginBottom: 'var(--avante-space-16)' }}>
+          <div style={{ maxWidth: '700px', margin: '0 auto', textAlign: 'center' }}>
+            <p style={{
+              fontSize: '13px',
+              letterSpacing: '0.04em',
+              textTransform: 'uppercase',
+              color: 'var(--avante-text-muted)',
+              marginBottom: 'var(--avante-space-4)',
+            }}>
+              {language === 'pt' ? 'Leitura relacionada' : language === 'es' ? 'Lectura relacionada' : 'Related reading'}
+            </p>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--avante-space-4)', justifyContent: 'center' }}>
+              <Link
+                to={`/${language}/library/studio-vs-accelerator-vs-vc`}
+                style={{ color: '#F9B437', textDecoration: 'underline', textUnderlineOffset: '2px', fontSize: '15px' }}
+              >
+                {language === 'pt' || language === 'es'
+                  ? 'Venture studio vs VC vs aceleradora'
+                  : 'Venture studio vs VC vs accelerator'}
+              </Link>
+              <span style={{ color: 'var(--avante-text-muted)' }}>·</span>
+              <Link
+                to={`/${language}/library/why-venture-studios-win-latam`}
+                style={{ color: '#F9B437', textDecoration: 'underline', textUnderlineOffset: '2px', fontSize: '15px' }}
+              >
+                {language === 'pt'
+                  ? 'Por que venture studios vencem na LATAM'
+                  : language === 'es'
+                    ? 'Por qué los venture studios ganan en LATAM'
+                    : 'Why venture studios win in LATAM'}
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* The Avante Dual Model Section */}
         <section style={{ 
           marginBottom: 'var(--avante-space-24)',

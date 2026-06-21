@@ -4,7 +4,7 @@ import { ContactModal } from "@/app/components/ContactModal";
 import { BackToTop } from "@/app/components/BackToTop";
 import { CursorGlow } from "@/app/components/CursorGlow";
 import { Navbar } from "@/app/components/Navbar";
-import { HeroV2A_Masthead } from "@/app/components/heroes/HeroV2A_Masthead";
+import { HeroConvergencePoster } from "@/app/components/heroes/HeroConvergencePoster";
 import { StatsBar } from "@/app/components/StatsBar";
 import { SocialProofStrip } from "@/app/components/SocialProofStrip";
 import { ScrollRevealSection } from "@/app/components/ScrollRevealSection";
@@ -15,6 +15,7 @@ import { TeamSection } from "@/app/components/TeamSection";
 import { ContactFormSection } from "@/app/components/ContactFormSection";
 import { ContactDoors } from "@/app/components/ContactDoors";
 import { EditorialTicker } from "@/app/components/EditorialTicker";
+import { OrientationScene } from "@/app/components/OrientationScene";
 import { AvtCord } from "@/app/components/AvtCord";
 import { CinematicFrame } from "@/app/components/CinematicFrame";
 import { Footer } from "@/app/components/Footer";
@@ -108,14 +109,13 @@ export function AppContent() {
             Old hero left commented below for one cycle in case rollback is
             needed; will be removed in the next sweep. */}
         <div id="hero">
-          <HeroV2A_Masthead />
+          <HeroConvergencePoster />
         </div>
 
-        {/* EditorialTicker — Phase D. Surfaces the studio's operating
-            metrics (vintage, exits, intake, offices, legal, horizon) on
-            an infinite mono-strip right under the hero. Re-densifies
-            above-the-fold without bloating section count. */}
-        <EditorialTicker />
+        {/* Scene 1 — Orientation. The quiet breath after the convergence
+            hero. Replaces the old metric EditorialTicker (off-tone for the
+            awareness/editorial direction). */}
+        <OrientationScene />
 
         {false && <section
           className="flex items-center justify-center relative w-full"
