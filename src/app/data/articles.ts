@@ -6550,7 +6550,48 @@ const engineArticles: Article[] = [
           "paragraphs": [
             "Venture studio vs accelerator vs VC is not about which is best. It is about which path prices the three things you actually trade. Dilution, control, and speed to first traction. An accelerator like Y Combinator takes 7% for a small check and a fixed program. A priced VC round costs 15% to 25% and a board seat but leaves you owning the idea. A venture studio takes the largest early stake, often around 34%, because it hands you the most. The idea, the build team, first capital, and operators co-building day to day.",
             "This guide gives the real terms for each path and names who should pick what. Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America, so we have a view. We have also tried to be fair to the paths we did not choose."
-          ]
+          ],
+          "table": {
+            "caption": "How venture studio, accelerator, and VC price dilution, control, and speed.",
+            "headers": [
+              "",
+              "Venture studio",
+              "Accelerator",
+              "VC"
+            ],
+            "rows": [
+              [
+                "Equity taken",
+                "Largest, often ~34%",
+                "Small, ~7%",
+                "Priced round, ~15 to 25%"
+              ],
+              [
+                "What you get",
+                "Idea, build team, first capital, operators co-building",
+                "Program, network, demo day",
+                "Capital plus a board seat"
+              ],
+              [
+                "Best for",
+                "Pre-team or pre-product founders who want operators on day one",
+                "Founders with a team and an early product wanting structure",
+                "Teams with a product who mainly need capital and governance"
+              ],
+              [
+                "Speed to traction",
+                "Fastest: operators build from day one",
+                "Fixed cohort timeline",
+                "You build, the pace is on you"
+              ],
+              [
+                "Control kept",
+                "Lowest, the studio co-owns more",
+                "High",
+                "High, minus a board seat"
+              ]
+            ]
+          }
         },
         {
           "heading": "The three things you are actually trading",
@@ -6662,7 +6703,48 @@ const engineArticles: Article[] = [
           "paragraphs": [
             "A escolha entre um venture studio, uma aceleradora e VC tradicional não é sobre qual deles é melhor. É sobre qual deles cobra o preço certo pelas três coisas que você está de fato trocando. Diluição, controle e velocidade até a primeira tração. Uma aceleradora como a Y Combinator fica com 7% por um cheque pequeno e um programa de prazo fixo. Uma rodada de VC precificada custa de 15% a 25% e uma cadeira no conselho, mas deixa a ideia com você. Um venture studio fica com a maior fatia inicial, com frequência em torno de 34%, porque entrega o máximo. A ideia, o time que constrói, o primeiro capital e operadores construindo lado a lado todos os dias.",
             "Este guia traz os termos reais de cada caminho e diz quem deve escolher o quê. A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina, então temos uma posição. Também tentamos ser justos com os caminhos que não escolhemos."
-          ]
+          ],
+          "table": {
+            "caption": "Como venture studio, aceleradora e VC cobram diluição, controle e velocidade.",
+            "headers": [
+              "",
+              "Venture studio",
+              "Aceleradora",
+              "VC"
+            ],
+            "rows": [
+              [
+                "Equity que pega",
+                "A maior, em geral ~34%",
+                "Pequena, ~7%",
+                "Rodada precificada, ~15 a 25%"
+              ],
+              [
+                "O que você recebe",
+                "Ideia, time de construção, primeiro capital, operadores co-construindo",
+                "Programa, rede, demo day",
+                "Capital mais uma cadeira no conselho"
+              ],
+              [
+                "Melhor para",
+                "Fundadores pré-time ou pré-produto que querem operadores no dia um",
+                "Fundadores com time e produto inicial que querem estrutura",
+                "Times com produto que precisam sobretudo de capital e governança"
+              ],
+              [
+                "Velocidade até tração",
+                "A mais rápida: operadores constroem desde o dia um",
+                "Cronograma fixo de cohort",
+                "Você constrói, o ritmo é seu"
+              ],
+              [
+                "Controle mantido",
+                "O menor, o studio co-detém mais",
+                "Alto",
+                "Alto, menos uma cadeira no conselho"
+              ]
+            ]
+          }
         },
         {
           "heading": "As três coisas que você está de fato trocando",
@@ -6774,7 +6856,48 @@ const engineArticles: Article[] = [
           "paragraphs": [
             "La elección entre un venture studio, una aceleradora y VC tradicional no es sobre cuál es mejor. Es sobre cuál pone el precio correcto a las tres cosas que de verdad está intercambiando. Dilución, control y velocidad hasta la primera tracción. Una aceleradora como Y Combinator se queda con 7% por un cheque pequeño y un programa de duración fija. Una ronda de VC con valuación cuesta entre 15% y 25% y un asiento en el directorio, pero deja la idea en sus manos. Un venture studio toma la mayor porción inicial, a menudo cerca de 34%, porque entrega lo máximo. La idea, el equipo que construye, el primer capital y operadores co-construyendo día a día.",
             "Esta guía da los términos reales de cada camino y dice quién debe elegir cuál. Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina, así que tenemos una postura. También intentamos ser justos con los caminos que no elegimos."
-          ]
+          ],
+          "table": {
+            "caption": "Cómo venture studio, aceleradora y VC cobran dilución, control y velocidad.",
+            "headers": [
+              "",
+              "Venture studio",
+              "Aceleradora",
+              "VC"
+            ],
+            "rows": [
+              [
+                "Equity que toma",
+                "La mayor, a menudo ~34%",
+                "Pequeña, ~7%",
+                "Ronda con precio, ~15 a 25%"
+              ],
+              [
+                "Qué recibes",
+                "Idea, equipo de construcción, primer capital, operadores co-construyendo",
+                "Programa, red, demo day",
+                "Capital más un asiento en el directorio"
+              ],
+              [
+                "Mejor para",
+                "Fundadores pre-equipo o pre-producto que quieren operadores el día uno",
+                "Fundadores con equipo y producto inicial que quieren estructura",
+                "Equipos con producto que necesitan sobre todo capital y gobierno"
+              ],
+              [
+                "Velocidad a tracción",
+                "La más rápida: operadores construyen desde el día uno",
+                "Cronograma fijo de cohort",
+                "Tú construyes, el ritmo es tuyo"
+              ],
+              [
+                "Control mantenido",
+                "El menor, el studio co-posee más",
+                "Alto",
+                "Alto, menos un asiento en el directorio"
+              ]
+            ]
+          }
         },
         {
           "heading": "Las tres cosas que de verdad estás intercambiando",
