@@ -1106,6 +1106,96 @@ function articleTaxonomy(slug: string): {
           COMMON_AVANTE,
         ],
       }
+    case 'accelerator-vs-vc-founder-guide':
+      return {
+        keywords: ['accelerator vs VC', 'accelerator', 'venture capital', 'Y Combinator', 'Techstars', 'founder financing', 'dilution'],
+        about: [
+          { '@type': 'Thing', name: 'Startup financing models' },
+          { '@type': 'Thing', name: 'Startup accelerator' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Y Combinator', sameAs: 'https://www.ycombinator.com' },
+          { '@type': 'Organization', name: 'Techstars', sameAs: 'https://www.techstars.com' },
+          { '@type': 'Organization', name: 'Global Startup Studio Network', sameAs: 'https://www.gssn.co' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'what-is-a-startup-studio':
+      return {
+        keywords: ['what is a startup studio', 'startup studio', 'venture studio', 'venture builder', 'company builder', 'startup studio model'],
+        about: [
+          { '@type': 'Thing', name: 'Startup studio' },
+          { '@type': 'Thing', name: 'Venture studio model' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Global Startup Studio Network', sameAs: 'https://www.gssn.co' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'venture-studio-vs-incubator-explained':
+      return {
+        keywords: ['venture studio vs incubator', 'venture studio', 'startup incubator', 'venture builder', 'equity', 'founder support'],
+        about: [
+          { '@type': 'Thing', name: 'Venture studio model' },
+          { '@type': 'Thing', name: 'Business incubator' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Global Startup Studio Network', sameAs: 'https://www.gssn.co' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'brazil-industrial-ai-market-opportunity':
+      return {
+        keywords: ['Brazil industrial AI market', 'industrial AI', 'predictive maintenance', 'manufacturing AI', 'Brazil AI opportunity', 'vertical AI'],
+        about: [
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+          { '@type': 'Thing', name: 'Industrial artificial intelligence' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'IBGE', sameAs: 'https://www.ibge.gov.br' },
+          { '@type': 'Organization', name: 'McKinsey & Company', sameAs: 'https://www.mckinsey.com' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'brazil-generative-ai-market-opportunity':
+      return {
+        keywords: ['Brazil generative AI market', 'generative AI', 'LLM Brazil', 'Maritaca AI', 'Brazil AI opportunity', 'vertical AI'],
+        about: [
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+          { '@type': 'Thing', name: 'Generative artificial intelligence' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'IBGE', sameAs: 'https://www.ibge.gov.br' },
+          { '@type': 'Organization', name: 'Maritaca AI' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'brazil-computer-vision-market-opportunity':
+      return {
+        keywords: ['Brazil computer vision market', 'computer vision', 'visual inspection', 'agtech', 'Brazil AI opportunity', 'vertical AI'],
+        about: [
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+          { '@type': 'Thing', name: 'Computer vision' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Embrapa', sameAs: 'https://www.embrapa.br' },
+          { '@type': 'Organization', name: 'Grand View Research' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'applied-ai-vs-generative-ai-b2b':
+      return {
+        keywords: ['applied AI vs generative AI', 'applied AI', 'generative AI', 'B2B AI', 'vertical AI', 'AI moat', 'data network effects'],
+        about: [
+          { '@type': 'Thing', name: 'Applied artificial intelligence' },
+          { '@type': 'Thing', name: 'Generative artificial intelligence' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Andreessen Horowitz', sameAs: 'https://a16z.com' },
+          { '@type': 'Organization', name: 'Epoch AI', sameAs: 'https://epochai.org' },
+          COMMON_AVANTE,
+        ],
+      }
     default:
       return { keywords: [], about: [], mentions: [COMMON_AVANTE] }
   }
