@@ -16,6 +16,7 @@ import { ContactFormSection } from "@/app/components/ContactFormSection";
 import { ContactDoors } from "@/app/components/ContactDoors";
 import { EditorialTicker } from "@/app/components/EditorialTicker";
 import { OrientationScene } from "@/app/components/OrientationScene";
+import { TrackRecordLedger } from "@/app/components/TrackRecordLedger";
 import { AvtCord } from "@/app/components/AvtCord";
 import { CinematicFrame } from "@/app/components/CinematicFrame";
 import { Footer } from "@/app/components/Footer";
@@ -299,21 +300,10 @@ export function AppContent() {
             now spans up to 720px wide and the section gets clamp(96-160px)
             of vertical padding so it reads as a "chapter break" between
             the hero and the credibility row.                               */}
-        <ScrollRevealSection
-          className="relative"
-          style={{
-            padding: 'clamp(96px, 14vh, 160px) 0',
-            borderBottom: '1px solid rgba(255, 255, 255, 0.06)',
-          }}
-        >
-          <div style={{ maxWidth: '880px', margin: '0 auto', padding: '0 24px' }}>
-            <CompoundingChart />
-          </div>
-        </ScrollRevealSection>
-
-        <StatsBar />
-
-        <SocialProofStrip />
+        {/* Scene 5 — Track record (chronological ledger). Replaces the
+            CompoundingChart + StatsBar + SocialProofStrip metric cluster
+            (off-tone for the awareness/editorial direction). */}
+        <TrackRecordLedger />
 
         {/* AvtCord — Phase D. Editorial divider that draws itself on
             scroll-into-view. Replaces the standard hairline border between
