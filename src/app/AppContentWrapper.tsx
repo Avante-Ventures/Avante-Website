@@ -629,6 +629,59 @@ export function AppContent() {
             </div>
           </ScrollRevealSection>
 
+          {/* Related reading: exact-anchor internal links from the homepage (the
+              domain's highest-authority page) into the venture-studio cluster.
+              Home -> pillar (what-is-a-venture-studio) -> cluster children.
+              Defends the #1 'venture studio Brazil' ranking vs Braven. EN/PT/ES. */}
+          <ScrollRevealSection
+            className="py-[48px] md:py-[64px]"
+            style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.06)' }}
+          >
+            <div style={{ maxWidth: '700px', margin: '0 auto', textAlign: 'center', padding: '0 var(--avante-space-4)' }}>
+              <p style={{
+                fontSize: '13px',
+                letterSpacing: '0.04em',
+                textTransform: 'uppercase',
+                color: 'var(--avante-text-muted)',
+                marginBottom: 'var(--avante-space-4)',
+              }}>
+                {language === 'pt' ? 'Leitura relacionada' : language === 'es' ? 'Lectura relacionada' : 'Related reading'}
+              </p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 'var(--avante-space-4)', justifyContent: 'center', alignItems: 'center' }}>
+                <Link
+                  to={`/${language}/library/what-is-a-venture-studio`}
+                  style={{ color: '#F9B437', textDecoration: 'underline', textUnderlineOffset: '2px', fontSize: '15px' }}
+                >
+                  {language === 'pt'
+                    ? 'O que é um venture studio'
+                    : language === 'es'
+                      ? 'Qué es un venture studio'
+                      : 'What is a venture studio'}
+                </Link>
+                <span style={{ color: 'var(--avante-text-muted)' }}>·</span>
+                <Link
+                  to={`/${language}/library/studio-vs-accelerator-vs-vc`}
+                  style={{ color: '#F9B437', textDecoration: 'underline', textUnderlineOffset: '2px', fontSize: '15px' }}
+                >
+                  {language === 'pt' || language === 'es'
+                    ? 'Venture studio vs VC vs aceleradora'
+                    : 'Venture studio vs VC vs accelerator'}
+                </Link>
+                <span style={{ color: 'var(--avante-text-muted)' }}>·</span>
+                <Link
+                  to={`/${language}/library/why-venture-studios-win-latam`}
+                  style={{ color: '#F9B437', textDecoration: 'underline', textUnderlineOffset: '2px', fontSize: '15px' }}
+                >
+                  {language === 'pt'
+                    ? 'Por que venture studios vencem na LATAM'
+                    : language === 'es'
+                      ? 'Por qué los venture studios ganan en LATAM'
+                      : 'Why venture studios win in LATAM'}
+                </Link>
+              </div>
+            </div>
+          </ScrollRevealSection>
+
           <ScrollRevealSection
             id="contact"
             className="py-[48px] md:py-[64px]"
