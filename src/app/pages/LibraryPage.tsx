@@ -132,7 +132,7 @@ export default function LibraryPage() {
     <div
       style={{
         minHeight: '100vh',
-        backgroundColor: 'var(--avante-background)',
+        backgroundColor: 'var(--avt-ink)',
         position: 'relative',
         overflow: 'hidden'
       }}
@@ -237,18 +237,18 @@ export default function LibraryPage() {
               display: 'inline-flex',
               alignItems: 'center',
               gap: 'var(--avante-space-2)',
-              color: 'var(--avante-text-muted)',
+              color: 'var(--avt-meta)',
               textDecoration: 'none',
               fontSize: '14px',
               marginBottom: 'var(--avante-space-8)',
               transition: 'all 0.3s ease'
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.color = 'var(--avante-text-primary)';
+              e.currentTarget.style.color = 'var(--avt-txt)';
               e.currentTarget.style.transform = 'translateX(-4px)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.color = 'var(--avante-text-muted)';
+              e.currentTarget.style.color = 'var(--avt-meta)';
               e.currentTarget.style.transform = 'translateX(0)';
             }}
           >
@@ -273,7 +273,7 @@ export default function LibraryPage() {
             <span
               style={{
                 fontSize: '13px',
-                color: 'var(--avante-text-muted)',
+                color: 'var(--avt-meta)',
                 display: 'flex',
                 alignItems: 'center',
                 gap: 'var(--avante-space-2)',
@@ -342,7 +342,7 @@ export default function LibraryPage() {
                   borderRadius: 'var(--avante-radius-12)',
                   color: activeCategory === category.id 
                     ? category.color 
-                    : 'var(--avante-text-secondary)',
+                    : 'var(--avt-muted)',
                   fontSize: '14px',
                   fontWeight: activeCategory === category.id 
                     ? 'var(--font-weight-semibold)' 
@@ -521,14 +521,14 @@ export default function LibraryPage() {
                   {item.date && (
                     <>
                       <span style={{ 
-                        color: 'var(--avante-text-muted)', 
+                        color: 'var(--avt-meta)', 
                         fontSize: '12px' 
                       }}>
                         •
                       </span>
                       <span style={{
                         fontSize: 'clamp(11px, 1.5vw, 12px)',
-                        color: 'var(--avante-text-muted)',
+                        color: 'var(--avt-meta)',
                         fontWeight: 'var(--font-weight-medium)'
                       }}>
                         {item.date}
@@ -541,7 +541,7 @@ export default function LibraryPage() {
                   style={{
                     fontSize: 'clamp(20px, 3vw, 24px)',
                     fontWeight: 'var(--font-weight-semibold)',
-                    color: 'var(--avante-text-primary)',
+                    color: 'var(--avt-txt)',
                     marginBottom: 'var(--avante-space-4)',
                     lineHeight: '1.3',
                     position: 'relative',
@@ -554,7 +554,7 @@ export default function LibraryPage() {
                 <p 
                   style={{ 
                     fontSize: 'clamp(14px, 2vw, 15px)',
-                    color: 'var(--avante-text-secondary)',
+                    color: 'var(--avt-muted)',
                     lineHeight: '1.7',
                     marginBottom: 'var(--avante-space-6)',
                     position: 'relative',
@@ -576,7 +576,7 @@ export default function LibraryPage() {
                     alignItems: 'center',
                     gap: 'var(--avante-space-2)',
                     fontSize: 'clamp(12px, 1.5vw, 13px)',
-                    color: 'var(--avante-text-muted)'
+                    color: 'var(--avt-meta)'
                   }}>
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
@@ -691,7 +691,7 @@ export default function LibraryPage() {
               style={{
                 fontSize: 'clamp(28px, 4vw, 42px)',
                 fontWeight: 'var(--font-weight-semibold)',
-                color: 'var(--avante-text-primary)',
+                color: 'var(--avt-txt)',
                 lineHeight: '1.2',
                 letterSpacing: '-0.02em',
                 marginBottom: 'var(--avante-space-5)'
@@ -703,7 +703,7 @@ export default function LibraryPage() {
             <p 
               style={{ 
                 fontSize: '17px',
-                color: 'var(--avante-text-secondary)',
+                color: 'var(--avt-muted)',
                 marginBottom: 'var(--avante-space-10)',
                 lineHeight: '1.7'
               }}
@@ -716,40 +716,44 @@ export default function LibraryPage() {
               justifyContent: 'center'
             }}>
               <motion.a
-                href="https://substack.com/@avante3"
+                href="https://avanteventures.substack.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ y: -2 }}
+                whileTap={{ scale: 0.98 }}
                 style={{
-                  display: 'inline-block',
-                  padding: '18px 40px',
-                  background: 'linear-gradient(135deg, rgba(66, 70, 140, 1) 0%, rgba(66, 70, 140, 0.9) 100%)',
-                  color: '#FFFFFF',
-                  borderRadius: 'var(--avante-radius-12)',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  padding: '15px 34px',
+                  background: 'transparent',
+                  color: 'var(--avt-txt)',
+                  borderRadius: '999px',
                   fontSize: '16px',
-                  fontWeight: 'var(--font-weight-bold)',
-                  border: 'none',
+                  fontWeight: 600,
+                  border: '1px solid rgba(244, 169, 58, 0.45)',
                   cursor: 'pointer',
                   textDecoration: 'none',
-                  transition: 'all 0.3s ease',
-                  boxShadow: '0 0 30px rgba(66, 70, 140, 0.4)',
+                  transition: 'background 0.25s ease, border-color 0.25s ease',
                   whiteSpace: 'nowrap'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = '0 8px 40px rgba(66, 70, 140, 0.6)';
+                  e.currentTarget.style.background = 'rgba(244, 169, 58, 0.10)';
+                  e.currentTarget.style.borderColor = 'rgba(244, 169, 58, 0.8)';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = '0 0 30px rgba(66, 70, 140, 0.4)';
+                  e.currentTarget.style.background = 'transparent';
+                  e.currentTarget.style.borderColor = 'rgba(244, 169, 58, 0.45)';
                 }}
               >
-                {t('library.cta.button')} →
+                {t('library.cta.button')}
+                <span className="avt-grad" aria-hidden style={{ fontWeight: 600 }}>→</span>
               </motion.a>
             </div>
 
             <p style={{
               fontSize: '13px',
-              color: 'var(--avante-text-muted)',
+              color: 'var(--avt-meta)',
               marginTop: 'var(--avante-space-5)',
               fontStyle: 'italic',
               display: 'flex',

@@ -155,7 +155,7 @@ export default function ArticlePage() {
     <div
       style={{
         minHeight: '100vh',
-        backgroundColor: 'var(--avante-background)',
+        backgroundColor: 'var(--avt-ink)',
         position: 'relative',
         overflow: 'hidden',
       }}
@@ -343,9 +343,9 @@ export default function ArticlePage() {
             </div>
             <div style={{ marginTop: '4px' }}>
               {t(
-                'São Paulo + San Francisco · written from inside the studio',
-                'São Paulo + San Francisco · escrito de dentro do studio',
-                'São Paulo + San Francisco · escrito desde dentro del studio'
+                'São Paulo + Silicon Valley · written from inside the studio',
+                'São Paulo + Vale do Silício · escrito de dentro do studio',
+                'São Paulo + Silicon Valley · escrito desde dentro del studio'
               )}
             </div>
           </div>
@@ -371,9 +371,9 @@ export default function ArticlePage() {
             }}
           >
             {t(
-              'Want more? Get one essay per month on venture building, AI-native businesses, and the Brazil opportunity.',
-              'Quer mais? Receba um ensaio por mês sobre venture building, negócios AI-native e a oportunidade Brasil.',
-              '¿Quieres más? Recibe un ensayo al mes sobre venture building, negocios AI-native y la oportunidad Brasil.'
+              'Want more? Get one essay per week on venture building, AI-native businesses, and the Brazil opportunity.',
+              'Quer mais? Receba um ensaio por semana sobre venture building, negócios AI-native e a oportunidade Brasil.',
+              '¿Quieres más? Recibe un ensayo a la semana sobre venture building, negocios AI-native y la oportunidad Brasil.'
             )}
           </p>
           <Link

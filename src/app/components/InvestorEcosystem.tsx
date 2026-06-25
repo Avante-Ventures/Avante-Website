@@ -558,7 +558,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
             }}
           >
             <MapPin size={16} strokeWidth={2} />
-            <span>São Paulo + San Francisco</span>
+            <span>São Paulo + Silicon Valley</span>
           </div>
 
           {/* Social links */}

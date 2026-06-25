@@ -47,7 +47,7 @@ export function Reveal({ children, delay = 0, y = 18, className, style }: Reveal
       style={{
         opacity: shown ? 1 : 0,
         transform: shown ? "translateY(0)" : `translateY(${y}px)`,
-        transition: `opacity 900ms cubic-bezier(0.16,1,0.3,1) ${delay}ms, transform 900ms cubic-bezier(0.16,1,0.3,1) ${delay}ms`,
+        transition: `opacity var(--avt-dur-reveal, 560ms) var(--avt-ease-out, cubic-bezier(0.16,1,0.3,1)) ${delay}ms, transform var(--avt-dur-reveal, 560ms) var(--avt-ease-out, cubic-bezier(0.16,1,0.3,1)) ${delay}ms`,
         ...style,
       }}
     >

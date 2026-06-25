@@ -48,7 +48,7 @@ section[id] {
   --avt-ink-3: #0f1124;
   --avt-hair: #171a2a;
   --avt-hair-2: #252a40;
-  --avt-meta: #5d6486;
+  --avt-meta: #7a80a0; /* lifted from #5d6486 (3.4:1) → ~5.1:1 AA for small mono labels/kickers */
   --avt-muted: #8a91b0;
   --avt-txt: #eef0f7;
   --avt-grad: linear-gradient(118deg, #f4a93a 0%, #ec5f72 38%, #a8429b 68%, #3a2f8f 100%);
@@ -60,7 +60,7 @@ section[id] {
   --avt-font-mono: 'JetBrains Mono', ui-monospace, monospace;
   /* Serious editorial serif (display headlines + wordmark) — added for the
      "more serious" typographic direction. Newsreader = editorial/documentary. */
-  --avt-font-serif: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --avt-font-serif: 'Funnel Display', system-ui, sans-serif; /* headlines now MATCH the logo wordmark (geometric sans) — Cristian chose A, 2026-06-22 */
 
   /* Page-level layout tokens (Fix 4 — TOC panel: padding consistency).
      Each route used to define its own `padding: clamp(...)` triplet,
@@ -72,6 +72,18 @@ section[id] {
   --avt-page-pad-bottom: clamp(64px, 8vh, 96px);
   --avt-page-pad-x: clamp(24px, 4vw, 48px);
   --avt-page-max-width: 1200px;
+
+  /* Motion tokens (Academy UX/UI: one signed motion vocabulary — kills scattered literals). */
+  --avt-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --avt-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --avt-dur-ui: 240ms;
+  --avt-dur-reveal: 560ms;
+  --avt-dur-spatial: 900ms;
+  --avt-stagger: 90ms;
+
+  /* Editorial measure + consistent section rhythm (Academy Web Design). */
+  --avt-measure: 64ch;
+  --avt-section-pad: clamp(96px, 15vh, 176px);
 
   /* Avante Typography System */
   --avante-h1-size: 56px;
@@ -397,15 +409,17 @@ section[id] {
 .avt-display {
   font-family: var(--avt-font-serif);
   font-weight: 500;
-  letter-spacing: -0.015em;
-  line-height: 1.02;
+  letter-spacing: -0.03em; /* geometric sans wants tighter tracking than the old serif */
+  line-height: 1.0;
+  text-wrap: balance;
 }
 
 .avt-display-tight {
   font-family: var(--avt-font-serif);
   font-weight: 500;
-  letter-spacing: -0.02em;
-  line-height: 0.98;
+  letter-spacing: -0.038em;
+  line-height: 0.94;
+  text-wrap: balance;
 }
 
 .avt-body {
@@ -425,7 +439,10 @@ section[id] {
 }
 
 .avt-grad {
-  background: var(--avt-grad);
+  /* Text-tuned gradient: the indigo TAIL is lifted from #3a2f8f (~2.3:1, fails
+     AA on words) to a lighter periwinkle-indigo (~5:1) so gradient-set words
+     stay legible. Decorative fills keep the true brand --avt-grad. */
+  background: linear-gradient(118deg, #f4a93a 0%, #ec5f72 38%, #a8429b 66%, #7d72e0 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -495,5 +512,22 @@ section[id] {
 @media (prefers-reduced-motion: reduce) {
   .avt-cord-fill {
     transition: none;
+  }
+}
+
+/* Authored focus ring (Academy a11y: visible focus =3:1, never outline:none). */
+:where(a, button, input, textarea, select, summary, [tabindex]:not([tabindex="-1"])):focus-visible {
+  outline: 2px solid #f4a93a;
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* Global reduced-motion safety net (Academy a11y: static end-state everywhere, vestibular). */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
   }
 }

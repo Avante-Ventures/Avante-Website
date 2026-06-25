@@ -1,43 +1,28 @@
 import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "@/app/hooks/useLanguage";
+import { lerpColor } from "@/app/lib/brandGradient";
 
 // Scene 0 — The Convergence (motion-first, logo as the destination).
-// The Avante "A" stands crisp at center; streams of light-particles pour in
-// from the world's AI capitals and flow INTO it (trails + cursor parallax),
-// so "the world's intelligence lands here and becomes Avante." The canvas is
-// ALWAYS mounted (so the effect can init); animation is gated to capable
-// devices. Reduced-motion / mobile / headless → static streams, same crisp A.
-// Brand gradient only — NO cyan.
+// The Avante "A" stands crisp + centered; bright light-streams pour in from
+// the world's AI capitals and flow INTO it (trails + cursor parallax), so
+// "the world's intelligence lands here and becomes Avante." Canvas is ALWAYS
+// mounted so the effect can init; animation gated to capable devices.
+// Reduced-motion / mobile / headless → static streams, same crisp A.
 
-const FOCAL = { x: 0.5, y: 0.43 };
+const FOCAL = { x: 0.5, y: 0.45 };
 
 const ORIGINS = [
-  { key: "sf", label: "SAN FRANCISCO", x: 0.13, y: 0.2 },
-  { key: "london", label: "LONDON", x: 0.85, y: 0.15 },
-  { key: "shenzhen", label: "SHENZHEN", x: 0.94, y: 0.45 },
-  { key: "bangalore", label: "BANGALORE", x: 0.86, y: 0.8 },
-  { key: "telaviv", label: "TEL AVIV", x: 0.5, y: 0.08 },
-  { key: "berlin", label: "BERLIN", x: 0.15, y: 0.74 },
+  { key: "sf", label: "SAN FRANCISCO", x: 0.1, y: 0.26 },
+  { key: "seattle", label: "SEATTLE", x: 0.08, y: 0.53 },
+  { key: "toronto", label: "TORONTO", x: 0.15, y: 0.78 },
+  { key: "telaviv", label: "TEL AVIV", x: 0.63, y: 0.1 },
+  { key: "london", label: "LONDON", x: 0.8, y: 0.13 },
+  { key: "paris", label: "PARIS", x: 0.92, y: 0.3 },
+  { key: "shenzhen", label: "SHENZHEN", x: 0.93, y: 0.55 },
+  { key: "bangalore", label: "BANGALORE", x: 0.87, y: 0.79 },
+  { key: "beijing", label: "BEIJING", x: 0.35, y: 0.9 },
+  { key: "singapore", label: "SINGAPORE", x: 0.69, y: 0.9 },
 ];
-
-const GRAD = [
-  [244, 169, 58],
-  [236, 95, 114],
-  [168, 66, 155],
-  [58, 47, 143],
-];
-function lerpColor(t: number) {
-  t = Math.max(0, Math.min(1, t));
-  const seg = Math.min(GRAD.length - 2, Math.floor(t * (GRAD.length - 1)));
-  const lt = t * (GRAD.length - 1) - seg;
-  const a = GRAD[seg];
-  const b = GRAD[seg + 1];
-  return [
-    Math.round(a[0] + (b[0] - a[0]) * lt),
-    Math.round(a[1] + (b[1] - a[1]) * lt),
-    Math.round(a[2] + (b[2] - a[2]) * lt),
-  ];
-}
 
 export function HeroConvergencePoster() {
   const { language } = useLanguage();
@@ -46,11 +31,12 @@ export function HeroConvergencePoster() {
 
   useEffect(() => {
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const small = window.innerWidth < 768;
     const wd = (navigator as Navigator & { webdriver?: boolean }).webdriver;
-    const on = !reduce && !small && !wd;
-    setAnimate(on);
-    if (!on) return;
+    if (reduce || wd) {
+      setAnimate(false);
+      return;
+    }
+    setAnimate(true);
 
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -63,16 +49,16 @@ export function HeroConvergencePoster() {
     const mouse = { x: 0, y: 0, tx: 0, ty: 0 };
 
     type P = { ang: number; rad: number; spd: number; col: number[]; size: number; depth: number };
-    const N = window.innerWidth > 1280 ? 220 : 130;
+    const N = window.innerWidth > 1280 ? 250 : 160;
     const ps: P[] = [];
     const spawn = (init = false): P => {
       const ang = Math.random() * Math.PI * 2;
       return {
         ang,
-        rad: init ? Math.random() * 1.05 : 0.78 + Math.random() * 0.5,
+        rad: init ? Math.random() * 1.08 : 0.8 + Math.random() * 0.5,
         spd: 0.0022 + Math.random() * 0.005,
         col: lerpColor((Math.cos(ang) + 1) / 2),
-        size: 0.9 + Math.random() * 2.1,
+        size: 1.0 + Math.random() * 2.3,
         depth: 0.3 + Math.random() * 1.7,
       };
     };
@@ -117,15 +103,13 @@ export function HeroConvergencePoster() {
         const px = cx + dx * rPrev + mouse.x * p.depth * 6;
         const py = cy + dy * rPrev + mouse.y * p.depth * 5;
         const [cr, cg, cb] = p.col;
-        const a = Math.min(0.85, 0.1 + prog * 0.9);
-        // trailing streak
-        ctx.strokeStyle = `rgba(${cr},${cg},${cb},${a * 0.5})`;
+        const a = Math.min(0.8, 0.14 + prog * 0.82);
+        ctx.strokeStyle = `rgba(${cr},${cg},${cb},${a * 0.6})`;
         ctx.lineWidth = p.size * 0.9;
         ctx.beginPath();
         ctx.moveTo(px, py);
         ctx.lineTo(x, y);
         ctx.stroke();
-        // head
         ctx.fillStyle = `rgba(${cr},${cg},${cb},${a})`;
         ctx.beginPath();
         ctx.arc(x, y, p.size, 0, 6.283);
@@ -142,26 +126,26 @@ export function HeroConvergencePoster() {
     };
   }, []);
 
-  const eyebrow = "SÃO PAULO · 23°33′S 46°38′W";
   const headline =
     language === "pt"
-      ? "A inteligência do mundo está chegando a São Paulo."
+      ? "O primeiro venture builder AI-native do Brasil. Construímos para compor."
       : language === "es"
-        ? "La inteligencia del mundo está aterrizando en São Paulo."
-        : "The world's intelligence is landing in São Paulo.";
+        ? "El primer venture builder AI-native de Brasil. Construimos para componer."
+        : "The first AI-native venture builder in Brazil. We build to compound.";
   const scrollCue = language === "pt" ? "Continue" : language === "es" ? "Sigue bajando" : "Keep going";
-  const [before, after] = headline.split("São Paulo");
+  const gradWord = "AI-native";
+  const [before, after] = headline.split(gradWord);
 
   return (
     <section
-      aria-label="Avante Ventures — the world's intelligence is landing in São Paulo"
+      aria-label="Avante Ventures — the first AI-native venture builder in Brazil"
       data-anim={animate ? "on" : "off"}
       style={{
         position: "relative",
         minHeight: "100svh",
         width: "100%",
         overflow: "hidden",
-        background: "var(--avt-ink)",
+        background: "transparent",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -174,11 +158,22 @@ export function HeroConvergencePoster() {
         .avtRise { animation: avtRise 1100ms cubic-bezier(0.16,1,0.3,1) both; }
         .avtRise.d1 { animation-delay: 520ms; }
         .avtRise.d2 { animation-delay: 760ms; }
+        .avtRise.dEye { animation-delay: 300ms; }
         .avtMark { animation: avtMarkIn 1500ms cubic-bezier(0.16,1,0.3,1) both; }
         @media (prefers-reduced-motion: reduce){ .avtRise,.avtMark{ animation:none !important; } }
+        /* Short / landscape viewports only — lift the A + headline so the
+           value-prop and scroll cue never fall below the fold. Tall desktop
+           (the loved composition) is untouched. */
+        @media (max-height: 720px){
+          .avt-hero-logo { top: 36% !important; }
+          .avt-hero-title { top: 63% !important; }
+        }
+        @media (max-height: 560px){
+          .avt-hero-logo { top: 30% !important; }
+          .avt-hero-title { top: 57% !important; }
+        }
       `}</style>
 
-      {/* Particle field — ALWAYS mounted so the effect can initialize. */}
       <canvas ref={canvasRef} aria-hidden style={{ position: "absolute", inset: 0, width: "100%", height: "100%", zIndex: 1 }} />
 
       {/* Focal glow */}
@@ -191,13 +186,13 @@ export function HeroConvergencePoster() {
           width: "64vmax",
           height: "64vmax",
           transform: "translate(-50%, -50%)",
-          background: "radial-gradient(circle, rgba(244,169,58,0.16) 0%, rgba(236,95,114,0.09) 32%, rgba(168,66,155,0.05) 54%, transparent 72%)",
+          background: "radial-gradient(circle, rgba(244,169,58,0.20) 0%, rgba(236,95,114,0.10) 32%, rgba(168,66,155,0.05) 54%, transparent 72%)",
           pointerEvents: "none",
           zIndex: 0,
         }}
       />
 
-      {/* Static streams (only when not animating) */}
+      {/* Static streams when not animating */}
       {!animate && (
         <svg aria-hidden viewBox="0 0 100 100" preserveAspectRatio="none" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", zIndex: 1 }}>
           <defs>
@@ -209,67 +204,99 @@ export function HeroConvergencePoster() {
             </linearGradient>
           </defs>
           {ORIGINS.map((o) => (
-            <line key={o.key} x1={o.x * 100} y1={o.y * 100} x2={FOCAL.x * 100} y2={FOCAL.y * 100} stroke="url(#avtStreamGrad)" strokeWidth={1} vectorEffect="non-scaling-stroke" opacity={0.3} />
+            <line key={o.key} x1={o.x * 100} y1={o.y * 100} x2={FOCAL.x * 100} y2={FOCAL.y * 100} stroke="url(#avtStreamGrad)" strokeWidth={1} vectorEffect="non-scaling-stroke" opacity={0.22} />
           ))}
         </svg>
       )}
 
-      {/* City labels */}
-      <div aria-hidden style={{ position: "absolute", inset: 0, pointerEvents: "none", zIndex: 2 }}>
-        {ORIGINS.map((o) => (
-          <span key={o.key} className="avt-lbl" style={{ position: "absolute", left: `${o.x * 100}%`, top: `${o.y * 100}%`, transform: "translate(-50%, -50%)", whiteSpace: "nowrap", opacity: 0.38 }}>
-            {o.label}
-          </span>
-        ))}
-      </div>
+      {/* City labels removed — pure convergence (no world-city names) */}
 
-      {/* Centerpiece — the crisp Avante "A" (always), then the kinetic title */}
+      {/* Logo group — dead-center, the protagonist (crisp) */}
       <div
+        className="avt-hero-logo"
         style={{
-          position: "relative",
+          position: "absolute",
+          left: "50%",
+          top: "43%",
+          transform: "translate(-50%, -50%)",
           zIndex: 3,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           textAlign: "center",
-          padding: "0 var(--avt-page-pad-x)",
           width: "100%",
-          maxWidth: "1000px",
-          marginTop: "-4vh",
+          padding: "0 var(--avt-page-pad-x)",
+          pointerEvents: "none",
         }}
       >
-        <div className="avt-lbl avtRise" style={{ marginBottom: "26px", letterSpacing: "0.32em", opacity: 0.7 }}>
-          {eyebrow}
-        </div>
         <img
-          className="avtMark"
           src="/redesign-assets/avante-A.png"
+          width={340}
+          height={500}
+          fetchpriority="high"
           alt="Avante"
           style={{
-            height: "clamp(150px, 26vh, 290px)",
+            height: "clamp(168px, 32vh, 340px)",
             width: "auto",
             filter: "drop-shadow(0 16px 64px rgba(244,169,58,0.24)) drop-shadow(0 4px 26px rgba(168,66,155,0.28))",
-            marginBottom: "clamp(28px, 4.5vh, 52px)",
           }}
         />
+      </div>
+
+      {/* Legibility scrim — a soft radial darkening clamped behind the title
+          so the headline never loses contrast against the 'lighter'-blended
+          particle field (sits above the canvas, below the text). */}
+      <div
+        aria-hidden
+        style={{
+          position: "absolute",
+          left: "50%",
+          top: "72%",
+          transform: "translate(-50%, -50%)",
+          width: "min(1100px, 94vw)",
+          height: "46vh",
+          background: "radial-gradient(58% 58% at 50% 50%, rgba(6,7,13,0.6) 0%, rgba(6,7,13,0.34) 46%, rgba(6,7,13,0) 78%)",
+          pointerEvents: "none",
+          zIndex: 2,
+        }}
+      />
+
+      {/* Title — lower third */}
+      <div
+        className="avt-hero-title"
+        style={{
+          position: "absolute",
+          left: "50%",
+          top: "70%",
+          transform: "translateX(-50%)",
+          zIndex: 3,
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          textAlign: "center",
+          width: "100%",
+          maxWidth: "1000px",
+          padding: "0 var(--avt-page-pad-x)",
+        }}
+      >
         <h1
-          className="avtRise d1"
           style={{
             margin: 0,
             fontFamily: "var(--avt-font-serif)",
             fontWeight: 500,
-            letterSpacing: "-0.01em",
-            lineHeight: 1.06,
-            fontSize: "clamp(32px, 4.4vw, 70px)",
+            letterSpacing: "-0.034em",
+            lineHeight: 1.0,
+            fontSize: "clamp(36px, 3.9vw, 58px)",
             color: "var(--avt-txt)",
-            maxWidth: "18ch",
+            maxWidth: "24ch",
+            textWrap: "balance",
           }}
         >
           {before}
-          <span className="avt-grad">São Paulo</span>
+          <span className="avt-grad">{gradWord}</span>
           {after}
         </h1>
-        <div className="avt-lbl avtRise d2" style={{ display: "flex", alignItems: "center", gap: "10px", opacity: 0.6, marginTop: "clamp(28px, 5vh, 52px)" }}>
+        <div className="avt-lbl avtRise d2" style={{ display: "flex", alignItems: "center", gap: "10px", opacity: 0.6, marginTop: "clamp(24px, 4vh, 44px)" }}>
           <span>{scrollCue}</span>
           <span aria-hidden>↓</span>
         </div>

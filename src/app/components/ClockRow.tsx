@@ -36,7 +36,7 @@ const CLOCKS: ClockSpec[] = [
     },
   },
   {
-    city: 'San Francisco',
+    city: 'Silicon Valley',
     tz: 'America/Los_Angeles',
     tzLabel: 'UTC −08 · PST',
     addr: {
@@ -90,11 +90,11 @@ export function ClockRow() {
           key={clock.tz}
           className="avt-clock-cell"
           style={{
-            padding: '32px 28px',
+            padding: '24px 22px',
             display: 'flex',
             flexDirection: 'column',
-            gap: '18px',
-            minHeight: '200px',
+            gap: '12px',
+            minHeight: '128px',
             borderRight: i < CLOCKS.length - 1 ? '1px solid var(--avt-hair)' : 'none',
           }}
         >
@@ -113,7 +113,7 @@ export function ClockRow() {
             style={{
               fontFamily: 'var(--avt-font-display)',
               fontWeight: 500,
-              fontSize: 'clamp(28px, 3vw, 44px)',
+              fontSize: 'clamp(22px, 2.4vw, 34px)',
               letterSpacing: '-0.025em',
               color: '#fff',
               lineHeight: 1,
@@ -125,7 +125,7 @@ export function ClockRow() {
             style={{
               fontFamily: 'var(--avt-font-mono)',
               fontWeight: 400,
-              fontSize: 'clamp(24px, 2.4vw, 32px)',
+              fontSize: 'clamp(20px, 2vw, 27px)',
               color: '#fff',
               letterSpacing: '0.04em',
               lineHeight: 1,

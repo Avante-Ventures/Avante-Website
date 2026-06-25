@@ -39,8 +39,8 @@ export function OrientationScene() {
       style={{
         position: "relative",
         width: "100%",
-        background: "var(--avt-ink)",
-        padding: "clamp(96px, 17vh, 190px) 0",
+        background: "transparent",
+        padding: "var(--avt-section-pad) 0",
       }}
     >
       <div style={{ maxWidth: "1100px", margin: "0 auto", padding: "0 var(--avt-page-pad-x)" }}>

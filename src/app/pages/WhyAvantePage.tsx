@@ -5,6 +5,7 @@ import { BackToTop } from "@/app/components/BackToTop";
 import { SEOHelmet } from "@/app/components/SEOHelmet";
 import { SectionMasthead } from "@/app/components/SectionMasthead";
 import { PortfolioStrip } from "@/app/components/PortfolioStrip";
+import { Reveal } from "@/app/components/Reveal";
 import { Link } from "react-router";
 
 const SEO_COPY = {
@@ -143,7 +144,7 @@ export default function WhyAvantePage() {
     <div
       style={{
         minHeight: '100vh',
-        backgroundColor: 'var(--avante-background)',
+        backgroundColor: 'var(--avt-ink)',
         position: 'relative',
         overflow: 'hidden'
       }}
@@ -207,14 +208,14 @@ export default function WhyAvantePage() {
               display: 'inline-flex',
               alignItems: 'center',
               gap: 'var(--avante-space-2)',
-              color: 'var(--avante-text-muted)',
+              color: 'var(--avt-meta)',
               textDecoration: 'none',
               fontSize: '14px',
               marginBottom: 'var(--avante-space-8)',
               transition: 'color 0.3s ease'
             }}
-            onMouseEnter={(e) => e.currentTarget.style.color = 'var(--avante-text-primary)'}
-            onMouseLeave={(e) => e.currentTarget.style.color = 'var(--avante-text-muted)'}
+            onMouseEnter={(e) => e.currentTarget.style.color = 'var(--avt-txt)'}
+            onMouseLeave={(e) => e.currentTarget.style.color = 'var(--avt-meta)'}
           >
             <span>←</span> {t('whyavante.backhome')}
           </Link>
@@ -270,7 +271,7 @@ export default function WhyAvantePage() {
                 </div>
                 <div style={{ 
                   fontSize: '14px',
-                  color: 'var(--avante-text-secondary)',
+                  color: 'var(--avt-muted)',
                   lineHeight: '1.4'
                 }}>
                   {stat.label}
@@ -290,6 +291,7 @@ export default function WhyAvantePage() {
         </div>
 
         {/* The Problem Section */}
+        <Reveal style={{ display: 'block' }}>
         <section style={{ 
           marginBottom: 'var(--avante-space-24)',
           padding: 'var(--avante-space-16) 0',
@@ -300,7 +302,7 @@ export default function WhyAvantePage() {
               style={{
                 fontSize: 'clamp(32px, 5vw, 52px)',
                 fontWeight: 'var(--font-weight-medium)',
-                color: 'var(--avante-text-primary)',
+                color: 'var(--avt-txt)',
                 lineHeight: '1.15',
                 letterSpacing: '-0.02em',
                 marginBottom: 'var(--avante-space-8)',
@@ -313,7 +315,7 @@ export default function WhyAvantePage() {
             <p 
               style={{ 
                 fontSize: '18px',
-                color: 'var(--avante-text-secondary)',
+                color: 'var(--avt-muted)',
                 lineHeight: '1.7',
                 marginBottom: 'var(--avante-space-12)',
                 textAlign: 'center'
@@ -361,7 +363,7 @@ export default function WhyAvantePage() {
                     style={{
                       fontSize: '19px',
                       fontWeight: 'var(--font-weight-medium)',
-                      color: 'var(--avante-text-primary)',
+                      color: 'var(--avt-txt)',
                       marginBottom: 'var(--avante-space-3)',
                       lineHeight: '1.3'
                     }}
@@ -371,7 +373,7 @@ export default function WhyAvantePage() {
                   <p 
                     style={{ 
                       fontSize: '15px',
-                      color: 'var(--avante-text-secondary)',
+                      color: 'var(--avt-muted)',
                       lineHeight: '1.6'
                     }}
                   >
@@ -382,9 +384,11 @@ export default function WhyAvantePage() {
             </div>
           </div>
         </section>
+        </Reveal>
 
         {/* Comparison Table — replaces the two legacy chart-image sections.
             Single tabular block, editorial typography, no static PNGs.       */}
+        <Reveal style={{ display: 'block' }}>
         <section style={{ marginBottom: 'var(--avante-space-24)' }}>
           <SectionMasthead
             centered
@@ -483,7 +487,7 @@ export default function WhyAvantePage() {
           <p
             style={{
               fontSize: '13px',
-              color: 'var(--avante-text-muted)',
+              color: 'var(--avt-meta)',
               textAlign: 'center',
               marginTop: 'var(--avante-space-5)',
               fontStyle: 'italic',
@@ -496,6 +500,7 @@ export default function WhyAvantePage() {
               : 'Sources: GSSN Annual Report 2025 · Cambridge Associates US VC Index Q4 2025.'}
           </p>
         </section>
+        </Reveal>
 
         {/* Related reading: exact-anchor internal links to the venture-studio cluster.
             High-authority page (/why-avante) -> cluster children, to defend the #1 ranking. */}
@@ -505,7 +510,7 @@ export default function WhyAvantePage() {
               fontSize: '13px',
               letterSpacing: '0.04em',
               textTransform: 'uppercase',
-              color: 'var(--avante-text-muted)',
+              color: 'var(--avt-meta)',
               marginBottom: 'var(--avante-space-4)',
             }}>
               {language === 'pt' ? 'Leitura relacionada' : language === 'es' ? 'Lectura relacionada' : 'Related reading'}
@@ -519,7 +524,7 @@ export default function WhyAvantePage() {
                   ? 'Venture studio vs VC vs aceleradora'
                   : 'Venture studio vs VC vs accelerator'}
               </Link>
-              <span style={{ color: 'var(--avante-text-muted)' }}>·</span>
+              <span style={{ color: 'var(--avt-meta)' }}>·</span>
               <Link
                 to={`/${language}/library/why-venture-studios-win-latam`}
                 style={{ color: '#F9B437', textDecoration: 'underline', textUnderlineOffset: '2px', fontSize: '15px' }}
@@ -535,6 +540,7 @@ export default function WhyAvantePage() {
         </section>
 
         {/* The Avante Dual Model Section */}
+        <Reveal style={{ display: 'block' }}>
         <section style={{ 
           marginBottom: 'var(--avante-space-24)',
           padding: 'var(--avante-space-16) 0',
@@ -567,7 +573,7 @@ export default function WhyAvantePage() {
                 style={{
                   fontSize: 'clamp(28px, 6vw, 52px)',
                   fontWeight: 'var(--font-weight-medium)',
-                  color: 'var(--avante-text-primary)',
+                  color: 'var(--avt-txt)',
                   lineHeight: '1.15',
                   letterSpacing: '-0.02em',
                   marginBottom: 'clamp(var(--avante-space-4), 4vw, var(--avante-space-6))'
@@ -579,7 +585,7 @@ export default function WhyAvantePage() {
               <p 
                 style={{ 
                   fontSize: 'clamp(15px, 2.5vw, 18px)',
-                  color: 'var(--avante-text-secondary)',
+                  color: 'var(--avt-muted)',
                   lineHeight: '1.7',
                   maxWidth: '800px',
                   margin: '0 auto'
@@ -654,7 +660,7 @@ export default function WhyAvantePage() {
                     style={{
                       fontSize: 'clamp(22px, 4vw, 28px)',
                       fontWeight: 'var(--font-weight-medium)',
-                      color: 'var(--avante-text-primary)',
+                      color: 'var(--avt-txt)',
                       marginBottom: 'var(--avante-space-4)',
                       lineHeight: '1.2'
                     }}
@@ -665,7 +671,7 @@ export default function WhyAvantePage() {
                   <p 
                     style={{ 
                       fontSize: 'clamp(14px, 2vw, 16px)',
-                      color: 'var(--avante-text-secondary)',
+                      color: 'var(--avt-muted)',
                       lineHeight: '1.7',
                       marginBottom: 'clamp(var(--avante-space-5), 4vw, var(--avante-space-6))'
                     }}
@@ -691,7 +697,7 @@ export default function WhyAvantePage() {
                         }} />
                         <span style={{
                           fontSize: 'clamp(13px, 1.8vw, 15px)',
-                          color: 'var(--avante-text-secondary)',
+                          color: 'var(--avt-muted)',
                           lineHeight: '1.6'
                         }}>
                           {t(`whyavante.model.path1.point${num}`)}
@@ -761,7 +767,7 @@ export default function WhyAvantePage() {
                     style={{
                       fontSize: 'clamp(22px, 4vw, 28px)',
                       fontWeight: 'var(--font-weight-medium)',
-                      color: 'var(--avante-text-primary)',
+                      color: 'var(--avt-txt)',
                       marginBottom: 'var(--avante-space-4)',
                       lineHeight: '1.2'
                     }}
@@ -772,7 +778,7 @@ export default function WhyAvantePage() {
                   <p 
                     style={{ 
                       fontSize: 'clamp(14px, 2vw, 16px)',
-                      color: 'var(--avante-text-secondary)',
+                      color: 'var(--avt-muted)',
                       lineHeight: '1.7',
                       marginBottom: 'clamp(var(--avante-space-5), 4vw, var(--avante-space-6))'
                     }}
@@ -798,7 +804,7 @@ export default function WhyAvantePage() {
                         }} />
                         <span style={{
                           fontSize: 'clamp(13px, 1.8vw, 15px)',
-                          color: 'var(--avante-text-secondary)',
+                          color: 'var(--avt-muted)',
                           lineHeight: '1.6'
                         }}>
                           {t(`whyavante.model.path2.point${num}`)}
@@ -821,7 +827,7 @@ export default function WhyAvantePage() {
             }}>
               <p style={{
                 fontSize: 'clamp(13px, 2vw, 14px)',
-                color: 'var(--avante-text-muted)',
+                color: 'var(--avt-meta)',
                 lineHeight: '1.6',
                 fontStyle: 'italic',
                 maxWidth: '700px',
@@ -832,12 +838,14 @@ export default function WhyAvantePage() {
             </div>
           </div>
         </section>
+        </Reveal>
 
         {/* "Why This Matters" section removed — its 4 cards were repetitive
             with The Problem (above) and Why Brazil Why Now (below). The
             consolidation keeps 5 content sections instead of 7.             */}
 
         {/* Why Brazil, Why Now Section */}
+        <Reveal style={{ display: 'block' }}>
         <section style={{ 
           marginBottom: 'var(--avante-space-24)',
           padding: 'var(--avante-space-16) 0',
@@ -849,7 +857,7 @@ export default function WhyAvantePage() {
                 style={{
                   fontSize: 'clamp(32px, 5vw, 52px)',
                   fontWeight: 'var(--font-weight-medium)',
-                  color: 'var(--avante-text-primary)',
+                  color: 'var(--avt-txt)',
                   lineHeight: '1.15',
                   letterSpacing: '-0.02em',
                   marginBottom: 'var(--avante-space-6)'
@@ -861,7 +869,7 @@ export default function WhyAvantePage() {
               <p 
                 style={{ 
                   fontSize: '18px',
-                  color: 'var(--avante-text-secondary)',
+                  color: 'var(--avt-muted)',
                   lineHeight: '1.7',
                   maxWidth: '800px',
                   margin: '0 auto'
@@ -909,7 +917,7 @@ export default function WhyAvantePage() {
                   <p 
                     style={{ 
                       fontSize: '15px',
-                      color: 'var(--avante-text-secondary)',
+                      color: 'var(--avt-muted)',
                       lineHeight: '1.6'
                     }}
                   >
@@ -920,9 +928,11 @@ export default function WhyAvantePage() {
             </div>
           </div>
         </section>
+        </Reveal>
 
         {/* Final CTA Section */}
-        <section 
+        <Reveal style={{ display: 'block' }}>
+        <section
           style={{
             backgroundColor: 'rgba(255, 255, 255, 0.02)',
             border: '1px solid rgba(255, 255, 255, 0.08)',
@@ -954,7 +964,7 @@ export default function WhyAvantePage() {
               style={{
                 fontSize: 'clamp(28px, 4vw, 42px)',
                 fontWeight: 'var(--font-weight-medium)',
-                color: 'var(--avante-text-primary)',
+                color: 'var(--avt-txt)',
                 lineHeight: '1.2',
                 letterSpacing: '-0.02em',
                 marginBottom: 'var(--avante-space-5)'
@@ -966,7 +976,7 @@ export default function WhyAvantePage() {
             <p 
               style={{ 
                 fontSize: '17px',
-                color: 'var(--avante-text-secondary)',
+                color: 'var(--avt-muted)',
                 marginBottom: 'var(--avante-space-10)',
                 lineHeight: '1.7'
               }}
@@ -1003,6 +1013,7 @@ export default function WhyAvantePage() {
             </Link>
           </div>
         </section>
+        </Reveal>
 
       </div>
 

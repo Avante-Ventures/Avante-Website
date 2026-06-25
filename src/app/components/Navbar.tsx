@@ -16,7 +16,7 @@
 // Active link logic: routes win when their pathname matches; anchors win
 // when their target section is in view on the home route.
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router'
 import { useLanguage } from '@/app/hooks/useLanguage'
 import { AvanteLockup } from '@/app/components/AvanteLockup'
@@ -87,7 +87,6 @@ export function Navbar() {
       href: `/${language}/why-avante`,
       isRoute: true,
     },
-    { id: 'playbook', label: 'Playbook', href: `/${language}#playbook`, isRoute: false },
     {
       id: 'portfolio',
       label: language === 'pt' ? 'Portfólio' : language === 'es' ? 'Portafolio' : 'Portfolio',
@@ -95,9 +94,9 @@ export function Navbar() {
       isRoute: true,
     },
     {
-      id: 'principles',
-      label: language === 'pt' ? 'Princípios' : language === 'es' ? 'Principios' : 'Principles',
-      href: `/${language}/principles`,
+      id: 'library',
+      label: language === 'pt' ? 'Biblioteca' : language === 'es' ? 'Biblioteca' : 'Library',
+      href: `/${language}/library`,
       isRoute: true,
     },
   ]
@@ -136,7 +135,7 @@ export function Navbar() {
       >
         <div
           className="flex items-center justify-between px-6 lg:px-12"
-          style={{ height: '72px', maxWidth: '1440px', margin: '0 auto' }}
+          style={{ height: '72px', maxWidth: '1440px', margin: '0 auto', position: 'relative' }}
         >
           {/* Lockup: links to home with current locale */}
           <Link
@@ -144,11 +143,15 @@ export function Navbar() {
             aria-label="Avante — Home"
             style={{ textDecoration: 'none', display: 'inline-flex' }}
           >
-            <AvanteLockup size="sm" />
+            <img
+              src="/redesign-assets/avante-logo.svg"
+              alt="Avante"
+              style={{ height: '26px', width: 'auto', display: 'block' }}
+            />
           </Link>
 
-          {/* Center nav links, desktop only */}
-          <div className="hidden lg:flex items-center" style={{ gap: '36px' }}>
+          {/* Center nav links, desktop only — absolutely centered with the hero "A" */}
+          <div className="hidden lg:flex items-center" style={{ gap: '36px', position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}>
             {navLinks.map((link) => {
               const active = isLinkActive(link)
               const color = active ? '#fff' : 'var(--avt-muted)'
@@ -196,8 +199,9 @@ export function Navbar() {
 
             {VINTAGE_STATUS !== 'hidden' && (
               <a
-                href={`/${language}#contact`}
-                onClick={(e) => handleNavClick(e, `/${language}#contact`)}
+                href="https://avanteventures.substack.com"
+                target="_blank"
+                rel="noopener"
                 className="hidden sm:inline-flex"
                 style={{
                   ...navTextStyle,
@@ -211,7 +215,7 @@ export function Navbar() {
                 onMouseEnter={(e) => (e.currentTarget.style.borderColor = '#fff')}
                 onMouseLeave={(e) => (e.currentTarget.style.borderColor = 'var(--avt-hair-2)')}
               >
-                {language === 'pt' ? 'Contato' : language === 'es' ? 'Contacto' : 'Contact'}
+                {language === 'pt' ? 'Assinar' : language === 'es' ? 'Suscribirse' : 'Subscribe'}
               </a>
             )}
 
@@ -286,8 +290,9 @@ export function Navbar() {
             })}
             {VINTAGE_STATUS !== 'hidden' && (
               <a
-                href={`/${language}#contact`}
-                onClick={(e) => handleNavClick(e, `/${language}#contact`)}
+                href="https://avanteventures.substack.com"
+                target="_blank"
+                rel="noopener"
                 style={{
                   marginTop: '16px',
                   ...navTextStyle,
@@ -300,7 +305,7 @@ export function Navbar() {
                   animation: 'slideIn 0.4s ease 0.4s both',
                 }}
               >
-                {language === 'pt' ? 'Contato' : language === 'es' ? 'Contacto' : 'Contact'}
+                {language === 'pt' ? 'Assinar' : language === 'es' ? 'Suscribirse' : 'Subscribe'}
               </a>
             )}
           </div>
@@ -352,48 +357,127 @@ function LanguageToggleMini({
   language: 'en' | 'pt' | 'es'
   setLanguage: (l: 'en' | 'pt' | 'es') => void
 }) {
-  const baseStyle: React.CSSProperties = {
+  // Click-to-open language toggle: collapsed it shows only the current
+  // locale; tapping it reveals the other options (which animate in). Pick one
+  // to switch and it collapses again.
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLDivElement | null>(null)
+  const langs: Array<'en' | 'pt' | 'es'> = ['en', 'pt', 'es']
+
+  useEffect(() => {
+    if (!open) return
+    const onDoc = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false)
+    }
+    document.addEventListener('mousedown', onDoc)
+    return () => document.removeEventListener('mousedown', onDoc)
+  }, [open])
+
+  const labelStyle: React.CSSProperties = {
     fontFamily: 'var(--avt-font-body)',
-    fontSize: '11.5px',
+    fontSize: '11px',
     fontWeight: 600,
     letterSpacing: '0.08em',
     textTransform: 'uppercase',
-    background: 'none',
-    border: 'none',
-    cursor: 'pointer',
-    padding: '4px 6px',
-    transition: 'color 0.2s ease',
   }
-  // Three-way toggle: EN / PT / ES separated by hairline slashes.
-  const langs: Array<'en' | 'pt' | 'es'> = ['en', 'pt', 'es']
+
   return (
-    <span
-      style={{
-        display: 'inline-flex',
-        alignItems: 'center',
-        gap: '2px',
-        border: '1px solid var(--avt-hair-2)',
-        padding: '6px 4px',
-      }}
-    >
-      {langs.map((lang, i) => (
-        <span key={lang} style={{ display: 'inline-flex', alignItems: 'center' }}>
-          <button
-            onClick={() => setLanguage(lang)}
-            aria-pressed={language === lang}
-            style={{
-              ...baseStyle,
-              color: language === lang ? '#fff' : 'var(--avt-muted)',
-            }}
-          >
-            {lang.toUpperCase()}
-          </button>
-          {i < langs.length - 1 && (
-            <span style={{ color: 'var(--avt-hair-2)', fontSize: '11px' }}>/</span>
-          )}
+    <div ref={ref} style={{ position: 'relative' }}>
+      <button
+        onClick={() => setOpen((o) => !o)}
+        aria-haspopup="listbox"
+        aria-expanded={open}
+        aria-label="Language"
+        style={{
+          ...labelStyle,
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '7px',
+          border: '1px solid var(--avt-hair-2)',
+          borderRadius: '999px',
+          padding: '6px 12px',
+          background: open ? 'rgba(255, 255, 255, 0.06)' : 'transparent',
+          color: '#fff',
+          cursor: 'pointer',
+          transition: 'background 0.2s ease, border-color 0.2s ease',
+        }}
+        onMouseEnter={(e) => (e.currentTarget.style.borderColor = 'rgba(255,255,255,0.4)')}
+        onMouseLeave={(e) => (e.currentTarget.style.borderColor = 'var(--avt-hair-2)')}
+      >
+        {language.toUpperCase()}
+        <span
+          aria-hidden
+          style={{
+            fontSize: '8px',
+            opacity: 0.7,
+            display: 'inline-block',
+            transition: 'transform 0.2s ease',
+            transform: open ? 'rotate(180deg)' : 'none',
+          }}
+        >
+          ▼
         </span>
-      ))}
-    </span>
+      </button>
+
+      {open && (
+        <div
+          role="listbox"
+          style={{
+            position: 'absolute',
+            top: 'calc(100% + 8px)',
+            right: 0,
+            display: 'flex',
+            flexDirection: 'column',
+            minWidth: '76px',
+            border: '1px solid var(--avt-hair-2)',
+            borderRadius: '10px',
+            background: 'rgba(10, 12, 22, 0.96)',
+            backdropFilter: 'blur(12px)',
+            WebkitBackdropFilter: 'blur(12px)',
+            padding: '4px',
+            gap: '2px',
+            zIndex: 60,
+          }}
+        >
+          {langs
+            .filter((l) => l !== language)
+            .map((lang, i) => (
+              <button
+                key={lang}
+                role="option"
+                aria-selected={false}
+                onClick={() => {
+                  setLanguage(lang)
+                  setOpen(false)
+                }}
+                style={{
+                  ...labelStyle,
+                  textAlign: 'left',
+                  border: 'none',
+                  cursor: 'pointer',
+                  background: 'transparent',
+                  color: 'var(--avt-muted)',
+                  padding: '7px 10px',
+                  borderRadius: '6px',
+                  animation: `avtLangIn 0.22s cubic-bezier(0.16,1,0.3,1) ${i * 45}ms both`,
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = '#fff'
+                  e.currentTarget.style.background = 'rgba(255,255,255,0.06)'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = 'var(--avt-muted)'
+                  e.currentTarget.style.background = 'transparent'
+                }}
+              >
+                {lang.toUpperCase()}
+              </button>
+            ))}
+        </div>
+      )}
+
+      <style>{`@keyframes avtLangIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }`}</style>
+    </div>
   )
 }
 

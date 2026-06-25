@@ -29,6 +29,7 @@ export function Footer() {
   const t = <T extends ReactNode>(en: T, pt: T, es?: T): T =>
     language === 'pt' ? pt : language === 'es' && es !== undefined ? es : en
   const cordRef = useRef<HTMLDivElement>(null)
+  const sourcesRef = useRef<HTMLDetailsElement>(null)
 
   // Scroll-trigger the cord exactly once when 40% of it enters the viewport.
   // Pure CSS class flip — the tween itself is in theme.css (.avt-cord-fill).
@@ -50,17 +51,36 @@ export function Footer() {
     return () => io.disconnect()
   }, [])
 
+  // The Sources list is collapsed by default (keeps the footer short) but must
+  // stay reachable: the Investors and Why-Avante pages link footnotes to
+  // /<lang>#source-N. So whenever the URL hash points at a source, open the
+  // <details> and scroll to it — on first load and on later hash changes.
+  useEffect(() => {
+    const openIfSourceHash = () => {
+      if (!location.hash.startsWith('#source-')) return
+      const det = sourcesRef.current
+      if (det) det.open = true
+      // wait one frame for the disclosure to expand before scrolling
+      requestAnimationFrame(() => {
+        document.querySelector(location.hash)?.scrollIntoView({ block: 'center' })
+      })
+    }
+    openIfSourceHash()
+    window.addEventListener('hashchange', openIfSourceHash)
+    return () => window.removeEventListener('hashchange', openIfSourceHash)
+  }, [])
+
   return (
     <footer
       style={{
         position: 'relative',
         overflow: 'hidden',
         background: 'var(--avt-ink)',
-        padding: '120px 24px 56px',
+        padding: 'clamp(72px, 9vw, 104px) 24px 48px',
         borderTop: '1px solid var(--avt-hair)',
       }}
     >
-      <div style={{ maxWidth: '1440px', margin: '0 auto' }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
         {/* Scroll-triggered cord */}
         <div
           ref={cordRef}
@@ -70,24 +90,15 @@ export function Footer() {
           <div className="avt-cord-fill" />
         </div>
 
-        {/* Editorial signature mark — Round 8.2: scaled down again from
-            180px → 96px max. Reads as a confident colophon, not a billboard. */}
-        <div
-          style={{
-            marginTop: 'clamp(40px, 6vw, 64px)',
-            display: 'flex',
-            alignItems: 'flex-end',
-            gap: 0,
-            fontFamily: 'var(--avt-font-display)',
-            fontWeight: 500,
-            letterSpacing: '-0.045em',
-            lineHeight: 0.9,
-            fontSize: 'clamp(40px, 6vw, 96px)',
-            color: '#fff',
-          }}
-        >
-          <ResponsiveLockupMark />
-          <span style={{ marginLeft: 'clamp(-12px, -1vw, -4px)' }}>vante.</span>
+        {/* Editorial signature mark — the SAME gradient wordmark as the navbar
+            (avante-logo.svg), rendered monumental as the page's visual full stop.
+            One canonical logo across the site, not two. */}
+        <div style={{ marginTop: 'clamp(40px, 6vw, 64px)' }}>
+          <img
+            src="/redesign-assets/avante-logo.svg"
+            alt="Avante"
+            style={{ height: 'clamp(44px, 7vw, 104px)', width: 'auto', display: 'block' }}
+          />
         </div>
 
         {/* Tagline */}
@@ -122,7 +133,7 @@ export function Footer() {
         {/* ClockRow — Phase D. Live local time in the firm's two operating
             cities, rendered as 2-column hairline cells. Quietly tells the
             visitor where the studio physically is, in real time. */}
-        <div style={{ marginTop: 'clamp(48px, 6vw, 80px)' }}>
+        <div style={{ marginTop: 'clamp(40px, 5vw, 60px)' }}>
           <ClockRow />
         </div>
 
@@ -130,15 +141,15 @@ export function Footer() {
         <div
           className="avt-footer-grid"
           style={{
-            marginTop: 'clamp(56px, 8vw, 120px)',
+            marginTop: 'clamp(44px, 5vw, 72px)',
             display: 'grid',
-            gap: '48px',
+            gap: 'clamp(28px, 4vw, 48px)',
           }}
         >
           {/* Column 1: Offices (2 cities for clock-row vibe) */}
           <FooterColumn title={t('Offices', 'Escritórios', 'Oficinas')}>
             <FooterStaticLine>São Paulo · sede</FooterStaticLine>
-            <FooterStaticLine>San Francisco</FooterStaticLine>
+            <FooterStaticLine>Silicon Valley</FooterStaticLine>
           </FooterColumn>
 
           {/* Column 2: Firm — top-level routes */}
@@ -157,7 +168,7 @@ export function Footer() {
 
           {/* Column 4: Now — operating reality */}
           <FooterColumn title={t('Now', 'Agora', 'Ahora')}>
-            <FooterStaticLine>{t('1 active · 4 in pipeline', '1 ativa · 4 no pipeline', '1 activa · 4 en pipeline')}</FooterStaticLine>
+            <FooterStaticLine>{t('3 active · 3 in pipeline', '3 ativas · 3 no pipeline', '3 activas · 3 en pipeline')}</FooterStaticLine>
             <FooterStaticLine>{t('São Paulo · winter 2026', 'São Paulo · inverno 2026', 'São Paulo · invierno 2026')}</FooterStaticLine>
             <FooterStaticLine
               style={{ color: 'rgba(205, 210, 238, 0.55)', marginTop: '6px', fontSize: '12px' }}
@@ -167,14 +178,16 @@ export function Footer() {
           </FooterColumn>
         </div>
 
-        {/* Sources — Diana's panel: a venture firm that cites is a firm that opens its work. */}
-        <SourcesBlock t={t} />
+        {/* Sources — Diana's panel: a venture firm that cites is a firm that opens
+            its work. Collapsed by default to keep the colophon tight; opens on a
+            #source-N hash (see effect above) so footnote links still resolve. */}
+        <SourcesBlock t={t} innerRef={sourcesRef} />
 
         {/* Bottom mono colophon */}
         <div
           style={{
-            marginTop: '64px',
-            paddingTop: '32px',
+            marginTop: '40px',
+            paddingTop: '28px',
             borderTop: '1px solid var(--avt-hair)',
             display: 'flex',
             justifyContent: 'space-between',
@@ -204,6 +217,11 @@ export function Footer() {
         @media (min-width: 1024px) {
           .avt-footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1.2fr; }
         }
+        .avt-sources summary::-webkit-details-marker { display: none; }
+        .avt-sources summary::marker { content: ''; }
+        .avt-sources summary:hover { color: #fff; }
+        .avt-sources .avt-sources-chevron { display: inline-block; transition: transform 240ms ease; }
+        .avt-sources[open] .avt-sources-chevron { transform: rotate(90deg); }
       `}</style>
     </footer>
   )
@@ -213,29 +231,6 @@ export function Footer() {
 // Internal building blocks. Kept inline (not extracted to a separate file)
 // to make the editorial vocabulary easy to read in one place.
 // ─────────────────────────────────────────────────────────────────────────
-
-function ResponsiveLockupMark() {
-  // Width scaled to match the new clamp(40-96px) word. Round 8.2 brings
-  // the mark down to 80px max — equivalent in visual weight to a tier-1
-  // wordmark, not a hero. Pairs cleanly with `vante.` at 96px.
-  const aspectRatio = 364 / 535
-  return (
-    <span
-      aria-hidden
-      style={{
-        display: 'inline-block',
-        width: 'clamp(28px, 4.8vw, 80px)',
-        height: 'calc(clamp(28px, 4.8vw, 80px) / ' + aspectRatio + ')',
-        backgroundImage: `url(/redesign-assets/avante-A.png)`,
-        backgroundSize: 'contain',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'left bottom',
-        marginBottom: 'clamp(1px, 0.3vw, 4px)',
-        flexShrink: 0,
-      }}
-    />
-  )
-}
 
 function FooterColumn({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -332,28 +327,41 @@ function MonoColophon({ children }: { children: React.ReactNode }) {
   )
 }
 
-function SourcesBlock({ t }: { t: <T extends ReactNode>(en: T, pt: T, es?: T) => T }) {
+function SourcesBlock({
+  t,
+  innerRef,
+}: {
+  t: <T extends ReactNode>(en: T, pt: T, es?: T) => T
+  innerRef?: React.Ref<HTMLDetailsElement>
+}) {
   return (
-    <div style={{ marginTop: '64px' }}>
-      <div
+    <details ref={innerRef} className="avt-sources" style={{ marginTop: 'clamp(40px, 5vw, 56px)' }}>
+      <summary
         style={{
+          cursor: 'pointer',
+          listStyle: 'none',
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: '10px',
           fontFamily: 'var(--avt-font-body)',
           fontSize: '12px',
           fontWeight: 700,
           letterSpacing: '0.08em',
           textTransform: 'uppercase',
           color: 'var(--avt-meta)',
-          marginBottom: '12px',
+          userSelect: 'none',
+          transition: 'color 0.2s ease',
         }}
       >
-        {t('Sources', 'Fontes', 'Fuentes')}
-      </div>
+        <span className="avt-sources-chevron" aria-hidden>▸</span>
+        {t('Sources & methodology', 'Fontes e metodologia', 'Fuentes y metodología')}
+      </summary>
       <ol
         style={{
           fontSize: '12px',
-          color: 'rgba(205, 210, 238, 0.6)',
+          color: 'rgba(205, 210, 238, 0.78)',
           lineHeight: 1.7,
-          margin: 0,
+          margin: '18px 0 0',
           paddingLeft: '20px',
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
@@ -415,7 +423,7 @@ function SourcesBlock({ t }: { t: <T extends ReactNode>(en: T, pt: T, es?: T) =>
           <SourceLink href="https://www.cambridgeassociates.com">Cambridge Associates US VC Index Q4 2025</SourceLink>
         </SourceItem>
       </ol>
-    </div>
+    </details>
   )
 }
 

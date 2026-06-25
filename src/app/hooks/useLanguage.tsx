@@ -293,7 +293,7 @@ const translations = {
     'library.hero.badge': 'Pesquisa & Insights',
     'library.hero.title': 'Insights de Venture Building para Operadores',
     'library.hero.subtitle': 'Relatórios de pesquisa, playbooks e estudos de caso sobre venture studios, investimento de primeiro ticket, negócios AI-native e oportunidades no Brasil. Escritos por operadores que construíram e escalaram empresas.',
-    'library.hero.stats': '9 Recursos • Atualizado Mensalmente',
+    'library.hero.stats': '9 Recursos • Atualizado Semanalmente',
     
     // Categories
     'library.category.all': 'Todos',
@@ -306,10 +306,10 @@ const translations = {
     
     // CTA
     'library.cta.title': 'Receba Novas Pesquisas & Insights',
-    'library.cta.description': 'Junte-se a operadores, investidores e construtores recebendo insights mensais sobre venture building, negócios AI-native e oportunidades em mercados emergentes.',
+    'library.cta.description': 'Junte-se a operadores, investidores e construtores recebendo insights semanais sobre venture building, negócios AI-native e oportunidades em mercados emergentes.',
     'library.cta.placeholder': 'seu@email.com',
     'library.cta.button': 'Inscrever',
-    'library.cta.note': 'Um email por mês. Sem spam. Cancele quando quiser.',
+    'library.cta.note': 'Um email por semana. Sem spam. Cancele quando quiser.',
   },
   en: {
     // Nav
@@ -592,7 +592,7 @@ const translations = {
     'library.hero.badge': 'Research & Insights',
     'library.hero.title': 'Venture Building Insights for Operators',
     'library.hero.subtitle': 'Research reports, playbooks, and case studies on venture studios, first-ticket investing, AI-native businesses, and Brazil opportunities. Written by operators who have built and scaled companies.',
-    'library.hero.stats': '9 Resources • Updated Monthly',
+    'library.hero.stats': '9 Resources • Updated Weekly',
     
     // Categories
     'library.category.all': 'All',
@@ -605,10 +605,10 @@ const translations = {
     
     // CTA
     'library.cta.title': 'Get New Research & Insights',
-    'library.cta.description': 'Join operators, investors, and builders getting monthly insights on venture building, AI-native businesses, and emerging market opportunities.',
+    'library.cta.description': 'Join operators, investors, and builders getting weekly insights on venture building, AI-native businesses, and emerging market opportunities.',
     'library.cta.placeholder': 'your@email.com',
     'library.cta.button': 'Subscribe',
-    'library.cta.note': 'One email per month. No spam. Unsubscribe anytime.',
+    'library.cta.note': 'One email per week. No spam. Unsubscribe anytime.',
   },
 
   // Spanish translations — added in Round 6. Mirrors the EN dictionary 1:1
@@ -896,7 +896,7 @@ const translations = {
     'library.hero.badge': 'Investigación & Insights',
     'library.hero.title': 'Insights de Venture Building para Operadores',
     'library.hero.subtitle': 'Reportes de investigación, playbooks y case studies sobre venture studios, first-ticket investing, negocios AI-native y oportunidades en Brasil. Escritos por operadores que han construido y escalado empresas.',
-    'library.hero.stats': '9 Recursos • Actualizado Mensualmente',
+    'library.hero.stats': '9 Recursos • Actualizado Semanalmente',
 
     // Categories
     'library.category.all': 'Todos',
@@ -909,10 +909,10 @@ const translations = {
 
     // CTA
     'library.cta.title': 'Recibe Nueva Investigación & Insights',
-    'library.cta.description': 'Únete a operadores, inversores y builders recibiendo insights mensuales sobre venture building, negocios AI-native y oportunidades en mercados emergentes.',
+    'library.cta.description': 'Únete a operadores, inversores y builders recibiendo insights semanales sobre venture building, negocios AI-native y oportunidades en mercados emergentes.',
     'library.cta.placeholder': 'tu@email.com',
     'library.cta.button': 'Suscribirse',
-    'library.cta.note': 'Un email al mes. Sin spam. Cancela cuando quieras.',
+    'library.cta.note': 'Un email a la semana. Sin spam. Cancela cuando quieras.',
   }
 };
 

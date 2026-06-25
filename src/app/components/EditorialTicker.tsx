@@ -43,7 +43,7 @@ const TICKS: TickItem[] = [
   ['cost reduction · WIR', '90% underwriting', 'redução custo · WIR', '90% underwriting', 'reducción costo · WIR', '90% underwriting', 'up'],
   ['offices', 'SP · SF', 'escritórios', 'SP · SF', 'oficinas', 'SP · SF'],
   ['legal', 'Lefosse · Foley', 'jurídico', 'Lefosse · Foley', 'legal', 'Lefosse · Foley'],
-  ['next memo', 'monthly', 'próxima carta', 'mensal', 'próxima carta', 'mensual'],
+  ['next memo', 'weekly', 'próxima carta', 'semanal', 'próxima carta', 'semanal'],
   ['founded', 'são paulo · 2024', 'fundada', 'são paulo · 2024', 'fundada', 'são paulo · 2024'],
   ['horizon', 'here in 2034', 'horizonte', 'aqui em 2034', 'horizonte', 'aquí en 2034'],
 ]

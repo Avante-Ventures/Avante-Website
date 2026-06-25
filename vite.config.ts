@@ -47,6 +47,13 @@ export default defineConfig({
       output: {
         manualChunks: {
           'vendor': ['react', 'react-dom'],
+          // NOTE: three/R3F/drei are intentionally NOT manually chunked. The
+          // React.lazy(() => import('./Stage3D')) dynamic import already makes
+          // Vite emit them as a separate ASYNC chunk loaded only when the 3D
+          // stage mounts (Tier-1 desktop, in-band). Forcing a manual 'three'
+          // chunk turned it into an entry-referenced chunk that got preloaded
+          // on first paint — defeating the lazy split (and a circular-chunk
+          // warning). Leave it to the dynamic import.
         },
       },
     },

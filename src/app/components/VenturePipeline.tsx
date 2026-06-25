@@ -39,20 +39,6 @@ export function VenturePipeline() {
 
   const pipelineVentures: PipelineVenture[] = [
     {
-      name: 'CRIA Studio',
-      monogram: 'C',
-      tagline: t('AI Creative Studio for SMB', 'Studio de Conteúdo com IA para PMEs'),
-      bullets: [
-        t('On-demand branded content generation', 'Conteúdo de marca gerado sob demanda'),
-        t('Multi-channel asset optimization', 'Otimização de peças multi-canal'),
-        t('Built-in compliance & brand guidelines', 'Compliance e brand book embutidos'),
-      ],
-      color: '#F4A261',
-      accentColor: '#F9B437',
-      stage: 2,
-      eta: 'Q3 2026',
-    },
-    {
       name: 'Pulse.ai',
       monogram: 'P',
       tagline: t('WhatsApp Sales for CPG', 'Vendas por WhatsApp para CPG'),

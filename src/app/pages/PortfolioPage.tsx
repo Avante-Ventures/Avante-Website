@@ -11,6 +11,7 @@ import { BackToTop } from '@/app/components/BackToTop'
 import { SEOHelmet } from '@/app/components/SEOHelmet'
 import { SectionMasthead } from '@/app/components/SectionMasthead'
 import { VenturePipeline } from '@/app/components/VenturePipeline'
+import { Reveal } from '@/app/components/Reveal'
 import { Link } from 'react-router'
 
 // Ventures data — Round 9 restructure (full deck-aligned taxonomy).
@@ -24,6 +25,8 @@ import { Link } from 'react-router'
 // `backers` (text-based co-investor list) so the cards self-narrate.
 interface Venture {
   name: string
+  /** Render the first letter in the brand gradient (the αlphajuri nod). */
+  gradFirst?: boolean
   description: { en: string; pt: string }
   status: 'cohort1' | 'discovery' | 'partner-cofounded' | 'us-building' | 'investing' | 'us-alumni'
   accent: string
@@ -55,7 +58,8 @@ const VENTURES: Venture[] = [
     est: 'Est. 2025',
   },
   {
-    name: 'Alphajuri',
+    name: 'alphajuri',
+    gradFirst: true,
     description: {
       en: 'AI-native judicial asset platform for the Brazilian precatorios + claims market. Copilot-to-fund flywheel; built from scratch inside Cohort 1.',
       pt: 'Plataforma AI-native de ativos judiciais para o mercado brasileiro de precatórios + claims. Flywheel copilot-to-fund; construído do zero dentro da Cohort 1.',
@@ -63,6 +67,17 @@ const VENTURES: Venture[] = [
     status: 'cohort1',
     accent: '#F4A261',
     tag: 'LegalTech',
+    est: 'Est. 2024',
+  },
+  {
+    name: 'FutureProofing Brazil',
+    description: {
+      en: 'Senior AI engineers embedded inside legacy Brazilian companies — shipping AI into the core business. Already working with several companies.',
+      pt: 'Engenheiros de IA sênior dentro de empresas tradicionais no Brasil — levando IA ao núcleo do negócio. Já trabalhando com várias empresas.',
+    },
+    status: 'cohort1',
+    accent: '#ec5f72',
+    tag: 'AI Engineering',
     est: 'Est. 2024',
   },
   // ─────────── DISCOVERY ───────────
@@ -222,7 +237,7 @@ export default function PortfolioPage() {
   }
 
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: 'var(--avante-background)' }}>
+    <div style={{ minHeight: '100vh', backgroundColor: 'var(--avt-ink)' }}>
       <SEOHelmet
         title={copy.title}
         description={copy.description}
@@ -264,8 +279,8 @@ export default function PortfolioPage() {
             'Nossas Ventures, e nosso Track Record.'
           )}
           description={t(
-            'Cohort 1 is live (WIR + Alphajuri). Below: every venture this team has built, co-founded, or invested in, from Innova-era tickets in 2014 (iFood, Sigga, Accera) to today\'s active US Building track (Mahway, Astonishing Labs, Alpha Lit) and the Avante studio cohort.',
-            'Cohort 1 está ativa (WIR + Alphajuri). Abaixo: cada venture que este time construiu, co-fundou ou investiu, dos cheques da era Innova em 2014 (iFood, Sigga, Accera) ao track US Building ativo hoje (Mahway, Astonishing Labs, Alpha Lit) e a cohort do studio Avante.'
+            'Cohort 1 is live (WIR, alphajuri, FutureProofing). Below: every venture this team has built, co-founded, or invested in, from Innova-era tickets in 2014 (iFood, Sigga, Accera) to today\'s active US Building track (Mahway, Astonishing Labs, Alpha Lit) and the Avante studio cohort.',
+            'Cohort 1 está ativa (WIR, alphajuri, FutureProofing). Abaixo: cada venture que este time construiu, co-fundou ou investiu, dos cheques da era Innova em 2014 (iFood, Sigga, Accera) ao track US Building ativo hoje (Mahway, Astonishing Labs, Alpha Lit) e a cohort do studio Avante.'
           )}
         />
 
@@ -298,7 +313,7 @@ export default function PortfolioPage() {
           const ventures = VENTURES.filter((v) => v.status === group.status)
           if (ventures.length === 0) return null
           return (
-            <div key={group.status} style={{ marginTop: gi === 0 ? '64px' : '56px' }}>
+            <Reveal key={group.status} delay={gi * 60} style={{ display: 'block', marginTop: gi === 0 ? '64px' : '56px' }}>
               <GroupHeader label={group.label} accent={group.accent} count={ventures.length} />
               <div
                 style={{
@@ -315,7 +330,7 @@ export default function PortfolioPage() {
                   />
                 ))}
               </div>
-            </div>
+            </Reveal>
           )
         })}
 
@@ -356,8 +371,8 @@ export default function PortfolioPage() {
             iFood Exit 2021). Avoids duplicate proof and keeps the page
             focused on cards. */}
 
-        {/* PIPELINE section — relocated from home. The 3 pipeline ventures
-            (CRIA Studio, Pulse.ai, RADAR.ai) belong on the portfolio page
+        {/* PIPELINE section — relocated from home. The pipeline ventures
+            (Pulse.ai, RADAR.ai, ROTA.ai) belong on the portfolio page
             alongside the realized + active cohort, not as a separate home
             section.                                                        */}
         <section style={{ marginTop: '96px' }}>
@@ -400,32 +415,25 @@ export default function PortfolioPage() {
           </p>
         </section>
 
-        {/* CTA back to home library */}
+        {/* CTA back to home library — editorial text link, not a hard button
+            (matches the homepage VerticalsScene "→" link language) */}
         <div style={{ textAlign: 'center', marginTop: '96px' }}>
           <Link
             to={`/${language}/library/sigga-case-study-10x-exit`}
             style={{
-              display: 'inline-block',
-              padding: '14px 28px',
-              background: 'linear-gradient(135deg, #F9B437 0%, #F4A261 100%)',
-              color: '#0E1428',
-              borderRadius: '999px',
+              fontFamily: 'var(--avt-font-body)',
+              fontSize: 'clamp(15px, 1.5vw, 18px)',
+              color: 'var(--avt-txt)',
               textDecoration: 'none',
-              fontSize: '15px',
-              fontWeight: 600,
-              boxShadow: '0 8px 24px rgba(249, 180, 55, 0.25)',
-              transition: 'transform 0.2s ease, box-shadow 0.2s ease',
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-2px)'
-              e.currentTarget.style.boxShadow = '0 12px 32px rgba(249, 180, 55, 0.4)'
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)'
-              e.currentTarget.style.boxShadow = '0 8px 24px rgba(249, 180, 55, 0.25)'
+              borderBottom: '1px solid var(--avt-hair-2)',
+              paddingBottom: '3px',
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
             }}
           >
-            {t('Read the Sigga case study →', 'Leia o estudo de caso da Sigga →')}
+            {t('Read the Sigga case study', 'Leia o estudo de caso da Sigga')}
+            <span className="avt-grad" aria-hidden style={{ fontWeight: 600 }}>→</span>
           </Link>
         </div>
       </div>
@@ -565,7 +573,14 @@ function VentureCard({ venture, body }: { venture: Venture; body: string }) {
             lineHeight: 1.05,
           }}
         >
-          {venture.name}
+          {venture.gradFirst ? (
+            <>
+              <span className="avt-grad" style={{ fontWeight: 500 }}>{venture.name.charAt(0)}</span>
+              {venture.name.slice(1)}
+            </>
+          ) : (
+            venture.name
+          )}
         </h3>
         {venture.altBrand && (
           <span

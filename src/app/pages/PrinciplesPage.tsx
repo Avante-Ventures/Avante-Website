@@ -137,14 +137,14 @@ const PRINCIPLES: Principle[] = [
   {
     number: '09',
     title: {
-      en: 'Brazil-native execution. SF-native standards.',
-      pt: 'Execução nativa do Brasil. Padrões nativos de SF.',
-      es: 'Ejecución nativa de Brasil. Estándares nativos de SF.',
+      en: 'Brazil-native execution. Silicon Valley-native standards.',
+      pt: 'Execução nativa do Brasil. Padrões nativos do Vale do Silício.',
+      es: 'Ejecución nativa de Brasil. Estándares nativos de Silicon Valley.',
     },
     body: {
-      en: 'The São Paulo team operates the venture in market. The San Francisco team brings the bar: product reviews, hiring filters, capital discipline calibrated against US-tier outcomes. Neither side dilutes the other. Both anchors are real.',
-      pt: 'O time de São Paulo opera a venture em mercado. O time de San Francisco traz a régua: product reviews, filtros de contratação, disciplina de capital calibrada contra outcomes de tier US. Nenhum lado dilui o outro. Ambas as âncoras são reais.',
-      es: 'El equipo de São Paulo opera la venture en mercado. El equipo de San Francisco trae la vara: product reviews, filtros de contratación, disciplina de capital calibrada contra outcomes de tier US. Ningún lado diluye al otro. Ambas anclas son reales.',
+      en: 'The São Paulo team operates the venture in market. The Silicon Valley team brings the bar: product reviews, hiring filters, capital discipline calibrated against US-tier outcomes. Neither side dilutes the other. Both anchors are real.',
+      pt: 'O time de São Paulo opera a venture em mercado. O time do Vale do Silício traz a régua: product reviews, filtros de contratação, disciplina de capital calibrada contra outcomes de tier US. Nenhum lado dilui o outro. Ambas as âncoras são reais.',
+      es: 'El equipo de São Paulo opera la venture en mercado. El equipo de Silicon Valley trae la vara: product reviews, filtros de contratación, disciplina de capital calibrada contra outcomes de tier US. Ningún lado diluye al otro. Ambas anclas son reales.',
     },
   },
   {
