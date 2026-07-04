@@ -1767,7 +1767,7 @@ const articleSiggaCaseStudy: Article = {
 // ─────────────────────────────────────────────────────────────────────
 
 // === CONTENT-ENGINE:START (managed by content-engine/merge.py — do not edit by hand) ===
-// 31 article(s) generated from content-engine/outputs. Edit the engine, not this block.
+// 41 article(s) generated from content-engine/outputs. Edit the engine, not this block.
 const engineArticles: Article[] = [
   {
     "slug": "accelerator-vs-vc-founder-guide",
@@ -2419,6 +2419,808 @@ const engineArticles: Article[] = [
         }
       ]
     }
+  },
+  {
+    "slug": "ai-coding-agents-zero-to-one-playbook",
+    "category": "playbooks",
+    "type": "Playbook",
+    "readTime": "10 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-03",
+    "isPublished": true,
+    "en": {
+      "title": "AI Coding Agents: Ship Zero-to-One Without Shipping Slop",
+      "description": "How to use AI coding agents to build zero-to-one fast without shipping slop. An eval-gated velocity playbook for a lean AI-native venture.",
+      "sections": [
+        {
+          "paragraphs": [
+            "AI coding agents can compress a zero-to-one build from months into weeks, but only inside a discipline that stops them from shipping slop. That discipline has a name. Eval-gated velocity. Scope each task tightly, make the agent write the test first, and gate every merge on a passing eval plus a human read of the diff.",
+            "Speed without that gate is not speed. It is debt you have not noticed yet. This is the operator playbook for wielding AI coding agents on a lean AI-native venture, not a review of which tool to buy."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "The build decision: where AI coding agents fit zero-to-one",
+          "level": 2,
+          "paragraphs": [
+            "The real build decision is not whether to use AI coding agents. Almost every developer already does. The decision is narrower and more consequential. What do you let an agent merge without a human and an eval in the loop.",
+            "The evidence on raw speed should humble anyone selling magic. In a July 2025 randomized controlled trial, [METR](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/) ran 16 experienced open-source developers through 246 real issues on codebases they knew well. With AI tools they were 19% slower. They believed the tools had sped them up by 20%, and had forecast a 24% gain before starting. That is a 39-point gap between felt speed and measured speed, and the setup used frontier models, not weak ones.",
+            "The trust data tells the same story from a different angle. The [2025 Stack Overflow survey](https://survey.stackoverflow.co/2025/ai/) found 84% of developers using or planning to use AI tools while only about 33% trust the accuracy of what those tools produce. The single biggest frustration, cited by 66%, is output that is almost right but not quite. The fix is not a better prompt. It is a better gate.",
+            "So the honest read is this. AI coding agents fit zero-to-one when the work is well scoped, verifiable, and low blast radius. They are the wrong tool for a vague architecture call, a security-critical path with no test coverage, or any change whose correctness a human cannot confirm in a few minutes. Match the agent to the task, and the 19% penalty flips into a real gain."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Experienced developers were 19% slower with AI tools while believing they were 20% faster, a 39-point gap between felt and measured speed.",
+            "attribution": "METR randomized controlled trial, 2025"
+          }
+        },
+        {
+          "id": "the-playbook",
+          "heading": "The playbook: eval-gated velocity, step by step",
+          "level": 2,
+          "paragraphs": [
+            "The playbook that separates shipped quality from shipped slop is a merge protocol, not a prompt trick. You can run it this week on the codebase you already have. Five moves, in order, and none of them optional.",
+            "The team-level data is why the gate is not optional. The [2024 DORA report](https://cloud.google.com/blog/products/devops-sre/announcing-the-2024-dora-report) found that a 25% rise in AI adoption came with an estimated 1.5% drop in delivery throughput and a 7.2% drop in delivery stability, even as individual productivity and satisfaction rose. DORA's own conclusion is that small batches and strong testing are what turn AI speed into delivered software. The gate below is that conclusion, made operational."
+          ],
+          "bullets": [
+            "Scope to one verifiable outcome. One function, one endpoint, one migration. If you cannot state the acceptance test in a single sentence, the task is too big to hand an agent.",
+            "Make the agent write the test first. The failing test is both the spec and the eval. An agent that writes the assertion before the code cannot quietly redefine what done means.",
+            "Gate every merge on the eval plus a human read. Green tests are necessary, not sufficient. A person reviews the diff for what tests miss. Wrong abstraction, hidden coupling, the shortcut that will rot.",
+            "Keep diffs small and reversible. Ten small pull requests, each revertible in one command, beat one giant agent branch nobody fully understands.",
+            "Grow a domain eval suite as you go. Every real bug the agent introduces becomes a permanent test. That suite is the ratchet that lets velocity compound instead of decay."
+          ]
+        },
+        {
+          "id": "scope-and-tests",
+          "heading": "Scope tight, let the agent write tests first",
+          "level": 3,
+          "paragraphs": [
+            "Tight scope plus tests first is the single move that does the most work. It turns an agent from a confident guesser into a contributor you can actually check. Skip it and you inherit the review burden that made those experienced developers slower."
+          ],
+          "bullets": [
+            "A one-sentence acceptance criterion is the line between a mergeable diff and a review that takes longer than writing the code by hand.",
+            "Tests first makes the eval free. The same assertion that proves the feature guards the next regression, so the coverage that gates the merge is a byproduct of the build, not extra work."
+          ]
+        },
+        {
+          "id": "guardrails",
+          "heading": "Guardrails that stop the slop",
+          "level": 2,
+          "paragraphs": [
+            "Guardrails are what stop the slop the moment it tries to merge. An agent is fast at producing something plausible. The guardrail is what proves plausible is also correct, before it reaches production.",
+            "The frustration data shows what slips through when the guardrail is missing. Stack Overflow found 45.2% of developers say debugging AI-generated code takes longer than expected, and the almost-right-but-not-quite defect is the one 66% hit most often. Both are the price of merging on green tests alone, with no human reading the diff. The guardrail is cheaper than the debugging session it prevents."
+          ],
+          "bullets": [
+            "Treat green tests as a floor, not a verdict. A human reads every agent diff for the failure tests cannot see.",
+            "Cap the blast radius. Small reversible diffs turn a bad merge into a one-command revert instead of an archaeology project.",
+            "Version the eval suite with the code. When the model changes, the evals are what tell you whether behavior actually held."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "The one rule that carries the rest. Never let an agent merge code no human has read."
+          }
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "How the codebase becomes the moat, not the agent",
+          "level": 2,
+          "paragraphs": [
+            "The tool is not the moat. Everyone rents the same frontier model at the same price. What compounds is the domain eval suite, the proprietary data your product generates, and the workflow your team encodes around both.",
+            "This is the copilot to data to fund flywheel. An AI copilot generates proprietary usage data and a growing library of domain-specific evals. A competitor cannot copy that by buying an API key, and it is what turns early traction into a fundable position. See how [data network effects in vertical AI](/library/data-network-effects-vertical-ai) make that data compound, and why [domain-specific evals become the real moat](/library/domain-specific-evals-ai-moat) once the model underneath keeps changing.",
+            "For an AI-native venture, the Build phase should output two assets, not one. The product, and the eval suite that encodes what correct means in your domain. The second asset is the one that holds the moat when the model beneath it is swapped for a cheaper or stronger one next quarter."
+          ]
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Failure modes: the velocity illusion",
+          "level": 2,
+          "paragraphs": [
+            "The signature failure mode is the velocity illusion. A team ships fast, feels 20% faster, quietly accrues slop debt, and only notices the regression when the codebase is too tangled for the agent to help. METR measured that exact gap between felt and real speed. It is the default outcome, not the exception, and naming it is the first defense against it."
+          ],
+          "bullets": [
+            "Over-automation. Letting an agent merge without a human read is how the almost-right defect ships straight to production.",
+            "Measuring the wrong thing. Lines of code and pull request count rise with an agent. Delivery stability and rework are what matter, and DORA shows those move the other way without the gate.",
+            "Model and vendor dependency. Treat a specific model as the moat and you are exposed the day its price or behavior changes.",
+            "The debugging tax. Speed booked today is often borrowed from a debugging session next month."
+          ]
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "How Avante ships zero-to-one this way",
+          "level": 2,
+          "paragraphs": [
+            "Eval-gated velocity maps onto one stage of a six-stage system: Research, Partner, Build, Traction, Revenue, Compound. It is the Build-stage discipline that lets a small team ship a real product without the debt that later stalls Traction. Speed is the input. A codebase you can still reason about is the output that matters.",
+            "The economics are specific. Avante Ventures launches 3-4 ventures per year and deploys $500K-1.5M per venture across pre-seed, retaining co-founder economics. AI infrastructure is now cheap enough to deploy without a Series A, and a studio venture launches 6-9 months ahead of a comparably funded standalone team. AI coding agents extend that time-to-traction lead only when the eval gate keeps the extra speed from turning back into rework.",
+            "Brazil is where this compounds fastest. Services account for roughly 70% of Brazilian GDP with low software penetration, so the field of buildable vertical software is enormous. And the local builders are ready. In GitHub's 2024 developer survey, 81% of Brazil respondents reported using AI coding tools and 61% said the tools improved their code quality. Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America, and this is the build discipline underneath the portfolio.",
+            "The agent is a lever, not a moat. What you keep after the build is the eval suite, the proprietary data, and a codebase a small team can still hold in its head. That is how AI speed becomes a defensible AI-native venture, and it is why the gate, not the tool, is the part worth obsessing over."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Do AI coding agents actually make developers faster?",
+          "a": "Not automatically. A 2025 METR randomized trial found experienced developers were 19% slower with AI tools even though they felt 20% faster. AI coding agents speed up well-scoped, verifiable tasks and slow down vague or unfamiliar ones. The gain is real only inside an eval gate with human review."
+        },
+        {
+          "q": "How do you use AI coding agents without shipping slop?",
+          "a": "Gate every merge. Scope each task to one verifiable outcome, make the agent write the test first, and require a passing eval plus a human read of the diff before anything merges. Keep diffs small and reversible so a bad change is a one-command revert, not a tangled mess."
+        },
+        {
+          "q": "What is eval-gated velocity?",
+          "a": "Eval-gated velocity is the discipline of pairing AI speed with a merge gate, where nothing ships without a passing eval and a human review. It converts raw agent speed into shipped quality instead of silent slop debt. The 2024 DORA data shows this is what separates AI adopters who improve delivery from those who degrade stability by 7.2%."
+        },
+        {
+          "q": "If the AI coding agent is not the moat, what is?",
+          "a": "The moat is the domain eval suite and the proprietary data the product generates, not the model. Everyone rents the same frontier model at the same price. This is the copilot to data to fund flywheel, where usage creates data and evals a competitor cannot copy with an API key."
+        },
+        {
+          "q": "Are developers in Brazil using AI coding tools?",
+          "a": "Yes, heavily. In GitHub's 2024 developer survey, 81% of Brazil respondents reported using AI coding tools and 61% said the tools improved their code quality. Combined with services at roughly 70% of Brazilian GDP and low software penetration, that makes Brazil a strong market for AI-native ventures."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Agentes de IA para Programar: do Zero ao Um sem Entregar Lixo",
+      "description": "Como usar agentes de IA para programar do zero ao um sem entregar lixo. Um playbook de velocidade com avaliação para uma venture AI-native enxuta.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Agentes de IA para programar conseguem comprimir uma construção do zero ao um de meses para semanas, mas só dentro de uma disciplina que os impede de entregar lixo. Essa disciplina tem nome. Velocidade com avaliação. Escopo apertado em cada tarefa, o agente escrevendo o teste primeiro, e cada merge passando por uma avaliação aprovada mais a leitura humana do diff.",
+            "Velocidade sem esse portão não é velocidade. É dívida que você ainda não percebeu. Este é o playbook do operador para usar agentes de IA para programar dentro de uma venture AI-native enxuta, não uma resenha de qual ferramenta comprar."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "A decisão de build: onde os agentes de IA para programar entram no zero ao um",
+          "level": 2,
+          "paragraphs": [
+            "A decisão de build real não é se você vai usar agentes de IA para programar. Quase todo desenvolvedor já usa. A decisão é mais estreita e mais importante. O que você deixa um agente dar merge sem um humano e uma avaliação no circuito.",
+            "A evidência sobre velocidade bruta deveria dar humildade a quem vende mágica. Em um ensaio controlado randomizado de julho de 2025, a [METR](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/) colocou 16 desenvolvedores open-source experientes em 246 issues reais de bases de código que eles conheciam bem. Com as ferramentas de IA, ficaram 19% mais lentos. Acreditavam que as ferramentas os haviam acelerado em 20%, e previam um ganho de 24% antes de começar. São 39 pontos de distância entre a velocidade sentida e a medida, e o setup usou modelos de fronteira, não modelos fracos.",
+            "Os dados de confiança contam a mesma história por outro ângulo. A [pesquisa Stack Overflow de 2025](https://survey.stackoverflow.co/2025/ai/) apontou 84% dos desenvolvedores usando ou planejando usar ferramentas de IA, enquanto só cerca de 33% confiam na precisão do que essas ferramentas produzem. A maior frustração, citada por 66%, é a saída que está quase certa, mas não exatamente. A correção não é um prompt melhor. É um portão melhor.",
+            "A leitura honesta é esta. Agentes de IA para programar encaixam no zero ao um quando o trabalho é bem escopado, verificável e de baixo raio de impacto. São a ferramenta errada para uma decisão vaga de arquitetura, um caminho crítico de segurança sem cobertura de testes, ou qualquer mudança cuja correção um humano não consiga confirmar em poucos minutos."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Desenvolvedores experientes ficaram 19% mais lentos com ferramentas de IA acreditando estar 20% mais rápidos, uma distância de 39 pontos entre velocidade sentida e medida.",
+            "attribution": "Ensaio controlado randomizado da METR, 2025"
+          }
+        },
+        {
+          "id": "the-playbook",
+          "heading": "O playbook: velocidade com avaliação, passo a passo",
+          "level": 2,
+          "paragraphs": [
+            "O playbook que separa qualidade entregue de lixo entregue é um protocolo de merge, não um truque de prompt. Você consegue rodar ainda esta semana na base de código que já tem. Cinco movimentos, em ordem, e nenhum opcional.",
+            "Os dados no nível do time explicam por que o portão não é opcional. O [relatório DORA de 2024](https://cloud.google.com/blog/products/devops-sre/announcing-the-2024-dora-report) descobriu que um aumento de 25% na adoção de IA veio acompanhado de uma queda estimada de 1,5% na vazão de entrega e de 7,2% na estabilidade de entrega, mesmo com a produtividade individual subindo. A própria conclusão do DORA é que lotes pequenos e testes fortes são o que transforma velocidade de IA em software entregue. O portão abaixo é essa conclusão, tornada operacional."
+          ],
+          "bullets": [
+            "Escopo em um único resultado verificável. Uma função, um endpoint, uma migração. Se você não consegue enunciar o teste de aceitação em uma frase, a tarefa é grande demais para entregar a um agente.",
+            "Faça o agente escrever o teste primeiro. O teste que falha é ao mesmo tempo a especificação e a avaliação. Um agente que escreve a asserção antes do código não consegue redefinir em silêncio o que significa pronto.",
+            "Coloque cada merge sob a avaliação mais uma leitura humana. Testes verdes são necessários, não suficientes. Uma pessoa revisa o diff pelo que os testes não veem. Abstração errada, acoplamento escondido, o atalho que vai apodrecer.",
+            "Mantenha os diffs pequenos e reversíveis. Dez pull requests pequenos, cada um revertível em um comando, valem mais que um único branch gigante de agente que ninguém entende por completo.",
+            "Cultive uma suíte de avaliações de domínio ao longo do caminho. Todo bug real que o agente introduz vira um teste permanente. Essa suíte é a catraca que deixa a velocidade compor em vez de decair."
+          ]
+        },
+        {
+          "id": "scope-and-tests",
+          "heading": "Escopo enxuto, deixe o agente escrever os testes primeiro",
+          "level": 3,
+          "paragraphs": [
+            "Escopo apertado com testes primeiro é o movimento que faz mais trabalho sozinho. Ele transforma o agente de um chutador confiante em um contribuidor que você consegue de fato conferir. Pule essa etapa e você herda o fardo de revisão que deixou aqueles desenvolvedores experientes mais lentos."
+          ],
+          "bullets": [
+            "Um critério de aceitação de uma frase é a linha entre um diff que pode dar merge e uma revisão que demora mais que escrever o código na mão.",
+            "Testes primeiro deixam a avaliação de graça. A mesma asserção que prova a funcionalidade guarda a próxima regressão, então a cobertura que fecha o portão é subproduto da construção, não trabalho extra."
+          ]
+        },
+        {
+          "id": "guardrails",
+          "heading": "Barreiras que barram o lixo",
+          "level": 2,
+          "paragraphs": [
+            "Barreiras são o que barra o lixo no instante em que ele tenta dar merge. Um agente é rápido em produzir algo plausível. A barreira é o que prova que o plausível também está correto, antes de chegar em produção.",
+            "Os dados de frustração mostram o que passa quando a barreira falta. A Stack Overflow apontou que 45,2% dos desenvolvedores dizem que depurar código gerado por IA leva mais tempo do que o esperado, e o defeito do quase-certo-mas-não-exatamente é o que 66% mais encontram. Os dois são o preço de dar merge só com testes verdes, sem ninguém ler o diff. A barreira sai mais barata que a sessão de depuração que ela evita."
+          ],
+          "bullets": [
+            "Trate testes verdes como piso, não como veredito. Um humano lê cada diff de agente atrás da falha que os testes não conseguem ver.",
+            "Limite o raio de impacto. Diffs pequenos e reversíveis transformam um merge ruim em um revert de um comando, não em um projeto de arqueologia.",
+            "Versione a suíte de avaliações junto com o código. Quando o modelo muda, as avaliações são o que diz se o comportamento realmente se manteve."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "A regra que sustenta as outras. Nunca deixe um agente dar merge em código que nenhum humano leu."
+          }
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "Como o código vira o moat, não o agente",
+          "level": 2,
+          "paragraphs": [
+            "A ferramenta não é o moat. Todo mundo aluga o mesmo modelo de fronteira pelo mesmo preço. O que compõe é a suíte de avaliações de domínio, o dado proprietário que o seu produto gera, e o fluxo de trabalho que o seu time codifica em torno dos dois.",
+            "Este é o flywheel copilot, dado, capital. Um copilot de IA gera dado de uso proprietário e uma biblioteca crescente de avaliações específicas de domínio. Um concorrente não copia isso comprando uma chave de API, e é o que transforma tração inicial em posição capaz de captar. Veja como os [efeitos de rede de dados na IA vertical](/library/data-network-effects-vertical-ai) fazem esse dado compor, e por que as [avaliações específicas de domínio viram o moat de verdade](/library/domain-specific-evals-ai-moat) quando o modelo por baixo continua mudando.",
+            "Para uma venture AI-native, a fase de Build deveria entregar dois ativos, não um. O produto, e a suíte de avaliações que codifica o que correto significa no seu domínio. O segundo ativo é o que segura o moat quando o modelo por baixo é trocado por um mais barato ou mais forte no próximo trimestre."
+          ]
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Modos de falha: a ilusão de velocidade",
+          "level": 2,
+          "paragraphs": [
+            "O modo de falha característico é a ilusão de velocidade. Um time entrega rápido, sente-se 20% mais rápido, acumula em silêncio dívida de lixo, e só percebe a regressão quando a base de código está emaranhada demais para o agente ajudar. A METR mediu exatamente essa distância entre velocidade sentida e real. É o resultado padrão, não a exceção, e nomeá-lo já é a primeira defesa contra ele."
+          ],
+          "bullets": [
+            "Automação em excesso. Deixar um agente dar merge sem leitura humana é como o defeito do quase-certo vai direto para produção.",
+            "Medir a coisa errada. Linhas de código e contagem de pull requests sobem com um agente. Estabilidade de entrega e retrabalho são o que importa, e o DORA mostra que esses vão para o outro lado sem o portão.",
+            "Dependência de modelo e de fornecedor. Trate um modelo específico como o moat e você fica exposto no dia em que o preço ou o comportamento dele muda.",
+            "O imposto da depuração. Velocidade contabilizada hoje costuma ser emprestada de uma sessão de depuração no mês que vem."
+          ]
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "Como a Avante entrega do zero ao um assim",
+          "level": 2,
+          "paragraphs": [
+            "Velocidade com avaliação encaixa em uma etapa de um sistema de seis estágios: Research, Partner, Build, Traction, Revenue, Compound. É a disciplina do estágio de Build que deixa um time pequeno entregar um produto de verdade sem a dívida que depois trava a Traction. Velocidade é o insumo. Uma base de código que você ainda consegue raciocinar é o resultado que importa.",
+            "A economia é específica. A Avante Ventures lança 3-4 ventures por ano e aporta $500K-1.5M por venture ao longo do pre-seed, mantendo economia de co-founder. A infraestrutura de IA já está barata o suficiente para lançar sem uma Série A, e uma venture de studio nasce 6-9 meses à frente de um time autônomo com financiamento comparável. Agentes de IA para programar estendem essa vantagem de time-to-traction só quando o portão de avaliação impede que a velocidade extra volte a virar retrabalho.",
+            "O Brasil é onde isso compõe mais rápido. Serviços respondem por cerca de 70% do PIB brasileiro com baixa penetração de software, então o campo de software vertical construível é enorme. E os construtores locais estão prontos. Na pesquisa de desenvolvedores da GitHub de 2024, 81% dos respondentes do Brasil disseram usar ferramentas de IA para programar e 61% disseram que as ferramentas melhoraram a qualidade do código. A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina, e esta é a disciplina de construção por baixo do portfólio.",
+            "O agente é uma alavanca, não um moat. O que você guarda depois da construção é a suíte de avaliações, o dado proprietário, e uma base de código que um time pequeno ainda consegue segurar na cabeça. É assim que velocidade de IA vira uma venture AI-native defensável, e é por isso que o portão, não a ferramenta, é a parte que merece a obsessão."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Agentes de IA para programar realmente deixam os desenvolvedores mais rápidos?",
+          "a": "Não automaticamente. Um ensaio randomizado da METR em 2025 constatou que desenvolvedores experientes ficaram 19% mais lentos com ferramentas de IA mesmo se sentindo 20% mais rápidos. Agentes de IA para programar aceleram tarefas bem escopadas e verificáveis e atrasam as vagas ou desconhecidas. O ganho só é real dentro de um portão de avaliação com revisão humana."
+        },
+        {
+          "q": "Como usar agentes de IA para programar sem entregar lixo?",
+          "a": "Coloque cada merge sob um portão. Faça o escopo de cada tarefa em um único resultado verificável, o agente escrevendo o teste primeiro, e uma avaliação aprovada mais uma leitura humana do diff antes de qualquer merge. Mantenha os diffs pequenos e reversíveis para que uma mudança ruim seja um revert de um comando."
+        },
+        {
+          "q": "O que é velocidade com avaliação no desenvolvimento com IA?",
+          "a": "Velocidade com avaliação é a disciplina de casar a velocidade da IA com um portão de merge, onde nada entra sem uma avaliação aprovada e uma revisão humana. Ela converte velocidade bruta de agente em qualidade entregue em vez de dívida de lixo silenciosa. Os dados do DORA de 2024 mostram que é isso que separa quem adota IA e melhora a entrega de quem degrada a estabilidade em 7,2%."
+        },
+        {
+          "q": "Se o agente de IA não é o moat, o que é?",
+          "a": "O moat é a suíte de avaliações de domínio e o dado proprietário que o produto gera, não o modelo. Todo mundo aluga o mesmo modelo de fronteira pelo mesmo preço. Este é o flywheel copilot, dado, capital, onde o uso cria dado e avaliações que um concorrente não copia com uma chave de API."
+        },
+        {
+          "q": "Os desenvolvedores no Brasil usam ferramentas de IA para programar?",
+          "a": "Sim, bastante. Na pesquisa de desenvolvedores da GitHub de 2024, 81% dos respondentes do Brasil disseram usar ferramentas de IA para programar e 61% disseram que elas melhoraram a qualidade do código. Combinado com serviços em cerca de 70% do PIB brasileiro e baixa penetração de software, isso faz do Brasil um mercado forte para ventures AI-native."
+        }
+      ]
+    },
+    "es": {
+      "title": "Agentes de IA para Programar: del Cero al Uno sin Entregar Basura",
+      "description": "Cómo usar agentes de IA para programar del cero al uno sin entregar basura. Un playbook de velocidad con evaluación para una venture AI-native.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Los agentes de IA para programar pueden comprimir una construcción del cero al uno de meses a semanas, pero solo dentro de una disciplina que les impide entregar basura. Esa disciplina tiene nombre. Velocidad con evaluación. Alcance ajustado en cada tarea, el agente escribiendo la prueba primero, y cada merge pasando por una evaluación aprobada más la lectura humana del diff.",
+            "Velocidad sin esa compuerta no es velocidad. Es deuda que aún no ha notado. Este es el playbook del operador para usar agentes de IA para programar dentro de una venture AI-native, no una reseña de qué herramienta comprar."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "La decisión de build: dónde encajan los agentes de IA para programar en el cero al uno",
+          "level": 2,
+          "paragraphs": [
+            "La decisión de build real no es si va a usar agentes de IA para programar. Casi todo desarrollador ya lo hace. La decisión es más estrecha y más importante. Qué deja que un agente lleve a merge sin un humano y una evaluación en el circuito.",
+            "La evidencia sobre la velocidad bruta debería dar humildad a quien vende magia. En un ensayo controlado aleatorizado de julio de 2025, [METR](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/) puso a 16 desarrolladores open-source experimentados a resolver 246 issues reales en bases de código que conocían bien. Con las herramientas de IA fueron 19% más lentos. Creían que las herramientas los habían acelerado un 20%, y habían pronosticado una ganancia del 24% antes de empezar. Son 39 puntos de distancia entre la velocidad sentida y la medida, y el setup usó modelos de frontera, no modelos débiles.",
+            "Los datos de confianza cuentan la misma historia desde otro ángulo. La [encuesta de Stack Overflow de 2025](https://survey.stackoverflow.co/2025/ai/) encontró un 84% de desarrolladores usando o planeando usar herramientas de IA, mientras solo cerca del 33% confía en la precisión de lo que esas herramientas producen. La mayor frustración, citada por el 66%, es la salida que está casi bien, pero no del todo. El arreglo no es un mejor prompt. Es una mejor compuerta.",
+            "La lectura honesta es esta. Los agentes de IA para programar encajan en el cero al uno cuando el trabajo está bien acotado, es verificable y de bajo radio de impacto. Son la herramienta equivocada para una decisión vaga de arquitectura, una ruta crítica de seguridad sin cobertura de pruebas, o cualquier cambio cuya corrección un humano no pueda confirmar en pocos minutos."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Desarrolladores experimentados fueron 19% más lentos con herramientas de IA creyendo ser 20% más rápidos, una distancia de 39 puntos entre velocidad sentida y medida.",
+            "attribution": "Ensayo controlado aleatorizado de METR, 2025"
+          }
+        },
+        {
+          "id": "the-playbook",
+          "heading": "El playbook: velocidad con evaluación, paso a paso",
+          "level": 2,
+          "paragraphs": [
+            "El playbook que separa la calidad entregada de la basura entregada es un protocolo de merge, no un truco de prompt. Puede ejecutarlo esta misma semana sobre la base de código que ya tiene. Cinco movimientos, en orden, y ninguno opcional.",
+            "Los datos a nivel de equipo explican por qué la compuerta no es opcional. El [informe DORA de 2024](https://cloud.google.com/blog/products/devops-sre/announcing-the-2024-dora-report) encontró que un aumento del 25% en la adopción de IA vino acompañado de una caída estimada del 1,5% en el rendimiento de entrega y del 7,2% en la estabilidad de entrega, aun con la productividad individual subiendo. La propia conclusión de DORA es que los lotes pequeños y las pruebas sólidas son lo que convierte la velocidad de la IA en software entregado. La compuerta de abajo es esa conclusión, vuelta operativa."
+          ],
+          "bullets": [
+            "Acote a un único resultado verificable. Una función, un endpoint, una migración. Si no puede enunciar la prueba de aceptación en una frase, la tarea es demasiado grande para entregarla a un agente.",
+            "Haga que el agente escriba la prueba primero. La prueba que falla es a la vez la especificación y la evaluación. Un agente que escribe la aserción antes del código no puede redefinir en silencio qué significa terminado.",
+            "Ponga cada merge bajo la evaluación más una lectura humana. Las pruebas en verde son necesarias, no suficientes. Una persona revisa el diff por lo que las pruebas no ven. Abstracción equivocada, acoplamiento oculto, el atajo que se va a pudrir.",
+            "Mantenga los diffs pequeños y reversibles. Diez pull requests pequeños, cada uno reversible en un comando, valen más que una sola rama gigante de agente que nadie entiende por completo.",
+            "Cultive una suite de evaluaciones de dominio sobre la marcha. Cada bug real que el agente introduce se vuelve una prueba permanente. Esa suite es el trinquete que deja que la velocidad componga en vez de decaer."
+          ]
+        },
+        {
+          "id": "scope-and-tests",
+          "heading": "Alcance ajustado, deja que el agente escriba las pruebas primero",
+          "level": 3,
+          "paragraphs": [
+            "Alcance ajustado con pruebas primero es el movimiento que hace más trabajo por sí solo. Convierte al agente de un adivinador confiado en un colaborador que usted sí puede verificar. Sáltese este paso y hereda la carga de revisión que dejó más lentos a aquellos desarrolladores experimentados."
+          ],
+          "bullets": [
+            "Un criterio de aceptación de una frase es la línea entre un diff que puede llegar a merge y una revisión que tarda más que escribir el código a mano.",
+            "Las pruebas primero dejan la evaluación gratis. La misma aserción que prueba la funcionalidad protege la próxima regresión, así que la cobertura que cierra la compuerta es un subproducto de la construcción, no trabajo extra."
+          ]
+        },
+        {
+          "id": "guardrails",
+          "heading": "Barreras que frenan la basura",
+          "level": 2,
+          "paragraphs": [
+            "Las barreras son lo que frena la basura en el instante en que intenta llegar a merge. Un agente es rápido para producir algo plausible. La barrera es lo que prueba que lo plausible también es correcto, antes de llegar a producción.",
+            "Los datos de frustración muestran lo que se cuela cuando falta la barrera. Stack Overflow encontró que el 45,2% de los desarrolladores dice que depurar código generado por IA toma más tiempo del esperado, y el defecto del casi-bien-pero-no-del-todo es el que más golpea al 66%. Ambos son el precio de llegar a merge solo con pruebas en verde, sin nadie leyendo el diff. La barrera sale más barata que la sesión de depuración que evita."
+          ],
+          "bullets": [
+            "Trate las pruebas en verde como piso, no como veredicto. Un humano lee cada diff de agente en busca de la falla que las pruebas no pueden ver.",
+            "Limite el radio de impacto. Diffs pequeños y reversibles convierten un mal merge en un revert de un comando, no en un proyecto de arqueología.",
+            "Versione la suite de evaluaciones junto con el código. Cuando el modelo cambia, las evaluaciones son lo que dice si el comportamiento de verdad se mantuvo."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "La regla que sostiene a las demás. Nunca deje que un agente lleve a merge código que ningún humano ha leído."
+          }
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "Cómo el código se vuelve el moat, no el agente",
+          "level": 2,
+          "paragraphs": [
+            "La herramienta no es el moat. Todos alquilan el mismo modelo de frontera al mismo precio. Lo que compone es la suite de evaluaciones de dominio, el dato propietario que su producto genera, y el flujo de trabajo que su equipo codifica alrededor de ambos.",
+            "Este es el flywheel copilot, dato, capital. Un copilot de IA genera dato de uso propietario y una biblioteca creciente de evaluaciones específicas de dominio. Un competidor no copia eso comprando una clave de API, y es lo que convierte la tracción temprana en una posición capaz de levantar capital. Vea cómo los [efectos de red de datos en la IA vertical](/library/data-network-effects-vertical-ai) hacen que ese dato componga, y por qué las [evaluaciones específicas de dominio se vuelven el moat de verdad](/library/domain-specific-evals-ai-moat) cuando el modelo de abajo sigue cambiando.",
+            "Para una venture AI-native, la fase de Build debería entregar dos activos, no uno. El producto, y la suite de evaluaciones que codifica qué significa correcto en su dominio. El segundo activo es el que sostiene el moat cuando el modelo de abajo se cambia por uno más barato o más fuerte el próximo trimestre."
+          ]
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Modos de falla: la ilusión de velocidad",
+          "level": 2,
+          "paragraphs": [
+            "El modo de falla característico es la ilusión de velocidad. Un equipo entrega rápido, se siente 20% más rápido, acumula en silencio deuda de basura, y solo nota la regresión cuando la base de código está demasiado enredada para que el agente ayude. METR midió exactamente esa distancia entre velocidad sentida y real. Es el resultado por defecto, no la excepción, y nombrarlo ya es la primera defensa contra él."
+          ],
+          "bullets": [
+            "Sobreautomatización. Dejar que un agente llegue a merge sin lectura humana es como el defecto del casi-bien llega directo a producción.",
+            "Medir lo equivocado. Las líneas de código y el conteo de pull requests suben con un agente. La estabilidad de entrega y el retrabajo son lo que importa, y DORA muestra que esos van hacia el otro lado sin la compuerta.",
+            "Dependencia de modelo y de proveedor. Trate un modelo específico como el moat y queda expuesto el día en que su precio o su comportamiento cambia.",
+            "El impuesto de la depuración. La velocidad contabilizada hoy suele estar prestada de una sesión de depuración el mes que viene."
+          ]
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "Cómo Avante entrega del cero al uno de esta forma",
+          "level": 2,
+          "paragraphs": [
+            "Velocidad con evaluación encaja en una etapa de un sistema de seis etapas: Research, Partner, Build, Traction, Revenue, Compound. Es la disciplina de la etapa de Build que deja a un equipo pequeño entregar un producto de verdad sin la deuda que después traba la Traction. La velocidad es el insumo. Una base de código que todavía puede razonar es el resultado que importa.",
+            "La economía es específica. Avante Ventures lanza 3-4 ventures por año y despliega $500K-1.5M por venture a lo largo del pre-seed, reteniendo economía de co-founder. La infraestructura de IA ya está lo bastante barata para lanzar sin una Serie A, y una venture de studio nace 6-9 meses por delante de un equipo autónomo con financiamiento comparable. Los agentes de IA para programar extienden esa ventaja de time-to-traction solo cuando la compuerta de evaluación impide que la velocidad extra vuelva a convertirse en retrabajo.",
+            "Brasil es donde esto compone más rápido. Los servicios representan cerca del 70% del PIB brasileño con baja penetración de software, así que el campo de software vertical construible es enorme. Y los constructores locales están listos. En la encuesta de desarrolladores de GitHub de 2024, el 81% de los encuestados de Brasil dijo usar herramientas de IA para programar y el 61% dijo que las herramientas mejoraron la calidad del código. Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina, y esta es la disciplina de construcción por debajo del portafolio.",
+            "El agente es una palanca, no un moat. Lo que usted conserva después de la construcción es la suite de evaluaciones, el dato propietario, y una base de código que un equipo pequeño todavía puede sostener en la cabeza. Así es como la velocidad de la IA se vuelve una venture AI-native defendible, y por eso la compuerta, no la herramienta, es la parte que vale la obsesión."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Los agentes de IA para programar de verdad hacen más rápidos a los desarrolladores?",
+          "a": "No automáticamente. Un ensayo aleatorizado de METR en 2025 halló que desarrolladores experimentados fueron 19% más lentos con herramientas de IA aun sintiéndose 20% más rápidos. Los agentes de IA para programar aceleran tareas bien acotadas y verificables y frenan las vagas o desconocidas. La ganancia solo es real dentro de una compuerta de evaluación con revisión humana."
+        },
+        {
+          "q": "¿Cómo usar agentes de IA para programar sin entregar basura?",
+          "a": "Ponga cada merge bajo una compuerta. Acote cada tarea a un único resultado verificable, el agente escribiendo la prueba primero, y una evaluación aprobada más una lectura humana del diff antes de cualquier merge. Mantenga los diffs pequeños y reversibles para que un mal cambio sea un revert de un comando."
+        },
+        {
+          "q": "¿Qué es velocidad con evaluación en el desarrollo con IA?",
+          "a": "Velocidad con evaluación es la disciplina de casar la velocidad de la IA con una compuerta de merge, donde nada entra sin una evaluación aprobada y una revisión humana. Convierte la velocidad bruta del agente en calidad entregada en vez de deuda de basura silenciosa. Los datos de DORA de 2024 muestran que eso es lo que separa a quien adopta IA y mejora la entrega de quien degrada la estabilidad en 7,2%."
+        },
+        {
+          "q": "Si el agente de IA no es el moat, ¿qué lo es?",
+          "a": "El moat es la suite de evaluaciones de dominio y el dato propietario que el producto genera, no el modelo. Todos alquilan el mismo modelo de frontera al mismo precio. Este es el flywheel copilot, dato, capital, donde el uso crea dato y evaluaciones que un competidor no copia con una clave de API."
+        },
+        {
+          "q": "¿Los desarrolladores en Brasil usan herramientas de IA para programar?",
+          "a": "Sí, bastante. En la encuesta de desarrolladores de GitHub de 2024, el 81% de los encuestados de Brasil dijo usar herramientas de IA para programar y el 61% dijo que mejoraron la calidad del código. Combinado con servicios en cerca del 70% del PIB brasileño y baja penetración de software, eso hace de Brasil un mercado fuerte para ventures AI-native."
+        }
+      ]
+    },
+    "ogImage": "/og/ai-coding-agents-zero-to-one-playbook.png"
+  },
+  {
+    "slug": "ai-customer-discovery-b2b-playbook",
+    "category": "playbooks",
+    "type": "Playbook",
+    "readTime": "9 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-03",
+    "isPublished": true,
+    "en": {
+      "title": "AI Customer Discovery: Validate a B2B Venture Faster",
+      "description": "How to run AI customer discovery to validate a B2B venture faster without faking conviction. A field playbook for the pre-launch build.",
+      "sections": [
+        {
+          "paragraphs": [
+            "AI customer discovery is how a founding team compresses the slow parts of B2B validation without faking conviction. The tooling synthesizes interview transcripts, mines public demand signals, and drafts outreach at volume, so a two-person team can talk to more of the right buyers and reach an honest go or no-go faster. What it cannot do is have the conversation for you or supply the judgment to read a market. This is a field playbook for the pre-launch build, not a tool review."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "What AI does well in customer discovery, and what it cannot fake",
+          "level": 2,
+          "paragraphs": [
+            "AI earns its place in discovery on the mechanical work, never the judgment. It is genuinely good at four things. Clustering dozens of interview transcripts into recurring pain points. Reading public demand signals at scale. Drafting and personalizing outreach so a small team reaches a real sample. Tagging and summarizing so two founders can read across fifty conversations instead of five.",
+            "What it cannot fake is the conversation and the read on the market. A model will summarize a set of interviews into a clean story every single time. It has no instinct for the follow-up question that makes a buyer squirm, the polite pause that means no, or the gap between a stated preference and an actual budget line. Those stay operator jobs. The tool compresses the labor around the judgment. It never supplies the judgment.",
+            "The backdrop is that AI-assisted work is now ordinary. In the 2025 Stack Overflow Developer Survey, 84% of respondents said they use or plan to use AI tools, up from 76% a year earlier ([Stack Overflow 2025 Developer Survey](https://survey.stackoverflow.co/2025/ai/)). The same survey found more developers distrust the accuracy of AI output than trust it. High usage, earned skepticism. That is exactly the posture to bring to discovery."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "84% of developers now use or plan to use AI tools in their work, up from 76% a year earlier.",
+            "attribution": "Stack Overflow 2025 Developer Survey"
+          }
+        },
+        {
+          "id": "the-playbook",
+          "heading": "Run AI customer discovery in five steps",
+          "level": 2,
+          "paragraphs": [
+            "Here is the sequence an operator can run this week. The methodological backbone is Steve Blank customer development, and its premise is blunt. There are no facts inside your building, so get out of it. AI changes the cost of running the steps. It does not change the logic of them."
+          ],
+          "bullets": [
+            "Define the ICP hypothesis in one written paragraph. Who feels the pain, how sharp it is, what they do about it today, what they would pay. This is the hypothesis you are trying to kill, not confirm.",
+            "Use AI to source and prioritize target accounts. Pull the list against the ICP, enrich it, and rank by fit and reachability. In LATAM, reachability weighs as much as fit, so blend email with direct outreach and warm intros.",
+            "Run and transcribe the interviews. You run the conversation with real operators. The model handles only the typing, with consent, so your attention stays on the person.",
+            "Cluster and summarize, with a human checking for wishful reading. Let the model group the pain points. Then reread the raw quotes to catch where a soft answer got rounded up into a hard signal.",
+            "Synthesize a go or no-go against the original hypothesis. If the evidence killed the idea, you won in weeks instead of pivoting in years."
+          ]
+        },
+        {
+          "id": "interview-synthesis",
+          "heading": "Synthesizing interviews without fooling yourself",
+          "level": 3,
+          "paragraphs": [
+            "The synthesis step is where discovery quietly goes wrong. A model optimizes for a coherent summary, and coherence is not conviction. The guardrail is mechanical. Force the model to cite the exact quote behind every claimed pain point, then read those quotes cold, before you read its tidy conclusion.",
+            "Ground every signal in what a buyer did, not what they said they might do. A signed pilot. A workaround they already built themselves. A line item sitting in a budget. Stated enthusiasm about a future purchase is the cheapest signal there is, and the one a summary is most likely to inflate into a false positive."
+          ]
+        },
+        {
+          "id": "signal-mining",
+          "heading": "Mining public signals for real demand",
+          "level": 2,
+          "paragraphs": [
+            "Most B2B buyers now research in public long before they talk to anyone. Gartner's 2025 survey found that 67% of B2B buyers prefer a rep-free buying experience and 45% used AI tools during a recent purchase, across 646 buyers surveyed from August through September 2025 ([Gartner via Digital Commerce 360](https://www.digitalcommerce360.com/2026/03/17/gartner-b2b-buyers-rep-free-purchasing-ai-reshapes-sales/)). For a founder, that habit is a gift, because the demand leaves a public trail.",
+            "Job posts that describe your problem as a role someone is hiring to solve. Review-site complaints about the incumbent. Community threads begging for a workaround. Support forums repeating the same issue for years. AI reads that corpus at scale and clusters it into the shape of a market. It turns the buyer's rep-free research habit into a discovery input you can act on before the first call."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "67% of B2B buyers prefer a rep-free buying experience and 45% used AI tools during a recent purchase.",
+            "attribution": "Gartner buyer survey, August to September 2025"
+          }
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "How discovery data seeds the product data loop",
+          "level": 2,
+          "paragraphs": [
+            "The discovery corpus is the first turn of the copilot to data to fund flywheel. Every transcript, every clustered pain point, every tagged public signal is proprietary data about one specific market that no competitor holds. That corpus becomes the training set for the eventual product, the seed of a domain-specific evaluation set, and the map of which workflow to automate first.",
+            "The moat is never the model, which any competitor can rent by the token. The moat is the accumulated domain data and judgment the discovery work created. Build the copilot, let it generate proprietary data, then use the data to raise and deploy capital. That is the [copilot to data to fund flywheel](/library/copilot-to-data-to-fund-flywheel), and disciplined discovery is where it begins."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "The single move that compounds. Save every transcript and every tagged signal in one place from day one. It is the seed of the product, not disposable research."
+          }
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Failure modes: synthetic conviction",
+          "level": 2,
+          "paragraphs": [
+            "The signature failure of AI customer discovery is synthetic conviction. The model summarizes a pile of lukewarm interviews into a confident narrative, the founder reads the story they wanted, and a bad idea survives the one stage that should have ended it. The conversations that would have killed the venture in month two get smoothed into an encouraging paragraph, and the team spends a year building on it.",
+            "The discipline matters more as AI adoption climbs across Brazil and LATAM, because more founders are now chasing the same buyers with the same models. Gartner has found that the large majority of failed AI projects trace back to poor or missing data, and discovery synthesis is no exception. Feed the model a thin, self-selected sample and it will hand you a confident answer built on nothing. Watch for the usual traps."
+          ],
+          "bullets": [
+            "Skipping the hard conversations because the transcript pile already looks like enough.",
+            "Measuring stated intent instead of demonstrated behavior.",
+            "Over-trusting a clean summary because it reads well and confirms the plan.",
+            "Feeding the model thin or biased input. Garbage in produces confident garbage out."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "41.9% of Brazilian industrial firms with 100 or more employees used AI by 2024, up from 16.9% in 2022.",
+            "attribution": "IBGE PINTEC, released September 2025"
+          }
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "How Avante compresses validation in the Research stage",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America, and it runs this exact playbook inside the Research and Partner stages of its six-stage system. Operator depth is the edge. A domain operator with years of scar tissue in a Brazilian market knows which buyer answers are polite fiction and which are real budget, and that read is what AI cannot fake.",
+            "So Avante pairs the judgment with the tooling rather than replacing it. The studio launches 3-4 ventures per year with $500K-1.5M deployed per venture, and compressing discovery is part of how a studio venture reaches the market 6-9 months ahead of a comparably funded standalone team. Services are roughly 70% of Brazilian GDP with low software penetration, and AI adoption is rising fast, so the supply of under-served B2B buyers is deep and the race to reach them is real.",
+            "The tooling shortens the search. It does not make the decision. The founder who keeps reading the raw evidence, and keeps asking the question the model would never think to ask, is the one who kills the bad idea early and builds the right one. See [why Avante builds this way](/why-avante)."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is AI customer discovery?",
+          "a": "AI customer discovery is using models to compress the slow parts of B2B validation, transcript synthesis, public-signal mining, and outreach drafting, so a founding team can talk to more of the right buyers and reach a go or no-go faster. It accelerates the mechanical work of discovery. It does not replace the operator conversation or the judgment to read a market."
+        },
+        {
+          "q": "Can AI replace customer interviews?",
+          "a": "No. AI can transcribe, cluster, and summarize interviews, but it cannot run the conversation or tell a polite answer from a real budget. The founder still has to get out of the building, in Steve Blank's phrase, and ask the uncomfortable questions a model would never think to ask."
+        },
+        {
+          "q": "How do you validate a B2B startup with AI without faking conviction?",
+          "a": "Ground every signal in demonstrated behavior rather than stated intent, and force the model to cite the exact quote behind each claimed pain point. Then have a human read those quotes cold to catch where a soft answer got rounded up. The goal is an honest go or no-go, not a tidy narrative."
+        },
+        {
+          "q": "What is the biggest risk in AI customer discovery?",
+          "a": "Synthetic conviction, where the model summarizes lukewarm interviews into a confident story the founder wanted to hear, and a bad idea survives the stage that should have killed it. The fix is to measure what buyers do, not what they say, and to keep a human reading the raw evidence."
+        },
+        {
+          "q": "How does AI customer discovery create a moat?",
+          "a": "The discovery corpus is proprietary data about one specific market that competitors do not have, and it seeds the product data loop. That is the copilot to data to fund flywheel. The moat is never the model, which anyone can rent. It is the accumulated domain data and judgment the discovery work created."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Descoberta de Clientes com IA: Valide uma Venture B2B mais Rápido",
+      "description": "Como fazer descoberta de clientes com IA para validar uma venture B2B mais rápido sem forjar convicção. Um playbook de campo pré-lançamento.",
+      "sections": [
+        {
+          "paragraphs": [
+            "A descoberta de clientes com IA é como um time fundador comprime as partes lentas da validação B2B sem forjar convicção. A ferramenta sintetiza transcrições de entrevistas, minera sinais públicos de demanda e redige abordagens em escala, para que uma dupla converse com mais dos compradores certos e chegue mais rápido a um go ou no-go honesto. O que ela não faz é ter a conversa por você nem fornecer o discernimento para ler um mercado. Este é um playbook de campo para o pré-lançamento, não uma resenha de ferramentas."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "O que a IA faz bem na descoberta de clientes, e o que ela não consegue forjar",
+          "level": 2,
+          "paragraphs": [
+            "A IA ganha seu lugar na descoberta no trabalho mecânico, nunca no discernimento. Ela é genuinamente boa em quatro coisas. Agrupar dezenas de transcrições de entrevistas em dores recorrentes. Ler sinais públicos de demanda em escala. Redigir e personalizar abordagens para que um time pequeno alcance uma amostra real. Etiquetar e resumir para que dois fundadores leiam cinquenta conversas em vez de cinco.",
+            "O que ela não consegue forjar é a conversa e a leitura do mercado. Um modelo vai resumir um conjunto de entrevistas numa história limpa toda vez. Ele não tem instinto para a pergunta de acompanhamento que deixa o comprador desconfortável, para a pausa educada que significa não, ou para a distância entre uma preferência declarada e uma linha de orçamento real. Isso continua sendo trabalho de operador. A ferramenta comprime o esforço ao redor do julgamento. Ela nunca fornece o julgamento.",
+            "O pano de fundo é que o trabalho assistido por IA já virou rotina. Na Stack Overflow Developer Survey de 2025, 84% dos respondentes disseram usar ou planejar usar ferramentas de IA, contra 76% um ano antes ([Stack Overflow 2025 Developer Survey](https://survey.stackoverflow.co/2025/ai/)). A mesma pesquisa mostrou que mais desenvolvedores desconfiam da precisão da IA do que confiam. Uso alto, ceticismo merecido. É exatamente a postura para levar à descoberta."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "84% dos desenvolvedores já usam ou planejam usar ferramentas de IA no trabalho, contra 76% um ano antes.",
+            "attribution": "Stack Overflow 2025 Developer Survey"
+          }
+        },
+        {
+          "id": "the-playbook",
+          "heading": "Faça a descoberta de clientes com IA em cinco passos",
+          "level": 2,
+          "paragraphs": [
+            "Esta é a sequência que um operador roda esta semana. A espinha metodológica é o customer development de Steve Blank, e a premissa é direta. Não há fatos dentro do seu prédio, então saia dele. A IA muda o custo de rodar os passos. Ela não muda a lógica deles."
+          ],
+          "bullets": [
+            "Defina a hipótese de ICP em um parágrafo escrito. Quem sente a dor, quão aguda ela é, o que a pessoa faz hoje a respeito, quanto pagaria. Esta é a hipótese que você tenta matar, não confirmar.",
+            "Use IA para prospectar e priorizar contas-alvo. Puxe a lista contra o ICP, enriqueça e ranqueie por aderência e alcançabilidade. Na América Latina, alcançabilidade pesa tanto quanto aderência, então combine e-mail com abordagem direta e apresentações.",
+            "Faça e transcreva as entrevistas. Você conduz a conversa com operadores reais. O modelo cuida apenas da digitação, com consentimento, para sua atenção ficar na pessoa.",
+            "Agrupe e resuma, com um humano checando leitura enviesada. Deixe o modelo agrupar as dores. Depois releia as citações cruas para pegar onde uma resposta morna virou sinal forte.",
+            "Sintetize um go ou no-go contra a hipótese original. Se a evidência matou a ideia, você venceu em semanas em vez de pivotar em anos."
+          ]
+        },
+        {
+          "id": "interview-synthesis",
+          "heading": "Sintetizando entrevistas sem se enganar",
+          "level": 3,
+          "paragraphs": [
+            "O passo de síntese é onde a descoberta silenciosamente dá errado. Um modelo otimiza para um resumo coerente, e coerência não é convicção. A proteção é mecânica. Force o modelo a citar a frase exata por trás de cada dor apontada, e leia essas citações a frio, antes de ler a conclusão arrumada dele.",
+            "Ancore cada sinal no que o comprador fez, não no que disse que talvez faça. Um piloto assinado. Uma gambiarra que ele mesmo já construiu. Uma rubrica que já está no orçamento. Entusiasmo declarado sobre uma compra futura é o sinal mais barato que existe, e o que um resumo mais tende a inflar num falso positivo."
+          ]
+        },
+        {
+          "id": "signal-mining",
+          "heading": "Minerando sinais públicos de demanda real",
+          "level": 2,
+          "paragraphs": [
+            "A maioria dos compradores B2B hoje pesquisa em público muito antes de falar com alguém. A pesquisa da Gartner de 2025 encontrou que 67% dos compradores B2B preferem uma experiência de compra sem vendedor e 45% usaram ferramentas de IA em uma compra recente, entre 646 compradores ouvidos de agosto a setembro de 2025 ([Gartner via Digital Commerce 360](https://www.digitalcommerce360.com/2026/03/17/gartner-b2b-buyers-rep-free-purchasing-ai-reshapes-sales/)). Para um fundador, esse hábito é um presente, porque a demanda deixa um rastro público.",
+            "Vagas de emprego que descrevem o seu problema como um cargo que alguém está contratando para resolver. Reclamações em sites de avaliação sobre o incumbente. Threads de comunidade implorando por uma solução alternativa. Fóruns de suporte repetindo o mesmo problema por anos. A IA lê esse corpus em escala e o agrupa no formato de um mercado. Ela transforma o hábito de pesquisa sem vendedor num insumo de descoberta que você usa antes da primeira ligação."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "67% dos compradores B2B preferem uma experiência de compra sem vendedor e 45% usaram ferramentas de IA em uma compra recente.",
+            "attribution": "Pesquisa Gartner com compradores, agosto a setembro de 2025"
+          }
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "Como os dados de descoberta semeiam o loop de dados do produto",
+          "level": 2,
+          "paragraphs": [
+            "O corpus de descoberta é a primeira volta do flywheel copilot, dado, capital. Cada transcrição, cada dor agrupada, cada sinal público etiquetado é dado proprietário sobre um mercado específico que nenhum concorrente tem. Esse corpus vira o conjunto de treino do produto futuro, a semente de um conjunto de avaliação específico do domínio e o mapa de qual fluxo automatizar primeiro.",
+            "O moat nunca é o modelo, que qualquer concorrente aluga por token. O moat é o dado de domínio acumulado e o discernimento que o trabalho de descoberta criou. Construa o copilot, deixe-o gerar dado proprietário e use o dado para levantar e alocar capital. Esse é o [flywheel copilot, dado, capital](/library/copilot-to-data-to-fund-flywheel), e a descoberta disciplinada é onde ele começa."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "O movimento único que compõe. Guarde cada transcrição e cada sinal etiquetado num só lugar desde o dia um. É a semente do produto, não pesquisa descartável."
+          }
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Modos de falha: convicção sintética",
+          "level": 2,
+          "paragraphs": [
+            "A falha característica da descoberta de clientes com IA é a convicção sintética. O modelo resume uma pilha de entrevistas mornas numa narrativa confiante, o fundador lê a história que queria, e uma ideia ruim sobrevive ao único estágio que deveria tê-la matado. As conversas que teriam encerrado a venture no segundo mês são alisadas num parágrafo animador, e o time passa um ano construindo em cima disso.",
+            "A disciplina importa mais à medida que a adoção de IA sobe no Brasil e na América Latina, porque mais fundadores agora disputam os mesmos compradores com os mesmos modelos. A Gartner encontrou que a grande maioria dos projetos de IA que falham tem origem em dados ruins ou ausentes, e a síntese de descoberta não é exceção. Alimente o modelo com uma amostra rala e enviesada e ele devolve uma resposta confiante construída sobre nada. Fique de olho nas armadilhas de sempre."
+          ],
+          "bullets": [
+            "Pular as conversas difíceis porque a pilha de transcrições já parece suficiente.",
+            "Medir intenção declarada em vez de comportamento demonstrado.",
+            "Confiar demais num resumo limpo porque ele lê bem e confirma o plano.",
+            "Alimentar o modelo com insumo raso ou enviesado. Lixo na entrada produz lixo confiante na saída."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "41,9% das indústrias brasileiras com 100 ou mais empregados usavam IA em 2024, contra 16,9% em 2022.",
+            "attribution": "IBGE PINTEC, divulgado em setembro de 2025"
+          }
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "Como a Avante comprime a validação no estágio de Research",
+          "level": 2,
+          "paragraphs": [
+            "A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina, e roda exatamente este playbook dentro dos estágios de Research e Partner do seu sistema de seis estágios. A profundidade de operador é a vantagem. Um operador de domínio com anos de cicatrizes num mercado brasileiro sabe quais respostas de comprador são ficção educada e quais são orçamento real, e essa leitura é o que a IA não consegue forjar.",
+            "Por isso a Avante junta o discernimento à ferramenta em vez de substituí-lo. O studio lança de 3 a 4 ventures por ano com US$ 500K-1.5M alocados por venture, e comprimir a descoberta é parte de como uma venture de studio chega ao mercado de 6 a 9 meses antes de um time independente com financiamento comparável. Serviços são cerca de 70% do PIB brasileiro com baixa penetração de software, e a adoção de IA sobe rápido, então a oferta de compradores B2B mal atendidos é profunda e a corrida para alcançá-los é real.",
+            "A ferramenta encurta a busca. Ela não toma a decisão. O fundador que continua lendo a evidência crua, e continua fazendo a pergunta que o modelo jamais pensaria em fazer, é quem mata cedo a ideia ruim e constrói a certa. Veja [por que a Avante constrói assim](/why-avante)."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "O que é descoberta de clientes com IA?",
+          "a": "Descoberta de clientes com IA é usar modelos para comprimir as partes lentas da validação B2B, a síntese de transcrições, a mineração de sinais públicos e a redação de abordagens, para que um time fundador converse com mais dos compradores certos e chegue mais rápido a um go ou no-go. Ela acelera o trabalho mecânico da descoberta. Não substitui a conversa de operador nem o discernimento para ler um mercado."
+        },
+        {
+          "q": "A IA pode substituir as entrevistas com clientes?",
+          "a": "Não. A IA transcreve, agrupa e resume entrevistas, mas não conduz a conversa nem distingue uma resposta educada de um orçamento real. O fundador ainda precisa sair do prédio, na frase de Steve Blank, e fazer as perguntas desconfortáveis que um modelo jamais pensaria em fazer."
+        },
+        {
+          "q": "Como validar uma startup B2B com IA sem forjar convicção?",
+          "a": "Ancore cada sinal em comportamento demonstrado, não em intenção declarada, e force o modelo a citar a frase exata por trás de cada dor apontada. Depois deixe um humano ler essas citações a frio para pegar onde uma resposta morna foi arredondada para cima. O objetivo é um go ou no-go honesto, não uma narrativa arrumada."
+        },
+        {
+          "q": "Qual é o maior risco na descoberta de clientes com IA?",
+          "a": "A convicção sintética, em que o modelo resume entrevistas mornas numa história confiante que o fundador queria ouvir, e uma ideia ruim sobrevive ao estágio que deveria tê-la matado. A correção é medir o que os compradores fazem, não o que dizem, e manter um humano lendo a evidência crua."
+        },
+        {
+          "q": "Como a descoberta de clientes com IA cria um moat?",
+          "a": "O corpus de descoberta é dado proprietário sobre um mercado específico que os concorrentes não têm, e ele semeia o loop de dados do produto. Esse é o flywheel copilot, dado, capital. O moat nunca é o modelo, que qualquer um aluga. É o dado de domínio acumulado e o discernimento que o trabalho de descoberta criou."
+        }
+      ]
+    },
+    "es": {
+      "title": "Descubrimiento de Clientes con IA: Valida una Venture B2B más Rápido",
+      "description": "Cómo hacer descubrimiento de clientes con IA para validar una venture B2B más rápido sin fingir convicción. Un playbook de campo pre-lanzamiento.",
+      "sections": [
+        {
+          "paragraphs": [
+            "El descubrimiento de clientes con IA es cómo un equipo fundador comprime las partes lentas de la validación B2B sin fingir convicción. La herramienta sintetiza transcripciones de entrevistas, mina señales públicas de demanda y redacta acercamientos a escala, para que una dupla hable con más de los compradores correctos y llegue más rápido a un go o no-go honesto. Lo que no hace es sostener la conversación por usted ni aportar el criterio para leer un mercado. Este es un playbook de campo para el pre-lanzamiento, no una reseña de herramientas."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "Qué hace bien la IA en el descubrimiento de clientes, y qué no puede fingir",
+          "level": 2,
+          "paragraphs": [
+            "La IA se gana su lugar en el descubrimiento en el trabajo mecánico, nunca en el criterio. Es genuinamente buena en cuatro cosas. Agrupar decenas de transcripciones de entrevistas en dolores recurrentes. Leer señales públicas de demanda a escala. Redactar y personalizar acercamientos para que un equipo pequeño alcance una muestra real. Etiquetar y resumir para que dos fundadores lean cincuenta conversaciones en lugar de cinco.",
+            "Lo que no puede fingir es la conversación y la lectura del mercado. Un modelo resume un conjunto de entrevistas en una historia limpia cada vez. No tiene instinto para la pregunta de seguimiento que incomoda al comprador, para la pausa cortés que significa no, ni para la distancia entre una preferencia declarada y una línea real de presupuesto. Eso sigue siendo trabajo de operador. La herramienta comprime el esfuerzo alrededor del criterio. Nunca aporta el criterio.",
+            "El telón de fondo es que el trabajo asistido por IA ya es rutina. En la Stack Overflow Developer Survey de 2025, el 84% de los encuestados dijo usar o planear usar herramientas de IA, frente al 76% del año anterior ([Stack Overflow 2025 Developer Survey](https://survey.stackoverflow.co/2025/ai/)). La misma encuesta mostró que más desarrolladores desconfían de la precisión de la IA que los que confían. Uso alto, escepticismo merecido. Es exactamente la postura para llevar al descubrimiento."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "El 84% de los desarrolladores ya usa o planea usar herramientas de IA en su trabajo, frente al 76% del año anterior.",
+            "attribution": "Stack Overflow 2025 Developer Survey"
+          }
+        },
+        {
+          "id": "the-playbook",
+          "heading": "Haz el descubrimiento de clientes con IA en cinco pasos",
+          "level": 2,
+          "paragraphs": [
+            "Esta es la secuencia que un operador corre esta semana. La columna metodológica es el customer development de Steve Blank, y la premisa es directa. No hay hechos dentro de su edificio, así que salga de él. La IA cambia el costo de correr los pasos. No cambia la lógica de ellos."
+          ],
+          "bullets": [
+            "Defina la hipótesis de ICP en un párrafo escrito. Quién siente el dolor, qué tan agudo es, qué hace hoy al respecto, cuánto pagaría. Esta es la hipótesis que usted intenta matar, no confirmar.",
+            "Use IA para prospectar y priorizar cuentas objetivo. Arme la lista contra el ICP, enriquézcala y ordénela por encaje y alcanzabilidad. En LATAM, la alcanzabilidad pesa tanto como el encaje, así que combine correo con acercamiento directo y presentaciones.",
+            "Haga y transcriba las entrevistas. Usted dirige la conversación con operadores reales. El modelo solo se encarga de escribir, con consentimiento, para que su atención quede en la persona.",
+            "Agrupe y resuma, con un humano revisando la lectura sesgada. Deje que el modelo agrupe los dolores. Luego relea las citas crudas para atrapar dónde una respuesta tibia se redondeó a señal fuerte.",
+            "Sintetice un go o no-go contra la hipótesis original. Si la evidencia mató la idea, ganó en semanas en lugar de pivotar en años."
+          ]
+        },
+        {
+          "id": "interview-synthesis",
+          "heading": "Sintetizando entrevistas sin engañarte",
+          "level": 3,
+          "paragraphs": [
+            "El paso de síntesis es donde el descubrimiento falla en silencio. Un modelo optimiza para un resumen coherente, y la coherencia no es convicción. El resguardo es mecánico. Obligue al modelo a citar la frase exacta detrás de cada dolor señalado, y lea esas citas en frío, antes de leer su conclusión ordenada.",
+            "Ancle cada señal en lo que el comprador hizo, no en lo que dijo que quizá haría. Un piloto firmado. Un apaño que él mismo ya construyó. Una partida que ya está en el presupuesto. El entusiasmo declarado sobre una compra futura es la señal más barata que existe, y la que un resumen más tiende a inflar en un falso positivo."
+          ]
+        },
+        {
+          "id": "signal-mining",
+          "heading": "Minando señales públicas de demanda real",
+          "level": 2,
+          "paragraphs": [
+            "La mayoría de los compradores B2B hoy investiga en público mucho antes de hablar con alguien. La encuesta de Gartner de 2025 encontró que el 67% de los compradores B2B prefiere una experiencia de compra sin vendedor y el 45% usó herramientas de IA en una compra reciente, entre 646 compradores consultados de agosto a septiembre de 2025 ([Gartner vía Digital Commerce 360](https://www.digitalcommerce360.com/2026/03/17/gartner-b2b-buyers-rep-free-purchasing-ai-reshapes-sales/)). Para un fundador, ese hábito es un regalo, porque la demanda deja un rastro público.",
+            "Vacantes de empleo que describen su problema como un cargo que alguien está contratando para resolver. Quejas en sitios de reseñas sobre el incumbente. Hilos de comunidad pidiendo una solución alternativa. Foros de soporte repitiendo el mismo problema durante años. La IA lee ese corpus a escala y lo agrupa en la forma de un mercado. Convierte el hábito de investigación sin vendedor en un insumo de descubrimiento que usted usa antes de la primera llamada."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "El 67% de los compradores B2B prefiere una experiencia de compra sin vendedor y el 45% usó herramientas de IA en una compra reciente.",
+            "attribution": "Encuesta Gartner a compradores, agosto a septiembre de 2025"
+          }
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "Cómo los datos de descubrimiento siembran el loop de datos del producto",
+          "level": 2,
+          "paragraphs": [
+            "El corpus de descubrimiento es la primera vuelta del flywheel copilot, dato, capital. Cada transcripción, cada dolor agrupado, cada señal pública etiquetada es dato propietario sobre un mercado específico que ningún competidor tiene. Ese corpus se vuelve el conjunto de entrenamiento del producto futuro, la semilla de un conjunto de evaluación específico del dominio y el mapa de qué flujo automatizar primero.",
+            "El moat nunca es el modelo, que cualquier competidor alquila por token. El moat es el dato de dominio acumulado y el criterio que el trabajo de descubrimiento creó. Construya el copilot, deje que genere dato propietario y use el dato para levantar y desplegar capital. Ese es el [flywheel copilot, dato, capital](/library/copilot-to-data-to-fund-flywheel), y el descubrimiento disciplinado es donde empieza."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "El movimiento único que compone. Guarde cada transcripción y cada señal etiquetada en un solo lugar desde el día uno. Es la semilla del producto, no investigación desechable."
+          }
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Modos de falla: convicción sintética",
+          "level": 2,
+          "paragraphs": [
+            "La falla característica del descubrimiento de clientes con IA es la convicción sintética. El modelo resume una pila de entrevistas tibias en una narrativa segura, el fundador lee la historia que quería, y una mala idea sobrevive a la única etapa que debía haberla matado. Las conversaciones que habrían terminado la venture en el segundo mes se alisan en un párrafo alentador, y el equipo pasa un año construyendo sobre eso.",
+            "La disciplina importa más a medida que la adopción de IA sube en Brasil y LATAM, porque más fundadores ahora disputan los mismos compradores con los mismos modelos. Gartner encontró que la gran mayoría de los proyectos de IA que fracasan tiene origen en datos malos o ausentes, y la síntesis de descubrimiento no es la excepción. Alimente el modelo con una muestra pobre y sesgada y le devolverá una respuesta segura construida sobre nada. Vigile las trampas de siempre."
+          ],
+          "bullets": [
+            "Saltarse las conversaciones difíciles porque la pila de transcripciones ya parece suficiente.",
+            "Medir intención declarada en lugar de comportamiento demostrado.",
+            "Confiar de más en un resumen limpio porque se lee bien y confirma el plan.",
+            "Alimentar el modelo con insumo pobre o sesgado. Basura entra, basura segura sale."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "El 41,9% de las industrias brasileñas con 100 o más empleados usaba IA en 2024, frente al 16,9% en 2022.",
+            "attribution": "IBGE PINTEC, publicado en septiembre de 2025"
+          }
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "Cómo Avante comprime la validación en la etapa de Research",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina, y corre exactamente este playbook dentro de las etapas de Research y Partner de su sistema de seis etapas. La profundidad de operador es la ventaja. Un operador de dominio con años de cicatrices en un mercado brasileño sabe cuáles respuestas de comprador son ficción cortés y cuáles son presupuesto real, y esa lectura es lo que la IA no puede fingir.",
+            "Por eso Avante une el criterio a la herramienta en lugar de reemplazarlo. El studio lanza de 3 a 4 ventures por año con US$ 500K-1.5M desplegados por venture, y comprimir el descubrimiento es parte de cómo una venture de studio llega al mercado de 6 a 9 meses antes que un equipo independiente con financiamiento comparable. Los servicios son cerca del 70% del PIB brasileño con baja penetración de software, y la adopción de IA sube rápido, así que la oferta de compradores B2B mal atendidos es profunda y la carrera por alcanzarlos es real.",
+            "La herramienta acorta la búsqueda. No toma la decisión. El fundador que sigue leyendo la evidencia cruda, y sigue haciendo la pregunta que el modelo jamás pensaría en hacer, es quien mata temprano la mala idea y construye la correcta. Vea [por qué Avante construye así](/why-avante)."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Qué es el descubrimiento de clientes con IA?",
+          "a": "El descubrimiento de clientes con IA es usar modelos para comprimir las partes lentas de la validación B2B, la síntesis de transcripciones, la minería de señales públicas y la redacción de acercamientos, para que un equipo fundador hable con más de los compradores correctos y llegue más rápido a un go o no-go. Acelera el trabajo mecánico del descubrimiento. No reemplaza la conversación de operador ni el criterio para leer un mercado."
+        },
+        {
+          "q": "¿Puede la IA reemplazar las entrevistas con clientes?",
+          "a": "No. La IA transcribe, agrupa y resume entrevistas, pero no dirige la conversación ni distingue una respuesta cortés de un presupuesto real. El fundador aún tiene que salir del edificio, en la frase de Steve Blank, y hacer las preguntas incómodas que un modelo jamás pensaría en hacer."
+        },
+        {
+          "q": "¿Cómo validar una startup B2B con IA sin fingir convicción?",
+          "a": "Ancle cada señal en comportamiento demostrado, no en intención declarada, y obligue al modelo a citar la frase exacta detrás de cada dolor señalado. Luego deje que un humano lea esas citas en frío para atrapar dónde una respuesta tibia se redondeó hacia arriba. La meta es un go o no-go honesto, no una narrativa ordenada."
+        },
+        {
+          "q": "¿Cuál es el mayor riesgo en el descubrimiento de clientes con IA?",
+          "a": "La convicción sintética, donde el modelo resume entrevistas tibias en una historia segura que el fundador quería oír, y una mala idea sobrevive a la etapa que debía haberla matado. La corrección es medir lo que los compradores hacen, no lo que dicen, y mantener a un humano leyendo la evidencia cruda."
+        },
+        {
+          "q": "¿Cómo crea un moat el descubrimiento de clientes con IA?",
+          "a": "El corpus de descubrimiento es dato propietario sobre un mercado específico que los competidores no tienen, y siembra el loop de datos del producto. Ese es el flywheel copilot, dato, capital. El moat nunca es el modelo, que cualquiera alquila. Es el dato de dominio acumulado y el criterio que el trabajo de descubrimiento creó."
+        }
+      ]
+    },
+    "ogImage": "/og/ai-customer-discovery-b2b-playbook.png"
   },
   {
     "slug": "ai-infrastructure-cost-curve-latam",
@@ -3673,6 +4475,413 @@ const engineArticles: Article[] = [
         }
       ]
     }
+  },
+  {
+    "slug": "bootstrap-ai-data-cold-start-playbook",
+    "category": "playbooks",
+    "type": "Playbook",
+    "readTime": "10 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-03",
+    "isPublished": true,
+    "en": {
+      "title": "The AI Cold-Start Problem: Bootstrap Data Before You Have Users",
+      "description": "Solve the AI cold start problem. Bootstrap your first proprietary data before you have users with expert labels, synthetic data, and a review loop.",
+      "sections": [
+        {
+          "paragraphs": [
+            "The AI cold start problem is the trap every AI-native venture hits before it ships. The model needs data to be good, and no one will use a model that is not good yet. The output is the product, so a thin dataset is a thin product, and a thin product earns no users to generate the data you were missing.",
+            "You cannot capture usage data before launch, so the flywheel needs a manual first turn. This playbook is that first turn. Bootstrap the first dataset from three sources at once, expert-labeled seed data from a domain operator, synthetic data generated to cover the gaps, and a human-in-the-loop review loop that promotes real corrections into training and evals. Avante Ventures builds this way on purpose, because the turn you crank by hand is what makes every automated turn possible."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "The AI cold-start problem, stated plainly",
+          "level": 2,
+          "paragraphs": [
+            "The cold start problem is a chicken-and-egg trap, and it bites AI products harder than ordinary software. The model needs user data to be accurate, but users will not engage with an inaccurate model, [according to the Institute of Product Management](https://www.institutepm.com/knowledge-hub/ai-product-cold-start-problem). With classic software you ship a thin version and improve it in the market. With an AI product the output is the product, and output quality is a direct function of training data.",
+            "There are three flavors, and only one is the venture's real problem. Model cold start is a domain-capability gap. User cold start is a new person getting generic output. Item cold start is fresh content with no history. The venture case is model cold start. You are missing the domain data a foundation model never saw, and you have to manufacture it before a single user shows up.",
+            "One honest check before you build. If a foundation model already handles the task out of the box, manufacturing a proprietary dataset is wasted motion. You bootstrap AI training data only when the data is the moat, not when an API call already wins. The test is whether the edge lives in domain data a general model does not hold and whether you intend to fine-tune or build domain evals on it."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "The single move that matters. Spend your scarcest resource, expert time, on the few hundred hard and ambiguous cases where a domain expert's judgment is the label. Everything else can be filled by transfer learning or generation."
+          }
+        },
+        {
+          "id": "the-playbook",
+          "heading": "Bootstrap the first dataset in three sources",
+          "level": 2,
+          "paragraphs": [
+            "Here is a workflow an operator can run this week. Do not bet the dataset on one source. Combine three, because each covers a weakness of the others, and add a pre-launch tactic that buys real data with no public release."
+          ],
+          "bullets": [
+            "Expert-labeled seed. Have the domain operator label a few hundred to a few thousand gold examples. Domain experts cost 10 to 50 times more per annotation hour than general crowdworkers, so spend that budget on the ambiguous cases where their judgment is the label, not on bulk volume.",
+            "Transfer learning on top. Fine-tune a pre-trained model on that small seed. A medical-imaging model can need 10 times fewer labeled examples than training from scratch once it starts from a foundation model, so a few thousand expert labels reach further than they look.",
+            "Synthetic fill for the gaps. Generate synthetic examples to cover the rare cases the seed set misses, then anchor every batch against the expert gold set so it teaches signal and not noise.",
+            "Pre-launch real data. Run the model in shadow mode beside the existing manual process, or a constrained pilot with a handful of early adopters who accept rough output in exchange for influence. Both collect real outcomes before you ever launch publicly."
+          ]
+        },
+        {
+          "id": "synthetic-data",
+          "heading": "Generating synthetic data without teaching noise",
+          "level": 3,
+          "paragraphs": [
+            "Synthetic data is mainstream now, not a hack. Well-constructed synthetic sets already reach 85 to 90 percent of the impact of equivalent real data on many text tasks, [per the Institute of Product Management](https://www.institutepm.com/knowledge-hub/ai-product-cold-start-problem). The whole risk lives in the word well-constructed.",
+            "The discipline that keeps synthetic data honest is narrow. Generate to cover known gaps in the distribution, especially the rare cases a small seed set cannot reach, never to inflate raw volume. Anchor every synthetic batch to the expert gold set. Measure whether it moves a real-data eval, not a synthetic one. Hold a fixed floor of human-labeled data and never let generated examples quietly become the majority of the training mix. Synthetic data for startups is a coverage tool, not a volume trick."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Synthetic data grew from about 1 percent of all data in 2021 to roughly 60 percent by 2024, and is projected to become more common than real data for AI by 2030.",
+            "attribution": "Communications of the ACM, citing Gartner"
+          }
+        },
+        {
+          "id": "human-in-the-loop",
+          "heading": "The human-in-the-loop labeling loop",
+          "level": 2,
+          "paragraphs": [
+            "The loop is what turns a one-time seed into a compounding asset. Route each model output to a domain reviewer, capture the correction and the reason behind it, and promote confirmed corrections into both the training set and the eval set. Human-in-the-loop labeling done this way is not a cost center. It is how the dataset keeps sharpening after launch.",
+            "Active learning makes the reviewer's hours count. The model surfaces its least-confident and most-informative cases, a human labels those first, and effort concentrates where it changes the model instead of on examples it already gets right, [as active-learning research shows](https://arxiv.org/abs/2501.00277). The correction and its stated reason are the label no competitor can buy, because they are produced inside a workflow the competitor does not run."
+          ],
+          "bullets": [
+            "Capture the correction, not just the reject. Store the before, the after, and the reason the expert changed it.",
+            "Promote corrections into the eval set first, so you can prove the next model is better, then into the training set.",
+            "Let active learning pick the queue. Label the cases the model is least sure about before anything else."
+          ]
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "How the first data primes the flywheel",
+          "level": 2,
+          "paragraphs": [
+            "The moat is never the model. Every competitor can call the same foundation model, so betting on model access is betting on a commodity. The durable asset is the labeled correction history and the [domain-specific evals](/library/domain-specific-evals-ai-moat) that the seed data and the loop create.",
+            "This is the [copilot to data to fund flywheel](/library/copilot-to-data-to-fund-flywheel) seen from its first turn. Build a copilot to generate proprietary data, then use that data to raise and deploy capital. The cold-start dataset is the manual first turn, the part you crank by hand before usage can crank it for you. Once the loop runs, every correction promotes itself into the next model and the automated turns take over.",
+            "This is a different question from why data compounds once you already have it, which is the subject of [data network effects in vertical AI](/library/data-network-effects-vertical-ai). Compounding assumes a first dataset already exists. The cold-start playbook is how you manufacture that first dataset when you have no usage to compound yet.",
+            "The timing rewards discipline. As synthetic data floods the open web and most models drift toward the same generic distribution, a dataset anchored in real domain corrections gets rarer and more valuable, not less."
+          ]
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Failure modes: synthetic data that poisons the well",
+          "level": 2,
+          "paragraphs": [
+            "The honest failure mode is model collapse. When a model trains largely on its own generated output, it drifts from the real distribution and quietly bakes in bias, and the flywheel ends up spinning on fiction. [Shumailov and colleagues showed in Nature](https://www.nature.com/articles/s41586-024-07566-y) that the drift runs in two stages.",
+            "Early collapse loses the tails first. The model gets worse on rare and minority cases while the headline metrics still look fine, which is exactly why it slips past a team watching averages. Late collapse loses most of the variance and starts confusing concepts outright. By then the damage is baked in.",
+            "The fix is documented. [Research on whether collapse is inevitable](https://arxiv.org/abs/2404.01413) finds that when synthetic data accumulates alongside human data instead of replacing it, collapse is avoided. The operator rules follow from that one finding."
+          ],
+          "bullets": [
+            "Keep real data in the mix. Never train on a corpus that is mostly synthetic. Hold a fixed floor of human-labeled examples.",
+            "Anchor synthetic to expert truth. Validate every synthetic batch against the human gold set and a real-data eval, never a synthetic eval.",
+            "Watch the tails, not the average. Track rare and minority cases, because that is where collapse hides first.",
+            "Refresh the seed. Keep promoting new human corrections through the loop so the training data tracks reality, not the model's own echo."
+          ]
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "How Avante primes data with operator judgment",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures treats the first dataset as a Build-stage move with a Compound-stage payoff. The six-stage system runs Research, Partner, Build, Traction, Revenue, Compound, and the seed labeling happens early, by the operator, not by a crowd hired after the fact.",
+            "The edge is the operator. A domain partner with 10+ years of Brazilian-market scar tissue produces trustworthy seed labels on day one, because they know which edge cases carry signal and which are noise. That is exactly what a general crowdworker cannot supply, and it is why operator depth is the source of a defensible seed set. The pattern repeats across the portfolio, in a judicial-asset workflow, an insurance-risk model, an auction-property pipeline.",
+            "The window is opening fast. With services at roughly 70% of Brazilian GDP and low software penetration, the ventures that own domain seed data first will define the categories. Avante launches 3-4 ventures per year and deploys $500K-1.5M per venture, and the cold-start dataset is a central reason those ventures become fundable. The teams that manufacture the first dataset by hand will own the data the rest are still trying to buy."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "The share of Brazilian industrial companies using AI rose from 16.9 percent in 2022 to 41.9 percent in 2024, about 2.5 times in two years.",
+            "attribution": "IBGE"
+          }
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is the AI cold start problem?",
+          "a": "The AI cold start problem is that a model needs data to be accurate, but users will not engage with an inaccurate model, and before launch there is no usage to generate that data. It is sharper for AI products than for classic software because the output is the product, so output quality is a direct function of training data. You solve it by manufacturing the first dataset before you have users."
+        },
+        {
+          "q": "How do you get data to train AI without users?",
+          "a": "You bootstrap the first dataset from three sources at once. Expert-labeled seed data from a domain operator, synthetic data generated to cover the gaps in the distribution, and a human-in-the-loop loop that promotes real corrections into training and evals. Shadow mode and a constrained pilot add real outcomes before any public launch."
+        },
+        {
+          "q": "How do you solve the AI cold start problem with synthetic data?",
+          "a": "Use synthetic data to cover the rare cases a small expert seed set cannot reach, not to inflate raw volume. Well-constructed synthetic sets reach 85 to 90 percent of the impact of equivalent real data on many text tasks, but only if you anchor every batch to a human gold set and measure it against a real-data eval. Keep a fixed floor of real data so the model does not drift into model collapse."
+        },
+        {
+          "q": "Is synthetic data safe for training AI models?",
+          "a": "Yes, if you keep real data in the mix. When a model trains largely on its own output it collapses, losing the tails of the distribution first and then confusing concepts, per Shumailov and colleagues in Nature. Research on model collapse finds it is avoided when synthetic data accumulates alongside human data rather than replacing it."
+        },
+        {
+          "q": "How much does expert data labeling cost versus crowdsourcing?",
+          "a": "Domain experts cost 10 to 50 times more per annotation hour than general crowdworkers. That premium is worth it for the few hundred hard, ambiguous cases where their judgment is the actual label, which is where a defensible seed set comes from. Use cheaper labor and generation for the bulk and reserve expert time for the cases only they can call."
+        }
+      ]
+    },
+    "pt": {
+      "title": "O Problema de Cold Start em IA: Dados Antes de Ter Usuários",
+      "description": "Como resolver o problema de cold start em IA e obter os primeiros dados proprietários antes de ter usuários, com rótulos de especialista e dados sintéticos.",
+      "sections": [
+        {
+          "paragraphs": [
+            "O problema de cold start em IA é a armadilha que toda empresa AI-native encontra antes de lançar. O modelo precisa de dados para ficar bom, e ninguém usa um modelo que ainda não está bom. A saída é o produto, então um conjunto de dados raso é um produto raso, e um produto raso não atrai os usuários que gerariam os dados que faltavam.",
+            "Você não consegue capturar dados de uso antes do lançamento, então o flywheel precisa de uma primeira volta manual. Este playbook é essa primeira volta. Monte o primeiro conjunto de dados a partir de três fontes ao mesmo tempo, dados iniciais rotulados por um operador de domínio, dados sintéticos gerados para cobrir as lacunas, e um loop de revisão com humano no circuito que promove correções reais para o treino e os evals. A Avante Ventures constrói assim de propósito, porque a volta que você gira à mão é o que torna possível cada volta automática."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "O problema de cold start em IA, dito sem rodeios",
+          "level": 2,
+          "paragraphs": [
+            "O problema de cold start é uma armadilha de ovo e galinha, e morde produtos de IA com mais força do que software comum. O modelo precisa de dados de uso para ser preciso, mas usuários não se engajam com um modelo impreciso, [segundo o Institute of Product Management](https://www.institutepm.com/knowledge-hub/ai-product-cold-start-problem). Com software clássico você lança uma versão rasa e a melhora no mercado. Com um produto de IA a saída é o produto, e a qualidade da saída é função direta dos dados de treino.",
+            "São três variações, e só uma é o problema real da empresa. Cold start de modelo é uma lacuna de capacidade no domínio. Cold start de usuário é uma pessoa nova recebendo saída genérica. Cold start de item é conteúdo novo sem histórico. O caso da empresa é o cold start de modelo. Faltam os dados de domínio que um modelo de fundação nunca viu, e você tem que fabricá-los antes de o primeiro usuário aparecer.",
+            "Uma checagem honesta antes de construir. Se um modelo de fundação já resolve a tarefa de fábrica, fabricar um conjunto de dados proprietário é esforço perdido. Você obtém dados para IA sem usuários só quando o dado é o moat, não quando uma chamada de API já vence. O teste é se a vantagem mora em dados de domínio que um modelo geral não tem e se você pretende fazer fine-tuning ou construir evals de domínio sobre eles."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "O único movimento que importa. Gaste seu recurso mais escasso, o tempo do especialista, nas poucas centenas de casos difíceis e ambíguos em que o julgamento de um especialista de domínio é o rótulo. O resto se preenche com transfer learning ou geração."
+          }
+        },
+        {
+          "id": "the-playbook",
+          "heading": "Monte o primeiro conjunto de dados com três fontes",
+          "level": 2,
+          "paragraphs": [
+            "Aqui está um fluxo que um operador começa esta semana. Não aposte o conjunto de dados em uma fonte só. Combine três, porque cada uma cobre a fraqueza das outras, e some uma tática pré-lançamento que compra dado real sem nenhuma liberação pública."
+          ],
+          "bullets": [
+            "Semente rotulada por especialista. Peça ao operador de domínio para rotular de algumas centenas a alguns milhares de exemplos de ouro. Especialistas de domínio custam de 10 a 50 vezes mais por hora de anotação do que trabalhadores gerais de crowd, então gaste esse orçamento nos casos ambíguos em que o julgamento deles é o rótulo, não em volume bruto.",
+            "Transfer learning por cima. Faça fine-tuning de um modelo pré-treinado nessa semente pequena. Um modelo de imagem médica pode precisar de 10 vezes menos exemplos rotulados do que treinar do zero quando parte de um modelo de fundação, então alguns milhares de rótulos de especialista rendem mais do que parecem.",
+            "Preenchimento sintético para as lacunas. Gere exemplos sintéticos para cobrir os casos raros que a semente não alcança, depois ancore cada lote no conjunto de ouro do especialista para que ele ensine sinal e não ruído.",
+            "Dado real pré-lançamento. Rode o modelo em shadow mode ao lado do processo manual existente, ou um piloto restrito com poucos early adopters que aceitam saída bruta em troca de influência. Os dois coletam resultados reais antes de qualquer lançamento público."
+          ]
+        },
+        {
+          "id": "synthetic-data",
+          "heading": "Gerando dados sintéticos sem ensinar ruído",
+          "level": 3,
+          "paragraphs": [
+            "Dados sintéticos hoje são mainstream, não uma gambiarra. Conjuntos sintéticos bem construídos já alcançam de 85% a 90% do impacto de dados reais equivalentes em muitas tarefas de texto, [segundo o Institute of Product Management](https://www.institutepm.com/knowledge-hub/ai-product-cold-start-problem). Todo o risco mora na expressão bem construídos.",
+            "A disciplina que mantém o dado sintético honesto é estreita. Gere para cobrir lacunas conhecidas na distribuição, sobretudo os casos raros que uma semente pequena não alcança, nunca para inflar volume bruto. Ancore cada lote sintético no conjunto de ouro do especialista. Meça se ele move um eval de dado real, não um sintético. Mantenha um piso fixo de dados rotulados por humanos e nunca deixe os exemplos gerados virarem a maioria da mistura de treino. Dados sintéticos para startups são uma ferramenta de cobertura, não um truque de volume."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Os dados sintéticos passaram de cerca de 1% de todos os dados em 2021 para aproximadamente 60% em 2024, e a projeção é que se tornem mais comuns do que dados reais para IA até 2030.",
+            "attribution": "Communications of the ACM, citando o Gartner"
+          }
+        },
+        {
+          "id": "human-in-the-loop",
+          "heading": "O loop de rotulagem com humano no circuito",
+          "level": 2,
+          "paragraphs": [
+            "O loop é o que transforma uma semente pontual em um ativo que compõe. Encaminhe cada saída do modelo para um revisor de domínio, capture a correção e a razão por trás dela, e promova as correções confirmadas tanto para o conjunto de treino quanto para o de eval. Rotulagem com humano no loop feita assim não é centro de custo. É como o conjunto de dados continua ficando mais afiado depois do lançamento.",
+            "O active learning faz as horas do revisor contarem. O modelo levanta os casos em que está menos confiante e que são mais informativos, um humano rotula esses primeiro, e o esforço se concentra onde muda o modelo em vez de nos exemplos que ele já acerta, [como mostra a pesquisa de active learning](https://arxiv.org/abs/2501.00277). A correção e a razão declarada são o rótulo que nenhum concorrente compra, porque nascem dentro de um fluxo de trabalho que o concorrente não roda."
+          ],
+          "bullets": [
+            "Capture a correção, não só a rejeição. Guarde o antes, o depois e a razão pela qual o especialista mudou.",
+            "Promova as correções primeiro para o conjunto de eval, para provar que o próximo modelo é melhor, depois para o de treino.",
+            "Deixe o active learning escolher a fila. Rotule primeiro os casos em que o modelo está menos seguro."
+          ]
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "Como os primeiros dados dão a partida no flywheel",
+          "level": 2,
+          "paragraphs": [
+            "O moat nunca é o modelo. Todo concorrente chama o mesmo modelo de fundação, então apostar no acesso ao modelo é apostar em uma commodity. O ativo durável é o histórico de correções rotuladas e os [evals específicos de domínio](/library/domain-specific-evals-ai-moat) que a semente e o loop criam.",
+            "Este é o [flywheel copilot, dado, capital](/library/copilot-to-data-to-fund-flywheel) visto da sua primeira volta. Construa um copilot para gerar dados proprietários e depois use esse dado para captar e alocar capital. O conjunto de dados de cold start é a primeira volta manual, a parte que você gira à mão antes de o uso girar por você. Quando o loop roda, cada correção se promove sozinha para o próximo modelo e as voltas automáticas assumem.",
+            "Esta é uma pergunta diferente de por que o dado compõe depois que você já o tem, que é o tema dos [efeitos de rede de dados em IA vertical](/library/data-network-effects-vertical-ai). A composição pressupõe que um primeiro conjunto de dados já existe. O playbook de cold start é como você fabrica esse primeiro conjunto quando ainda não tem uso para compor.",
+            "O timing premia a disciplina. À medida que dados sintéticos inundam a web aberta e a maioria dos modelos deriva para a mesma distribuição genérica, um conjunto de dados ancorado em correções reais de domínio fica mais raro e mais valioso, não menos."
+          ]
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Modos de falha: dados sintéticos que envenenam o poço",
+          "level": 2,
+          "paragraphs": [
+            "O modo de falha honesto é o model collapse. Quando um modelo treina em grande parte na própria saída gerada, ele se afasta da distribuição real e assa o viés em silêncio, e o flywheel acaba girando sobre ficção. [Shumailov e colegas mostraram na Nature](https://www.nature.com/articles/s41586-024-07566-y) que o desvio corre em dois estágios.",
+            "O colapso inicial perde as caudas primeiro. O modelo piora nos casos raros e de minoria enquanto as métricas de topo ainda parecem boas, que é justamente por que escapa de um time que olha só médias. O colapso tardio perde a maior parte da variância e passa a confundir conceitos abertamente. Aí o estrago já está assado.",
+            "A correção está documentada. [A pesquisa sobre se o colapso é inevitável](https://arxiv.org/abs/2404.01413) mostra que, quando o dado sintético se acumula ao lado do dado humano em vez de substituí-lo, o colapso é evitado. As regras do operador seguem dessa única descoberta."
+          ],
+          "bullets": [
+            "Mantenha dado real na mistura. Nunca treine em um corpus majoritariamente sintético. Segure um piso fixo de exemplos rotulados por humanos.",
+            "Ancore o sintético na verdade do especialista. Valide cada lote sintético contra o conjunto de ouro humano e um eval de dado real, nunca um eval sintético.",
+            "Vigie as caudas, não a média. Acompanhe os casos raros e de minoria, porque é ali que o colapso se esconde primeiro.",
+            "Renove a semente. Continue promovendo novas correções humanas pelo loop para que o dado de treino acompanhe a realidade, não o próprio eco do modelo."
+          ]
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "Como a Avante dá a partida nos dados com julgamento de operador",
+          "level": 2,
+          "paragraphs": [
+            "A Avante Ventures trata o primeiro conjunto de dados como uma decisão da etapa Build com retorno na etapa Compound. O sistema de seis etapas roda Research, Partner, Build, Traction, Revenue, Compound, e a rotulagem da semente acontece cedo, pelo operador, não por uma crowd contratada depois.",
+            "A vantagem é o operador. Um sócio de domínio com mais de 10 anos de calo de mercado brasileiro produz rótulos-semente confiáveis no dia um, porque sabe quais casos de borda carregam sinal e quais são ruído. É exatamente o que um trabalhador geral de crowd não fornece, e é por isso que a profundidade de operador é a fonte de uma semente defensável. O padrão se repete pelo portfólio, num fluxo de ativos judiciais, num modelo de risco de seguro, num pipeline de imóveis de leilão.",
+            "A janela abre rápido. Com serviços em cerca de 70% do PIB brasileiro e baixa penetração de software, as empresas que primeiro possuírem dados-semente de domínio vão definir as categorias. A Avante lança 3-4 empresas por ano e aloca $500K-1.5M por empresa, e o conjunto de dados de cold start é uma razão central para essas empresas se tornarem financiáveis. Os times que fabricam o primeiro conjunto de dados à mão vão possuir o dado que o resto ainda está tentando comprar."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "A parcela de empresas industriais brasileiras que usam IA subiu de 16,9% em 2022 para 41,9% em 2024, cerca de 2,5 vezes em dois anos.",
+            "attribution": "IBGE"
+          }
+        }
+      ],
+      "faqs": [
+        {
+          "q": "O que é o problema de cold start em IA?",
+          "a": "O problema de cold start em IA é que o modelo precisa de dados para ser preciso, mas os usuários não se engajam com um modelo impreciso, e antes do lançamento não há uso para gerar esse dado. É mais agudo em produtos de IA do que em software clássico porque a saída é o produto, então a qualidade da saída é função direta dos dados de treino. Você resolve fabricando o primeiro conjunto de dados antes de ter usuários."
+        },
+        {
+          "q": "Como obter dados para treinar IA sem usuários?",
+          "a": "Você monta o primeiro conjunto de dados a partir de três fontes ao mesmo tempo. Dados iniciais rotulados por um operador de domínio, dados sintéticos gerados para cobrir as lacunas da distribuição, e um loop com humano no circuito que promove correções reais para o treino e os evals. Shadow mode e um piloto restrito acrescentam resultados reais antes de qualquer lançamento público."
+        },
+        {
+          "q": "Como resolver o problema de cold start em IA com dados sintéticos?",
+          "a": "Use dados sintéticos para cobrir os casos raros que uma pequena semente de especialista não alcança, não para inflar volume bruto. Conjuntos sintéticos bem construídos chegam a 85% a 90% do impacto de dados reais equivalentes em muitas tarefas de texto, mas só se você ancorar cada lote em um conjunto de ouro humano e medir contra um eval de dado real. Mantenha um piso fixo de dado real para o modelo não derivar para o model collapse."
+        },
+        {
+          "q": "Dados sintéticos são seguros para treinar modelos de IA?",
+          "a": "Sim, se você mantiver dado real na mistura. Quando um modelo treina em grande parte na própria saída, ele colapsa, perdendo primeiro as caudas da distribuição e depois confundindo conceitos, segundo Shumailov e colegas na Nature. A pesquisa sobre model collapse mostra que ele é evitado quando o dado sintético se acumula ao lado do dado humano em vez de substituí-lo."
+        },
+        {
+          "q": "Quanto custa a rotulagem por especialistas comparada ao crowdsourcing?",
+          "a": "Especialistas de domínio custam de 10 a 50 vezes mais por hora de anotação do que trabalhadores gerais de crowd. Esse prêmio vale a pena nas poucas centenas de casos difíceis e ambíguos em que o julgamento deles é o rótulo de verdade, que é de onde vem uma semente defensável. Use mão de obra mais barata e geração para o volume e reserve o tempo do especialista para os casos que só ele decide."
+        }
+      ]
+    },
+    "es": {
+      "title": "El Problema de Cold Start en IA: Datos Antes de Tener Usuarios",
+      "description": "Cómo resolver el problema de cold start en IA y obtener los primeros datos propietarios antes de tener usuarios, con etiquetas de experto y datos sintéticos.",
+      "sections": [
+        {
+          "paragraphs": [
+            "El problema de cold start en IA es la trampa que toda empresa AI-native encuentra antes de lanzar. El modelo necesita datos para ser bueno, y nadie usa un modelo que todavía no es bueno. La salida es el producto, así que un conjunto de datos delgado es un producto delgado, y un producto delgado no gana los usuarios que generarían los datos que faltaban.",
+            "Usted no puede capturar datos de uso antes del lanzamiento, así que el flywheel necesita una primera vuelta manual. Este playbook es esa primera vuelta. Arme el primer conjunto de datos a partir de tres fuentes a la vez, datos iniciales etiquetados por un operador de dominio, datos sintéticos generados para cubrir los huecos, y un loop de revisión con humano en el circuito que promueve correcciones reales al entrenamiento y a los evals. Avante Ventures construye así a propósito, porque la vuelta que usted gira a mano es lo que hace posible cada vuelta automática."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "El problema de cold start en IA, dicho sin rodeos",
+          "level": 2,
+          "paragraphs": [
+            "El problema de cold start es una trampa de huevo y gallina, y muerde a los productos de IA más fuerte que al software común. El modelo necesita datos de uso para ser preciso, pero los usuarios no se enganchan con un modelo impreciso, [según el Institute of Product Management](https://www.institutepm.com/knowledge-hub/ai-product-cold-start-problem). Con software clásico usted lanza una versión delgada y la mejora en el mercado. Con un producto de IA la salida es el producto, y la calidad de la salida es función directa de los datos de entrenamiento.",
+            "Hay tres variantes, y solo una es el problema real de la empresa. El cold start de modelo es un hueco de capacidad en el dominio. El cold start de usuario es una persona nueva que recibe salida genérica. El cold start de item es contenido nuevo sin historial. El caso de la empresa es el cold start de modelo. Le faltan los datos de dominio que un modelo de fundación nunca vio, y usted tiene que fabricarlos antes de que aparezca el primer usuario.",
+            "Una comprobación honesta antes de construir. Si un modelo de fundación ya resuelve la tarea de fábrica, fabricar un conjunto de datos propietario es esfuerzo perdido. Usted obtiene datos para IA sin usuarios solo cuando el dato es el moat, no cuando una llamada de API ya gana. La prueba es si la ventaja vive en datos de dominio que un modelo general no tiene y si usted piensa hacer fine-tuning o construir evals de dominio sobre ellos."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "El único movimiento que importa. Gaste su recurso más escaso, el tiempo del experto, en los pocos cientos de casos difíciles y ambiguos donde el juicio de un experto de dominio es la etiqueta. El resto se llena con transfer learning o generación."
+          }
+        },
+        {
+          "id": "the-playbook",
+          "heading": "Arma el primer conjunto de datos con tres fuentes",
+          "level": 2,
+          "paragraphs": [
+            "Aquí hay un flujo que un operador arranca esta semana. No apueste el conjunto de datos a una sola fuente. Combine tres, porque cada una cubre la debilidad de las otras, y sume una táctica previa al lanzamiento que compra dato real sin ninguna liberación pública."
+          ],
+          "bullets": [
+            "Semilla etiquetada por experto. Pida al operador de dominio que etiquete de unos cientos a unos miles de ejemplos de oro. Los expertos de dominio cuestan de 10 a 50 veces más por hora de anotación que los trabajadores generales de crowd, así que gaste ese presupuesto en los casos ambiguos donde su juicio es la etiqueta, no en volumen bruto.",
+            "Transfer learning encima. Haga fine-tuning de un modelo preentrenado sobre esa semilla pequeña. Un modelo de imagen médica puede necesitar 10 veces menos ejemplos etiquetados que entrenar desde cero cuando parte de un modelo de fundación, así que unos miles de etiquetas de experto rinden más de lo que parecen.",
+            "Relleno sintético para los huecos. Genere ejemplos sintéticos para cubrir los casos raros que la semilla no alcanza, luego ancle cada lote al conjunto de oro del experto para que enseñe señal y no ruido.",
+            "Dato real previo al lanzamiento. Corra el modelo en shadow mode junto al proceso manual existente, o un piloto restringido con unos pocos early adopters que aceptan salida cruda a cambio de influencia. Los dos recogen resultados reales antes de cualquier lanzamiento público."
+          ]
+        },
+        {
+          "id": "synthetic-data",
+          "heading": "Generando datos sintéticos sin enseñar ruido",
+          "level": 3,
+          "paragraphs": [
+            "Los datos sintéticos hoy son mainstream, no un parche. Los conjuntos sintéticos bien construidos ya alcanzan del 85% al 90% del impacto de datos reales equivalentes en muchas tareas de texto, [según el Institute of Product Management](https://www.institutepm.com/knowledge-hub/ai-product-cold-start-problem). Todo el riesgo vive en la expresión bien construidos.",
+            "La disciplina que mantiene honesto al dato sintético es estrecha. Genere para cubrir huecos conocidos de la distribución, sobre todo los casos raros que una semilla pequeña no alcanza, nunca para inflar volumen bruto. Ancle cada lote sintético al conjunto de oro del experto. Mida si mueve un eval de dato real, no uno sintético. Mantenga un piso fijo de datos etiquetados por humanos y nunca deje que los ejemplos generados se vuelvan la mayoría de la mezcla de entrenamiento. Los datos sintéticos para startups son una herramienta de cobertura, no un truco de volumen."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Los datos sintéticos pasaron de cerca del 1% de todos los datos en 2021 a aproximadamente el 60% en 2024, y se proyecta que se vuelvan más comunes que el dato real para IA hacia 2030.",
+            "attribution": "Communications of the ACM, citando a Gartner"
+          }
+        },
+        {
+          "id": "human-in-the-loop",
+          "heading": "El loop de etiquetado con humano en el circuito",
+          "level": 2,
+          "paragraphs": [
+            "El loop es lo que convierte una semilla puntual en un activo que compone. Enrute cada salida del modelo a un revisor de dominio, capture la corrección y la razón detrás de ella, y promueva las correcciones confirmadas tanto al conjunto de entrenamiento como al de eval. El etiquetado con humano en el loop hecho así no es un centro de costo. Es cómo el conjunto de datos sigue afilándose después del lanzamiento.",
+            "El active learning hace que las horas del revisor cuenten. El modelo saca los casos en los que está menos seguro y que son más informativos, un humano etiqueta esos primero, y el esfuerzo se concentra donde cambia el modelo en vez de en los ejemplos que ya acierta, [como muestra la investigación de active learning](https://arxiv.org/abs/2501.00277). La corrección y su razón declarada son la etiqueta que ningún competidor compra, porque nacen dentro de un flujo de trabajo que el competidor no corre."
+          ],
+          "bullets": [
+            "Capture la corrección, no solo el rechazo. Guarde el antes, el después y la razón por la que el experto cambió.",
+            "Promueva las correcciones primero al conjunto de eval, para probar que el próximo modelo es mejor, y luego al de entrenamiento.",
+            "Deje que el active learning elija la fila. Etiquete primero los casos en los que el modelo está menos seguro."
+          ]
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "Cómo los primeros datos dan arranque al flywheel",
+          "level": 2,
+          "paragraphs": [
+            "El moat nunca es el modelo. Todo competidor llama al mismo modelo de fundación, así que apostar por el acceso al modelo es apostar por una commodity. El activo durable es el historial de correcciones etiquetadas y los [evals específicos de dominio](/library/domain-specific-evals-ai-moat) que la semilla y el loop crean.",
+            "Este es el [flywheel copilot, dato, capital](/library/copilot-to-data-to-fund-flywheel) visto desde su primera vuelta. Construya un copilot para generar datos propietarios y luego use ese dato para levantar y desplegar capital. El conjunto de datos de cold start es la primera vuelta manual, la parte que usted gira a mano antes de que el uso gire por usted. Cuando el loop corre, cada corrección se promueve sola al próximo modelo y las vueltas automáticas toman el relevo.",
+            "Esta es una pregunta distinta de por qué el dato compone una vez que usted ya lo tiene, que es el tema de los [efectos de red de datos en IA vertical](/library/data-network-effects-vertical-ai). La composición supone que un primer conjunto de datos ya existe. El playbook de cold start es cómo usted fabrica ese primer conjunto cuando todavía no tiene uso que componer.",
+            "El timing premia la disciplina. A medida que los datos sintéticos inundan la web abierta y la mayoría de los modelos deriva hacia la misma distribución genérica, un conjunto de datos anclado en correcciones reales de dominio se vuelve más raro y más valioso, no menos."
+          ]
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Modos de falla: datos sintéticos que envenenan el pozo",
+          "level": 2,
+          "paragraphs": [
+            "El modo de falla honesto es el model collapse. Cuando un modelo entrena en gran parte sobre su propia salida generada, se aleja de la distribución real y hornea el sesgo en silencio, y el flywheel termina girando sobre ficción. [Shumailov y colegas mostraron en Nature](https://www.nature.com/articles/s41586-024-07566-y) que la deriva corre en dos etapas.",
+            "El colapso temprano pierde primero las colas. El modelo empeora en los casos raros y de minoría mientras las métricas de titular todavía se ven bien, que es justo por qué se le escapa a un equipo que mira solo promedios. El colapso tardío pierde la mayor parte de la varianza y empieza a confundir conceptos abiertamente. Para entonces el daño ya está horneado.",
+            "El arreglo está documentado. [La investigación sobre si el colapso es inevitable](https://arxiv.org/abs/2404.01413) encuentra que, cuando el dato sintético se acumula junto al dato humano en vez de reemplazarlo, el colapso se evita. Las reglas del operador salen de ese único hallazgo."
+          ],
+          "bullets": [
+            "Mantenga dato real en la mezcla. Nunca entrene sobre un corpus mayoritariamente sintético. Sostenga un piso fijo de ejemplos etiquetados por humanos.",
+            "Ancle lo sintético a la verdad del experto. Valide cada lote sintético contra el conjunto de oro humano y un eval de dato real, nunca un eval sintético.",
+            "Vigile las colas, no el promedio. Siga los casos raros y de minoría, porque ahí es donde el colapso se esconde primero.",
+            "Refresque la semilla. Siga promoviendo nuevas correcciones humanas por el loop para que el dato de entrenamiento siga a la realidad, no al propio eco del modelo."
+          ]
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "Cómo Avante arranca los datos con juicio de operador",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures trata el primer conjunto de datos como una decisión de la etapa Build con retorno en la etapa Compound. El sistema de seis etapas corre Research, Partner, Build, Traction, Revenue, Compound, y el etiquetado de la semilla ocurre temprano, por el operador, no por una crowd contratada después.",
+            "La ventaja es el operador. Un socio de dominio con más de 10 años de cicatrices del mercado brasileño produce etiquetas semilla confiables el día uno, porque sabe cuáles casos de borde cargan señal y cuáles son ruido. Es exactamente lo que un trabajador general de crowd no aporta, y por eso la profundidad de operador es la fuente de una semilla defendible. El patrón se repite por el portafolio, en un flujo de activos judiciales, en un modelo de riesgo de seguro, en un pipeline de propiedades de subasta.",
+            "La ventana se abre rápido. Con los servicios en cerca del 70% del PIB de Brasil y baja penetración de software, las empresas que primero posean datos semilla de dominio van a definir las categorías. Avante lanza 3-4 empresas por año y despliega $500K-1.5M por empresa, y el conjunto de datos de cold start es una razón central para que esas empresas se vuelvan financiables. Los equipos que fabrican el primer conjunto de datos a mano van a poseer el dato que el resto todavía trata de comprar."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "La proporción de empresas industriales brasileñas que usan IA subió del 16,9% en 2022 al 41,9% en 2024, cerca de 2,5 veces en dos años.",
+            "attribution": "IBGE"
+          }
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Qué es el problema de cold start en IA?",
+          "a": "El problema de cold start en IA es que el modelo necesita datos para ser preciso, pero los usuarios no se enganchan con un modelo impreciso, y antes del lanzamiento no hay uso que genere ese dato. Es más agudo en productos de IA que en software clásico porque la salida es el producto, así que la calidad de la salida es función directa de los datos de entrenamiento. Usted lo resuelve fabricando el primer conjunto de datos antes de tener usuarios."
+        },
+        {
+          "q": "¿Cómo obtener datos para entrenar IA sin usuarios?",
+          "a": "Usted arma el primer conjunto de datos a partir de tres fuentes a la vez. Datos iniciales etiquetados por un operador de dominio, datos sintéticos generados para cubrir los huecos de la distribución, y un loop con humano en el circuito que promueve correcciones reales al entrenamiento y a los evals. El shadow mode y un piloto restringido agregan resultados reales antes de cualquier lanzamiento público."
+        },
+        {
+          "q": "¿Cómo resolver el problema de cold start en IA con datos sintéticos?",
+          "a": "Use datos sintéticos para cubrir los casos raros que una pequeña semilla de experto no alcanza, no para inflar volumen bruto. Los conjuntos sintéticos bien construidos llegan del 85% al 90% del impacto de datos reales equivalentes en muchas tareas de texto, pero solo si usted ancla cada lote a un conjunto de oro humano y lo mide contra un eval de dato real. Mantenga un piso fijo de dato real para que el modelo no derive hacia el model collapse."
+        },
+        {
+          "q": "¿Son seguros los datos sintéticos para entrenar modelos de IA?",
+          "a": "Sí, si usted mantiene dato real en la mezcla. Cuando un modelo entrena en gran parte sobre su propia salida, colapsa, perdiendo primero las colas de la distribución y luego confundiendo conceptos, según Shumailov y colegas en Nature. La investigación sobre model collapse muestra que se evita cuando el dato sintético se acumula junto al dato humano en vez de reemplazarlo."
+        },
+        {
+          "q": "¿Cuánto cuesta el etiquetado por expertos frente al crowdsourcing?",
+          "a": "Los expertos de dominio cuestan de 10 a 50 veces más por hora de anotación que los trabajadores generales de crowd. Esa prima vale la pena en los pocos cientos de casos difíciles y ambiguos donde su juicio es la etiqueta de verdad, que es de donde sale una semilla defendible. Use mano de obra más barata y generación para el volumen y reserve el tiempo del experto para los casos que solo él decide."
+        }
+      ]
+    },
+    "ogImage": "/og/bootstrap-ai-data-cold-start-playbook.png"
   },
   {
     "slug": "brazil-ai-agriculture-agritech-opportunity",
@@ -6386,6 +7595,383 @@ const engineArticles: Article[] = [
     }
   },
   {
+    "slug": "build-ai-eval-harness-playbook",
+    "category": "playbooks",
+    "type": "Playbook",
+    "readTime": "11 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-03",
+    "isPublished": true,
+    "en": {
+      "title": "How to Build an AI Eval Harness for a Vertical Product",
+      "description": "How to build an AI eval harness that gates every deploy and lets you swap models without losing quality. A hands-on playbook for AI builders.",
+      "sections": [
+        {
+          "paragraphs": [
+            "An AI eval harness is a versioned suite of expert-labeled test cases and automated graders that scores your model output on every deploy and every prompt or model change, so quality is measured instead of guessed. Build it right and you can move to a cheaper or better base model without praying. Skip it and every change is a bet you cannot see the odds on.",
+            "This is the build playbook, the hands-on companion to our argument for why [domain-specific evals are a moat](/library/domain-specific-evals-ai-moat). Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America, and every product we ship runs on a harness like this one. Here is how to assemble the golden set, write the graders, wire the whole thing into your deploy gate, and turn it into an asset that compounds every time the product is used."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "When you need an eval harness, and when tests are enough",
+          "level": 2,
+          "paragraphs": [
+            "An eval harness is not a test suite, and treating them as the same thing is the first mistake. Unit tests assert deterministic behavior. Given input X, the function returns exactly Y, every time. LLM output is probabilistic and open-ended, so the real question is not did it return the exact string, it is did it get the answer right often enough on the cases that matter. Anthropic frames the discipline as defining success criteria first, then designing evaluations to measure against them, and calls that cycle central to prompt engineering.",
+            "You need a harness the moment an LLM sits on a decision path a user or a regulator cares about. Classifying a legal filing. Pricing a risk. Pulling a number out of a document. Answering a support question that carries a policy consequence. You do not need one for low-stakes generation where a human already reviews every output. The tell is simple. If you cannot change a prompt without a quiet fear that you broke something invisible, you are past the point where eyeballing outputs works, and you are running on vibes.",
+            "The 2024 DORA report gives that instinct hard numbers. Across the study, a 25 percent increase in AI adoption came with an estimated 1.5 percent drop in software delivery throughput and a 7.2 percent drop in delivery stability, even as AI lifted individual signals like documentation and code quality. The authors are blunt that AI is not a panacea, and that faster development does not improve delivery without the fundamentals, small batch sizes and disciplined testing. An eval harness is that disciplined testing for the AI layer. It is what lets you keep the speed without paying it back in outages."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "A 25 percent rise in AI adoption was associated with a 1.5 percent decrease in delivery throughput and a 7.2 percent decrease in delivery stability. Speed without a quality gate is a tax you pay later.",
+            "attribution": "DORA, Accelerate State of DevOps 2024"
+          }
+        },
+        {
+          "id": "the-playbook",
+          "heading": "Build the AI eval harness in five moves",
+          "level": 2,
+          "paragraphs": [
+            "This is a workflow you can start this week, not a list of capabilities. The order matters, because each move is worthless without the one before it."
+          ],
+          "bullets": [
+            "Assemble a golden set. Collect 50 to a few hundred real cases from your actual task distribution, each with a correct answer labeled by a domain expert, never by the model. Include the hard ones on purpose. This set encodes your definition of correct, and it is the most valuable thing you will build.",
+            "Write graders. A grader is code that scores one output against its golden answer. Exact match for categorical tasks, a rubric-scored model judge for open-ended ones, with a human tiebreak where the judge and the label disagree.",
+            "Score a baseline. Run the current prompt and model against the whole set and record the number. Accuracy, F1, pass rate, whatever fits. That line is what every future change has to beat or hold.",
+            "Wire it into CI as a gate. Run the suite on every pull request and every deploy, and fail the build when the score drops below the baseline. Quality stops being an opinion and becomes a merge condition.",
+            "Close the loop. Every production failure the suite missed gets added to the golden set with its correct label. The harness becomes a living record of every way the system has been wrong, and every regression it now blocks for good."
+          ]
+        },
+        {
+          "id": "graders-and-cases",
+          "heading": "Choosing graders and sourcing hard cases",
+          "level": 3,
+          "paragraphs": [
+            "Match the grader to the task. Anthropic ranks three families by speed and reliability, and the ranking is a good default. Code-based grading is fastest and most reliable, an exact match where output equals the golden answer, or a string match where a key phrase has to appear. Human grading is the most flexible and highest quality, and also the slowest and most expensive, so you avoid it where you can. Model-based grading, where an LLM judges the output against a rubric, is fast, flexible, and scalable, and the right tool for nuanced calls, but you validate it against human labels before you trust it at scale. OpenAI ships the same shape in its open eval framework, data in JSON and model-graded templates.",
+            "The rubric is where model graders live or die. Make it detailed and empirical, force a discrete verdict of correct or incorrect or a 1 to 5 score rather than prose, and have the judge reason first and then discard the reasoning, which measurably improves grading on hard cases. Use a different model to grade than the one that produced the output.",
+            "The hard cases are the whole point, and they are where domain expertise beats model cleverness. A generic team writes easy cases the model already passes. A domain operator knows the filing that looks routine but is not, the edge condition a regulator actually punishes, the input a competitor gets wrong. Source those cases from real production logs, from expert interviews, and from the incidents that already cost you. You can let the model help generate volume, but the labels on the cases that matter stay human and expert."
+          ]
+        },
+        {
+          "id": "ci-gating",
+          "heading": "Wire evals into the deploy gate",
+          "level": 2,
+          "paragraphs": [
+            "A harness that runs when someone remembers is not a gate. Put the suite in CI so it runs automatically on every pull request and blocks the merge when the score falls below the baseline you recorded. Now a prompt tweak that quietly costs three points of accuracy cannot ship, because the build goes red before anyone argues about it.",
+            "This only works if you version what you are gating. Treat the prompt like source code, committed and diffable, and pin the model name and version alongside it. When you change either one, the harness scores the change against the baseline and tells you what it cost or bought. That is the difference between a measured decision and a guess. A model swap becomes an experiment with a number attached, not a leap of faith taken on a Friday afternoon."
+          ]
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "How the eval set becomes proprietary",
+          "level": 2,
+          "paragraphs": [
+            "The harness is where the copilot to data to fund flywheel gets its teeth. Every correction a domain expert makes and every production failure fed back with its right answer becomes a labeled row no competitor has and none can buy. The eval set is proprietary, domain-specific, and compounding. It is the written-down definition of correct for a vertical, and it grows every time the product is used and corrected. That is why the eval set, and not the model, is the durable asset, an argument we make in full in the [copilot to data to fund flywheel](/library/copilot-to-data-to-fund-flywheel).",
+            "The mechanism ties straight to inference economics. Model quality is converging and inference cost is collapsing, so the base model is not the moat, and betting the company on one is the wrapper trap. According to a16z, an LLM at GPT-3 quality fell from roughly 60 dollars per million tokens in late 2021 to about 0.06 dollars, a 1000x drop in three years, close to 10x a year for equivalent performance. Epoch AI puts the median decline near 50x a year across benchmarks. Read that as strategy, not trivia. If a cheaper or better base model shows up every few months, the team that can swap to it without losing quality wins on both cost and capability, and the harness is the instrument that makes the swap safe."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "The cost of an LLM at GPT-3 quality fell from about 60 dollars per million tokens in 2021 to roughly 0.06 dollars, a 1000x drop in three years. A model-agnostic team captures that only if evals protect quality through the swap.",
+            "attribution": "a16z, LLMflation, 2024"
+          }
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Failure modes: measuring the wrong correct",
+          "level": 2,
+          "paragraphs": [
+            "A harness built wrong is worse than no harness, because it hands the team false confidence. These are the ways it goes wrong, and the fix for each."
+          ],
+          "bullets": [
+            "The wrong definition of correct. A bad golden set encodes a mistaken standard, and the suite then certifies the wrong behavior on every green build. Fix it with expert labeling and periodic review of the set itself, not just the model.",
+            "Overfitting to the eval. Teams tune prompts to pass the suite instead of to serve the real world, and the score climbs while production quality does not. Keep a held-out set the team never tunes against, and refresh cases from live traffic.",
+            "A stale set. New inputs appear, the distribution drifts, and a frozen set slowly stops representing reality. The closed loop is the antidote.",
+            "An untrusted model judge. An LLM grader never checked against human labels can be confidently wrong at scale. Validate first, then keep the human tiebreak on disagreements.",
+            "Lock-in dressed as safety. A harness bolted to one vendor's format defeats the point. Keep the golden set and graders in your own store so the suite outlives any single model."
+          ]
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "How Avante builds evals with domain operators",
+          "level": 2,
+          "paragraphs": [
+            "The reason our harnesses hold up is who writes the golden set. Avante Ventures launches 3-4 ventures per year through a six-stage system, Research, Partner, Build, Traction, Revenue, Compound, deploying $500K-1.5M per venture and retaining co-founder economics. The domain operator, the person with a decade of scar tissue in the vertical, is the source of the correct labels, and they sit inside the product team from the Partner stage on. The gate goes live in Build and hardens through Traction and Revenue. The compounding eval set is a Compound-stage asset that follows the venture into its raise.",
+            "It is also why a lean team can ship a defensible product without a Series A. Cheap inference plus a disciplined harness means the moat is the data and the evals, not a war chest for compute. The harness itself is company plumbing a studio solves once and routes across every venture, turning shared infrastructure into roughly $300K-500K of effective capital per venture that goes into product instead of overhead.",
+            "The pressure is real in our market. AI use among Brazilian industrial companies jumped from 16.9 percent in 2022 to 41.9 percent in 2024, roughly 2.5x in two years, per IBGE. Adoption is racing ahead of quality control, which is the DORA gap in one country. In a market where services are roughly 70% of Brazilian GDP with low software penetration, the vertical AI prize is large, and it goes to the teams whose quality is measured, not asserted. Read the thesis at [/why-avante](/why-avante). The team that can prove its model still works after a swap is the team that gets to keep swapping."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is an AI eval harness?",
+          "a": "An AI eval harness is a versioned suite of expert-labeled test cases plus automated graders that scores model output on every deploy and every prompt or model change. It turns quality from something you eyeball into something you measure. Unlike unit tests, which assert one exact output, it scores probabilistic output across the cases that matter to your vertical."
+        },
+        {
+          "q": "How do I build an AI eval harness?",
+          "a": "Build it in five moves. Assemble a golden set of real, expert-labeled cases including hard edge cases, write graders that score each output against its golden answer, record a baseline score, wire the suite into CI as a deploy gate, and feed every production failure back into the set. The order matters, because each step depends on the one before it."
+        },
+        {
+          "q": "How is an eval harness different from unit tests?",
+          "a": "Unit tests check deterministic code, where a given input must return one exact output. An eval harness scores probabilistic LLM output, where the question is whether the answer is right often enough across a realistic distribution of cases. You need the harness the moment an LLM sits on a decision a user or regulator cares about."
+        },
+        {
+          "q": "What kind of grader should I use for LLM evals?",
+          "a": "Match the grader to the task. Use code-based exact or string matching for categorical and extractive tasks, since it is fastest and most reliable. Use a rubric-scored model judge for open-ended output, validated against human labels first, with a human tiebreak on disagreements. Avoid pure human grading at scale because it is slow and expensive."
+        },
+        {
+          "q": "Why do evals matter more as inference gets cheaper?",
+          "a": "Because falling inference cost is what makes a model swap worth doing, and evals are what make it safe. LLM cost at GPT-3 quality fell about 1000x in three years per a16z, so a cheaper or better base model appears constantly. A model-agnostic team captures that upside only if an eval harness proves quality held through the change."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Como Construir uma Suite de Avaliação de IA para um Produto Vertical",
+      "description": "Como construir uma suite de avaliação de IA que trava cada deploy e permite trocar de modelo sem perder qualidade. Um playbook prático para builders.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Uma suite de avaliação de IA é um conjunto versionado de casos de teste rotulados por especialistas mais avaliadores automáticos que dão nota à saída do modelo a cada deploy e a cada mudança de prompt ou de modelo. Assim a qualidade é medida, não chutada. Com uma boa suite você troca por um modelo mais barato ou melhor sem rezar. Sem ela, cada mudança é uma aposta cujas probabilidades você não enxerga.",
+            "Este é o playbook de construção, o companheiro prático do nosso argumento sobre [por que evals específicos de domínio são um moat](/library/domain-specific-evals-ai-moat). A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina, e todo produto que lançamos roda sobre uma suite como esta. Aqui está como montar o golden set, escrever os avaliadores, ligar tudo ao seu gate de deploy e transformar isso num ativo que compõe a cada uso do produto."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "Quando você precisa de uma suite de avaliação, e quando testes bastam",
+          "level": 2,
+          "paragraphs": [
+            "Uma suite de avaliação não é uma suite de testes, e tratar as duas como a mesma coisa é o primeiro erro. Testes unitários afirmam comportamento determinístico. Dada a entrada X, a função devolve exatamente Y, sempre. A saída de um LLM é probabilística e aberta, então a pergunta real não é se ele devolveu a string exata, e sim se ele acertou com frequência suficiente nos casos que importam. A Anthropic enquadra a disciplina como definir os critérios de sucesso primeiro e só então desenhar avaliações para medir contra eles, e chama esse ciclo de central para a engenharia de prompt.",
+            "Você precisa de uma suite no momento em que um LLM entra num caminho de decisão com que um usuário ou um regulador se importa. Classificar uma peça jurídica. Precificar um risco. Extrair um número de um documento. Responder um chamado de suporte que carrega consequência de política. Você não precisa de uma para geração de baixo risco em que um humano já revisa toda saída. O sinal é simples. Se você não consegue mudar um prompt sem um medo silencioso de ter quebrado algo que não enxerga, você já passou do ponto em que olhar as saídas no olho resolve, e está operando no chute.",
+            "O relatório DORA de 2024 dá números duros a essa intuição. No estudo, um aumento de 25% na adoção de IA veio acompanhado de uma queda estimada de 1,5% na vazão de entrega de software e de 7,2% na estabilidade da entrega, mesmo com a IA elevando sinais individuais como qualidade de documentação e de código. Os autores são diretos ao dizer que a IA não é panaceia, e que desenvolver mais rápido não melhora a entrega sem o básico, lotes pequenos e disciplina de testes. Uma suite de avaliação é essa disciplina de testes para a camada de IA. É o que permite manter a velocidade sem pagar de volta em instabilidade."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Um aumento de 25% na adoção de IA foi associado a uma queda de 1,5% na vazão de entrega e de 7,2% na estabilidade da entrega. Velocidade sem gate de qualidade é um imposto que você paga depois.",
+            "attribution": "DORA, Accelerate State of DevOps 2024"
+          }
+        },
+        {
+          "id": "the-playbook",
+          "heading": "Construa a suite de avaliação de IA em cinco passos",
+          "level": 2,
+          "paragraphs": [
+            "Este é um fluxo que você começa esta semana, não uma lista de capacidades. A ordem importa, porque cada passo é inútil sem o anterior."
+          ],
+          "bullets": [
+            "Monte um golden set. Reúna de 50 a algumas centenas de casos reais da sua distribuição de tarefa, cada um com a resposta correta rotulada por um especialista de domínio, nunca pelo modelo. Inclua os difíceis de propósito. Esse conjunto codifica a sua definição de correto, e é a coisa mais valiosa que você vai construir.",
+            "Escreva avaliadores. Um avaliador é código que dá nota a uma saída contra a resposta de referência. Correspondência exata para tarefas categóricas, um juiz modelo pontuado por rubrica para as abertas, com desempate humano onde o juiz e o rótulo divergem.",
+            "Meça uma linha de base. Rode o prompt e o modelo atuais contra o conjunto inteiro e registre o número. Acurácia, F1, taxa de acerto, o que couber. Essa linha é o que toda mudança futura tem que bater ou manter.",
+            "Ligue à CI como gate. Rode a suite a cada pull request e a cada deploy, e quebre o build quando a nota cair abaixo da linha de base. A qualidade deixa de ser opinião e vira condição de merge.",
+            "Feche o ciclo. Toda falha de produção que a suite não pegou entra no golden set com o rótulo correto. A suite vira um registro vivo de cada jeito pelo qual o sistema já errou, e de cada regressão que ela agora bloqueia para sempre."
+          ]
+        },
+        {
+          "id": "graders-and-cases",
+          "heading": "Escolhendo avaliadores e coletando casos difíceis",
+          "level": 3,
+          "paragraphs": [
+            "Case o avaliador com a tarefa. A Anthropic ordena três famílias por velocidade e confiabilidade, e essa ordem é um bom padrão. Avaliação por código é a mais rápida e confiável, uma correspondência exata em que a saída é igual à referência, ou uma correspondência de string em que uma frase-chave precisa aparecer. Avaliação humana é a mais flexível e de maior qualidade, e também a mais lenta e cara, então você a evita quando pode. Avaliação por modelo, em que um LLM julga a saída contra uma rubrica, é rápida, flexível e escalável, e a ferramenta certa para julgamentos sutis, mas você a valida contra rótulos humanos antes de confiar nela em escala. A OpenAI entrega o mesmo formato no seu framework aberto de evals, dados em JSON e modelos de avaliação por modelo.",
+            "A rubrica é onde o juiz modelo vive ou morre. Faça-a detalhada e empírica, force um veredito discreto de correto ou incorreto ou uma nota de 1 a 5 em vez de texto corrido, e peça ao juiz para raciocinar primeiro e depois descartar o raciocínio, o que melhora de forma mensurável a nota nos casos difíceis. Use um modelo diferente para avaliar daquele que gerou a saída.",
+            "Os casos difíceis são o ponto inteiro, e são onde a expertise de domínio ganha da esperteza do modelo. Um time genérico escreve casos fáceis que o modelo já passa. Um operador de domínio conhece a peça que parece rotineira mas não é, a condição de borda que um regulador de fato pune, a entrada que um concorrente erra. Colete esses casos dos logs reais de produção, de entrevistas com especialistas e dos incidentes que já custaram caro. Você pode deixar o modelo ajudar a gerar volume, mas os rótulos dos casos que importam continuam humanos e especialistas."
+          ]
+        },
+        {
+          "id": "ci-gating",
+          "heading": "Ligue as avaliações ao gate de deploy",
+          "level": 2,
+          "paragraphs": [
+            "Uma suite que roda quando alguém lembra não é um gate. Coloque a suite na CI para que ela rode automaticamente a cada pull request e bloqueie o merge quando a nota cair abaixo da linha de base que você registrou. Agora um ajuste de prompt que silenciosamente custa três pontos de acurácia não sobe, porque o build fica vermelho antes de qualquer discussão.",
+            "Isso só funciona se você versiona o que está no gate. Trate o prompt como código-fonte, comitado e comparável em diff, e fixe o nome e a versão do modelo ao lado dele. Quando você muda um dos dois, a suite dá nota à mudança contra a linha de base e diz o que ela custou ou comprou. Essa é a diferença entre uma decisão medida e um chute. Uma troca de modelo vira um experimento com número anexado, não um salto de fé numa sexta à tarde."
+          ]
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "Como o conjunto de avaliação vira proprietário",
+          "level": 2,
+          "paragraphs": [
+            "A suite é onde o flywheel copilot, dado, capital ganha dentes. Cada correção que um especialista de domínio faz e cada falha de produção devolvida com a resposta certa vira uma linha rotulada que nenhum concorrente tem e nenhum consegue comprar. O conjunto de avaliação é proprietário, específico de domínio e composto ao longo do tempo. É a definição escrita de correto para um vertical, e cresce a cada vez que o produto é usado e corrigido. Por isso o conjunto de avaliação, e não o modelo, é o ativo durável, um argumento que fazemos por inteiro no [flywheel copilot, dado, capital](/library/copilot-to-data-to-fund-flywheel).",
+            "O mecanismo se liga direto à economia da inferência. A qualidade dos modelos está convergindo e o custo da inferência está desabando, então o modelo base não é o moat, e apostar a empresa em um só é a armadilha do wrapper. Segundo a a16z, um LLM na qualidade do GPT-3 caiu de cerca de 60 dólares por milhão de tokens no fim de 2021 para cerca de 0,06 dólar, uma queda de 1000x em três anos, perto de 10x ao ano para desempenho equivalente. A Epoch AI coloca a queda mediana perto de 50x ao ano entre benchmarks. Leia isso como estratégia, não curiosidade. Se um modelo base mais barato ou melhor aparece a cada poucos meses, o time que consegue trocar para ele sem perder qualidade ganha em custo e em capacidade, e a suite é o instrumento que torna a troca segura."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O custo de um LLM na qualidade do GPT-3 caiu de cerca de 60 dólares por milhão de tokens em 2021 para cerca de 0,06 dólar, uma queda de 1000x em três anos. Um time independente de modelo só captura isso se as avaliações protegerem a qualidade durante a troca.",
+            "attribution": "a16z, LLMflation, 2024"
+          }
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Modos de falha: medir o correto errado",
+          "level": 2,
+          "paragraphs": [
+            "Uma suite construída errado é pior que suite nenhuma, porque entrega ao time uma confiança falsa. Estes são os jeitos pelos quais ela dá errado, e a correção de cada um."
+          ],
+          "bullets": [
+            "A definição errada de correto. Um golden set ruim codifica um padrão equivocado, e a suite então certifica o comportamento errado em todo build verde. Corrija com rotulagem por especialista e revisão periódica do próprio conjunto, não só do modelo.",
+            "Overfitting à avaliação. Times ajustam prompts para passar na suite em vez de servir o mundo real, e a nota sobe enquanto a qualidade em produção não. Mantenha um conjunto reservado que o time nunca usa para ajuste, e renove casos a partir do tráfego real.",
+            "Um conjunto envelhecido. Entradas novas aparecem, a distribuição muda, e um conjunto congelado aos poucos deixa de representar a realidade. O ciclo fechado é o antídoto.",
+            "Um juiz modelo sem validação. Um avaliador LLM nunca conferido contra rótulos humanos pode estar confiantemente errado em escala. Valide primeiro, depois mantenha o desempate humano nas divergências.",
+            "Lock-in vestido de segurança. Uma suite presa ao formato de um único fornecedor derruba o propósito. Guarde o golden set e os avaliadores no seu próprio repositório para que a suite sobreviva a qualquer modelo."
+          ]
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "Como a Avante constrói avaliações com operadores de domínio",
+          "level": 2,
+          "paragraphs": [
+            "A razão pela qual nossas suites se sustentam é quem escreve o golden set. A Avante Ventures lança 3-4 ventures por ano por um sistema de seis estágios, Research, Partner, Build, Traction, Revenue, Compound, empregando $500K-1.5M por venture e retendo economia de co-founder. O operador de domínio, a pessoa com uma década de calo no vertical, é a fonte dos rótulos corretos, e senta dentro do time de produto desde o estágio Partner. O gate entra no ar no Build e endurece ao longo de Traction e Revenue. O conjunto de avaliação que compõe é um ativo de estágio Compound que acompanha a venture na captação.",
+            "É também por isso que um time enxuto entrega um produto defensável sem uma Série A. Inferência barata mais uma suite disciplinada significam que o moat é o dado e as avaliações, não um caixa de guerra para computação. A própria suite é encanamento de empresa que um studio resolve uma vez e roteia por cada venture, transformando infraestrutura compartilhada em cerca de $300K-500K de capital efetivo por venture que vai para produto em vez de overhead.",
+            "A pressão é real no nosso mercado. O uso de IA entre empresas industriais brasileiras saltou de 16,9% em 2022 para 41,9% em 2024, cerca de 2,5x em dois anos, segundo o IBGE. A adoção corre à frente do controle de qualidade, que é o gap do DORA num país só. Num mercado em que serviços são cerca de 70% do PIB brasileiro com baixa penetração de software, o prêmio da IA vertical é grande, e vai para os times cuja qualidade é medida, não afirmada. Leia a tese em [/why-avante](/why-avante). O time que consegue provar que seu modelo ainda funciona depois de uma troca é o time que continua podendo trocar."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "O que é uma suite de avaliação de IA?",
+          "a": "Uma suite de avaliação de IA é um conjunto versionado de casos de teste rotulados por especialistas mais avaliadores automáticos que dá nota à saída do modelo a cada deploy e a cada mudança de prompt ou de modelo. Ela transforma qualidade de algo que você olha no olho em algo que você mede. Diferente de testes unitários, que afirmam uma saída exata, ela avalia saída probabilística nos casos que importam para o seu vertical."
+        },
+        {
+          "q": "Como construir uma suite de avaliação de IA?",
+          "a": "Construa em cinco passos. Monte um golden set de casos reais rotulados por especialistas incluindo casos de borda difíceis, escreva avaliadores que dão nota a cada saída contra sua referência, registre uma linha de base, ligue a suite à CI como gate de deploy e devolva cada falha de produção para o conjunto. A ordem importa, porque cada passo depende do anterior."
+        },
+        {
+          "q": "Qual a diferença entre uma suite de avaliação e testes unitários?",
+          "a": "Testes unitários checam código determinístico, em que uma entrada dada precisa devolver uma saída exata. Uma suite de avaliação dá nota à saída probabilística de um LLM, em que a pergunta é se a resposta está certa com frequência suficiente numa distribuição realista de casos. Você precisa da suite no momento em que um LLM entra numa decisão com que um usuário ou regulador se importa."
+        },
+        {
+          "q": "Que tipo de avaliador usar para evals de LLM?",
+          "a": "Case o avaliador com a tarefa. Use correspondência exata ou de string por código para tarefas categóricas e de extração, por ser a mais rápida e confiável. Use um juiz modelo pontuado por rubrica para saída aberta, validado antes contra rótulos humanos, com desempate humano nas divergências. Evite avaliação humana pura em escala porque é lenta e cara."
+        },
+        {
+          "q": "Por que as avaliações importam mais à medida que a inferência fica mais barata?",
+          "a": "Porque o custo caindo da inferência é o que torna uma troca de modelo valer a pena, e as avaliações são o que a tornam segura. O custo de LLM na qualidade do GPT-3 caiu cerca de 1000x em três anos segundo a a16z, então um modelo base mais barato ou melhor aparece o tempo todo. Um time independente de modelo captura essa vantagem só se uma suite de avaliação provar que a qualidade se manteve na mudança."
+        }
+      ]
+    },
+    "es": {
+      "title": "Cómo Construir una Suite de Evaluación de IA para un Producto Vertical",
+      "description": "Cómo construir una suite de evaluación de IA que bloquea cada deploy y permite cambiar de modelo sin perder calidad. Un playbook práctico para builders.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Una suite de evaluación de IA es un conjunto versionado de casos de prueba etiquetados por expertos más evaluadores automáticos que califican la salida del modelo en cada deploy y en cada cambio de prompt o de modelo. Así la calidad se mide, no se adivina. Con una buena suite usted cambia a un modelo más barato o mejor sin rezar. Sin ella, cada cambio es una apuesta cuyas probabilidades usted no alcanza a ver.",
+            "Este es el playbook de construcción, el compañero práctico de nuestro argumento sobre [por qué los evals específicos de dominio son un moat](/library/domain-specific-evals-ai-moat). Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina, y cada producto que lanzamos corre sobre una suite como esta. Aquí está como armar el golden set, escribir los evaluadores, conectar todo a su gate de deploy y convertirlo en un activo que se compone con cada uso del producto."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "Cuando necesitas una suite de evaluación, y cuando bastan las pruebas",
+          "level": 2,
+          "paragraphs": [
+            "Una suite de evaluación no es una suite de pruebas, y tratarlas como lo mismo es el primer error. Las pruebas unitarias afirman un comportamiento determinista. Dada la entrada X, la función devuelve exactamente Y, siempre. La salida de un LLM es probabilística y abierta, así que la pregunta real no es si devolvió la cadena exacta, sino si acertó con suficiente frecuencia en los casos que importan. Anthropic enmarca la disciplina como definir primero los criterios de éxito y solo entonces diseñar evaluaciones para medir contra ellos, y llama a ese ciclo central para la ingeniería de prompts.",
+            "Usted necesita una suite en el momento en que un LLM entra en una ruta de decisión que le importa a un usuario o a un regulador. Clasificar un escrito legal. Poner precio a un riesgo. Extraer un número de un documento. Responder un ticket de soporte que carga una consecuencia de política. No la necesita para generación de bajo riesgo donde un humano ya revisa cada salida. La señal es simple. Si no puede cambiar un prompt sin un miedo silencioso de haber roto algo que no ve, ya pasó el punto en que revisar las salidas a ojo alcanza, y está operando por intuición.",
+            "El reporte DORA de 2024 le pone números duros a esa intuición. En el estudio, un aumento de 25% en la adopción de IA vino acompañado de una caída estimada de 1,5% en el rendimiento de entrega de software y de 7,2% en la estabilidad de la entrega, aun cuando la IA elevó señales individuales como la calidad de documentación y de código. Los autores son directos al decir que la IA no es una panacea, y que desarrollar más rápido no mejora la entrega sin lo básico, lotes pequeños y disciplina de pruebas. Una suite de evaluación es esa disciplina de pruebas para la capa de IA. Es lo que permite conservar la velocidad sin devolverla en inestabilidad."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Un aumento de 25% en la adopción de IA se asoció con una caída de 1,5% en el rendimiento de entrega y de 7,2% en la estabilidad de la entrega. Velocidad sin gate de calidad es un impuesto que se paga después.",
+            "attribution": "DORA, Accelerate State of DevOps 2024"
+          }
+        },
+        {
+          "id": "the-playbook",
+          "heading": "Construye la suite de evaluación de IA en cinco pasos",
+          "level": 2,
+          "paragraphs": [
+            "Este es un flujo que usted empieza esta semana, no una lista de capacidades. El orden importa, porque cada paso es inútil sin el anterior."
+          ],
+          "bullets": [
+            "Arme un golden set. Reúna de 50 a unos cientos de casos reales de su distribución de tarea, cada uno con la respuesta correcta etiquetada por un experto de dominio, nunca por el modelo. Incluya los difíciles a propósito. Ese conjunto codifica su definición de correcto, y es lo más valioso que va a construir.",
+            "Escriba evaluadores. Un evaluador es código que califica una salida contra su respuesta de referencia. Coincidencia exacta para tareas categóricas, un juez modelo puntuado por rúbrica para las abiertas, con desempate humano donde el juez y la etiqueta difieren.",
+            "Mida una línea base. Corra el prompt y el modelo actuales contra el conjunto entero y registre el número. Exactitud, F1, tasa de acierto, lo que aplique. Esa línea es lo que todo cambio futuro tiene que superar o mantener.",
+            "Conéctela a la CI como gate. Corra la suite en cada pull request y cada deploy, y rompa el build cuando la nota caiga por debajo de la línea base. La calidad deja de ser opinión y se vuelve condición de merge.",
+            "Cierre el ciclo. Cada falla de producción que la suite no atrapó entra al golden set con su etiqueta correcta. La suite se vuelve un registro vivo de cada forma en que el sistema ha estado equivocado, y de cada regresión que ahora bloquea para siempre."
+          ]
+        },
+        {
+          "id": "graders-and-cases",
+          "heading": "Eligiendo evaluadores y reuniendo casos difíciles",
+          "level": 3,
+          "paragraphs": [
+            "Empareje el evaluador con la tarea. Anthropic ordena tres familias por velocidad y confiabilidad, y ese orden es un buen valor por defecto. La evaluación por código es la más rápida y confiable, una coincidencia exacta donde la salida es igual a la referencia, o una coincidencia de cadena donde una frase clave debe aparecer. La evaluación humana es la más flexible y de mayor calidad, y también la más lenta y cara, así que la evita cuando puede. La evaluación por modelo, donde un LLM juzga la salida contra una rúbrica, es rápida, flexible y escalable, y la herramienta correcta para juicios sutiles, pero se valida contra etiquetas humanas antes de confiar en ella a escala. OpenAI entrega el mismo formato en su framework abierto de evals, datos en JSON y plantillas de evaluación por modelo.",
+            "La rúbrica es donde el juez modelo vive o muere. Hágala detallada y empírica, fuerce un veredicto discreto de correcto o incorrecto o una nota de 1 a 5 en lugar de texto libre, y pídale al juez que razone primero y luego descarte el razonamiento, lo que mejora de forma medible la nota en los casos difíciles. Use un modelo distinto para evaluar del que generó la salida.",
+            "Los casos difíciles son el punto entero, y son donde la experiencia de dominio le gana a la astucia del modelo. Un equipo genérico escribe casos fáciles que el modelo ya pasa. Un operador de dominio conoce el escrito que parece rutinario pero no lo es, la condición de borde que un regulador sí castiga, la entrada que un competidor falla. Reúna esos casos de los logs reales de producción, de entrevistas con expertos y de los incidentes que ya costaron caro. Puede dejar que el modelo ayude a generar volumen, pero las etiquetas de los casos que importan siguen siendo humanas y expertas."
+          ]
+        },
+        {
+          "id": "ci-gating",
+          "heading": "Conecta las evaluaciones al gate de deploy",
+          "level": 2,
+          "paragraphs": [
+            "Una suite que corre cuando alguien se acuerda no es un gate. Ponga la suite en la CI para que corra automáticamente en cada pull request y bloquee el merge cuando la nota caiga por debajo de la línea base que registró. Ahora un ajuste de prompt que en silencio cuesta tres puntos de exactitud no puede subir, porque el build se pone rojo antes de que alguien discuta.",
+            "Esto solo funciona si usted versiona lo que está en el gate. Trate el prompt como código fuente, con commit y comparable en diff, y fije el nombre y la versión del modelo junto a él. Cuando cambia uno de los dos, la suite califica el cambio contra la línea base y le dice qué costó o qué compró. Esa es la diferencia entre una decisión medida y una adivinanza. Un cambio de modelo se vuelve un experimento con un número anexado, no un salto de fe un viernes por la tarde."
+          ]
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "Como el conjunto de evaluación se vuelve propietario",
+          "level": 2,
+          "paragraphs": [
+            "La suite es donde el flywheel copilot, dato, capital saca los dientes. Cada corrección que hace un experto de dominio y cada falla de producción devuelta con su respuesta correcta se vuelve una fila etiquetada que ningún competidor tiene y ninguno puede comprar. El conjunto de evaluación es propietario, específico de dominio y compuesto con el tiempo. Es la definición escrita de correcto para un vertical, y crece cada vez que el producto se usa y se corrige. Por eso el conjunto de evaluación, y no el modelo, es el activo durable, un argumento que hacemos completo en el [flywheel copilot, dato, capital](/library/copilot-to-data-to-fund-flywheel).",
+            "El mecanismo se conecta directo con la economía de la inferencia. La calidad de los modelos está convergiendo y el costo de la inferencia se está desplomando, así que el modelo base no es el moat, y apostar la empresa a uno solo es la trampa del wrapper. Según a16z, un LLM con calidad de GPT-3 cayó de cerca de 60 dólares por millón de tokens a finales de 2021 a cerca de 0,06 dólares, una caída de 1000x en tres años, cerca de 10x al año para un desempeño equivalente. Epoch AI ubica la caída mediana cerca de 50x al año entre benchmarks. Léalo como estrategia, no como dato curioso. Si un modelo base más barato o mejor aparece cada pocos meses, el equipo que puede cambiar a él sin perder calidad gana en costo y en capacidad, y la suite es el instrumento que hace seguro el cambio."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "El costo de un LLM con calidad de GPT-3 cayó de cerca de 60 dólares por millón de tokens en 2021 a cerca de 0,06 dólares, una caída de 1000x en tres años. Un equipo independiente de modelo captura eso solo si las evaluaciones protegen la calidad durante el cambio.",
+            "attribution": "a16z, LLMflation, 2024"
+          }
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Modos de falla: medir el correcto equivocado",
+          "level": 2,
+          "paragraphs": [
+            "Una suite mal construida es peor que ninguna suite, porque le entrega al equipo una confianza falsa. Estas son las formas en que sale mal, y la corrección de cada una."
+          ],
+          "bullets": [
+            "La definición equivocada de correcto. Un golden set malo codifica un estándar errado, y la suite entonces certifica el comportamiento equivocado en cada build verde. Corríjalo con etiquetado por expertos y revisión periódica del conjunto mismo, no solo del modelo.",
+            "Sobreajuste a la evaluación. Los equipos ajustan prompts para pasar la suite en vez de servir al mundo real, y la nota sube mientras la calidad en producción no. Mantenga un conjunto reservado que el equipo nunca usa para ajustar, y renueve casos desde el tráfico real.",
+            "Un conjunto envejecido. Aparecen entradas nuevas, la distribución se corre, y un conjunto congelado poco a poco deja de representar la realidad. El ciclo cerrado es el antídoto.",
+            "Un juez modelo sin validar. Un evaluador LLM nunca contrastado contra etiquetas humanas puede estar equivocado con confianza a escala. Valide primero, luego mantenga el desempate humano en las discrepancias.",
+            "Lock-in vestido de seguridad. Una suite atada al formato de un solo proveedor derriba el propósito. Guarde el golden set y los evaluadores en su propio repositorio para que la suite sobreviva a cualquier modelo."
+          ]
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "Como Avante construye evaluaciones con operadores de dominio",
+          "level": 2,
+          "paragraphs": [
+            "La razón por la que nuestras suites se sostienen es quién escribe el golden set. Avante Ventures lanza 3-4 ventures por año mediante un sistema de seis etapas, Research, Partner, Build, Traction, Revenue, Compound, desplegando $500K-1.5M por venture y reteniendo economía de co-founder. El operador de dominio, la persona con una década de cicatrices en el vertical, es la fuente de las etiquetas correctas, y se sienta dentro del equipo de producto desde la etapa Partner. El gate entra en vivo en Build y se endurece a lo largo de Traction y Revenue. El conjunto de evaluación que se compone es un activo de etapa Compound que acompaña a la venture en su ronda.",
+            "Es también por eso que un equipo esbelto entrega un producto defendible sin una Serie A. Inferencia barata más una suite disciplinada significan que el moat es el dato y las evaluaciones, no un cofre de guerra para cómputo. La suite misma es plomería de empresa que un studio resuelve una vez y enruta por cada venture, convirtiendo la infraestructura compartida en cerca de $300K-500K de capital efectivo por venture que va a producto en lugar de overhead.",
+            "La presión es real en nuestro mercado. El uso de IA entre las empresas industriales brasileñas saltó de 16,9% en 2022 a 41,9% en 2024, cerca de 2,5x en dos años, según el IBGE. La adopción corre por delante del control de calidad, que es la brecha de DORA en un solo país. En un mercado donde los servicios son cerca del 70% del PIB brasileño con baja penetración de software, el premio de la IA vertical es grande, y va para los equipos cuya calidad se mide, no se afirma. Lea la tesis en [/why-avante](/why-avante). El equipo que puede probar que su modelo aún funciona después de un cambio es el equipo que sigue pudiendo cambiar."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Que es una suite de evaluación de IA?",
+          "a": "Una suite de evaluación de IA es un conjunto versionado de casos de prueba etiquetados por expertos más evaluadores automáticos que califican la salida del modelo en cada deploy y en cada cambio de prompt o de modelo. Convierte la calidad de algo que usted revisa a ojo en algo que mide. A diferencia de las pruebas unitarias, que afirman una salida exacta, evalúa salida probabilística en los casos que importan para su vertical."
+        },
+        {
+          "q": "Como construir una suite de evaluación de IA?",
+          "a": "Construya en cinco pasos. Arme un golden set de casos reales etiquetados por expertos incluyendo casos de borde difíciles, escriba evaluadores que califican cada salida contra su referencia, registre una línea base, conecte la suite a la CI como gate de deploy y devuelva cada falla de producción al conjunto. El orden importa, porque cada paso depende del anterior."
+        },
+        {
+          "q": "Cual es la diferencia entre una suite de evaluación y las pruebas unitarias?",
+          "a": "Las pruebas unitarias revisan código determinista, donde una entrada dada debe devolver una salida exacta. Una suite de evaluación califica la salida probabilística de un LLM, donde la pregunta es si la respuesta está bien con suficiente frecuencia en una distribución realista de casos. Usted necesita la suite en el momento en que un LLM entra en una decisión que le importa a un usuario o a un regulador."
+        },
+        {
+          "q": "Que tipo de evaluador usar para evals de LLM?",
+          "a": "Empareje el evaluador con la tarea. Use coincidencia exacta o de cadena por código para tareas categóricas y de extracción, por ser la más rápida y confiable. Use un juez modelo puntuado por rúbrica para salida abierta, validado antes contra etiquetas humanas, con desempate humano en las discrepancias. Evite la evaluación humana pura a escala porque es lenta y cara."
+        },
+        {
+          "q": "Por que las evaluaciones importan más a medida que la inferencia se abarata?",
+          "a": "Porque el costo cayendo de la inferencia es lo que hace que valga la pena un cambio de modelo, y las evaluaciones son lo que lo vuelve seguro. El costo de un LLM con calidad de GPT-3 cayó cerca de 1000x en tres años según a16z, así que un modelo base más barato o mejor aparece todo el tiempo. Un equipo independiente de modelo captura esa ventaja solo si una suite de evaluación prueba que la calidad se mantuvo en el cambio."
+        }
+      ]
+    },
+    "ogImage": "/og/build-ai-eval-harness-playbook.png"
+  },
+  {
     "slug": "copilot-to-data-to-fund-flywheel",
     "category": "ai",
     "type": "Playbook",
@@ -7501,6 +9087,877 @@ const engineArticles: Article[] = [
     }
   },
   {
+    "slug": "instrument-copilot-proprietary-data-playbook",
+    "category": "playbooks",
+    "type": "Playbook",
+    "readTime": "10 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-03",
+    "isPublished": true,
+    "en": {
+      "title": "AI Copilot Data Capture: Turn Usage Into Proprietary Data",
+      "description": "AI copilot data capture done right. How to instrument a copilot so usage becomes proprietary data, the playbook behind the copilot to data to fund flywheel.",
+      "sections": [
+        {
+          "paragraphs": [
+            "AI copilot data capture is the difference between a copilot that gets smarter every quarter and one that just runs up an inference bill. Instrument it well and every correction a domain expert makes becomes a labeled example a competitor cannot buy. Instrument it lazily and you collect terabytes that train nothing.",
+            "This is the engineering how-to behind the copilot to data to fund flywheel. Not the argument for why the pattern works, but the wiring. Log four linked events per interaction, capture the correction and the reason behind it, store it with consent that keeps it reusable, and route it back into evals and fine-tuning. Avante Ventures builds every venture this way on purpose."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "What to capture, and what is just noise",
+          "level": 2,
+          "paragraphs": [
+            "The decision is not whether to log. It is which events carry decision-grade signal and which are vanity telemetry. Most product analytics answer what happened. A data flywheel answers what happened and whether it worked.",
+            "Not all usage is training signal. Clicks and page views are weak. Explicit corrections, outcome confirmations, and preference choices are strong, [according to the Institute of Product Management](https://www.institutepm.com/knowledge-hub/ai-network-effects). The sharpest way to put it comes from the workflow-intelligence literature. Public datasets contain events. [Workflow data contains outcomes](https://www.zimt.ai/blog/the-proprietary-data-flywheel-why-workflow-intelligence-becomes-your-real-ai-moat).",
+            "So capture four linked events on every interaction, not a firehose of undifferentiated logs."
+          ],
+          "bullets": [
+            "The input. The exact task and the context the model actually saw, not a cleaned-up summary written after the fact.",
+            "The model output. The suggestion the copilot produced, tagged with the model version that produced it.",
+            "The human action. Accepted, edited, or rejected. When it is an edit, the diff is the label.",
+            "The outcome. Did the downstream result work. A claim paid, a legal filing accepted, an auction bid that cleared."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "One honest caveat. If all you need is a usage dashboard, event counting is enough and this is over-engineering. Decision-grade capture earns its cost only when the venture intends to train a domain model and defend it with the data."
+          }
+        },
+        {
+          "id": "the-playbook",
+          "heading": "Instrument the AI copilot in four layers",
+          "level": 2,
+          "paragraphs": [
+            "Here is a workflow an operator can start this week. The target is easy to state and hard to fake. The copilot improves measurably each quarter without a base-model change. That is the mark of a working flywheel rather than a static feature."
+          ],
+          "bullets": [
+            "Capture layer. Emit one structured event per interaction that ties input, output, and human action together under a shared interaction id. Do not scatter them across four tables that never join.",
+            "Correction layer. When the user edits the output, store the before, the after, and the reason. Let the system propose a reason code and let the expert confirm or correct it.",
+            "Outcome layer. Backfill the result when it lands, often days later, and link it to the original interaction id so a won deal attaches to the suggestion that produced it.",
+            "Loop layer. Route the labeled corrections into two places. An eval set that catches regressions, and a fine-tuning or retrieval set that raises quality. Collecting data is not a flywheel. Acting on it is."
+          ]
+        },
+        {
+          "id": "event-schema",
+          "heading": "Design the event schema for data capture",
+          "level": 3,
+          "paragraphs": [
+            "The schema is where most copilots quietly fail. A minimum decision-grade event carries an interaction id, a timestamp, a pseudonymized user id, the domain context, the retrieved context, the model version, the model output, the human action, the edit diff, the correction reason, and a nullable outcome that gets backfilled.",
+            "Two of those fields are the whole moat. The edit diff and the correction reason. They encode the judgment of a domain expert at the exact moment the model was wrong, and no public dataset holds them. [Expert-in-the-loop labeling creates a data asset with every customer engagement](https://www.institutepm.com/knowledge-hub/ai-network-effects).",
+            "A worked example makes it concrete. A project manager overrides an AI cost estimate and types a note about a cash-flow risk the model missed. The override alone is thin. The note is the training label. Capture the note, not just the click.",
+            "One design rule prevents most of the pain. Give every interaction a single id and make every later event point back to it. The correction arrives seconds later, the outcome can arrive weeks later, and without that shared key they never reconnect into a single training example. Design the join first. Everything else is a column."
+          ]
+        },
+        {
+          "id": "consent-and-rights",
+          "heading": "Consent, rights, and data you can actually use",
+          "level": 2,
+          "paragraphs": [
+            "The richest dataset is worthless if you cannot legally reuse it. In Brazil the reuse of personal data is governed by the LGPD, Lei 13.709 of 2018. Training on customer corrections needs a lawful basis and has to respect the purpose the data was collected for. A copilot that will learn from corrections should name product improvement and model training as a purpose up front, not bolt it on a year later.",
+            "The practical move is a consent basis field on every captured record. At training time you filter to the records you are allowed to use. A consent gap discovered late turns your most valuable asset into a liability, and [the ANPD now publishes how it calculates sanctions](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-regulamento-de-dosimetria)."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Under LGPD Article 52, the administrative fine can reach 2 percent of a company revenue in Brazil, capped at R$ 50 million per infraction, roughly USD 10 million.",
+            "attribution": "Planalto, Lei 13.709 of 2018"
+          }
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "How captured usage compounds into a moat",
+          "level": 2,
+          "paragraphs": [
+            "The moat is never the model. [Foundation models are advancing faster than most application-layer data loops can compound](https://www.institutepm.com/knowledge-hub/ai-network-effects), so betting on a specific base model is betting on a commodity. The durable asset is the correction history and the domain evals that usage creates.",
+            "This is the [copilot to data to fund flywheel](/library/copilot-to-data-to-fund-flywheel) stated as an engineering spec. Build an AI copilot to generate proprietary data, then use that data to raise and deploy capital. The corrections a domain expert makes are exactly the labels a competitor cannot purchase, because they are produced inside a workflow the competitor does not run.",
+            "The compounding is not automatic. More usage produces more corrections, the corrections train a sharper model, and the sharper model earns more usage. That loop only turns if the labeled corrections are routed back into evals and fine-tuning, which is the step most teams skip. Skip it and you have a data lake that looks impressive and moves nothing.",
+            "Two caveats keep this honest. Near term, vertical specificity and workflow lock-in are often more durable than a raw data-volume claim, and [domain-specific evals](/library/domain-specific-evals-ai-moat) are how you prove the model got better. And the improvement has to be visible to the user, or retention never moves and the loop never closes."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Gartner projects that 40 percent of enterprise applications will feature task-specific AI agents by 2026, up from less than 5 percent in 2025. The copilots that instrument for capture now own the data the rest chase later.",
+            "attribution": "Gartner, August 2025"
+          }
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Failure modes: logging everything, learning nothing",
+          "level": 2,
+          "paragraphs": [
+            "The classic failure is a warehouse full of vanity telemetry and not one labeled correction. Page views, session counts, and feature-usage rollups feel like progress and train nothing. The line to keep in your head. Event logging says a user created a proposal. Outcome logging says the deal was won at $85K on a 23-day cycle.",
+            "Notice the through-line. Every failure below is the same chain broken at a different link. No correction captured, no consent to reuse it, no loop back into the model, no gain the user can feel, or a bet on the wrong asset entirely. Fix the chain end to end and the logging-everything trap has nowhere to hide."
+          ],
+          "bullets": [
+            "Vanity capture. Volume without the correction or the outcome. Terabytes, zero labels.",
+            "The consent gap. The richest data is legally unusable because reuse for training was never a stated purpose.",
+            "No loop. Data is collected and never routed back into evals or fine-tuning. A data lake is not a flywheel.",
+            "Invisible improvement. The model gets better but the user cannot tell, so usage and retention do not move.",
+            "Model dependency mistaken for a moat. The base model commoditizes. The correction dataset compounds."
+          ]
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "How Avante turns copilots into fundable data",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures treats instrumentation as a Build-stage decision with a Compound-stage payoff. The six-stage system runs Research, Partner, Build, Traction, Revenue, Compound, and the event schema is designed on day one rather than retrofitted after a year of vanity logging.",
+            "The edge is the operator. A domain partner with 10+ years of Brazilian-market scar tissue knows which corrections carry signal in a judicial-asset workflow, an insurance-risk model, or an auction-property pipeline. That is why the schema is right the first time. And the cost of intelligence collapsed, from about $20 per million tokens in late 2022 to about $0.07 by late 2024, [a 280-fold drop](https://hai.stanford.edu/ai-index/2025-ai-index-report). Inference is now cheap enough to deploy without a Series A, so the scarce asset is not model access. It is the proprietary correction data.",
+            "Avante launches 3-4 ventures per year and deploys $500K-1.5M per venture, and the correction dataset is a central reason those ventures become fundable. The teams still counting page views in 2027 will be renting intelligence. The teams that captured the corrections will own it."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is AI copilot data capture?",
+          "a": "AI copilot data capture is the practice of instrumenting a copilot so every interaction becomes decision-grade signal. You record the input, the model output, the human edit or acceptance, and the final outcome, then route the corrections back into evals and fine-tuning. Done right, usage turns into a proprietary dataset a competitor cannot buy."
+        },
+        {
+          "q": "How do you turn AI copilot usage into proprietary data?",
+          "a": "You capture the correction, not just the click. When a domain expert edits or overrides the copilot, store the before, the after, and the reason, then link it to the eventual outcome. Those labeled corrections are the copilot to data to fund flywheel in practice, and they are exactly what a competitor cannot purchase."
+        },
+        {
+          "q": "What should AI copilot data capture record, and what should it ignore?",
+          "a": "AI copilot data capture should record explicit corrections, outcome confirmations, and preference choices, which are strong signal. Treat raw clicks and page views as weak signal. The test is whether the event records what happened and whether it worked, not just that something happened."
+        },
+        {
+          "q": "Can you legally reuse customer data to train an AI copilot in Brazil?",
+          "a": "Yes, but only with a lawful basis and a stated purpose under the LGPD, Lei 13.709 of 2018. Name product improvement and model training as a purpose up front and tag each record with its consent basis. The administrative fine reaches 2 percent of Brazilian revenue, capped at R$ 50 million per infraction, so a consent gap is a real liability."
+        },
+        {
+          "q": "Why is proprietary data a stronger moat than the AI model itself?",
+          "a": "Because foundation models commoditize while the correction dataset compounds. Every competitor can call the same model, so the advantage shifts to what the model learns from. The domain corrections captured inside your workflow are labels no public dataset holds."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Dados Proprietários com Copilot de IA: O Playbook de Captura",
+      "description": "Dados proprietários com copilot de IA na prática. Como instrumentar o uso para virar dado proprietário, o playbook por trás do flywheel copilot, dado, capital.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Transformar uso em dados proprietários com copilot de IA é o que separa um copilot que fica mais inteligente a cada trimestre de um que só acumula conta de inferência. Instrumente bem e cada correção feita por um especialista de domínio vira um exemplo rotulado que um concorrente não consegue comprar. Instrumente com preguiça e você coleta terabytes que não treinam nada.",
+            "Este é o passo a passo de engenharia por trás do flywheel copilot, dado, capital. Não o argumento de por que o padrão funciona, e sim a fiação. Registre quatro eventos ligados por interação, capture a correção e a razão dela, guarde tudo com o consentimento que mantém o dado reutilizável e devolva para os evals e o fine-tuning. A Avante Ventures constrói cada empresa assim de propósito."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "O que capturar, e o que é apenas ruído",
+          "level": 2,
+          "paragraphs": [
+            "A decisão não é se você registra. É quais eventos carregam sinal de qualidade para decisão e quais são telemetria de vaidade. A maioria das análises de produto responde o que aconteceu. Um flywheel de dados responde o que aconteceu e se funcionou.",
+            "Nem todo uso é sinal de treino. Cliques e visualizações de página são sinal fraco. Correções explícitas, confirmações de resultado e escolhas de preferência são sinal forte, [segundo o Institute of Product Management](https://www.institutepm.com/knowledge-hub/ai-network-effects). A forma mais afiada de dizer isso vem da literatura de inteligência de fluxo de trabalho. Bases públicas contêm eventos. [Dados de fluxo de trabalho contêm resultados](https://www.zimt.ai/blog/the-proprietary-data-flywheel-why-workflow-intelligence-becomes-your-real-ai-moat).",
+            "Então capture quatro eventos ligados em cada interação, não uma mangueira de logs indistintos."
+          ],
+          "bullets": [
+            "A entrada. A tarefa exata e o contexto que o modelo de fato viu, não um resumo higienizado escrito depois.",
+            "A saída do modelo. A sugestão que o copilot produziu, marcada com a versão do modelo que a gerou.",
+            "A ação humana. Aceita, editada ou rejeitada. Quando é uma edição, o diff é o rótulo.",
+            "O resultado. O efeito lá na ponta funcionou. Um precatório pago, uma petição aceita, um lance de leilão que arrematou."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Uma ressalva honesta. Se tudo que você precisa é um painel de uso, contar eventos basta e isto é engenharia demais. A captura de qualidade para decisão só se paga quando a empresa pretende treinar um modelo de domínio e defendê-lo com o dado."
+          }
+        },
+        {
+          "id": "the-playbook",
+          "heading": "Instrumente o copilot de IA em quatro camadas",
+          "level": 2,
+          "paragraphs": [
+            "Aqui está um fluxo que um operador começa esta semana. A meta é fácil de enunciar e difícil de fingir. O copilot melhora de forma mensurável a cada trimestre sem trocar o modelo base. Esse é o sinal de um flywheel que gira, não de um recurso estático."
+          ],
+          "bullets": [
+            "Camada de captura. Emita um evento estruturado por interação que amarra entrada, saída e ação humana sob um mesmo id de interação. Não espalhe isso por quatro tabelas que nunca se juntam.",
+            "Camada de correção. Quando o usuário edita a saída, guarde o antes, o depois e a razão. Deixe o sistema propor um código de motivo e deixe o especialista confirmar ou corrigir.",
+            "Camada de resultado. Preencha o desfecho quando ele chega, às vezes dias depois, e ligue ao id de interação original para que um negócio fechado se conecte à sugestão que o produziu.",
+            "Camada de loop. Devolva as correções rotuladas para dois lugares. Um conjunto de evals que pega regressões e um conjunto de fine-tuning ou de recuperação que eleva a qualidade. Coletar dado não é um flywheel. Agir sobre ele é."
+          ]
+        },
+        {
+          "id": "event-schema",
+          "heading": "Desenhe o schema de eventos para a captura de dados",
+          "level": 3,
+          "paragraphs": [
+            "O schema é onde a maioria dos copilots falha em silêncio. Um evento mínimo de qualidade para decisão carrega um id de interação, um timestamp, um id de usuário pseudonimizado, o contexto de domínio, o contexto recuperado, a versão do modelo, a saída do modelo, a ação humana, o diff da edição, a razão da correção e um resultado anulável que é preenchido depois.",
+            "Dois desses campos são o moat inteiro. O diff da edição e a razão da correção. Eles codificam o julgamento de um especialista de domínio no exato momento em que o modelo errou, e nenhuma base pública os contém. [A rotulagem com o especialista no loop cria um ativo de dados a cada engajamento com o cliente](https://www.institutepm.com/knowledge-hub/ai-network-effects).",
+            "Um exemplo concreto. Um gerente de projeto sobrepõe uma estimativa de custo da IA e escreve uma nota sobre um risco de fluxo de caixa que o modelo não viu. A sobreposição sozinha é rasa. A nota é o rótulo de treino. Capture a nota, não só o clique.",
+            "Uma regra de desenho evita quase toda a dor. Dê a cada interação um único id e faça todo evento posterior apontar de volta para ele. A correção chega segundos depois, o resultado pode chegar semanas depois, e sem essa chave compartilhada eles nunca se reconectam em um único exemplo de treino. Desenhe o join primeiro. O resto é coluna."
+          ]
+        },
+        {
+          "id": "consent-and-rights",
+          "heading": "Consentimento, direitos e dados que você pode de fato usar",
+          "level": 2,
+          "paragraphs": [
+            "A base de dados mais rica não vale nada se você não pode reutilizá-la legalmente. No Brasil o reuso de dados pessoais é regido pela LGPD, a Lei 13.709 de 2018. Treinar com correções de clientes precisa de uma base legal e tem que respeitar a finalidade para a qual o dado foi coletado. Um copilot que vai aprender com correções deve declarar melhoria de produto e treino de modelo como finalidade lá no começo, não emendar isso um ano depois.",
+            "O movimento prático é um campo de base de consentimento em cada registro capturado. Na hora do treino você filtra para os registros que tem direito de usar. Uma lacuna de consentimento descoberta tarde transforma o seu ativo mais valioso em passivo, e [a ANPD já publica como calcula as sanções](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-regulamento-de-dosimetria)."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Pela LGPD, artigo 52, a multa administrativa pode chegar a 2% do faturamento da empresa no Brasil, limitada a R$ 50 milhões por infração, cerca de US$ 10 milhões.",
+            "attribution": "Planalto, Lei 13.709 de 2018"
+          }
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "Como o uso capturado se acumula em moat",
+          "level": 2,
+          "paragraphs": [
+            "O moat nunca é o modelo. [Os modelos de fundação avançam mais rápido do que a maioria dos loops de dados da camada de aplicação consegue acumular](https://www.institutepm.com/knowledge-hub/ai-network-effects), então apostar num modelo base específico é apostar numa commodity. O ativo durável é o histórico de correções e os evals de domínio que o uso cria.",
+            "Este é o [flywheel copilot, dado, capital](/library/copilot-to-data-to-fund-flywheel) enunciado como especificação de engenharia. Construa um copilot de IA para gerar dados proprietários e depois use esse dado para captar e alocar capital. As correções que um especialista de domínio faz são exatamente os rótulos que um concorrente não pode comprar, porque nascem dentro de um fluxo de trabalho que o concorrente não roda.",
+            "O acúmulo não é automático. Mais uso gera mais correções, as correções treinam um modelo mais afiado, e o modelo mais afiado ganha mais uso. Esse loop só gira se as correções rotuladas voltam para os evals e o fine-tuning, que é o passo que a maioria pula. Pule ele e você tem um data lake que impressiona e não move nada.",
+            "Duas ressalvas mantêm isto honesto. No curto prazo, especificidade vertical e travamento de fluxo de trabalho costumam ser mais duráveis do que uma alegação de volume bruto de dados, e [os evals específicos de domínio](/library/domain-specific-evals-ai-moat) são como você prova que o modelo melhorou. E a melhoria tem que ser visível para o usuário, ou a retenção não se move e o loop nunca fecha."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O Gartner projeta que 40% das aplicações corporativas terão agentes de IA de tarefa específica até 2026, ante menos de 5% em 2025. Os copilots que instrumentam a captura agora vão possuir o dado que o resto persegue depois.",
+            "attribution": "Gartner, agosto de 2025"
+          }
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Modos de falha: registrar tudo, aprender nada",
+          "level": 2,
+          "paragraphs": [
+            "A falha clássica é um armazém cheio de telemetria de vaidade e nenhuma correção rotulada. Visualizações de página, contagens de sessão e somatórios de uso de recurso parecem progresso e não treinam nada. A frase para guardar na cabeça. Log de evento diz que um usuário criou uma proposta. Log de resultado diz que o negócio fechou em US$ 85 mil num ciclo de 23 dias.",
+            "Repare no fio condutor. Cada falha abaixo é a mesma corrente rompida em um elo diferente. Nenhuma correção capturada, nenhum consentimento para reutilizá-la, nenhum loop de volta ao modelo, nenhum ganho que o usuário sinta, ou uma aposta no ativo errado. Conserte a corrente de ponta a ponta e a armadilha de registrar tudo não tem onde se esconder."
+          ],
+          "bullets": [
+            "Captura de vaidade. Volume sem a correção ou o resultado. Terabytes, zero rótulos.",
+            "A lacuna de consentimento. O dado mais rico é legalmente inutilizável porque o reuso para treino nunca foi uma finalidade declarada.",
+            "Sem loop. O dado é coletado e nunca devolvido aos evals ou ao fine-tuning. Um data lake não é um flywheel.",
+            "Melhoria invisível. O modelo melhora mas o usuário não percebe, então uso e retenção não se movem.",
+            "Dependência de modelo confundida com moat. O modelo base vira commodity. O conjunto de correções se acumula."
+          ]
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "Como a Avante transforma copilots em dados financiáveis",
+          "level": 2,
+          "paragraphs": [
+            "A Avante Ventures trata a instrumentação como uma decisão da etapa Build com retorno na etapa Compound. O sistema de seis etapas roda Research, Partner, Build, Traction, Revenue, Compound, e o schema de eventos é desenhado no dia um, não readaptado depois de um ano de telemetria de vaidade.",
+            "A vantagem é o operador. Um sócio de domínio com mais de 10 anos de calo de mercado brasileiro sabe quais correções carregam sinal num fluxo de ativos judiciais, num modelo de risco de seguro ou num pipeline de imóveis de leilão. É por isso que o schema nasce certo. E o custo da inteligência despencou, de cerca de US$ 20 por milhão de tokens no fim de 2022 para cerca de US$ 0,07 no fim de 2024, [uma queda de mais de 280 vezes](https://hai.stanford.edu/ai-index/2025-ai-index-report). A inferência já é barata o bastante para operar sem uma Série A, então o ativo escasso não é o acesso ao modelo. É o dado proprietário de correção.",
+            "A Avante lança 3-4 empresas por ano e aloca $500K-1.5M por empresa, e o conjunto de correções é uma razão central para essas empresas se tornarem financiáveis. Os times que ainda contam visualizações de página em 2027 estarão alugando inteligência. Os que capturaram as correções vão possuí-la."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "O que é captura de dados proprietários com copilot de IA?",
+          "a": "É instrumentar um copilot para que cada interação vire sinal de qualidade para decisão. Você registra a entrada, a saída do modelo, a edição ou aceitação humana e o resultado final, e devolve as correções para os evals e o fine-tuning. Feito certo, o uso vira um dado proprietário que um concorrente não consegue comprar."
+        },
+        {
+          "q": "Como transformar o uso de um copilot em dados proprietários?",
+          "a": "Capturando a correção, não só o clique. Quando um especialista de domínio edita ou sobrepõe o copilot, guarde o antes, o depois e a razão, e ligue ao resultado que veio depois. Essas correções rotuladas são o flywheel copilot, dado, capital na prática, e são exatamente o que um concorrente não pode comprar."
+        },
+        {
+          "q": "O que a captura de dados proprietários com copilot de IA deve registrar?",
+          "a": "Deve registrar correções explícitas, confirmações de resultado e escolhas de preferência, que são sinal forte. Trate cliques crus e visualizações de página como sinal fraco. O teste é se o evento registra o que aconteceu e se funcionou, não apenas que algo aconteceu."
+        },
+        {
+          "q": "Dá para reutilizar legalmente dados de clientes para treinar um copilot de IA no Brasil?",
+          "a": "Sim, mas só com base legal e finalidade declarada sob a LGPD, a Lei 13.709 de 2018. Declare melhoria de produto e treino de modelo como finalidade lá no começo e marque cada registro com a sua base de consentimento. A multa administrativa chega a 2% do faturamento no Brasil, limitada a R$ 50 milhões por infração, então a lacuna de consentimento é um passivo real."
+        },
+        {
+          "q": "Por que o dado proprietário é um moat mais forte do que o próprio modelo de IA?",
+          "a": "Porque os modelos de fundação viram commodity enquanto o conjunto de correções se acumula. Todo concorrente chama o mesmo modelo, então a vantagem migra para aquilo com que o modelo aprende. As correções de domínio capturadas dentro do seu fluxo de trabalho são rótulos que nenhuma base pública tem."
+        }
+      ]
+    },
+    "es": {
+      "title": "Datos Propietarios con Copilot de IA: El Playbook de Captura",
+      "description": "Datos propietarios con copilot de IA en la práctica. El playbook de instrumentación detrás del flywheel copilot, dato, capital.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Convertir el uso en datos propietarios con copilot de IA es lo que separa a un copilot que se vuelve más inteligente cada trimestre de uno que solo acumula factura de inferencia. Instruméntelo bien y cada corrección que hace un experto de dominio se convierte en un ejemplo etiquetado que un competidor no puede comprar. Instruméntelo con pereza y acumula terabytes que no entrenan nada.",
+            "Este es el paso a paso de ingeniería detrás del flywheel copilot, dato, capital. No el argumento de por qué el patrón funciona, sino el cableado. Registre cuatro eventos ligados por interacción, capture la corrección y su razón, guárdelo con el consentimiento que mantiene el dato reutilizable y devuélvalo a los evals y al fine-tuning. Avante Ventures construye cada empresa así a propósito."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "Qué capturar, y qué es solo ruido",
+          "level": 2,
+          "paragraphs": [
+            "La decisión no es si registra o no. Es cuáles eventos cargan señal de calidad para decidir y cuáles son telemetría de vanidad. La mayoría de las analíticas de producto responden qué pasó. Un flywheel de datos responde qué pasó y si funcionó.",
+            "No todo uso es señal de entrenamiento. Los clics y las vistas de página son señal débil. Las correcciones explícitas, las confirmaciones de resultado y las elecciones de preferencia son señal fuerte, [según el Institute of Product Management](https://www.institutepm.com/knowledge-hub/ai-network-effects). La forma más afilada de decirlo viene de la literatura de inteligencia de flujo de trabajo. Las bases públicas contienen eventos. [Los datos de flujo de trabajo contienen resultados](https://www.zimt.ai/blog/the-proprietary-data-flywheel-why-workflow-intelligence-becomes-your-real-ai-moat).",
+            "Así que capture cuatro eventos ligados en cada interacción, no una manguera de registros indistintos."
+          ],
+          "bullets": [
+            "La entrada. La tarea exacta y el contexto que el modelo de verdad vio, no un resumen higienizado escrito después.",
+            "La salida del modelo. La sugerencia que produjo el copilot, marcada con la versión del modelo que la generó.",
+            "La acción humana. Aceptada, editada o rechazada. Cuando es una edición, el diff es la etiqueta.",
+            "El resultado. Si el efecto final funcionó. Un crédito judicial pagado, una demanda aceptada, una postura de subasta que se adjudicó."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Una salvedad honesta. Si todo lo que necesita es un tablero de uso, contar eventos alcanza y esto es sobreingeniería. La captura de calidad para decidir solo se paga cuando la empresa piensa entrenar un modelo de dominio y defenderlo con el dato."
+          }
+        },
+        {
+          "id": "the-playbook",
+          "heading": "Instrumenta el copilot de IA en cuatro capas",
+          "level": 2,
+          "paragraphs": [
+            "Aquí hay un flujo que un operador arranca esta semana. La meta es fácil de enunciar y difícil de fingir. El copilot mejora de forma medible cada trimestre sin cambiar el modelo base. Esa es la señal de un flywheel que gira, no de una función estática."
+          ],
+          "bullets": [
+            "Capa de captura. Emita un evento estructurado por interacción que amarra entrada, salida y acción humana bajo un mismo id de interacción. No lo disperse en cuatro tablas que nunca se juntan.",
+            "Capa de corrección. Cuando el usuario edita la salida, guarde el antes, el después y la razón. Deje que el sistema proponga un código de motivo y que el experto lo confirme o corrija.",
+            "Capa de resultado. Complete el desenlace cuando llega, a veces días después, y ligue al id de interacción original para que un negocio ganado se conecte a la sugerencia que lo produjo.",
+            "Capa de loop. Devuelva las correcciones etiquetadas a dos lugares. Un conjunto de evals que atrapa regresiones y un conjunto de fine-tuning o de recuperación que sube la calidad. Recolectar dato no es un flywheel. Actuar sobre él lo es."
+          ]
+        },
+        {
+          "id": "event-schema",
+          "heading": "Diseña el schema de eventos para la captura de datos",
+          "level": 3,
+          "paragraphs": [
+            "El schema es donde la mayoría de los copilots falla en silencio. Un evento mínimo de calidad para decidir carga un id de interacción, un timestamp, un id de usuario seudonimizado, el contexto de dominio, el contexto recuperado, la versión del modelo, la salida del modelo, la acción humana, el diff de la edición, la razón de la corrección y un resultado anulable que se completa después.",
+            "Dos de esos campos son el moat entero. El diff de la edición y la razón de la corrección. Codifican el juicio de un experto de dominio en el momento exacto en que el modelo se equivocó, y ninguna base pública los contiene. [El etiquetado con el experto en el loop crea un activo de datos en cada interacción con el cliente](https://www.institutepm.com/knowledge-hub/ai-network-effects).",
+            "Un ejemplo concreto. Un gerente de proyecto anula una estimación de costo de la IA y escribe una nota sobre un riesgo de flujo de caja que el modelo no vio. La anulación sola es delgada. La nota es la etiqueta de entrenamiento. Capture la nota, no solo el clic.",
+            "Una regla de diseño evita casi todo el dolor. Dele a cada interacción un único id y haga que todo evento posterior apunte de vuelta a él. La corrección llega segundos después, el resultado puede llegar semanas después, y sin esa clave compartida nunca se reconectan en un solo ejemplo de entrenamiento. Diseñe el join primero. El resto es columna."
+          ]
+        },
+        {
+          "id": "consent-and-rights",
+          "heading": "Consentimiento, derechos y datos que de verdad puedes usar",
+          "level": 2,
+          "paragraphs": [
+            "La base de datos más rica no vale nada si no la puede reutilizar legalmente. En Brasil el reuso de datos personales se rige por la LGPD, la Ley 13.709 de 2018. Entrenar con correcciones de clientes necesita una base legal y tiene que respetar la finalidad para la que se recolectó el dato. Un copilot que va a aprender de correcciones debe declarar la mejora de producto y el entrenamiento de modelo como finalidad desde el inicio, no agregarlo un año después.",
+            "El movimiento práctico es un campo de base de consentimiento en cada registro capturado. A la hora de entrenar usted filtra a los registros que tiene derecho a usar. Una brecha de consentimiento descubierta tarde convierte su activo más valioso en un pasivo, y [la ANPD ya publica cómo calcula las sanciones](https://www.gov.br/anpd/pt-br/assuntos/noticias/anpd-publica-regulamento-de-dosimetria)."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Bajo el artículo 52 de la LGPD, la multa administrativa puede llegar al 2% de la facturación de la empresa en Brasil, limitada a R$ 50 millones por infracción, cerca de USD 10 millones.",
+            "attribution": "Planalto, Ley 13.709 de 2018"
+          }
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "Cómo el uso capturado se acumula en moat",
+          "level": 2,
+          "paragraphs": [
+            "El moat nunca es el modelo. [Los modelos de fundación avanzan más rápido de lo que la mayoría de los loops de datos de la capa de aplicación logra acumular](https://www.institutepm.com/knowledge-hub/ai-network-effects), así que apostar por un modelo base específico es apostar por una commodity. El activo durable es el historial de correcciones y los evals de dominio que el uso crea.",
+            "Este es el [flywheel copilot, dato, capital](/library/copilot-to-data-to-fund-flywheel) enunciado como especificación de ingeniería. Construya un copilot de IA para generar datos propietarios y luego use ese dato para levantar y desplegar capital. Las correcciones que hace un experto de dominio son exactamente las etiquetas que un competidor no puede comprar, porque nacen dentro de un flujo de trabajo que el competidor no corre.",
+            "La acumulación no es automática. Más uso genera más correcciones, las correcciones entrenan un modelo más afilado, y el modelo más afilado gana más uso. Ese loop solo gira si las correcciones etiquetadas vuelven a los evals y al fine-tuning, que es el paso que la mayoría se salta. Sáltelo y tiene un data lake que impresiona y no mueve nada.",
+            "Dos salvedades mantienen esto honesto. En el corto plazo, la especificidad vertical y el amarre del flujo de trabajo suelen ser más durables que un reclamo de volumen bruto de datos, y [los evals específicos de dominio](/library/domain-specific-evals-ai-moat) son cómo prueba que el modelo mejoró. Y la mejora tiene que ser visible para el usuario, o la retención no se mueve y el loop nunca cierra."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Gartner proyecta que el 40% de las aplicaciones empresariales tendrán agentes de IA de tarea específica para 2026, frente a menos del 5% en 2025. Los copilots que instrumentan la captura ahora van a poseer el dato que el resto persigue después.",
+            "attribution": "Gartner, agosto de 2025"
+          }
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Modos de falla: registrar todo, aprender nada",
+          "level": 2,
+          "paragraphs": [
+            "La falla clásica es una bodega llena de telemetría de vanidad y ni una sola corrección etiquetada. Vistas de página, conteos de sesión y sumas de uso de función parecen progreso y no entrenan nada. La frase para tener en la cabeza. El log de evento dice que un usuario creó una propuesta. El log de resultado dice que el negocio se ganó en USD 85 mil en un ciclo de 23 días.",
+            "Fíjese en el hilo conductor. Cada falla de abajo es la misma cadena rota en un eslabón distinto. Ninguna corrección capturada, ningún consentimiento para reutilizarla, ningún loop de vuelta al modelo, ninguna ganancia que el usuario sienta, o una apuesta al activo equivocado. Repare la cadena de punta a punta y la trampa de registrar todo no tiene dónde esconderse."
+          ],
+          "bullets": [
+            "Captura de vanidad. Volumen sin la corrección ni el resultado. Terabytes, cero etiquetas.",
+            "La brecha de consentimiento. El dato más rico es legalmente inutilizable porque el reuso para entrenamiento nunca fue una finalidad declarada.",
+            "Sin loop. El dato se recolecta y nunca vuelve a los evals ni al fine-tuning. Un data lake no es un flywheel.",
+            "Mejora invisible. El modelo mejora pero el usuario no lo nota, así que el uso y la retención no se mueven.",
+            "Dependencia de modelo confundida con moat. El modelo base se vuelve commodity. El conjunto de correcciones se acumula."
+          ]
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "Cómo Avante transforma copilots en datos financiables",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures trata la instrumentación como una decisión de la etapa Build con retorno en la etapa Compound. El sistema de seis etapas corre Research, Partner, Build, Traction, Revenue, Compound, y el schema de eventos se diseña el día uno, no se readapta después de un año de telemetría de vanidad.",
+            "La ventaja es el operador. Un socio de dominio con más de 10 años de cicatrices del mercado brasileño sabe cuáles correcciones cargan señal en un flujo de activos judiciales, en un modelo de riesgo de seguro o en un pipeline de propiedades de subasta. Por eso el schema nace bien. Y el costo de la inteligencia se desplomó, de cerca de USD 20 por millón de tokens a fines de 2022 a cerca de USD 0,07 a fines de 2024, [una caída de más de 280 veces](https://hai.stanford.edu/ai-index/2025-ai-index-report). La inferencia ya es barata como para desplegar sin una Serie A, así que el activo escaso no es el acceso al modelo. Es el dato propietario de corrección.",
+            "Avante lanza 3-4 empresas por año y despliega $500K-1.5M por empresa, y el conjunto de correcciones es una razón central para que esas empresas se vuelvan financiables. Los equipos que sigan contando vistas de página en 2027 estarán alquilando inteligencia. Los que capturaron las correcciones la van a poseer."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Qué es la captura de datos propietarios con copilot de IA?",
+          "a": "Es instrumentar un copilot para que cada interacción se vuelva señal de calidad para decidir. Usted registra la entrada, la salida del modelo, la edición o aceptación humana y el resultado final, y devuelve las correcciones a los evals y al fine-tuning. Bien hecho, el uso se vuelve un dato propietario que un competidor no puede comprar."
+        },
+        {
+          "q": "¿Cómo convertir el uso de un copilot en datos propietarios?",
+          "a": "Capturando la corrección, no solo el clic. Cuando un experto de dominio edita o anula el copilot, guarde el antes, el después y la razón, y ligue al resultado que vino después. Esas correcciones etiquetadas son el flywheel copilot, dato, capital en la práctica, y son exactamente lo que un competidor no puede comprar."
+        },
+        {
+          "q": "¿Qué debe registrar la captura de datos propietarios con copilot de IA?",
+          "a": "Debe registrar correcciones explícitas, confirmaciones de resultado y elecciones de preferencia, que son señal fuerte. Trate los clics crudos y las vistas de página como señal débil. La prueba es si el evento registra qué pasó y si funcionó, no solo que algo pasó."
+        },
+        {
+          "q": "¿Se pueden reutilizar legalmente los datos de clientes para entrenar un copilot de IA en Brasil?",
+          "a": "Sí, pero solo con una base legal y una finalidad declarada bajo la LGPD, la Ley 13.709 de 2018. Declare la mejora de producto y el entrenamiento de modelo como finalidad desde el inicio y marque cada registro con su base de consentimiento. La multa administrativa llega al 2% de la facturación en Brasil, limitada a R$ 50 millones por infracción, así que la brecha de consentimiento es un pasivo real."
+        },
+        {
+          "q": "¿Por qué el dato propietario es un moat más fuerte que el propio modelo de IA?",
+          "a": "Porque los modelos de fundación se vuelven commodity mientras el conjunto de correcciones se acumula. Todo competidor llama al mismo modelo, así que la ventaja se mueve hacia aquello con lo que el modelo aprende. Las correcciones de dominio capturadas dentro de su flujo de trabajo son etiquetas que ninguna base pública tiene."
+        }
+      ]
+    },
+    "ogImage": "/og/instrument-copilot-proprietary-data-playbook.png"
+  },
+  {
+    "slug": "lean-ai-build-stack-playbook",
+    "category": "playbooks",
+    "type": "Playbook",
+    "readTime": "10 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-03",
+    "isPublished": true,
+    "en": {
+      "title": "The Lean AI Build Stack a 2-3 Person Venture Runs",
+      "description": "The lean AI build stack a 2-3 person venture actually runs, layer by layer, with a build-vs-buy rule for each. Skip the plumbing, own the moat.",
+      "sections": [
+        {
+          "paragraphs": [
+            "The lean AI build stack a 2-3 person venture runs rents almost everything and owns exactly one thing. Rent the base models, the vector storage, the hosting, and the observability. Build the data, the evals, and the vertical workflow logic, because those are the only layers a competitor cannot buy off a shelf. That single rule carries the whole playbook. Buy the commodity, own the moat, wait on the speculative.",
+            "This is a build-vs-buy decision, not a tooling review. It resolves cleanly in 2026 for one reason. Inference cost has collapsed, so intelligence is now a metered utility you rent by the token instead of a capital project you fund. Avante Ventures builds every company this way on purpose, which is how three people ship a real AI product without a Series A."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "Build vs buy: the only stack question that matters early",
+          "level": 2,
+          "paragraphs": [
+            "A 2-3 person team has one scarce resource, and it is not money. It is engineer-attention. Every layer the team decides to build is attention pulled off the one layer that becomes defensible. So the question is never build versus buy in the abstract. It is which specific layers are commodities to rent and which single layer is the moat to own.",
+            "The rule is blunt on purpose. Buy the commodity, own the moat, wait on the speculative. Base models, vector storage, hosting, queues, and observability are commodities that vendors run better and cheaper than any three-person team will. The proprietary dataset, the domain evals, and the vertical workflow logic are the moat. Fine-tuning, a self-hosted model, and a custom orchestration framework are speculative until a rented equivalent visibly breaks under your load.",
+            "There is a fast test for any layer you are tempted to build. If it would cost the same to run at ten customers or ten thousand, and a vendor already sells it as a metered service, building it is the wrong tool. Ownership only earns its cost on the layer that gets more valuable the more your specific customers use it."
+          ],
+          "bullets": [
+            "Buy the commodity. Base models by API, managed Postgres for retrieval, hosting, queues, observability. Real vendors, falling prices, no advantage in running them yourself.",
+            "Own the moat. The proprietary data your workflow generates, the domain eval set, and the vertical logic that encodes how your market actually works.",
+            "Wait on the speculative. Fine-tuning, self-hosting a model, a bespoke framework. Waiting here is a decision, not indecision."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "The cost of LLM inference for a fixed level of capability fell from about $60 per million tokens in 2021 to about $0.06 by 2024, a factor of roughly 1,000 in three years, and drops about 10x a year for an equivalent model.",
+            "attribution": "a16z, LLMflation, 2024"
+          }
+        },
+        {
+          "id": "the-playbook",
+          "heading": "The lean AI build stack, layer by layer",
+          "level": 2,
+          "paragraphs": [
+            "Here is the stack a lean team can assemble this week, walked from the bottom up. Apply the same buy-build-wait rule to each layer. When you are done, the only code the team truly owns is the code that compounds.",
+            "The discipline is to keep every commodity layer swappable and every owned layer deep. Rent thin, build thick."
+          ],
+          "bullets": [
+            "Model layer. Rent frontier and small models through an API. Route the easy calls to a small model and reserve a frontier model for the hard ones. Hide the provider behind one internal interface so switching stays a config change.",
+            "Retrieval and data layer. Start with managed Postgres and the pgvector extension, not a dedicated vector database. It keeps your relational data and your embeddings in one system you already run. Add a specialized store only when a measured limit forces it.",
+            "Application and hosting layer. Rent serverless hosting and a managed queue. Ship the vertical workflow, the part that encodes how your domain actually works, as your own code.",
+            "Observability and evals layer. Rent the logging and tracing. Build the evals yourself, because a domain eval set is a proprietary asset, not a commodity.",
+            "Feedback layer. Instrument the product so every expert correction is captured as a labeled example. That capture is what later turns usage into a fundable dataset."
+          ]
+        },
+        {
+          "id": "buy-build-wait",
+          "heading": "Where to buy, where to build, where to wait",
+          "level": 3,
+          "paragraphs": [
+            "Stated flatly, so a founder can apply it in an afternoon. Three columns, and most of the stack lands in the first one."
+          ],
+          "bullets": [
+            "Buy now. Base models by API. Managed Postgres with pgvector. Serverless hosting. Managed queues. Observability, tracing, and auth. Commodities with real vendors and prices that fall every quarter.",
+            "Build now. The proprietary dataset and its capture pipeline. The domain eval set. The vertical workflow logic that encodes 10+ years of operator scar tissue. This column is the moat.",
+            "Wait. Fine-tuning, a self-hosted model, a bespoke orchestration framework, a custom vector engine. Each is justified only when a rented equivalent measurably breaks. Until then, waiting keeps runway on the moat."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "The single move that matters. Keep a written list of what you rent and what you own, and defend the border. Every quarter something on the rent side will tempt a rebuild. Resist it unless a number, not a hunch, says the vendor broke."
+          }
+        },
+        {
+          "id": "cost-control",
+          "heading": "Keeping inference cost off your critical path",
+          "level": 2,
+          "paragraphs": [
+            "Inference cost is a solved problem for a lean team, and treating it as a crisis is its own failure mode. Falling token prices are the reason a 2-3 person venture can deploy a real AI product without a Series A. The market is already cutting this cost by an order of magnitude a year, so do not spend engineer-months chasing it.",
+            "Epoch AI, measuring the price to hit a fixed benchmark, finds declines between 9x and 900x per year across tasks, with a median near 50x, and the price to match GPT-4-level performance on PhD-level science questions fell about 40x a year. Building your own inference to save money is building a depreciating asset.",
+            "You get the savings without a fine-tuning project through three plain moves."
+          ],
+          "bullets": [
+            "Route by difficulty. A cheap model for the easy 80 percent of calls, a frontier model for the hard 20 percent.",
+            "Cache aggressively. Deduplicate repeated prompts and reuse retrieved context so you stop paying twice for the same answer.",
+            "Keep the provider swappable. When a cheaper model clears your evals, switching should be a config change, not a rewrite."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "The price to reach a fixed performance bar has fallen between 9x and 900x per year across tasks, with a median around 50x per year. GPT-4-level performance on PhD-level science questions got about 40x cheaper each year.",
+            "attribution": "Epoch AI, 2025"
+          }
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "The one layer worth owning: your data and evals",
+          "level": 2,
+          "paragraphs": [
+            "The moat is never the model, and it is never the infrastructure. Every competitor can call the same API and rent the same managed Postgres, so rented layers cannot be a source of advantage. The durable asset is the proprietary data your workflow generates and the domain evals that prove your system is getting better at the specific job.",
+            "This is the [copilot to data to fund flywheel](/library/copilot-to-data-to-fund-flywheel) stated as a stack decision. Build a copilot to generate proprietary data, then use that data to raise and deploy capital. Every expert correction captured is a labeled example a competitor cannot purchase, because it is produced inside a workflow the competitor does not run. Over quarters, the rented stack stays flat and the owned layer pulls ahead.",
+            "Owning the evals matters more than it looks. Without a domain eval set, a team cannot even tell whether a cheaper model is good enough to switch to, so it overpays for the frontier model out of fear. [Domain-specific evals](/library/domain-specific-evals-ai-moat) are both the moat and the instrument that lets you ride the falling price curve safely. Build the tests only your data can pass."
+          ]
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Failure modes: premature infrastructure",
+          "level": 2,
+          "paragraphs": [
+            "The honest failure mode is premature infrastructure. A tiny team rebuilds a vector database, a model gateway, or an orchestration layer that a vendor would run for a fraction of the cost, and burns its runway on plumbing instead of on the one layer that becomes the moat.",
+            "The numbers are unkind to the do-it-yourself instinct. For a modest one-million-vector workload, a reliable self-hosted pgvector setup runs roughly $385 to $915 a month, and the dominant line item is not compute. It is engineer-hours for setup, index tuning, backups, failover, and on-call, often $320 to $720 of that total, against about $99 a month for a managed equivalent. Database work is invisible when it succeeds and catastrophic when it fails, so the variance, not the average month, is what a three-person team cannot afford."
+          ],
+          "bullets": [
+            "Premature infrastructure. Building a vector engine, a model gateway, or an orchestration framework before a rented one has measurably broken.",
+            "Fine-tuning too early. Spending weeks to save tokens when tokens fall 10x a year and prompt-and-retrieve would have cleared the bar.",
+            "Owning the wrong layer. Investing in the commodity plumbing and treating the proprietary data and evals as an afterthought.",
+            "Vendor lock-in by neglect. Renting is correct, but wiring one provider so deeply that a 40x-cheaper option cannot be adopted without a rewrite.",
+            "No eval set. Without domain evals you cannot ride the falling price curve, so you either overpay for the frontier model or ship regressions."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "A reliable self-hosted vector setup for a one-million-vector workload runs about $385 to $915 a month, dominated by $320 to $720 of engineer-hours, versus roughly $99 a month for a managed equivalent.",
+            "attribution": "Rivestack, pgvector total cost of ownership"
+          }
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "How Avante solves plumbing once across ventures",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures treats the build stack as a Build-stage decision with a Compound-stage payoff. The six-stage system runs Research, Partner, Build, Traction, Revenue, Compound, and the studio makes the rent-versus-own call once, then reuses it across the portfolio. Solving company plumbing once routes roughly $300K-$500K of effective capital per venture into product and traction rather than overhead.",
+            "That is the arithmetic behind building 3-4 ventures a year on a shared stack while deploying $500K-1.5M per venture. The Brazil and LATAM context sharpens it. Services account for roughly 70% of Brazilian GDP with low software penetration, so the addressable verticals are enormous, and a domain operator with 10+ years of Brazilian-market scar tissue is the one who knows which workflow logic is worth owning. You can read the full argument in [why Avante builds as a studio](/why-avante).",
+            "AI infrastructure is now cheap enough to deploy without a Series A. So the scarce asset was never model access. It is the proprietary data and evals the owned layer creates while the rest of the market rebuilds plumbing it could have rented. The teams still tuning their own vector index in 2027 will be renting intelligence and calling it a moat. The teams that owned the data will be raising on it."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is the lean AI build stack a small team should run?",
+          "a": "The lean AI build stack rents the commodity layers and owns exactly one thing. Rent base models by API, managed Postgres with pgvector for retrieval, serverless hosting, and observability. Own the proprietary data, the domain evals, and the vertical workflow logic, because those are the only layers a competitor cannot buy."
+        },
+        {
+          "q": "Should a startup build or buy its AI infrastructure?",
+          "a": "Buy the commodity, own the moat, wait on the speculative. Base models, vector storage, hosting, and observability are commodities a vendor runs cheaper than a small team can, so rent them. The data, evals, and vertical logic are the moat, so build those. Anything speculative like fine-tuning waits until a rented option measurably breaks."
+        },
+        {
+          "q": "Why not self-host a vector database to save money?",
+          "a": "Because the cost of self-hosting is engineer-hours, not compute. A reliable one-million-vector setup runs about $385 to $915 a month, mostly $320 to $720 in engineer time for tuning, backups, and on-call, versus about $99 for a managed equivalent. For a 2-3 person team, that attention is better spent on the moat."
+        },
+        {
+          "q": "Can a 2-3 person team deploy an AI product without a Series A?",
+          "a": "Yes. The cost of LLM inference for a fixed capability fell roughly 1,000x from 2021 to 2024 and drops about 10x a year, so intelligence is now a metered utility you rent by the token. AI infrastructure is cheap enough to deploy without a Series A. The scarce asset is the proprietary data and evals, not model access."
+        },
+        {
+          "q": "What is the biggest mistake in an early AI stack?",
+          "a": "Premature infrastructure. A tiny team rebuilds a vector database, a model gateway, or an orchestration layer a vendor would run for a fraction of the cost, and burns its runway on plumbing instead of the one layer that becomes the moat. Own the data and evals. Rent the rest until a number says the vendor broke."
+        }
+      ]
+    },
+    "pt": {
+      "title": "O Stack de IA Enxuto que uma Venture de 2 a 3 Pessoas Roda",
+      "description": "O stack de IA enxuto que uma venture de 2 a 3 pessoas roda de fato, camada por camada, com uma regra de construir ou comprar para cada uma.",
+      "sections": [
+        {
+          "paragraphs": [
+            "O stack de IA enxuto que uma venture de 2 a 3 pessoas roda aluga quase tudo e possui uma coisa só. Alugue os modelos base, o armazenamento vetorial, a hospedagem e a observabilidade. Construa os dados, os evals e a lógica de fluxo de trabalho vertical, porque essas são as únicas camadas que um concorrente não compra pronto na prateleira. Essa regra sozinha carrega o playbook inteiro. Compre a commodity, possua o moat, espere no que é especulativo.",
+            "Isto é uma decisão de construir ou comprar, não uma resenha de ferramentas. Ela se resolve com clareza em 2026 por um motivo. O custo de inferência despencou, então inteligência virou um utilitário medido que você aluga por token, não um projeto de capital que você financia. A Avante Ventures constrói cada empresa assim de propósito, e é por isso que três pessoas colocam um produto de IA de verdade no ar sem uma Série A."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "Construir ou comprar: a única pergunta de stack que importa cedo",
+          "level": 2,
+          "paragraphs": [
+            "Um time de 2 a 3 pessoas tem um único recurso escasso, e não é dinheiro. É a atenção do engenheiro. Cada camada que o time decide construir é atenção tirada da única camada que se torna defensável. Então a pergunta nunca é construir ou comprar no abstrato. É quais camadas específicas são commodities para alugar e qual camada única é o moat para possuir.",
+            "A regra é direta de propósito. Compre a commodity, possua o moat, espere no que é especulativo. Modelos base, armazenamento vetorial, hospedagem, filas e observabilidade são commodities que fornecedores rodam melhor e mais barato do que qualquer time de três pessoas vai rodar. O conjunto de dados proprietário, os evals de domínio e a lógica de fluxo vertical são o moat. Fine-tuning, um modelo self-hosted e um framework de orquestração próprio são especulativos até um equivalente alugado quebrar de forma visível sob a sua carga.",
+            "Existe um teste rápido para qualquer camada que você sinta vontade de construir. Se ela custaria o mesmo para rodar com dez clientes ou dez mil, e um fornecedor já vende isso como serviço medido, construí-la é a ferramenta errada. Possuir só se paga na camada que fica mais valiosa quanto mais os seus clientes específicos a usam."
+          ],
+          "bullets": [
+            "Compre a commodity. Modelos base por API, Postgres gerenciado para recuperação, hospedagem, filas, observabilidade. Fornecedores de verdade, preços em queda, nenhuma vantagem em rodar por conta própria.",
+            "Possua o moat. Os dados proprietários que o seu fluxo de trabalho gera, o conjunto de evals de domínio e a lógica vertical que codifica como o seu mercado de fato funciona.",
+            "Espere no especulativo. Fine-tuning, subir um modelo próprio, um framework sob medida. Esperar aqui é uma decisão, não indecisão."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O custo de inferência de IA para um nível fixo de capacidade caiu de cerca de US$ 60 por milhão de tokens em 2021 para cerca de US$ 0,06 em 2024, um fator de aproximadamente 1.000 em três anos, e cai cerca de 10x por ano para um modelo de desempenho equivalente.",
+            "attribution": "a16z, LLMflation, 2024"
+          }
+        },
+        {
+          "id": "the-playbook",
+          "heading": "O stack de IA enxuto, camada por camada",
+          "level": 2,
+          "paragraphs": [
+            "Aqui está o stack que um time enxuto monta esta semana, percorrido de baixo para cima. Aplique a mesma regra de comprar, construir ou esperar em cada camada. No fim, o único código que o time de fato possui é o código que se acumula.",
+            "A disciplina é manter cada camada de commodity trocável e cada camada própria profunda. Alugue fino, construa grosso."
+          ],
+          "bullets": [
+            "Camada de modelo. Alugue modelos de fronteira e modelos pequenos por API. Roteie as chamadas fáceis para um modelo pequeno e reserve um modelo de fronteira para as difíceis. Esconda o fornecedor atrás de uma única interface interna para que trocar seja mudança de configuração.",
+            "Camada de recuperação e dados. Comece com Postgres gerenciado e a extensão pgvector, não com um banco vetorial dedicado. Isso mantém os seus dados relacionais e os seus embeddings em um sistema que você já opera. Adicione um armazenamento especializado só quando um limite medido forçar.",
+            "Camada de aplicação e hospedagem. Alugue hospedagem serverless e uma fila gerenciada. Entregue o fluxo de trabalho vertical, a parte que codifica como o seu domínio de fato funciona, como código seu.",
+            "Camada de observabilidade e evals. Alugue o log e o tracing. Construa os evals você mesmo, porque um conjunto de evals de domínio é um ativo proprietário, não uma commodity.",
+            "Camada de feedback. Instrumente o produto para que cada correção de especialista seja capturada como exemplo rotulado. Essa captura é o que depois transforma uso em um conjunto de dados financiável."
+          ]
+        },
+        {
+          "id": "buy-build-wait",
+          "heading": "Onde comprar, onde construir, onde esperar",
+          "level": 3,
+          "paragraphs": [
+            "Dito de forma direta, para um fundador aplicar em uma tarde. Três colunas, e a maior parte do stack cai na primeira."
+          ],
+          "bullets": [
+            "Compre agora. Modelos base por API. Postgres gerenciado com pgvector. Hospedagem serverless. Filas gerenciadas. Observabilidade, tracing e autenticação. Commodities com fornecedores de verdade e preços que caem a cada trimestre.",
+            "Construa agora. O conjunto de dados proprietário e o seu pipeline de captura. O conjunto de evals de domínio. A lógica de fluxo vertical que codifica mais de 10 anos de calo de mercado do operador. Esta coluna é o moat.",
+            "Espere. Fine-tuning, um modelo self-hosted, um framework de orquestração sob medida, um motor vetorial próprio. Cada um se justifica só quando um equivalente alugado quebra de forma mensurável. Até lá, esperar mantém o caixa no moat."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "O único movimento que importa. Mantenha uma lista escrita do que você aluga e do que você possui, e defenda a fronteira. Todo trimestre algo do lado do aluguel vai tentar você a reconstruir. Resista, a menos que um número, e não um palpite, diga que o fornecedor quebrou."
+          }
+        },
+        {
+          "id": "cost-control",
+          "heading": "Mantendo o custo de inferência fora do caminho crítico",
+          "level": 2,
+          "paragraphs": [
+            "O custo de inferência é um problema resolvido para um time enxuto, e tratá-lo como crise é um modo de falha em si. Preços de token em queda são a razão de uma venture de 2 a 3 pessoas colocar um produto de IA de verdade no ar sem uma Série A. O mercado já corta esse custo em uma ordem de grandeza por ano, então não gaste meses de engenharia perseguindo-o.",
+            "A Epoch AI, medindo o preço para atingir um patamar fixo, encontra quedas entre 9x e 900x por ano dependendo da tarefa, com mediana perto de 50x, e o preço para igualar o desempenho de nível GPT-4 em questões científicas de nível de doutorado caiu cerca de 40x por ano. Construir a sua própria inferência para economizar é construir um ativo que se deprecia.",
+            "Você captura a economia sem um projeto de fine-tuning com três movimentos simples."
+          ],
+          "bullets": [
+            "Roteie por dificuldade. Um modelo barato para os 80 por cento de chamadas fáceis, um modelo de fronteira para os 20 por cento difíceis.",
+            "Faça cache com agressividade. Deduplique prompts repetidos e reaproveite o contexto recuperado para parar de pagar duas vezes pela mesma resposta.",
+            "Mantenha o fornecedor trocável. Quando um modelo mais barato passar nos seus evals, trocar deve ser mudança de configuração, não reescrita."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O preço para atingir um patamar fixo de desempenho caiu entre 9x e 900x por ano conforme a tarefa, com mediana em torno de 50x por ano. O desempenho de nível GPT-4 em questões científicas de doutorado ficou cerca de 40x mais barato a cada ano.",
+            "attribution": "Epoch AI, 2025"
+          }
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "A única camada que vale possuir: seus dados e avaliações",
+          "level": 2,
+          "paragraphs": [
+            "O moat nunca é o modelo, e nunca é a infraestrutura. Todo concorrente chama a mesma API e aluga o mesmo Postgres gerenciado, então camadas alugadas não podem ser fonte de vantagem. O ativo durável é o dado proprietário que o seu fluxo de trabalho gera e os evals de domínio que provam que o seu sistema está ficando melhor no trabalho específico.",
+            "Este é o [flywheel copilot, dado, capital](/library/copilot-to-data-to-fund-flywheel) enunciado como decisão de stack. Construa um copilot para gerar dados proprietários e depois use esse dado para captar e alocar capital. Cada correção de especialista capturada é um exemplo rotulado que um concorrente não pode comprar, porque nasce dentro de um fluxo de trabalho que o concorrente não roda. Ao longo dos trimestres, o stack alugado fica parado e a camada própria dispara na frente.",
+            "Possuir os evals importa mais do que parece. Sem um conjunto de evals de domínio, um time nem consegue dizer se um modelo mais barato é bom o bastante para migrar, então paga caro pelo modelo de fronteira por medo. Os [evals específicos de domínio](/library/domain-specific-evals-ai-moat) são ao mesmo tempo o moat e o instrumento que deixa você surfar a curva de preço em queda com segurança. Construa os testes que só o seu dado passa."
+          ]
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Modos de falha: infraestrutura prematura",
+          "level": 2,
+          "paragraphs": [
+            "O modo de falha honesto é a infraestrutura prematura. Um time minúsculo reconstrói um banco vetorial, um gateway de modelos ou uma camada de orquestração que um fornecedor rodaria por uma fração do custo, e queima o caixa em encanamento em vez da única camada que vira o moat.",
+            "Os números são cruéis com o instinto de fazer em casa. Para uma carga modesta de um milhão de vetores, um pgvector self-hosted e confiável custa por volta de US$ 385 a US$ 915 por mês, e a linha dominante não é computação. É hora de engenheiro para setup, ajuste de índice, backups, failover e plantão, muitas vezes US$ 320 a US$ 720 desse total, contra cerca de US$ 99 por mês por um equivalente gerenciado. Trabalho de banco de dados é invisível quando dá certo e catastrófico quando falha, então a variância, não o mês médio, é o que um time de três pessoas não pode bancar."
+          ],
+          "bullets": [
+            "Infraestrutura prematura. Construir um motor vetorial, um gateway de modelos ou um framework de orquestração antes de um alugado quebrar de forma mensurável.",
+            "Fine-tuning cedo demais. Gastar semanas para economizar tokens quando tokens caem 10x por ano e prompt com recuperação já passaria na régua.",
+            "Possuir a camada errada. Investir no encanamento de commodity e tratar os dados proprietários e os evals como algo secundário.",
+            "Lock-in de fornecedor por descuido. Alugar está certo, mas amarrar um fornecedor tão fundo que uma opção 40x mais barata não pode ser adotada sem reescrever.",
+            "Sem conjunto de evals. Sem evals de domínio você não surfa a curva de preço em queda, então ou paga caro pelo modelo de fronteira ou entrega regressões."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Um setup vetorial self-hosted e confiável para uma carga de um milhão de vetores custa cerca de US$ 385 a US$ 915 por mês, dominado por US$ 320 a US$ 720 de horas de engenheiro, contra cerca de US$ 99 por mês por um equivalente gerenciado.",
+            "attribution": "Rivestack, custo total de propriedade do pgvector"
+          }
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "Como a Avante resolve o encanamento uma vez para várias ventures",
+          "level": 2,
+          "paragraphs": [
+            "A Avante Ventures trata o build stack como uma decisão da etapa Build com retorno na etapa Compound. O sistema de seis etapas roda Research, Partner, Build, Traction, Revenue, Compound, e o studio toma a escolha de alugar ou possuir uma vez e depois a reutiliza no portfólio inteiro. Resolver o encanamento da empresa uma vez direciona cerca de $300K-$500K de capital efetivo por venture para produto e tração em vez de custo administrativo.",
+            "Essa é a aritmética por trás de construir 3-4 empresas por ano sobre um stack compartilhado enquanto aloca $500K-1.5M por venture. O contexto do Brasil e da América Latina afia o argumento. Os serviços representam cerca de 70% do PIB brasileiro com baixa penetração de software, então os verticais endereçáveis são enormes, e um operador de domínio com mais de 10 anos de calo de mercado brasileiro é quem sabe qual lógica de fluxo vale possuir. Você lê o argumento completo em [por que a Avante constrói como studio](/why-avante).",
+            "A infraestrutura de IA já está barata o bastante para operar sem uma Série A. Então o ativo escasso nunca foi o acesso ao modelo. É o dado proprietário e os evals que a camada própria cria enquanto o resto do mercado reconstrói um encanamento que poderia ter alugado. Os times que ainda ajustam o próprio índice vetorial em 2027 vão estar alugando inteligência e chamando isso de moat. Os times que possuíram o dado vão estar captando em cima dele."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "O que é o stack de IA enxuto que um time pequeno deve rodar?",
+          "a": "O stack de IA enxuto aluga as camadas de commodity e possui uma coisa só. Alugue modelos base por API, Postgres gerenciado com pgvector para recuperação, hospedagem serverless e observabilidade. Possua os dados proprietários, os evals de domínio e a lógica de fluxo vertical, porque essas são as únicas camadas que um concorrente não pode comprar."
+        },
+        {
+          "q": "Uma startup deve construir ou comprar a sua infraestrutura de IA?",
+          "a": "Compre a commodity, possua o moat, espere no especulativo. Modelos base, armazenamento vetorial, hospedagem e observabilidade são commodities que um fornecedor roda mais barato do que um time pequeno, então alugue. Os dados, os evals e a lógica vertical são o moat, então construa. Qualquer coisa especulativa como fine-tuning espera até uma opção alugada quebrar de forma mensurável."
+        },
+        {
+          "q": "Por que não subir um banco vetorial próprio para economizar?",
+          "a": "Porque o custo de fazer isso em casa é hora de engenheiro, não computação. Um setup confiável de um milhão de vetores custa cerca de US$ 385 a US$ 915 por mês, na maior parte US$ 320 a US$ 720 de tempo de engenheiro para ajuste, backups e plantão, contra cerca de US$ 99 por um equivalente gerenciado. Para um time de 2 a 3 pessoas, essa atenção rende mais no moat."
+        },
+        {
+          "q": "Um time de 2 a 3 pessoas consegue lançar um produto de IA sem uma Série A?",
+          "a": "Sim. O custo de inferência de IA para uma capacidade fixa caiu cerca de 1.000x de 2021 a 2024 e cai cerca de 10x por ano, então inteligência virou um utilitário medido que você aluga por token. A infraestrutura de IA está barata o bastante para operar sem uma Série A. O ativo escasso é o dado proprietário e os evals, não o acesso ao modelo."
+        },
+        {
+          "q": "Qual é o maior erro em um stack de IA no início?",
+          "a": "Infraestrutura prematura. Um time minúsculo reconstrói um banco vetorial, um gateway de modelos ou uma camada de orquestração que um fornecedor rodaria por uma fração do custo, e queima o caixa em encanamento em vez da única camada que vira o moat. Possua os dados e os evals. Alugue o resto até um número dizer que o fornecedor quebrou."
+        }
+      ]
+    },
+    "es": {
+      "title": "El Stack de IA Mínimo que una Venture de 2 a 3 Personas Corre",
+      "description": "El stack de IA mínimo que una venture de 2 a 3 personas corre de verdad, capa por capa, con una regla de construir o comprar para cada una.",
+      "sections": [
+        {
+          "paragraphs": [
+            "El stack de IA mínimo que una venture de 2 a 3 personas corre alquila casi todo y posee una sola cosa. Alquile los modelos base, el almacenamiento vectorial, el hosting y la observabilidad. Construya los datos, los evals y la lógica del flujo de trabajo vertical, porque esas son las únicas capas que un competidor no compra hecha en un estante. Esa regla sola carga el playbook entero. Compre la commodity, posea el moat, espere en lo especulativo.",
+            "Esto es una decisión de construir o comprar, no una reseña de herramientas. Se resuelve con claridad en 2026 por una razón. El costo de inferencia se desplomó, así que la inteligencia se volvió un servicio medido que usted alquila por token, no un proyecto de capital que usted financia. Avante Ventures construye cada empresa así a propósito, y por eso tres personas ponen un producto de IA de verdad en el aire sin una Serie A."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "Construir o comprar: la única pregunta de stack que importa temprano",
+          "level": 2,
+          "paragraphs": [
+            "Un equipo de 2 a 3 personas tiene un solo recurso escaso, y no es el dinero. Es la atención del ingeniero. Cada capa que el equipo decide construir es atención quitada de la única capa que se vuelve defendible. Así que la pregunta nunca es construir o comprar en abstracto. Es cuáles capas específicas son commodities para alquilar y cuál capa única es el moat para poseer.",
+            "La regla es directa a propósito. Compre la commodity, posea el moat, espere en lo especulativo. Los modelos base, el almacenamiento vectorial, el hosting, las colas y la observabilidad son commodities que los proveedores corren mejor y más barato de lo que cualquier equipo de tres personas va a lograr. El conjunto de datos propietario, los evals de dominio y la lógica del flujo vertical son el moat. El fine-tuning, un modelo self-hosted y un framework de orquestación propio son especulativos hasta que un equivalente alquilado se rompa de forma visible bajo su carga.",
+            "Existe una prueba rápida para cualquier capa que a usted le den ganas de construir. Si costaría lo mismo correrla con diez clientes o con diez mil, y un proveedor ya la vende como servicio medido, construirla es la herramienta equivocada. Poseer solo se paga en la capa que se vuelve más valiosa mientras más la usan sus clientes específicos."
+          ],
+          "bullets": [
+            "Compre la commodity. Modelos base por API, Postgres gestionado para recuperación, hosting, colas, observabilidad. Proveedores de verdad, precios en caída, ninguna ventaja en correrlos usted mismo.",
+            "Posea el moat. Los datos propietarios que genera su flujo de trabajo, el conjunto de evals de dominio y la lógica vertical que codifica cómo funciona de verdad su mercado.",
+            "Espere en lo especulativo. Fine-tuning, levantar un modelo propio, un framework a medida. Esperar aquí es una decisión, no indecisión."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "El costo de inferencia de IA para un nivel fijo de capacidad cayó de cerca de USD 60 por millón de tokens en 2021 a cerca de USD 0,06 en 2024, un factor de aproximadamente 1.000 en tres años, y baja cerca de 10x por año para un modelo de desempeño equivalente.",
+            "attribution": "a16z, LLMflation, 2024"
+          }
+        },
+        {
+          "id": "the-playbook",
+          "heading": "El stack de IA mínimo, capa por capa",
+          "level": 2,
+          "paragraphs": [
+            "Aquí está el stack que un equipo mínimo arma esta semana, recorrido de abajo hacia arriba. Aplique la misma regla de comprar, construir o esperar en cada capa. Al final, el único código que el equipo de verdad posee es el código que se acumula.",
+            "La disciplina es mantener cada capa de commodity intercambiable y cada capa propia profunda. Alquile delgado, construya grueso."
+          ],
+          "bullets": [
+            "Capa de modelo. Alquile modelos de frontera y modelos pequeños por API. Rutee las llamadas fáciles a un modelo pequeño y reserve un modelo de frontera para las difíciles. Esconda al proveedor detrás de una sola interfaz interna para que cambiar sea un ajuste de configuración.",
+            "Capa de recuperación y datos. Empiece con Postgres gestionado y la extensión pgvector, no con una base vectorial dedicada. Mantiene sus datos relacionales y sus embeddings en un sistema que usted ya opera. Agregue un almacenamiento especializado solo cuando un límite medido lo obligue.",
+            "Capa de aplicación y hosting. Alquile hosting serverless y una cola gestionada. Entregue el flujo de trabajo vertical, la parte que codifica cómo funciona de verdad su dominio, como código suyo.",
+            "Capa de observabilidad y evals. Alquile el log y el tracing. Construya los evals usted mismo, porque un conjunto de evals de dominio es un activo propietario, no una commodity.",
+            "Capa de feedback. Instrumente el producto para que cada corrección de un experto se capture como ejemplo etiquetado. Esa captura es lo que después convierte el uso en un conjunto de datos financiable."
+          ]
+        },
+        {
+          "id": "buy-build-wait",
+          "heading": "Dónde comprar, dónde construir, dónde esperar",
+          "level": 3,
+          "paragraphs": [
+            "Dicho de forma directa, para que un fundador lo aplique en una tarde. Tres columnas, y la mayor parte del stack cae en la primera."
+          ],
+          "bullets": [
+            "Compre ahora. Modelos base por API. Postgres gestionado con pgvector. Hosting serverless. Colas gestionadas. Observabilidad, tracing y autenticación. Commodities con proveedores de verdad y precios que caen cada trimestre.",
+            "Construya ahora. El conjunto de datos propietario y su pipeline de captura. El conjunto de evals de dominio. La lógica del flujo vertical que codifica más de 10 años de cicatrices de mercado del operador. Esta columna es el moat.",
+            "Espere. Fine-tuning, un modelo self-hosted, un framework de orquestación a medida, un motor vectorial propio. Cada uno se justifica solo cuando un equivalente alquilado se rompe de forma medible. Hasta entonces, esperar mantiene el efectivo en el moat."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "El único movimiento que importa. Mantenga una lista escrita de lo que alquila y lo que posee, y defienda la frontera. Cada trimestre algo del lado del alquiler lo va a tentar a reconstruir. Resístalo, a menos que un número, y no una corazonada, diga que el proveedor se rompió."
+          }
+        },
+        {
+          "id": "cost-control",
+          "heading": "Manteniendo el costo de inferencia fuera de la ruta crítica",
+          "level": 2,
+          "paragraphs": [
+            "El costo de inferencia es un problema resuelto para un equipo mínimo, y tratarlo como crisis es un modo de falla en sí mismo. Los precios de token en caída son la razón de que una venture de 2 a 3 personas ponga un producto de IA de verdad en el aire sin una Serie A. El mercado ya corta ese costo en un orden de magnitud por año, así que no gaste meses de ingeniería persiguiéndolo.",
+            "Epoch AI, midiendo el precio para alcanzar un umbral fijo, encuentra caídas entre 9x y 900x por año según la tarea, con una mediana cerca de 50x, y el precio para igualar el desempeño de nivel GPT-4 en preguntas científicas de nivel doctoral cayó cerca de 40x por año. Construir su propia inferencia para ahorrar es construir un activo que se deprecia.",
+            "Usted captura el ahorro sin un proyecto de fine-tuning con tres movimientos simples."
+          ],
+          "bullets": [
+            "Rutee por dificultad. Un modelo barato para el 80 por ciento de llamadas fáciles, un modelo de frontera para el 20 por ciento difícil.",
+            "Cachee con agresividad. Deduplique prompts repetidos y reutilice el contexto recuperado para dejar de pagar dos veces por la misma respuesta.",
+            "Mantenga al proveedor intercambiable. Cuando un modelo más barato pase sus evals, cambiar debe ser un ajuste de configuración, no una reescritura."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "El precio para alcanzar un umbral fijo de desempeño cayó entre 9x y 900x por año según la tarea, con una mediana en torno a 50x por año. El desempeño de nivel GPT-4 en preguntas científicas de doctorado se volvió cerca de 40x más barato cada año.",
+            "attribution": "Epoch AI, 2025"
+          }
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "La única capa que vale poseer: tus datos y evaluaciones",
+          "level": 2,
+          "paragraphs": [
+            "El moat nunca es el modelo, y nunca es la infraestructura. Todo competidor llama a la misma API y alquila el mismo Postgres gestionado, así que las capas alquiladas no pueden ser fuente de ventaja. El activo durable es el dato propietario que genera su flujo de trabajo y los evals de dominio que prueban que su sistema está mejorando en el trabajo específico.",
+            "Este es el [flywheel copilot, dato, capital](/library/copilot-to-data-to-fund-flywheel) enunciado como decisión de stack. Construya un copilot para generar datos propietarios y luego use ese dato para levantar y desplegar capital. Cada corrección de un experto capturada es un ejemplo etiquetado que un competidor no puede comprar, porque nace dentro de un flujo de trabajo que el competidor no corre. A lo largo de los trimestres, el stack alquilado se queda quieto y la capa propia se dispara adelante.",
+            "Poseer los evals importa más de lo que parece. Sin un conjunto de evals de dominio, un equipo ni siquiera puede decir si un modelo más barato es lo bastante bueno para migrar, así que paga de más por el modelo de frontera por miedo. Los [evals específicos de dominio](/library/domain-specific-evals-ai-moat) son a la vez el moat y el instrumento que le deja surfear la curva de precio en caída con seguridad. Construya las pruebas que solo su dato aprueba."
+          ]
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Modos de falla: infraestructura prematura",
+          "level": 2,
+          "paragraphs": [
+            "El modo de falla honesto es la infraestructura prematura. Un equipo minúsculo reconstruye una base vectorial, un gateway de modelos o una capa de orquestación que un proveedor correría por una fracción del costo, y quema su efectivo en plomería en vez de en la única capa que se vuelve el moat.",
+            "Los números son crueles con el instinto de hacerlo en casa. Para una carga modesta de un millón de vectores, un pgvector self-hosted y confiable cuesta alrededor de USD 385 a USD 915 por mes, y la línea dominante no es el cómputo. Son horas de ingeniero para setup, ajuste de índice, backups, failover y guardia, muchas veces USD 320 a USD 720 de ese total, contra cerca de USD 99 por mes por un equivalente gestionado. El trabajo de base de datos es invisible cuando sale bien y catastrófico cuando falla, así que la varianza, no el mes promedio, es lo que un equipo de tres personas no puede costear."
+          ],
+          "bullets": [
+            "Infraestructura prematura. Construir un motor vectorial, un gateway de modelos o un framework de orquestación antes de que uno alquilado se rompa de forma medible.",
+            "Fine-tuning demasiado pronto. Gastar semanas para ahorrar tokens cuando los tokens caen 10x por año y prompt con recuperación ya pasaría la vara.",
+            "Poseer la capa equivocada. Invertir en la plomería de commodity y tratar los datos propietarios y los evals como algo secundario.",
+            "Lock-in de proveedor por descuido. Alquilar está bien, pero amarrar a un proveedor tan hondo que una opción 40x más barata no se pueda adoptar sin reescribir.",
+            "Sin conjunto de evals. Sin evals de dominio usted no surfea la curva de precio en caída, así que o paga de más por el modelo de frontera o entrega regresiones."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Un setup vectorial self-hosted y confiable para una carga de un millón de vectores cuesta cerca de USD 385 a USD 915 por mes, dominado por USD 320 a USD 720 de horas de ingeniero, contra cerca de USD 99 por mes por un equivalente gestionado.",
+            "attribution": "Rivestack, costo total de propiedad de pgvector"
+          }
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "Cómo Avante resuelve la plomería una vez para varias ventures",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures trata el build stack como una decisión de la etapa Build con retorno en la etapa Compound. El sistema de seis etapas corre Research, Partner, Build, Traction, Revenue, Compound, y el studio toma la decisión de alquilar o poseer una vez y luego la reutiliza en el portafolio entero. Resolver la plomería de la empresa una vez dirige cerca de $300K-$500K de capital efectivo por venture hacia producto y tracción en lugar de gasto administrativo.",
+            "Esa es la aritmética detrás de construir 3-4 empresas por año sobre un stack compartido mientras despliega $500K-1.5M por venture. El contexto de Brasil y América Latina afila el argumento. Los servicios representan cerca del 70% del PIB brasileño con baja penetración de software, así que los verticales direccionables son enormes, y un operador de dominio con más de 10 años de cicatrices del mercado brasileño es quien sabe cuál lógica de flujo vale poseer. Usted lee el argumento completo en [por qué Avante construye como studio](/why-avante).",
+            "La infraestructura de IA ya está lo bastante barata como para desplegar sin una Serie A. Así que el activo escaso nunca fue el acceso al modelo. Es el dato propietario y los evals que la capa propia crea mientras el resto del mercado reconstruye una plomería que pudo haber alquilado. Los equipos que sigan ajustando su propio índice vectorial en 2027 van a estar alquilando inteligencia y llamándola moat. Los equipos que poseyeron el dato van a estar levantando capital sobre él."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Qué es el stack de IA mínimo que un equipo pequeño debe correr?",
+          "a": "El stack de IA mínimo alquila las capas de commodity y posee una sola cosa. Alquile modelos base por API, Postgres gestionado con pgvector para recuperación, hosting serverless y observabilidad. Posea los datos propietarios, los evals de dominio y la lógica del flujo vertical, porque esas son las únicas capas que un competidor no puede comprar."
+        },
+        {
+          "q": "¿Una startup debe construir o comprar su infraestructura de IA?",
+          "a": "Compre la commodity, posea el moat, espere en lo especulativo. Los modelos base, el almacenamiento vectorial, el hosting y la observabilidad son commodities que un proveedor corre más barato que un equipo pequeño, así que alquílelos. Los datos, los evals y la lógica vertical son el moat, así que constrúyalos. Cualquier cosa especulativa como el fine-tuning espera hasta que una opción alquilada se rompa de forma medible."
+        },
+        {
+          "q": "¿Por qué no levantar una base vectorial propia para ahorrar?",
+          "a": "Porque el costo de hacerlo en casa son horas de ingeniero, no cómputo. Un setup confiable de un millón de vectores cuesta cerca de USD 385 a USD 915 por mes, en su mayoría USD 320 a USD 720 de tiempo de ingeniero para ajuste, backups y guardia, contra cerca de USD 99 por un equivalente gestionado. Para un equipo de 2 a 3 personas, esa atención rinde más en el moat."
+        },
+        {
+          "q": "¿Un equipo de 2 a 3 personas puede lanzar un producto de IA sin una Serie A?",
+          "a": "Sí. El costo de inferencia de IA para una capacidad fija cayó cerca de 1.000x de 2021 a 2024 y baja cerca de 10x por año, así que la inteligencia se volvió un servicio medido que usted alquila por token. La infraestructura de IA está lo bastante barata como para desplegar sin una Serie A. El activo escaso es el dato propietario y los evals, no el acceso al modelo."
+        },
+        {
+          "q": "¿Cuál es el mayor error en un stack de IA temprano?",
+          "a": "La infraestructura prematura. Un equipo minúsculo reconstruye una base vectorial, un gateway de modelos o una capa de orquestación que un proveedor correría por una fracción del costo, y quema su efectivo en plomería en vez de la única capa que se vuelve el moat. Posea los datos y los evals. Alquile el resto hasta que un número diga que el proveedor se rompió."
+        }
+      ]
+    },
+    "ogImage": "/og/lean-ai-build-stack-playbook.png"
+  },
+  {
     "slug": "lp-allocation-case-venture-studios",
     "category": "research",
     "type": "Research Report",
@@ -8065,6 +10522,386 @@ const engineArticles: Article[] = [
     }
   },
   {
+    "slug": "model-routing-inference-cost-playbook",
+    "category": "playbooks",
+    "type": "Playbook",
+    "readTime": "10 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-03",
+    "isPublished": true,
+    "en": {
+      "title": "How to Control LLM Inference Cost With Model Routing",
+      "description": "Control LLM inference cost with model routing without losing quality. Route cheap by default, escalate on demand, and gate every swap on evals.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Controlling LLM inference cost is a product decision, not a finance one, and model routing is the lever. Send every request to a cheap model by default, escalate to an expensive one only when the task needs it, cache and batch what you can, cap spend with hard budgets, and gate every model swap on an eval harness. Do that and inference stops being a bill you dread and becomes a margin you keep.",
+            "Avante Ventures builds AI-native companies this way because the price of a token is falling faster than almost any input in the history of software. The teams that win are not the ones waiting for prices to drop. They are the ones who architected to capture the drop."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "Why inference cost is a product decision, not a finance one",
+          "level": 2,
+          "paragraphs": [
+            "The model you pay a premium for today is next year's budget option at a fraction of the price. According to a16z's [LLMflation analysis](https://a16z.com/llmflation-llm-inference-cost/), GPT-3 level performance cost about $60 per million tokens in November 2021 and about $0.06 by 2024 on a small open model. That is roughly a 1,000x decline in three years, near 10x cheaper per year for a fixed level of capability. Epoch AI's independent measurement puts the decline for a fixed capability between 9x and 900x per year, with a median around 50x.",
+            "This is why cost belongs in the product spec, not in a quarterly finance review. A venture whose product already runs most requests on the cheap tier captures that deflation automatically, because each new model that clears its quality bar is cheaper than the last. A venture that hardcoded the frontier model everywhere pays yesterday's price forever and has nowhere to fall to.",
+            "There is a catch worth naming. The frontier itself does not get cheaper. OpenAI's o1 launched at the same $60 per million output tokens that GPT-3 charged in 2021. The deflation is in reaching a fixed capability, not in the frontier. So the real question is never which model is best. It is which model is good enough for this specific request, proven by evals."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "GPT-3 level performance fell from about $60 per million tokens in 2021 to about $0.06 by 2024, roughly 10x cheaper every year for a fixed capability.",
+            "attribution": "a16z, LLMflation"
+          }
+        },
+        {
+          "id": "the-playbook",
+          "heading": "Cut LLM inference cost in five moves",
+          "level": 2,
+          "paragraphs": [
+            "Here is the sequence an operator can run this week. Every move is measurable and reversible, and each one assumes the one before it is already in place."
+          ],
+          "bullets": [
+            "Instrument before you optimize. Log tokens in, tokens out, model, latency, and dollar cost per request, tagged by task type and by customer. You cannot route what you cannot see, and most teams find 80% of spend hiding in a few task types.",
+            "Route cheap by default, escalate on demand. Send every request to a small model first, verify the output, and escalate to the expensive model only on failure.",
+            "Cache and batch aggressively. Turn on prompt caching for the stable parts of prompts and batch anything that is not latency-sensitive.",
+            "Set hard budgets and alerts. Put a per-customer and per-environment token budget in place with an alert at 70% and a hard cap, so a runaway retry loop trips a limit, not an invoice.",
+            "Gate every model swap on evals. No model change, cheaper or more expensive, ships without passing the harness. This is the discipline that cuts cost without quietly cutting quality."
+          ]
+        },
+        {
+          "id": "model-routing",
+          "heading": "Model routing: cheap by default, expensive on demand",
+          "level": 3,
+          "paragraphs": [
+            "A model cascade sends each request to the cheapest capable model, verifies the result, and escalates only what fails. The whole economics turn on one number: the escalation rate, the share of traffic that falls through to the expensive tier.",
+            "The published figures are strong. TrueFoundry's [routing analysis](https://www.truefoundry.com/blog/llm-routing-cost-quality-aware-model-selection) shows that a 70% cheap-resolution rate brings blended cost to about half of running the frontier model everywhere, even after paying for the failed cheap attempt on the 30% that escalate. At a 10x price gap between tiers, a cascade lands near 40% of frontier-everywhere cost. Practitioner reports put real savings at 45% to 85% while holding about 95% of quality.",
+            "Start with the simplest router that works. Static rules that pick a model from a task tag cost almost nothing to run. Cost-aware routing picks the cheapest model that clears a quality threshold. Semantic routing embeds the request and classifies intent for a few milliseconds of overhead. The cascade sits on top. Watch the escalation rate daily, because if it drifts up your cheap model degraded or your traffic mix changed, and either way your blended cost just moved."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Escalation rate is the one metric to watch daily. It is the number that ties your quality to your bill, and it should live on a dashboard, not surface in a monthly invoice."
+          }
+        },
+        {
+          "id": "caching-and-budgets",
+          "heading": "Caching, batching, and hard budgets",
+          "level": 2,
+          "paragraphs": [
+            "Routing decides which model. Caching, batching, and budgets decide how little you pay for the requests you do send. These are the cheapest wins in the stack and most teams leave them on the table.",
+            "Prompt caching pays for stable context you send over and over, like system prompts, tool definitions, and retrieved documents. OpenAI applies a [50% discount on cached input tokens](https://openai.com/index/api-prompt-caching/). Anthropic prices [cache reads at 0.1x the base input rate](https://platform.claude.com/docs/en/docs/build-with-claude/prompt-caching), a 90% cut on the repeated portion. Batching folds many non-urgent requests into one job at a lower rate, which suits overnight enrichment, evals, and back-office work that no user is waiting on.",
+            "Budgets are the seatbelt. A per-customer and per-environment cap with an alert well before the ceiling turns a prompt-injection abuse case or a retry storm into a tripped limit instead of a five-figure surprise. Cost control that depends on nobody making a mistake is not cost control."
+          ]
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "How evals let you ride the cost curve down",
+          "level": 2,
+          "paragraphs": [
+            "The eval harness is not overhead. It is the asset that makes every cost cut safe and turns model-agnosticism into a position competitors cannot copy.",
+            "Every real request your product handles is a labeled example of what good looks like in your domain. Capture the outputs customers accept, correct, or reject and you build a domain-specific eval set no rival has. That set does two jobs at once. It lets you drop in each cheaper model the day it clears your bar, so you ride the cost curve down with no quality regression. And it becomes proprietary data, which is the copilot to data to fund flywheel: build an AI copilot to generate proprietary data, then use that data to raise and deploy capital. The evals on [domain-specific evals as an AI moat](/library/domain-specific-evals-ai-moat) are where usage compounds into defensibility.",
+            "Because quality is protected by evals rather than by a bet on one vendor, the venture stays free to route to whoever is cheapest per unit of verified quality this quarter. The moat is the eval set and the workflow, detailed in the [copilot to data to fund flywheel](/library/copilot-to-data-to-fund-flywheel), never the model. The model is the commodity that keeps getting cheaper."
+          ]
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Failure modes: optimizing cost before you have quality",
+          "level": 2,
+          "paragraphs": [
+            "The most expensive mistake is optimizing cost before you have earned the right to. A team that routes everything to the cheapest model to protect a spreadsheet ships a worse product, loses the customers whose usage would have built the eval set and the data moat, and ends up with neither margin nor moat. Here is where teams go wrong."
+          ],
+          "bullets": [
+            "Cost before quality. Cutting to the cheap tier before your evals can catch the regression. You will not see the quality loss. Your churn will.",
+            "No eval gate. Swapping models on instinct. Every swap must clear the harness or you are flying blind.",
+            "Untracked escalation rate. Ignore the share of traffic hitting the expensive tier and a silent drift doubles your bill or halves your quality with no alarm.",
+            "Vendor lock-in disguised as simplicity. Hardcoding one model to dodge routing work feels lean until that vendor raises prices or falls behind and you have no eval set to migrate safely.",
+            "Measuring the wrong thing. Optimizing average cost per token instead of cost per satisfied request. A cheap answer the customer rejects is the most expensive token you will ever buy."
+          ]
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "How Avante keeps margin on the venture's side",
+          "level": 2,
+          "paragraphs": [
+            "AI infrastructure is now cheap enough to deploy without a Series A, and the demand is already here. In Brazil, the share of industrial firms with 100 or more employees using AI rose from 16.9% in 2022 to [41.9% in 2024, per IBGE PINTEC](https://dataconcierge.dev/en/blog/brazil-ai-adoption-public-numbers), and Bain found 25% of Brazilian companies had an AI use case in production, more than double the prior year. The venture that serves that demand on a cheap-tier cost base keeps the margin. The one paying frontier prices on every request hands the margin back.",
+            "Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America, and routing discipline is what makes launching 3-4 ventures per year on lean margins arithmetically possible. Solving the plumbing once, including the routing and eval stack, routes roughly $300K-$500K of effective capital per venture into product and traction rather than overhead. That capital efficiency is why studio ventures reach first revenue 6-9 months ahead of a comparably funded standalone team, and why the studio model benchmarks near 50% IRR against roughly 19% for traditional venture capital, per GSSN.",
+            "So earn quality first with the model that works, instrument every request, then cut cost under the protection of evals. A team that does it in that order rides the cost curve down for free. A team that does it backwards pays twice, once for the churn and once for the moat it never built. See [why Avante builds this way](/why-avante)."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is the fastest way to reduce LLM inference cost without losing quality?",
+          "a": "Route cheap by default and escalate to an expensive model only when a task needs it. A model cascade that resolves 70% of traffic on a cheap tier can bring blended cost to about half of running the frontier model everywhere, and published routing results show 45% to 85% savings while holding roughly 95% of quality. Gate every model swap on an eval harness so a cost cut never quietly ships a worse product."
+        },
+        {
+          "q": "Why is LLM inference cost a product decision instead of a finance one?",
+          "a": "Because the architecture you build at launch decides whether falling token prices become your margin or pass you by. Per a16z, the cost of a fixed capability has dropped about 10x per year, so a product that already runs most requests on the cheap tier captures that deflation automatically. A product that hardcoded the frontier model everywhere keeps paying yesterday's price."
+        },
+        {
+          "q": "How does model routing actually work?",
+          "a": "A router sends each request to the cheapest capable model, verifies the output, and escalates only what fails. Strategies range from static rules that read a task tag, to cost-aware selection, to semantic routing that classifies intent, to a full cascade. The escalation rate, the share of traffic that reaches the expensive tier, is the number that governs both cost and quality and should be monitored daily."
+        },
+        {
+          "q": "Does cutting LLM inference cost mean cutting quality?",
+          "a": "Only if you optimize cost before you have an eval harness to protect quality. Evals let you route to the cheapest model that still clears your quality bar and swap in each cheaper model the day it qualifies. The real failure mode is routing everything to the cheapest model to protect a spreadsheet, which ships a worse product and loses the customers whose usage would have built your data moat."
+        },
+        {
+          "q": "How much can prompt caching and batching save?",
+          "a": "Prompt caching discounts the stable, repeated parts of a prompt. OpenAI applies a 50% discount on cached input tokens and Anthropic prices cache reads at 0.1x the base rate, a 90% cut on the cached portion. Batching non-urgent work into a single job lowers the rate further, which suits overnight enrichment and eval runs that no user is waiting on."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Como Controlar o Custo de Inferência de LLM com Roteamento de Modelos",
+      "description": "Controle o custo de inferência de LLM com roteamento de modelos sem perder qualidade. Barato por padrão, caro sob demanda, e cada troca com avaliação.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Controlar o custo de inferência de LLM é uma decisão de produto, não de finanças, e o roteamento de modelos é a alavanca. Mande cada requisição para um modelo barato por padrão, escale para um modelo caro só quando a tarefa exigir, use cache e lotes no que der, coloque orçamentos rígidos, e trave qualquer troca de modelo em um harness de avaliação. Faça isso e a inferência deixa de ser uma conta que você teme e vira uma margem que você guarda.",
+            "A Avante Ventures constrói assim porque o preço de um token cai mais rápido do que quase qualquer insumo na história do software. Quem vence não é quem espera o preço baixar. É quem desenhou o produto para capturar a queda."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "Por que o custo de inferência é decisão de produto, não de finanças",
+          "level": 2,
+          "paragraphs": [
+            "O modelo pelo qual você paga um prêmio hoje será a opção de orçamento do ano que vem por uma fração do preço. Segundo a [análise LLMflation da a16z](https://a16z.com/llmflation-llm-inference-cost/), o desempenho no nível do GPT-3 custava cerca de $60 por milhão de tokens em novembro de 2021 e cerca de $0,06 em 2024 em um modelo aberto pequeno. É uma queda de aproximadamente 1.000x em três anos, perto de 10x mais barato por ano para um mesmo nível de capacidade. A medição independente da Epoch AI coloca a queda para uma capacidade fixa entre 9x e 900x por ano, com mediana em torno de 50x.",
+            "É por isso que o custo pertence à especificação do produto, não a uma revisão trimestral de finanças. Uma venture cujo produto já roda a maioria das requisições na camada barata captura essa deflação de forma automática, porque cada novo modelo que passa na sua barra de qualidade é mais barato que o anterior. Uma venture que fixou o modelo de fronteira em tudo paga o preço de ontem para sempre e não tem para onde cair.",
+            "Vale nomear a armadilha. A própria fronteira não fica mais barata. O o1 da OpenAI foi lançado pelo mesmo $60 por milhão de tokens de saída que o GPT-3 cobrava em 2021. A deflação está em alcançar uma capacidade fixa, não na fronteira. Então a pergunta real nunca é qual modelo é o melhor. É qual modelo é bom o suficiente para esta requisição específica, provado por avaliações."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O desempenho no nível do GPT-3 caiu de cerca de $60 por milhão de tokens em 2021 para cerca de $0,06 em 2024, perto de 10x mais barato a cada ano para uma capacidade fixa.",
+            "attribution": "a16z, LLMflation"
+          }
+        },
+        {
+          "id": "the-playbook",
+          "heading": "Corte o custo de inferência de LLM em cinco passos",
+          "level": 2,
+          "paragraphs": [
+            "Aqui está a sequência que um operador consegue rodar esta semana. Cada passo é mensurável e reversível, e cada um assume que o anterior já está de pé."
+          ],
+          "bullets": [
+            "Instrumente antes de otimizar. Registre tokens de entrada, tokens de saída, modelo, latência e custo em dólar por requisição, marcados por tipo de tarefa e por cliente. Você não roteia o que não vê, e a maioria dos times descobre 80% do gasto escondido em poucos tipos de tarefa.",
+            "Roteie barato por padrão, escale sob demanda. Mande cada requisição primeiro para um modelo pequeno, verifique a saída, e escale para o modelo caro só na falha.",
+            "Use cache e lotes de forma agressiva. Ligue o cache de prompt para as partes estáveis dos prompts e agrupe em lotes tudo o que não for sensível à latência.",
+            "Defina orçamentos rígidos e alertas. Coloque um teto de tokens por cliente e por ambiente com alerta em 70% e um limite duro, para que um loop de retry descontrolado acione um limite, não uma fatura.",
+            "Trave cada troca de modelo em avaliações. Nenhuma mudança de modelo, mais barata ou mais cara, entra sem passar no harness. É essa disciplina que corta custo sem cortar qualidade sem querer."
+          ]
+        },
+        {
+          "id": "model-routing",
+          "heading": "Roteamento de modelos: barato por padrão, caro sob demanda",
+          "level": 3,
+          "paragraphs": [
+            "Uma cascata de modelos manda cada requisição para o modelo capaz mais barato, verifica o resultado, e escala só o que falha. Toda a economia gira em torno de um número: a taxa de escalonamento, a fração do tráfego que cai para a camada cara.",
+            "Os números publicados são fortes. A [análise de roteamento da TrueFoundry](https://www.truefoundry.com/blog/llm-routing-cost-quality-aware-model-selection) mostra que uma taxa de 70% de resolução na camada barata traz o custo combinado para cerca de metade de rodar o modelo de fronteira em tudo, mesmo pagando pela tentativa barata que falhou nos 30% que escalam. Com uma diferença de preço de 10x entre camadas, uma cascata chega perto de 40% do custo de fronteira-em-tudo. Relatos de quem opera colocam a economia real entre 45% e 85% mantendo cerca de 95% da qualidade.",
+            "Comece com o roteador mais simples que funciona. Regras estáticas que escolhem o modelo a partir de uma etiqueta de tarefa custam quase nada para rodar. O roteamento por custo escolhe o modelo mais barato que passa de um limiar de qualidade. O roteamento semântico embute a requisição e classifica a intenção por alguns milissegundos de overhead. A cascata fica por cima. Acompanhe a taxa de escalonamento todo dia, porque se ela sobe é porque o modelo barato piorou ou o mix de tráfego mudou, e de todo jeito o seu custo combinado acabou de se mexer."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "A taxa de escalonamento é o único número para olhar todo dia. É ela que amarra a sua qualidade à sua conta, e deveria viver em um painel, não aparecer em uma fatura no fim do mês."
+          }
+        },
+        {
+          "id": "caching-and-budgets",
+          "heading": "Cache, lotes e orçamentos rígidos",
+          "level": 2,
+          "paragraphs": [
+            "O roteamento decide qual modelo. Cache, lotes e orçamentos decidem quão pouco você paga pelas requisições que de fato manda. São as vitórias mais baratas da pilha e a maioria dos times as deixa na mesa.",
+            "O cache de prompt paga pelo contexto estável que você manda de novo e de novo, como prompts de sistema, definições de ferramentas e documentos recuperados. A OpenAI aplica um [desconto de 50% nos tokens de entrada em cache](https://openai.com/index/api-prompt-caching/). A Anthropic cobra [leituras de cache a 0,1x da tarifa base de entrada](https://platform.claude.com/docs/en/docs/build-with-claude/prompt-caching), um corte de 90% na parte repetida. O processamento em lote dobra muitas requisições não urgentes em um único job a uma tarifa menor, o que serve para enriquecimento noturno, avaliações e trabalho de retaguarda que nenhum usuário está esperando.",
+            "Os orçamentos são o cinto de segurança. Um teto por cliente e por ambiente com alerta bem antes do limite transforma um abuso por injeção de prompt ou uma tempestade de retries em um limite acionado, e não em uma surpresa de cinco dígitos. Controle de custo que depende de ninguém errar não é controle de custo."
+          ]
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "Como as avaliações deixam você descer a curva de custo",
+          "level": 2,
+          "paragraphs": [
+            "O harness de avaliação não é overhead. É o ativo que torna cada corte de custo seguro e transforma a independência de fornecedor em uma posição que o concorrente não copia.",
+            "Cada requisição real que o seu produto atende é um exemplo rotulado do que é bom no seu domínio. Capture as saídas que os clientes aceitam, corrigem ou rejeitam e você monta um conjunto de avaliações específico do domínio que nenhum rival tem. Esse conjunto faz dois trabalhos ao mesmo tempo. Ele deixa você encaixar cada modelo mais barato no dia em que ele passa na sua barra, então você desce a curva de custo sem regressão de qualidade. E ele vira dado proprietário, que é o flywheel copilot, dado, capital: construir um copilot de IA para gerar dado proprietário e depois usar esse dado para levantar e alocar capital. As [avaliações específicas de domínio como moat de IA](/library/domain-specific-evals-ai-moat) são onde o uso se acumula em defensabilidade.",
+            "Como a qualidade é protegida por avaliações e não por uma aposta em um fornecedor, a venture fica livre para rotear para quem estiver mais barato por unidade de qualidade verificada neste trimestre. O moat é o conjunto de avaliações e o fluxo de trabalho, detalhado no [flywheel copilot, dado, capital](/library/copilot-to-data-to-fund-flywheel), nunca o modelo. O modelo é a commodity que segue ficando mais barata."
+          ]
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Modos de falha: otimizar custo antes de ter qualidade",
+          "level": 2,
+          "paragraphs": [
+            "O erro mais caro é otimizar custo antes de ter ganhado o direito de fazer isso. Um time que roteia tudo para o modelo mais barato para proteger uma planilha entrega um produto pior, perde os clientes cujo uso teria montado o conjunto de avaliações e o moat de dado, e termina sem margem e sem moat. É aqui que os times erram."
+          ],
+          "bullets": [
+            "Custo antes de qualidade. Cortar para a camada barata antes das suas avaliações pegarem a regressão. Você não vê a perda de qualidade. Seu churn vê.",
+            "Sem trava de avaliação. Trocar de modelo no instinto. Toda troca precisa passar no harness ou você está voando às cegas.",
+            "Taxa de escalonamento sem acompanhamento. Ignore a fração de tráfego que bate na camada cara e uma deriva silenciosa dobra a sua conta ou corta a sua qualidade pela metade sem nenhum alarme.",
+            "Aprisionamento de fornecedor disfarçado de simplicidade. Fixar um modelo para fugir do trabalho de roteamento parece enxuto até o fornecedor subir o preço ou ficar para trás e você não ter conjunto de avaliações para migrar com segurança.",
+            "Medir a coisa errada. Otimizar o custo médio por token em vez do custo por requisição satisfeita. Uma resposta barata que o cliente rejeita é o token mais caro que você vai comprar."
+          ]
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "Como a Avante mantém a margem do lado da venture",
+          "level": 2,
+          "paragraphs": [
+            "A infraestrutura de IA já está barata o bastante para deploy sem uma Série A, e a demanda já chegou. No Brasil, a fatia de empresas industriais com 100 ou mais funcionários usando IA subiu de 16,9% em 2022 para [41,9% em 2024, segundo a PINTEC do IBGE](https://dataconcierge.dev/en/blog/brazil-ai-adoption-public-numbers), e a Bain achou que 25% das empresas brasileiras tinham um caso de uso de IA em produção, mais do que o dobro do ano anterior. A venture que atende essa demanda com uma base de custo de camada barata guarda a margem. A que paga preço de fronteira em cada requisição devolve a margem.",
+            "A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina, e a disciplina de roteamento é o que torna lançar 3-4 ventures por ano com margens enxutas aritmeticamente possível. Resolver o encanamento uma vez, incluindo a pilha de roteamento e avaliação, direciona cerca de $300K-$500K de capital efetivo por venture para produto e tração em vez de overhead. Essa eficiência de capital é por que ventures de studio chegam à primeira receita 6-9 meses à frente de um time independente com financiamento comparável, e por que o modelo de studio marca perto de 50% de IRR contra cerca de 19% do venture capital tradicional, segundo a GSSN.",
+            "Então ganhe a qualidade primeiro com o modelo que funciona, instrumente cada requisição, e só então corte custo sob a proteção das avaliações. Um time que faz nessa ordem desce a curva de custo de graça. Um time que faz ao contrário paga duas vezes, uma pelo churn e outra pelo moat que nunca construiu. Veja [por que a Avante constrói assim](/why-avante)."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Qual é a forma mais rápida de reduzir o custo de inferência de LLM sem perder qualidade?",
+          "a": "Roteie barato por padrão e escale para um modelo caro só quando a tarefa exigir. Uma cascata de modelos que resolve 70% do tráfego na camada barata pode trazer o custo combinado para cerca de metade de rodar o modelo de fronteira em tudo, e resultados publicados de roteamento mostram economia de 45% a 85% mantendo cerca de 95% da qualidade. Trave cada troca de modelo em um harness de avaliação para que um corte de custo nunca entregue um produto pior sem querer."
+        },
+        {
+          "q": "Por que o custo de inferência de LLM é uma decisão de produto e não de finanças?",
+          "a": "Porque a arquitetura que você monta no lançamento decide se a queda no preço dos tokens vira a sua margem ou passa por você. Segundo a a16z, o custo de uma capacidade fixa caiu cerca de 10x por ano, então um produto que já roda a maioria das requisições na camada barata captura essa deflação de forma automática. Um produto que fixou o modelo de fronteira em tudo segue pagando o preço de ontem."
+        },
+        {
+          "q": "Como o roteamento de modelos funciona na prática?",
+          "a": "Um roteador manda cada requisição para o modelo capaz mais barato, verifica a saída, e escala só o que falha. As estratégias vão de regras estáticas que leem uma etiqueta de tarefa, a seleção por custo, a roteamento semântico que classifica a intenção, até uma cascata completa. A taxa de escalonamento, a fração de tráfego que chega à camada cara, é o número que governa custo e qualidade e deve ser monitorada todo dia."
+        },
+        {
+          "q": "Cortar o custo de inferência de LLM significa cortar qualidade?",
+          "a": "Só se você otimizar custo antes de ter um harness de avaliação para proteger a qualidade. As avaliações deixam você rotear para o modelo mais barato que ainda passa na sua barra e encaixar cada modelo mais barato no dia em que ele qualifica. O modo de falha real é rotear tudo para o modelo mais barato para proteger uma planilha, o que entrega um produto pior e perde os clientes cujo uso teria montado o seu moat de dado."
+        },
+        {
+          "q": "Quanto o cache de prompt e o processamento em lote economizam?",
+          "a": "O cache de prompt dá desconto nas partes estáveis e repetidas de um prompt. A OpenAI aplica 50% de desconto nos tokens de entrada em cache e a Anthropic cobra leituras de cache a 0,1x da tarifa base, um corte de 90% na parte em cache. O processamento em lote agrupa trabalho não urgente em um único job a uma tarifa menor, o que serve para enriquecimento noturno e rodadas de avaliação que nenhum usuário está esperando."
+        }
+      ]
+    },
+    "es": {
+      "title": "Cómo Controlar el Costo de Inferencia de LLM con Enrutamiento de Modelos",
+      "description": "Controle el costo de inferencia de LLM con enrutamiento de modelos sin perder calidad. Barato por defecto, caro bajo demanda, y cada cambio con evals.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Controlar el costo de inferencia de LLM es una decisión de producto, no de finanzas, y el enrutamiento de modelos es la palanca. Mande cada solicitud a un modelo barato por defecto, escale a uno caro solo cuando la tarea lo exija, use caché y lotes en lo que pueda, ponga presupuestos estrictos, y trabe cada cambio de modelo en un harness de evaluación. Haga eso y la inferencia deja de ser una factura que teme y se vuelve un margen que conserva.",
+            "Avante Ventures construye así porque el precio de un token cae más rápido que casi cualquier insumo en la historia del software. El que gana no es quien espera a que el precio baje. Es quien diseñó el producto para capturar la caída."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "Por qué el costo de inferencia es decisión de producto, no de finanzas",
+          "level": 2,
+          "paragraphs": [
+            "El modelo por el que hoy paga una prima será la opción de presupuesto del próximo año a una fracción del precio. Según el [análisis LLMflation de a16z](https://a16z.com/llmflation-llm-inference-cost/), el desempeño al nivel de GPT-3 costaba cerca de $60 por millón de tokens en noviembre de 2021 y cerca de $0.06 en 2024 en un modelo abierto pequeño. Es una caída de aproximadamente 1,000x en tres años, cerca de 10x más barato por año para un mismo nivel de capacidad. La medición independiente de Epoch AI ubica la caída para una capacidad fija entre 9x y 900x por año, con una mediana alrededor de 50x.",
+            "Por eso el costo pertenece a la especificación del producto, no a una revisión trimestral de finanzas. Una venture cuyo producto ya corre la mayoría de las solicitudes en la capa barata captura esa deflación de forma automática, porque cada nuevo modelo que pasa su barra de calidad es más barato que el anterior. Una venture que fijó el modelo de frontera en todo paga el precio de ayer para siempre y no tiene hacia dónde caer.",
+            "Conviene nombrar la trampa. La frontera misma no se abarata. El o1 de OpenAI salió al mismo $60 por millón de tokens de salida que cobraba GPT-3 en 2021. La deflación está en alcanzar una capacidad fija, no en la frontera. Así que la pregunta real nunca es cuál modelo es el mejor. Es cuál modelo es lo bastante bueno para esta solicitud específica, probado con evaluaciones."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "El desempeño al nivel de GPT-3 cayó de cerca de $60 por millón de tokens en 2021 a cerca de $0.06 en 2024, cerca de 10x más barato cada año para una capacidad fija.",
+            "attribution": "a16z, LLMflation"
+          }
+        },
+        {
+          "id": "the-playbook",
+          "heading": "Corta el costo de inferencia de LLM en cinco pasos",
+          "level": 2,
+          "paragraphs": [
+            "Esta es la secuencia que un operador puede correr esta semana. Cada paso es medible y reversible, y cada uno asume que el anterior ya está en pie."
+          ],
+          "bullets": [
+            "Instrumente antes de optimizar. Registre tokens de entrada, tokens de salida, modelo, latencia y costo en dólares por solicitud, etiquetados por tipo de tarea y por cliente. No se rutea lo que no se ve, y la mayoría de los equipos descubre 80% del gasto escondido en unos pocos tipos de tarea.",
+            "Rutee barato por defecto, escale bajo demanda. Mande cada solicitud primero a un modelo pequeño, verifique la salida, y escale al modelo caro solo ante la falla.",
+            "Use caché y lotes de forma agresiva. Encienda el caché de prompt para las partes estables de los prompts y agrupe en lotes todo lo que no sea sensible a la latencia.",
+            "Ponga presupuestos estrictos y alertas. Coloque un tope de tokens por cliente y por ambiente con alerta en 70% y un límite duro, para que un bucle de reintentos descontrolado active un límite, no una factura.",
+            "Trabe cada cambio de modelo en evaluaciones. Ningún cambio de modelo, más barato o más caro, entra sin pasar el harness. Esa disciplina es la que corta costo sin cortar calidad por accidente."
+          ]
+        },
+        {
+          "id": "model-routing",
+          "heading": "Enrutamiento de modelos: barato por defecto, caro bajo demanda",
+          "level": 3,
+          "paragraphs": [
+            "Una cascada de modelos manda cada solicitud al modelo capaz más barato, verifica el resultado, y escala solo lo que falla. Toda la economía gira en torno a un número: la tasa de escalamiento, la fracción del tráfico que cae a la capa cara.",
+            "Los números publicados son sólidos. El [análisis de enrutamiento de TrueFoundry](https://www.truefoundry.com/blog/llm-routing-cost-quality-aware-model-selection) muestra que una tasa de 70% de resolución en la capa barata lleva el costo combinado a cerca de la mitad de correr el modelo de frontera en todo, aun pagando el intento barato que falló en el 30% que escala. Con una brecha de precio de 10x entre capas, una cascada aterriza cerca del 40% del costo de frontera-en-todo. Los reportes de quienes operan ubican el ahorro real entre 45% y 85% conservando cerca del 95% de la calidad.",
+            "Empiece con el enrutador más simple que funcione. Las reglas estáticas que eligen el modelo a partir de una etiqueta de tarea cuestan casi nada al correr. El enrutamiento por costo elige el modelo más barato que pasa un umbral de calidad. El enrutamiento semántico incrusta la solicitud y clasifica la intención por unos milisegundos de overhead. La cascada va encima. Vigile la tasa de escalamiento cada día, porque si sube es que el modelo barato se degradó o el mix de tráfico cambió, y de cualquier forma su costo combinado acaba de moverse."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "La tasa de escalamiento es el único número para mirar cada día. Es la que amarra su calidad a su factura, y debería vivir en un tablero, no aparecer en una factura a fin de mes."
+          }
+        },
+        {
+          "id": "caching-and-budgets",
+          "heading": "Cache, lotes y presupuestos estrictos",
+          "level": 2,
+          "paragraphs": [
+            "El enrutamiento decide cuál modelo. El caché, los lotes y los presupuestos deciden qué tan poco paga por las solicitudes que sí manda. Son las victorias más baratas de la pila y la mayoría de los equipos las deja sobre la mesa.",
+            "El caché de prompt paga por el contexto estable que manda una y otra vez, como prompts de sistema, definiciones de herramientas y documentos recuperados. OpenAI aplica un [descuento de 50% en los tokens de entrada en caché](https://openai.com/index/api-prompt-caching/). Anthropic cobra las [lecturas de caché a 0.1x de la tarifa base de entrada](https://platform.claude.com/docs/en/docs/build-with-claude/prompt-caching), un recorte de 90% en la porción repetida. El procesamiento en lotes junta muchas solicitudes no urgentes en un solo trabajo a una tarifa menor, lo que sirve para enriquecimiento nocturno, evaluaciones y trabajo de trastienda que ningún usuario está esperando.",
+            "Los presupuestos son el cinturón de seguridad. Un tope por cliente y por ambiente con alerta mucho antes del techo convierte un abuso por inyección de prompt o una tormenta de reintentos en un límite activado, no en una sorpresa de cinco cifras. El control de costo que depende de que nadie se equivoque no es control de costo."
+          ]
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "Cómo las evaluaciones te dejan bajar la curva de costo",
+          "level": 2,
+          "paragraphs": [
+            "El harness de evaluación no es overhead. Es el activo que vuelve seguro cada recorte de costo y convierte la independencia de proveedor en una posición que el competidor no copia.",
+            "Cada solicitud real que su producto atiende es un ejemplo etiquetado de lo que es bueno en su dominio. Capture las salidas que los clientes aceptan, corrigen o rechazan y arma un conjunto de evaluaciones específico del dominio que ningún rival tiene. Ese conjunto hace dos trabajos a la vez. Le deja meter cada modelo más barato el día en que pasa su barra, así baja la curva de costo sin regresión de calidad. Y se vuelve dato propietario, que es el flywheel copilot, dato, capital: construir un copilot de IA para generar dato propietario y luego usar ese dato para levantar y desplegar capital. Las [evaluaciones específicas de dominio como moat de IA](/library/domain-specific-evals-ai-moat) son donde el uso se acumula en defensabilidad.",
+            "Como la calidad está protegida por evaluaciones y no por una apuesta a un proveedor, la venture queda libre de rutear a quien esté más barato por unidad de calidad verificada este trimestre. El moat es el conjunto de evaluaciones y el flujo de trabajo, detallado en el [flywheel copilot, dato, capital](/library/copilot-to-data-to-fund-flywheel), nunca el modelo. El modelo es la commodity que sigue abaratándose."
+          ]
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Modos de falla: optimizar costo antes de tener calidad",
+          "level": 2,
+          "paragraphs": [
+            "El error más caro es optimizar costo antes de haberse ganado el derecho a hacerlo. Un equipo que rutea todo al modelo más barato para proteger una hoja de cálculo entrega un producto peor, pierde los clientes cuyo uso habría armado el conjunto de evaluaciones y el moat de dato, y termina sin margen y sin moat. Aquí es donde los equipos se equivocan."
+          ],
+          "bullets": [
+            "Costo antes de calidad. Recortar a la capa barata antes de que sus evaluaciones atrapen la regresión. Usted no ve la pérdida de calidad. Su churn sí.",
+            "Sin traba de evaluación. Cambiar de modelo por instinto. Cada cambio debe pasar el harness o está volando a ciegas.",
+            "Tasa de escalamiento sin seguimiento. Ignore la fracción de tráfico que pega en la capa cara y una deriva silenciosa duplica su factura o corta su calidad a la mitad sin ninguna alarma.",
+            "Encierro de proveedor disfrazado de simplicidad. Fijar un modelo para esquivar el trabajo de enrutamiento se siente ligero hasta que ese proveedor sube precios o se queda atrás y usted no tiene conjunto de evaluaciones para migrar con seguridad.",
+            "Medir lo que no es. Optimizar el costo promedio por token en vez del costo por solicitud satisfecha. Una respuesta barata que el cliente rechaza es el token más caro que va a comprar."
+          ]
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "Cómo Avante mantiene el margen del lado de la venture",
+          "level": 2,
+          "paragraphs": [
+            "La infraestructura de IA ya está lo bastante barata para desplegar sin una Serie A, y la demanda ya llegó. En Brasil, la porción de empresas industriales con 100 o más empleados que usan IA subió de 16.9% en 2022 a [41.9% en 2024, según la PINTEC del IBGE](https://dataconcierge.dev/en/blog/brazil-ai-adoption-public-numbers), y Bain halló que 25% de las empresas brasileñas tenían un caso de uso de IA en producción, más del doble que el año anterior. La venture que atiende esa demanda con una base de costo de capa barata conserva el margen. La que paga precio de frontera en cada solicitud lo regala.",
+            "Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina, y la disciplina de enrutamiento es lo que vuelve aritméticamente posible lanzar 3-4 ventures por año con márgenes ajustados. Resolver la plomería una vez, incluida la pila de enrutamiento y evaluación, dirige cerca de $300K-$500K de capital efectivo por venture hacia producto y tracción en lugar de overhead. Esa eficiencia de capital es la razón por la que las ventures de studio llegan a los primeros ingresos 6-9 meses antes que un equipo independiente con financiamiento comparable, y por la que el modelo de studio marca cerca de 50% de IRR frente a cerca de 19% del venture capital tradicional, según GSSN.",
+            "Así que gane la calidad primero con el modelo que funciona, instrumente cada solicitud, y solo entonces recorte costo bajo la protección de las evaluaciones. Un equipo que lo hace en ese orden baja la curva de costo gratis. Un equipo que lo hace al revés paga dos veces, una por el churn y otra por el moat que nunca construyó. Vea [por qué Avante construye así](/why-avante)."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Cuál es la forma más rápida de reducir el costo de inferencia de LLM sin perder calidad?",
+          "a": "Rutee barato por defecto y escale a un modelo caro solo cuando la tarea lo exija. Una cascada de modelos que resuelve 70% del tráfico en la capa barata puede llevar el costo combinado a cerca de la mitad de correr el modelo de frontera en todo, y los resultados publicados de enrutamiento muestran ahorros de 45% a 85% conservando cerca del 95% de la calidad. Trabe cada cambio de modelo en un harness de evaluación para que un recorte de costo nunca entregue un producto peor por accidente."
+        },
+        {
+          "q": "¿Por qué el costo de inferencia de LLM es una decisión de producto y no de finanzas?",
+          "a": "Porque la arquitectura que arma en el lanzamiento decide si la caída del precio de los tokens se vuelve su margen o lo deja atrás. Según a16z, el costo de una capacidad fija cayó cerca de 10x por año, así que un producto que ya corre la mayoría de las solicitudes en la capa barata captura esa deflación de forma automática. Un producto que fijó el modelo de frontera en todo sigue pagando el precio de ayer."
+        },
+        {
+          "q": "¿Cómo funciona el enrutamiento de modelos en la práctica?",
+          "a": "Un enrutador manda cada solicitud al modelo capaz más barato, verifica la salida, y escala solo lo que falla. Las estrategias van desde reglas estáticas que leen una etiqueta de tarea, a la selección por costo, al enrutamiento semántico que clasifica la intención, hasta una cascada completa. La tasa de escalamiento, la fracción de tráfico que llega a la capa cara, es el número que gobierna costo y calidad y debe monitorearse cada día."
+        },
+        {
+          "q": "¿Recortar el costo de inferencia de LLM significa recortar calidad?",
+          "a": "Solo si optimiza costo antes de tener un harness de evaluación que proteja la calidad. Las evaluaciones le dejan rutear al modelo más barato que aún pasa su barra y meter cada modelo más barato el día en que califica. El modo de falla real es rutear todo al modelo más barato para proteger una hoja de cálculo, lo que entrega un producto peor y pierde los clientes cuyo uso habría armado su moat de dato."
+        },
+        {
+          "q": "¿Cuánto ahorran el caché de prompt y el procesamiento en lotes?",
+          "a": "El caché de prompt descuenta las partes estables y repetidas de un prompt. OpenAI aplica 50% de descuento en los tokens de entrada en caché y Anthropic cobra las lecturas de caché a 0.1x de la tarifa base, un recorte de 90% en la porción en caché. El procesamiento en lotes junta trabajo no urgente en un solo trabajo a una tarifa menor, lo que sirve para enriquecimiento nocturno y corridas de evaluación que ningún usuario está esperando."
+        }
+      ]
+    },
+    "ogImage": "/og/model-routing-inference-cost-playbook.png"
+  },
+  {
     "slug": "operating-partner-economics",
     "category": "insights",
     "type": "Essay",
@@ -8331,6 +11168,1188 @@ const engineArticles: Article[] = [
         }
       ]
     }
+  },
+  {
+    "slug": "rag-vs-finetune-vs-long-context-playbook",
+    "category": "playbooks",
+    "type": "Playbook",
+    "readTime": "11 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-03",
+    "isPublished": true,
+    "en": {
+      "title": "RAG vs Fine-Tuning vs Long Context: The Build Decision",
+      "description": "RAG vs fine-tuning vs long context, decided as a build decision, not a preference. A decision tree and the data moat that actually compounds.",
+      "sections": [
+        {
+          "paragraphs": [
+            "RAG vs fine-tuning vs long context is a build decision, not a preference, and the three options are not fighting over the same job. Retrieval buys fresh, auditable, swappable knowledge. Fine-tuning buys behavior and format at a lower cost per call, paid for with a data and retraining burden. Long context buys simplicity for bounded, one-shot work.",
+            "This is the playbook Avante Ventures runs when it builds a vertical AI product. Start from retrieval, add fine-tuning only when behavior cannot be prompted or retrieved, and reserve long context for tasks that fit in the window. The moat is never the model. It is the retrieval corpus and the evals wrapped around it, an argument we make in full in our piece on [data network effects in vertical AI](/library/data-network-effects-vertical-ai)."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "RAG vs fine-tuning: what each actually buys you",
+          "level": 2,
+          "paragraphs": [
+            "The cleanest way to frame RAG vs fine-tuning is to stop asking which is better and start asking what each one buys. OpenAI puts it as a diagnosis. Treat every failed answer as either an in-context memory problem or a learned memory problem. Retrieval fixes the first, where the model lacks knowledge, needs current data, or needs something proprietary. Fine-tuning fixes the second, where the model needs consistent behavior or format learned from examples. OpenAI is blunt that fine-tuning is not the tool for adding new knowledge. That is retrieval's job.",
+            "Microsoft's guidance lands in the same place from the other direction. You reach for RAG when the content is dynamic, the topics are broad, or you lack the data and compute to train. You reach for fine-tuning when the task is narrow and stable and you have enough clean domain data to avoid overfitting. Read against a real product, the tradeoff stops being abstract."
+          ],
+          "bullets": [
+            "Retrieval buys fresh, auditable, swappable knowledge. You update the corpus whenever you want, cite the source document behind an answer, and change the base model under it without retraining.",
+            "Fine-tuning buys behavior, format adherence, and a lower cost per call once trained. The price is a standing data and retraining burden, and it freezes one base model into the product.",
+            "Long context buys simplicity. No vector store, no pipeline, just put the material in the prompt. It holds only while the material fits the window and the token bill stays sane."
+          ]
+        },
+        {
+          "id": "the-playbook",
+          "heading": "A decision tree for retrieval, tuning, and context",
+          "level": 2,
+          "paragraphs": [
+            "Both major labs point the same way. Start with the prompt, reach for retrieval before you reach for training. Anthropic even gives a size threshold for the long-context fork. If your knowledge base is under 200,000 tokens, about 500 pages, you can put the whole thing in the prompt and skip RAG entirely. Above that, retrieval becomes the scalable path, and it pays off. Anthropic's contextual retrieval cuts the top-20-chunk retrieval failure rate by 35 percent with contextual embeddings alone, by 49 percent combined with contextual BM25, and by 67 percent once reranking is added, from a 5.7 percent failure rate down to 1.9 percent.",
+            "Here is the tree an operator can run this week. It is four questions, in order, and most products never reach the fourth."
+          ],
+          "bullets": [
+            "Can a better prompt on a strong base model solve it? If yes, stop. Do not build machinery you will have to maintain.",
+            "Does the answer depend on knowledge that is proprietary, changing, or larger than the window? If yes, build retrieval. This is the default for a vertical product.",
+            "Is the knowledge base bounded, under roughly 200,000 tokens, and the task one-shot? Use long context and skip the pipeline.",
+            "Does the model still fail on behavior or format that prompting and retrieval cannot fix? Only now do you fine-tune, and you keep the retrieval layer underneath it."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Contextual retrieval cut the top-20-chunk retrieval failure rate by 67 percent, from 5.7 percent to 1.9 percent, when contextual embeddings, contextual BM25, and reranking were combined. Retrieval quality is an engineering problem with known fixes, not a reason to fine-tune.",
+            "attribution": "Anthropic, Contextual Retrieval, 2024"
+          }
+        },
+        {
+          "id": "when-rag",
+          "heading": "When retrieval is the right default",
+          "level": 3,
+          "paragraphs": [
+            "Retrieval is the right default for almost every vertical AI product, because the two things a domain product needs most are freshness and a paper trail. A legal copilot has to show the filing behind its answer. An insurance pricing tool has to point at the rule it applied. A public-sector product has to be auditable by someone who does not trust it yet. Fine-tuning gives you none of that. It bakes the knowledge into weights you cannot inspect and cannot cite.",
+            "The other reason is economic, and it is the one teams underweight. Retrieval keeps the base model swappable. When a cheaper or better model ships, and one ships every few months, a retrieval-first product moves to it without a rebuild. A fine-tuned product is stuck on the model it trained against until someone pays to retrain. In a market where the cost curve moves this fast, swappability is not a nice-to-have. It is the whole strategy."
+          ]
+        },
+        {
+          "id": "when-finetune",
+          "heading": "When fine-tuning earns its cost",
+          "level": 2,
+          "paragraphs": [
+            "Fine-tuning earns its cost when the problem is behavior, not knowledge, and prompting and retrieval have genuinely failed to fix it. Consistent output format across thousands of calls. A house tone a prompt cannot hold. A classification or extraction task where a small tuned model matches a large general one at a fraction of the price per call. These are real wins, and for high-volume narrow tasks the per-call savings are large enough to change the unit economics.",
+            "The cost is a standing burden, and you should name it before you commit. You need a large, clean, labeled dataset. A small one overfits. The domain moves, so the model needs retraining on a schedule. And the moment you fine-tune, you have frozen your base model. Swapping to next quarter's cheaper option now means retraining, not a config change. Fine-tune when the behavior payoff clears that bill. Do not fine-tune because it feels more serious than retrieval."
+          ]
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "How your retrieval corpus becomes the moat",
+          "level": 2,
+          "paragraphs": [
+            "The retrieval corpus is where a defensible AI-native venture actually compounds, and this is the real payoff of the build decision. A fine-tuned model is a snapshot that ages the day it is trained. A retrieval corpus is an asset that grows with every interaction. Every query answered, every document ingested, every expert correction logged becomes proprietary data a competitor starting today does not have and cannot buy.",
+            "This is the copilot to data to fund flywheel, and it is the pattern under every Avante venture. Build an AI copilot to generate proprietary data, then use that data to raise and deploy capital. The copilot creates the corpus. The corpus plus the domain evals wrapped around it become the moat. And because quality is model-agnostic and protected by those evals, the product gets better and cheaper every time the underlying models improve, at no cost to you. The base model is rented and every competitor can rent the same one. The corpus and the evals are owned. We make the full case in [the copilot to data to fund flywheel](/library/copilot-to-data-to-fund-flywheel)."
+          ]
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Failure modes: fine-tuning to hide a data problem",
+          "level": 2,
+          "paragraphs": [
+            "The most expensive mistake in this whole space is fine-tuning to paper over a thin or badly labeled corpus. Retrieval works poorly because the underlying data is messy, so the team fine-tunes to force the behavior instead of fixing the data. It looks like progress. It is the opposite."
+          ],
+          "bullets": [
+            "It bakes a stale snapshot of the domain into the product, so the knowledge is frozen at training time while the world moves on.",
+            "It hides the real problem, which is data quality, behind a model artifact that is hard to inspect and harder to correct.",
+            "It freezes the base model, so when inference prices fall roughly 10x the next year, the team cannot capture the drop without paying to retrain.",
+            "Long context abused the same way is its own trap. Stuffing everything into the prompt to dodge building retrieval works until the corpus outgrows the window, the token bill balloons, and recall degrades on long inputs."
+          ]
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "How Avante defaults to retrieval plus evals",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures defaults to retrieval plus evals because it is the only architecture that captures a collapsing cost curve instead of fighting it. An LLM at GPT-3 quality fell from about 60 dollars per million tokens in late 2021 to about 0.06 dollars by 2024, close to 10x a year for equivalent performance, per a16z. Epoch AI puts the median decline near 50x a year across benchmarks. A retrieval-first product built on swappable models rides that down. A fine-tuned one is frozen above it.",
+            "That default fits the studio model. Avante Ventures launches 3-4 ventures per year through a six-stage system of Research, Partner, Build, Traction, Revenue, and Compound, deploying $500K-1.5M per venture and retaining co-founder economics. A retrieval-first build keeps each venture riding the cost curve, and solving this plumbing once routes roughly $300K-500K of effective capital per venture into product instead of overhead. It also fits the market. AI use among Brazilian industrial companies jumped from 16.9 percent in 2022 to 41.9 percent in 2024, per IBGE, and services are roughly 70% of Brazilian GDP with low software penetration.",
+            "The honest test for any team is one question. If you removed the fine-tune, would the product still work on retrieval and a strong base model? If the answer is no because the data is not good enough, you do not have a model problem. You have a data problem wearing a model costume. Fix the data. The team that keeps its models swappable is the team that gets to keep swapping."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is the difference between RAG and fine-tuning?",
+          "a": "RAG vs fine-tuning comes down to what each one buys. Retrieval augmented generation gives the model fresh, auditable, swappable knowledge at inference time and lets it cite sources. Fine-tuning changes the model's behavior and format by training it on examples, at a lower cost per call but with a data and retraining burden. OpenAI frames it as in-context memory, which is RAG, versus learned memory, which is fine-tuning."
+        },
+        {
+          "q": "When should you fine-tune instead of using RAG?",
+          "a": "Fine-tune only when the problem is behavior or format that prompting and retrieval cannot fix, not when you need to add knowledge. Good cases are a consistent output format across thousands of calls, a house tone, or a narrow high-volume task where a small tuned model matches a large one for far less per call. If you are fine-tuning to add facts, use retrieval instead, because fine-tuning is not built to add new knowledge."
+        },
+        {
+          "q": "Is long context replacing RAG?",
+          "a": "No. Long context replaces RAG only for bounded, one-shot tasks that fit in the window. Anthropic recommends putting the whole knowledge base in the prompt when it is under about 200,000 tokens, roughly 500 pages, and using retrieval above that. For a growing corpus or anything that needs citations and freshness, retrieval is still the default."
+        },
+        {
+          "q": "Which is cheaper, RAG or fine-tuning?",
+          "a": "It depends on volume and how often your data changes. RAG has lower upfront cost and no retraining, and it keeps the base model swappable so you capture falling inference prices, which have dropped close to 10x a year. Fine-tuning has a high upfront data and training cost but can lower the cost per call for a narrow high-volume task, at the price of freezing your base model."
+        },
+        {
+          "q": "How do you decide between RAG, fine-tuning, and long context?",
+          "a": "Run a four-step decision tree. First try a better prompt. If the answer needs proprietary, changing, or large knowledge, build retrieval. If the corpus is bounded and under about 200,000 tokens and the task is one-shot, use long context. Only fine-tune when behavior or format still fails after prompting and retrieval, and keep the retrieval layer underneath."
+        }
+      ]
+    },
+    "pt": {
+      "title": "RAG vs Fine-Tuning vs Contexto Longo: a Decisão de Build",
+      "description": "RAG vs fine-tuning vs contexto longo decidido como uma decisão de build, não preferência. Uma árvore de decisão e o moat que de fato se acumula.",
+      "sections": [
+        {
+          "paragraphs": [
+            "RAG vs fine-tuning vs contexto longo é uma decisão de build, não uma preferência, e as três opções não disputam a mesma vaga. A recuperação compra conhecimento fresco, auditável e trocável. O fine-tuning compra comportamento e formato a um custo por chamada menor, pago com um ônus de dados e de retreinamento. O contexto longo compra simplicidade para tarefas delimitadas e de uma passada só.",
+            "Este é o playbook que a Avante Ventures roda ao construir um produto de IA vertical. Comece pela recuperação, acrescente fine-tuning apenas quando o comportamento não puder ser resolvido por prompt nem por recuperação, e reserve o contexto longo para tarefas que cabem na janela. O moat nunca é o modelo. É o corpus de recuperação e os evals ao redor dele, um argumento que fazemos por inteiro no nosso texto sobre [efeito de rede de dados na IA vertical](/library/data-network-effects-vertical-ai)."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "RAG vs fine-tuning: o que cada um realmente te dá",
+          "level": 2,
+          "paragraphs": [
+            "A forma mais limpa de enquadrar RAG vs fine-tuning é parar de perguntar qual é melhor e começar a perguntar o que cada um compra. A OpenAI coloca isso como um diagnóstico. Trate cada resposta errada como um problema de memória em contexto ou de memória aprendida. A recuperação conserta o primeiro, quando o modelo não tem o conhecimento, precisa de dado atual ou precisa de algo proprietário. O fine-tuning conserta o segundo, quando o modelo precisa de comportamento ou formato consistente aprendido de exemplos. A OpenAI é direta ao dizer que fine-tuning não é a ferramenta para adicionar conhecimento novo. Isso é trabalho da recuperação.",
+            "A orientação da Microsoft chega ao mesmo lugar pelo outro lado. Você escolhe RAG quando o conteúdo é dinâmico, os temas são amplos ou você não tem dados e computação para treinar. Você escolhe fine-tuning quando a tarefa é estreita e estável e você tem dado de domínio limpo o bastante para não sofrer overfitting. Lido diante de um produto real, o trade-off deixa de ser abstrato."
+          ],
+          "bullets": [
+            "Recuperação compra conhecimento fresco, auditável e trocável. Você atualiza o corpus quando quiser, cita o documento por trás de uma resposta e troca o modelo base por baixo sem retreinar.",
+            "Fine-tuning compra comportamento, aderência de formato e um custo por chamada menor depois de treinado. O preço é um ônus permanente de dados e retreinamento, e ele congela um modelo base dentro do produto.",
+            "Contexto longo compra simplicidade. Sem vector store, sem pipeline, é só colocar o material no prompt. Só se sustenta enquanto o material cabe na janela e a conta de tokens continua sã."
+          ]
+        },
+        {
+          "id": "the-playbook",
+          "heading": "Uma árvore de decisão para recuperação, tuning e contexto",
+          "level": 2,
+          "paragraphs": [
+            "Os dois grandes laboratórios apontam para a mesma direção. Comece pelo prompt, recorra à recuperação antes de recorrer ao treinamento. A Anthropic até dá um limite de tamanho para a bifurcação do contexto longo. Se a sua base de conhecimento tem menos de 200.000 tokens, cerca de 500 páginas, você pode jogar tudo no prompt e pular o RAG por completo. Acima disso, a recuperação vira o caminho escalável, e ela compensa. A recuperação contextual da Anthropic corta a taxa de falha dos 20 primeiros trechos em 35% só com embeddings contextuais, em 49% combinada com BM25 contextual, e em 67% quando entra a reordenação, de uma taxa de falha de 5,7% para 1,9%.",
+            "Aqui está a árvore que um operador roda esta semana. São quatro perguntas, em ordem, e a maioria dos produtos nunca chega à quarta."
+          ],
+          "bullets": [
+            "Um prompt melhor sobre um modelo base forte resolve? Se sim, pare. Não construa maquinário que você vai ter que manter.",
+            "A resposta depende de conhecimento proprietário, que muda, ou maior que a janela? Se sim, construa recuperação. Esse é o padrão para um produto vertical.",
+            "A base de conhecimento é delimitada, abaixo de uns 200.000 tokens, e a tarefa é de uma passada só? Use contexto longo e pule o pipeline.",
+            "O modelo ainda falha em comportamento ou formato que prompt e recuperação não resolvem? Só agora você faz fine-tuning, e mantém a camada de recuperação por baixo dele."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "A recuperação contextual cortou a taxa de falha dos 20 primeiros trechos em 67%, de 5,7% para 1,9%, ao combinar embeddings contextuais, BM25 contextual e reordenação. Qualidade de recuperação é um problema de engenharia com soluções conhecidas, não motivo para fazer fine-tuning.",
+            "attribution": "Anthropic, Contextual Retrieval, 2024"
+          }
+        },
+        {
+          "id": "when-rag",
+          "heading": "Quando a recuperação é o padrão certo",
+          "level": 3,
+          "paragraphs": [
+            "A recuperação é o padrão certo para quase todo produto de IA vertical, porque as duas coisas de que um produto de domínio mais precisa são frescor e rastro de papel. Um copilot jurídico tem que mostrar a peça por trás da resposta. Uma ferramenta de precificação de seguro tem que apontar a regra que aplicou. Um produto de setor público tem que ser auditável por alguém que ainda não confia nele. O fine-tuning não te dá nada disso. Ele assa o conhecimento em pesos que você não consegue inspecionar nem citar.",
+            "A outra razão é econômica, e é a que os times subestimam. A recuperação mantém o modelo base trocável. Quando um modelo mais barato ou melhor sai, e um sai a cada poucos meses, um produto que nasce da recuperação migra para ele sem reconstrução. Um produto com fine-tuning fica preso ao modelo contra o qual treinou até alguém pagar para retreinar. Num mercado onde a curva de custo se move tão rápido, ser trocável não é um luxo. É a estratégia inteira."
+          ]
+        },
+        {
+          "id": "when-finetune",
+          "heading": "Quando o fine-tuning vale o custo",
+          "level": 2,
+          "paragraphs": [
+            "O fine-tuning vale o custo quando o problema é comportamento, não conhecimento, e prompt e recuperação de fato falharam em resolver. Formato de saída consistente ao longo de milhares de chamadas. Um tom da casa que o prompt não segura. Uma tarefa de classificação ou extração em que um modelo pequeno ajustado empata com um grande genérico por uma fração do preço por chamada. Esses são ganhos reais, e para tarefas estreitas de alto volume a economia por chamada é grande o bastante para mudar a economia unitária.",
+            "O custo é um ônus permanente, e você deveria nomeá-lo antes de se comprometer. Você precisa de um conjunto de dados grande, limpo e rotulado. Um pequeno sofre overfitting. O domínio se move, então o modelo precisa de retreinamento periódico. E no momento em que você faz fine-tuning, congelou o seu modelo base. Trocar pela opção mais barata do próximo trimestre passa a significar retreinar, não mudar uma configuração. Faça fine-tuning quando o ganho de comportamento pagar essa conta. Não faça fine-tuning porque parece mais sério que recuperação."
+          ]
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "Como seu corpus de recuperação vira o moat",
+          "level": 2,
+          "paragraphs": [
+            "O corpus de recuperação é onde uma venture AI-native defensável de fato se acumula, e esse é o verdadeiro prêmio da decisão de build. Um modelo com fine-tuning é um retrato que envelhece no dia em que é treinado. Um corpus de recuperação é um ativo que cresce a cada interação. Cada consulta respondida, cada documento ingerido, cada correção de especialista registrada vira dado proprietário que um concorrente começando hoje não tem e não pode comprar.",
+            "Este é o flywheel copilot, dado, capital, e é o padrão por trás de toda venture da Avante. Construa um copilot de IA para gerar dado proprietário, depois use esse dado para captar e alocar capital. O copilot cria o corpus. O corpus mais os evals de domínio ao redor dele viram o moat. E porque a qualidade é agnóstica de modelo e protegida por esses evals, o produto fica melhor e mais barato toda vez que os modelos de base melhoram, sem custo para você. O modelo base é alugado e todo concorrente aluga o mesmo. O corpus e os evals são propriedade sua. Fazemos o argumento completo no [flywheel copilot, dado, capital](/library/copilot-to-data-to-fund-flywheel)."
+          ]
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Modos de falha: fine-tuning para esconder um problema de dados",
+          "level": 2,
+          "paragraphs": [
+            "O erro mais caro deste espaço inteiro é fazer fine-tuning para tapar um corpus fino ou mal rotulado. A recuperação funciona mal porque o dado por baixo está bagunçado, então o time faz fine-tuning para forçar o comportamento em vez de consertar o dado. Parece progresso. É o contrário."
+          ],
+          "bullets": [
+            "Assa um retrato velho do domínio dentro do produto, então o conhecimento fica congelado no momento do treino enquanto o mundo segue em frente.",
+            "Esconde o problema real, que é qualidade de dado, atrás de um artefato de modelo difícil de inspecionar e mais difícil ainda de corrigir.",
+            "Congela o modelo base, então quando os preços de inferência caírem cerca de 10x no ano seguinte, o time não consegue capturar a queda sem pagar para retreinar.",
+            "Contexto longo abusado do mesmo jeito é a sua própria armadilha. Empurrar tudo para o prompt para fugir de construir recuperação funciona até o corpus estourar a janela, a conta de tokens explodir e a memória degradar em entradas longas."
+          ]
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "Como a Avante adota recuperação mais avaliações por padrão",
+          "level": 2,
+          "paragraphs": [
+            "A Avante Ventures adota recuperação mais avaliações por padrão porque é a única arquitetura que captura uma curva de custo em colapso em vez de brigar com ela. Um LLM na qualidade do GPT-3 caiu de cerca de 60 dólares por milhão de tokens no fim de 2021 para cerca de 0,06 dólar em 2024, perto de 10x ao ano para desempenho equivalente, segundo a a16z. A Epoch AI coloca a queda mediana perto de 50x ao ano entre benchmarks. Um produto que nasce da recuperação, sobre modelos trocáveis, desce junto com essa curva. Um com fine-tuning fica congelado acima dela.",
+            "Esse padrão encaixa no modelo de studio. A Avante Ventures lança 3-4 ventures por ano por um sistema de seis estágios, Research, Partner, Build, Traction, Revenue, Compound, empregando $500K-1.5M por venture e retendo economia de co-founder. Uma construção que nasce da recuperação mantém cada venture descendo a curva de custo, e resolver esse encanamento uma vez roteia cerca de $300K-500K de capital efetivo por venture para produto em vez de overhead. Também encaixa no mercado. O uso de IA entre empresas industriais brasileiras saltou de 16,9% em 2022 para 41,9% em 2024, segundo o IBGE, e serviços são cerca de 70% do PIB brasileiro com baixa penetração de software.",
+            "O teste honesto para qualquer time é uma pergunta. Se você removesse o fine-tune, o produto ainda funcionaria sobre recuperação e um modelo base forte? Se a resposta é não porque o dado não é bom o suficiente, você não tem um problema de modelo. Você tem um problema de dado fantasiado de modelo. Conserte o dado. O time que mantém seus modelos trocáveis é o time que continua podendo trocar."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Qual a diferença entre RAG e fine-tuning?",
+          "a": "RAG vs fine-tuning se resume ao que cada um compra. A geração aumentada por recuperação dá ao modelo conhecimento fresco, auditável e trocável em tempo de inferência, e permite citar fontes. O fine-tuning muda o comportamento e o formato do modelo treinando-o com exemplos, a um custo por chamada menor mas com um ônus de dados e retreinamento. A OpenAI enquadra isso como memória em contexto, que é RAG, versus memória aprendida, que é fine-tuning."
+        },
+        {
+          "q": "Quando usar RAG ou fine-tuning?",
+          "a": "Faça fine-tuning apenas quando o problema é comportamento ou formato que prompt e recuperação não resolvem, não quando você precisa adicionar conhecimento. Bons casos são um formato de saída consistente ao longo de milhares de chamadas, um tom da casa, ou uma tarefa estreita de alto volume em que um modelo pequeno ajustado empata com um grande por muito menos por chamada. Se você faz fine-tuning para adicionar fatos, use recuperação, porque fine-tuning não foi feito para adicionar conhecimento novo."
+        },
+        {
+          "q": "O contexto longo está substituindo o RAG?",
+          "a": "Não. O contexto longo substitui o RAG apenas para tarefas delimitadas e de uma passada só que cabem na janela. A Anthropic recomenda colocar toda a base de conhecimento no prompt quando ela tem menos de cerca de 200.000 tokens, cerca de 500 páginas, e usar recuperação acima disso. Para um corpus que cresce ou qualquer coisa que precise de citações e frescor, a recuperação continua o padrão."
+        },
+        {
+          "q": "O que é mais barato, RAG ou fine-tuning?",
+          "a": "Depende do volume e da frequência com que o seu dado muda. O RAG tem custo inicial menor e sem retreinamento, e mantém o modelo base trocável para você capturar os preços de inferência em queda, que caíram perto de 10x ao ano. O fine-tuning tem custo inicial alto de dados e treino, mas pode baixar o custo por chamada de uma tarefa estreita de alto volume, ao preço de congelar o seu modelo base."
+        },
+        {
+          "q": "Como decidir entre RAG, fine-tuning e contexto longo?",
+          "a": "Rode uma árvore de decisão de quatro passos. Primeiro tente um prompt melhor. Se a resposta precisa de conhecimento proprietário, que muda ou grande, construa recuperação. Se o corpus é delimitado e abaixo de cerca de 200.000 tokens e a tarefa é de uma passada, use contexto longo. Só faça fine-tuning quando comportamento ou formato ainda falham depois de prompt e recuperação, e mantenha a camada de recuperação por baixo."
+        }
+      ]
+    },
+    "es": {
+      "title": "RAG vs Fine-Tuning vs Contexto Largo: la Decisión de Build",
+      "description": "RAG vs fine-tuning vs contexto largo decidido como una decisión de build, no preferencia. Un árbol de decisión y el moat que de verdad se acumula.",
+      "sections": [
+        {
+          "paragraphs": [
+            "RAG vs fine-tuning vs contexto largo es una decisión de build, no una preferencia, y las tres opciones no pelean por el mismo trabajo. La recuperación compra conocimiento fresco, auditable e intercambiable. El fine-tuning compra comportamiento y formato a un costo por llamada más bajo, pagado con una carga de datos y de reentrenamiento. El contexto largo compra simplicidad para tareas acotadas y de una sola pasada.",
+            "Este es el playbook que corre Avante Ventures cuando construye un producto de IA vertical. Empiece por la recuperación, agregue fine-tuning solo cuando el comportamiento no se pueda resolver por prompt ni por recuperación, y reserve el contexto largo para tareas que caben en la ventana. El moat nunca es el modelo. Es el corpus de recuperación y los evals que lo rodean, un argumento que hacemos completo en nuestro texto sobre [efectos de red de datos en la IA vertical](/library/data-network-effects-vertical-ai)."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "RAG vs fine-tuning: qué te da cada uno de verdad",
+          "level": 2,
+          "paragraphs": [
+            "La forma más limpia de enmarcar RAG vs fine-tuning es dejar de preguntar cuál es mejor y empezar a preguntar qué compra cada uno. OpenAI lo plantea como un diagnóstico. Trate cada respuesta fallida como un problema de memoria en contexto o de memoria aprendida. La recuperación arregla el primero, cuando al modelo le falta el conocimiento, necesita dato actual o necesita algo propietario. El fine-tuning arregla el segundo, cuando el modelo necesita un comportamiento o formato consistente aprendido de ejemplos. OpenAI es directo al decir que el fine-tuning no es la herramienta para agregar conocimiento nuevo. Ese es trabajo de la recuperación.",
+            "La guía de Microsoft llega al mismo lugar por el otro lado. Usted elige RAG cuando el contenido es dinámico, los temas son amplios o no tiene datos y cómputo para entrenar. Elige fine-tuning cuando la tarea es estrecha y estable y tiene dato de dominio limpio suficiente para no caer en overfitting. Leído frente a un producto real, el trade-off deja de ser abstracto."
+          ],
+          "bullets": [
+            "Recuperación compra conocimiento fresco, auditable e intercambiable. Usted actualiza el corpus cuando quiere, cita el documento detrás de una respuesta y cambia el modelo base por debajo sin reentrenar.",
+            "Fine-tuning compra comportamiento, adherencia de formato y un costo por llamada más bajo una vez entrenado. El precio es una carga permanente de datos y reentrenamiento, y congela un modelo base dentro del producto.",
+            "Contexto largo compra simplicidad. Sin vector store, sin pipeline, solo ponga el material en el prompt. Solo se sostiene mientras el material cabe en la ventana y la cuenta de tokens sigue sana."
+          ]
+        },
+        {
+          "id": "the-playbook",
+          "heading": "Un árbol de decisión para recuperación, tuning y contexto",
+          "level": 2,
+          "paragraphs": [
+            "Los dos grandes laboratorios apuntan al mismo lado. Empiece por el prompt, recurra a la recuperación antes de recurrir al entrenamiento. Anthropic incluso da un umbral de tamaño para la bifurcación del contexto largo. Si su base de conocimiento tiene menos de 200.000 tokens, cerca de 500 páginas, puede poner todo en el prompt y saltarse el RAG por completo. Por encima de eso, la recuperación se vuelve el camino escalable, y rinde. La recuperación contextual de Anthropic corta la tasa de falla de los 20 primeros fragmentos en 35% solo con embeddings contextuales, en 49% combinada con BM25 contextual, y en 67% cuando entra el reordenamiento, de una tasa de falla de 5,7% a 1,9%.",
+            "Aquí está el árbol que un operador corre esta semana. Son cuatro preguntas, en orden, y la mayoría de los productos nunca llega a la cuarta."
+          ],
+          "bullets": [
+            "Un mejor prompt sobre un modelo base fuerte lo resuelve? Si es así, pare. No construya maquinaria que después tendrá que mantener.",
+            "La respuesta depende de conocimiento propietario, que cambia, o más grande que la ventana? Si es así, construya recuperación. Ese es el default para un producto vertical.",
+            "La base de conocimiento es acotada, por debajo de unos 200.000 tokens, y la tarea es de una sola pasada? Use contexto largo y sáltese el pipeline.",
+            "El modelo aún falla en comportamiento o formato que el prompt y la recuperación no arreglan? Solo ahora hace fine-tuning, y mantiene la capa de recuperación por debajo."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "La recuperación contextual cortó la tasa de falla de los 20 primeros fragmentos en 67%, de 5,7% a 1,9%, al combinar embeddings contextuales, BM25 contextual y reordenamiento. La calidad de recuperación es un problema de ingeniería con soluciones conocidas, no un motivo para hacer fine-tuning.",
+            "attribution": "Anthropic, Contextual Retrieval, 2024"
+          }
+        },
+        {
+          "id": "when-rag",
+          "heading": "Cuando la recuperación es el default correcto",
+          "level": 3,
+          "paragraphs": [
+            "La recuperación es el default correcto para casi todo producto de IA vertical, porque las dos cosas que más necesita un producto de dominio son frescura y un rastro de papel. Un copilot legal tiene que mostrar el escrito detrás de su respuesta. Una herramienta de fijación de precios de seguros tiene que apuntar a la regla que aplicó. Un producto de sector público tiene que ser auditable por alguien que todavía no confía en él. El fine-tuning no le da nada de eso. Hornea el conocimiento en pesos que usted no puede inspeccionar ni citar.",
+            "La otra razón es económica, y es la que los equipos subestiman. La recuperación mantiene el modelo base intercambiable. Cuando sale un modelo más barato o mejor, y sale uno cada pocos meses, un producto que nace de la recuperación se muda a él sin reconstrucción. Un producto con fine-tuning queda atrapado en el modelo contra el que entrenó hasta que alguien pague por reentrenar. En un mercado donde la curva de costo se mueve tan rápido, ser intercambiable no es un lujo. Es la estrategia entera."
+          ]
+        },
+        {
+          "id": "when-finetune",
+          "heading": "Cuando el fine-tuning vale su costo",
+          "level": 2,
+          "paragraphs": [
+            "El fine-tuning vale su costo cuando el problema es comportamiento, no conocimiento, y el prompt y la recuperación de verdad fallaron en resolverlo. Formato de salida consistente a lo largo de miles de llamadas. Un tono de la casa que un prompt no sostiene. Una tarea de clasificación o extracción donde un modelo pequeño ajustado empata con uno grande genérico por una fracción del precio por llamada. Esos son triunfos reales, y para tareas estrechas de alto volumen el ahorro por llamada es lo bastante grande para cambiar la economía unitaria.",
+            "El costo es una carga permanente, y usted debería nombrarla antes de comprometerse. Necesita un conjunto de datos grande, limpio y etiquetado. Uno pequeño cae en overfitting. El dominio se mueve, así que el modelo necesita reentrenamiento periódico. Y en el momento en que hace fine-tuning, congeló su modelo base. Cambiar a la opción más barata del próximo trimestre pasa a significar reentrenar, no cambiar una configuración. Haga fine-tuning cuando la ganancia de comportamiento pague esa cuenta. No haga fine-tuning porque se siente más serio que la recuperación."
+          ]
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "Cómo tu corpus de recuperación se vuelve el moat",
+          "level": 2,
+          "paragraphs": [
+            "El corpus de recuperación es donde una venture AI-native defendible de verdad se acumula, y ese es el verdadero premio de la decisión de build. Un modelo con fine-tuning es una foto que envejece el día en que se entrena. Un corpus de recuperación es un activo que crece con cada interacción. Cada consulta respondida, cada documento ingerido, cada corrección de experto registrada se vuelve dato propietario que un competidor que empieza hoy no tiene y no puede comprar.",
+            "Este es el flywheel copilot, dato, capital, y es el patrón detrás de cada venture de Avante. Construya un copilot de IA para generar dato propietario, después use ese dato para levantar y desplegar capital. El copilot crea el corpus. El corpus más los evals de dominio que lo rodean se vuelven el moat. Y como la calidad es agnóstica de modelo y está protegida por esos evals, el producto se vuelve mejor y más barato cada vez que los modelos base mejoran, sin costo para usted. El modelo base se alquila y todo competidor alquila el mismo. El corpus y los evals son propiedad suya. Hacemos el argumento completo en el [flywheel copilot, dato, capital](/library/copilot-to-data-to-fund-flywheel)."
+          ]
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Modos de falla: fine-tuning para esconder un problema de datos",
+          "level": 2,
+          "paragraphs": [
+            "El error más caro de todo este espacio es hacer fine-tuning para tapar un corpus flaco o mal etiquetado. La recuperación funciona mal porque el dato de abajo está desordenado, así que el equipo hace fine-tuning para forzar el comportamiento en vez de arreglar el dato. Parece progreso. Es lo contrario."
+          ],
+          "bullets": [
+            "Hornea una foto vieja del dominio dentro del producto, así que el conocimiento queda congelado en el momento del entrenamiento mientras el mundo sigue adelante.",
+            "Esconde el problema real, que es calidad de dato, detrás de un artefacto de modelo difícil de inspeccionar y más difícil aún de corregir.",
+            "Congela el modelo base, así que cuando los precios de inferencia caigan cerca de 10x al año siguiente, el equipo no puede capturar la caída sin pagar por reentrenar.",
+            "El contexto largo abusado de la misma forma es su propia trampa. Empujar todo al prompt para esquivar la construcción de recuperación funciona hasta que el corpus desborda la ventana, la cuenta de tokens explota y la memoria se degrada en entradas largas."
+          ]
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "Cómo Avante adopta recuperación más evaluaciones por defecto",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures adopta recuperación más evaluaciones por defecto porque es la única arquitectura que captura una curva de costo en colapso en vez de pelear con ella. Un LLM con calidad de GPT-3 cayó de cerca de 60 dólares por millón de tokens a finales de 2021 a cerca de 0,06 dólares en 2024, cerca de 10x al año para un desempeño equivalente, según a16z. Epoch AI ubica la caída mediana cerca de 50x al año entre benchmarks. Un producto que nace de la recuperación, sobre modelos intercambiables, baja junto con esa curva. Uno con fine-tuning queda congelado por encima de ella.",
+            "Ese default encaja en el modelo de studio. Avante Ventures lanza 3-4 ventures por año mediante un sistema de seis etapas, Research, Partner, Build, Traction, Revenue, Compound, desplegando $500K-1.5M por venture y reteniendo economía de co-founder. Una construcción que nace de la recuperación mantiene cada venture bajando la curva de costo, y resolver esta plomería una vez enruta cerca de $300K-500K de capital efectivo por venture hacia producto en lugar de overhead. También encaja en el mercado. El uso de IA entre empresas industriales brasileñas saltó de 16,9% en 2022 a 41,9% en 2024, según el IBGE, y los servicios son cerca del 70% del PIB brasileño con baja penetración de software.",
+            "La prueba honesta para cualquier equipo es una pregunta. Si usted quitara el fine-tune, el producto seguiría funcionando sobre recuperación y un modelo base fuerte? Si la respuesta es no porque el dato no es lo bastante bueno, usted no tiene un problema de modelo. Tiene un problema de dato disfrazado de modelo. Arregle el dato. El equipo que mantiene sus modelos intercambiables es el equipo que sigue pudiendo cambiar."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Cuál es la diferencia entre RAG y fine-tuning?",
+          "a": "RAG vs fine-tuning se reduce a qué compra cada uno. La generación aumentada por recuperación le da al modelo conocimiento fresco, auditable e intercambiable en tiempo de inferencia, y le permite citar fuentes. El fine-tuning cambia el comportamiento y el formato del modelo entrenándolo con ejemplos, a un costo por llamada más bajo pero con una carga de datos y reentrenamiento. OpenAI lo enmarca como memoria en contexto, que es RAG, versus memoria aprendida, que es fine-tuning."
+        },
+        {
+          "q": "Cuándo usar RAG o fine-tuning?",
+          "a": "Haga fine-tuning solo cuando el problema es comportamiento o formato que el prompt y la recuperación no arreglan, no cuando necesita agregar conocimiento. Buenos casos son un formato de salida consistente a lo largo de miles de llamadas, un tono de la casa, o una tarea estrecha de alto volumen donde un modelo pequeño ajustado empata con uno grande por mucho menos por llamada. Si hace fine-tuning para agregar hechos, use recuperación, porque el fine-tuning no fue hecho para agregar conocimiento nuevo."
+        },
+        {
+          "q": "El contexto largo está reemplazando al RAG?",
+          "a": "No. El contexto largo reemplaza al RAG solo para tareas acotadas y de una sola pasada que caben en la ventana. Anthropic recomienda poner toda la base de conocimiento en el prompt cuando tiene menos de cerca de 200.000 tokens, unas 500 páginas, y usar recuperación por encima de eso. Para un corpus que crece o cualquier cosa que necesite citas y frescura, la recuperación sigue siendo el default."
+        },
+        {
+          "q": "Qué es más barato, RAG o fine-tuning?",
+          "a": "Depende del volumen y de qué tan seguido cambia su dato. El RAG tiene menor costo inicial y sin reentrenamiento, y mantiene el modelo base intercambiable para que capture los precios de inferencia en caída, que han bajado cerca de 10x al año. El fine-tuning tiene un alto costo inicial de datos y entrenamiento, pero puede bajar el costo por llamada de una tarea estrecha de alto volumen, al precio de congelar su modelo base."
+        },
+        {
+          "q": "Cómo decidir entre RAG, fine-tuning y contexto largo?",
+          "a": "Corra un árbol de decisión de cuatro pasos. Primero pruebe un mejor prompt. Si la respuesta necesita conocimiento propietario, que cambia o grande, construya recuperación. Si el corpus es acotado y está por debajo de cerca de 200.000 tokens y la tarea es de una sola pasada, use contexto largo. Solo haga fine-tuning cuando comportamiento o formato aún fallan después del prompt y la recuperación, y mantenga la capa de recuperación por debajo."
+        }
+      ]
+    },
+    "ogImage": "/og/rag-vs-finetune-vs-long-context-playbook.png"
+  },
+  {
+    "slug": "services-to-productized-ai-copilot-playbook",
+    "category": "playbooks",
+    "type": "Playbook",
+    "readTime": "10 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-03",
+    "isPublished": true,
+    "en": {
+      "title": "How to Productize a Services Business Into an AI Copilot",
+      "description": "How to productize a services business into an AI copilot, step by step, and turn delivery data into a moat. Built for a services-heavy economy.",
+      "sections": [
+        {
+          "paragraphs": [
+            "To productize a services business into an AI copilot, start with a subtraction, not a model. Find the one repeatable judgment buried inside your delivery, build a copilot for that single task instead of a platform, let client work label the data, then price the result as product. The order is the whole game. Get it right and delivery pays you to build the asset.",
+            "This is the copilot to data to fund flywheel told in the language of services, and it fits an economy where services account for roughly 70% of Brazilian GDP with low software penetration. Avante Ventures builds this way on purpose. The trap on the other side is just as real. Automate the exact judgment clients pay a premium for and you ship a copilot nobody trusts, then land back on the consulting treadmill with software costs stacked on payroll."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "Which service work should become software, and which should not",
+          "level": 2,
+          "paragraphs": [
+            "The build decision is not whether to add AI. It is which slice of the work carries repeatable judgment worth encoding, and which slice is genuinely bespoke and has to stay human. Draw that line wrong in either direction and the venture stalls.",
+            "The macro case is now quantified, and it is large. Foundation Capital frames the move from software to services as a $4.6 trillion opportunity, roughly $2.3 trillion of salaries in functions like sales, engineering, and support plus $2.3 trillion of outsourced IT and business process spend. Their argument is structural. The global services market dwarfs the software market. Salesforce earns about $35 billion a year while companies spend around $1.1 trillion on sales and marketing salaries alone. The real difference is who owns the outcome. Software hands the customer a tool and walks away. Services own the result. A productized copilot is a bet that AI can own more of that result.",
+            "a16z reaches the same place from the vertical software side. Turning labor into software can lift revenue per customer by 2x to 10x, because US software spend of about $313 billion is only 3 percent of the roughly $10.5 trillion the country spends on labor. Their test for what to automate is blunt and useful. Work where a trusted human relationship is not the core benefit is a candidate to be augmented or replaced.",
+            "So run the wrong-tool test before you build. A copilot is the wrong move when the value is the relationship, when volume is too thin to ever label enough data, or when the judgment mutates with every engagement. Keep that work human and sell a lighter tool around it."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "US software spend of about $313 billion is roughly 3 percent of the $10.5 trillion spent on labor. The productization prize is the labor line, not the software line.",
+            "attribution": "a16z, Vertical SaaS Now with AI Inside, 2024"
+          }
+        },
+        {
+          "id": "the-playbook",
+          "heading": "How to productize a service into an AI copilot, step by step",
+          "level": 2,
+          "paragraphs": [
+            "The playbook is a sequence, not a platform. Instrument the current delivery, isolate one repeatable task, build a copilot for that task alone, mint labeled data from client work, then price the outcome. Teams that invert this build the platform first and go hunting for the workflow later. They usually run out of money before they find it.",
+            "Here is what an operator actually runs over a quarter. Each step is a move, not a capability."
+          ],
+          "bullets": [
+            "Instrument delivery. Log where senior time goes across the last 20 engagements. The repeatable judgment hides in the tasks a senior person does the same way every time and struggles to explain.",
+            "Isolate one task. Pick the single highest-frequency judgment call a copilot could draft and a human could check in seconds. Not the service. One task.",
+            "Build the copilot, not the platform. Ship a tool that drafts that one output inside the delivery flow you already run. The human corrects it, and every correction becomes a label.",
+            "Mint data from delivery. Each engagement runs the copilot and feeds it more labeled examples, so billable work doubles as data collection.",
+            "Price the outcome. Once the draft is trusted, package it as product priced on the result, not on hours."
+          ]
+        },
+        {
+          "id": "find-the-repeatable-task",
+          "heading": "Find the repeatable judgment inside the service",
+          "level": 3,
+          "paragraphs": [
+            "The repeatable judgment is rarely the work clients think they are buying. It is the quiet pattern-matching a senior operator does before the visible deliverable, the same way on every job. A tax advisor eyeballing which deductions apply. An auction analyst deciding which listings are worth a full underwrite. A claims specialist sorting which files will actually pay.",
+            "Find it by instrumenting, not by guessing. Read the last 20 engagements and mark where a senior person spent an hour reaching a conclusion a junior person could not. The task that repeats across most files, at high frequency, with a clear right answer a human can verify fast, is your first copilot. If two experts disagree on the answer every time, that is the bespoke judgment. Leave it human and move on."
+          ]
+        },
+        {
+          "id": "copilot-first",
+          "heading": "Ship a copilot, not a platform",
+          "level": 2,
+          "paragraphs": [
+            "Ship the copilot for one task and resist every urge to generalize. A copilot drafts and a human approves, which does two things a platform cannot. It keeps a trusted expert on the hook for the outcome, so clients keep buying. And it turns every approval or correction into a labeled example, so the product gets sharper the more it is used.",
+            "The reason this is buildable in 2026 without a Series A is that the first turn of the loop got cheap. The model is no longer the expensive part of the build. The expensive part is the labeled data only your delivery produces, and a narrow copilot is the cheapest way to start minting it. A team that reaches for a full platform on day one spends its runway on surface area and never gets the corrections that make the thing defensible. Narrow first. The platform, if it ever comes, is earned by data, not designed up front."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Underwrite copilot usage before you underwrite the dataset. A copilot nobody uses mints no data, and a dataset that prices nothing never becomes a product."
+          }
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "How delivery data becomes the product moat",
+          "level": 2,
+          "paragraphs": [
+            "The moat is the delivery data, not the copilot. Every engagement labels the model further, and those labels are the one asset an off-the-shelf model cannot copy, because it never saw your corrections. This is the [copilot to data to fund flywheel](/library/copilot-to-data-to-fund-flywheel) in services form. The copilot mints proprietary data while it does real work, the data becomes a priced asset, and the asset attracts or becomes capital.",
+            "It compounds instead of commoditizing because the model is now the cheap and shared layer. Epoch AI found the price to reach GPT-4 level performance on PhD-level science questions fell about 40x per year, with a median across tasks near 50x per year. If inference gets that much cheaper for everyone at once, no model is a moat. Defensibility has to live where the price curve cannot reach, and in a productized services business it lives in the corrections senior operators make inside every engagement. Those are the scarce, messy, unstandardized labels a generic model lacks.",
+            "The services origin is the unfair advantage, not a liability. A pure software startup has to buy or scrape its way to that data and usually cannot. A firm that started in services generates it as a byproduct of getting paid, which is also why a thin [AI wrapper with no proprietary data](/library/ai-wrapper-trap-defensible-ai-native) has nothing left when the model gets cheaper."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "The price to reach GPT-4 level performance on PhD-level science questions fell about 40x per year, with a median near 50x per year across tasks. The model is the cheap part now. The delivery data is the moat.",
+            "attribution": "Epoch AI, March 2025"
+          }
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Failure modes: automating the part clients pay you to judge",
+          "level": 2,
+          "paragraphs": [
+            "The failure that kills the thesis is productizing the bespoke part. A team automates the exact judgment clients pay a premium for, ships a copilot nobody trusts, and ends up back on the consulting treadmill with worse margins than before, now carrying software costs on top of payroll. It comes from one confusion: mistaking the repeatable task for the valuable one.",
+            "The other ways this breaks are concrete and avoidable."
+          ],
+          "bullets": [
+            "Platform before workflow. Building a general platform before the single task is proven. Usage never concentrates, so the data never gets dense enough to price anything.",
+            "Slop at the trust boundary. Shipping a copilot that is right 70 percent of the time into a workflow that needs 99. A fine copilot is a terrible autopilot, and clients feel the gap on the first bad draft.",
+            "Model as the moat. Treating the model as the advantage. When inference drops another 50x, a wrapper with no proprietary data is exposed.",
+            "Data that prices nothing. Reaching real usage but never turning corrections into a dataset dense enough to price an outcome, so the product stays stuck selling hours."
+          ]
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "How Avante turns services scar tissue into ventures",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures runs this as a studio, not as a portfolio of bets. It launches 3-4 ventures per year through a six-stage system of Research, Partner, Build, Traction, Revenue, Compound, deploys $500K-1.5M per venture, and retains co-founder economics. Solving company plumbing once routes roughly $300K-500K of effective capital per venture into product and traction instead of overhead, which buys the copilot the runway to reach usage density before the data thesis has to prove itself. A studio venture launches 6-9 months ahead of a comparably funded standalone team, and in this pattern those months are pure data accumulation.",
+            "The Brazil fit is structural, not sentimental. A services-heavy, under-digitized economy is a vast surface of delivery workflows where a copilot can mint data no incumbent holds. The edge Avante brings is domain operators with 10+ years of Brazilian-market scar tissue, paired with a Silicon Valley playbook and first-ticket capital, assembled on day one rather than recruited over the first year. You can see the pattern by domain across the portfolio. A judicial-asset copilot turns each case into labeled valuation data. An insurance pricing and risk-scoring API turns each underwriting interaction into a labeled pricing dataset. The benchmark Avante points to is GSSN's finding that studio IRR runs near ~50% versus ~19% for traditional VC, the studio-model edge, not a claim about any single venture. See [/why-avante](/why-avante) for the thesis and [/principles](/principles) for how the studio operates.",
+            "The lesson services founders resist is the one that pays. Automate the repeatable judgment and protect the bespoke judgment. The margin was always in the second one, and a copilot that respects that line is the rare kind clients trust enough to make it a product."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How do you productize a services business into an AI copilot?",
+          "a": "You find the one repeatable judgment inside delivery, build a copilot for that single task rather than a full platform, use client work to generate labeled data, then price and package the result as product. The delivery data is the moat, since every engagement labels the model further. The order matters more than the tooling."
+        },
+        {
+          "q": "What is the difference between services-as-software and normal SaaS?",
+          "a": "Software hands the customer a tool and the customer owns the outcome, while services-as-software owns the outcome itself. Foundation Capital sizes this shift at a $4.6 trillion opportunity because the global services market dwarfs the software market. A productized AI copilot is the mechanism that lets software absorb more of the labor line."
+        },
+        {
+          "q": "Which part of a service should you not automate?",
+          "a": "Do not automate the bespoke judgment clients pay a premium for. If two experts reach a different conclusion on the same file every time, that judgment is the product and should stay human. Automating it ships a copilot nobody trusts and pushes the firm back onto the consulting treadmill with worse margins."
+        },
+        {
+          "q": "Why is delivery data a moat for an AI copilot from a service business?",
+          "a": "Because the model is now the cheap, shared layer and the corrections senior operators make inside every engagement are scarce, messy, and unstandardized, which is exactly what a generic model lacks. Epoch AI found inference prices falling about 40x to 50x per year, so no model stays a moat. A firm that started in services mints that proprietary data as a byproduct of getting paid."
+        },
+        {
+          "q": "Can you build this without raising a Series A?",
+          "a": "Yes, because the first turn of the copilot to data to fund flywheel got cheap as inference costs collapsed. A narrow copilot for one task is inexpensive to ship, and delivery revenue funds the data collection. Avante Ventures deploys $500K-1.5M per venture through its studio model, which routes roughly $300K-500K of effective capital into product rather than overhead."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Como Produtizar um Negócio de Serviços em um Copilot de IA",
+      "description": "Como produtizar um negócio de serviços em um copilot de IA, passo a passo, e transformar dados de entrega em moat. Feito para uma economia de serviços.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Para produtizar um negócio de serviços em um copilot de IA, comece por uma subtração, não por um modelo. Encontre o único julgamento repetível enterrado dentro da sua entrega, construa um copilot para essa tarefa em vez de uma plataforma, deixe o trabalho do cliente rotular os dados e depois precifique o resultado como produto. A ordem é o jogo inteiro. Acerte a ordem e a entrega passa a pagar pela construção do ativo.",
+            "Esse é o flywheel copilot, dado, capital contado na língua dos serviços, e ele encaixa em uma economia onde serviços respondem por cerca de 70% do PIB brasileiro com baixa penetração de software. A Avante Ventures constrói assim de propósito. A armadilha do outro lado é igualmente real. Automatize exatamente o julgamento pelo qual o cliente paga um prêmio e você entrega um copilot que ninguém confia, e volta para a esteira da consultoria com o custo de software empilhado sobre a folha."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "Qual trabalho de serviço deve virar software, e qual não deve",
+          "level": 2,
+          "paragraphs": [
+            "A decisão de construção não é se você adiciona IA. É qual fatia do trabalho carrega julgamento repetível que vale a pena codificar, e qual fatia é genuinamente sob medida e precisa continuar humana. Erre essa linha para qualquer um dos lados e a venture trava.",
+            "O caso macro agora está quantificado, e é grande. A Foundation Capital enquadra a passagem de software para serviços como uma oportunidade de $4.6 trilhões, cerca de $2.3 trilhões em salários de funções como vendas, engenharia e suporte, mais $2.3 trilhões em gasto terceirizado de TI e processos de negócio. O argumento deles é estrutural. O mercado global de serviços é muito maior que o de software. A Salesforce fatura cerca de $35 bilhões por ano enquanto empresas gastam perto de $1.1 trilhão só em salários de vendas e marketing. A diferença de verdade é quem é dono do resultado. O software entrega uma ferramenta e vai embora. O serviço é dono do resultado. Um copilot produtizado é a aposta de que a IA consegue ser dona de mais desse resultado.",
+            "A a16z chega ao mesmo ponto pelo lado do software vertical. Transformar trabalho em software pode elevar a receita por cliente em 2x a 10x, porque o gasto americano com software, cerca de $313 bilhões, é apenas 3 por cento dos cerca de $10.5 trilhões que o país gasta com trabalho. O teste deles para o que automatizar é seco e útil. Trabalho em que uma relação humana de confiança não é o benefício central é candidato a ser ampliado ou substituído.",
+            "Então rode o teste da ferramenta errada antes de construir. Um copilot é o movimento errado quando o valor é a relação, quando o volume é fino demais para algum dia rotular dados suficientes, ou quando o julgamento muda a cada engajamento. Deixe esse trabalho humano e venda uma ferramenta mais leve ao redor dele."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O gasto americano com software, cerca de $313 bilhões, é aproximadamente 3 por cento dos $10.5 trilhões gastos com trabalho. O prêmio da produtização está na linha do trabalho, não na do software.",
+            "attribution": "a16z, Vertical SaaS Now with AI Inside, 2024"
+          }
+        },
+        {
+          "id": "the-playbook",
+          "heading": "Como produtizar um serviço em um copilot de IA, passo a passo",
+          "level": 2,
+          "paragraphs": [
+            "O playbook é uma sequência, não uma plataforma. Instrumente a entrega atual, isole uma tarefa repetível, construa um copilot só para essa tarefa, cunhe dados rotulados a partir do trabalho do cliente e depois precifique o resultado. Times que invertem isso constroem a plataforma primeiro e saem caçando o fluxo depois. Em geral o dinheiro acaba antes de eles acharem.",
+            "Aqui está o que um operador de fato roda ao longo de um trimestre. Cada passo é um movimento, não uma capacidade."
+          ],
+          "bullets": [
+            "Instrumente a entrega. Registre para onde vai o tempo sênior nos últimos 20 engajamentos. O julgamento repetível se esconde nas tarefas que uma pessoa sênior faz do mesmo jeito toda vez e mal consegue explicar.",
+            "Isole uma tarefa. Escolha a decisão de julgamento de maior frequência que um copilot poderia rascunhar e um humano poderia checar em segundos. Não o serviço. Uma tarefa.",
+            "Construa o copilot, não a plataforma. Entregue uma ferramenta que rascunha aquela única saída dentro do fluxo de entrega que você já roda. O humano corrige, e cada correção vira um rótulo.",
+            "Cunhe dados na entrega. Cada engajamento roda o copilot e o alimenta com mais exemplos rotulados, então o trabalho faturável também vira coleta de dados.",
+            "Precifique o resultado. Quando o rascunho é confiável, empacote como produto precificado no resultado, não em horas."
+          ]
+        },
+        {
+          "id": "find-the-repeatable-task",
+          "heading": "Encontre o julgamento repetível dentro do serviço",
+          "level": 3,
+          "paragraphs": [
+            "O julgamento repetível raramente é o trabalho que o cliente pensa estar comprando. É o reconhecimento de padrão silencioso que um operador sênior faz antes do entregável visível, do mesmo jeito em cada job. Um contador batendo o olho em quais deduções se aplicam. Um analista de leilão decidindo quais lotes valem um underwrite completo. Um especialista em ativos judiciais separando quais processos de fato vão pagar.",
+            "Encontre isso instrumentando, não chutando. Leia os últimos 20 engajamentos e marque onde um sênior gastou uma hora chegando a uma conclusão que um júnior não chegaria. A tarefa que se repete na maioria dos casos, com alta frequência, com uma resposta certa que um humano verifica rápido, é o seu primeiro copilot. Se dois especialistas discordam da resposta toda vez, aquilo é o julgamento sob medida. Deixe humano e siga em frente."
+          ]
+        },
+        {
+          "id": "copilot-first",
+          "heading": "Entregue um copilot, não uma plataforma",
+          "level": 2,
+          "paragraphs": [
+            "Entregue o copilot para uma tarefa e resista a toda vontade de generalizar. Um copilot rascunha e um humano aprova, o que faz duas coisas que uma plataforma não faz. Mantém um especialista de confiança responsável pelo resultado, então o cliente continua comprando. E transforma cada aprovação ou correção em um exemplo rotulado, então o produto fica mais afiado quanto mais é usado.",
+            "A razão de isso ser construível em 2026 sem uma Series A é que a primeira volta do loop ficou barata. O modelo deixou de ser a parte cara da construção. A parte cara é o dado rotulado que só a sua entrega produz, e um copilot estreito é a forma mais barata de começar a cunhá-lo. Um time que parte para uma plataforma completa no dia um queima o caixa em superfície e nunca colhe as correções que tornam a coisa defensável. Estreito primeiro. A plataforma, se um dia vier, é conquistada por dado, não desenhada de antemão."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Avalie o uso do copilot antes de avaliar o dataset. Um copilot que ninguém usa não cunha dado, e um dataset que não precifica nada nunca vira produto."
+          }
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "Como os dados de entrega viram o moat do produto",
+          "level": 2,
+          "paragraphs": [
+            "O moat é o dado de entrega, não o copilot. Cada engajamento rotula o modelo um pouco mais, e esses rótulos são o único ativo que um modelo de prateleira não copia, porque ele nunca viu as suas correções. Esse é o [flywheel copilot para dado para fundo](/library/copilot-to-data-to-fund-flywheel) na forma de serviços. O copilot cunha dado proprietário enquanto faz trabalho real, o dado vira ativo precificado, e o ativo atrai ou vira capital.",
+            "Ele compõe em vez de comoditizar porque o modelo agora é a camada barata e compartilhada. A Epoch AI mostrou que o preço para atingir o desempenho do GPT-4 em questões científicas de nível de doutorado caiu cerca de 40x por ano, com mediana entre tarefas perto de 50x por ano. Se a inferência fica tão mais barata para todo mundo ao mesmo tempo, nenhum modelo é moat. A defensibilidade precisa morar onde a curva de preço não alcança, e em um negócio de serviços produtizado ela mora nas correções que operadores sêniores fazem dentro de cada engajamento. Esses são os rótulos escassos, bagunçados e não padronizados que faltam a um modelo genérico.",
+            "A origem em serviços é a vantagem injusta, não um passivo. Uma startup de software puro tem que comprar ou raspar o caminho até esse dado e em geral não consegue. Uma firma que começou em serviços gera esse dado como subproduto de ser paga, que é também por que um [wrapper de IA sem dado proprietário](/library/ai-wrapper-trap-defensible-ai-native) não sobra nada quando o modelo fica mais barato."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O preço para atingir o desempenho do GPT-4 em questões científicas de nível de doutorado caiu cerca de 40x por ano, com mediana perto de 50x por ano entre tarefas. O modelo é a parte barata agora. O dado de entrega é o moat.",
+            "attribution": "Epoch AI, março de 2025"
+          }
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Modos de falha: automatizar a parte pela qual o cliente paga você para julgar",
+          "level": 2,
+          "paragraphs": [
+            "A falha que mata a tese é produtizar a parte sob medida. Um time automatiza exatamente o julgamento pelo qual o cliente paga um prêmio, entrega um copilot que ninguém confia e termina de volta na esteira da consultoria com margem pior do que antes, agora carregando custo de software em cima da folha. Vem de uma única confusão: tomar a tarefa repetível pela tarefa valiosa.",
+            "As outras formas de quebrar são concretas e evitáveis."
+          ],
+          "bullets": [
+            "Plataforma antes do fluxo. Construir uma plataforma geral antes de a única tarefa estar provada. O uso nunca concentra, então o dado nunca fica denso o bastante para precificar nada.",
+            "Slop na fronteira da confiança. Entregar um copilot certo 70 por cento das vezes em um fluxo que precisa de 99. Um bom copilot é um péssimo piloto automático, e o cliente sente a diferença no primeiro rascunho ruim.",
+            "Modelo como moat. Tratar o modelo como a vantagem. Quando a inferência cai mais 50x, um wrapper sem dado proprietário fica exposto.",
+            "Dado que não precifica nada. Chegar a uso real mas nunca transformar correções em um dataset denso o bastante para precificar um resultado, então o produto continua preso vendendo horas."
+          ]
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "Como a Avante transforma cicatrizes de serviço em ventures",
+          "level": 2,
+          "paragraphs": [
+            "A Avante Ventures roda isso como um studio, não como um portfólio de apostas. Lança 3-4 ventures por ano por meio de um sistema de seis etapas: Research, Partner, Build, Traction, Revenue, Compound, aloca $500K-1.5M por venture e mantém economia de co-founder. Resolver o encanamento da empresa uma vez roteia cerca de $300K-500K de capital efetivo por venture para produto e tração em vez de overhead, o que dá ao copilot o fôlego para atingir densidade de uso antes de a tese de dado precisar se provar. Uma venture de studio lança 6-9 meses à frente de um time autônomo com financiamento comparável, e nesse padrão esses meses são puro acúmulo de dado.",
+            "O encaixe com o Brasil é estrutural, não sentimental. Uma economia pesada em serviços e pouco digitalizada é uma superfície imensa de fluxos de entrega onde um copilot cunha dado que nenhum incumbente tem. A vantagem que a Avante traz são operadores de domínio com mais de 10 anos de cicatriz do mercado brasileiro, somados a um playbook de Vale do Silício e capital de primeiro cheque, montados no dia um em vez de recrutados ao longo do primeiro ano. Dá para ver o padrão por domínio no portfólio. Um copilot de ativos judiciais transforma cada processo em dado rotulado de avaliação. Uma API de precificação e scoring de risco de seguros transforma cada interação de subscrição em um dataset rotulado de preço. O benchmark que a Avante cita é o achado da GSSN de que o IRR de studio fica perto de ~50% contra ~19% do venture capital tradicional, a vantagem do modelo de studio, não uma afirmação sobre qualquer venture isolada. Veja [/why-avante](/why-avante) para a tese e [/principles](/principles) para como o studio opera.",
+            "A lição que fundadores de serviços resistem é a que paga. Automatize o julgamento repetível e proteja o julgamento sob medida. A margem sempre esteve no segundo, e um copilot que respeita essa linha é do tipo raro que o cliente confia o bastante para virar produto."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Como produtizar um negócio de serviços em um copilot de IA?",
+          "a": "Você encontra o único julgamento repetível dentro da entrega, constrói um copilot para essa tarefa em vez de uma plataforma completa, usa o trabalho do cliente para gerar dados rotulados e depois precifica e empacota o resultado como produto. O dado de entrega é o moat, já que cada engajamento rotula o modelo um pouco mais. A ordem importa mais do que a ferramenta."
+        },
+        {
+          "q": "Qual a diferença entre serviço como software e SaaS comum?",
+          "a": "O software entrega uma ferramenta e o cliente é dono do resultado, enquanto o serviço como software é dono do próprio resultado. A Foundation Capital dimensiona essa mudança como uma oportunidade de $4.6 trilhões porque o mercado global de serviços é muito maior que o de software. Um copilot de IA produtizado é o mecanismo que deixa o software absorver mais da linha de trabalho."
+        },
+        {
+          "q": "Qual parte de um serviço você não deve automatizar?",
+          "a": "Não automatize o julgamento sob medida pelo qual o cliente paga um prêmio. Se dois especialistas chegam a conclusões diferentes no mesmo caso toda vez, esse julgamento é o produto e deve continuar humano. Automatizá-lo entrega um copilot que ninguém confia e empurra a firma de volta para a esteira da consultoria com margem pior."
+        },
+        {
+          "q": "Por que o dado de entrega é um moat para um copilot de IA a partir de serviços?",
+          "a": "Porque o modelo agora é a camada barata e compartilhada, e as correções que operadores sêniores fazem dentro de cada engajamento são escassas, bagunçadas e não padronizadas, exatamente o que falta a um modelo genérico. A Epoch AI mostrou preços de inferência caindo cerca de 40x a 50x por ano, então nenhum modelo se mantém como moat. Uma firma que começou em serviços cunha esse dado proprietário como subproduto de ser paga."
+        },
+        {
+          "q": "Dá para construir isso sem levantar uma Series A?",
+          "a": "Sim, porque a primeira volta do flywheel copilot, dado, capital ficou barata com o colapso do custo de inferência. Um copilot estreito para uma tarefa é barato de entregar, e a receita de entrega financia a coleta de dados. A Avante Ventures aloca $500K-1.5M por venture pelo modelo de studio, o que roteia cerca de $300K-500K de capital efetivo para produto em vez de overhead."
+        }
+      ]
+    },
+    "es": {
+      "title": "Cómo Productizar un Negocio de Servicios en un Copilot de IA",
+      "description": "Cómo productizar un negocio de servicios en un copilot de IA, paso a paso, y convertir los datos de entrega en moat. Para una economía de servicios.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Para productizar un negocio de servicios en un copilot de IA, empiece por una resta, no por un modelo. Encuentre el único juicio repetible enterrado dentro de su entrega, construya un copilot para esa tarea en lugar de una plataforma, deje que el trabajo del cliente etiquete los datos y luego le ponga precio al resultado como producto. El orden es todo el juego. Acierte el orden y la entrega pasa a pagar la construcción del activo.",
+            "Este es el flywheel copilot, dato, capital contado en el idioma de los servicios, y encaja en una economía donde los servicios representan cerca del 70% del PIB brasileño con baja penetración de software. Avante Ventures construye así a propósito. La trampa del otro lado es igual de real. Automatice justo el juicio por el que el cliente paga una prima y entregará un copilot que nadie confía, y volverá a la rueda de la consultoría con el costo de software encima de la nómina."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "Qué trabajo de servicio debe volverse software, y cuál no",
+          "level": 2,
+          "paragraphs": [
+            "La decisión de construcción no es si agrega IA. Es qué porción del trabajo carga juicio repetible que vale la pena codificar, y qué porción es genuinamente a la medida y tiene que seguir humana. Trace mal esa línea hacia cualquier lado y la venture se estanca.",
+            "El caso macro ya está cuantificado, y es grande. Foundation Capital enmarca el paso de software a servicios como una oportunidad de $4.6 billones, cerca de $2.3 billones en salarios de funciones como ventas, ingeniería y soporte, más $2.3 billones en gasto tercerizado de TI y procesos de negocio. Su argumento es estructural. El mercado global de servicios es mucho mayor que el de software. Salesforce factura cerca de $35 mil millones al año mientras las empresas gastan alrededor de $1.1 billones solo en salarios de ventas y marketing. La diferencia real es quién es dueño del resultado. El software entrega una herramienta y se va. El servicio es dueño del resultado. Un copilot productizado es la apuesta de que la IA puede ser dueña de más de ese resultado.",
+            "a16z llega al mismo punto por el lado del software vertical. Convertir trabajo en software puede elevar el ingreso por cliente entre 2x y 10x, porque el gasto estadounidense en software, cerca de $313 mil millones, es apenas 3 por ciento de los aproximadamente $10.5 billones que el país gasta en trabajo. Su prueba para qué automatizar es seca y útil. El trabajo donde una relación humana de confianza no es el beneficio central es candidato a ser ampliado o reemplazado.",
+            "Así que corra la prueba de la herramienta equivocada antes de construir. Un copilot es el movimiento equivocado cuando el valor es la relación, cuando el volumen es demasiado delgado para alguna vez etiquetar suficientes datos, o cuando el juicio cambia en cada engagement. Deje ese trabajo humano y venda una herramienta más ligera alrededor."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "El gasto estadounidense en software, cerca de $313 mil millones, es aproximadamente 3 por ciento de los $10.5 billones gastados en trabajo. El premio de la productización está en la línea del trabajo, no en la del software.",
+            "attribution": "a16z, Vertical SaaS Now with AI Inside, 2024"
+          }
+        },
+        {
+          "id": "the-playbook",
+          "heading": "Cómo productizar un servicio en un copilot de IA, paso a paso",
+          "level": 2,
+          "paragraphs": [
+            "El playbook es una secuencia, no una plataforma. Instrumente la entrega actual, aísle una tarea repetible, construya un copilot solo para esa tarea, acuñe datos etiquetados desde el trabajo del cliente y luego precifique el resultado. Los equipos que invierten esto construyen la plataforma primero y salen a cazar el flujo después. Por lo general el dinero se acaba antes de encontrarlo.",
+            "Esto es lo que un operador de verdad corre a lo largo de un trimestre. Cada paso es un movimiento, no una capacidad."
+          ],
+          "bullets": [
+            "Instrumente la entrega. Registre a dónde va el tiempo sénior en los últimos 20 engagements. El juicio repetible se esconde en las tareas que una persona sénior hace de la misma forma cada vez y apenas puede explicar.",
+            "Aísle una tarea. Elija la decisión de juicio de mayor frecuencia que un copilot podría esbozar y un humano podría revisar en segundos. No el servicio. Una tarea.",
+            "Construya el copilot, no la plataforma. Entregue una herramienta que esboce esa única salida dentro del flujo de entrega que ya corre. El humano corrige, y cada corrección se vuelve una etiqueta.",
+            "Acuñe datos en la entrega. Cada engagement corre el copilot y lo alimenta con más ejemplos etiquetados, así que el trabajo facturable también es recolección de datos.",
+            "Póngale precio al resultado. Cuando el borrador es confiable, empaquételo como producto con precio basado en el resultado, no en horas."
+          ]
+        },
+        {
+          "id": "find-the-repeatable-task",
+          "heading": "Encuentra el juicio repetible dentro del servicio",
+          "level": 3,
+          "paragraphs": [
+            "El juicio repetible rara vez es el trabajo que el cliente cree estar comprando. Es el reconocimiento de patrones silencioso que un operador sénior hace antes del entregable visible, de la misma forma en cada trabajo. Un contador ojeando qué deducciones aplican. Un analista de subastas decidiendo qué lotes valen un underwrite completo. Un especialista en activos judiciales separando qué expedientes de verdad van a pagar.",
+            "Encuéntrelo instrumentando, no adivinando. Lea los últimos 20 engagements y marque dónde un sénior gastó una hora llegando a una conclusión a la que un júnior no llegaría. La tarea que se repite en la mayoría de los casos, con alta frecuencia, con una respuesta correcta que un humano verifica rápido, es su primer copilot. Si dos expertos discrepan de la respuesta cada vez, eso es el juicio a la medida. Déjelo humano y siga adelante."
+          ]
+        },
+        {
+          "id": "copilot-first",
+          "heading": "Entrega un copilot, no una plataforma",
+          "level": 2,
+          "paragraphs": [
+            "Entregue el copilot para una tarea y resista toda tentación de generalizar. Un copilot esboza y un humano aprueba, lo que hace dos cosas que una plataforma no puede. Mantiene a un experto de confianza responsable del resultado, así que el cliente sigue comprando. Y convierte cada aprobación o corrección en un ejemplo etiquetado, así que el producto se afina cuanto más se usa.",
+            "La razón de que esto sea construible en 2026 sin una Series A es que la primera vuelta del loop se abarató. El modelo dejó de ser la parte cara de la construcción. La parte cara es el dato etiquetado que solo su entrega produce, y un copilot estrecho es la forma más barata de empezar a acuñarlo. Un equipo que va por una plataforma completa el día uno quema su caja en superficie y nunca cosecha las correcciones que hacen la cosa defensable. Estrecho primero. La plataforma, si algún día llega, se gana con dato, no se diseña de antemano."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Evalúe el uso del copilot antes de evaluar el dataset. Un copilot que nadie usa no acuña dato, y un dataset al que no se le puede poner precio nunca se vuelve producto."
+          }
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "Cómo los datos de entrega se vuelven el moat del producto",
+          "level": 2,
+          "paragraphs": [
+            "El moat es el dato de entrega, no el copilot. Cada engagement etiqueta el modelo un poco más, y esas etiquetas son el único activo que un modelo de estante no copia, porque nunca vio sus correcciones. Este es el [flywheel copilot a dato a fondo](/library/copilot-to-data-to-fund-flywheel) en forma de servicios. El copilot acuña dato propietario mientras hace trabajo real, el dato se vuelve un activo con precio, y el activo atrae o se vuelve capital.",
+            "Compone en vez de commoditizar porque el modelo ahora es la capa barata y compartida. Epoch AI mostró que el precio para alcanzar el desempeño de GPT-4 en preguntas científicas de nivel doctoral cayó cerca de 40x por año, con mediana entre tareas cerca de 50x por año. Si la inferencia se abarata tanto para todos al mismo tiempo, ningún modelo es moat. La defensibilidad tiene que vivir donde la curva de precio no alcanza, y en un negocio de servicios productizado vive en las correcciones que operadores sénior hacen dentro de cada engagement. Esas son las etiquetas escasas, desordenadas y no estandarizadas que le faltan a un modelo genérico.",
+            "El origen en servicios es la ventaja injusta, no un pasivo. Una startup de software puro tiene que comprar o raspar su camino hasta ese dato y por lo general no puede. Una firma que empezó en servicios lo genera como subproducto de cobrar, que es también por qué a un [wrapper de IA sin dato propietario](/library/ai-wrapper-trap-defensible-ai-native) no le queda nada cuando el modelo se abarata."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "El precio para alcanzar el desempeño de GPT-4 en preguntas científicas de nivel doctoral cayó cerca de 40x por año, con mediana cerca de 50x por año entre tareas. El modelo es la parte barata ahora. El dato de entrega es el moat.",
+            "attribution": "Epoch AI, marzo de 2025"
+          }
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Modos de falla: automatizar la parte por la que el cliente te paga por juzgar",
+          "level": 2,
+          "paragraphs": [
+            "La falla que mata la tesis es productizar la parte a la medida. Un equipo automatiza justo el juicio por el que el cliente paga una prima, entrega un copilot que nadie confía y termina de vuelta en la rueda de la consultoría con peor margen que antes, ahora cargando costo de software encima de la nómina. Viene de una sola confusión: tomar la tarea repetible por la tarea valiosa.",
+            "Las otras formas de quebrarse son concretas y evitables."
+          ],
+          "bullets": [
+            "Plataforma antes del flujo. Construir una plataforma general antes de probar la única tarea. El uso nunca se concentra, así que el dato nunca se vuelve lo bastante denso para ponerle precio a nada.",
+            "Slop en la frontera de la confianza. Entregar un copilot acertado el 70 por ciento de las veces en un flujo que necesita 99. Un buen copilot es un pésimo piloto automático, y el cliente siente la diferencia en el primer borrador malo.",
+            "Modelo como moat. Tratar el modelo como la ventaja. Cuando la inferencia cae otras 50x, un wrapper sin dato propietario queda expuesto.",
+            "Dato al que no se le puede poner precio. Alcanzar uso real pero nunca convertir correcciones en un dataset lo bastante denso para ponerle precio a un resultado, así que el producto sigue atrapado vendiendo horas."
+          ]
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "Cómo Avante transforma cicatrices de servicio en ventures",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures corre esto como un studio, no como un portafolio de apuestas. Lanza 3-4 ventures por año mediante un sistema de seis etapas: Research, Partner, Build, Traction, Revenue, Compound, despliega $500K-1.5M por venture y retiene economía de co-founder. Resolver la plomería de la empresa una sola vez enruta cerca de $300K-500K de capital efectivo por venture hacia producto y tracción en vez de overhead, lo que le da al copilot el aire para alcanzar densidad de uso antes de que la tesis de dato tenga que probarse. Una venture de studio lanza 6-9 meses por delante de un equipo independiente con financiamiento comparable, y en este patrón esos meses son pura acumulación de datos.",
+            "El encaje con Brasil es estructural, no sentimental. Una economía pesada en servicios y poco digitalizada es una superficie enorme de flujos de entrega donde un copilot acuña dato que ningún actor establecido tiene. La ventaja que trae Avante son operadores de dominio con más de 10 años de cicatriz del mercado brasileño, sumados a un playbook de Silicon Valley y capital de primer cheque, ensamblados el día uno en vez de reclutados a lo largo del primer año. Se ve el patrón por dominio en el portafolio. Un copilot de activos judiciales convierte cada expediente en dato etiquetado de valuación. Una API de tarificación y scoring de riesgo de seguros convierte cada interacción de suscripción en un dataset etiquetado de precios. El benchmark que cita Avante es el hallazgo de GSSN de que el IRR de studio ronda ~50% frente a ~19% del venture capital tradicional, la ventaja del modelo de studio, no una afirmación sobre ninguna venture aislada. Vea [/why-avante](/why-avante) para la tesis y [/principles](/principles) para cómo opera el studio.",
+            "La lección que los fundadores de servicios resisten es la que paga. Automatice el juicio repetible y proteja el juicio a la medida. El margen siempre estuvo en el segundo, y un copilot que respeta esa línea es del tipo raro que el cliente confía lo bastante para volverlo producto."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Cómo productizar un negocio de servicios en un copilot de IA?",
+          "a": "Usted encuentra el único juicio repetible dentro de la entrega, construye un copilot para esa tarea en lugar de una plataforma completa, usa el trabajo del cliente para generar datos etiquetados y luego le pone precio y empaqueta el resultado como producto. El dato de entrega es el moat, ya que cada engagement etiqueta el modelo un poco más. El orden importa más que la herramienta."
+        },
+        {
+          "q": "¿Cuál es la diferencia entre servicio como software y SaaS normal?",
+          "a": "El software entrega una herramienta y el cliente es dueño del resultado, mientras que el servicio como software es dueño del resultado mismo. Foundation Capital dimensiona este cambio como una oportunidad de $4.6 billones porque el mercado global de servicios es mucho mayor que el de software. Un copilot de IA productizado es el mecanismo que deja al software absorber más de la línea de trabajo."
+        },
+        {
+          "q": "¿Qué parte de un servicio no debe automatizar?",
+          "a": "No automatice el juicio a la medida por el que el cliente paga una prima. Si dos expertos llegan a conclusiones distintas en el mismo caso cada vez, ese juicio es el producto y debe seguir humano. Automatizarlo entrega un copilot que nadie confía y empuja a la firma de vuelta a la rueda de la consultoría con peor margen."
+        },
+        {
+          "q": "¿Por qué el dato de entrega es un moat para un copilot de IA a partir de servicios?",
+          "a": "Porque el modelo ahora es la capa barata y compartida, y las correcciones que operadores sénior hacen dentro de cada engagement son escasas, desordenadas y no estandarizadas, justo lo que le falta a un modelo genérico. Epoch AI mostró precios de inferencia cayendo cerca de 40x a 50x por año, así que ningún modelo se mantiene como moat. Una firma que empezó en servicios acuña ese dato propietario como subproducto de cobrar."
+        },
+        {
+          "q": "¿Se puede construir esto sin levantar una Series A?",
+          "a": "Sí, porque la primera vuelta del flywheel copilot, dato, capital se abarató con el colapso del costo de inferencia. Un copilot estrecho para una tarea es barato de entregar, y el ingreso de entrega financia la recolección de datos. Avante Ventures despliega $500K-1.5M por venture mediante el modelo de studio, lo que enruta cerca de $300K-500K de capital efectivo hacia producto en vez de overhead."
+        }
+      ]
+    },
+    "ogImage": "/og/services-to-productized-ai-copilot-playbook.png"
+  },
+  {
+    "slug": "ship-ai-regulated-latam-vertical-playbook",
+    "category": "playbooks",
+    "type": "Playbook",
+    "readTime": "11 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-03",
+    "isPublished": true,
+    "en": {
+      "title": "Shipping AI in Regulated Industries: A LATAM Playbook",
+      "description": "Shipping AI in regulated industries across LATAM without getting shut down. A playbook for LGPD, human oversight, audit trails, and PL 2338 risk tiers.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Shipping AI in regulated industries comes down to one discipline. You have to prove, after the fact, exactly how any consequential decision was made. In a regulated LATAM vertical the enforcer has a name, a statutory deadline, and a fine, so the build changes before you write the first line of product code.",
+            "This is a build playbook, not another argument that regulation is a moat. Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America, and its ventures ship inside verticals where a regulator or a court can order a product offline in an afternoon. The moves that keep that from happening are concrete. Classify the use case by risk, keep a human on every consequential decision, log every model input and output, and design for data-subject rights from the schema up."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "What regulated actually changes in the build",
+          "level": 2,
+          "paragraphs": [
+            "Regulation does not decide whether you ship AI. It decides what you must be able to prove once you have. In an unregulated app a bad output is a bug you patch on Friday. In a regulated vertical the same output is a liability with a named enforcer, the ANPD, waiting on the other end of it.",
+            "Four things change the moment the vertical is regulated."
+          ],
+          "bullets": [
+            "Explainability. You must state, in plain language, the criteria and the procedure behind any automated decision. Brazil's LGPD Article 20 gives the data subject the right to request review of a decision made solely by automated processing, and the controller has to supply clear information about the criteria used.",
+            "Human accountability. A consequential decision needs a named human who can override the model and answer for the outcome. That is the line between a copilot that recommends and a system that decides alone.",
+            "Audit trails. Every input, output, prompt version, and human action has to be logged and reconstructable months later. A regulator does not accept the answer that the model said so.",
+            "Data handling. Personal data used to train or prompt the model falls under LGPD. Legal basis, retention limits, and data-subject rights are build constraints from day one, not features you bolt on before launch."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "LGPD administrative sanctions reach a simple fine of up to 2% of a company's revenue in Brazil in the prior fiscal year, capped at R$50 million per infraction, applied by the ANPD. That is the cost of not being able to explain an output.",
+            "attribution": "LGPD Article 52, enforced by the ANPD"
+          }
+        },
+        {
+          "id": "the-playbook",
+          "heading": "Ship AI in a regulated vertical in six steps",
+          "level": 2,
+          "paragraphs": [
+            "Here is the sequence an operator can start this week. Each step ties to a specific Brazilian legal hook, not a generic best practice from a vendor deck."
+          ],
+          "bullets": [
+            "Classify the use case by risk before you write product code. Brazil's AI bill PL 2338/2023 uses an EU-AI-Act-style risk tiering. Article 14 treats systems in recruitment, education, credit granting, and public services as high risk. If your feature lands there, build for the high-risk regime now, not after the audit.",
+            "Keep a human in the loop on any consequential decision. The model drafts, scores, or recommends. A qualified human confirms or overrides before the decision reaches the person, and that action is logged as a first-class event.",
+            "Log every model input and output. Prompt, model version, input data, output, confidence, the reviewer, and the final decision, all timestamped and queryable. This is the record you hand a regulator.",
+            "Design for data-subject rights from the schema up. Access, correction, deletion, and automated-decision review belong in the data model before launch. Retrofitting them onto a live product is where teams burn quarters.",
+            "Constrain the model with guardrails. Input validation, output filters, refusal on out-of-scope prompts, and a review queue for low-confidence or high-stakes outputs. The model works inside a fence, not in the open field.",
+            "Run an algorithmic impact assessment and keep it current. PL 2338 obligates high-risk operators to assess, document, and monitor continuously. Tie the assessment to each model version and treat it as a living document."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "If you build one control first, put a named human on every consequential decision and log the override. It is the cheapest thing to ship and the first thing a regulator asks to see."
+          }
+        },
+        {
+          "id": "human-oversight",
+          "heading": "Human oversight and the audit trail",
+          "level": 3,
+          "paragraphs": [
+            "Human oversight and the audit trail are the two mechanics that separate a defensible regulated AI product from a lawsuit. Oversight means a named human sees the model's recommendation and the inputs behind it, can override it, and has that override recorded. The audit trail means any past decision can be reconstructed later. Which model version, which prompt, which data, which human signed off.",
+            "This is what PL 2338 formalizes. High-risk operators have to maintain governance structures, run conformity and algorithmic impact assessments, and monitor systems continuously, with the ANPD set to coordinate the national AI governance system under the bill.",
+            "The failure this prevents is the one that ends ventures. A team ships an opaque model that makes a consequential call. A court or the ANPD asks it to explain a single output. It cannot. No record, no human accountable, no explanation. The oversight and audit build is exactly what lets you answer that question with a document instead of a shrug."
+          ]
+        },
+        {
+          "id": "lgpd-and-pl2338",
+          "heading": "Designing for LGPD and PL 2338 risk tiers",
+          "level": 2,
+          "paragraphs": [
+            "LGPD is enforced today. PL 2338 is coming. Build for both now and you are not caught out when the AI bill passes.",
+            "LGPD governs personal data, and the ANPD is the enforcer. Article 20 gives the automated-decision-review right. Article 52 sets the sanctions, up to 2% of Brazilian revenue capped at R$50 million per infraction. These are live obligations, not future ones.",
+            "PL 2338/2023 is the AI-specific bill. The Senate approved it on December 10, 2024. It then moved to the Chamber of Deputies, where a special commission of 33 members was created on April 4, 2025, with Deputy Aguinaldo Ribeiro as rapporteur. As of mid-2025 it was awaiting the rapporteur's opinion under a priority regime, with public hearings underway. Verify the current status at publish time, because the bill is in active movement.",
+            "The practical consequence is simple. Map your feature to a risk tier, then build the controls that tier demands. A credit-scoring assistant is high risk and needs an impact assessment, human review, and a full audit trail. An internal document-drafting copilot that touches no personal data and makes no consequential decision is low risk and can ship lean. Spending high-risk effort on a low-risk feature is its own kind of failure."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "AI use among Brazilian industrial companies with 100 or more employees rose from 16.9% in 2022 to 41.9% in 2024. As adoption scales into decisions that affect people, the ANPD's enforcement surface scales with it.",
+            "attribution": "IBGE, 2024"
+          }
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "How compliance work becomes a moat and a dataset",
+          "level": 2,
+          "paragraphs": [
+            "The compliance build is not pure cost. Done right, it becomes the same proprietary asset that powers the copilot to data to fund flywheel. Every logged decision, every human override, every reviewed output is labeled data about how experts actually make calls in this vertical. A generalist competitor scraping public data cannot reproduce it. See how the [copilot to data to fund flywheel](/library/copilot-to-data-to-fund-flywheel) turns that usage into capital.",
+            "The loop runs the same way under regulation. The copilot generates decisions and human corrections. Those corrections are proprietary training and evaluation data. That data sharpens the model and builds a domain-specific evaluation set no competitor holds, which is the real point of how [domain evals become the moat](/library/domain-specific-evals-ai-moat). The evals and the audit-ready record become the defensibility, and the traction supports the raise.",
+            "Regulatory scar tissue compounds in the same direction. Domain operators with 10+ years of Brazilian-market scar tissue know which controls a regulator actually checks, not just what the statute says. That is the difference between a product that passes an audit and one that improvises during one, and it is an edge a generalist cannot cross by reading the law."
+          ]
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Failure modes: automating a decision you must defend",
+          "level": 2,
+          "paragraphs": [
+            "The headline failure mode is automating a consequential decision the venture cannot defend. A team ships an opaque model that approves, denies, prices, or scores a person, with no human accountable and no audit trail, then cannot explain a single output to a regulator or a court. That is not a bug. It is the event that gets the product ordered offline and the fine issued.",
+            "The rest of the failures are quieter and just as expensive."
+          ],
+          "bullets": [
+            "Retrofitting LGPD rights after launch. Access, deletion, and automated-decision review get pushed to a later sprint. Then a data-subject request or an ANPD inquiry arrives and there is no flow to serve it.",
+            "Measuring the wrong thing. The team optimizes model accuracy on a generic benchmark and never builds the domain eval that reflects how a regulator judges a decision. Accuracy is not defensibility.",
+            "Vendor and model dependency. A single closed model with no logging of prompts and versions means an upstream change silently alters decisions, and there is no record of the old behavior.",
+            "Over-automation for its own sake. Removing the human from a decision to save cost, in a vertical where the human is precisely what makes the decision defensible.",
+            "Treating the model as the moat, which is [the AI wrapper trap](/library/ai-wrapper-trap-defensible-ai-native). The model is rentable by anyone. The moat is the proprietary decision data, the domain evals, and the audit-ready workflow the compliance build creates."
+          ]
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "How Avante builds in judicial and insurance domains",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America, and the portfolio shows this playbook running in regulated verticals, described by domain. In judicial-asset valuation, an AI-native platform scores and values judicial credits, a domain where every consequential call has to withstand legal scrutiny and the documented record is the product. In insurance risk scoring, an async pricing and risk API operates where regulators, actuarial standards, and data-protection law all bear on a single output.",
+            "In both, the constraint is identical. The model recommends, a qualified human is accountable, every decision is logged, and the regulatory knowledge of 10+ years of Brazilian-market scar tissue is the part a generalist cannot copy. That is regulatory complexity turned into an edge, paired with a Silicon Valley playbook and first-ticket capital assembled on day one. Avante launches 3-4 ventures per year through its six-stage system of Research, Partner, Build, Traction, Revenue, Compound, deploying $500K-1.5M per venture, so the compliance and data plumbing gets solved once and reused. That routes roughly $300K-500K of effective capital per venture into product rather than overhead. Read the thesis at [/why-avante](/why-avante).",
+            "The lesson holds across every regulated build. The teams that lose are the ones that automate the decision and hope no one asks. The teams that win can hand over the record, name the human who signed off, and explain the output. In a regulated vertical, being able to answer that question is the product."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What changes when shipping AI in regulated industries?",
+          "a": "Shipping AI in regulated industries changes what you must be able to prove, not whether you can ship. You need explainability, a named human accountable for any consequential decision, an audit trail of every model input and output, and LGPD-compliant data handling from day one. The build carries these constraints before the first line of product code."
+        },
+        {
+          "q": "Does LGPD apply to AI features in Brazil?",
+          "a": "Yes. LGPD governs any AI feature that processes personal data in Brazil, and the ANPD enforces it. Article 20 gives people the right to request review of a decision made solely by automated processing, and Article 52 sets fines of up to 2% of Brazilian revenue, capped at R$50 million per infraction."
+        },
+        {
+          "q": "How does PL 2338/2023 affect shipping AI in regulated industries?",
+          "a": "PL 2338/2023 is Brazil's AI bill, approved by the Senate in December 2024 and now in the Chamber of Deputies. It uses an EU-AI-Act-style risk tiering that prohibits excessive-risk systems and imposes impact assessments, human oversight, and continuous monitoring on high-risk systems such as credit, recruitment, education, and public services. Verify the current status at publish time, since the bill is in active movement."
+        },
+        {
+          "q": "How do you keep a human in the loop on an AI decision?",
+          "a": "Have the model recommend or score, then require a named, qualified human to confirm or override before the decision affects a person, and log that action as a first-class event. This is the single control a regulator checks first and the cheapest one to build. It is also what turns an opaque automated call into a defensible one."
+        },
+        {
+          "q": "How does compliance work become a competitive moat?",
+          "a": "Every logged decision and human override is proprietary, labeled data about how experts make calls in a regulated vertical, which powers the copilot to data to fund flywheel. A generalist scraping public data cannot reproduce it. The domain evals and audit-ready record it produces become defensibility no off-the-shelf model holds."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Como Lançar Funcionalidades de IA em Setores Regulados na América Latina",
+      "description": "Como lançar IA em setores regulados na América Latina sem ser barrado. Um playbook de LGPD, supervisão humana, trilha de auditoria e o PL 2338.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Lançar IA em setores regulados se resume a uma disciplina. Você precisa provar, depois do fato, exatamente como qualquer decisão consequente foi tomada. Em um setor regulado da América Latina o fiscal tem nome, prazo legal e multa, então a construção muda antes de você escrever a primeira linha de código de produto.",
+            "Este é um playbook de construção, não mais um argumento de que a regulação é um moat. A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina, e suas ventures operam em verticais onde um regulador ou um tribunal pode tirar um produto do ar em uma tarde. Os movimentos que evitam isso são concretos. Classifique o caso de uso por risco, mantenha um humano em toda decisão consequente, registre cada entrada e saída do modelo e projete para os direitos do titular desde o esquema do banco de dados."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "O que setores regulados realmente mudam na construção",
+          "level": 2,
+          "paragraphs": [
+            "A regulação não decide se você lança IA. Ela decide o que você tem que conseguir provar depois de lançar. Em um app não regulado, uma saída errada é um bug que você corrige na sexta. Em uma vertical regulada, a mesma saída é um passivo com um fiscal de nome próprio, a ANPD, esperando do outro lado.",
+            "Quatro coisas mudam no momento em que a vertical é regulada."
+          ],
+          "bullets": [
+            "Explicabilidade. Você precisa declarar, em linguagem clara, os critérios e o procedimento por trás de qualquer decisão automatizada. O artigo 20 da LGPD dá ao titular o direito de pedir revisão de uma decisão tomada unicamente por tratamento automatizado, e o controlador tem que fornecer informações claras sobre os critérios usados.",
+            "Responsabilidade humana. Uma decisão consequente precisa de um humano com nome que possa anular o modelo e responder pelo resultado. Essa é a linha entre um copilot que recomenda e um sistema que decide sozinho.",
+            "Trilha de auditoria. Cada entrada, saída, versão de prompt e ação humana precisa ser registrada e reconstruível meses depois. Um regulador não aceita a resposta de que o modelo disse.",
+            "Tratamento de dados. Dados pessoais usados para treinar ou alimentar o modelo caem sob a LGPD. Base legal, limites de retenção e direitos do titular são restrições de construção desde o dia um, não recursos que você acopla antes do lançamento."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "As sanções administrativas da LGPD chegam a multa simples de até 2% do faturamento da empresa no Brasil no último exercício, limitada a R$50 milhões por infração, aplicada pela ANPD. Esse é o custo de não conseguir explicar uma saída.",
+            "attribution": "Artigo 52 da LGPD, aplicado pela ANPD"
+          }
+        },
+        {
+          "id": "the-playbook",
+          "heading": "Lance IA em um setor regulado em seis passos",
+          "level": 2,
+          "paragraphs": [
+            "Aqui está a sequência que um operador pode começar esta semana. Cada passo se prende a um gancho legal brasileiro específico, não a uma boa prática genérica de slide de fornecedor."
+          ],
+          "bullets": [
+            "Classifique o caso de uso por risco antes de escrever código de produto. O PL 2338/2023, o projeto de lei de IA do Brasil, usa uma classificação de risco no estilo do EU AI Act. O artigo 14 trata sistemas em recrutamento, educação, concessão de crédito e serviço público como de alto risco. Se sua funcionalidade cair ali, construa para o regime de alto risco agora, não depois da auditoria.",
+            "Mantenha um humano no circuito em qualquer decisão consequente. O modelo redige, pontua ou recomenda. Um humano qualificado confirma ou anula antes de a decisão chegar à pessoa, e essa ação é registrada como evento de primeira classe.",
+            "Registre cada entrada e saída do modelo. Prompt, versão do modelo, dados de entrada, saída, confiança, o revisor e a decisão final, tudo com carimbo de data e consultável. Esse é o registro que você entrega a um regulador.",
+            "Projete para os direitos do titular desde o esquema. Acesso, correção, exclusão e revisão de decisão automatizada pertencem ao modelo de dados antes do lançamento. Encaixar isso em um produto já no ar é onde os times queimam trimestres.",
+            "Restrinja o modelo com guardrails. Validação de entrada, filtros de saída, recusa de prompts fora de escopo e uma fila de revisão para saídas de baixa confiança ou de alto risco. O modelo trabalha dentro de uma cerca, não em campo aberto.",
+            "Rode uma avaliação de impacto algorítmico e a mantenha atual. O PL 2338 obriga operadores de alto risco a avaliar, documentar e monitorar continuamente. Amarre a avaliação a cada versão do modelo e trate-a como documento vivo."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Se você construir um controle primeiro, coloque um humano com nome em toda decisão consequente e registre a anulação. É a coisa mais barata de lançar e a primeira que um regulador pede para ver."
+          }
+        },
+        {
+          "id": "human-oversight",
+          "heading": "Supervisão humana e a trilha de auditoria",
+          "level": 3,
+          "paragraphs": [
+            "Supervisão humana e a trilha de auditoria são as duas mecânicas que separam um produto de IA regulado defensável de um processo judicial. Supervisão significa que um humano com nome vê a recomendação do modelo e as entradas por trás dela, pode anulá-la e tem essa anulação registrada. A trilha de auditoria significa que qualquer decisão passada pode ser reconstruída depois. Qual versão do modelo, qual prompt, quais dados, qual humano assinou embaixo.",
+            "É isso que o PL 2338 formaliza. Operadores de alto risco têm que manter estruturas de governança, rodar avaliações de conformidade e de impacto algorítmico e monitorar sistemas continuamente, com a ANPD prevista para coordenar o sistema nacional de governança de IA sob o projeto.",
+            "A falha que isso previne é a que encerra ventures. Um time lança um modelo opaco que faz uma chamada consequente. Um tribunal ou a ANPD pede que ele explique uma única saída. Ele não consegue. Sem registro, sem humano responsável, sem explicação. A construção de supervisão e auditoria é exatamente o que deixa você responder a essa pergunta com um documento em vez de um dar de ombros."
+          ]
+        },
+        {
+          "id": "lgpd-and-pl2338",
+          "heading": "Projetando para a LGPD e os níveis de risco do PL 2338",
+          "level": 2,
+          "paragraphs": [
+            "A LGPD é aplicada hoje. O PL 2338 está a caminho. Construa para os dois agora e você não é pego de surpresa quando a lei de IA passar.",
+            "A LGPD governa dados pessoais, e a ANPD é a fiscal. O artigo 20 dá o direito de revisão de decisão automatizada. O artigo 52 fixa as sanções, até 2% do faturamento no Brasil limitado a R$50 milhões por infração. São obrigações vivas, não futuras.",
+            "O PL 2338/2023 é o projeto de lei específico de IA. O Senado o aprovou em 10 de dezembro de 2024. Ele então foi para a Câmara dos Deputados, onde uma comissão especial de 33 membros foi criada em 4 de abril de 2025, com o deputado Aguinaldo Ribeiro como relator. Em meados de 2025 ele aguardava o parecer do relator, em regime de prioridade, com audiências públicas em andamento. Verifique o status atual na data de publicação, porque o projeto está em movimento ativo.",
+            "A consequência prática é simples. Mapeie sua funcionalidade a um nível de risco e construa os controles que o nível exige. Um assistente de scoring de crédito é de alto risco e precisa de avaliação de impacto, revisão humana e trilha de auditoria completa. Um copilot interno de redação de documentos que não toca dado pessoal e não faz decisão consequente é de baixo risco e pode lançar enxuto. Gastar esforço de alto risco em uma funcionalidade de baixo risco é um tipo de falha por si só."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O uso de IA entre empresas industriais brasileiras com 100 ou mais empregados subiu de 16.9% em 2022 para 41.9% em 2024. Conforme a adoção escala para decisões que afetam pessoas, a superfície de fiscalização da ANPD escala junto.",
+            "attribution": "IBGE, 2024"
+          }
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "Como o trabalho de conformidade vira moat e conjunto de dados",
+          "level": 2,
+          "paragraphs": [
+            "A construção de conformidade não é puro custo. Feita direito, ela vira o mesmo ativo proprietário que aciona o flywheel copilot, dado, capital. Cada decisão registrada, cada anulação humana, cada saída revisada é dado rotulado sobre como especialistas de fato fazem chamadas nesta vertical. Um concorrente generalista raspando dado público não consegue reproduzir isso. Veja como o [flywheel copilot, dado, capital](/library/copilot-to-data-to-fund-flywheel) transforma esse uso em capital.",
+            "O loop roda igual sob regulação. O copilot gera decisões e correções humanas. Essas correções são dado proprietário de treino e de avaliação. Esse dado afia o modelo e constrói um conjunto de avaliação específico do domínio que nenhum concorrente tem, que é o ponto real de como as [evals de domínio viram o moat](/library/domain-specific-evals-ai-moat). As evals e o registro pronto para auditoria viram a defensibilidade, e a tração sustenta a captação.",
+            "A cicatriz regulatória compõe na mesma direção. Operadores de domínio com mais de 10 anos de cicatriz do mercado brasileiro sabem quais controles um regulador de fato checa, não só o que o estatuto diz. Essa é a diferença entre um produto que passa numa auditoria e um que improvisa durante ela, e é uma vantagem que um generalista não cruza lendo a lei."
+          ]
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Modos de falha: automatizar uma decisão que você precisa defender",
+          "level": 2,
+          "paragraphs": [
+            "O modo de falha principal é automatizar uma decisão consequente que a venture não consegue defender. Um time lança um modelo opaco que aprova, nega, precifica ou pontua uma pessoa, sem humano responsável e sem trilha de auditoria, e depois não consegue explicar uma única saída a um regulador ou a um tribunal. Isso não é um bug. É o evento que tira o produto do ar e emite a multa.",
+            "O resto das falhas é mais silencioso e igualmente caro."
+          ],
+          "bullets": [
+            "Encaixar os direitos da LGPD depois do lançamento. Acesso, exclusão e revisão de decisão automatizada são empurrados para um sprint futuro. Aí chega um pedido de titular ou uma consulta da ANPD e não há fluxo para atender.",
+            "Medir a coisa errada. O time otimiza a acurácia do modelo em um benchmark genérico e nunca constrói a eval de domínio que reflete como um regulador julga uma decisão. Acurácia não é defensibilidade.",
+            "Dependência de fornecedor e de modelo. Um único modelo fechado sem registro de prompts e versões significa que uma mudança upstream altera decisões em silêncio, e não há registro do comportamento antigo.",
+            "Automação excessiva por si mesma. Tirar o humano de uma decisão para cortar custo, em uma vertical onde o humano é justamente o que torna a decisão defensável.",
+            "Tratar o modelo como o moat, que é [a armadilha do wrapper de IA](/library/ai-wrapper-trap-defensible-ai-native). O modelo é alugável por qualquer um. O moat é o dado proprietário de decisão, as evals de domínio e o fluxo pronto para auditoria que a construção de conformidade cria."
+          ]
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "Como a Avante constrói em domínios jurídico e de seguros",
+          "level": 2,
+          "paragraphs": [
+            "A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina, e o portfólio mostra este playbook rodando em verticais reguladas, descrito por domínio. Em valuation de ativo judicial, uma plataforma AI-native pontua e avalia créditos judiciais, um domínio onde cada chamada consequente tem que suportar escrutínio legal e o registro documentado é o produto. Em scoring de risco de seguro, uma API assíncrona de precificação e risco opera onde reguladores, padrões atuariais e a lei de proteção de dados pesam todos sobre uma única saída.",
+            "Nos dois, a restrição é idêntica. O modelo recomenda, um humano qualificado é responsável, cada decisão é registrada, e o conhecimento regulatório de mais de 10 anos de cicatriz do mercado brasileiro é a parte que um generalista não copia. Isso é complexidade regulatória virada em vantagem, somada a um playbook de Vale do Silício e capital de primeiro cheque montados no dia um. A Avante lança 3-4 ventures por ano pelo seu sistema de seis etapas de Research, Partner, Build, Traction, Revenue, Compound, alocando $500K-1.5M por venture, então o encanamento de conformidade e dado é resolvido uma vez e reusado. Isso roteia cerca de $300K-500K de capital efetivo por venture para produto em vez de overhead. Leia a tese em [/why-avante](/why-avante).",
+            "A lição vale para toda construção regulada. Os times que perdem são os que automatizam a decisão e torcem para ninguém perguntar. Os times que vencem conseguem entregar o registro, nomear o humano que assinou e explicar a saída. Em uma vertical regulada, conseguir responder a essa pergunta é o produto."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "O que muda ao lançar IA em setores regulados?",
+          "a": "Lançar IA em setores regulados muda o que você precisa conseguir provar, não se você pode lançar. Você precisa de explicabilidade, um humano com nome responsável por qualquer decisão consequente, uma trilha de auditoria de cada entrada e saída do modelo e tratamento de dados conforme a LGPD desde o dia um. A construção carrega essas restrições antes da primeira linha de código."
+        },
+        {
+          "q": "A LGPD se aplica a funcionalidades de IA no Brasil?",
+          "a": "Sim. A LGPD governa qualquer funcionalidade de IA que trata dados pessoais no Brasil, e a ANPD a aplica. O artigo 20 dá às pessoas o direito de pedir revisão de uma decisão tomada unicamente por tratamento automatizado, e o artigo 52 fixa multas de até 2% do faturamento no Brasil, limitadas a R$50 milhões por infração."
+        },
+        {
+          "q": "Como o PL 2338/2023 afeta lançar IA em setores regulados?",
+          "a": "O PL 2338/2023 é o projeto de lei de IA do Brasil, aprovado pelo Senado em dezembro de 2024 e agora na Câmara dos Deputados. Ele usa uma classificação de risco no estilo do EU AI Act que proíbe sistemas de risco excessivo e impõe avaliações de impacto, supervisão humana e monitoramento contínuo a sistemas de alto risco como crédito, recrutamento, educação e serviço público. Verifique o status atual na data de publicação, já que o projeto está em movimento ativo."
+        },
+        {
+          "q": "Como manter um humano no circuito de uma decisão de IA?",
+          "a": "Faça o modelo recomendar ou pontuar, e então exija que um humano qualificado com nome confirme ou anule antes de a decisão afetar uma pessoa, registrando essa ação como evento de primeira classe. Esse é o único controle que um regulador checa primeiro e o mais barato de construir. É também o que transforma uma chamada automatizada opaca em uma defensável."
+        },
+        {
+          "q": "Como o trabalho de conformidade vira um moat competitivo?",
+          "a": "Cada decisão registrada e anulação humana é dado proprietário e rotulado sobre como especialistas fazem chamadas em uma vertical regulada, o que aciona o flywheel copilot, dado, capital. Um generalista raspando dado público não consegue reproduzir isso. As evals de domínio e o registro pronto para auditoria que ele gera viram defensibilidade que nenhum modelo de prateleira tem."
+        }
+      ]
+    },
+    "es": {
+      "title": "Cómo Lanzar Funciones de IA en Sectores Regulados en América Latina",
+      "description": "Cómo lanzar IA en sectores regulados en América Latina sin ser bloqueado. Un playbook de LGPD, supervisión humana, trazabilidad y el PL 2338.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Lanzar IA en sectores regulados se reduce a una disciplina. Usted tiene que probar, después del hecho, exactamente cómo se tomó cualquier decisión consecuente. En un sector regulado de América Latina el fiscalizador tiene nombre, plazo legal y multa, así que la construcción cambia antes de que usted escriba la primera línea de código de producto.",
+            "Este es un playbook de construcción, no otro argumento de que la regulación es un moat. Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina, y sus ventures operan en verticales donde un regulador o un tribunal puede sacar un producto del aire en una tarde. Los movimientos que evitan eso son concretos. Clasifique el caso de uso por riesgo, mantenga un humano en toda decisión consecuente, registre cada entrada y salida del modelo, y diseñe para los derechos del titular desde el esquema de la base de datos."
+          ]
+        },
+        {
+          "id": "the-build-decision",
+          "heading": "Qué cambian realmente los sectores regulados en la construcción",
+          "level": 2,
+          "paragraphs": [
+            "La regulación no decide si usted lanza IA. Decide qué tiene que poder probar una vez que lo hizo. En una app no regulada, una salida equivocada es un bug que arregla el viernes. En una vertical regulada, la misma salida es un pasivo con un fiscalizador de nombre propio, la ANPD, esperando del otro lado.",
+            "Cuatro cosas cambian en el momento en que la vertical es regulada."
+          ],
+          "bullets": [
+            "Explicabilidad. Usted tiene que declarar, en lenguaje claro, los criterios y el procedimiento detrás de cualquier decisión automatizada. El artículo 20 de la LGPD le da al titular el derecho de pedir revisión de una decisión tomada únicamente por tratamiento automatizado, y el controlador tiene que entregar información clara sobre los criterios usados.",
+            "Responsabilidad humana. Una decisión consecuente necesita un humano con nombre que pueda anular el modelo y responder por el resultado. Esa es la línea entre un copilot que recomienda y un sistema que decide solo.",
+            "Trazabilidad. Cada entrada, salida, versión de prompt y acción humana tiene que quedar registrada y ser reconstruible meses después. Un regulador no acepta la respuesta de que el modelo lo dijo.",
+            "Tratamiento de datos. Los datos personales usados para entrenar o alimentar el modelo caen bajo la LGPD. Base legal, límites de retención y derechos del titular son restricciones de construcción desde el día uno, no funciones que usted acopla antes del lanzamiento."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Las sanciones administrativas de la LGPD llegan a una multa simple de hasta 2% de los ingresos de la empresa en Brasil en el ejercicio anterior, limitada a R$50 millones por infracción, aplicada por la ANPD. Ese es el costo de no poder explicar una salida.",
+            "attribution": "Artículo 52 de la LGPD, aplicado por la ANPD"
+          }
+        },
+        {
+          "id": "the-playbook",
+          "heading": "Lanza IA en un sector regulado en seis pasos",
+          "level": 2,
+          "paragraphs": [
+            "Esta es la secuencia que un operador puede empezar esta semana. Cada paso se ata a un gancho legal brasileño específico, no a una buena práctica genérica de un slide de proveedor."
+          ],
+          "bullets": [
+            "Clasifique el caso de uso por riesgo antes de escribir código de producto. El PL 2338/2023, el proyecto de ley de IA de Brasil, usa una clasificación de riesgo al estilo del EU AI Act. El artículo 14 trata los sistemas en reclutamiento, educación, otorgamiento de crédito y servicio público como de alto riesgo. Si su función cae ahí, construya para el régimen de alto riesgo ahora, no después de la auditoría.",
+            "Mantenga un humano en el circuito en cualquier decisión consecuente. El modelo redacta, puntúa o recomienda. Un humano calificado confirma o anula antes de que la decisión llegue a la persona, y esa acción se registra como evento de primera clase.",
+            "Registre cada entrada y salida del modelo. Prompt, versión del modelo, datos de entrada, salida, confianza, el revisor y la decisión final, todo con sello de fecha y consultable. Ese es el registro que usted le entrega a un regulador.",
+            "Diseñe para los derechos del titular desde el esquema. Acceso, corrección, eliminación y revisión de decisión automatizada pertenecen al modelo de datos antes del lanzamiento. Encajar eso en un producto ya en vivo es donde los equipos queman trimestres.",
+            "Restrinja el modelo con guardrails. Validación de entrada, filtros de salida, rechazo de prompts fuera de alcance y una cola de revisión para salidas de baja confianza o de alto riesgo. El modelo trabaja dentro de una cerca, no en campo abierto.",
+            "Corra una evaluación de impacto algorítmico y manténgala vigente. El PL 2338 obliga a los operadores de alto riesgo a evaluar, documentar y monitorear de forma continua. Amarre la evaluación a cada versión del modelo y trátela como documento vivo."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Si usted construye un control primero, ponga un humano con nombre en toda decisión consecuente y registre la anulación. Es lo más barato de lanzar y lo primero que un regulador pide ver."
+          }
+        },
+        {
+          "id": "human-oversight",
+          "heading": "Supervisión humana y la trazabilidad",
+          "level": 3,
+          "paragraphs": [
+            "La supervisión humana y la trazabilidad son las dos mecánicas que separan un producto de IA regulado defendible de una demanda judicial. Supervisión significa que un humano con nombre ve la recomendación del modelo y las entradas detrás de ella, puede anularla y tiene esa anulación registrada. La trazabilidad significa que cualquier decisión pasada puede reconstruirse después. Qué versión del modelo, qué prompt, qué datos, qué humano firmó abajo.",
+            "Es esto lo que el PL 2338 formaliza. Los operadores de alto riesgo tienen que mantener estructuras de gobernanza, correr evaluaciones de conformidad y de impacto algorítmico, y monitorear los sistemas de forma continua, con la ANPD prevista para coordinar el sistema nacional de gobernanza de IA bajo el proyecto.",
+            "La falla que esto previene es la que termina ventures. Un equipo lanza un modelo opaco que hace una llamada consecuente. Un tribunal o la ANPD le pide que explique una sola salida. No puede. Sin registro, sin humano responsable, sin explicación. La construcción de supervisión y trazabilidad es exactamente lo que le permite responder esa pregunta con un documento en vez de un encogimiento de hombros."
+          ]
+        },
+        {
+          "id": "lgpd-and-pl2338",
+          "heading": "Diseñando para la LGPD y los niveles de riesgo del PL 2338",
+          "level": 2,
+          "paragraphs": [
+            "La LGPD se aplica hoy. El PL 2338 viene en camino. Construya para los dos ahora y no lo toman por sorpresa cuando pase la ley de IA.",
+            "La LGPD gobierna los datos personales, y la ANPD es la fiscalizadora. El artículo 20 da el derecho de revisión de decisión automatizada. El artículo 52 fija las sanciones, hasta 2% de los ingresos en Brasil limitado a R$50 millones por infracción. Son obligaciones vivas, no futuras.",
+            "El PL 2338/2023 es el proyecto de ley específico de IA. El Senado lo aprobó el 10 de diciembre de 2024. Luego pasó a la Cámara de Diputados, donde se creó una comisión especial de 33 miembros el 4 de abril de 2025, con el diputado Aguinaldo Ribeiro como relator. A mediados de 2025 esperaba el dictamen del relator, en régimen de prioridad, con audiencias públicas en curso. Verifique el estado actual en la fecha de publicación, porque el proyecto está en movimiento activo.",
+            "La consecuencia práctica es simple. Mapee su función a un nivel de riesgo y construya los controles que ese nivel exige. Un asistente de scoring de crédito es de alto riesgo y necesita evaluación de impacto, revisión humana y trazabilidad completa. Un copilot interno de redacción de documentos que no toca dato personal y no hace decisión consecuente es de bajo riesgo y puede lanzar liviano. Gastar esfuerzo de alto riesgo en una función de bajo riesgo es un tipo de falla por sí mismo."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "El uso de IA entre empresas industriales brasileñas con 100 o más empleados subió de 16.9% en 2022 a 41.9% en 2024. Conforme la adopción escala hacia decisiones que afectan a personas, la superficie de fiscalización de la ANPD escala con ella.",
+            "attribution": "IBGE, 2024"
+          }
+        },
+        {
+          "id": "usage-into-moat",
+          "heading": "Cómo el trabajo de cumplimiento se vuelve moat y conjunto de datos",
+          "level": 2,
+          "paragraphs": [
+            "La construcción de cumplimiento no es puro costo. Hecha bien, se vuelve el mismo activo propietario que acciona el flywheel copilot, dato, capital. Cada decisión registrada, cada anulación humana, cada salida revisada es dato etiquetado sobre cómo los expertos hacen llamadas de verdad en esta vertical. Un competidor generalista raspando dato público no puede reproducirlo. Vea cómo el [flywheel copilot, dato, capital](/library/copilot-to-data-to-fund-flywheel) convierte ese uso en capital.",
+            "El loop corre igual bajo regulación. El copilot genera decisiones y correcciones humanas. Esas correcciones son dato propietario de entrenamiento y de evaluación. Ese dato afila el modelo y construye un conjunto de evaluación específico del dominio que ningún competidor tiene, que es el punto real de cómo las [evals de dominio se vuelven el moat](/library/domain-specific-evals-ai-moat). Las evals y el registro listo para auditoría se vuelven la defensibilidad, y la tracción sostiene el levantamiento.",
+            "La cicatriz regulatoria se compone en la misma dirección. Los operadores de dominio con más de 10 años de cicatriz del mercado brasileño saben qué controles revisa de verdad un regulador, no solo lo que dice el estatuto. Esa es la diferencia entre un producto que pasa una auditoría y uno que improvisa durante ella, y es una ventaja que un generalista no cruza leyendo la ley."
+          ]
+        },
+        {
+          "id": "failure-modes",
+          "heading": "Modos de falla: automatizar una decisión que debes poder defender",
+          "level": 2,
+          "paragraphs": [
+            "El modo de falla principal es automatizar una decisión consecuente que la venture no puede defender. Un equipo lanza un modelo opaco que aprueba, niega, precifica o puntúa a una persona, sin humano responsable y sin trazabilidad, y luego no puede explicar una sola salida a un regulador o a un tribunal. Eso no es un bug. Es el evento que saca el producto del aire y emite la multa.",
+            "El resto de las fallas es más silencioso e igual de caro."
+          ],
+          "bullets": [
+            "Encajar los derechos de la LGPD después del lanzamiento. Acceso, eliminación y revisión de decisión automatizada se empujan a un sprint futuro. Luego llega una solicitud de titular o una consulta de la ANPD y no hay flujo para atenderla.",
+            "Medir lo equivocado. El equipo optimiza la exactitud del modelo en un benchmark genérico y nunca construye la eval de dominio que refleja cómo un regulador juzga una decisión. La exactitud no es defensibilidad.",
+            "Dependencia de proveedor y de modelo. Un único modelo cerrado sin registro de prompts y versiones significa que un cambio upstream altera decisiones en silencio, y no hay registro del comportamiento anterior.",
+            "Sobreautomatización por sí misma. Sacar al humano de una decisión para recortar costo, en una vertical donde el humano es justamente lo que hace la decisión defendible.",
+            "Tratar el modelo como el moat, que es [la trampa del wrapper de IA](/library/ai-wrapper-trap-defensible-ai-native). El modelo es alquilable por cualquiera. El moat es el dato propietario de decisión, las evals de dominio y el flujo listo para auditoría que la construcción de cumplimiento crea."
+          ]
+        },
+        {
+          "id": "how-avante-builds",
+          "heading": "Cómo Avante construye en dominios judicial y de seguros",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina, y el portafolio muestra este playbook corriendo en verticales reguladas, descrito por dominio. En valuación de activo judicial, una plataforma AI-native puntúa y valúa créditos judiciales, un dominio donde cada llamada consecuente tiene que resistir escrutinio legal y el registro documentado es el producto. En scoring de riesgo de seguro, una API asíncrona de precificación y riesgo opera donde reguladores, estándares actuariales y la ley de protección de datos pesan todos sobre una sola salida.",
+            "En los dos, la restricción es idéntica. El modelo recomienda, un humano calificado es responsable, cada decisión se registra, y el conocimiento regulatorio de más de 10 años de cicatriz del mercado brasileño es la parte que un generalista no copia. Eso es complejidad regulatoria convertida en ventaja, sumada a un playbook de Silicon Valley y capital de primer cheque ensamblados el día uno. Avante lanza 3-4 ventures por año mediante su sistema de seis etapas de Research, Partner, Build, Traction, Revenue, Compound, desplegando $500K-1.5M por venture, así que la plomería de cumplimiento y de dato se resuelve una vez y se reutiliza. Eso enruta cerca de $300K-500K de capital efectivo por venture hacia producto en vez de overhead. Lea la tesis en [/why-avante](/why-avante).",
+            "La lección vale para toda construcción regulada. Los equipos que pierden son los que automatizan la decisión y rezan para que nadie pregunte. Los equipos que ganan pueden entregar el registro, nombrar al humano que firmó y explicar la salida. En una vertical regulada, poder responder esa pregunta es el producto."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Qué cambia al lanzar IA en sectores regulados?",
+          "a": "Lanzar IA en sectores regulados cambia lo que usted tiene que poder probar, no si puede lanzar. Necesita explicabilidad, un humano con nombre responsable por cualquier decisión consecuente, una trazabilidad de cada entrada y salida del modelo, y tratamiento de datos conforme a la LGPD desde el día uno. La construcción carga esas restricciones antes de la primera línea de código."
+        },
+        {
+          "q": "¿La LGPD aplica a funciones de IA en Brasil?",
+          "a": "Sí. La LGPD gobierna cualquier función de IA que trate datos personales en Brasil, y la ANPD la aplica. El artículo 20 le da a las personas el derecho de pedir revisión de una decisión tomada únicamente por tratamiento automatizado, y el artículo 52 fija multas de hasta 2% de los ingresos en Brasil, limitadas a R$50 millones por infracción."
+        },
+        {
+          "q": "¿Cómo afecta el PL 2338/2023 al lanzar IA en sectores regulados?",
+          "a": "El PL 2338/2023 es el proyecto de ley de IA de Brasil, aprobado por el Senado en diciembre de 2024 y ahora en la Cámara de Diputados. Usa una clasificación de riesgo al estilo del EU AI Act que prohíbe los sistemas de riesgo excesivo e impone evaluaciones de impacto, supervisión humana y monitoreo continuo a los sistemas de alto riesgo como crédito, reclutamiento, educación y servicio público. Verifique el estado actual en la fecha de publicación, ya que el proyecto está en movimiento activo."
+        },
+        {
+          "q": "¿Cómo se mantiene un humano en el circuito de una decisión de IA?",
+          "a": "Haga que el modelo recomiende o puntúe, y luego exija que un humano calificado con nombre confirme o anule antes de que la decisión afecte a una persona, registrando esa acción como evento de primera clase. Ese es el único control que un regulador revisa primero y el más barato de construir. Es también lo que convierte una llamada automatizada opaca en una defendible."
+        },
+        {
+          "q": "¿Cómo se vuelve el trabajo de cumplimiento un moat competitivo?",
+          "a": "Cada decisión registrada y anulación humana es dato propietario y etiquetado sobre cómo los expertos hacen llamadas en una vertical regulada, lo que acciona el flywheel copilot, dato, capital. Un generalista raspando dato público no puede reproducirlo. Las evals de dominio y el registro listo para auditoría que genera se vuelven defensibilidad que ningún modelo de estante tiene."
+        }
+      ]
+    },
+    "ogImage": "/og/ship-ai-regulated-latam-vertical-playbook.png"
   },
   {
     "slug": "studio-vs-accelerator-vs-vc",

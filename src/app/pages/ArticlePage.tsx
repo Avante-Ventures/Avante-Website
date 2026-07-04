@@ -1196,6 +1196,151 @@ function articleTaxonomy(slug: string): {
           COMMON_AVANTE,
         ],
       }
+    // === ai-build-playbooks collection (Jul 2026) ===
+    case 'instrument-copilot-proprietary-data-playbook':
+      return {
+        keywords: ['AI copilot data capture', 'proprietary data', 'data flywheel', 'event schema', 'copilot to data to fund', 'LGPD', 'AI defensibility'],
+        about: [
+          { '@type': 'Thing', name: 'AI copilot' },
+          { '@type': 'Thing', name: 'Proprietary data' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Gartner', sameAs: 'https://www.gartner.com' },
+          { '@type': 'Organization', name: 'Stanford HAI', sameAs: 'https://hai.stanford.edu' },
+          { '@type': 'Organization', name: 'Autoridade Nacional de Protecao de Dados', sameAs: 'https://www.gov.br/anpd' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'build-ai-eval-harness-playbook':
+      return {
+        keywords: ['AI eval harness', 'LLM evaluations', 'domain evals', 'model-agnostic AI', 'AI quality', 'vertical AI', 'defensibility'],
+        about: [
+          { '@type': 'Thing', name: 'AI evaluation' },
+          { '@type': 'Thing', name: 'Software testing' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Anthropic', sameAs: 'https://www.anthropic.com' },
+          { '@type': 'Organization', name: 'OpenAI', sameAs: 'https://openai.com' },
+          { '@type': 'Organization', name: 'Google Cloud DORA', sameAs: 'https://dora.dev' },
+          { '@type': 'Organization', name: 'Epoch AI', sameAs: 'https://epochai.org' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'ai-coding-agents-zero-to-one-playbook':
+      return {
+        keywords: ['AI coding agents', 'eval-gated development', 'zero to one', 'developer productivity', 'AI-native build', 'code quality'],
+        about: [
+          { '@type': 'Thing', name: 'AI coding assistant' },
+          { '@type': 'Thing', name: 'Software development' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'METR', sameAs: 'https://metr.org' },
+          { '@type': 'Organization', name: 'Stack Overflow', sameAs: 'https://stackoverflow.com' },
+          { '@type': 'Organization', name: 'Google Cloud DORA', sameAs: 'https://dora.dev' },
+          { '@type': 'Organization', name: 'GitHub', sameAs: 'https://github.com' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'services-to-productized-ai-copilot-playbook':
+      return {
+        keywords: ['productize a service with AI', 'services as software', 'AI copilot', 'vertical AI', 'services economy Brazil', 'productization'],
+        about: [
+          { '@type': 'Thing', name: 'Productization' },
+          { '@type': 'Thing', name: 'AI copilot' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Foundation Capital', sameAs: 'https://foundationcapital.com' },
+          { '@type': 'Organization', name: 'Andreessen Horowitz', sameAs: 'https://a16z.com' },
+          { '@type': 'Organization', name: 'IBGE', sameAs: 'https://www.ibge.gov.br' },
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'ship-ai-regulated-latam-vertical-playbook':
+      return {
+        keywords: ['shipping AI in regulated industries', 'LGPD', 'PL 2338', 'ANPD', 'regulated AI', 'LATAM AI compliance', 'AI governance'],
+        about: [
+          { '@type': 'Thing', name: 'AI regulation' },
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Autoridade Nacional de Protecao de Dados', sameAs: 'https://www.gov.br/anpd' },
+          { '@type': 'Organization', name: 'Congresso Nacional do Brasil', sameAs: 'https://www.congressonacional.leg.br' },
+          { '@type': 'Organization', name: 'IBGE', sameAs: 'https://www.ibge.gov.br' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'rag-vs-finetune-vs-long-context-playbook':
+      return {
+        keywords: ['RAG vs fine-tuning', 'retrieval augmented generation', 'fine-tuning', 'long context', 'LLM build decision', 'data moat'],
+        about: [
+          { '@type': 'Thing', name: 'Retrieval-augmented generation' },
+          { '@type': 'Thing', name: 'Fine-tuning' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'OpenAI', sameAs: 'https://openai.com' },
+          { '@type': 'Organization', name: 'Anthropic', sameAs: 'https://www.anthropic.com' },
+          { '@type': 'Organization', name: 'Microsoft', sameAs: 'https://www.microsoft.com' },
+          { '@type': 'Organization', name: 'Andreessen Horowitz', sameAs: 'https://a16z.com' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'bootstrap-ai-data-cold-start-playbook':
+      return {
+        keywords: ['AI cold start problem', 'bootstrap data', 'synthetic data', 'human in the loop', 'data flywheel', 'model collapse'],
+        about: [
+          { '@type': 'Thing', name: 'Cold start problem', sameAs: 'https://en.wikipedia.org/wiki/Cold_start_(recommender_systems)' },
+          { '@type': 'Thing', name: 'Synthetic data' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Nature', sameAs: 'https://www.nature.com' },
+          { '@type': 'Organization', name: 'Gartner', sameAs: 'https://www.gartner.com' },
+          { '@type': 'Organization', name: 'IBGE', sameAs: 'https://www.ibge.gov.br' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'model-routing-inference-cost-playbook':
+      return {
+        keywords: ['LLM inference cost', 'model routing', 'model cascade', 'prompt caching', 'capital efficiency', 'LLMflation'],
+        about: [
+          { '@type': 'Thing', name: 'LLM inference cost' },
+          { '@type': 'Thing', name: 'Model routing' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Andreessen Horowitz', sameAs: 'https://a16z.com' },
+          { '@type': 'Organization', name: 'Epoch AI', sameAs: 'https://epochai.org' },
+          { '@type': 'Organization', name: 'OpenAI', sameAs: 'https://openai.com' },
+          { '@type': 'Organization', name: 'Anthropic', sameAs: 'https://www.anthropic.com' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'lean-ai-build-stack-playbook':
+      return {
+        keywords: ['lean AI build stack', 'build vs buy', 'AI infrastructure', 'capital efficiency', 'vector database', 'AI-native venture'],
+        about: [
+          { '@type': 'Thing', name: 'Technology stack' },
+          { '@type': 'Thing', name: 'Build versus buy' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Andreessen Horowitz', sameAs: 'https://a16z.com' },
+          { '@type': 'Organization', name: 'Epoch AI', sameAs: 'https://epochai.org' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'ai-customer-discovery-b2b-playbook':
+      return {
+        keywords: ['AI customer discovery', 'B2B customer discovery', 'customer development', 'interview synthesis', 'venture validation'],
+        about: [
+          { '@type': 'Thing', name: 'Customer development' },
+          { '@type': 'Thing', name: 'Market validation' },
+        ],
+        mentions: [
+          { '@type': 'Person', name: 'Steve Blank', sameAs: 'https://steveblank.com' },
+          { '@type': 'Organization', name: 'Gartner', sameAs: 'https://www.gartner.com' },
+          { '@type': 'Organization', name: 'Stack Overflow', sameAs: 'https://stackoverflow.com' },
+          COMMON_AVANTE,
+        ],
+      }
     default:
       return { keywords: [], about: [], mentions: [COMMON_AVANTE] }
   }

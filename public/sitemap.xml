@@ -380,7 +380,7 @@
   <!-- 9. Global Venture Studio Data (DRAFT) -->
 
   <!-- CONTENT-ENGINE:START (managed by content-engine/merge.py - do not edit by hand) -->
-  <!-- 31 engine article(s) x 3 locales. Generated from content-engine/outputs. Edit the engine, not this block. -->
+  <!-- 41 engine article(s) x 3 locales. Generated from content-engine/outputs. Edit the engine, not this block. -->
   <url>
     <loc>https://avanteventures.com/en/library/accelerator-vs-vc-founder-guide</loc>
     <lastmod>2026-06-21</lastmod>
@@ -440,6 +440,66 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/ai-agents-vs-copilots-b2b"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/ai-agents-vs-copilots-b2b"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/ai-agents-vs-copilots-b2b"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/en/library/ai-coding-agents-zero-to-one-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/ai-coding-agents-zero-to-one-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/ai-coding-agents-zero-to-one-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/ai-coding-agents-zero-to-one-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/ai-coding-agents-zero-to-one-playbook"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/ai-coding-agents-zero-to-one-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/ai-coding-agents-zero-to-one-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/ai-coding-agents-zero-to-one-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/ai-coding-agents-zero-to-one-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/ai-coding-agents-zero-to-one-playbook"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/ai-coding-agents-zero-to-one-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/ai-coding-agents-zero-to-one-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/ai-coding-agents-zero-to-one-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/ai-coding-agents-zero-to-one-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/ai-coding-agents-zero-to-one-playbook"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/en/library/ai-customer-discovery-b2b-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/ai-customer-discovery-b2b-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/ai-customer-discovery-b2b-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/ai-customer-discovery-b2b-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/ai-customer-discovery-b2b-playbook"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/ai-customer-discovery-b2b-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/ai-customer-discovery-b2b-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/ai-customer-discovery-b2b-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/ai-customer-discovery-b2b-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/ai-customer-discovery-b2b-playbook"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/ai-customer-discovery-b2b-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/ai-customer-discovery-b2b-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/ai-customer-discovery-b2b-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/ai-customer-discovery-b2b-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/ai-customer-discovery-b2b-playbook"/>
   </url>
   <url>
     <loc>https://avanteventures.com/en/library/ai-infrastructure-cost-curve-latam</loc>
@@ -560,6 +620,36 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/applied-ai-vs-generative-ai-b2b"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/applied-ai-vs-generative-ai-b2b"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/applied-ai-vs-generative-ai-b2b"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/en/library/bootstrap-ai-data-cold-start-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/bootstrap-ai-data-cold-start-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/bootstrap-ai-data-cold-start-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/bootstrap-ai-data-cold-start-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/bootstrap-ai-data-cold-start-playbook"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/bootstrap-ai-data-cold-start-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/bootstrap-ai-data-cold-start-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/bootstrap-ai-data-cold-start-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/bootstrap-ai-data-cold-start-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/bootstrap-ai-data-cold-start-playbook"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/bootstrap-ai-data-cold-start-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/bootstrap-ai-data-cold-start-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/bootstrap-ai-data-cold-start-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/bootstrap-ai-data-cold-start-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/bootstrap-ai-data-cold-start-playbook"/>
   </url>
   <url>
     <loc>https://avanteventures.com/en/library/brazil-ai-agriculture-agritech-opportunity</loc>
@@ -832,6 +922,36 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/brazilian-regulatory-complexity-as-moat"/>
   </url>
   <url>
+    <loc>https://avanteventures.com/en/library/build-ai-eval-harness-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/build-ai-eval-harness-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/build-ai-eval-harness-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/build-ai-eval-harness-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/build-ai-eval-harness-playbook"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/build-ai-eval-harness-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/build-ai-eval-harness-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/build-ai-eval-harness-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/build-ai-eval-harness-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/build-ai-eval-harness-playbook"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/build-ai-eval-harness-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/build-ai-eval-harness-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/build-ai-eval-harness-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/build-ai-eval-harness-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/build-ai-eval-harness-playbook"/>
+  </url>
+  <url>
     <loc>https://avanteventures.com/en/library/copilot-to-data-to-fund-flywheel</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>yearly</changefreq>
@@ -952,6 +1072,66 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/infinity-constellation-ai-studio-thesis"/>
   </url>
   <url>
+    <loc>https://avanteventures.com/en/library/instrument-copilot-proprietary-data-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/instrument-copilot-proprietary-data-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/instrument-copilot-proprietary-data-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/instrument-copilot-proprietary-data-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/instrument-copilot-proprietary-data-playbook"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/instrument-copilot-proprietary-data-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/instrument-copilot-proprietary-data-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/instrument-copilot-proprietary-data-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/instrument-copilot-proprietary-data-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/instrument-copilot-proprietary-data-playbook"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/instrument-copilot-proprietary-data-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/instrument-copilot-proprietary-data-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/instrument-copilot-proprietary-data-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/instrument-copilot-proprietary-data-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/instrument-copilot-proprietary-data-playbook"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/en/library/lean-ai-build-stack-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/lean-ai-build-stack-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/lean-ai-build-stack-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/lean-ai-build-stack-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/lean-ai-build-stack-playbook"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/lean-ai-build-stack-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/lean-ai-build-stack-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/lean-ai-build-stack-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/lean-ai-build-stack-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/lean-ai-build-stack-playbook"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/lean-ai-build-stack-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/lean-ai-build-stack-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/lean-ai-build-stack-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/lean-ai-build-stack-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/lean-ai-build-stack-playbook"/>
+  </url>
+  <url>
     <loc>https://avanteventures.com/en/library/lp-allocation-case-venture-studios</loc>
     <lastmod>2026-06-15</lastmod>
     <changefreq>yearly</changefreq>
@@ -1012,6 +1192,36 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/measuring-studio-performance"/>
   </url>
   <url>
+    <loc>https://avanteventures.com/en/library/model-routing-inference-cost-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/model-routing-inference-cost-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/model-routing-inference-cost-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/model-routing-inference-cost-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/model-routing-inference-cost-playbook"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/model-routing-inference-cost-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/model-routing-inference-cost-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/model-routing-inference-cost-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/model-routing-inference-cost-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/model-routing-inference-cost-playbook"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/model-routing-inference-cost-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/model-routing-inference-cost-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/model-routing-inference-cost-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/model-routing-inference-cost-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/model-routing-inference-cost-playbook"/>
+  </url>
+  <url>
     <loc>https://avanteventures.com/en/library/operating-partner-economics</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>yearly</changefreq>
@@ -1040,6 +1250,96 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/operating-partner-economics"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/operating-partner-economics"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/operating-partner-economics"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/en/library/rag-vs-finetune-vs-long-context-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/rag-vs-finetune-vs-long-context-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/rag-vs-finetune-vs-long-context-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/rag-vs-finetune-vs-long-context-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/rag-vs-finetune-vs-long-context-playbook"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/rag-vs-finetune-vs-long-context-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/rag-vs-finetune-vs-long-context-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/rag-vs-finetune-vs-long-context-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/rag-vs-finetune-vs-long-context-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/rag-vs-finetune-vs-long-context-playbook"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/rag-vs-finetune-vs-long-context-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/rag-vs-finetune-vs-long-context-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/rag-vs-finetune-vs-long-context-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/rag-vs-finetune-vs-long-context-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/rag-vs-finetune-vs-long-context-playbook"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/en/library/services-to-productized-ai-copilot-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/services-to-productized-ai-copilot-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/services-to-productized-ai-copilot-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/services-to-productized-ai-copilot-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/services-to-productized-ai-copilot-playbook"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/services-to-productized-ai-copilot-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/services-to-productized-ai-copilot-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/services-to-productized-ai-copilot-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/services-to-productized-ai-copilot-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/services-to-productized-ai-copilot-playbook"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/services-to-productized-ai-copilot-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/services-to-productized-ai-copilot-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/services-to-productized-ai-copilot-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/services-to-productized-ai-copilot-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/services-to-productized-ai-copilot-playbook"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/en/library/ship-ai-regulated-latam-vertical-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/ship-ai-regulated-latam-vertical-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/ship-ai-regulated-latam-vertical-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/ship-ai-regulated-latam-vertical-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/ship-ai-regulated-latam-vertical-playbook"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/ship-ai-regulated-latam-vertical-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/ship-ai-regulated-latam-vertical-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/ship-ai-regulated-latam-vertical-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/ship-ai-regulated-latam-vertical-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/ship-ai-regulated-latam-vertical-playbook"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/ship-ai-regulated-latam-vertical-playbook</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/ship-ai-regulated-latam-vertical-playbook"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/ship-ai-regulated-latam-vertical-playbook"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/ship-ai-regulated-latam-vertical-playbook"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/ship-ai-regulated-latam-vertical-playbook"/>
   </url>
   <url>
     <loc>https://avanteventures.com/en/library/studio-vs-accelerator-vs-vc</loc>
