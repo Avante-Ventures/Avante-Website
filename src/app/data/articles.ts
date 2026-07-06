@@ -8279,8 +8279,8 @@ const engineArticles: Article[] = [
     "datePublished": "2026-06-02",
     "isPublished": true,
     "en": {
-      "title": "Where the Moat Lives Once the Model Is a Commodity",
-      "description": "Rent the model, own the moat. A playbook on proprietary data, data network effects, and process power in vertical AI, with the anti-moats to avoid.",
+      "title": "Data Network Effects in Vertical AI: The Real Moat",
+      "description": "Data network effects are the moat in vertical AI: each customer's usage improves the product for the next, so it compounds faster than data decays.",
       "sections": [
         {
           "paragraphs": [
@@ -10209,7 +10209,7 @@ const engineArticles: Article[] = [
     "datePublished": "2026-06-02",
     "isPublished": true,
     "en": {
-      "title": "How to Actually Measure a Venture Studio",
+      "title": "Venture Studio Performance Metrics: IRR vs TVPI vs DPI",
       "description": "IRR flatters, TVPI is paper, DPI is the only cash truth. A guide to venture studio performance metrics, the survivorship traps, and why the ~50% benchmark holds up.",
       "sections": [
         {
@@ -12830,8 +12830,8 @@ const engineArticles: Article[] = [
     "datePublished": "2026-06-09",
     "isPublished": true,
     "en": {
-      "title": "When Building Is Cheap, Taste Is the Moat",
-      "description": "AI collapsed the cost of building. Tony Fadell's career explains what becomes scarce next, and where an AI-native company's defensibility actually lives.",
+      "title": "Taste Is the Moat When AI Makes Building Cheap",
+      "description": "Taste is the moat because AI made building cheap: the scarce, defensible edge is judgment about what to build, and what to leave out.",
       "sections": [
         {
           "paragraphs": [
@@ -13011,8 +13011,8 @@ const engineArticles: Article[] = [
     "isPublished": true,
     "ogImage": "/og/venture-builders-brazil-vs-usa-benchmark.png",
     "en": {
-      "title": "Venture Studio Benchmark: The US Track Record and Brazil's Opening",
-      "description": "A benchmark of the studios that built the model in the US and Europe, what it returns, and why Brazil is the open lane for an AI-native one.",
+      "title": "Venture Builders: Brazil vs USA Benchmark",
+      "description": "The US and Europe built the venture studio model; Brazil has almost none yet. A benchmark of the proven track record and why Brazil is the open lane.",
       "sections": [
         {
           "paragraphs": [
@@ -13271,8 +13271,8 @@ const engineArticles: Article[] = [
     "ogImage": "/og/venture-studio-founder-economics-latam.png",
     "isPublished": true,
     "en": {
-      "title": "The Founder Side of the Venture Studio Deal in LATAM",
-      "description": "A studio takes founder equity early. When that trade pays a LATAM operator, when it does not, and the numbers to run before signing.",
+      "title": "Venture Studio Founder Economics: The LATAM Equity Trade",
+      "description": "A venture studio's equity trade pays only when it removes real risk and time. What a LATAM founder gives up, what they get, and the math before you sign.",
       "sections": [
         {
           "paragraphs": [
