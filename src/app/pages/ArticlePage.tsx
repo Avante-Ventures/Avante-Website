@@ -776,6 +776,24 @@ function articleTaxonomy(slug: string): {
     sameAs: 'https://avanteventures.com',
   }
   switch (slug) {
+    case 'ai-capex-boom-application-layer-opportunity':
+      return {
+        keywords: ['AI capex 2026', 'AI infrastructure spending', 'AI models commodity', 'AI application layer', 'AI value chain', 'LATAM AI startups', 'venture studio AI'],
+        about: [
+          { '@type': 'Thing', name: 'AI infrastructure capital expenditure' },
+          { '@type': 'Thing', name: 'Large language models', sameAs: 'https://en.wikipedia.org/wiki/Large_language_model' },
+        ],
+        mentions: [
+          { '@type': 'Person', name: 'Benedict Evans', sameAs: 'https://www.ben-evans.com' },
+          { '@type': 'Organization', name: 'Microsoft', sameAs: 'https://www.microsoft.com' },
+          { '@type': 'Organization', name: 'Alphabet', sameAs: 'https://abc.xyz' },
+          { '@type': 'Organization', name: 'Meta', sameAs: 'https://www.meta.com' },
+          { '@type': 'Organization', name: 'OpenAI', sameAs: 'https://openai.com' },
+          { '@type': 'Organization', name: 'Anthropic', sameAs: 'https://www.anthropic.com' },
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+          COMMON_AVANTE,
+        ],
+      }
     case 'venture-studios-outperform-traditional-vc':
       return {
         keywords: ['venture studio', 'venture capital', 'IRR', 'GSSN', 'startup studio model', 'venture building', 'Brazil VC'],

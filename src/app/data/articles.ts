@@ -1767,7 +1767,7 @@ const articleSiggaCaseStudy: Article = {
 // ─────────────────────────────────────────────────────────────────────
 
 // === CONTENT-ENGINE:START (managed by content-engine/merge.py — do not edit by hand) ===
-// 41 article(s) generated from content-engine/outputs. Edit the engine, not this block.
+// 42 article(s) generated from content-engine/outputs. Edit the engine, not this block.
 const engineArticles: Article[] = [
   {
     "slug": "accelerator-vs-vc-founder-guide",
@@ -2419,6 +2419,389 @@ const engineArticles: Article[] = [
         }
       ]
     }
+  },
+  {
+    "slug": "ai-capex-boom-application-layer-opportunity",
+    "category": "ai",
+    "type": "Market Analysis",
+    "readTime": "11 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-07",
+    "isPublished": true,
+    "en": {
+      "title": "AI Capex 2026: The $700bn Build-Out Is a Subsidy for the Application Layer",
+      "description": "AI capex 2026: the big four plan $700bn of infrastructure while models commoditize. Why the profit pool moves up the stack, and how LATAM builders capture it.",
+      "sections": [
+        {
+          "paragraphs": [
+            "AI capex 2026 is a $700bn line item. Microsoft, Alphabet, Amazon and Meta plan roughly that much infrastructure spending this year, more than double what the entire global telecom industry spends annually, per Benedict Evans' May 2026 presentation. The strange part is who the spending actually subsidizes.",
+            "The evidence in the same deck points one layer up. Frontier models are converging on benchmarks, inference efficiency improves 50-100x per year, and the labs cannot build every application themselves. Whoever turns commodity intelligence into deployed workflow captures the durable margin.",
+            "That reading matters most in markets that never had capital to burn. Avante Ventures builds AI-native companies in Brazil and Latin America precisely because someone else is paying for the infrastructure."
+          ]
+        },
+        {
+          "id": "capex-war",
+          "heading": "The $700bn build-out, in numbers",
+          "level": 2,
+          "paragraphs": [
+            "The big four plan roughly $700bn of capex in 2026 per company guidance including capital leases, compiled by [Benedict Evans](https://www.ben-evans.com/presentations). Global telecoms spend about $300bn a year. Oil and gas runs about $1tr. AI infrastructure now outspends every telecom operator on earth combined, twice over.",
+            "These were asset-light businesses a few years ago. Capex to sales for 2026 estimates runs near 55% at Meta, 54% at Microsoft, 44% at Alphabet and 26% at Amazon. Free cashflow machines have turned themselves into industrial builders.",
+            "The buyers admit the logic is defensive. Sundar Pichai says the risk of under-investing is significantly greater than the risk of over-investing. Zuckerberg's stated worst case is having just pre-built for a couple of years. Nobody wants to be the one who stopped digging."
+          ],
+          "bullets": [
+            "US data centre construction, excluding the compute itself, is overtaking US office construction, each near a $50bn seasonally adjusted annual rate in early 2026, per US Census data cited by Evans.",
+            "Semiconductor capex from TSMC, Intel and Samsung is guided to about $145bn in 2026. Nvidia books $65-70bn in quarterly revenue while Intel sits flat at $13-14bn.",
+            "Financing is moving off balance sheet: Meta's $27bn Hyperion JV with Blue Owl Capital, Oracle bonds trading like junk on data-center-completion fears, and OpenAI discussing 30GW+ of capacity deals at roughly $20bn per gigawatt."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "$700bn: planned 2026 capex from Microsoft, Alphabet, Amazon and Meta. More than double the ~$300bn the entire global telecom industry spends in a year.",
+            "attribution": "Benedict Evans, May 2026, from company guidance"
+          }
+        },
+        {
+          "id": "commodity-models",
+          "heading": "Models are converging into commodities",
+          "level": 2,
+          "paragraphs": [
+            "Frontier models from OpenAI, Anthropic, Google, Meta and the Chinese labs now cluster tightly on aggregate benchmark scores, per ArtificialAnalysis data in Evans' deck. A new frontier ships every 6-9 months and resets the race. Inference efficiency improves 50-100x per year, so yesterday's expensive capability becomes today's cheap API call.",
+            "The revenue is real but small against the spend. OpenAI's net run-rate approaches $2bn a month and Anthropic's gross run-rate sits near $3.5bn a month by mid-2026, per company figures and press reports. Set that against a $700bn build and the equilibrium is missing.",
+            "Evans' structural point is the uncomfortable one. Models so far look like commodities: capital-intensive, no network effects, possibly low margin. Classic software is the exact opposite. Sam Altman said it plainly, describing a future where intelligence is a utility like electricity or water, bought on a meter. Utilities are essential. Utilities are rarely where the margin lives."
+          ]
+        },
+        {
+          "id": "telco-lesson",
+          "heading": "The telco lesson: infra rarely captures the value",
+          "level": 2,
+          "paragraphs": [
+            "Mobile operators built a trillion dollar industry and watched the value get captured by other people. Global mobile data traffic grew about 30x from 2010 to 2025 while the MSCI global telecom index went roughly sideways, per Evans. Uber, Spotify and WhatsApp were built on those networks. The networks got the bill.",
+            "The AI version of that story is already visible. Chat is a poor interface for most real work, so general use needs purpose-built applications, and the labs cannot build or generate them all. If the model layer is infrastructure, innovation and margin move to whoever owns the use case.",
+            "Recorded music shows the other edge of the same blade. Industry revenue fell from about $40bn in 2000 to $18bn in 2015 because the internet removed the physical cost base that was the industry's actual moat. When a layer commoditizes, whoever treated that layer as their moat loses it. Every operator should ask which of their costs is quietly playing that role."
+          ]
+        },
+        {
+          "id": "deployment-gap",
+          "heading": "A mile wide, an inch deep: the deployment gap",
+          "level": 2,
+          "paragraphs": [
+            "ChatGPT passed 900m weekly active users by early 2026 and only about 5% of them pay, per OpenAI figures in Evans' deck. Depth is thinner than the headline: even the top 20% of users sent fewer than roughly 2,000 messages in all of 2025. For at least 80% of users this is not yet a daily tool.",
+            "Enterprises are stuck one step earlier. Bain adoption data shows most functions at 40-70% pilot while production deployment lags far behind, around 40% for software development and 3% for legal. US CFOs told the Atlanta Fed they realized about 1.8% of productivity impact in 2025. Nearly everyone has a pilot. Few have a line on the P&L.",
+            "Coding is the exception that proves the point. It is the one use case where the workflow, the evaluation criteria and the buyer were already aligned, and it maxed out Uber's full-year AI budget within months of 2026 starting, per The Information. Every other vertical is waiting for someone to build its equivalent."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "~$3bn: annualized enterprise spend on AI coding tools, versus under $0.5bn each for legal, customer support and medical admin.",
+            "attribution": "a16z, March 2026, via Benedict Evans"
+          }
+        },
+        {
+          "id": "up-the-stack",
+          "heading": "Where the profit pool actually forms",
+          "level": 2,
+          "paragraphs": [
+            "The durable assets sit exactly where a model API stops: proprietary workflow data, domain-specific evals, distribution into an industry, and trust. Accenture books about $2.2bn of generative AI work per quarter because enterprises pay for deployment, not for tokens. YC batches went from about 15% AI startups before 2020 to 85-90% by 2025. The unbundling has started.",
+            "The mechanism is [data network effects in vertical AI](/library/data-network-effects-vertical-ai). Each deployed workflow generates data no competitor can rent, the data improves the product, and the better product wins more workflow. Avante runs this loop deliberately across its portfolio through the copilot to data to fund flywheel: build an AI copilot to generate proprietary data, then use that data to raise and deploy capital.",
+            "Zuckerberg's line about one or two people shipping in a week what used to take dozens of people months is true and beside the point. Writing code was never the hard part. Knowing what the code should do, and owning the workflow it lives in, is the scarce asset."
+          ]
+        },
+        {
+          "id": "honest-risks",
+          "heading": "The honest risks for application builders",
+          "level": 2,
+          "paragraphs": [
+            "Nobody knows whether this capex cycle ends in overcapacity or scarcity. Evans says exactly that, and pretending otherwise would be marketing. Three risks deserve a straight answer.",
+            "The Philippines is the cautionary case for services economies. IT-BPM outsourcing employs about 1.9m people, near 8% of GDP, built on skill and income arbitrage that LLMs directly attack. Services work that is a task rather than a job gets automated. The open question is who owns the automation when it happens."
+          ],
+          "bullets": [
+            "The labs are climbing the stack themselves. OpenAI runs Frontier Alliances with BCG, McKinsey, Accenture and Capgemini, and announced a $10bn joint venture with PE firms in May 2026. Anthropic signed a $1.5bn JV with Blackstone, Hellman & Friedman and Goldman the same month.",
+            "Cheap intelligence lowers the barrier for your competitors too. A wrapper on a commodity model is a feature waiting to be absorbed. The moat is the proprietary data loop, never the model.",
+            "History does not promise a soft landing. Elevator attendants disappeared entirely after automation. Accountants roughly tripled as a share of US employment while computers ate the mechanics. Uber ate New York taxis, Airbnb only nibbled hotels. It depends."
+          ]
+        },
+        {
+          "id": "how-avante",
+          "heading": "How Avante builds on top of the capex war",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America, and the capex war is the studio's tailwind. Services account for roughly 70% of Brazilian GDP, per IBGE, with low software penetration. Commodity intelligence priced like a utility means a Brazilian venture rents the output of a $700bn build for cents. AI infrastructure is now cheap enough to deploy without a Series A.",
+            "The build is systematic, not opportunistic. Avante launches 3-4 ventures per year through a six-stage system, Research, Partner, Build, Traction, Revenue, Compound, deploying $500K-1.5M per venture and retaining co-founder economics. The studio benchmark explains the wager: GSSN reports ~50% IRR for studio-built companies versus ~19% for traditional VC. That is the model's benchmark, not Avante's own return, and it is the gap a systematic builder plays for.",
+            "Evans closes his deck with the only two honest answers to any AI question: no-one knows, and what happened the last time everything changed. For operators the follow-ups are sharper. Which tasks become free. Was that cost base your moat. What was impossible that is now cheap. The $700bn is someone else's money. The application layer it subsidizes belongs to [whoever shows up with the workflow](/why-avante)."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How big is AI capex in 2026 and who is spending it?",
+          "a": "Roughly $700bn, planned by Microsoft, Alphabet, Amazon and Meta, per company guidance compiled in Benedict Evans' May 2026 presentation. That is more than double the ~$300bn the global telecom industry spends per year, and it is increasingly financed off balance sheet through vehicles like Meta's $27bn Hyperion JV."
+        },
+        {
+          "q": "Why does the AI capex 2026 boom favor application-layer startups?",
+          "a": "Because the spending commoditizes intelligence. Frontier models converge on benchmarks, inference efficiency improves 50-100x per year, and models have no network effects, so the durable margin moves to applications that own proprietary workflow data, domain evals and distribution."
+        },
+        {
+          "q": "Are AI models becoming commodities?",
+          "a": "So far, yes. Benchmark scores from OpenAI, Anthropic, Google, Meta and Chinese labs cluster tightly by 2026 per ArtificialAnalysis, and a new frontier ships every 6-9 months. Models are capital-intensive with no network effects, which is the profile of a commodity, not of classic high-margin software."
+        },
+        {
+          "q": "What does the AI capex 2026 build-out mean for LATAM startups?",
+          "a": "It neutralizes LATAM's historic capital disadvantage. Services account for roughly 70% of Brazilian GDP per IBGE and remain under-digitized, while commodity intelligence priced like a utility means AI infrastructure is now cheap enough to deploy without a Series A. The venture rents the output of a $700bn build for cents."
+        },
+        {
+          "q": "Is building on top of commodity AI models a defensible moat?",
+          "a": "No. Cheap intelligence lowers the barrier for competitors too, so a thin wrapper is a feature waiting to be absorbed. Defensibility comes from the proprietary data loop, which is why Avante runs the copilot to data to fund flywheel: build an AI copilot to generate proprietary data, then use that data to raise and deploy capital."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Capex de IA 2026: a construção de US$ 700 bi que subsidia a camada de aplicação",
+      "description": "Capex de IA 2026: US$ 700 bi em infraestrutura enquanto os modelos viram commodity. Por que o lucro migra para a camada de aplicação e como o Brasil captura.",
+      "sections": [
+        {
+          "paragraphs": [
+            "O capex de IA 2026 é uma linha de US$ 700 bilhões. Microsoft, Alphabet, Amazon e Meta planejam aproximadamente isso em infraestrutura neste ano, mais que o dobro do que toda a indústria global de telecom investe por ano, segundo a apresentação de Benedict Evans de maio de 2026. A parte estranha é quem esse gasto de fato subsidia.",
+            "A evidência do próprio deck aponta uma camada acima. Os modelos de fronteira estão convergindo nos benchmarks, a eficiência de inferência melhora 50-100x por ano e os laboratórios não conseguem construir todas as aplicações. Quem transforma inteligência commodity em workflow implantado captura a margem durável.",
+            "Essa leitura importa mais em mercados que nunca tiveram capital para queimar. A Avante Ventures constrói empresas AI-native no Brasil e na América Latina exatamente porque a infraestrutura está sendo paga por outra pessoa."
+          ]
+        },
+        {
+          "id": "capex-war",
+          "heading": "A construção de US$ 700 bilhões, em números",
+          "level": 2,
+          "paragraphs": [
+            "As quatro grandes planejam cerca de US$ 700 bilhões de capex em 2026, segundo guidance das próprias empresas incluindo capital leases, compilado por [Benedict Evans](https://www.ben-evans.com/presentations). As telecoms globais investem cerca de US$ 300 bilhões por ano. Petróleo e gás, cerca de US$ 1 trilhão. A infraestrutura de IA já gasta mais que o dobro de todas as operadoras de telecom do planeta somadas.",
+            "Essas eram empresas asset-light até outro dia. O capex sobre receita estimado para 2026 fica perto de 55% na Meta, 54% na Microsoft, 44% na Alphabet e 26% na Amazon. Máquinas de fluxo de caixa livre viraram construtoras industriais.",
+            "Os compradores admitem que a lógica é defensiva. Sundar Pichai diz que o risco de investir de menos é significativamente maior que o risco de investir demais. O pior cenário declarado de Zuckerberg é ter apenas pré-construído por alguns anos. Ninguém quer ser o primeiro a parar de cavar."
+          ],
+          "bullets": [
+            "A construção de data centers nos EUA, sem contar o próprio compute, está ultrapassando a construção de escritórios no país, cada uma perto de US$ 50 bi em taxa anual ajustada no início de 2026, segundo dados do US Census citados por Evans.",
+            "O capex de semicondutores de TSMC, Intel e Samsung tem guidance de cerca de US$ 145 bi em 2026. A Nvidia fatura US$ 65-70 bi por trimestre enquanto a Intel segue estável em US$ 13-14 bi.",
+            "O financiamento está saindo do balanço: a JV Hyperion de US$ 27 bi da Meta com a Blue Owl Capital, títulos da Oracle negociando como junk por medo de atraso nos data centers e a OpenAI falando em mais de 30GW de capacidade a cerca de US$ 20 bi por gigawatt."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "US$ 700 bi: capex planejado para 2026 por Microsoft, Alphabet, Amazon e Meta. Mais que o dobro dos ~US$ 300 bi que toda a indústria global de telecom investe em um ano.",
+            "attribution": "Benedict Evans, maio de 2026, com base em guidance das empresas"
+          }
+        },
+        {
+          "id": "commodity-models",
+          "heading": "Os modelos estão convergindo em commodities",
+          "level": 2,
+          "paragraphs": [
+            "Modelos de fronteira da OpenAI, Anthropic, Google, Meta e dos laboratórios chineses já se agrupam em faixas estreitas de pontuação agregada de benchmark, segundo dados da ArtificialAnalysis no deck de Evans. Um novo modelo de fronteira sai a cada 6-9 meses e zera a corrida. A eficiência de inferência melhora 50-100x por ano, então a capacidade cara de ontem vira a chamada de API barata de hoje.",
+            "A receita é real, mas pequena diante do gasto. O run-rate líquido da OpenAI se aproxima de US$ 2 bi por mês e o bruto da Anthropic fica perto de US$ 3,5 bi por mês em meados de 2026, segundo as empresas e a imprensa. Coloque isso contra uma construção de US$ 700 bi e o equilíbrio não existe.",
+            "O ponto estrutural de Evans é o desconfortável. Até agora, os modelos se parecem com commodities: intensivos em capital, sem efeito de rede, possivelmente de margem baixa. Software clássico é o oposto exato. Sam Altman disse sem rodeios que vê a inteligência como uma utility, como eletricidade ou água, comprada no medidor. Utilities são essenciais. Utilities raramente são onde a margem mora."
+          ]
+        },
+        {
+          "id": "telco-lesson",
+          "heading": "A lição das telecoms: infra raramente captura o valor",
+          "level": 2,
+          "paragraphs": [
+            "As operadoras móveis construíram uma indústria de US$ 1 trilhão e viram o valor ser capturado por outras pessoas. O tráfego global de dados móveis cresceu cerca de 30x entre 2010 e 2025 enquanto o índice global de telecom da MSCI andou de lado, segundo Evans. Uber, Spotify e WhatsApp foram construídos em cima dessas redes. As redes ficaram com a conta.",
+            "A versão IA dessa história já está visível. Chat é uma interface ruim para a maior parte do trabalho real, o uso geral exige aplicações específicas e os laboratórios não conseguem construir nem gerar todas elas. Se a camada de modelo é infraestrutura, inovação e margem migram para quem é dono do caso de uso.",
+            "A música gravada mostra o outro fio da mesma lâmina. A receita da indústria caiu de cerca de US$ 40 bi em 2000 para US$ 18 bi em 2015 porque a internet removeu a base de custo física que era o verdadeiro moat do setor. Quando uma camada vira commodity, quem tratava essa camada como moat perde o moat. Todo operador deveria perguntar qual dos seus custos está fazendo esse papel em silêncio."
+          ]
+        },
+        {
+          "id": "deployment-gap",
+          "heading": "Um quilômetro de largura, um dedo de profundidade",
+          "level": 2,
+          "paragraphs": [
+            "O ChatGPT passou de 900 milhões de usuários ativos semanais no início de 2026 e só cerca de 5% pagam, segundo números da OpenAI no deck de Evans. A profundidade é menor que a manchete: mesmo os 20% de usuários mais ativos mandaram menos de aproximadamente 2.000 mensagens em todo o ano de 2025. Para pelo menos 80% dos usuários isso ainda não é ferramenta diária.",
+            "As empresas estão presas um passo antes. Os dados de adoção da Bain mostram a maioria das funções com 40-70% em piloto, mas implantação em produção muito menor, perto de 40% em desenvolvimento de software e 3% em jurídico. CFOs americanos disseram ao Fed de Atlanta que realizaram cerca de 1,8% de impacto de produtividade em 2025. Quase todo mundo tem um piloto. Poucos têm uma linha no resultado.",
+            "Programação é a exceção que confirma o ponto. É o único caso de uso em que workflow, critério de avaliação e comprador já estavam alinhados, e estourou o orçamento anual de IA da Uber poucos meses depois de 2026 começar, segundo o The Information. Todos os outros verticais esperam alguém construir o equivalente."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "~US$ 3 bi: gasto corporativo anualizado com ferramentas de IA para código, contra menos de US$ 0,5 bi cada para jurídico, suporte e administração médica.",
+            "attribution": "a16z, março de 2026, via Benedict Evans"
+          }
+        },
+        {
+          "id": "up-the-stack",
+          "heading": "Onde o lucro realmente se forma",
+          "level": 2,
+          "paragraphs": [
+            "Os ativos duráveis ficam exatamente onde a API do modelo para: dado proprietário de workflow, avaliações específicas de domínio, distribuição dentro de uma indústria e confiança. A Accenture fatura cerca de US$ 2,2 bi por trimestre em IA generativa porque as empresas pagam por implantação, não por tokens. As turmas da YC saíram de cerca de 15% de startups de IA antes de 2020 para 85-90% em 2025. O desmembramento começou.",
+            "O mecanismo é o [efeito de rede de dados em IA vertical](/library/data-network-effects-vertical-ai). Cada workflow implantado gera dados que nenhum concorrente consegue alugar, o dado melhora o produto e o produto melhor conquista mais workflow. A Avante roda esse loop de propósito em todo o portfólio com o flywheel copilot, dado, capital: construir um copilot de IA para gerar dado proprietário e usar esse dado para levantar e alocar capital.",
+            "A frase de Zuckerberg sobre uma ou duas pessoas entregarem em uma semana o que antes levava dezenas de pessoas por meses é verdadeira e irrelevante ao mesmo tempo. Escrever código nunca foi a parte difícil. Saber o que o código deve fazer, e ser dono do workflow onde ele vive, é o ativo escasso."
+          ]
+        },
+        {
+          "id": "honest-risks",
+          "heading": "Os riscos honestos para quem constrói aplicação",
+          "level": 2,
+          "paragraphs": [
+            "Ninguém sabe se esse ciclo de capex termina em excesso de capacidade ou em escassez. Evans diz exatamente isso, e fingir o contrário seria marketing. Três riscos merecem resposta direta.",
+            "As Filipinas são o caso de alerta para economias de serviços. O setor de outsourcing IT-BPM emprega cerca de 1,9 milhão de pessoas, perto de 8% do PIB, construído sobre arbitragem de habilidade e renda que os LLMs atacam diretamente. Trabalho de serviços que é tarefa, e não profissão, será automatizado. A pergunta aberta é quem será dono da automação quando isso acontecer."
+          ],
+          "bullets": [
+            "Os laboratórios estão subindo a pilha. A OpenAI mantém as Frontier Alliances com BCG, McKinsey, Accenture e Capgemini e anunciou uma joint venture de US$ 10 bi com fundos de private equity em maio de 2026. A Anthropic assinou uma JV de US$ 1,5 bi com Blackstone, Hellman & Friedman e Goldman no mesmo mês.",
+            "Inteligência barata derruba a barreira também para os seus concorrentes. Um wrapper sobre modelo commodity é uma feature esperando ser absorvida. O moat é o loop de dado proprietário, nunca o modelo.",
+            "A história não promete pouso suave. Os ascensoristas desapareceram por completo depois da automação. Os contadores quase triplicaram como fatia do emprego americano enquanto o computador comia a mecânica. A Uber engoliu os táxis de Nova York, o Airbnb só beliscou os hotéis. Depende."
+          ]
+        },
+        {
+          "id": "how-avante",
+          "heading": "Como a Avante constrói em cima da guerra de capex",
+          "level": 2,
+          "paragraphs": [
+            "A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina, e a guerra de capex é o vento a favor do studio. Serviços respondem por cerca de 70% do PIB brasileiro, segundo o IBGE, com baixa penetração de software. Inteligência commodity precificada como utility significa que uma venture brasileira aluga por centavos o resultado de uma construção de US$ 700 bi. A infraestrutura de IA já é barata o bastante para implantar sem uma Série A.",
+            "A construção é sistemática, não oportunista. A Avante lança 3-4 ventures por ano por um sistema de seis estágios, Research, Partner, Build, Traction, Revenue, Compound, aporta US$ 500K-1.5M por venture e mantém economia de co-founder. O benchmark do modelo explica a aposta: a GSSN reporta ~50% de IRR para empresas construídas em studio contra ~19% do venture capital tradicional. É o benchmark do modelo, não o retorno da própria Avante, e é esse gap que um construtor sistemático joga para capturar.",
+            "Evans fecha o deck com as duas únicas respostas honestas para qualquer pergunta de IA: ninguém sabe, e o que aconteceu da última vez em que tudo mudou. Para operadores, as perguntas seguintes são mais afiadas. Quais tarefas ficam de graça. Aquela base de custo era o seu moat. O que era impossível e agora é barato. Os US$ 700 bi são dinheiro dos outros. A camada de aplicação que eles subsidiam pertence a [quem chegar com o workflow](/why-avante)."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Qual é o tamanho do capex de IA 2026 e quem está gastando?",
+          "a": "Cerca de US$ 700 bilhões, planejados por Microsoft, Alphabet, Amazon e Meta, segundo guidance compilado na apresentação de Benedict Evans de maio de 2026. É mais que o dobro dos ~US$ 300 bi que a indústria global de telecom investe por ano, cada vez mais financiado fora do balanço, como na JV Hyperion de US$ 27 bi da Meta."
+        },
+        {
+          "q": "Por que o capex de IA 2026 favorece startups da camada de aplicação?",
+          "a": "Porque o gasto transforma inteligência em commodity. Os modelos de fronteira convergem nos benchmarks, a eficiência de inferência melhora 50-100x por ano e modelos não têm efeito de rede, então a margem durável migra para aplicações donas de dado proprietário de workflow, avaliações de domínio e distribuição."
+        },
+        {
+          "q": "Os modelos de IA estão virando commodity?",
+          "a": "Até agora, sim. As pontuações de benchmark de OpenAI, Anthropic, Google, Meta e laboratórios chineses se agrupam em 2026, segundo a ArtificialAnalysis, e um novo modelo de fronteira sai a cada 6-9 meses. São ativos intensivos em capital e sem efeito de rede, perfil de commodity, não de software de margem alta."
+        },
+        {
+          "q": "O que o boom de capex de IA significa para startups da América Latina?",
+          "a": "Ele neutraliza a desvantagem histórica de capital da região. Serviços respondem por cerca de 70% do PIB brasileiro, segundo o IBGE, e seguem subdigitalizados, enquanto inteligência commodity precificada como utility torna a infraestrutura de IA barata o bastante para implantar sem uma Série A."
+        },
+        {
+          "q": "Construir sobre modelos de IA commodity é um moat?",
+          "a": "Não. Inteligência barata derruba a barreira também para os concorrentes, então um wrapper fino é uma feature esperando ser absorvida. A defensabilidade vem do loop de dado proprietário, e é por isso que a Avante roda o flywheel copilot, dado, capital: um copilot de IA gera dado proprietário e esse dado levanta e aloca capital."
+        }
+      ]
+    },
+    "es": {
+      "title": "Capex de IA 2026: US$ 700 mil millones que subsidian la capa de aplicación",
+      "description": "Capex de IA 2026: US$ 700 mil millones en infraestructura mientras los modelos se vuelven commodity. Por qué la ganancia migra a la capa de aplicación en LATAM.",
+      "sections": [
+        {
+          "paragraphs": [
+            "El capex de IA 2026 es una línea de US$ 700 mil millones. Microsoft, Alphabet, Amazon y Meta planean aproximadamente eso en infraestructura este año, más del doble de lo que toda la industria global de telecomunicaciones invierte por año, según la presentación de Benedict Evans de mayo de 2026. La parte extraña es a quién subsidia ese gasto en realidad.",
+            "La evidencia del propio deck apunta una capa más arriba. Los modelos de frontera están convergiendo en los benchmarks, la eficiencia de inferencia mejora 50-100x por año y los laboratorios no pueden construir todas las aplicaciones. Quien convierte inteligencia commodity en workflow desplegado captura el margen durable.",
+            "Esa lectura importa más en mercados que nunca tuvieron capital para quemar. Avante Ventures construye empresas AI-native en Brasil y América Latina precisamente porque la infraestructura la está pagando otro."
+          ]
+        },
+        {
+          "id": "capex-war",
+          "heading": "La construcción de US$ 700 mil millones, en números",
+          "level": 2,
+          "paragraphs": [
+            "Las cuatro grandes planean cerca de US$ 700 mil millones de capex en 2026, según guidance de las propias empresas incluyendo capital leases, compilado por [Benedict Evans](https://www.ben-evans.com/presentations). Las telecos globales invierten cerca de US$ 300 mil millones por año. Petróleo y gas, cerca de US$ 1 billón. La infraestructura de IA ya gasta más del doble que todas las operadoras de telecom del planeta juntas.",
+            "Eran empresas asset-light hasta hace poco. El capex sobre ventas estimado para 2026 ronda 55% en Meta, 54% en Microsoft, 44% en Alphabet y 26% en Amazon. Máquinas de flujo de caja libre convertidas en constructoras industriales.",
+            "Los compradores admiten que la lógica es defensiva. Sundar Pichai dice que el riesgo de invertir de menos es significativamente mayor que el riesgo de invertir de más. El peor escenario declarado de Zuckerberg es haber pre-construido apenas por un par de años. Nadie quiere ser el primero en dejar de cavar."
+          ],
+          "bullets": [
+            "La construcción de data centers en EE.UU., sin contar el cómputo en sí, está superando la construcción de oficinas del país, cada una cerca de US$ 50 mil millones en tasa anual ajustada a inicios de 2026, según datos del US Census citados por Evans.",
+            "El capex de semiconductores de TSMC, Intel y Samsung tiene guidance de unos US$ 145 mil millones en 2026. Nvidia factura US$ 65-70 mil millones por trimestre mientras Intel sigue plana en US$ 13-14 mil millones.",
+            "El financiamiento está saliendo del balance: la JV Hyperion de US$ 27 mil millones de Meta con Blue Owl Capital, bonos de Oracle cotizando como junk por miedo a retrasos en los data centers y OpenAI hablando de más de 30GW de capacidad a unos US$ 20 mil millones por gigavatio."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "US$ 700 mil millones: capex planeado para 2026 por Microsoft, Alphabet, Amazon y Meta. Más del doble de los ~US$ 300 mil millones que toda la industria global de telecom invierte en un año.",
+            "attribution": "Benedict Evans, mayo de 2026, con base en guidance de las empresas"
+          }
+        },
+        {
+          "id": "commodity-models",
+          "heading": "Los modelos están convergiendo en commodities",
+          "level": 2,
+          "paragraphs": [
+            "Los modelos de frontera de OpenAI, Anthropic, Google, Meta y los laboratorios chinos ya se agrupan en rangos estrechos de puntaje agregado de benchmark, según datos de ArtificialAnalysis en el deck de Evans. Un nuevo modelo de frontera sale cada 6-9 meses y reinicia la carrera. La eficiencia de inferencia mejora 50-100x por año, así que la capacidad cara de ayer se vuelve la llamada de API barata de hoy.",
+            "El ingreso es real pero pequeño frente al gasto. El run-rate neto de OpenAI se acerca a US$ 2 mil millones por mes y el bruto de Anthropic ronda US$ 3.5 mil millones por mes a mediados de 2026, según las empresas y la prensa. Ponga eso contra una construcción de US$ 700 mil millones y el equilibrio no existe.",
+            "El punto estructural de Evans es el incómodo. Hasta ahora los modelos se parecen a commodities: intensivos en capital, sin efectos de red, posiblemente de margen bajo. El software clásico es exactamente lo contrario. Sam Altman lo dijo sin rodeos: ve la inteligencia como una utility, como la electricidad o el agua, comprada con medidor. Las utilities son esenciales. Las utilities rara vez son donde vive el margen."
+          ]
+        },
+        {
+          "id": "telco-lesson",
+          "heading": "La lección de las telecos: la infra rara vez captura el valor",
+          "level": 2,
+          "paragraphs": [
+            "Las operadoras móviles construyeron una industria de US$ 1 billón y vieron el valor capturado por otros. El tráfico global de datos móviles creció cerca de 30x entre 2010 y 2025 mientras el índice global de telecom de MSCI se movió de lado, según Evans. Uber, Spotify y WhatsApp se construyeron sobre esas redes. Las redes se quedaron con la cuenta.",
+            "La versión IA de esa historia ya es visible. El chat es una interfaz mala para la mayoría del trabajo real, el uso general exige aplicaciones específicas y los laboratorios no pueden construir ni generar todas. Si la capa de modelo es infraestructura, la innovación y el margen migran hacia quien es dueño del caso de uso.",
+            "La música grabada muestra el otro filo de la misma navaja. El ingreso de la industria cayó de unos US$ 40 mil millones en 2000 a US$ 18 mil millones en 2015 porque internet eliminó la base de costo física que era el verdadero moat del sector. Cuando una capa se vuelve commodity, quien trataba esa capa como su moat lo pierde. Todo operador debería preguntarse cuál de sus costos está jugando ese papel en silencio."
+          ]
+        },
+        {
+          "id": "deployment-gap",
+          "heading": "Un kilómetro de ancho, un dedo de profundidad",
+          "level": 2,
+          "paragraphs": [
+            "ChatGPT superó los 900 millones de usuarios activos semanales a inicios de 2026 y solo cerca de 5% paga, según cifras de OpenAI en el deck de Evans. La profundidad es menor que el titular: incluso el 20% de usuarios más activos envió menos de unos 2.000 mensajes en todo 2025. Para al menos 80% de los usuarios esto todavía no es una herramienta diaria.",
+            "Las empresas están atascadas un paso antes. Los datos de adopción de Bain muestran a la mayoría de las funciones con 40-70% en piloto, pero el despliegue en producción es mucho menor, cerca de 40% en desarrollo de software y 3% en legal. Los CFOs de EE.UU. le dijeron a la Fed de Atlanta que realizaron cerca de 1.8% de impacto de productividad en 2025. Casi todos tienen un piloto. Pocos tienen una línea en el estado de resultados.",
+            "La programación es la excepción que confirma el punto. Es el único caso de uso donde el workflow, el criterio de evaluación y el comprador ya estaban alineados, y agotó el presupuesto anual de IA de Uber a los pocos meses de empezar 2026, según The Information. Todos los demás verticales esperan a que alguien construya el equivalente."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "~US$ 3 mil millones: gasto empresarial anualizado en herramientas de IA para código, contra menos de US$ 0.5 mil millones cada uno para legal, soporte y administración médica.",
+            "attribution": "a16z, marzo de 2026, vía Benedict Evans"
+          }
+        },
+        {
+          "id": "up-the-stack",
+          "heading": "Dónde se forma realmente la ganancia",
+          "level": 2,
+          "paragraphs": [
+            "Los activos durables quedan exactamente donde la API del modelo se detiene: dato propietario de workflow, evaluaciones específicas de dominio, distribución dentro de una industria y confianza. Accenture factura cerca de US$ 2.2 mil millones por trimestre en IA generativa porque las empresas pagan por despliegue, no por tokens. Las cohortes de YC pasaron de cerca de 15% de startups de IA antes de 2020 a 85-90% en 2025. El desagregado ya empezó.",
+            "El mecanismo son los [efectos de red de datos en IA vertical](/library/data-network-effects-vertical-ai). Cada workflow desplegado genera datos que ningún competidor puede alquilar, el dato mejora el producto y el mejor producto gana más workflow. Avante corre ese loop a propósito en todo el portafolio con el flywheel copilot, dato, capital: construir un copilot de IA para generar dato propietario y usar ese dato para levantar y desplegar capital.",
+            "La frase de Zuckerberg sobre una o dos personas entregando en una semana lo que antes tomaba docenas de personas durante meses es verdadera e irrelevante a la vez. Escribir código nunca fue la parte difícil. Saber qué debe hacer el código, y ser dueño del workflow donde vive, es el activo escaso."
+          ]
+        },
+        {
+          "id": "honest-risks",
+          "heading": "Los riesgos honestos para quien construye aplicación",
+          "level": 2,
+          "paragraphs": [
+            "Nadie sabe si este ciclo de capex termina en sobrecapacidad o en escasez. Evans lo dice exactamente así, y fingir lo contrario sería marketing. Tres riesgos merecen una respuesta directa.",
+            "Filipinas es el caso de alerta para las economías de servicios. El sector de outsourcing IT-BPM emplea a cerca de 1.9 millones de personas, casi 8% del PIB, construido sobre un arbitraje de habilidad e ingreso que los LLMs atacan directamente. El trabajo de servicios que es tarea, y no profesión, será automatizado. La pregunta abierta es quién será dueño de la automatización cuando ocurra."
+          ],
+          "bullets": [
+            "Los laboratorios están subiendo por el stack. OpenAI mantiene las Frontier Alliances con BCG, McKinsey, Accenture y Capgemini y anunció una joint venture de US$ 10 mil millones con fondos de private equity en mayo de 2026. Anthropic firmó una JV de US$ 1.5 mil millones con Blackstone, Hellman & Friedman y Goldman el mismo mes.",
+            "La inteligencia barata baja la barrera también para sus competidores. Un wrapper sobre un modelo commodity es una feature esperando ser absorbida. El moat es el loop de dato propietario, nunca el modelo.",
+            "La historia no promete un aterrizaje suave. Los ascensoristas desaparecieron por completo tras la automatización. Los contadores casi se triplicaron como porción del empleo de EE.UU. mientras la computadora se comía la mecánica. Uber se comió los taxis de Nueva York, Airbnb apenas mordió los hoteles. Depende."
+          ]
+        },
+        {
+          "id": "how-avante",
+          "heading": "Cómo Avante construye sobre la guerra de capex",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina, y la guerra de capex es el viento de cola del studio. Los servicios representan cerca de 70% del PIB brasileño, según el IBGE, con baja penetración de software. Inteligencia commodity con precio de utility significa que una venture latinoamericana alquila por centavos el resultado de una construcción de US$ 700 mil millones. La infraestructura de IA ya es lo bastante barata para desplegar sin una Serie A.",
+            "La construcción es sistemática, no oportunista. Avante lanza 3-4 ventures por año mediante un sistema de seis etapas, Research, Partner, Build, Traction, Revenue, Compound, despliega US$ 500K-1.5M por venture y retiene economía de co-founder. El benchmark del modelo explica la apuesta: GSSN reporta ~50% de IRR para empresas construidas en studio frente a ~19% del venture capital tradicional. Es el benchmark del modelo, no el retorno de la propia Avante, y ese es el gap que un constructor sistemático juega a capturar.",
+            "Evans cierra el deck con las dos únicas respuestas honestas a cualquier pregunta de IA: nadie sabe, y qué pasó la última vez que todo cambió. Para operadores, las preguntas que siguen son más filosas. Qué tareas se vuelven gratis. Esa base de costo era su moat. Qué era imposible y ahora es barato. Los US$ 700 mil millones son plata ajena. La capa de aplicación que subsidian pertenece a [quien llegue con el workflow](/why-avante)."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Qué tan grande es el capex de IA 2026 y quién lo está gastando?",
+          "a": "Cerca de US$ 700 mil millones, planeados por Microsoft, Alphabet, Amazon y Meta, según guidance compilado en la presentación de Benedict Evans de mayo de 2026. Es más del doble de los ~US$ 300 mil millones que la industria global de telecom invierte por año, financiado cada vez más fuera del balance, como en la JV Hyperion de US$ 27 mil millones de Meta."
+        },
+        {
+          "q": "¿Por qué el capex de IA 2026 favorece a las startups de la capa de aplicación?",
+          "a": "Porque el gasto convierte la inteligencia en commodity. Los modelos de frontera convergen en los benchmarks, la eficiencia de inferencia mejora 50-100x por año y los modelos no tienen efectos de red, así que el margen durable migra a aplicaciones dueñas de dato propietario de workflow, evaluaciones de dominio y distribución."
+        },
+        {
+          "q": "¿Los modelos de IA se están volviendo commodities?",
+          "a": "Hasta ahora, sí. Los puntajes de benchmark de OpenAI, Anthropic, Google, Meta y los laboratorios chinos se agrupan en 2026, según ArtificialAnalysis, y un nuevo modelo de frontera sale cada 6-9 meses. Son activos intensivos en capital y sin efectos de red, perfil de commodity, no de software de margen alto."
+        },
+        {
+          "q": "¿Qué significa el boom de capex de IA para las startups de LATAM?",
+          "a": "Neutraliza la desventaja histórica de capital de la región. Los servicios representan cerca de 70% del PIB brasileño, según el IBGE, y siguen subdigitalizados, mientras la inteligencia commodity con precio de utility hace que la infraestructura de IA sea lo bastante barata para desplegar sin una Serie A."
+        },
+        {
+          "q": "¿Construir sobre modelos de IA commodity es un moat?",
+          "a": "No. La inteligencia barata baja la barrera también para los competidores, así que un wrapper delgado es una feature esperando ser absorbida. La defensibilidad viene del loop de dato propietario, y por eso Avante corre el flywheel copilot, dato, capital: un copilot de IA genera dato propietario y ese dato levanta y despliega capital."
+        }
+      ]
+    },
+    "ogImage": "/og/ai-capex-boom-application-layer-opportunity.png"
   },
   {
     "slug": "ai-coding-agents-zero-to-one-playbook",
@@ -8279,8 +8662,8 @@ const engineArticles: Article[] = [
     "datePublished": "2026-06-02",
     "isPublished": true,
     "en": {
-      "title": "Data Network Effects in Vertical AI: The Real Moat",
-      "description": "Data network effects are the moat in vertical AI: each customer's usage improves the product for the next, so it compounds faster than data decays.",
+      "title": "Where the Moat Lives Once the Model Is a Commodity",
+      "description": "Rent the model, own the moat. A playbook on proprietary data, data network effects, and process power in vertical AI, with the anti-moats to avoid.",
       "sections": [
         {
           "paragraphs": [
@@ -10209,7 +10592,7 @@ const engineArticles: Article[] = [
     "datePublished": "2026-06-02",
     "isPublished": true,
     "en": {
-      "title": "Venture Studio Performance Metrics: IRR vs TVPI vs DPI",
+      "title": "How to Actually Measure a Venture Studio",
       "description": "IRR flatters, TVPI is paper, DPI is the only cash truth. A guide to venture studio performance metrics, the survivorship traps, and why the ~50% benchmark holds up.",
       "sections": [
         {
@@ -12830,8 +13213,8 @@ const engineArticles: Article[] = [
     "datePublished": "2026-06-09",
     "isPublished": true,
     "en": {
-      "title": "Taste Is the Moat When AI Makes Building Cheap",
-      "description": "Taste is the moat because AI made building cheap: the scarce, defensible edge is judgment about what to build, and what to leave out.",
+      "title": "When Building Is Cheap, Taste Is the Moat",
+      "description": "AI collapsed the cost of building. Tony Fadell's career explains what becomes scarce next, and where an AI-native company's defensibility actually lives.",
       "sections": [
         {
           "paragraphs": [
@@ -13011,8 +13394,8 @@ const engineArticles: Article[] = [
     "isPublished": true,
     "ogImage": "/og/venture-builders-brazil-vs-usa-benchmark.png",
     "en": {
-      "title": "Venture Builders: Brazil vs USA Benchmark",
-      "description": "The US and Europe built the venture studio model; Brazil has almost none yet. A benchmark of the proven track record and why Brazil is the open lane.",
+      "title": "Venture Studio Benchmark: The US Track Record and Brazil's Opening",
+      "description": "A benchmark of the studios that built the model in the US and Europe, what it returns, and why Brazil is the open lane for an AI-native one.",
       "sections": [
         {
           "paragraphs": [
@@ -13271,8 +13654,8 @@ const engineArticles: Article[] = [
     "ogImage": "/og/venture-studio-founder-economics-latam.png",
     "isPublished": true,
     "en": {
-      "title": "Venture Studio Founder Economics: The LATAM Equity Trade",
-      "description": "A venture studio's equity trade pays only when it removes real risk and time. What a LATAM founder gives up, what they get, and the math before you sign.",
+      "title": "The Founder Side of the Venture Studio Deal in LATAM",
+      "description": "A studio takes founder equity early. When that trade pays a LATAM operator, when it does not, and the numbers to run before signing.",
       "sections": [
         {
           "paragraphs": [
