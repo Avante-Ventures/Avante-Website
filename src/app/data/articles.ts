@@ -1767,7 +1767,7 @@ const articleSiggaCaseStudy: Article = {
 // ─────────────────────────────────────────────────────────────────────
 
 // === CONTENT-ENGINE:START (managed by content-engine/merge.py — do not edit by hand) ===
-// 47 article(s) generated from content-engine/outputs. Edit the engine, not this block.
+// 48 article(s) generated from content-engine/outputs. Edit the engine, not this block.
 const engineArticles: Article[] = [
   {
     "slug": "accelerator-vs-vc-founder-guide",
@@ -10291,6 +10291,360 @@ const engineArticles: Article[] = [
         {
           "q": "¿Un venture studio es la opción correcta para mi startup?",
           "a": "Depende de tu etapa. Un experto de dominio en solitario y sin equipo es quien más gana con el equipo de construcción y el capital de primer cheque de un studio. Un equipo ya financiado y con tracción quizá esté mejor con una aceleradora y luego VC. El checklist filtra al studio. No te puede decir que el negocio es correcto. Eso sigue siendo tuyo."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "how-venture-studios-make-money",
+    "category": "insights",
+    "type": "Guide",
+    "readTime": "10 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-07",
+    "isPublished": true,
+    "en": {
+      "title": "How Do Venture Studios Make Money? The Business Model, Explained",
+      "description": "Venture studios make money by taking large founding equity in the few companies they co-build each year, then monetizing it at exit. The full model.",
+      "sections": [
+        {
+          "id": "the-answer",
+          "heading": "How venture studios make money, in one line",
+          "level": 2,
+          "paragraphs": [
+            "A venture studio makes money by owning large founding equity in the few companies it co-builds, then converting that ownership to cash when those companies exit. It is not paid in fees for advice. It is paid in stock for building.",
+            "The studio originates the idea, puts in the first capital, and does the earliest operator work. In return it takes a founding stake, often 30% to 50% or more, in each company it starts.",
+            "It builds only a handful of companies a year and waits years for that ownership to turn liquid. Everything else in the model is a footnote to that one line."
+          ]
+        },
+        {
+          "id": "equity-engine",
+          "heading": "The real engine: founding equity, not writing checks",
+          "level": 2,
+          "paragraphs": [
+            "The engine is equity earned as a co-founder, not a check written as an investor. A traditional venture fund buys a minority slice of someone else's company after the hard part of starting it is already done. A studio is inside the company from day zero, before there is a company to invest in.",
+            "It does the work that no term sheet pays for. It incorporates the entity, recruits the first hires, ships the first product, and lands the first customers. That work is priced in equity, not fees, because it is the riskiest work in the life of a company.",
+            "Capital and operator sweat convert into a founding position on the cap table. The studio is a co-founder with the equity to match, not a line item on someone else's round. This is why [the operator's stake behaves like a founder's, not a consultant's](/en/library/operating-partner-economics)."
+          ]
+        },
+        {
+          "id": "portfolio-math",
+          "heading": "Portfolio math: a few big stakes, not many small ones",
+          "level": 2,
+          "paragraphs": [
+            "A studio owns a large slice of a few companies. An accelerator owns a tiny slice of hundreds. That contrast is the entire model, and it is why a studio builds 3 to 4 ventures a year instead of dozens.",
+            "Concentration is not a weakness to apologize for. It is the design. The two shapes rarely overlap.",
+            "The math only works for a studio if each stake is large, because there are so few of them. Owning 2% of a winner does not move a fund. Owning a founding share of it does. The [difference between a studio and an accelerator](/en/library/venture-studio-vs-accelerator-explained) is not branding. It is the shape of the portfolio."
+          ],
+          "bullets": [
+            "A studio takes a large founding stake in 3 to 4 companies a year and stays deep in every build.",
+            "An accelerator takes a small stake across hundreds of companies in a cohort and stays light."
+          ]
+        },
+        {
+          "id": "where-liquidity",
+          "heading": "Where the cash actually shows up: exits and secondaries",
+          "level": 2,
+          "paragraphs": [
+            "Founding equity is paper until a company exits. That paper turns to cash in one of three ways: an acquisition, an initial public offering, or a secondary sale to a later investor.",
+            "Acquisition is the common path. An IPO is rare and reserved for the largest outcomes. A secondary lets the studio sell part of its position to an incoming investor before a full exit, which pulls some liquidity forward.",
+            "All three are slow. A founding stake taken this year may not turn liquid for the better part of a decade. The studio earns its return by holding through that entire arc, not by trading in and out of it."
+          ]
+        },
+        {
+          "id": "management-fees",
+          "heading": "The second line: management fees when a studio runs a fund",
+          "level": 2,
+          "paragraphs": [
+            "When a studio is structured as a fund, it earns a second line of revenue: management fees on committed capital. Some studios also charge build or service fees to the companies they create.",
+            "These fees are honest about what they do. They keep the lights on between exits and pay salaries in the years when no company has sold and no equity has turned to cash. What they are not is the reason the model exists.",
+            "A studio that optimized for fee income would build more companies and own less of each, which is the accelerator model wearing a studio's clothes. The equity is the prize. The fees are the bridge to it."
+          ]
+        },
+        {
+          "id": "the-risk",
+          "heading": "The honest risk: concentrated, long-dated, and illiquid",
+          "level": 2,
+          "paragraphs": [
+            "The risks are the mirror image of the strengths. Concentrated ownership means a few outcomes decide the fund. Long-dated equity means capital is locked for years. Illiquidity means there is no clean early exit if the thesis is wrong.",
+            "The model also depends entirely on the quality of the operators, because a studio's stake is only earned if the studio actually builds. This is where the honest version separates from the dishonest one. A genuine co-builder puts in capital, ships product, and wins the first customers, and its founding equity is fair pay for that work.",
+            "A passive studio that takes founder equity for a logo and a desk destroys value. Founders should treat that as the first question to ask. Is this a co-founder, or a landlord charging rent in stock?",
+            "Done well, the model has historically outperformed traditional venture capital, according to research from the Global Startup Studio Network. Done badly, it is an expensive way to give a company away. The entire difference is in the building."
+          ]
+        },
+        {
+          "id": "how-avante",
+          "heading": "How the Avante model makes money",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures makes money the way the model prescribes. It owns co-founder equity in a small number of companies it builds itself. Avante builds 3 to 4 ventures a year, and every one moves through a six-stage system of Research, Partner, Build, Traction, Revenue, and Compound.",
+            "It deploys $500K to $1.5M of first capital into each venture and retains co-founder economics for doing the founding work. That work is done by operators with more than 10 years of Brazilian-market scar tissue, not by advisors arriving for a board seat. The capital and the operators show up on day one, together, which is the part a passive studio cannot copy.",
+            "The setting is a market where services account for roughly 70% of Brazilian GDP, per IBGE, with software penetration still low. That gap is where an AI-native company built by people who know the terrain can compound. Avante owns a founding share of that upside because it built the company, not because it wrote a check into someone else's.",
+            "That is the model on one page. Build a few companies well, own enough of each to matter, and hold until the ownership turns to cash. [See how Avante puts it to work](/en/why-avante)."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Avante deploys $500K to $1.5M of first capital into each of the 3 to 4 ventures it builds a year, holding co-founder equity in every one.",
+            "attribution": "Avante Ventures"
+          }
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How is a venture studio different from a VC fund in how it earns money?",
+          "a": "A VC fund earns money by buying a minority stake in companies other people founded, then managing that portfolio for fees and a share of gains. A studio earns money by co-founding the company itself and taking a large founding stake for the building work. One writes checks. The other builds, and is paid in equity for it."
+        },
+        {
+          "q": "What percentage of a startup does a venture studio take?",
+          "a": "A studio typically takes a founding stake of roughly 30% to 50% or more, because it is a co-founder from day zero, not a later investor buying a minority slice. The exact share depends on how much capital and operator work the studio contributes before the company can stand on its own. It is founder equity, not an advisory fee."
+        },
+        {
+          "q": "When does a venture studio actually get paid?",
+          "a": "At exit, years later. Founding equity is paper until a company is acquired, goes public, or the studio sells part of its position in a secondary to a later investor. Acquisitions are the common path. This makes studio economics long-dated and illiquid. A stake taken this year may not turn to cash for most of a decade."
+        },
+        {
+          "q": "Do venture studios make money from fees too?",
+          "a": "Some do, when they are structured as a fund. They charge management fees on committed capital, and a few charge build or service fees to the companies they create. Those fees keep the lights on between exits. They are not the point of the model. The founding equity is where the real return lives."
+        },
+        {
+          "q": "Are venture studios actually more profitable than traditional VC?",
+          "a": "Studio-network research, including from the Global Startup Studio Network, indicates the model has historically outperformed traditional venture capital when it is run by genuine builders. The caveat matters. A studio that truly co-builds earns its stake. A passive studio that takes equity for a logo and a desk does not, and it destroys value rather than creates it."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Como Venture Studios Ganham Dinheiro? O Modelo de Negócio Explicado",
+      "description": "Um venture studio ganha dinheiro sendo dono de equity nas empresas que co-constrói. Veja o mecanismo, de onde vem o dinheiro e por que o retorno demora.",
+      "sections": [
+        {
+          "id": "the-answer",
+          "heading": "Como venture studios ganham dinheiro, em uma linha",
+          "level": 2,
+          "paragraphs": [
+            "Um venture studio ganha dinheiro sendo dono de equity nas empresas que ele co-constrói. Essa é a resposta inteira, em uma frase.",
+            "O studio origina a ideia, coloca o primeiro capital e o trabalho de operador, e em troca fica com uma fatia fundadora grande em cada empresa. Muitas vezes de 30% a 50% ou mais. Ele constrói poucas empresas por ano e transforma essa participação concentrada em dinheiro anos depois, quando uma delas tem uma saída.",
+            "Se o studio tem estrutura de fundo, ele também cobra taxas de gestão. Mas o prêmio é o equity. Taxa mantém a luz acesa. Equity é o negócio.",
+            "O resto deste texto abre o mecanismo passo a passo. De onde vem a fatia, por que são poucas empresas, quando o dinheiro aparece e onde o modelo falha."
+          ]
+        },
+        {
+          "id": "equity-engine",
+          "heading": "O motor de verdade: equity de fundador, não cheques",
+          "level": 2,
+          "paragraphs": [
+            "Um VC compra uma fatia minoritária de uma empresa que já existe. Um studio ajuda a criar a empresa e por isso fica com uma fatia fundadora.",
+            "A gestora de VC assina um cheque na startup de outra pessoa e leva uma participação minoritária, depois que já existe tração. O studio entra antes disso. Ele é co-founder desde o dia zero, quando ainda não há empresa nenhuma.",
+            "O mecanismo tem dois insumos e um resultado. Entram capital de primeiro cheque e trabalho de operador. Sai equity fundadora. O studio faz a parte mais cedo e mais arriscada do trabalho. Constituição da empresa, primeiras contratações, primeiro produto, primeiros clientes. E precifica esse trabalho em equity, não em fee.",
+            "Por isso a conta da participação é diferente. Num VC precificado, o fundador segura de 80% a 100% da empresa antes da rodada e o investidor compra uma fatia minoritária. Levantamentos de cap table de studios mostram fatias fundadoras que vão de cerca de 15% a 50%, concentradas na faixa de 30% a 40%, segundo a [alder.vc](https://www.alder.vc/blog/venture-studio-equity-cap-table). O studio pede mais porque entrega mais no estágio de maior risco.",
+            "Essa é a lógica da economia de co-founder. Quem senta dentro da operação e resolve preço, canal e contratação nas primeiras semanas ganha como fundador, não como prestador de serviço. O detalhe de como o suor do operating partner vira equity está em [economia do operating partner](/en/library/operating-partner-economics)."
+          ]
+        },
+        {
+          "id": "portfolio-math",
+          "heading": "A conta do portfólio: poucas fatias grandes, não muitas pequenas",
+          "level": 2,
+          "paragraphs": [
+            "O studio é dono de uma fatia grande de poucas empresas. Esse é o desenho do modelo, não um acidente.",
+            "É o oposto de uma aceleradora, que fica com uma fatia minúscula de centenas de empresas e aposta no volume. A aceleradora espalha cheques pequenos e deixa o mercado selecionar os vencedores. O studio escolhe menos alvos e coloca a mão na operação de cada um. Um modelo é distribuição. O outro é construção.",
+            "Concentração exige foco. Não dá para co-construir de verdade dezenas de empresas ao mesmo tempo. Por isso um studio lança poucas ventures por ano, e não dezenas. Poucas empresas, cada uma com uma fatia grande e trabalho real de operador dentro.",
+            "A conta fecha por aí. Algumas participações grandes em empresas que o studio realmente ajudou a construir valem mais do que centenas de fatias diluídas que ninguém tem tempo de acompanhar. A diferença fina entre os dois modelos, incluindo o que cada um pega de equity, está em [venture studio vs aceleradora](/en/library/venture-studio-vs-accelerator-explained)."
+          ]
+        },
+        {
+          "id": "where-liquidity",
+          "heading": "De onde o dinheiro realmente aparece: saídas e secundárias",
+          "level": 2,
+          "paragraphs": [
+            "Até aqui, tudo é equity no papel. O papel só vira dinheiro quando a empresa tem uma saída.",
+            "São três caminhos. Uma aquisição, quando outra empresa compra a startup. Uma abertura de capital na bolsa, bem mais rara. Ou uma venda secundária, quando o studio vende parte das suas ações para um investidor mais tardio, antes da saída final.",
+            "Nenhum desses caminhos é rápido. Entre construir a empresa e ver o dinheiro na conta passam-se anos, muitas vezes muitos anos. O studio carrega a participação por todo esse tempo, sem liquidez, enquanto a empresa amadurece. A recompensa é grande e concentrada, mas ela chega tarde.",
+            "A venda secundária existe justamente para aliviar essa espera. Ela dá ao studio um pouco de caixa antes da saída completa, vendendo uma parte da posição a quem entra depois. Ainda assim, o grosso do retorno continua preso até uma aquisição ou um IPO."
+          ]
+        },
+        {
+          "id": "management-fees",
+          "heading": "A segunda linha: taxas de gestão quando o studio tem um fundo",
+          "level": 2,
+          "paragraphs": [
+            "Equity é o prêmio. Mas ninguém paga a folha com uma fatia que só vira dinheiro daqui a sete anos.",
+            "Quando o studio tem estrutura de fundo, ele cobra uma taxa de gestão sobre o capital comprometido pelos investidores. Essa taxa é anual e previsível. Ela paga os salários dos operadores e o custo de manter o studio de pé enquanto as ventures amadurecem.",
+            "Alguns studios também cobram taxas de construção ou de serviço das próprias ventures, pelo trabalho de engenharia, design e go-to-market que entregam no começo.",
+            "Vale ser honesto sobre o papel dessas taxas. Elas mantêm a luz acesa entre uma saída e outra. Não são o motor de retorno. Um studio que vive de taxa, e não de equity, deixou de ser studio e virou uma consultoria com nome bonito."
+          ]
+        },
+        {
+          "id": "the-risk",
+          "heading": "O risco honesto: concentrado, de longo prazo e ilíquido",
+          "level": 2,
+          "paragraphs": [
+            "O modelo é concentrado, de longo prazo e ilíquido. Não há como maquiar isso.",
+            "Poucas apostas carregam quase todo o resultado. O dinheiro leva anos para aparecer. E a posição não pode ser vendida na hora que o studio quiser. Se as poucas ventures não performam, não existe um portfólio largo para amortecer a queda.",
+            "Tudo isso repousa sobre uma variável. A qualidade do operador. O modelo só funciona se o studio for um construtor de verdade.",
+            "Aqui mora a linha que separa um bom studio de um ruim. Um studio que realmente co-constrói, que coloca operadores dentro da empresa e resolve produto, canal e contratação, merece a fatia grande que pega. Um studio passivo, que cobra equity de fundador em troca de um logo no site e uma mesa no escritório, destrói valor. Essa é a armadilha do studio passivo.",
+            "Feita a ressalva, os dados apontam numa direção. Historicamente, o modelo de venture studio superou o capital de risco tradicional em performance, segundo levantamentos do ecossistema de studios como os da [Bundl](https://www.bundl.com/articles/why-venture-studio-startups-have-higher-long-term-success-rates) e da Global Startup Studio Network. A vantagem não é mágica. Ela vem de operadores dentro da empresa cedo e de uma fundação resolvida uma vez e reusada em cada nova venture. Quando o studio é passivo, essa vantagem evapora."
+          ]
+        },
+        {
+          "id": "how-avante",
+          "heading": "Como o modelo da Avante ganha dinheiro",
+          "level": 2,
+          "paragraphs": [
+            "A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina. E ganha dinheiro exatamente pelo mecanismo descrito acima.",
+            "A Avante lança 3-4 ventures por ano. Cada uma passa pelo mesmo sistema de seis estágios. Research, Partner, Build, Traction, Revenue, Compound. Em cada venture, a Avante coloca de US$ 500 mil a US$ 1,5 milhão de primeiro capital e retém economia de co-founder.",
+            "A vantagem não está no cheque. Está na profundidade de operador. A Avante emparelha operadores de domínio, gente com mais de 10 anos de cicatriz no mercado brasileiro, com capital de primeiro cheque no dia um. É a economia de co-founder aplicada por quem já operou o setor, não por quem apenas investe nele.",
+            "O pano de fundo é estrutural. No Brasil, os serviços respondem por cerca de 70% do PIB, segundo o IBGE, e a penetração de software ainda é baixa. É muito setor real esperando por produto AI-native, e poucos times que sabem construí-lo por dentro.",
+            "É assim que o modelo paga. Poucas empresas, fatias grandes, operadores de verdade e paciência para esperar a saída. A tese completa está em [por que a Avante](/en/why-avante)."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "A Avante aporta US$ 500 mil a US$ 1,5 mi de capital inicial em cada uma das 3 a 4 empresas que constrói por ano, mantendo economia de cofundador em todas.",
+            "attribution": "Avante Ventures"
+          }
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Como um venture studio ganha dinheiro?",
+          "a": "Um venture studio ganha dinheiro sendo dono de equity nas empresas que co-constrói. Ele origina a ideia, coloca o primeiro capital e o trabalho de operador, e fica com uma fatia fundadora grande em cada empresa. O retorno vem anos depois, quando uma venture é adquirida ou abre capital. Taxas de gestão, quando existem, só pagam a operação."
+        },
+        {
+          "q": "Qual a diferença entre como um venture studio e um VC ganham dinheiro?",
+          "a": "Um VC compra uma fatia minoritária de uma empresa que já existe e ganha quando ela valoriza. Um venture studio ajuda a criar a empresa desde o dia zero e por isso fica com uma fatia fundadora bem maior. O VC aposta em volume e seleção. O studio aposta em concentração e construção real dentro de poucas empresas."
+        },
+        {
+          "q": "Quanto equity um venture studio costuma pegar?",
+          "a": "Um venture studio costuma pegar uma fatia fundadora grande, muitas vezes de 30% a 50% ou mais, bem acima da fatia minoritária de um VC. O studio pede mais porque entrega mais no estágio de maior risco. Ideia, primeiro capital e operadores construindo a empresa por dentro. A fatia exata depende de quanto o studio realmente co-constrói."
+        },
+        {
+          "q": "Quando um venture studio recebe o dinheiro de verdade?",
+          "a": "Só quando a empresa tem uma saída. Isso acontece por aquisição, por uma abertura de capital ou por uma venda secundária de ações a um investidor mais tardio. Nenhum caminho é rápido. Entre construir a empresa e ver o caixa passam-se anos, às vezes muitos. Por isso o modelo é ilíquido e de longo prazo, não uma fonte de renda imediata."
+        },
+        {
+          "q": "Venture studios ganham mais que fundos de venture capital?",
+          "a": "Historicamente, o modelo de venture studio superou o capital de risco tradicional em performance, segundo levantamentos do ecossistema de studios. Mas a vantagem não é automática. Ela depende inteiramente da qualidade do operador. Um studio que co-constrói de verdade merece sua fatia grande. Um studio passivo, que cobra equity por um logo e uma mesa, destrói valor."
+        }
+      ]
+    },
+    "es": {
+      "title": "¿Cómo Ganan Dinero los Venture Studios? El Modelo de Negocio",
+      "description": "Un venture studio gana dinero siendo dueño de equity en las empresas que cocrea. Toma una participación fundadora grande y cobra en la salida. Así funciona el modelo.",
+      "sections": [
+        {
+          "heading": "",
+          "level": 2,
+          "paragraphs": [
+            "Un venture studio gana dinero de una sola forma que importa. Siendo dueño de una porción grande de las empresas que cocrea. Origina la idea, pone el primer capital y el trabajo de operador, y a cambio toma una participación fundadora grande, muchas veces de 30 a 50 por ciento o más, en cada empresa. Construye pocas compañías al año y cobra esa propiedad concentrada años después, cuando una de ellas tiene una salida.",
+            "Si el studio está estructurado como fondo, además cobra comisiones de gestión. Pero el equity es el premio. Este texto recorre la mecánica paso a paso, sin adornos."
+          ]
+        },
+        {
+          "id": "the-answer",
+          "heading": "Cómo ganan dinero los venture studios, en una línea",
+          "level": 2,
+          "paragraphs": [
+            "Un venture studio monetiza propiedad, no actividad. No factura por horas ni por consejo. Convierte dos insumos, capital y trabajo de operador, en un solo producto: equity de fundador en empresas nuevas.",
+            "La cadena es corta de enunciar y larga de vivir."
+          ],
+          "bullets": [
+            "El studio hace el trabajo más temprano y más riesgoso, y lo cobra en acciones.",
+            "Se queda con una participación grande de un puñado de empresas, no una fracción mínima de cientos.",
+            "El papel se vuelve efectivo solo cuando una empresa tiene una salida, muchos años después.",
+            "Un fondo agrega comisiones de gestión entre salidas."
+          ]
+        },
+        {
+          "id": "equity-engine",
+          "heading": "El motor real: equity de fundador, no firmar cheques",
+          "level": 2,
+          "paragraphs": [
+            "La diferencia con un fondo de capital de riesgo es de rol, no de grado. Un VC firma un cheque para entrar en la empresa de otra persona y recibe una minoría. Un studio es cofundador desde el día cero.",
+            "Ese día cero es literal. El studio incorpora la empresa, hace las primeras contrataciones, construye el primer producto y consigue los primeros clientes. Es el tramo más temprano y más riesgoso de la vida de una compañía. El studio lo hace con las manos, y lo cobra en equity en lugar de en honorarios.",
+            "De ahí sale la participación grande. No es un premio por el logo. Es el precio de haber quitado los primeros seis a nueve meses de riesgo de ejecución. El trabajo de operador, no el cheque, es lo que se convierte en propiedad. [La economía del operating partner](/en/library/operating-partner-economics) es donde ese cambio de sudor por equity de cofundador se explica en detalle."
+          ]
+        },
+        {
+          "id": "portfolio-math",
+          "heading": "La cuenta del portafolio: pocas participaciones grandes, no muchas pequeñas",
+          "level": 2,
+          "paragraphs": [
+            "La concentración es el diseño, no un accidente. Un studio es dueño de una porción grande de un puñado de empresas. Una aceleradora es dueña de una porción mínima de cientos. Son dos apuestas opuestas sobre la misma mesa.",
+            "La aceleradora rocía. Toma 5 a 7 por ciento de cada startup de una cohorte grande y confía en que la ley de los números encuentre uno o dos ganadores. El studio hace lo contrario. Construye 3 a 4 empresas al año, no docenas, y se queda con una participación de cofundador en cada una.",
+            "La aritmética manda esa elección. Con una fracción mínima de cientos, un solo ganador apenas mueve el resultado. Con una participación grande de pocas, un solo ganador define el año entero del studio. Por eso un studio no puede construir docenas. La atención del operador es el insumo escaso, y se reparte entre pocas apuestas a propósito. La diferencia entre los dos modelos está desarmada en [venture studio frente a aceleradora](/en/library/venture-studio-vs-accelerator-explained)."
+          ]
+        },
+        {
+          "id": "where-liquidity",
+          "heading": "De dónde sale el dinero de verdad: salidas y secundarios",
+          "level": 2,
+          "paragraphs": [
+            "El equity de un studio es papel hasta que una empresa tiene una salida. Antes de eso no hay efectivo, solo una participación que vale lo que el último inversionista dice que vale.",
+            "Hay tres formas de volver ese papel dinero."
+          ],
+          "bullets": [
+            "Adquisición. Otra empresa compra la compañía y el studio cobra su participación en la venta. Es la salida más común.",
+            "IPO. La empresa abre en bolsa. Ocurre de vez en cuando, no como regla.",
+            "Secundario. El studio vende parte de sus acciones a un inversionista posterior sin esperar la salida final. Adelanta liquidez a cambio de menos upside."
+          ]
+        },
+        {
+          "id": "management-fees",
+          "heading": "La segunda línea: comisiones de gestión cuando el studio tiene un fondo",
+          "level": 2,
+          "paragraphs": [
+            "Un studio estructurado como fondo tiene una segunda fuente de ingreso. Cobra una comisión de gestión sobre el capital comprometido por sus inversionistas, igual que cualquier fondo. Algunos studios además cobran un fee de construcción o de servicios por el trabajo de armar cada empresa.",
+            "Conviene ver esas comisiones por lo que son. Pagan la nómina, la infraestructura compartida y la operación entre salidas. Mantienen las luces prendidas. No son el evento principal.",
+            "El error sería confundir la línea que sostiene la operación con la línea que genera el retorno. Un studio que vive de sus fees de construcción y no de su equity dejó de ser un studio. Se volvió una consultora con acciones. El retorno de verdad sigue estando en la propiedad, no en la comisión."
+          ]
+        },
+        {
+          "id": "the-risk",
+          "heading": "El riesgo honesto: concentrado, de largo plazo e ilíquido",
+          "level": 2,
+          "paragraphs": [
+            "El modelo tiene un perfil de riesgo que no conviene esconder. Es concentrado. Es de largo plazo. Es ilíquido. Y depende por completo de la calidad del operador.",
+            "Concentrado, porque pocas apuestas cargan todo el resultado. De largo plazo, porque la liquidez llega años después. Ilíquido, porque el capital queda atrapado en papel hasta la salida. Esos tres se pueden diseñar y tolerar.",
+            "El cuarto es el que mata. El modelo entero descansa en que el studio de verdad construya. Un studio que es cofundador genuino se gana su participación grande, porque quita riesgo y tiempo reales. Un studio pasivo que toma equity de fundador a cambio de un logo y un escritorio destruye valor. Ese es el modo de falla, y tiene nombre: la trampa del studio pasivo. Un buen fundador debería levantarse de esa mesa.",
+            "Con esa vara puesta, vale decir el resultado agregado con honestidad. Los venture studios han superado históricamente al capital de riesgo tradicional. La concentración, cuando el operador es real, compone a favor."
+          ]
+        },
+        {
+          "id": "how-avante",
+          "heading": "Cómo gana dinero el modelo de Avante",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina. Su modelo de ingreso es exactamente el que describe este texto. Propiedad de cofundador en cada empresa que cocrea, cobrada en la salida.",
+            "La mecánica es explícita. Avante construye 3 a 4 ventures por año. Cada una pasa por un sistema de seis etapas: Research, Partner, Build, Traction, Revenue, Compound. Despliega entre 500 mil y 1,5 millones de dólares de primer capital por venture y retiene economía de cofundador. Pocas apuestas, participación grande, horizonte largo. La cuenta del portafolio, aplicada.",
+            "El borde no es el capital. Es la profundidad de operador. Avante empareja operadores de dominio con más de 10 años de cicatrices del mercado brasileño con capital de primer cheque desde el día cero. Eso pesa más en un mercado donde los servicios son cerca del 70 por ciento del PIB, según el IBGE, y la penetración de software es baja.",
+            "[Por qué Avante](/en/why-avante) desarma la tesis completa. La forma corta es esta. El studio gana cuando la empresa gana, y no antes."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Avante aporta US$ 500 mil a US$ 1,5 M de capital inicial en cada una de las 3 a 4 empresas que construye al año, con economía de cofundador en todas.",
+            "attribution": "Avante Ventures"
+          }
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Cómo gana dinero un venture studio?",
+          "a": "Un venture studio gana dinero siendo dueño de equity en las empresas que cocrea. Origina la idea, pone el primer capital y el trabajo de operador, y toma una participación fundadora grande en cada compañía. Cobra esa propiedad años después, cuando la empresa tiene una salida. Si está estructurado como fondo, suma comisiones de gestión, pero el equity es el premio."
+        },
+        {
+          "q": "¿Cuánto equity toma un venture studio?",
+          "a": "Toma una participación mucho mayor que un fondo de capital de riesgo. Como es cofundador desde el día cero y hace el trabajo más temprano y riesgoso, la participación fundadora suele ir de 30 a 50 por ciento o más, según GSSN y datos de la industria. Una aceleradora, en cambio, toma una fracción mínima. La participación grande es el precio de construir, no un premio por el logo."
+        },
+        {
+          "q": "¿Cuándo recibe efectivo el studio?",
+          "a": "Solo al momento de la salida. El equity del studio es papel hasta que una empresa se vende, abre en bolsa o vende acciones a un inversionista posterior en un secundario. Cualquiera de las tres toma años. El capital queda inmovilizado todo ese tiempo. El modelo paga al final del ciclo, no en el camino."
+        },
+        {
+          "q": "¿Un venture studio es lo mismo que una aceleradora?",
+          "a": "No. Son apuestas opuestas. Un venture studio construye 3 a 4 empresas al año y se queda con una participación grande de cada una. Una aceleradora toma una fracción mínima de cientos de startups y confía en los números. El studio concentra a propósito, porque la atención del operador es el insumo escaso. La aceleradora rocía."
+        },
+        {
+          "q": "¿Los venture studios rinden más que el capital de riesgo tradicional?",
+          "a": "Históricamente, los venture studios han superado al capital de riesgo tradicional. Ese resultado convive con un perfil de riesgo real: concentrado, de largo plazo e ilíquido, y del todo dependiente de la calidad del operador. Un studio que construye de verdad se gana su participación. Uno pasivo, que toma equity a cambio de un logo y un escritorio, destruye valor."
         }
       ]
     }

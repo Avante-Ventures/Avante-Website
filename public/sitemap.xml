@@ -380,7 +380,7 @@
   <!-- 9. Global Venture Studio Data (DRAFT) -->
 
   <!-- CONTENT-ENGINE:START (managed by content-engine/merge.py - do not edit by hand) -->
-  <!-- 47 engine article(s) x 3 locales. Generated from content-engine/outputs. Edit the engine, not this block. -->
+  <!-- 48 engine article(s) x 3 locales. Generated from content-engine/outputs. Edit the engine, not this block. -->
   <url>
     <loc>https://avanteventures.com/en/library/accelerator-vs-vc-founder-guide</loc>
     <lastmod>2026-06-21</lastmod>
@@ -1160,6 +1160,36 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/how-to-choose-a-venture-studio"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/how-to-choose-a-venture-studio"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/how-to-choose-a-venture-studio"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/en/library/how-venture-studios-make-money</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/how-venture-studios-make-money"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/how-venture-studios-make-money"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/how-venture-studios-make-money"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/how-venture-studios-make-money"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/how-venture-studios-make-money</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/how-venture-studios-make-money"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/how-venture-studios-make-money"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/how-venture-studios-make-money"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/how-venture-studios-make-money"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/how-venture-studios-make-money</loc>
+    <lastmod>2026-07-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/how-venture-studios-make-money"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/how-venture-studios-make-money"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/how-venture-studios-make-money"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/how-venture-studios-make-money"/>
   </url>
   <url>
     <loc>https://avanteventures.com/en/library/infinity-constellation-ai-studio-thesis</loc>
