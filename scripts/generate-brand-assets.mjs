@@ -115,12 +115,20 @@ async function generateOgImage() {
     .resize(logoW, logoH, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
     .png()
     .toBuffer()
-  const buffer = await sharp(Buffer.from(OG_BG_SVG))
+  const composited = await sharp(Buffer.from(OG_BG_SVG))
     .composite([{
       input: logo,
       top: Math.round((OG_H - logoH) / 2),
       left: Math.round((OG_W - logoW) / 2),
     }])
+    .png()
+    .toBuffer()
+  // Second pass: strip the alpha channel → opaque RGB. Sharp applies flatten
+  // BEFORE composite within a single pipeline, so it must run here on the
+  // already-composited buffer. Some social crawlers (LinkedIn/WhatsApp image
+  // proxies) render RGBA OG images as a blank preview; opaque RGB is safe.
+  const buffer = await sharp(composited)
+    .removeAlpha()
     .png({ compressionLevel: 9, palette: false })
     .toBuffer()
   await writeFile(resolve(PUBLIC, 'og-image.png'), buffer)
