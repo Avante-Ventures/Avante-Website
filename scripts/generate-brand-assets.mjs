@@ -1,17 +1,26 @@
-// Generates favicons + OG image from inline SVG using the Avante brand:
+// Generates favicons + OG image using the Avante brand:
 //   - Background: #151E35 (avante-background CSS var)
 //   - Gradient on the "A": #F9B437 → #F18B46 → #98509A → #42468C (135deg)
+//
+// Favicons render an inline system-font "A" (small sizes, glyph legibility
+// beats fidelity). The OG image (1200×630, the social share preview) instead
+// composites the REAL vector wordmark (public/redesign-assets/avante-logo.svg)
+// onto the branded background — a previous Arial-drawn "AVANTE" looked generic
+// and off-brand in link previews. Logo-only, centered (chosen design).
 //
 // Run: node scripts/generate-brand-assets.mjs
 // Outputs to: public/
 
 import sharp from 'sharp'
 import { writeFile } from 'node:fs/promises'
+import { readFileSync } from 'node:fs'
 import { resolve, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const PUBLIC = resolve(__dirname, '..', 'public')
+const LOGO = resolve(PUBLIC, 'redesign-assets', 'avante-logo.svg')
+const LOGO_RATIO = 2100 / 6108 // height / width of avante-logo.svg viewBox
 
 // ─────────────────────────────────────────────────────────────────────
 // Brand SVGs (inline) — keep system fonts so we don't depend on font files
@@ -52,52 +61,24 @@ const FAVICON_MASKABLE_SVG = `
 </svg>
 `.trim()
 
-const OG_SVG = `
-<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+// OG background only — the real logo is composited on top in generateOgImage().
+const OG_W = 1200
+const OG_H = 630
+const OG_BG_SVG = `
+<svg width="${OG_W}" height="${OG_H}" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#F9B437"/>
-      <stop offset="25%" stop-color="#F18B46"/>
-      <stop offset="60%" stop-color="#98509A"/>
-      <stop offset="100%" stop-color="#42468C"/>
-    </linearGradient>
-    <radialGradient id="haze" cx="20%" cy="20%" r="70%">
-      <stop offset="0%" stop-color="#98509A" stop-opacity="0.08"/>
+    <radialGradient id="haze" cx="22%" cy="18%" r="75%">
+      <stop offset="0%" stop-color="#98509A" stop-opacity="0.14"/>
       <stop offset="100%" stop-color="#151E35" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="haze2" cx="80%" cy="80%" r="60%">
-      <stop offset="0%" stop-color="#F9B437" stop-opacity="0.06"/>
+    <radialGradient id="haze2" cx="82%" cy="88%" r="70%">
+      <stop offset="0%" stop-color="#F9B437" stop-opacity="0.10"/>
       <stop offset="100%" stop-color="#151E35" stop-opacity="0"/>
     </radialGradient>
   </defs>
-
-  <rect width="1200" height="630" fill="#151E35"/>
-  <rect width="1200" height="630" fill="url(#haze)"/>
-  <rect width="1200" height="630" fill="url(#haze2)"/>
-
-  <!-- AVANTE wordmark (gradient A + white VANTE) -->
-  <text x="600" y="290" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-        font-size="160" font-weight="900" text-anchor="middle" letter-spacing="-5">
-    <tspan fill="url(#grad)">A</tspan><tspan fill="#FFFFFF">VANTE</tspan>
-  </text>
-
-  <!-- Tagline -->
-  <text x="600" y="380" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-        font-size="34" font-weight="500" text-anchor="middle" fill="#F4A261" letter-spacing="-0.5">
-    Silicon Valley Playbooks. Brazil-Native Execution.
-  </text>
-
-  <!-- Subtitle -->
-  <text x="600" y="440" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-        font-size="22" font-weight="400" text-anchor="middle" fill="rgba(255,255,255,0.55)">
-    AI-native venture studio · Brazil + LATAM
-  </text>
-
-  <!-- Bottom domain -->
-  <text x="600" y="570" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
-        font-size="18" font-weight="500" text-anchor="middle" fill="rgba(255,255,255,0.4)" letter-spacing="2">
-    AVANTEVENTURES.COM
-  </text>
+  <rect width="${OG_W}" height="${OG_H}" fill="#151E35"/>
+  <rect width="${OG_W}" height="${OG_H}" fill="url(#haze)"/>
+  <rect width="${OG_W}" height="${OG_H}" fill="url(#haze2)"/>
 </svg>
 `.trim()
 
@@ -113,7 +94,6 @@ const targets = [
   { svg: FAVICON_SVG,          out: 'favicon-192.png',           size: 192 },
   { svg: FAVICON_SVG,          out: 'favicon-512.png',           size: 512 },
   { svg: FAVICON_MASKABLE_SVG, out: 'favicon-512-maskable.png',  size: 512 },
-  { svg: OG_SVG,               out: 'og-image.png',              width: 1200, height: 630 },
 ]
 
 for (const t of targets) {
@@ -125,5 +105,28 @@ for (const t of targets) {
   await writeFile(resolve(PUBLIC, t.out), buffer)
   console.log(`✓ ${t.out}  (${buffer.length.toLocaleString()} bytes)`)
 }
+
+// OG image: composite the REAL vector wordmark (gradient A + white VANTE),
+// centered on the branded haze background. Logo width = 63% of canvas.
+async function generateOgImage() {
+  const logoW = Math.round(OG_W * 0.633) // 760px
+  const logoH = Math.round(logoW * LOGO_RATIO)
+  const logo = await sharp(Buffer.from(readFileSync(LOGO, 'utf8')), { density: 300 })
+    .resize(logoW, logoH, { fit: 'contain', background: { r: 0, g: 0, b: 0, alpha: 0 } })
+    .png()
+    .toBuffer()
+  const buffer = await sharp(Buffer.from(OG_BG_SVG))
+    .composite([{
+      input: logo,
+      top: Math.round((OG_H - logoH) / 2),
+      left: Math.round((OG_W - logoW) / 2),
+    }])
+    .png({ compressionLevel: 9, palette: false })
+    .toBuffer()
+  await writeFile(resolve(PUBLIC, 'og-image.png'), buffer)
+  console.log(`✓ og-image.png  (${buffer.length.toLocaleString()} bytes)`)
+}
+
+await generateOgImage()
 
 console.log('\nDone. All assets written to public/')
