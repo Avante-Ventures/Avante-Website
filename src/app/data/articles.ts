@@ -1767,7 +1767,7 @@ const articleSiggaCaseStudy: Article = {
 // ─────────────────────────────────────────────────────────────────────
 
 // === CONTENT-ENGINE:START (managed by content-engine/merge.py — do not edit by hand) ===
-// 48 article(s) generated from content-engine/outputs. Edit the engine, not this block.
+// 55 article(s) generated from content-engine/outputs. Edit the engine, not this block.
 const engineArticles: Article[] = [
   {
     "slug": "accelerator-vs-vc-founder-guide",
@@ -8951,6 +8951,208 @@ const engineArticles: Article[] = [
     }
   },
   {
+    "slug": "does-my-ai-startup-have-a-moat",
+    "category": "ai",
+    "type": "Explainer",
+    "readTime": "8 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-08",
+    "isPublished": true,
+    "en": {
+      "title": "Does My AI Startup Have a Moat?",
+      "description": "Does my AI startup have a moat? On day zero most are wrappers. A founder's test for real AI defensibility through data loops, workflow depth, and distribution.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Founders ask me this in month three, usually right after a bigger competitor ships the same feature over a weekend. The real subject underneath the question is AI defensibility. For most early companies the honest answer is \"not yet,\" and that is not a failure. Almost no one has an AI startup moat on day zero. What matters is whether the company is built so a moat can form, and whether you can name the exact thing that will be hard to copy a year from now.",
+            "Start with the word itself. Warren Buffett's test for a business is the durability of its competitive advantage, the moat around the castle. He is not asking whether you are ahead today. He is asking whether you will still be ahead after well-funded people try to take what you have. That is a harder question than \"is my demo impressive,\" and it is the one to hold your own startup to.",
+            "It helps to see how little a head start guarantees. An accelerator like Y Combinator will write its standard $500,000 check and put you in a batch, which is a genuine advantage. It is still not a moat. Every other founder in that batch got the same check and the same demo day, and so will the next batch. Capital and API access are table stakes now, not defensibility."
+          ]
+        },
+        {
+          "id": "the-model-is-not-the-moat",
+          "heading": "The model is not the moat",
+          "level": 2,
+          "paragraphs": [
+            "Here is the uncomfortable part for AI founders. The capability that feels like magic in your product is, for the most part, rented. You are calling a foundation model your competitor can call with the same API key and the same docs. Stanford's AI Index has tracked how far the cost of running a capable model has fallen and how tightly the leading models now cluster on standard benchmarks, which means the raw capability edges closer to a commodity every quarter. When the underlying capability gets cheaper and more evenly distributed every few months, owning a thin layer on top of it is a weak place to stand.",
+            "The money side points the same way. David Cahn of Sequoia estimated a roughly $600 billion annual gap between the industry's spending on AI infrastructure and the revenue needed to pay for it. All that capital only pays off if companies build things people keep paying for, and \"keep paying for\" is another way of saying \"hard to replace.\" The spend is pouring into the model layer. The durable businesses will be built one level up, in the products and data the models alone cannot reproduce."
+          ]
+        },
+        {
+          "id": "so-is-my-ai-startup-just-a-wrapper",
+          "heading": "So is my AI startup just a wrapper?",
+          "level": 2,
+          "paragraphs": [
+            "Sometimes the honest label is yes, for now. That does not doom you. The useful move is to ask what the product is quietly accumulating that a fresh competitor would not have, and to be clear-eyed about [whether your AI startup is just a wrapper](/en/library/is-my-ai-startup-just-a-wrapper). If the answer is \"nothing,\" you have a feature. If the answer is a growing asset that compounds with use, you have the start of a moat.",
+            "Here is the line I hold products up to. A moat is the thing a competitor still cannot copy after they call the same model you call. Say it about your own company and see what survives."
+          ]
+        },
+        {
+          "id": "where-ai-moats-actually-come-from",
+          "heading": "Where AI moats actually come from",
+          "level": 2,
+          "paragraphs": [
+            "Three sources do most of the work, and none of them is the model.",
+            "**Proprietary data loops.** Every time someone works inside your product, do you capture data that makes the next result better for them and harder for a newcomer to match? This is the mechanic behind [data network effects](/en/library/data-network-effects-moat), where advantage compounds through use. A support tool that learns one company's tickets. A claims tool that absorbs how a single insurer handles its edge cases. The model is shared. The loop is yours.",
+            "**Workflow depth and switching costs.** A product a team runs its day inside is much harder to rip out than a clever answer box. When you hold the system of record, the approvals, the integrations, and the audit trail, switching cost works for you. The metric that captures this is net revenue retention. When customers not only stay but spend more each year, you are watching switching costs and expansion do their job. Bessemer Venture Partners treats net revenue retention above 120% as a mark of best-in-class cloud businesses, and that level of retention rarely comes from a clever output. It comes from being the system a team cannot easily leave.",
+            "**Distribution.** Founders underrate this one, and it is where geography stops being a footnote and becomes the mechanic."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Bessemer Venture Partners treats net revenue retention above 120% as a mark of best-in-class cloud businesses, the retention level that shows up only when a product is embedded deeply enough that customers expand instead of leaving.",
+            "attribution": "Bessemer Venture Partners, cloud benchmarks"
+          }
+        },
+        {
+          "id": "distribution-is-a-moat-and-in-latam-it-is-a-specific-one",
+          "heading": "Distribution is a moat, and in LATAM it is a specific one",
+          "level": 2,
+          "paragraphs": [
+            "In a crowded model economy, the company that can reliably reach and win a customer beats the company with a slightly cleaner output. For a US-born tool trying to parachute into Brazil and the rest of Latin America, that reach is genuinely hard to manufacture, which is what makes the [distribution advantage in Latin America](/en/library/distribution-advantage-latam-startups) real.",
+            "The edge is concrete. It looks like local design partners who let you build against real workflows before a global player notices the market. It looks like fluency with local rails and rules, from Pix as a default payment expectation to LGPD as a hard requirement rather than an afterthought. It looks like Portuguese and Spanish that read as native, and trust with buyers who take the meeting because of who introduced you. Those relationships are slow to build and hard to copy. That is exactly why we co-found from day zero instead of advising from a distance. Distribution in the region is earned on the ground, and it compounds."
+          ]
+        },
+        {
+          "id": "what-this-looks-like-in-practice",
+          "heading": "What this looks like in practice",
+          "level": 2,
+          "paragraphs": [
+            "Picture an early-stage team in Brazilian cargo insurance. Version one is close to a wrapper. It reads damage reports and drafts a first-pass claim assessment with a foundation model any competitor could also call. On its own, copyable in a weekend.",
+            "The moat forms in what comes next. Working claim after claim with a handful of local insurers, the team accumulates a labeled corpus of Brazilian Portuguese claim narratives, adjuster notes, regional fraud patterns, and the quirks of how these carriers actually decide. That is proprietary data in a language and a market most global players never touch, and it trains scoring a generic model cannot reproduce, because the generic model never saw it. The product settles into the insurer's daily workflow and becomes the place claims get handled.",
+            "There is a regulatory layer underneath all of it. Insurance in Brazil runs under SUSEP, the national regulator, and the authorizations and product rules that govern it are slow by design, often a year or more to work through. Building fluently inside that regime is its own barrier. A foreign competitor that has not started that clock is behind before it writes a line of code. A year in, a well-funded copycat can call the same model and still cannot call the same data, sit where this product sits, or skip the ground it took to get there. That is the day-zero pattern we co-found toward, and it is why the wrapper question is the wrong place to stop."
+          ]
+        },
+        {
+          "id": "how-to-test-your-own-company",
+          "heading": "How to test your own company",
+          "level": 2,
+          "paragraphs": [
+            "Ask three plain questions and answer them without flattering yourself.",
+            "First, name the asset. What will you have after a year of usage that a competitor starting today would not? If you cannot say it in one sentence, you are probably still a feature.",
+            "Second, check the loop. Does using the product make it better in a way that is specific to your customer and stays with you? A head start that does not compound is a head start that expires.",
+            "Third, follow the distribution. Can you reach and win your next hundred customers through a channel a stranger cannot easily rent? In Brazil and LATAM that channel is often relationships and local credibility, not ad budget.",
+            "None of this exists on day zero, and that is the point. Real AI defensibility is decided early, when the founders choose which asset they are compounding and then organize the whole company around feeding it. If you want the wider build sequence, start with [how to build an AI startup in 2026](/en/library/how-to-build-an-ai-startup-2026). At Avante we co-found AI-native companies for Brazil and Latin America for that reason. The data loop, the workflow, and the distribution get built in the first months, or they do not get built at all."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Does my AI startup have a moat yet?",
+          "a": "Probably not on day zero, and that is normal. Almost no early company has a moat. What matters is whether you can name the asset, a proprietary data loop, a deep workflow, or a distribution channel, that will be hard to copy after a year of usage. If you cannot name it, you have a feature, not a moat."
+        },
+        {
+          "q": "Is my AI startup just a wrapper?",
+          "a": "It might be today, and that is a starting point rather than a verdict. The real question is what the product accumulates as people use it. If each use adds proprietary data or deepens a workflow that is painful to leave, the wrapper is becoming something defensible. If nothing accumulates, it stays a wrapper."
+        },
+        {
+          "q": "What actually gives an AI startup a moat?",
+          "a": "Three things, and none of them is the model. Proprietary data loops that improve with use, workflow depth that creates switching costs, and distribution you can rely on. The foundation model is rented by everyone. The moat is the thing a competitor still cannot copy after they call the same model you call."
+        },
+        {
+          "q": "Why is distribution a moat for AI startups in Brazil and Latin America?",
+          "a": "Because reach in the region is hard to manufacture from outside it. Local design partners, fluency with rails and rules like Pix and LGPD, native-quality Portuguese and Spanish, and trust with buyers who take the meeting because of who introduced you. Those take time to build and are slow for a foreign competitor to copy, which is what makes them defensible."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Minha startup de IA tem um fosso competitivo?",
+      "description": "Minha startup de IA tem um fosso competitivo? No dia zero, quase toda startup é só um wrapper. Um teste do fundador para a defensibilidade real em IA por meio de loops de dados, profundidade de workflow e distribuição.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Fundadores me perguntam isso no terceiro mês, geralmente logo depois que um concorrente maior lança a mesma funcionalidade em um fim de semana. O tema real por trás da pergunta é a defensibilidade em IA. Para a maioria das empresas em estágio inicial, a resposta honesta é \"ainda não\", e isso não é um fracasso. Quase ninguém tem um fosso competitivo de startup de IA no dia zero. O que importa é se a empresa foi construída para que um fosso possa se formar, e se você consegue nomear exatamente aquilo que será difícil de copiar daqui a um ano.",
+            "Comece pela própria palavra. O teste de Warren Buffett para um negócio é a durabilidade da sua vantagem competitiva, o fosso ao redor do castelo. Ele não está perguntando se você está à frente hoje. Ele está perguntando se você ainda estará à frente depois que gente bem financiada tentar tomar o que você tem. Essa é uma pergunta mais difícil do que \"minha demo é impressionante\", e é a pergunta à qual você deve submeter a sua própria startup.",
+            "Ajuda enxergar o quão pouco uma vantagem inicial garante. Uma aceleradora como a Y Combinator vai assinar seu cheque padrão de US$ 500 mil e colocar você em um batch, o que é uma vantagem real. Ainda assim, não é um fosso. Todos os outros fundadores daquele batch receberam o mesmo cheque e o mesmo demo day, e o próximo batch também receberá. Capital e acesso a API hoje são o mínimo para entrar no jogo, não defensibilidade."
+          ]
+        },
+        {
+          "id": "the-model-is-not-the-moat",
+          "heading": "O modelo não é o fosso",
+          "level": 2,
+          "paragraphs": [
+            "Aqui está a parte incômoda para fundadores de IA. A capacidade que parece mágica no seu produto é, em grande parte, alugada. Você está chamando um modelo de fundação que o seu concorrente pode chamar com a mesma chave de API e a mesma documentação. O AI Index de Stanford vem acompanhando o quanto o custo de rodar um modelo capaz caiu e o quão próximos os principais modelos agora estão nos benchmarks padrão, o que significa que a capacidade bruta se aproxima de uma commodity a cada trimestre. Quando a capacidade subjacente fica mais barata e mais distribuída a cada poucos meses, ser apenas uma camada fina em cima dela é um lugar frágil para se apoiar.",
+            "O lado financeiro aponta na mesma direção. David Cahn, da Sequoia, estimou uma lacuna anual de cerca de US$ 600 bilhões entre o que a indústria gasta em infraestrutura de IA e a receita necessária para pagar por isso. Todo esse capital só se paga se as empresas construírem coisas pelas quais as pessoas continuam pagando, e \"continuam pagando\" é outra forma de dizer \"difícil de substituir\". O investimento está jorrando na camada do modelo. Os negócios duráveis serão construídos um nível acima, nos produtos e nos dados que os modelos sozinhos não conseguem reproduzir."
+          ]
+        },
+        {
+          "id": "so-is-my-ai-startup-just-a-wrapper",
+          "heading": "Então minha startup de IA é só um wrapper?",
+          "level": 2,
+          "paragraphs": [
+            "Às vezes o rótulo honesto é sim, por enquanto. Isso não condena você. O movimento útil é perguntar o que o produto está acumulando silenciosamente que um concorrente novo não teria, e ser honesto sobre [se a sua startup de IA é apenas um wrapper](/pt/library/is-my-ai-startup-just-a-wrapper). Se a resposta é \"nada\", você tem uma funcionalidade. Se a resposta é um ativo em crescimento que se acumula com o uso, você tem o começo de um fosso.",
+            "Esta é a régua contra a qual eu avalio produtos. Um fosso é aquilo que um concorrente ainda não consegue copiar depois de chamar o mesmo modelo que você chama. Diga isso sobre a sua própria empresa e veja o que sobrevive."
+          ]
+        },
+        {
+          "id": "where-ai-moats-actually-come-from",
+          "heading": "De onde os fossos de IA realmente vêm",
+          "level": 2,
+          "paragraphs": [
+            "Três fontes fazem a maior parte do trabalho, e nenhuma delas é o modelo.",
+            "**Loops de dados proprietários.** Toda vez que alguém trabalha dentro do seu produto, você captura dados que tornam o próximo resultado melhor para essa pessoa e mais difícil de um recém-chegado igualar? Esse é o mecanismo por trás dos [efeitos de rede de dados](/pt/library/data-network-effects-moat), em que a vantagem se acumula com o uso. Uma ferramenta de suporte que aprende os chamados de uma empresa. Uma ferramenta de sinistros que absorve como uma seguradora específica lida com seus casos de exceção. O modelo é compartilhado. O loop é seu.",
+            "**Profundidade de workflow e custos de troca.** Um produto dentro do qual um time roda o dia inteiro é muito mais difícil de arrancar do que uma caixinha de respostas espertas. Quando você detém o sistema de registro, as aprovações, as integrações e a trilha de auditoria, o custo de troca trabalha a seu favor. A métrica que captura isso é a retenção líquida de receita. Quando os clientes não só ficam, mas gastam mais a cada ano, você está vendo os custos de troca e a expansão fazendo o seu trabalho. A Bessemer Venture Partners trata uma retenção líquida de receita acima de 120% como marca de negócios de nuvem de altíssimo nível, e esse nível de retenção raramente vem de um resultado esperto. Ele vem de ser o sistema do qual um time não consegue sair com facilidade.",
+            "**Distribuição.** Fundadores subestimam esta, e é aqui que a geografia deixa de ser uma nota de rodapé e vira o mecanismo."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "A Bessemer Venture Partners trata uma retenção líquida de receita acima de 120% como marca de negócios de nuvem de altíssimo nível, o nível de retenção que só aparece quando um produto está incorporado a ponto de os clientes expandirem em vez de sair.",
+            "attribution": "Bessemer Venture Partners, cloud benchmarks"
+          }
+        },
+        {
+          "id": "distribution-is-a-moat-and-in-latam-it-is-a-specific-one",
+          "heading": "Distribuição é um fosso, e na América Latina é um fosso específico",
+          "level": 2,
+          "paragraphs": [
+            "Numa economia de modelos lotada, a empresa que consegue alcançar e conquistar um cliente de forma confiável vence a empresa com um resultado ligeiramente mais polido. Para uma ferramenta nascida nos Estados Unidos tentando aterrissar de paraquedas no Brasil e no resto da América Latina, esse alcance é genuinamente difícil de fabricar, e é isso que torna real a [vantagem de distribuição na América Latina](/pt/library/distribution-advantage-latam-startups).",
+            "A vantagem é concreta. Ela se parece com design partners locais que deixam você construir sobre workflows reais antes de um player global perceber o mercado. Ela se parece com fluência nos trilhos e nas regras locais, do Pix como expectativa padrão de pagamento à LGPD como exigência rígida, e não como algo a resolver depois. Ela se parece com português e espanhol que soam nativos, e com a confiança de compradores que aceitam a reunião por causa de quem fez a apresentação. Essas relações são lentas de construir e difíceis de copiar. É exatamente por isso que cofundamos desde o dia zero, em vez de aconselhar à distância. Distribuição na região se conquista no chão, e ela se acumula."
+          ]
+        },
+        {
+          "id": "what-this-looks-like-in-practice",
+          "heading": "Como isso se parece na prática",
+          "level": 2,
+          "paragraphs": [
+            "Imagine um time em estágio inicial no seguro de cargas brasileiro. A versão um está perto de ser um wrapper. Ela lê laudos de avarias e redige uma primeira avaliação de sinistro com um modelo de fundação que qualquer concorrente também poderia chamar. Por si só, copiável em um fim de semana.",
+            "O fosso se forma no que vem depois. Sinistro após sinistro, trabalhando com um punhado de seguradoras locais, o time acumula um corpus rotulado de narrativas de sinistro em português brasileiro, anotações do regulador de sinistro, padrões regionais de fraude e as manias de como essas seguradoras de fato decidem. Isso é dado proprietário numa língua e num mercado que a maioria dos players globais nunca toca, e treina uma pontuação que um modelo genérico não consegue reproduzir, porque o modelo genérico nunca viu esses dados. O produto se acomoda no workflow diário da seguradora e vira o lugar onde os sinistros são resolvidos.",
+            "Há uma camada regulatória por baixo de tudo isso. O seguro no Brasil funciona sob a SUSEP, o regulador nacional, e as autorizações e regras de produto que o governam são lentas por natureza, muitas vezes um ano ou mais para percorrer. Construir com fluência dentro desse regime é uma barreira em si. Um concorrente estrangeiro que ainda não acionou esse relógio já está atrás antes de escrever uma linha de código. Um ano depois, um imitador bem financiado pode chamar o mesmo modelo e ainda assim não consegue chamar os mesmos dados, ocupar o lugar onde esse produto está, nem pular o caminho que foi preciso percorrer para chegar lá. Esse é o padrão de dia zero em direção ao qual cofundamos, e é por isso que a pergunta do wrapper é o lugar errado para parar."
+          ]
+        },
+        {
+          "id": "how-to-test-your-own-company",
+          "heading": "Como testar a sua própria empresa",
+          "level": 2,
+          "paragraphs": [
+            "Faça três perguntas simples e responda a elas sem se enganar.",
+            "Primeiro, nomeie o ativo. O que você terá depois de um ano de uso que um concorrente começando hoje não teria? Se você não consegue dizer isso em uma frase, provavelmente ainda é uma funcionalidade.",
+            "Segundo, verifique o loop. Usar o produto o torna melhor de um jeito que é específico do seu cliente e que fica com você? Uma vantagem inicial que não se acumula é uma vantagem inicial que expira.",
+            "Terceiro, siga a distribuição. Você consegue alcançar e conquistar seus próximos cem clientes por um canal que um estranho não consegue alugar com facilidade? No Brasil e na América Latina, esse canal é muitas vezes relacionamento e credibilidade local, não verba de anúncio.",
+            "Nada disso existe no dia zero, e esse é justamente o ponto. A defensibilidade real em IA é decidida cedo, quando os fundadores escolhem qual ativo estão acumulando e então organizam a empresa inteira para alimentá-lo. Se você quer a sequência mais ampla de construção, comece por [como construir uma startup de IA em 2026](/pt/library/how-to-build-an-ai-startup-2026). Na Avante, cofundamos empresas nativas de IA para o Brasil e a América Latina exatamente por isso. O loop de dados, o workflow e a distribuição são construídos nos primeiros meses, ou não são construídos de jeito nenhum."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Minha startup de IA já tem um fosso competitivo?",
+          "a": "Provavelmente não no dia zero, e isso é normal. Quase nenhuma empresa em estágio inicial tem um fosso. O que importa é se você consegue nomear o ativo, um loop de dados proprietário, um workflow profundo ou um canal de distribuição, que será difícil de copiar depois de um ano de uso. Se você não consegue nomeá-lo, você tem uma funcionalidade, não um fosso."
+        },
+        {
+          "q": "Minha startup de IA é só um wrapper?",
+          "a": "Pode ser hoje, e isso é um ponto de partida, não um veredito. A pergunta real é o que o produto acumula à medida que as pessoas o usam. Se cada uso adiciona dados proprietários ou aprofunda um workflow doloroso de abandonar, o wrapper está virando algo defensável. Se nada se acumula, ele continua sendo um wrapper."
+        },
+        {
+          "q": "O que de fato dá um fosso a uma startup de IA?",
+          "a": "Três coisas, e nenhuma delas é o modelo. Loops de dados proprietários que melhoram com o uso, profundidade de workflow que cria custos de troca e distribuição na qual você pode confiar. O modelo de fundação é alugado por todo mundo. O fosso é aquilo que um concorrente ainda não consegue copiar depois de chamar o mesmo modelo que você chama."
+        },
+        {
+          "q": "Por que a distribuição é um fosso para startups de IA no Brasil e na América Latina?",
+          "a": "Porque o alcance na região é difícil de fabricar de fora dela. Design partners locais, fluência com trilhos e regras como Pix e LGPD, português e espanhol de qualidade nativa, e a confiança de compradores que aceitam a reunião por causa de quem fez a apresentação. Isso leva tempo para construir e é lento para um concorrente estrangeiro copiar, o que é o que os torna defensáveis."
+        }
+      ]
+    }
+  },
+  {
     "slug": "does-your-ai-startup-have-a-moat",
     "category": "ai",
     "type": "Essay",
@@ -9948,6 +10150,382 @@ const engineArticles: Article[] = [
     }
   },
   {
+    "slug": "how-do-venture-studios-make-money",
+    "category": "insights",
+    "type": "Explainer",
+    "readTime": "9 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-08",
+    "isPublished": true,
+    "en": {
+      "title": "How Do Venture Studios Make Money?",
+      "description": "Venture studios earn returns three ways: founder equity in the companies they co-found, shared build services, and carry on exits. Here is how it works.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Venture studios make money through three revenue lines: founder-level equity in every company they help create, cost recovery on the shared operating team that actually builds those companies, and carried interest when the studio also runs an investment fund. Equity is the engine. A studio is betting that a large ownership stake, earned by co-founding a company at day zero, will across a whole portfolio more than repay the cost of building."
+          ]
+        },
+        {
+          "id": "how-do-venture-studios-make-money",
+          "heading": "How do venture studios make money?",
+          "level": 2,
+          "paragraphs": [
+            "**A venture studio is a company that builds companies, and it is paid in equity for the ones that work rather than in fees for the ones it touches.**",
+            "The distinction that matters is founder versus consultancy. A studio does not mainly sell services to outsiders for cash. It converts its own labor and capital into ownership, then waits for that ownership to become valuable. Three revenue lines sit under that idea. The first is founder equity. The second is recovery of the cost of the shared operating team. The third is carried interest, which appears only when the studio also runs a fund. They matter in that order, and the first does most of the work."
+          ]
+        },
+        {
+          "id": "revenue-line-one-founder-equity",
+          "heading": "Revenue line one: founder equity",
+          "level": 2,
+          "paragraphs": [
+            "The core asset a venture studio owns is founder equity in the companies it creates. Because the studio supplies what a founder normally supplies, meaning the idea, the first capital, and the early engineers and operators, it takes a stake that looks like a founder's rather than an investor's. Across venture-studio literature that stake is commonly put between 30 percent and 50 percent at formation. That is the sharpest contrast with accelerators. Y Combinator's published standard deal invests $500,000 for about 7 percent, structured as $125,000 for a fixed 7 percent on a post-money SAFE plus $375,000 on an uncapped MFN SAFE. Techstars has long offered roughly $20,000 for about 6 percent of common stock plus an optional $100,000 convertible note. Those are minority checks written into a company that someone else founded. A studio sits on the founding cap table from the first day, so its stake is measured in tens of percent, not single digits. How much a studio takes, and why, is its own subject, covered in [how much equity do venture studios take](/en/library/how-much-equity-do-venture-studios-take).",
+            "That equity is long-dated and illiquid. It becomes cash only at a liquidity event, meaning a later financing that lets early holders sell, an acquisition, or a public listing, any of which can be five to ten years away. As the company raises money through instruments like the post-money SAFE that Y Combinator introduced in 2018, and then through priced rounds, the founders' ownership, including the studio's founding stake, is what absorbs the dilution. A studio therefore lives or dies by portfolio construction. Most of the companies it builds will return little. One large outcome can define an entire studio's economics. It is the same power-law pattern that governs venture capital, and taking a founder-sized stake instead of an accelerator-sized one is what makes those rare outcomes big enough to carry every other bet."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Y Combinator's published standard deal is $500,000 for about 7 percent, split as a $125,000 post-money SAFE for a fixed 7 percent plus a $375,000 uncapped MFN SAFE. A venture studio takes a founder-sized stake instead, because it co-founds the company rather than coaching it.",
+            "attribution": "Y Combinator (ycombinator.com)"
+          }
+        },
+        {
+          "id": "revenue-line-two-shared-operating-services",
+          "heading": "Revenue line two: shared operating services",
+          "level": 2,
+          "paragraphs": [
+            "The second revenue line is less glamorous and often misread. A studio runs a shared operating team of engineers, designers, product managers, recruiters, and finance, legal, and go-to-market specialists who move across the portfolio, building one company after another. That team is the studio's largest cost, and it is recovered rather than sold at a markup.",
+            "In most studios the recovery happens through equity. The build team's work is the consideration the studio gives in exchange for its founder stake, so the cost of services and the equity return are two sides of one transaction. Some studios also bill funded portfolio companies for specific shared services at or near cost, or draw a management allocation from a paired fund to keep the platform staffed between exits. What a healthy studio does not do is run services as a profit center. Charging portfolio companies a markup would compete with the founders it exists to serve, and would quietly signal that the studio does not believe in its own equity."
+          ]
+        },
+        {
+          "id": "revenue-line-three-carried-interest-on-outcomes",
+          "heading": "Revenue line three: carried interest on outcomes",
+          "level": 2,
+          "paragraphs": [
+            "The third revenue line appears when a studio also runs an investment fund, which many do. Alongside the equity it earns by building, the studio raises capital from outside limited partners and invests it into its own companies, and sometimes others. A venture fund charges the economics often summarized as two and twenty, a management fee near 2 percent of committed capital each year and carried interest of about 20 percent of the fund's profits. That carry is the studio team's share of investment gains, earned on top of the founder equity it already holds.",
+            "This is why one successful company can pay the studio twice. Once through the founder stake it holds directly from co-founding the company, and again through the carried interest its fund earns on the capital it invested into that same company. The two streams are legally separate and usually sit in different entities, but they point at the same handful of outcomes, which is what makes the model attractive to the people who operate it."
+          ]
+        },
+        {
+          "id": "why-the-model-can-pay-for-itself",
+          "heading": "Why the model can pay for itself",
+          "level": 2,
+          "paragraphs": [
+            "The obvious objection is cost. Building companies in-house is far more expensive per company than writing small checks to founders who build on their own dime. The studio thesis is that concentrating the repeatable parts of company creation, meaning hiring, product, and fundraising, into a permanent team removes the earliest and most common points of failure, so a larger share of the portfolio survives long enough to matter.",
+            "The Global Startup Studio Network, in its report Disrupting the Venture Landscape, framed the model exactly that way. Studios exist to systematically de-risk and accelerate the earliest and riskiest phase of a company, taking an idea to a funded, operating business faster than a lone founding team usually can. That framing is directional and partly self-reported, so it is best read as a signal about the model rather than a promise for any single company. The category has grown to match, from a niche experiment in the 1990s into an established model with studios operating worldwide. Idealab, the studio Bill Gross founded in 1996, has launched more than 75 companies on its own, early proof that company creation can be run as a repeatable process rather than a one-off event.",
+            "None of this guarantees a return for any single studio. It explains why the economics can work. If the shared team really does lift the survival and funding rate of the portfolio, the founder equity in the winners can outweigh the higher cost of building. If it does not, the studio has simply spent more to reach the same base rates as everyone else."
+          ]
+        },
+        {
+          "id": "what-it-means-if-you-are-the-founder",
+          "heading": "What it means if you are the founder",
+          "level": 2,
+          "paragraphs": [
+            "For a founder, the question underneath all of this is alignment. A venture studio makes money the way you do, by owning equity that becomes valuable, so its incentive is to build a company that is genuinely worth something rather than to extract fees along the way. The trade is real. You give up a larger share of the company than you would to an accelerator or an angel, and in return you get a co-founding partner that brings capital, a building team, and the operational scaffolding of a company from day zero. Whether that trade is right for you depends on how much of the earliest and hardest building you want to do alone. See [venture studio vs accelerator vs incubator vs vc](/en/library/venture-studio-vs-accelerator-vs-incubator-vs-vc) for how the paths compare, and [is a venture studio right for your AI startup](/en/library/is-a-venture-studio-right-for-your-ai-startup) for how to judge the fit.",
+            "Avante Ventures runs this model in and for Brazil and Latin America, co-founding AI-native companies alongside their founders from day zero and staying on as an operating partner rather than a passive check. The three revenue lines are the same ones described here. The discipline is making sure the founder equity is earned by building something that lasts, because in a studio that is the only way anyone gets paid."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How do venture studios make money?",
+          "a": "Venture studios make money mainly by owning founder-level equity in the companies they co-create, then realizing that value when those companies raise later rounds, get acquired, or go public. Two secondary lines support the platform: recovering the cost of the shared build team, usually through the equity itself, and, when the studio also runs a fund, earning carried interest on the capital it invests. Equity is the engine, and the other two keep the platform staffed between exits."
+        },
+        {
+          "q": "How much equity does a venture studio take?",
+          "a": "A venture studio usually takes the largest early stake of any startup-building path, commonly between 30 percent and 50 percent at formation, because it supplies the idea, the first capital, the build team, and the operators before any outside founder joins. That is far more than an accelerator. Y Combinator's standard deal is $500,000 for about 7 percent, and Techstars offers roughly $20,000 for about 6 percent, because both coach a company someone else founded rather than co-founding it."
+        },
+        {
+          "q": "Do venture studios actually make better returns than traditional VC?",
+          "a": "Studios have historically been reported to outperform traditional venture capital, and research from the Global Startup Studio Network suggests studio-built companies tend to reach later funding faster and graduate at higher rates. That data is self-reported and survivor-weighted, so it is best read as a directional signal about the model rather than a guarantee for any single company. The structural reason is concentration: a studio owns a large stake in a few companies it built itself, rather than a small stake in many it only funded."
+        },
+        {
+          "q": "How is a venture studio different from an accelerator like Y Combinator or Techstars?",
+          "a": "An accelerator runs a fixed program and writes a small check for a minority stake in a company you already started. A venture studio co-founds the company with you from day zero, contributing the idea, first capital, and a working build team, and takes a founder-sized stake in return. The post-money SAFE that Y Combinator introduced in 2018 is now the standard instrument early companies raise on, whichever path they choose. For a side-by-side, see the YC vs Techstars vs venture studio comparison."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Como os Venture Studios Ganham Dinheiro?",
+      "description": "Os venture studios geram retorno de três formas: participação de cofundador nas empresas que ajudam a criar, serviços de construção compartilhados e carry nas saídas. Veja como funciona.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Os venture studios ganham dinheiro por meio de três linhas de receita: participação em nível de fundador em cada empresa que ajudam a criar, recuperação do custo do time operacional compartilhado que de fato constrói essas empresas e carried interest quando o studio também opera um fundo de investimento. A participação acionária é o motor. Um studio está apostando que uma fatia grande de propriedade, conquistada ao cofundar uma empresa no dia zero, vai, ao longo de todo um portfólio, mais do que compensar o custo de construir."
+          ]
+        },
+        {
+          "id": "how-do-venture-studios-make-money",
+          "heading": "Como os venture studios ganham dinheiro?",
+          "level": 2,
+          "paragraphs": [
+            "**Um venture studio é uma empresa que constrói empresas, e é remunerado em participação acionária pelas que dão certo, e não em honorários pelas que apenas toca.**",
+            "A distinção que importa é a de fundador contra a de consultoria. Um studio não vive de vender serviços a terceiros por dinheiro. Ele converte o próprio trabalho e capital em propriedade e depois espera essa propriedade se valorizar. Três linhas de receita sustentam essa ideia. A primeira é a participação de fundador. A segunda é a recuperação do custo do time operacional compartilhado. A terceira é o carried interest, que só aparece quando o studio também opera um fundo. Elas importam nessa ordem, e a primeira faz a maior parte do trabalho."
+          ]
+        },
+        {
+          "id": "revenue-line-one-founder-equity",
+          "heading": "Linha de receita um: participação de fundador",
+          "level": 2,
+          "paragraphs": [
+            "O principal ativo que um venture studio detém é a participação de fundador nas empresas que cria. Como o studio fornece o que um fundador normalmente fornece, ou seja, a ideia, o primeiro capital e os primeiros engenheiros e operadores, ele fica com uma fatia que se parece com a de um fundador, e não com a de um investidor. Na literatura sobre venture studios, essa fatia costuma ser situada entre 30 por cento e 50 por cento na formação. Esse é o contraste mais nítido com as aceleradoras. O acordo padrão divulgado pela Y Combinator investe US$ 500.000 por cerca de 7 por cento, estruturado como US$ 125.000 por 7 por cento fixos em um post-money SAFE mais US$ 375.000 em um SAFE MFN sem cap. A Techstars há muito tempo oferece cerca de US$ 20.000 por aproximadamente 6 por cento de ações ordinárias mais uma nota conversível opcional de US$ 100.000. Esses são cheques minoritários escritos em uma empresa que outra pessoa fundou. Um studio ocupa o cap table fundador desde o primeiro dia, então sua fatia é medida em dezenas de por cento, não em dígitos únicos. Quanto um studio leva, e por quê, é um assunto à parte, tratado em [quanto de participação os venture studios levam](/pt/library/how-much-equity-do-venture-studios-take).",
+            "Essa participação é de longo prazo e ilíquida. Ela só vira dinheiro em um evento de liquidez, ou seja, uma captação posterior que permite aos primeiros detentores vender, uma aquisição ou uma abertura de capital, qualquer uma delas podendo estar a cinco ou dez anos de distância. À medida que a empresa capta recursos por instrumentos como o post-money SAFE que a Y Combinator introduziu em 2018, e depois por rodadas precificadas, é a participação dos fundadores, incluindo a fatia fundadora do studio, que absorve a diluição. Um studio, portanto, vive ou morre pela construção do portfólio. A maioria das empresas que constrói vai retornar pouco. Um único grande resultado pode definir a economia inteira de um studio. É o mesmo padrão de lei de potência que rege o venture capital, e ficar com uma fatia de tamanho de fundador em vez de uma de tamanho de aceleradora é o que torna esses resultados raros grandes o bastante para carregar todas as outras apostas."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O acordo padrão divulgado pela Y Combinator é de US$ 500.000 por cerca de 7 por cento, dividido em um post-money SAFE de US$ 125.000 por 7 por cento fixos mais um SAFE MFN sem cap de US$ 375.000. Um venture studio fica com uma fatia de tamanho de fundador, porque cofunda a empresa em vez de apenas orientá-la.",
+            "attribution": "Y Combinator (ycombinator.com)"
+          }
+        },
+        {
+          "id": "revenue-line-two-shared-operating-services",
+          "heading": "Linha de receita dois: serviços operacionais compartilhados",
+          "level": 2,
+          "paragraphs": [
+            "A segunda linha de receita é menos glamourosa e muitas vezes mal interpretada. Um studio mantém um time operacional compartilhado de engenheiros, designers, gerentes de produto, recrutadores e especialistas de finanças, jurídico e go-to-market que circulam pelo portfólio, construindo uma empresa depois da outra. Esse time é o maior custo do studio, e ele é recuperado, e não vendido com margem.",
+            "Na maioria dos studios, a recuperação acontece via participação acionária. O trabalho do time de construção é a contrapartida que o studio dá em troca da sua fatia de fundador, então o custo dos serviços e o retorno da participação são dois lados de uma mesma transação. Alguns studios também cobram das empresas de portfólio já capitalizadas por serviços compartilhados específicos, a preço de custo ou próximo dele, ou retiram uma alocação de gestão de um fundo pareado para manter a plataforma com equipe entre as saídas. O que um studio saudável não faz é operar serviços como centro de lucro. Cobrar uma margem das empresas de portfólio competiria com os fundadores a quem ele existe para servir, e sinalizaria discretamente que o studio não acredita na própria participação."
+          ]
+        },
+        {
+          "id": "revenue-line-three-carried-interest-on-outcomes",
+          "heading": "Linha de receita três: carried interest sobre os resultados",
+          "level": 2,
+          "paragraphs": [
+            "A terceira linha de receita aparece quando um studio também opera um fundo de investimento, o que muitos fazem. Além da participação que conquista construindo, o studio capta recursos de limited partners externos e os investe nas próprias empresas, e às vezes em outras. Um fundo de venture cobra a economia frequentemente resumida como dois e vinte, uma taxa de administração perto de 2 por cento do capital comprometido por ano e carried interest de cerca de 20 por cento dos lucros do fundo. Esse carry é a parte do time do studio nos ganhos de investimento, obtida além da participação de fundador que ele já detém.",
+            "É por isso que uma única empresa bem-sucedida pode pagar o studio duas vezes. Uma pela fatia de fundador que ele detém diretamente por ter cofundado a empresa, e outra pelo carried interest que o seu fundo obtém sobre o capital que investiu nessa mesma empresa. Os dois fluxos são juridicamente separados e costumam ficar em entidades diferentes, mas apontam para o mesmo punhado de resultados, o que é justamente o que torna o modelo atraente para quem o opera."
+          ]
+        },
+        {
+          "id": "why-the-model-can-pay-for-itself",
+          "heading": "Por que o modelo pode se pagar",
+          "level": 2,
+          "paragraphs": [
+            "A objeção óbvia é o custo. Construir empresas internamente é muito mais caro por empresa do que assinar cheques pequenos para fundadores que constroem por conta própria. A tese do studio é que concentrar as partes repetíveis da criação de empresas, ou seja, contratação, produto e captação, em um time permanente elimina os pontos de falha mais precoces e mais comuns, de modo que uma parcela maior do portfólio sobrevive tempo suficiente para importar.",
+            "A Global Startup Studio Network, em seu relatório Disrupting the Venture Landscape, enquadrou o modelo exatamente assim. Os studios existem para sistematicamente reduzir o risco e acelerar a fase mais inicial e mais arriscada de uma empresa, levando uma ideia a um negócio capitalizado e em operação mais rápido do que um time fundador sozinho costuma conseguir. Esse enquadramento é direcional e em parte autodeclarado, então é melhor lido como um sinal sobre o modelo do que como uma promessa para qualquer empresa isolada. A categoria cresceu à altura, de um experimento de nicho nos anos 1990 a um modelo consolidado, com studios operando pelo mundo todo. A Idealab, o studio que Bill Gross fundou em 1996, lançou sozinha mais de 75 empresas, prova inicial de que a criação de empresas pode ser conduzida como um processo repetível, e não como um evento único.",
+            "Nada disso garante retorno para nenhum studio isolado. Isso explica por que a economia pode funcionar. Se o time compartilhado realmente eleva a taxa de sobrevivência e de captação do portfólio, a participação de fundador nas vencedoras pode superar o custo mais alto de construir. Se não eleva, o studio simplesmente gastou mais para chegar às mesmas taxas-base que todo mundo."
+          ]
+        },
+        {
+          "id": "what-it-means-if-you-are-the-founder",
+          "heading": "O que isso significa se você é fundador",
+          "level": 2,
+          "paragraphs": [
+            "Para um fundador, a questão por trás de tudo isso é o alinhamento. Um venture studio ganha dinheiro do mesmo jeito que você, sendo dono de uma participação que se valoriza, então o incentivo dele é construir uma empresa que valha genuinamente algo, em vez de extrair honorários pelo caminho. A troca é real. Você abre mão de uma fatia maior da empresa do que abriria para uma aceleradora ou um investidor-anjo, e em troca ganha um sócio cofundador que traz capital, um time de construção e toda a estrutura operacional de uma empresa desde o dia zero. Se essa troca é certa para você depende de quanto da construção mais inicial e mais difícil você quer fazer sozinho. Veja [venture studio versus aceleradora, incubadora e vc](/pt/library/venture-studio-vs-accelerator-vs-incubator-vs-vc) para saber como os caminhos se comparam, e [um venture studio é a escolha certa para a sua startup de IA](/pt/library/is-a-venture-studio-right-for-your-ai-startup) para avaliar o encaixe.",
+            "A Avante Ventures opera esse modelo no e para o Brasil e a América Latina, cofundando empresas nativas de IA ao lado dos seus fundadores desde o dia zero e permanecendo como sócia operadora, e não como um cheque passivo. As três linhas de receita são as mesmas descritas aqui. A disciplina está em garantir que a participação de fundador seja conquistada construindo algo que dure, porque, em um studio, essa é a única forma de alguém ser pago."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Como os venture studios ganham dinheiro?",
+          "a": "Os venture studios ganham dinheiro principalmente sendo donos de participação em nível de fundador nas empresas que cocriam, e depois realizando esse valor quando essas empresas captam rodadas posteriores, são adquiridas ou abrem capital. Duas linhas secundárias sustentam a plataforma: a recuperação do custo do time de construção compartilhado, geralmente pela própria participação, e, quando o studio também opera um fundo, o carried interest sobre o capital que investe. A participação acionária é o motor, e as outras duas mantêm a plataforma com equipe entre as saídas."
+        },
+        {
+          "q": "Quanto de participação um venture studio leva?",
+          "a": "Um venture studio costuma levar a maior fatia inicial de todos os caminhos de construção de startups, comumente entre 30 por cento e 50 por cento na formação, porque fornece a ideia, o primeiro capital, o time de construção e os operadores antes de qualquer fundador externo entrar. Isso é muito mais do que uma aceleradora. O acordo padrão da Y Combinator é de US$ 500.000 por cerca de 7 por cento, e a Techstars oferece aproximadamente US$ 20.000 por cerca de 6 por cento, porque ambas orientam uma empresa que outra pessoa fundou, em vez de cofundá-la."
+        },
+        {
+          "q": "Os venture studios realmente têm retornos melhores do que o venture capital tradicional?",
+          "a": "Historicamente, relata-se que os studios superam o venture capital tradicional, e pesquisas da Global Startup Studio Network sugerem que empresas construídas por studios tendem a chegar a captações posteriores mais rápido e a se graduar em taxas mais altas. Esses dados são autodeclarados e enviesados pelos sobreviventes, então é melhor lê-los como um sinal direcional sobre o modelo do que como uma garantia para qualquer empresa isolada. A razão estrutural é a concentração: um studio detém uma fatia grande em poucas empresas que ele mesmo construiu, em vez de uma fatia pequena em muitas que apenas financiou."
+        },
+        {
+          "q": "Como um venture studio se diferencia de uma aceleradora como Y Combinator ou Techstars?",
+          "a": "Uma aceleradora conduz um programa de duração fixa e assina um cheque pequeno por uma fatia minoritária em uma empresa que você já começou. Um venture studio cofunda a empresa com você desde o dia zero, contribuindo com a ideia, o primeiro capital e um time de construção em atividade, e leva em troca uma fatia de tamanho de fundador. O post-money SAFE que a Y Combinator introduziu em 2018 é hoje o instrumento padrão sobre o qual as empresas iniciais captam, seja qual for o caminho escolhido. Para uma comparação lado a lado, veja a comparação entre YC, Techstars e venture studio."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "how-much-equity-do-venture-studios-take",
+    "category": "insights",
+    "type": "Explainer",
+    "readTime": "7 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-08",
+    "isPublished": true,
+    "en": {
+      "title": "How Much Equity Do Venture Studios Take? The Real Ranges",
+      "description": "Venture studios typically take 30 to 50 percent, versus 6 to 7 percent for an accelerator and 15 to 25 percent for a VC round. Here is what that stake buys.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Founders almost always ask about the venture studio number before anything else, and they usually flinch when they hear it. A stake of 30 to 50 percent can sound like a firm claiming half the company for showing up. The reaction is fair, and it is also a category error. An accelerator, a VC, and a venture studio are priced for three different jobs, and the equity each one takes is the clearest signal of which job it is doing.",
+            "Get that straight and the studio number stops looking like a markup. It starts looking like a price on a specific amount of work, most of it done before the company exists."
+          ]
+        },
+        {
+          "id": "the-real-ranges-side-by-side",
+          "heading": "The real ranges, side by side",
+          "level": 2,
+          "paragraphs": [
+            "Put the early-stage options on one line and the pattern is easy to read. Each one takes more equity as it does more of the building.",
+            "An accelerator takes the smallest and most standardized slice, roughly 6 to 7 percent for a fixed check and a program of about three months. The terms are public and barely negotiable, because the model depends on every company in a batch getting the same deal. Y Combinator sits at 7 percent. Techstars sits at around 6.",
+            "Techstars structures its offer differently, and the shape matters. Its long-standing standard is about $20,000 for roughly 6 percent in common stock, plus a separate $100,000 convertible note, roughly $120,000 in total. The 6 percent is what the common-stock purchase costs you. The note is not equity yet. It converts at your next priced round and dilutes you further when it does, so the headline percentage understates the real cost on its own.",
+            "A venture capital round sits in the middle. A priced seed or Series A commonly sells somewhere between 15 and 25 percent of the company per round, in exchange for capital and a board seat, but the VC does not build the product with you.",
+            "A venture studio sits at the top of the range. It commonly takes somewhere between 30 and 50 percent, and sometimes more. Read that as an observed range across venture-studio industry surveys rather than one audited number, because studio terms are private and vary widely from deal to deal and from studio to studio. The figure most often cited across the industry lands around 30 percent or higher."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Y Combinator's standard deal is $125,000 for 7 percent on a post-money SAFE, plus $375,000 on an uncapped MFN SAFE, roughly $500,000 in total, in exchange for a fixed three-month program and a demo day.",
+            "attribution": "Y Combinator public deal terms, ycombinator.com/deal"
+          }
+        },
+        {
+          "id": "why-a-studio-takes-so-much-more",
+          "heading": "Why a studio takes so much more",
+          "level": 2,
+          "paragraphs": [
+            "The size of the stake is not greed, and it is not a negotiation gone wrong. It tracks how much of the earliest and riskiest work the studio does for you.",
+            "A studio does not write a check and step back. It co-founds the company with you from day zero, putting in the first capital, a dedicated team of engineers, designers, and operators, and hands-on operating work in return for its stake. The studio is not buying a slice of a company that already exists. It is helping create the company in the first place.",
+            "That is the difference an accelerator's 6 to 7 percent does not pay for. The accelerator buys a filter, a network, and a signal for a team that already runs. The studio stake buys the build itself, assembled before there is anything to accelerate. Two other things push the number up. The studio carries the day-zero risk that the idea fails before it ever ships, and it folds in shared services, legal, finance, hiring, and infrastructure, built once and reused across every company it launches. You pay a small slice to sharpen something real, or a large slice to bring something into being. The price follows the work."
+          ]
+        },
+        {
+          "id": "what-the-larger-stake-buys-you",
+          "heading": "What the larger stake buys you",
+          "level": 2,
+          "paragraphs": [
+            "The payoff of that concentrated build shows up first in speed. A studio hands a founder the team, the capital, and the plumbing on day one, so the riskiest early stretch gets compressed rather than survived.",
+            "The Global Startup Studio Network, itself a venture-studio network, reported in its 2020 white paper Disrupting the Venture Landscape that companies built inside studios reached Series A in about 25 months, against about 56 months for the market at large, and that a higher share of them cleared each funding stage. Because that data is self-reported by a studio network, weigh it as directional rather than as an independent audit. The direction is what matters. A model that removes the failure points that kill ordinary startups in year one is not getting lucky on deal selection. It is buying back the months a solo founder would otherwise burn assembling a company from nothing. For an AI-native founder, where a thin product wrapper is easy to copy, that head start is often worth more than the equity it costs, because the studio is helping build real defensibility rather than handing over a check and a deadline."
+          ]
+        },
+        {
+          "id": "how-to-weigh-the-stake-before-you-sign",
+          "heading": "How to weigh the stake before you sign",
+          "level": 2,
+          "paragraphs": [
+            "The honest framing cuts both ways, and the studio stake is not right for everyone. It is permanent dilution. Unlike an accelerator, you cannot graduate in three months and walk away still owning most of your company. If you already have a technical co-founder, a working product, and a first ticket of capital lined up, paying a studio stake for a build you could do yourself is a bad trade. Take the accelerator or raise a priced round and keep your cap table clean.",
+            "The studio stake earns its size in one case, when the founder genuinely lacks the team, the idea, or the capacity to build. A solo domain expert with a decade of market scar tissue and no engineering bench is exactly who the model is for. For that founder the real comparison is not 40 percent of the company against 100 percent. It is a real company built now against a year spent building from scratch what a studio would hand you on day one. Before you sign, read the actual terms rather than the label, look at what the studio contributes beyond the check, and model how the stake sits next to your own equity and option pool."
+          ]
+        },
+        {
+          "id": "where-avante-fits",
+          "heading": "Where Avante fits",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures co-founds AI-native companies for Brazil and Latin America, which puts it squarely at the top of this range. It runs no cohorts and no demo days. It concentrates a dedicated team and capital into one company at a time, builds alongside the founder from day zero, and keeps a co-founder's stake rather than a passive minority.",
+            "That stake is larger than an accelerator's for the same reason it is anywhere else. It is the price of the build, not a fee for a program. We contribute the first capital and hands-on operating work from the start, and we earn alongside the founder only when the company we build together succeeds, which is the whole point of taking a co-founder's stake instead of a check writer's. The market is why the model fits here. Brazil is a market where services are roughly 70 percent of GDP, per IBGE, where software penetration is still low, and where AI infrastructure is finally cheap enough to deploy without waiting on a Series A.",
+            "If you already have the team and the product, an accelerator is the cleaner trade, and you should take it. If you are the domain expert facing a year of assembly before you can even start, that gap is exactly what a studio is built to close. For the mechanics next door, see [how YC and Techstars terms compare with a studio](/en/library/yc-vs-techstars-vs-venture-studio) and [what a venture-studio-backed cap table actually looks like](/en/library/venture-studio-backed-cap-table)."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How much equity does a venture studio take?",
+          "a": "A venture studio commonly takes between 30 and 50 percent of the company, and sometimes more. Treat that as an observed range across venture-studio industry surveys rather than a single audited figure, because studio terms are private and vary from deal to deal. The stake is large because the studio co-founds the company from day zero, contributing the first capital, a build team, and hands-on operating work rather than backing a team that already exists."
+        },
+        {
+          "q": "Why do venture studios take so much more equity than an accelerator?",
+          "a": "Because they do far more of the earliest and riskiest work. An accelerator takes roughly 6 to 7 percent for a fixed check, a short program, and a demo day, for a team that already runs. A studio supplies the idea, the first capital, and the building team before the company exists, and it carries the day-zero risk that the idea never ships. The larger stake is the price of that build, not a premium on the same service."
+        },
+        {
+          "q": "How does a studio's equity compare with Y Combinator or Techstars?",
+          "a": "Y Combinator's standard deal is $125,000 for 7 percent on a post-money SAFE, plus a $375,000 uncapped SAFE, about $500,000 in total. Techstars has long offered about $20,000 for roughly 6 percent in common stock, plus a separate $100,000 convertible note. A venture studio takes far more, commonly 30 to 50 percent or higher, because it co-founds the company rather than accelerating one that already exists."
+        },
+        {
+          "q": "Is giving up 30 to 50 percent to a venture studio worth it?",
+          "a": "It depends on what you would otherwise have to build yourself. If you already have a technical co-founder, a working product, and capital lined up, paying a studio stake for a build you could do alone is a bad trade. If you are a domain expert with no team and no product, the real comparison is not 40 percent against 100 percent. It is a company built now against a year spent assembling one from nothing."
+        },
+        {
+          "q": "Does Avante take a controlling stake in the companies it builds?",
+          "a": "Avante Ventures co-founds AI-native companies for Brazil and Latin America and takes a co-founder's stake rather than a passive minority, in line with how venture studios are priced. It contributes the first capital and hands-on operating work from day zero and installs dedicated founders to run each company. The exact split is set deal by deal, and the point of the stake is shared ownership of a company built together, not control for its own sake."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Quanto de Equity um Venture Studio Fica? As Faixas Reais",
+      "description": "Um venture studio normalmente fica com 30 a 50 por cento, contra 6 a 7 por cento de uma aceleradora e 15 a 25 por cento de uma rodada de VC. Veja o que essa participação compra.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Fundadores quase sempre perguntam sobre o número do venture studio antes de qualquer outra coisa, e costumam recuar quando ouvem a resposta. Uma participação de 30 a 50 por cento pode soar como uma firma reivindicando metade da empresa só por aparecer. A reação é justa, mas também é um erro de categoria. Uma aceleradora, um VC e um venture studio são precificados para três trabalhos diferentes, e a participação que cada um fica é o sinal mais claro de qual trabalho está realizando.",
+            "Entenda isso e o número do studio deixa de parecer um sobrepreço. Passa a parecer o preço de uma quantidade específica de trabalho, a maior parte dela feita antes de a empresa existir."
+          ]
+        },
+        {
+          "id": "as-faixas-reais-lado-a-lado",
+          "heading": "As faixas reais, lado a lado",
+          "level": 2,
+          "paragraphs": [
+            "Coloque as opções de estágio inicial na mesma linha e o padrão fica fácil de ler. Cada uma fica com mais participação à medida que faz mais da construção.",
+            "Uma aceleradora fica com a fatia menor e mais padronizada, cerca de 6 a 7 por cento por um cheque fixo e um programa de aproximadamente três meses. Os termos são públicos e quase inegociáveis, porque o modelo depende de que toda empresa de um mesmo lote receba o mesmo acordo. A Y Combinator fica em 7 por cento. A Techstars fica em torno de 6.",
+            "A Techstars estrutura sua oferta de forma diferente, e o formato importa. Seu padrão de longa data é cerca de US$ 20.000 por aproximadamente 6 por cento em ações ordinárias, mais uma nota conversível separada de US$ 100.000, cerca de US$ 120.000 no total. Os 6 por cento são o que a compra de ações ordinárias custa a você. A nota ainda não é equity. Ela converte na sua próxima rodada precificada e dilui você ainda mais quando isso acontece, então o percentual anunciado, por si só, subestima o custo real.",
+            "Uma rodada de venture capital fica no meio. Um seed ou Série A precificado costuma vender entre 15 e 25 por cento da empresa por rodada, em troca de capital e um assento no conselho, mas o VC não constrói o produto com você.",
+            "Um venture studio fica no topo da faixa. Costuma ficar com algo entre 30 e 50 por cento, e às vezes mais. Leia isso como uma faixa observada em levantamentos do setor de venture studios, e não como um número auditado, porque os termos de um studio são privados e variam muito de acordo para acordo e de studio para studio. O número mais citado no setor gira em torno de 30 por cento ou mais."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O acordo padrão da Y Combinator é de US$ 125.000 por 7 por cento em um SAFE pós-money, mais US$ 375.000 em um SAFE MFN sem cap, cerca de US$ 500.000 no total, em troca de um programa fixo de três meses e um demo day.",
+            "attribution": "Y Combinator public deal terms, ycombinator.com/deal"
+          }
+        },
+        {
+          "id": "por-que-um-studio-fica-com-muito-mais",
+          "heading": "Por que um studio fica com muito mais",
+          "level": 2,
+          "paragraphs": [
+            "O tamanho da participação não é ganância, e não é uma negociação que deu errado. Ele acompanha quanto do trabalho mais inicial e mais arriscado o studio faz por você.",
+            "Um studio não assina um cheque e recua. Ele cofunda a empresa com você desde o dia zero, colocando o primeiro capital, um time dedicado de engenheiros, designers e operadores, e trabalho operacional prático em troca de sua participação. O studio não está comprando uma fatia de uma empresa que já existe. Ele está ajudando a criar a empresa em primeiro lugar.",
+            "Essa é a diferença que os 6 a 7 por cento de uma aceleradora não pagam. A aceleradora compra um filtro, uma rede e um sinal para um time que já funciona. A participação do studio compra a própria construção, montada antes de haver qualquer coisa para acelerar. Duas outras coisas empurram o número para cima. O studio carrega o risco do dia zero, de a ideia falhar antes mesmo de chegar ao mercado, e reúne serviços compartilhados, jurídico, finanças, contratação e infraestrutura, construídos uma vez e reaproveitados em cada empresa que lança. Você paga uma fatia pequena para afiar algo real, ou uma fatia grande para trazer algo à existência. O preço segue o trabalho."
+          ]
+        },
+        {
+          "id": "o-que-a-participacao-maior-compra",
+          "heading": "O que a participação maior compra",
+          "level": 2,
+          "paragraphs": [
+            "O retorno dessa construção concentrada aparece primeiro na velocidade. Um studio entrega ao fundador o time, o capital e a infraestrutura no primeiro dia, de modo que o trecho inicial mais arriscado é comprimido em vez de apenas sobrevivido.",
+            "A Global Startup Studio Network, ela própria uma rede de venture studios, relatou em seu white paper de 2020, Disrupting the Venture Landscape, que empresas construídas dentro de studios chegaram à Série A em cerca de 25 meses, contra cerca de 56 meses para o mercado em geral, e que uma parcela maior delas passou por cada estágio de captação. Como esses dados são autorrelatados por uma rede de studios, avalie-os como direcionais, e não como uma auditoria independente. A direção é o que importa. Um modelo que remove os pontos de falha que matam startups comuns no primeiro ano não está tendo sorte na seleção de negócios. Ele está recomprando os meses que um fundador solo, de outra forma, queimaria montando uma empresa do zero. Para um fundador AI-native, onde um wrapper fino de produto é fácil de copiar, essa dianteira muitas vezes vale mais do que o equity que custa, porque o studio está ajudando a construir defensibilidade real em vez de entregar um cheque e um prazo."
+          ]
+        },
+        {
+          "id": "como-avaliar-a-participacao-antes-de-assinar",
+          "heading": "Como avaliar a participação antes de assinar",
+          "level": 2,
+          "paragraphs": [
+            "O enquadramento honesto vale para os dois lados, e a participação do studio não é certa para todo mundo. É diluição permanente. Diferente de uma aceleradora, você não se forma em três meses e sai ainda dono da maior parte da sua empresa. Se você já tem um cofundador técnico, um produto funcionando e um primeiro cheque de capital encaminhado, pagar a participação de um studio por uma construção que você mesmo poderia fazer é um mau negócio. Fique com a aceleradora ou levante uma rodada precificada e mantenha seu cap table limpo.",
+            "A participação do studio justifica seu tamanho em um caso, quando o fundador genuinamente não tem o time, a ideia ou a capacidade de construir. Um especialista de domínio solo, com uma década de cicatrizes de mercado e nenhum time de engenharia, é exatamente para quem o modelo existe. Para esse fundador, a comparação real não é 40 por cento da empresa contra 100 por cento. É uma empresa real construída agora contra um ano gasto construindo do zero o que um studio entregaria no primeiro dia. Antes de assinar, leia os termos reais em vez do rótulo, veja o que o studio contribui além do cheque, e modele como a participação fica ao lado do seu próprio equity e pool de opções."
+          ]
+        },
+        {
+          "id": "onde-a-avante-se-encaixa",
+          "heading": "Onde a Avante se encaixa",
+          "level": 2,
+          "paragraphs": [
+            "A Avante Ventures cofunda empresas AI-native para o Brasil e a América Latina, o que a coloca exatamente no topo dessa faixa. Ela não roda cohorts nem demo days. Concentra um time dedicado e capital em uma empresa por vez, constrói ao lado do fundador desde o dia zero, e mantém uma participação de cofundadora em vez de uma minoria passiva.",
+            "Essa participação é maior que a de uma aceleradora pela mesma razão que é em qualquer outro lugar. É o preço da construção, não uma taxa por um programa. Nós contribuímos com o primeiro capital e com trabalho operacional prático desde o começo, e ganhamos ao lado do fundador apenas quando a empresa que construímos juntos dá certo, que é justamente o sentido de ficar com uma participação de cofundadora em vez da de quem só assina o cheque. O mercado é a razão de o modelo se encaixar aqui. O Brasil é um mercado onde os serviços são cerca de 70 por cento do PIB, segundo o IBGE, onde a penetração de software ainda é baixa, e onde a infraestrutura de IA está finalmente barata o suficiente para implantar sem esperar por uma Série A.",
+            "Se você já tem o time e o produto, uma aceleradora é o negócio mais limpo, e você deveria aceitá-lo. Se você é o especialista de domínio diante de um ano de montagem antes mesmo de poder começar, essa lacuna é exatamente o que um studio foi feito para fechar. Para a mecânica ao lado, veja [como os termos da YC e da Techstars se comparam com os de um studio](/pt/library/yc-vs-techstars-vs-venture-studio) e [como é de fato um cap table com um venture studio](/pt/library/venture-studio-backed-cap-table)."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Quanto de equity um venture studio fica?",
+          "a": "Um venture studio costuma ficar com entre 30 e 50 por cento da empresa, e às vezes mais. Trate isso como uma faixa observada em levantamentos do setor de venture studios, e não como um único número auditado, porque os termos de um studio são privados e variam de acordo para acordo. A participação é grande porque o studio cofunda a empresa desde o dia zero, contribuindo com o primeiro capital, um time de construção e trabalho operacional prático, em vez de apoiar um time que já existe."
+        },
+        {
+          "q": "Por que os venture studios ficam com muito mais equity do que uma aceleradora?",
+          "a": "Porque eles fazem muito mais do trabalho mais inicial e mais arriscado. Uma aceleradora fica com cerca de 6 a 7 por cento por um cheque fixo, um programa curto e um demo day, para um time que já funciona. Um studio fornece a ideia, o primeiro capital e o time de construção antes de a empresa existir, e carrega o risco do dia zero de a ideia nunca chegar ao mercado. A participação maior é o preço dessa construção, não um prêmio pelo mesmo serviço."
+        },
+        {
+          "q": "Como o equity de um studio se compara com o da Y Combinator ou da Techstars?",
+          "a": "O acordo padrão da Y Combinator é de US$ 125.000 por 7 por cento em um SAFE pós-money, mais um SAFE sem cap de US$ 375.000, cerca de US$ 500.000 no total. A Techstars há muito oferece cerca de US$ 20.000 por aproximadamente 6 por cento em ações ordinárias, mais uma nota conversível separada de US$ 100.000. Um venture studio fica com muito mais, comumente 30 a 50 por cento ou mais, porque cofunda a empresa em vez de acelerar uma que já existe."
+        },
+        {
+          "q": "Vale a pena abrir mão de 30 a 50 por cento para um venture studio?",
+          "a": "Depende do que você teria que construir sozinho de outra forma. Se você já tem um cofundador técnico, um produto funcionando e capital encaminhado, pagar a participação de um studio por uma construção que você poderia fazer sozinho é um mau negócio. Se você é um especialista de domínio sem time e sem produto, a comparação real não é 40 por cento contra 100 por cento. É uma empresa construída agora contra um ano gasto montando uma do zero."
+        },
+        {
+          "q": "A Avante fica com uma participação de controle nas empresas que constrói?",
+          "a": "A Avante Ventures cofunda empresas AI-native para o Brasil e a América Latina e fica com uma participação de cofundadora em vez de uma minoria passiva, em linha com a forma como os venture studios são precificados. Ela contribui com o primeiro capital e com trabalho operacional prático desde o dia zero e instala fundadores dedicados para tocar cada empresa. A divisão exata é definida acordo a acordo, e o ponto da participação é a propriedade compartilhada de uma empresa construída em conjunto, não o controle por si só."
+        }
+      ]
+    }
+  },
+  {
     "slug": "how-to-choose-a-venture-studio",
     "category": "insights",
     "type": "Guide",
@@ -10291,6 +10869,272 @@ const engineArticles: Article[] = [
         {
           "q": "¿Un venture studio es la opción correcta para mi startup?",
           "a": "Depende de tu etapa. Un experto de dominio en solitario y sin equipo es quien más gana con el equipo de construcción y el capital de primer cheque de un studio. Un equipo ya financiado y con tracción quizá esté mejor con una aceleradora y luego VC. El checklist filtra al studio. No te puede decir que el negocio es correcto. Eso sigue siendo tuyo."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "how-to-find-a-technical-cofounder-for-an-ai-startup",
+    "category": "ai",
+    "type": "Guide",
+    "readTime": "8 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-08",
+    "isPublished": true,
+    "en": {
+      "title": "How to Find a Technical Co-Founder for an AI Startup",
+      "description": "Where to find a technical co-founder for an AI startup, how to test fit before you commit, and what equity to offer. A guide for founders in Brazil and LATAM.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Finding a technical co-founder for an AI startup is a filtering problem, not a posting problem. The person you need can build and ship a real product, understands how modern AI systems behave in production, and will stay through years of hard, uncertain work. That pool is small, so the highest-return moves are the ones that let you work alongside candidates before you commit. Accelerators such as Y Combinator and Techstars, open-source communities, and venture studios each offer a different route to that kind of partner. For founders in Brazil and Latin America, a co-founding studio can supply both the engineering depth and the early capital in a single relationship."
+          ]
+        },
+        {
+          "id": "the-search-is-a-filtering-problem-not-a-posting-problem",
+          "heading": "The Search Is a Filtering Problem, Not a Posting Problem",
+          "level": 2,
+          "paragraphs": [
+            "Most founders treat the hunt for a technical co-founder like a recruiting task. They write a post, list it on a job board, and wait for applicants. The trouble is that the people worth co-founding with are rarely browsing job boards. They are already building something, contributing to open source, or shipping inside a company that pays them well. A public post reaches the wrong end of the pool.",
+            "The better mental model is filtering. You are looking for a very small number of people who can build a real AI product, who share your appetite for risk, and who will still be there in three years when the work is grinding rather than glamorous. Everything that follows is about widening the top of that funnel with the right rooms and then narrowing it with real, shared work."
+          ]
+        },
+        {
+          "id": "what-technical-co-founder-actually-means-for-an-ai-startup",
+          "heading": "What \"Technical Co-Founder\" Actually Means for an AI Startup",
+          "level": 2,
+          "paragraphs": [
+            "Before you look, get precise about the role. \"Technical\" covers a wide range, and AI startups need a specific slice of it. A partner who can fine-tune models but has never shipped a product will leave you with impressive notebooks and no users. A strong web engineer who has never touched a model may struggle with the parts that make an AI product hard, such as evaluation, latency, cost per call, and the way model behavior drifts over time.",
+            "The person you want can do three things. They can build and ship an end-to-end product that real people use. They understand how modern AI systems actually behave in production, including their failure modes. And they can make pragmatic calls about when to train, when to fine-tune, and when to simply call an existing model through an API. In the early days, breadth beats depth. You need someone who can carry the whole stack, not a narrow specialist who owns one layer of it."
+          ]
+        },
+        {
+          "id": "where-technical-co-founders-actually-come-from",
+          "heading": "Where Technical Co-Founders Actually Come From",
+          "level": 2,
+          "paragraphs": []
+        },
+        {
+          "id": "accelerators-and-their-standard-terms",
+          "heading": "Accelerators and their standard terms",
+          "level": 3,
+          "paragraphs": [
+            "Accelerators are matching engines as much as they are funding sources. Y Combinator invests $125,000 for a fixed 7 percent through a post-money SAFE, and its co-founder matching platform has become one of the most used starting points for founders without a technical partner. Techstars has historically offered $20,000 for 6 percent plus an optional $100,000 convertible note, and runs mentor-heavy programs in cities around the world.",
+            "The trade-off is real. You give up equity and, in some models, a measure of control, in exchange for a filtered network and a deadline that forces progress. If you are weighing this route against building with a studio, our breakdown of [YC versus Techstars versus a venture studio](/en/library/yc-vs-techstars-vs-venture-studio) walks through who each path suits."
+          ]
+        },
+        {
+          "id": "open-source-and-builder-communities",
+          "heading": "Open-source and builder communities",
+          "level": 3,
+          "paragraphs": [
+            "The clearest signal you will find anywhere is a track record of shipped code. Open-source projects, model repositories, hackathons, and technical communities put that signal in the open. Someone who maintains a useful library, answers hard questions in a forum, or wins an AI hackathon has already shown you three things a resume cannot. They can build, they finish what they start, and other people already trust their work.",
+            "Contribute first. Fix an issue, join a build weekend, help someone before you pitch them. The founders who win in these rooms are the ones who show up as peers rather than as recruiters."
+          ]
+        },
+        {
+          "id": "your-own-network-one-layer-out",
+          "heading": "Your own network, one layer out",
+          "level": 3,
+          "paragraphs": [
+            "The strongest co-founder relationships often come from people you have already worked with, or from a single introduction away. Former colleagues, classmates, and people you built side projects with carry a huge advantage. You already know how they behave under pressure. Ask the best engineers you know who the best engineers they know are. That second-degree question reaches people no job post ever will."
+          ]
+        },
+        {
+          "id": "venture-studios-and-co-founding-partners",
+          "heading": "Venture studios and co-founding partners",
+          "level": 3,
+          "paragraphs": [
+            "A venture studio does not introduce you to a co-founder. It becomes one. Studios bring engineering teams, operating experience, and early capital, and they build companies alongside founders rather than writing a check and stepping back. For a first-time founder without a technical partner, this can compress years of searching into a working relationship that starts on day one. The obvious question is what it costs, which we cover in [how much equity venture studios take](/en/library/how-much-equity-do-venture-studios-take)."
+          ]
+        },
+        {
+          "id": "how-to-test-fit-before-you-commit",
+          "heading": "How to Test Fit Before You Commit",
+          "level": 2,
+          "paragraphs": [
+            "No interview predicts a co-founder relationship. Shared work does. Before either of you signs anything, build something real together. A two-week or four-week paid project, a shipped prototype, or a focused weekend sprint will teach you more than a month of coffees. You are testing for how they think, how they handle disagreement, how they communicate when something breaks, and whether they actually ship.",
+            "Watch for a few things while you work. Do they finish what they start? Do they explain technical trade-offs in a way you can act on? Do they push back when you are wrong? A co-founder who only ever agrees with you is worth very little. When you do commit, protect the relationship with standard mechanics. Vesting over four years with a one-year cliff is the market norm for good reason. It aligns everyone around staying and building, and it gives you a clean way to part if the fit turns out to be wrong."
+          ]
+        },
+        {
+          "id": "what-equity-a-technical-co-founder-should-get",
+          "heading": "What Equity a Technical Co-Founder Should Get",
+          "level": 2,
+          "paragraphs": [
+            "Early technical co-founders usually land somewhere near an equal split, and there are good arguments for going all the way to an even 50/50. The engineer who builds the product in the earliest years is taking the same leap you are, often leaving a well-paid job to do it. Founders who try to nickel-and-dime that first technical partner tend to regret it, because resentment over a lopsided split poisons the exact relationship the company depends on.",
+            "Whatever number you land on, put it on a vesting schedule and write it down before the work gets serious. Equity splits are one of the most common sources of early founder conflict, and standard startup-finance mechanics exist precisely to defuse it. If you are comparing a co-founder split against a studio arrangement, it helps to understand whether a venture studio is worth it for founders before you decide how to fill the technical seat."
+          ]
+        },
+        {
+          "id": "the-latin-america-angle",
+          "heading": "The Latin America Angle",
+          "level": 2,
+          "paragraphs": [
+            "Founders in Brazil and across Latin America face a thinner local pool of senior AI engineers who are also willing to co-found, and the best of them are often recruited by global companies paying in dollars. That gap is exactly what a co-founding studio closes. Avante co-founds AI-native companies for Brazil and Latin America, supplying the technical depth and the early capital in one relationship so a founder with a sharp idea and deep market knowledge does not have to spend a year searching for someone to build it. The result is a company that starts with a full founding team rather than a job post and a hope."
+          ]
+        },
+        {
+          "id": "common-mistakes-to-avoid",
+          "heading": "Common Mistakes to Avoid",
+          "level": 2,
+          "paragraphs": [
+            "The first mistake is hiring when you mean to co-found. A contractor builds what you ask for. A co-founder argues with you about what to build and owns the outcome. If you only need the former, do not dilute your company for it.",
+            "The second mistake is optimizing for speed over fit. Bringing on the first available engineer to hit a fundraising deadline is how founding teams break apart a year later. In its widely cited analysis of startup post-mortems, CB Insights found that not having the right team was named in 14 percent of failures. Paul Graham of Y Combinator has long argued that a single founder is one of the biggest risks a startup can carry, but the fix for that is the right partner, not merely any partner.",
+            "The third mistake is skipping the trial. If you would not do a paid project together before committing, you already have your answer."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Not the right team was named in 14 percent of startup failures, placing team and co-founder fit among the leading reasons companies collapse.",
+            "attribution": "CB Insights, analysis of startup failure post-mortems"
+          }
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Do you need a technical co-founder to start an AI startup?",
+          "a": "Not strictly, but it helps enormously. You can start with contractors or no-code tools to validate an idea, and some founders learn to build the first version themselves. For anything that has to scale, a technical co-founder who owns the product and the hard AI engineering decisions is one of the strongest predictors of a company that survives. Paul Graham of Y Combinator has long argued that going it alone as a single founder is one of the biggest risks a startup can take."
+        },
+        {
+          "q": "How much equity should a technical co-founder get?",
+          "a": "Early technical co-founders commonly receive a share close to an equal split, and many first partners at the founding level receive a full co-founder stake with four-year vesting and a one-year cliff. The exact number depends on timing, who brought the idea, and who is funding the early work, but treating the first technical partner generously is usually the right call because the relationship matters more than a few points of ownership."
+        },
+        {
+          "q": "Where is the best place to find a technical co-founder?",
+          "a": "Start where builders already gather rather than on general job boards. Accelerator matching platforms such as the one run by Y Combinator, open-source communities, AI hackathons, and second-degree introductions from engineers you trust all reach people who are actively building. For founders who want a partner and capital at once, a venture studio can act as the technical co-founder itself."
+        },
+        {
+          "q": "What is the difference between a technical co-founder and a venture studio?",
+          "a": "A technical co-founder is an individual who owns the product and shares the risk with you in exchange for equity. A venture studio is an organization that co-founds the company with you, contributing an engineering team, operating support, and early capital. In Brazil and Latin America, where senior AI engineers willing to co-found are scarce, a studio such as Avante can fill the technical founding role directly."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Como encontrar um cofundador técnico para uma startup de IA",
+      "description": "Onde encontrar um cofundador técnico para uma startup de IA, como testar o encaixe antes de se comprometer e qual participação oferecer. Um guia para fundadores no Brasil e na América Latina.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Encontrar um cofundador técnico para uma startup de IA é um problema de filtragem, não de publicação de vaga. A pessoa que você precisa consegue construir e lançar um produto de verdade, entende como os sistemas modernos de IA se comportam em produção e vai permanecer ao longo de anos de trabalho difícil e incerto. Esse grupo é pequeno, então as jogadas de maior retorno são aquelas que permitem trabalhar ao lado dos candidatos antes de se comprometer. Aceleradoras como Y Combinator e Techstars, comunidades de código aberto e venture studios oferecem, cada uma, um caminho diferente para esse tipo de parceiro. Para fundadores no Brasil e na América Latina, um studio de cofundação pode fornecer tanto a profundidade de engenharia quanto o capital inicial em um único relacionamento."
+          ]
+        },
+        {
+          "id": "a-busca-e-um-problema-de-filtragem-nao-de-publicacao-de-vaga",
+          "heading": "A busca é um problema de filtragem, não de publicação de vaga",
+          "level": 2,
+          "paragraphs": [
+            "A maioria dos fundadores trata a procura por um cofundador técnico como uma tarefa de recrutamento. Escrevem um anúncio, publicam em um site de vagas e esperam os candidatos aparecerem. O problema é que as pessoas que valem a pena como cofundadores raramente estão navegando por sites de vagas. Elas já estão construindo algo, contribuindo com código aberto ou entregando dentro de uma empresa que paga bem. Um anúncio público alcança justamente a ponta errada desse grupo.",
+            "O modelo mental melhor é o de filtragem. Você está procurando um número muito pequeno de pessoas capazes de construir um produto de IA de verdade, que compartilham do seu apetite por risco e que ainda estarão ali daqui a três anos, quando o trabalho for árduo em vez de glamouroso. Tudo o que vem a seguir trata de alargar o topo desse funil com os ambientes certos e depois estreitá-lo com trabalho real e compartilhado."
+          ]
+        },
+        {
+          "id": "o-que-cofundador-tecnico-realmente-significa-para-uma-startup-de-ia",
+          "heading": "O que \"cofundador técnico\" realmente significa para uma startup de IA",
+          "level": 2,
+          "paragraphs": [
+            "Antes de procurar, seja preciso sobre o papel. \"Técnico\" abrange uma faixa ampla, e startups de IA precisam de uma fatia específica dela. Um parceiro que sabe fazer fine-tuning de modelos mas nunca lançou um produto vai deixar você com notebooks impressionantes e nenhum usuário. Um bom engenheiro web que nunca tocou em um modelo pode ter dificuldade justamente com as partes que tornam um produto de IA difícil, como avaliação, latência, custo por chamada e a forma como o comportamento do modelo muda ao longo do tempo.",
+            "A pessoa que você quer consegue fazer três coisas. Consegue construir e lançar um produto de ponta a ponta que pessoas reais usam. Entende como os sistemas modernos de IA de fato se comportam em produção, incluindo seus modos de falha. E consegue tomar decisões pragmáticas sobre quando treinar, quando fazer fine-tuning e quando simplesmente chamar um modelo existente por meio de uma API. Nos primeiros dias, amplitude vence profundidade. Você precisa de alguém que consiga carregar a stack inteira, não de um especialista estreito que domina apenas uma camada dela."
+          ]
+        },
+        {
+          "id": "de-onde-os-cofundadores-tecnicos-realmente-vem",
+          "heading": "De onde os cofundadores técnicos realmente vêm",
+          "level": 2,
+          "paragraphs": []
+        },
+        {
+          "id": "aceleradoras-e-seus-termos-padrao",
+          "heading": "Aceleradoras e seus termos padrão",
+          "level": 3,
+          "paragraphs": [
+            "Aceleradoras são tanto motores de matching quanto fontes de capital. A Y Combinator investe US$ 125.000 por 7 por cento fixos por meio de um SAFE post-money, e sua plataforma de matching de cofundadores se tornou um dos pontos de partida mais usados por fundadores sem um parceiro técnico. A Techstars historicamente ofereceu US$ 20.000 por 6 por cento mais uma nota conversível opcional de US$ 100.000, e mantém programas intensivos em mentoria em cidades pelo mundo todo.",
+            "O trade-off é real. Você abre mão de participação e, em alguns modelos, de uma parcela de controle, em troca de uma rede filtrada e de um prazo que força o progresso. Se você está pesando esse caminho contra construir com um studio, nossa análise de [YC versus Techstars versus venture studio](/pt/library/yc-vs-techstars-vs-venture-studio) mostra a quem cada caminho serve."
+          ]
+        },
+        {
+          "id": "comunidades-de-codigo-aberto-e-de-builders",
+          "heading": "Comunidades de código aberto e de builders",
+          "level": 3,
+          "paragraphs": [
+            "O sinal mais claro que você vai encontrar em qualquer lugar é um histórico de código entregue. Projetos de código aberto, repositórios de modelos, hackathons e comunidades técnicas deixam esse sinal à mostra. Alguém que mantém uma biblioteca útil, responde perguntas difíceis em um fórum ou vence um hackathon de IA já mostrou a você três coisas que um currículo não mostra. Sabe construir, termina o que começa e outras pessoas já confiam no seu trabalho.",
+            "Contribua primeiro. Resolva uma issue, participe de um fim de semana de construção, ajude alguém antes de fazer sua proposta. Os fundadores que vencem nesses ambientes são os que chegam como pares, e não como recrutadores."
+          ]
+        },
+        {
+          "id": "sua-propria-rede-uma-camada-alem",
+          "heading": "Sua própria rede, uma camada além",
+          "level": 3,
+          "paragraphs": [
+            "Os relacionamentos mais fortes de cofundação costumam vir de pessoas com quem você já trabalhou, ou que estão a uma única apresentação de distância. Ex-colegas de trabalho, colegas de faculdade e pessoas com quem você construiu projetos paralelos carregam uma enorme vantagem. Você já sabe como elas se comportam sob pressão. Pergunte aos melhores engenheiros que você conhece quem são os melhores engenheiros que eles conhecem. Essa pergunta de segundo grau alcança pessoas que nenhum anúncio de vaga jamais alcançará."
+          ]
+        },
+        {
+          "id": "venture-studios-e-parceiros-de-cofundacao",
+          "heading": "Venture studios e parceiros de cofundação",
+          "level": 3,
+          "paragraphs": [
+            "Um venture studio não apresenta você a um cofundador. Ele se torna um. Studios trazem times de engenharia, experiência operacional e capital inicial, e constroem empresas ao lado dos fundadores em vez de assinar um cheque e se afastar. Para um fundador de primeira viagem sem um parceiro técnico, isso pode comprimir anos de busca em um relacionamento de trabalho que começa no primeiro dia. A pergunta óbvia é quanto isso custa, o que abordamos em [quanta participação os venture studios levam](/pt/library/how-much-equity-do-venture-studios-take)."
+          ]
+        },
+        {
+          "id": "como-testar-o-encaixe-antes-de-se-comprometer",
+          "heading": "Como testar o encaixe antes de se comprometer",
+          "level": 2,
+          "paragraphs": [
+            "Nenhuma entrevista prevê um relacionamento de cofundação. Trabalho compartilhado prevê. Antes de qualquer um dos dois assinar qualquer coisa, construam algo real juntos. Um projeto pago de duas ou quatro semanas, um protótipo lançado ou um sprint focado de fim de semana vão ensinar mais do que um mês de cafés. Você está testando como a pessoa pensa, como lida com discordância, como se comunica quando algo quebra e se ela de fato entrega.",
+            "Observe algumas coisas enquanto trabalham. A pessoa termina o que começa? Explica os trade-offs técnicos de um jeito que permite você agir? Ela discorda quando você está errado? Um cofundador que só concorda com você vale muito pouco. Quando vocês se comprometerem, protejam o relacionamento com mecanismos padrão. Vesting ao longo de quatro anos com um cliff de um ano é a norma de mercado por um bom motivo. Alinha todo mundo em torno de permanecer e construir, e dá a você uma forma limpa de se separar caso o encaixe se revele errado."
+          ]
+        },
+        {
+          "id": "qual-participacao-um-cofundador-tecnico-deve-receber",
+          "heading": "Qual participação um cofundador técnico deve receber",
+          "level": 2,
+          "paragraphs": [
+            "Cofundadores técnicos iniciais normalmente ficam perto de uma divisão igualitária, e há bons argumentos para ir até um 50/50 exato. O engenheiro que constrói o produto nos primeiros anos está correndo o mesmo risco que você, muitas vezes deixando um emprego bem pago para fazer isso. Fundadores que tentam economizar centavos com esse primeiro parceiro técnico tendem a se arrepender, porque o ressentimento com uma divisão desequilibrada envenena exatamente o relacionamento do qual a empresa depende.",
+            "Seja qual for o número em que você chegar, coloque-o em um cronograma de vesting e registre por escrito antes de o trabalho ficar sério. As divisões de participação estão entre as fontes mais comuns de conflito entre fundadores no início, e os mecanismos padrão de finanças de startup existem justamente para neutralizar isso. Se você está comparando uma divisão com um cofundador contra um arranjo com um studio, ajuda entender se um venture studio vale a pena para fundadores antes de decidir como preencher a cadeira técnica."
+          ]
+        },
+        {
+          "id": "o-angulo-da-america-latina",
+          "heading": "O ângulo da América Latina",
+          "level": 2,
+          "paragraphs": [
+            "Fundadores no Brasil e por toda a América Latina enfrentam um grupo local mais restrito de engenheiros de IA sêniores que também topam cofundar, e os melhores deles costumam ser recrutados por empresas globais que pagam em dólar. É exatamente essa lacuna que um studio de cofundação fecha. A Avante cofunda empresas nativas de IA para o Brasil e a América Latina, fornecendo a profundidade técnica e o capital inicial em um único relacionamento, para que um fundador com uma ideia afiada e profundo conhecimento de mercado não precise passar um ano procurando alguém para construí-la. O resultado é uma empresa que começa com um time fundador completo, em vez de um anúncio de vaga e uma esperança."
+          ]
+        },
+        {
+          "id": "erros-comuns-a-evitar",
+          "heading": "Erros comuns a evitar",
+          "level": 2,
+          "paragraphs": [
+            "O primeiro erro é contratar quando a intenção é cofundar. Um prestador de serviço constrói o que você pede. Um cofundador discute com você sobre o que construir e é dono do resultado. Se você só precisa do primeiro, não dilua sua empresa por isso.",
+            "O segundo erro é otimizar por velocidade em vez de encaixe. Trazer o primeiro engenheiro disponível para bater um prazo de captação é como times fundadores se desfazem um ano depois. Em sua análise amplamente citada de post-mortems de startups, a CB Insights constatou que não ter o time certo foi apontado em 14 por cento das falhas. Paul Graham, da Y Combinator, argumenta há muito tempo que um fundador solo é um dos maiores riscos que uma startup pode carregar, mas a solução para isso é o parceiro certo, não simplesmente qualquer parceiro.",
+            "O terceiro erro é pular o teste. Se você não faria um projeto pago juntos antes de se comprometer, já tem a sua resposta."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Não ter o time certo foi apontado em 14 por cento das falhas de startups, colocando o time e o encaixe entre cofundadores entre as principais razões pelas quais empresas quebram.",
+            "attribution": "CB Insights, analysis of startup failure post-mortems"
+          }
+        }
+      ],
+      "faqs": [
+        {
+          "q": "É preciso ter um cofundador técnico para começar uma startup de IA?",
+          "a": "Não necessariamente, mas ajuda enormemente. Você pode começar com prestadores de serviço ou ferramentas no-code para validar uma ideia, e alguns fundadores aprendem a construir a primeira versão sozinhos. Para qualquer coisa que precise escalar, um cofundador técnico que é dono do produto e das decisões difíceis de engenharia de IA é um dos indicadores mais fortes de uma empresa que sobrevive. Paul Graham, da Y Combinator, argumenta há muito tempo que seguir sozinho como fundador único é um dos maiores riscos que uma startup pode correr."
+        },
+        {
+          "q": "Quanta participação um cofundador técnico deve receber?",
+          "a": "Cofundadores técnicos iniciais costumam receber uma fatia próxima de uma divisão igualitária, e muitos primeiros parceiros no nível de fundação recebem uma participação plena de cofundador, com vesting de quatro anos e cliff de um ano. O número exato depende do momento, de quem trouxe a ideia e de quem está financiando o trabalho inicial, mas tratar o primeiro parceiro técnico com generosidade costuma ser a decisão certa, porque o relacionamento importa mais do que alguns pontos de participação."
+        },
+        {
+          "q": "Qual é o melhor lugar para encontrar um cofundador técnico?",
+          "a": "Comece onde os builders já se reúnem, em vez de em sites de vagas genéricos. Plataformas de matching de aceleradoras como a mantida pela Y Combinator, comunidades de código aberto, hackathons de IA e apresentações de segundo grau feitas por engenheiros em quem você confia alcançam pessoas que estão ativamente construindo. Para fundadores que querem um parceiro e capital ao mesmo tempo, um venture studio pode atuar como o próprio cofundador técnico."
+        },
+        {
+          "q": "Qual é a diferença entre um cofundador técnico e um venture studio?",
+          "a": "Um cofundador técnico é um indivíduo que é dono do produto e compartilha o risco com você em troca de participação. Um venture studio é uma organização que cofunda a empresa com você, contribuindo com um time de engenharia, apoio operacional e capital inicial. No Brasil e na América Latina, onde engenheiros de IA sêniores dispostos a cofundar são escassos, um studio como a Avante pode ocupar o papel de fundação técnica diretamente."
         }
       ]
     }
@@ -11302,6 +12146,480 @@ const engineArticles: Article[] = [
       ]
     },
     "ogImage": "/og/instrument-copilot-proprietary-data-playbook.png"
+  },
+  {
+    "slug": "is-a-venture-studio-worth-it-for-founders",
+    "category": "insights",
+    "type": "Essay",
+    "readTime": "7 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-08",
+    "isPublished": true,
+    "en": {
+      "title": "Is a Venture Studio Worth It for Founders? An Honest Breakdown",
+      "description": "A venture studio gives founders an idea, a build team, and first capital for a large equity stake. Here is when that trade is worth it, and when to walk away.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Start with the only test that matters. A venture studio earns its stake when it closes a gap you cannot close alone. Hand a studio a founder who has spent a decade inside an industry but has never hired an engineer or shipped a product, and the trade makes sense, because the studio supplies the build, the operators, and the first capital that founder is missing. Hand it a technical team that already has a working prototype, and the same deal gets expensive fast. So the useful version of the question, are venture studios worth it, is narrower than it looks. Worth it for whom, and in exchange for what.",
+            "Avante Ventures co-founds AI-native companies for Brazil and Latin America, so we are an interested party here. We have tried to answer as if you were weighing every option, including the ones that do not involve us."
+          ]
+        },
+        {
+          "id": "what-a-venture-studio-actually-gives-you",
+          "heading": "What a venture studio actually gives you",
+          "level": 2,
+          "paragraphs": [
+            "A studio and an accelerator can both ask for equity, but they are not selling the same thing. An accelerator sells a program and a network. A priced venture round sells capital and governance. A studio sells a company built around you, assembled before you have anything to show.",
+            "In practice that means four things arrive on day one instead of over the first two years."
+          ],
+          "bullets": [
+            "An idea that has already been pressure-tested, so you are not paying to discover it is wrong.",
+            "A build team from the first week, rather than a nine-month hiring search.",
+            "First-ticket capital, so the company can start without you raising a round first.",
+            "Operating partners who are inside the unit-economics model early, writing the first pricing page with you rather than reviewing a deck once a quarter."
+          ]
+        },
+        {
+          "id": "what-it-costs-and-how-that-compares",
+          "heading": "What it costs, and how that compares",
+          "level": 2,
+          "paragraphs": [
+            "The price of a studio is ownership, and it is the steepest early stake in venture. Before you weigh it, anchor on what the cheaper paths actually charge, because those numbers are fixed and public.",
+            "An accelerator sits at the other end. The standard Techstars deal is $20,000 for 6 percent of common stock, plus access to a $100,000 convertible note. Y Combinator invests $500,000 in total, where the first $125,000 buys 7 percent on a post-money SAFE and the remaining $375,000 rides on an uncapped SAFE that converts at your next priced round.",
+            "A studio sits at the far end of that range. Its stake varies widely and often falls roughly between 30 and 50 percent, sometimes higher, and that figure is a general pattern rather than a fixed rate. The number moves with how much the studio builds and how early it puts its own capital in. Read it as the price for how much gets built for you, not as expensive versus cheap. Seven percent to an accelerator buys a program. A third or more to a studio buys a working company.",
+            "Studios also tend to compress the earliest and riskiest months. The company plumbing, from incorporation and hiring to the first data pipeline, gets solved once and reused across ventures instead of rebuilt from scratch each time. That reuse is the real mechanism a founder is buying. It is why a studio venture can start the month you sign rather than the year you would have finished assembling a team."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Y Combinator invests $500,000 in total. The first $125,000 buys 7 percent on a post-money SAFE, and the remaining $375,000 rides on an uncapped SAFE that converts at your next priced round.",
+            "attribution": "Y Combinator standard deal terms"
+          }
+        },
+        {
+          "id": "when-a-studio-is-worth-it",
+          "heading": "When a studio is worth it",
+          "level": 2,
+          "paragraphs": [
+            "Match the path to the gap, not to the lowest dilution number. A studio is the right call in a narrow, specific case."
+          ],
+          "bullets": [
+            "You are a domain expert with no team and no product. You are trading the most equity for the one thing you cannot assemble alone, which is a working company. This is the profile a studio fits best.",
+            "You value speed to a real product over a clean cap table, and you would rather own less of a company that exists than all of one that does not.",
+            "You want operators in the room, not on a quarterly call, and you are willing to share control to get them."
+          ]
+        },
+        {
+          "id": "when-to-walk-away",
+          "heading": "When to walk away",
+          "level": 2,
+          "paragraphs": [
+            "An honest breakdown has to tell you when the answer is no, so here it is. A venture studio is the wrong trade in more cases than the pitch decks admit."
+          ],
+          "bullets": [
+            "If you can already build and ship without help, the studio stake is overpriced for you. Take an accelerator check or raise a seed round and keep your ownership. An accelerator check will not close a build gap, but you do not have one.",
+            "If keeping maximum control matters more than moving fast, bootstrap or raise a priced round and accept slower traction as the cost of a clean cap table.",
+            "If a studio cannot name in plain terms what it will build and who will build it, the equity is buying a promise rather than a company. That is a pass on any studio.",
+            "If the same entity supplies the idea, the money, and the operators and will not put the conflict terms in writing, treat it as a red flag. That test applies to us as much as to anyone."
+          ]
+        },
+        {
+          "id": "where-avante-fits",
+          "heading": "Where Avante fits",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures is a venture studio, which means everything above is an interested party talking, and you should weigh it that way. What we can say without a conflict is where the model earns its keep. It compounds in a market that is large, lightly digitized, and short on operators who have actually built in it. Brazil and the wider Latin American services economy fit that description, which is why Avante co-founds AI-native companies there rather than chasing crowded categories elsewhere.",
+            "The recurring pattern across the portfolio is the [copilot to data to fund flywheel](/en/library/copilot-to-data-to-fund-flywheel). Build an AI copilot to generate proprietary data, then use that data to raise and deploy the next round. If you want the fuller comparison across paths, we wrote an [honest guide to studio versus accelerator versus VC](/en/library/studio-vs-accelerator-vs-vc).",
+            "So do not ask whether venture studios are worth it in the abstract. Ask whether you are short on exactly what a studio supplies. If you are, few things in venture are worth more. If you are not, almost anything else costs you less."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Are venture studios worth it?",
+          "a": "It depends on what you are missing. A venture studio is worth it for a founder with deep domain expertise but no team, no product, and no first capital, because the studio supplies all three on day one. For a founder who can already build and ship, the studio equity stake is overpriced, and an accelerator or a priced round will cost far less ownership."
+        },
+        {
+          "q": "How much equity does a venture studio take?",
+          "a": "It varies widely and is not a fixed rate. A studio stake often falls roughly between 30 and 50 percent, and sometimes higher, moving with how much the studio builds and how early it commits its own capital. For comparison, an accelerator like Y Combinator takes 7 percent for its first $125,000, so a studio stake reflects a company built for you rather than a program."
+        },
+        {
+          "q": "Is a venture studio better than an accelerator like Y Combinator?",
+          "a": "Neither is better in the abstract, because they sell different things. An accelerator sells a program, a network, and a small check, such as Y Combinator's $500,000 standard deal. A studio sells a built company and takes a much larger stake for it. Choose the accelerator if you have a team and need network and capital, and the studio if you need the company itself built around you."
+        },
+        {
+          "q": "When should a founder not join a venture studio?",
+          "a": "Walk away if you can already build and ship, since the studio stake is overpriced for a gap you do not have. Walk away if keeping maximum ownership and control matters more than speed. And treat it as a red flag if a studio cannot say plainly what it will build and who will build it, or will not put its conflict of interest terms in writing."
+        },
+        {
+          "q": "What is the difference between joining a venture studio and raising a seed round?",
+          "a": "A seed round gives you capital and usually a board seat while you keep the company you already built, and it assumes you have a team and a product to fund. A venture studio gives you the team, the product, and the first capital together, before any of that exists, in exchange for a much larger equity stake. One funds a company you have, the other co-founds the company you do not yet have."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Vale a pena um venture studio para fundadores? Uma análise honesta",
+      "description": "Um venture studio dá ao fundador uma ideia, um time de construção e o primeiro capital em troca de uma participação grande. Veja quando essa troca vale a pena e quando recusar.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Comece pelo único teste que importa. Um venture studio merece sua participação quando fecha uma lacuna que você não consegue fechar sozinho. Entregue a um studio um fundador que passou uma década dentro de um setor mas nunca contratou um engenheiro nem lançou um produto, e a troca faz sentido, porque o studio fornece a construção, os operadores e o primeiro capital que faltam a esse fundador. Entregue a ele um time técnico que já tem um protótipo funcionando, e o mesmo acordo fica caro rápido. Então a versão útil da pergunta, se vale a pena um venture studio, é mais estreita do que parece. Vale a pena para quem, e em troca de quê.",
+            "A Avante Ventures co-funda empresas AI-native para o Brasil e a América Latina, então somos parte interessada aqui. Tentamos responder como se você estivesse pesando todas as opções, inclusive as que não nos envolvem."
+          ]
+        },
+        {
+          "id": "o-que-um-venture-studio-realmente-entrega",
+          "heading": "O que um venture studio realmente entrega",
+          "level": 2,
+          "paragraphs": [
+            "Um studio e uma aceleradora podem ambos pedir participação, mas não vendem a mesma coisa. Uma aceleradora vende um programa e uma rede. Uma rodada precificada vende capital e governança. Um studio vende uma empresa construída ao seu redor, montada antes de você ter qualquer coisa para mostrar.",
+            "Na prática, isso significa que quatro coisas chegam no primeiro dia, em vez de ao longo dos dois primeiros anos."
+          ],
+          "bullets": [
+            "Uma ideia que já foi testada sob pressão, então você não paga para descobrir que ela está errada.",
+            "Um time de construção desde a primeira semana, em vez de uma busca de contratação de nove meses.",
+            "Capital de primeiro cheque, para que a empresa comece sem que você precise levantar uma rodada antes.",
+            "Sócios operadores que entram cedo no modelo de unit economics, escrevendo a primeira página de preços com você em vez de revisar um deck uma vez por trimestre."
+          ]
+        },
+        {
+          "id": "quanto-custa-e-como-isso-se-compara",
+          "heading": "Quanto custa, e como isso se compara",
+          "level": 2,
+          "paragraphs": [
+            "O preço de um studio é participação, e é a fatia inicial mais alta do venture. Antes de pesá-la, ancore no que os caminhos mais baratos realmente cobram, porque esses números são fixos e públicos.",
+            "Uma aceleradora fica na outra ponta. O acordo padrão da Techstars é de US$ 20.000 por 6 por cento de ações ordinárias, mais acesso a uma nota conversível de US$ 100.000. A Y Combinator investe US$ 500.000 no total, em que os primeiros US$ 125.000 compram 7 por cento em um SAFE post-money e os US$ 375.000 restantes seguem em um SAFE sem teto que converte na sua próxima rodada precificada.",
+            "Um studio fica no extremo dessa faixa. Sua participação varia bastante e muitas vezes cai aproximadamente entre 30 e 50 por cento, às vezes mais, e esse número é um padrão geral, não uma taxa fixa. Ele se move com o quanto o studio constrói e o quão cedo coloca o próprio capital. Leia isso como o preço pelo quanto é construído para você, não como caro contra barato. Sete por cento para uma aceleradora compram um programa. Um terço ou mais para um studio compra uma empresa funcionando.",
+            "Studios também tendem a comprimir os meses iniciais e mais arriscados. A infraestrutura da empresa, da constituição e contratação ao primeiro pipeline de dados, é resolvida uma vez e reutilizada entre negócios, em vez de reconstruída do zero a cada vez. Essa reutilização é o mecanismo real que o fundador está comprando. É por isso que um negócio de studio pode começar no mês em que você assina, e não no ano em que você teria terminado de montar um time."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "A Y Combinator investe US$ 500.000 no total. Os primeiros US$ 125.000 compram 7 por cento em um SAFE post-money, e os US$ 375.000 restantes seguem em um SAFE sem teto que converte na sua próxima rodada precificada.",
+            "attribution": "Termos padrão do acordo da Y Combinator"
+          }
+        },
+        {
+          "id": "quando-um-studio-vale-a-pena",
+          "heading": "Quando um studio vale a pena",
+          "level": 2,
+          "paragraphs": [
+            "Combine o caminho com a lacuna, não com o menor número de diluição. Um studio é a escolha certa em um caso estreito e específico."
+          ],
+          "bullets": [
+            "Você é especialista no setor mas não tem time nem produto. Você troca o máximo de participação pela única coisa que não consegue montar sozinho, que é uma empresa funcionando. Esse é o perfil que um studio atende melhor.",
+            "Você valoriza velocidade até um produto real acima de um cap table limpo, e prefere ter menos de uma empresa que existe do que tudo de uma que não existe.",
+            "Você quer operadores na sala, não em uma ligação trimestral, e está disposto a dividir o controle para tê-los."
+          ]
+        },
+        {
+          "id": "quando-recusar",
+          "heading": "Quando recusar",
+          "level": 2,
+          "paragraphs": [
+            "Uma análise honesta precisa dizer quando a resposta é não, então aqui está. Um venture studio é a troca errada em mais casos do que os pitch decks admitem."
+          ],
+          "bullets": [
+            "Se você já consegue construir e lançar sem ajuda, a participação do studio é cara demais para você. Pegue um cheque de aceleradora ou levante uma rodada seed e mantenha sua propriedade. Um cheque de aceleradora não fecha uma lacuna de construção, mas você não tem uma.",
+            "Se manter o máximo de controle importa mais do que ir rápido, faça bootstrap ou levante uma rodada precificada e aceite tração mais lenta como o custo de um cap table limpo.",
+            "Se um studio não consegue dizer em termos claros o que vai construir e quem vai construir, a participação está comprando uma promessa, não uma empresa. Isso é um não para qualquer studio.",
+            "Se a mesma entidade fornece a ideia, o dinheiro e os operadores e não coloca os termos do conflito por escrito, trate como um sinal de alerta. Esse teste vale para nós tanto quanto para qualquer um."
+          ]
+        },
+        {
+          "id": "onde-a-avante-se-encaixa",
+          "heading": "Onde a Avante se encaixa",
+          "level": 2,
+          "paragraphs": [
+            "A Avante Ventures é um venture studio, o que significa que tudo acima é uma parte interessada falando, e você deve pesar assim. O que podemos dizer sem conflito é onde o modelo se paga. Ele compõe em um mercado que é grande, pouco digitalizado e carente de operadores que de fato construíram nele. O Brasil e a economia de serviços da América Latina se encaixam nessa descrição, e é por isso que a Avante co-funda empresas AI-native ali, em vez de perseguir categorias lotadas em outros lugares.",
+            "O padrão recorrente no portfólio é o [flywheel de copilot para dados para fundo](/pt/library/copilot-to-data-to-fund-flywheel). Construa um copilot de IA para gerar dados proprietários, e então use esses dados para levantar e alocar a próxima rodada. Se você quer a comparação mais completa entre os caminhos, escrevemos um [guia honesto de studio contra aceleradora contra VC](/pt/library/studio-vs-accelerator-vs-vc).",
+            "Então não pergunte se um venture studio vale a pena no abstrato. Pergunte se você está sem exatamente aquilo que um studio fornece. Se estiver, poucas coisas no venture valem mais. Se não, quase qualquer outra coisa custa menos."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Vale a pena um venture studio?",
+          "a": "Depende do que está faltando. Um venture studio vale a pena para um fundador com profunda expertise de setor mas sem time, sem produto e sem primeiro capital, porque o studio fornece os três no primeiro dia. Para um fundador que já consegue construir e lançar, a participação do studio é cara demais, e uma aceleradora ou uma rodada precificada custarão bem menos propriedade."
+        },
+        {
+          "q": "Quanta participação um venture studio pega?",
+          "a": "Varia bastante e não é uma taxa fixa. A participação de um studio muitas vezes cai aproximadamente entre 30 e 50 por cento, e às vezes mais, movendo-se com o quanto o studio constrói e o quão cedo compromete o próprio capital. Para comparação, uma aceleradora como a Y Combinator pega 7 por cento pelos seus primeiros US$ 125.000, então a participação de um studio reflete uma empresa construída para você, não um programa."
+        },
+        {
+          "q": "Um venture studio é melhor que uma aceleradora como a Y Combinator?",
+          "a": "Nenhum é melhor no abstrato, porque vendem coisas diferentes. Uma aceleradora vende um programa, uma rede e um cheque pequeno, como o acordo padrão de US$ 500.000 da Y Combinator. Um studio vende uma empresa construída e pega uma participação muito maior por ela. Escolha a aceleradora se você tem um time e precisa de rede e capital, e o studio se você precisa da própria empresa construída ao seu redor."
+        },
+        {
+          "q": "Quando um fundador não deveria entrar em um venture studio?",
+          "a": "Recuse se você já consegue construir e lançar, pois a participação do studio é cara demais para uma lacuna que você não tem. Recuse se manter o máximo de propriedade e controle importa mais do que velocidade. E trate como sinal de alerta se um studio não consegue dizer claramente o que vai construir e quem vai construir, ou não coloca os termos do conflito de interesse por escrito."
+        },
+        {
+          "q": "Qual a diferença entre entrar em um venture studio e levantar uma rodada seed?",
+          "a": "Uma rodada seed dá capital e normalmente um assento no conselho enquanto você mantém a empresa que já construiu, e pressupõe que você tem um time e um produto para financiar. Um venture studio dá o time, o produto e o primeiro capital juntos, antes de qualquer disso existir, em troca de uma participação bem maior. Uma financia uma empresa que você tem, a outra co-funda a empresa que você ainda não tem."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "is-my-ai-startup-just-a-wrapper",
+    "category": "ai",
+    "type": "Essay",
+    "readTime": "9 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-08",
+    "isPublished": true,
+    "en": {
+      "title": "Is My AI Startup Just a Wrapper?",
+      "description": "Is your AI startup a wrapper or a defensible company? A founder's test that separates a GPT wrapper from a real moat in data, workflow, and distribution.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Your AI startup is just a wrapper only if the whole product is a thin layer of prompt and interface around a model anyone can call. Calling something you do not own is not the problem. Most valuable software businesses run on infrastructure and APIs they do not own, and Stripe still processes payments on cloud and card networks it did not build. The real test is whether anything sits underneath your model call that a competitor cannot copy after they call the same model, whether that is proprietary data that compounds, a workflow a team runs its day inside, or distribution a clone cannot rent. If the honest answer today is nothing, you are a wrapper for now. That is a normal place to start, not a verdict, as long as you know which moat you are building next."
+          ]
+        },
+        {
+          "id": "is-my-ai-startup-just-a-wrapper",
+          "heading": "Is my AI startup just a wrapper?",
+          "level": 2,
+          "paragraphs": [
+            "Ask it plainly. You are a wrapper if a well-funded competitor can copy your interface, call the same foundation model, and reproduce your product in a weekend. You are past being a wrapper the moment something you have built makes that copy fail. A wrapper is defined by what is missing underneath the model call, not by the fact that you call a model at all.",
+            "The confusion comes from mistaking capability for defensibility. Access to a frontier model is a capability, and today anyone with a credit card and an API key has it. Defensibility is what remains once that access is universal. So the wrapper question is really a moat question, and the honest version of it is uncomfortable. After a competitor calls the same model you call, what exactly is left that they still cannot copy?"
+          ]
+        },
+        {
+          "id": "what-just-a-wrapper-really-means",
+          "heading": "What \"just a wrapper\" really means",
+          "level": 2,
+          "paragraphs": [
+            "A wrapper is a product whose entire value is the prompt and the interface. The critique stings because it is often true at launch, and because the ground keeps moving underneath these products. A model capability that is a differentiator this quarter becomes a default feature the next, and the price of raw intelligence keeps falling.",
+            "The numbers here are stark. According to the Stanford HAI AI Index, the cost of running a model at the level of GPT-3.5 fell more than 280-fold between November 2022 and October 2024. When the core capability gets that much cheaper that fast, any advantage that lives purely in the model layer erodes on the same curve. David Cahn of Sequoia Capital made the macro version of this point, arguing that the capital pouring into the AI model and infrastructure layer has raced far ahead of the revenue it has produced. Compute and capital are not the scarce inputs. Defensibility is.",
+            "None of this makes wrappers worthless. It makes a wrapper a starting position rather than a finish line. Depending on infrastructure you do not own is normal, and it is not what the critique is about. Stripe runs on cloud and card networks it did not build and is one of the most valuable software companies in the world, because it layered settlement, risk, and developer trust on top that rivals cannot clone by calling the same rails. The problem is never that you call an API. The problem is a thin layer with nothing underneath it."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "The cost of running a model at the level of GPT-3.5 fell more than 280-fold between November 2022 and October 2024, so any advantage that lives purely in the model layer erodes on the same curve.",
+            "attribution": "Stanford HAI AI Index 2025"
+          }
+        },
+        {
+          "id": "gpt-wrapper-vs-defensible-company-what-actually-separates-them",
+          "heading": "GPT wrapper vs defensible company: what actually separates them",
+          "level": 2,
+          "paragraphs": [
+            "A GPT wrapper and a defensible company can look identical in a demo. The difference is invisible in the interface and lives in what compounds underneath it. Warren Buffett borrowed the image of a castle protected by a moat to describe businesses that stay profitable because rivals cannot easily reach them. Greylock partner Jerry Chen updated the idea for software in his widely read essay \"The New New Moats,\" arguing that durable software companies win not by owning a model but by becoming a system of intelligence, software that sits inside a customer's workflow, unifies data scattered across other systems, and gets smarter with use. That splits into three moats you can actually build, and none of them is the model."
+          ]
+        },
+        {
+          "id": "proprietary-data-that-compounds",
+          "heading": "Proprietary data that compounds",
+          "level": 3,
+          "paragraphs": [
+            "Public data trains everyone's model equally, so it defends no one. A real data moat comes from a loop. Your product captures data no competitor has, that data measurably improves the result, the better result drives more usage, and more usage produces more data. Fine-tuning on data anyone can scrape is not a moat. A claims tool that absorbs how one insurer handles its edge cases has a loop. A generic chat box does not."
+          ]
+        },
+        {
+          "id": "workflow-depth",
+          "heading": "Workflow depth",
+          "level": 3,
+          "paragraphs": [
+            "This is often the strongest moat for a young company. When your product becomes the place where work actually gets done, rather than a tool people open and close, you stop being optional. Depth looks like integrations into the systems a team already runs, multi-step processes that live inside your product, permissions and audit trails, and outputs other people in the organization depend on. A prompt box is shallow. A system a finance team runs its monthly close through is deep, and deep is expensive to rebuild even with a better model."
+          ]
+        },
+        {
+          "id": "distribution",
+          "heading": "Distribution",
+          "level": 3,
+          "paragraphs": [
+            "Founders underrate this one. The history of technology is full of better products that lost to worse products with better distribution. For an AI startup, distribution can be a design partner who becomes a reference for a whole vertical, a platform you plug into, a community you built before you had a product, or a brand that makes you the default answer when buyers search. A cheaper clone still has to find and earn the customer you already reached. In Brazil and Latin America, where local trust, language, and presence weigh more heavily than in the United States, distribution built on the ground is especially hard to copy."
+          ]
+        },
+        {
+          "id": "where-switching-cost-fits-it-is-the-readout-not-a-fourth-moat",
+          "heading": "Where switching cost fits: it is the readout, not a fourth moat",
+          "level": 2,
+          "paragraphs": [
+            "Founders often add switching cost to a list like this and try to score it on its own. It does not belong there, because switching cost is not independent of the three moats above. It is what they add up to. The data a customer has accumulated inside your product, the processes their team has standardized on, and the integrations wired into their stack are the same data, workflow, and distribution planks seen from the customer's side. Counting switching cost as a separate fourth moat double counts the first three.",
+            "So use it as the readout instead. Once you have scored the three real moats, switching cost is the single question that tells you whether they are working. If a competitor launched tomorrow with a better model, how much would it actually cost your best customer, in time, risk, and lost history, to leave? Healthy switching cost is earned by delivering value, not by trapping anyone. It is the bill a customer pays to walk away, and the three moats are what put a number on it."
+          ]
+        },
+        {
+          "id": "score-yourself-wrapper-or-defensible-company",
+          "heading": "Score yourself: wrapper or defensible company?",
+          "level": 2,
+          "paragraphs": [
+            "Give yourself one point for each of the three moats that is real and growing today, not planned for someday.",
+            "Then read the total through switching cost, the bill a competitor makes your best customer pay to leave."
+          ],
+          "bullets": [
+            "**Proprietary data.** Does using your product create data no competitor has, and does that data visibly improve the next result?",
+            "**Workflow depth.** Is your product where a team's work actually happens, holding the integrations and records they depend on, or a tool they visit and leave?",
+            "**Distribution.** Can you reach and win your next hundred customers through a channel a clone cannot simply rent?",
+            "**Zero points.** You are a wrapper today. That is fine if you are early, as long as you can name the one plank you are building next.",
+            "**One point.** You have a head start turning into a moat. Deepen it before the model layer commoditizes your edge.",
+            "**Two points.** Defensibility is forming. You are past the wrapper question and into the harder work of compounding what you have.",
+            "**Three points.** You have a real moat. A better model rarely wins on its own against data, workflow, and distribution a competitor cannot reproduce."
+          ]
+        },
+        {
+          "id": "wrapper-today-does-not-mean-wrapper-forever",
+          "heading": "Wrapper today does not mean wrapper forever",
+          "level": 2,
+          "paragraphs": [
+            "Almost every category-defining software company looked thin at the start. What separated the winners was a deliberate plan to convert early usage into data, workflow, and distribution before competitors caught up. In our experience co-founding companies from day zero, most begin at zero or one, a thin wrapper with a real idea underneath. That is not the problem. Standing still is.",
+            "This is also where the earliest choices matter most. Deciding which moat to prioritize, instrumenting the product to capture proprietary data from the first week, and picking a wedge that deepens into a workflow are architectural calls that are cheap to make early and expensive to retrofit. They are also hard to make well while you are still finding customers and staying alive. A studio that builds alongside founders from day zero, which is how Avante co-founds AI-native companies for Brazil and LATAM, exists to make those calls early rather than after the wrapper critique has already cost a funding round. If you want the full framework and a worked example, read [does your AI startup have a moat](/en/library/does-my-ai-startup-have-a-moat), and if you are weighing the model itself, [whether a venture studio is right for your AI startup](/en/library/is-a-venture-studio-right-for-your-ai-startup) is the next question to ask."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Is my AI startup just a wrapper?",
+          "a": "You are a wrapper if a competitor can copy your interface, call the same foundation model, and reproduce your product, with nothing left that they cannot match. You are past that point if using your product builds proprietary data that compounds, becomes the workflow a team runs its day inside, or reaches customers through distribution a clone cannot rent. Calling a model you do not own is not the issue. Having nothing underneath the call is."
+        },
+        {
+          "q": "Is my startup just a GPT wrapper?",
+          "a": "A GPT wrapper is a specific case of the same question, a product whose whole value is a prompt and an interface around a general model. It is a fine place to start and a bad place to stay. The test is whether the product accumulates something the model does not have, such as exclusive data, deep workflow integration, or hard-won distribution. If it does, you are a company that happens to use GPT. If it does not, you are a feature that a model provider or a faster competitor can absorb."
+        },
+        {
+          "q": "What is the difference between an AI wrapper and a defensible company?",
+          "a": "They can look the same in a demo, because the difference is not in the interface. A wrapper's entire advantage lives in the model layer, which keeps getting cheaper and more widely available. A defensible company has built something underneath the model that a competitor still cannot copy after calling the same model, usually proprietary data that compounds, workflow depth, or distribution. Defensibility is what survives once model access is universal."
+        },
+        {
+          "q": "Is being an AI wrapper always bad?",
+          "a": "No. Many durable companies began as thin layers over a platform. A wrapper only becomes a bad business when it never converts early traction into a moat and the underlying model commoditizes its single advantage. The danger is standing still, not starting thin. The useful move is to name the one asset you are compounding and organize the company around feeding it."
+        },
+        {
+          "q": "What is the strongest moat for an early AI startup?",
+          "a": "For most young companies it is workflow depth, what Greylock's Jerry Chen calls a system of intelligence. Becoming the place where a team's work actually happens is harder for a better-funded rival to copy than any prompt or model choice, and it naturally accumulates proprietary data and switching cost over time."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Minha startup de IA é só um wrapper?",
+      "description": "Sua startup de IA é um wrapper ou uma empresa defensável? Um teste de fundador que separa um wrapper de GPT de um fosso real em dados, fluxo de trabalho e distribuição.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Sua startup de IA só é um wrapper se o produto inteiro for uma camada fina de prompt e interface em torno de um modelo que qualquer um pode chamar. Chamar algo que você não é dono não é o problema. A maioria dos negócios de software mais valiosos roda sobre infraestrutura e APIs que não são deles, e a Stripe ainda processa pagamentos em nuvem e redes de cartão que ela não construiu. O teste de verdade é se existe algo por baixo da sua chamada de modelo que um concorrente não consiga copiar depois de chamar o mesmo modelo, seja dados proprietários que se acumulam, um fluxo de trabalho em que um time passa o dia inteiro, ou uma distribuição que um clone não consegue alugar. Se a resposta honesta hoje é nada, você é um wrapper por enquanto. Esse é um ponto de partida normal, não um veredito, desde que você saiba qual fosso vai construir em seguida."
+          ]
+        },
+        {
+          "id": "is-my-ai-startup-just-a-wrapper",
+          "heading": "Minha startup de IA é só um wrapper?",
+          "level": 2,
+          "paragraphs": [
+            "Pergunte sem rodeios. Você é um wrapper se um concorrente bem financiado consegue copiar sua interface, chamar o mesmo modelo de base e reproduzir seu produto em um fim de semana. Você deixa de ser um wrapper no momento em que algo que você construiu faz essa cópia falhar. Um wrapper é definido pelo que falta por baixo da chamada de modelo, não pelo fato de você chamar um modelo.",
+            "A confusão vem de trocar capacidade por defensabilidade. Acesso a um modelo de fronteira é uma capacidade, e hoje qualquer pessoa com um cartão de crédito e uma chave de API tem esse acesso. Defensabilidade é o que sobra quando esse acesso é universal. Então a pergunta do wrapper é, na verdade, uma pergunta sobre fosso, e a versão honesta dela é desconfortável. Depois que um concorrente chama o mesmo modelo que você chama, o que exatamente sobra que ele ainda não consegue copiar?"
+          ]
+        },
+        {
+          "id": "what-just-a-wrapper-really-means",
+          "heading": "O que \"só um wrapper\" realmente significa",
+          "level": 2,
+          "paragraphs": [
+            "Um wrapper é um produto cujo valor inteiro está no prompt e na interface. A crítica incomoda porque costuma ser verdade no lançamento, e porque o chão não para de se mexer embaixo desses produtos. Uma capacidade de modelo que é um diferencial neste trimestre vira um recurso padrão no próximo, e o preço da inteligência bruta não para de cair.",
+            "Os números aqui são gritantes. Segundo o Stanford HAI AI Index, o custo de rodar um modelo no nível do GPT-3.5 caiu mais de 280 vezes entre novembro de 2022 e outubro de 2024. Quando a capacidade central fica tão mais barata tão rápido, qualquer vantagem que vive puramente na camada do modelo se desgasta na mesma curva. David Cahn, da Sequoia Capital, fez a versão macro desse argumento, defendendo que o capital despejado na camada de modelos e infraestrutura de IA correu muito à frente da receita que ela produziu. Computação e capital não são os insumos escassos. A defensabilidade é.",
+            "Nada disso torna os wrappers inúteis. Isso faz do wrapper uma posição de partida, não uma linha de chegada. Depender de infraestrutura que não é sua é normal, e não é disso que a crítica trata. A Stripe roda sobre nuvem e redes de cartão que ela não construiu e é uma das empresas de software mais valiosas do mundo, porque colocou por cima liquidação, risco e confiança dos desenvolvedores que os rivais não conseguem clonar chamando os mesmos trilhos. O problema nunca é você chamar uma API. O problema é uma camada fina sem nada por baixo."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O custo de rodar um modelo no nível do GPT-3.5 caiu mais de 280 vezes entre novembro de 2022 e outubro de 2024, então qualquer vantagem que vive puramente na camada do modelo se desgasta na mesma curva.",
+            "attribution": "Stanford HAI AI Index 2025"
+          }
+        },
+        {
+          "id": "gpt-wrapper-vs-defensible-company-what-actually-separates-them",
+          "heading": "Wrapper de GPT vs empresa defensável: o que realmente as separa",
+          "level": 2,
+          "paragraphs": [
+            "Um wrapper de GPT e uma empresa defensável podem parecer idênticos em uma demo. A diferença é invisível na interface e vive no que se acumula por baixo dela. Warren Buffett tomou emprestada a imagem de um castelo protegido por um fosso para descrever negócios que seguem lucrativos porque os rivais não conseguem alcançá-los com facilidade. Jerry Chen, sócio da Greylock, atualizou a ideia para software em seu ensaio muito lido \"The New New Moats\", defendendo que empresas de software duráveis vencem não por serem donas de um modelo, mas por se tornarem um sistema de inteligência, um software que fica dentro do fluxo de trabalho do cliente, unifica dados espalhados por outros sistemas e fica mais inteligente com o uso. Isso se divide em três fossos que você realmente pode construir, e nenhum deles é o modelo."
+          ]
+        },
+        {
+          "id": "proprietary-data-that-compounds",
+          "heading": "Dados proprietários que se acumulam",
+          "level": 3,
+          "paragraphs": [
+            "Dados públicos treinam o modelo de todo mundo por igual, então não defendem ninguém. Um fosso de dados real vem de um ciclo. Seu produto captura dados que nenhum concorrente tem, esses dados melhoram o resultado de forma mensurável, o resultado melhor gera mais uso, e mais uso produz mais dados. Fazer fine-tuning com dados que qualquer um pode raspar não é um fosso. Uma ferramenta de sinistros que absorve como uma seguradora lida com seus casos de exceção tem um ciclo. Uma caixa de chat genérica não tem."
+          ]
+        },
+        {
+          "id": "workflow-depth",
+          "heading": "Profundidade de fluxo de trabalho",
+          "level": 3,
+          "paragraphs": [
+            "Esse costuma ser o fosso mais forte para uma empresa jovem. Quando seu produto vira o lugar onde o trabalho de fato acontece, em vez de uma ferramenta que as pessoas abrem e fecham, você deixa de ser opcional. Profundidade se parece com integrações nos sistemas que um time já usa, processos de várias etapas que vivem dentro do seu produto, permissões e trilhas de auditoria, e entregas das quais outras pessoas na organização dependem. Uma caixa de prompt é rasa. Um sistema pelo qual um time financeiro faz o fechamento mensal é profundo, e o que é profundo é caro de reconstruir mesmo com um modelo melhor."
+          ]
+        },
+        {
+          "id": "distribution",
+          "heading": "Distribuição",
+          "level": 3,
+          "paragraphs": [
+            "Os fundadores subestimam esse. A história da tecnologia está cheia de produtos melhores que perderam para produtos piores com distribuição melhor. Para uma startup de IA, distribuição pode ser um parceiro de design que vira referência para uma vertical inteira, uma plataforma na qual você se conecta, uma comunidade que você construiu antes de ter um produto, ou uma marca que faz de você a resposta padrão quando os compradores pesquisam. Um clone mais barato ainda precisa encontrar e conquistar o cliente que você já alcançou. No Brasil e na América Latina, onde confiança local, idioma e presença pesam mais do que nos Estados Unidos, uma distribuição construída no território é especialmente difícil de copiar."
+          ]
+        },
+        {
+          "id": "where-switching-cost-fits-it-is-the-readout-not-a-fourth-moat",
+          "heading": "Onde o custo de troca entra: ele é a leitura, não um quarto fosso",
+          "level": 2,
+          "paragraphs": [
+            "Os fundadores costumam colocar o custo de troca em uma lista como essa e tentar pontuá-lo separadamente. Ele não pertence a essa lista, porque o custo de troca não é independente dos três fossos acima. Ele é a soma deles. Os dados que um cliente acumulou dentro do seu produto, os processos que o time dele padronizou, e as integrações ligadas à stack dele são os mesmos pilares de dados, fluxo de trabalho e distribuição vistos do lado do cliente. Contar o custo de troca como um quarto fosso separado conta os três primeiros duas vezes.",
+            "Então, use-o como leitura. Depois de pontuar os três fossos reais, o custo de troca é a única pergunta que diz se eles estão funcionando. Se um concorrente lançasse amanhã com um modelo melhor, quanto de fato custaria para o seu melhor cliente, em tempo, risco e histórico perdido, ir embora? Um custo de troca saudável é conquistado ao entregar valor, não ao prender ninguém. É a conta que um cliente paga para ir embora, e os três fossos são o que colocam um número nela."
+          ]
+        },
+        {
+          "id": "score-yourself-wrapper-or-defensible-company",
+          "heading": "Faça sua autoavaliação: wrapper ou empresa defensável?",
+          "level": 2,
+          "paragraphs": [
+            "Dê a si mesmo um ponto para cada um dos três fossos que seja real e esteja crescendo hoje, não planejado para algum dia.",
+            "Depois, leia o total pelo custo de troca, a conta que um concorrente faz o seu melhor cliente pagar para sair."
+          ],
+          "bullets": [
+            "**Dados proprietários.** Usar o seu produto cria dados que nenhum concorrente tem, e esses dados melhoram visivelmente o próximo resultado?",
+            "**Profundidade de fluxo de trabalho.** O seu produto é onde o trabalho de um time de fato acontece, guardando as integrações e os registros dos quais eles dependem, ou uma ferramenta que eles visitam e abandonam?",
+            "**Distribuição.** Você consegue alcançar e conquistar seus próximos cem clientes por um canal que um clone não pode simplesmente alugar?",
+            "**Zero ponto.** Você é um wrapper hoje. Tudo bem se você está no começo, desde que consiga nomear o único pilar que vai construir em seguida.",
+            "**Um ponto.** Você tem uma vantagem inicial virando fosso. Aprofunde-a antes que a camada do modelo transforme seu diferencial em commodity.",
+            "**Dois pontos.** A defensabilidade está se formando. Você passou da pergunta do wrapper e entrou no trabalho mais difícil de acumular o que já tem.",
+            "**Três pontos.** Você tem um fosso real. Um modelo melhor raramente vence sozinho contra dados, fluxo de trabalho e distribuição que um concorrente não consegue reproduzir."
+          ]
+        },
+        {
+          "id": "wrapper-today-does-not-mean-wrapper-forever",
+          "heading": "Wrapper hoje não significa wrapper para sempre",
+          "level": 2,
+          "paragraphs": [
+            "Quase toda empresa de software que definiu uma categoria parecia fina no começo. O que separou as vencedoras foi um plano deliberado de converter o uso inicial em dados, fluxo de trabalho e distribuição antes que os concorrentes alcançassem. Na nossa experiência cofundando empresas desde o dia zero, a maioria começa em zero ou um, um wrapper fino com uma ideia real por baixo. Esse não é o problema. Ficar parado é.",
+            "É também aqui que as escolhas mais precoces importam mais. Decidir qual fosso priorizar, instrumentar o produto para capturar dados proprietários desde a primeira semana, e escolher uma ponta de entrada que se aprofunde em um fluxo de trabalho são decisões arquiteturais baratas de fazer cedo e caras de refazer depois. Elas também são difíceis de fazer bem enquanto você ainda está encontrando clientes e se mantendo vivo. Um estúdio que constrói ao lado dos fundadores desde o dia zero, que é como a Avante cofunda empresas nativas de IA para o Brasil e a América Latina, existe para tomar essas decisões cedo, e não depois que a crítica de wrapper já custou uma rodada de investimento. Se você quer o framework completo e um exemplo prático, leia [se a sua startup de IA tem um fosso](/pt/library/does-my-ai-startup-have-a-moat), e se você está avaliando o próprio modelo, [se um venture studio é a escolha certa para a sua startup de IA](/pt/library/is-a-venture-studio-right-for-your-ai-startup) é a próxima pergunta a fazer."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Minha startup de IA é só um wrapper?",
+          "a": "Você é um wrapper se um concorrente consegue copiar sua interface, chamar o mesmo modelo de base e reproduzir seu produto, sem sobrar nada que ele não consiga igualar. Você já passou desse ponto se usar o seu produto constrói dados proprietários que se acumulam, vira o fluxo de trabalho em que um time passa o dia inteiro, ou alcança clientes por uma distribuição que um clone não consegue alugar. Chamar um modelo que não é seu não é o problema. Não ter nada por baixo da chamada é."
+        },
+        {
+          "q": "Minha startup é só um wrapper de GPT?",
+          "a": "Um wrapper de GPT é um caso específico da mesma pergunta, um produto cujo valor inteiro é um prompt e uma interface em torno de um modelo geral. É um ótimo lugar para começar e um péssimo lugar para ficar. O teste é se o produto acumula algo que o modelo não tem, como dados exclusivos, integração profunda de fluxo de trabalho, ou distribuição conquistada com esforço. Se acumula, você é uma empresa que por acaso usa GPT. Se não, você é um recurso que um provedor de modelo ou um concorrente mais rápido pode absorver."
+        },
+        {
+          "q": "Qual é a diferença entre um wrapper de IA e uma empresa defensável?",
+          "a": "Eles podem parecer iguais em uma demo, porque a diferença não está na interface. Toda a vantagem de um wrapper vive na camada do modelo, que fica cada vez mais barata e mais disponível. Uma empresa defensável construiu algo por baixo do modelo que um concorrente ainda não consegue copiar depois de chamar o mesmo modelo, normalmente dados proprietários que se acumulam, profundidade de fluxo de trabalho, ou distribuição. Defensabilidade é o que sobrevive quando o acesso ao modelo é universal."
+        },
+        {
+          "q": "Ser um wrapper de IA é sempre ruim?",
+          "a": "Não. Muitas empresas duráveis começaram como camadas finas sobre uma plataforma. Um wrapper só vira um negócio ruim quando nunca converte a tração inicial em um fosso e o modelo por baixo transforma sua única vantagem em commodity. O perigo é ficar parado, não começar fino. O movimento útil é nomear o único ativo que você está acumulando e organizar a empresa em torno de alimentá-lo."
+        },
+        {
+          "q": "Qual é o fosso mais forte para uma startup de IA no início?",
+          "a": "Para a maioria das empresas jovens é a profundidade de fluxo de trabalho, o que Jerry Chen, da Greylock, chama de sistema de inteligência. Tornar-se o lugar onde o trabalho de um time de fato acontece é mais difícil para um rival mais bem financiado copiar do que qualquer prompt ou escolha de modelo, e naturalmente acumula dados proprietários e custo de troca ao longo do tempo."
+        }
+      ]
+    }
   },
   {
     "slug": "lean-ai-build-stack-playbook",
@@ -15654,6 +16972,370 @@ const engineArticles: Article[] = [
         {
           "q": "¿Los venture studios rinden más que el capital de riesgo tradicional?",
           "a": "Los venture studios han superado históricamente al capital de riesgo tradicional, según la Global Startup Studio Network. El mecanismo es la concentración, menos apuestas y más profundidad en cada una, con operadores que construyen desde adentro. Es una característica del modelo de studio, no una promesa de resultado para ninguna empresa individual."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "venture-studio-vs-accelerator-vs-incubator",
+    "category": "insights",
+    "type": "Comparison",
+    "readTime": "8 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-08",
+    "isPublished": true,
+    "en": {
+      "title": "Venture Studio vs Accelerator vs Incubator (2026)",
+      "description": "Venture studio vs accelerator vs incubator: how each prices equity and involvement, with the real YC and Techstars terms and who should pick what.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Founders meet these three labels early, and the labels hide the one thing that matters. How much of your company each option takes, and how much it actually builds for you in return. An incubator, an accelerator, and a venture studio sit on a spectrum of involvement. The further you move along it, the more gets built for you and the more equity you give up.",
+            "This guide gives the real terms for each model and names who should pick what. Avante Ventures co-founds AI-native companies for Brazil and Latin America, so we work inside the studio model every day. We have also tried to be fair to the two paths we did not choose."
+          ]
+        },
+        {
+          "id": "the-three-models-at-a-glance",
+          "heading": "The three models at a glance",
+          "level": 2,
+          "paragraphs": [
+            "Put the three side by side and the trade jumps out. Each model takes more equity as it does more of the building. An incubator gives you room to grow an idea. An accelerator gives you a deadline, a check, and a network. A studio gives you a company. Price follows involvement."
+          ],
+          "table": {
+            "headers": [
+              "",
+              "Incubator",
+              "Accelerator",
+              "Venture studio"
+            ],
+            "rows": [
+              [
+                "Equity taken",
+                "Little or none",
+                "Small, around 7 percent",
+                "Largest, often around a third"
+              ],
+              [
+                "What you get",
+                "Space, services, mentorship, connections",
+                "Set check, fixed program, network, demo day",
+                "Idea, founding team, first capital, operators co-building"
+              ],
+              [
+                "Timeline",
+                "Open-ended, no fixed graduation",
+                "Fixed cohort, around three months",
+                "Company built from day one"
+              ],
+              [
+                "Best for",
+                "Idea-stage founders needing structure",
+                "Teams with an early product wanting momentum",
+                "Pre-team or pre-product founders wanting operators"
+              ],
+              [
+                "Involvement",
+                "Lowest",
+                "Medium",
+                "Highest"
+              ]
+            ],
+            "caption": "How the three early-stage paths compare across equity, support, timeline, and involvement."
+          }
+        },
+        {
+          "id": "what-each-model-actually-is",
+          "heading": "What each model actually is",
+          "level": 2,
+          "paragraphs": [
+            "Here is what each label means in practice, moving from the lightest touch to the heaviest."
+          ]
+        },
+        {
+          "id": "incubator-room-to-grow-an-early-idea",
+          "heading": "Incubator: room to grow an early idea",
+          "level": 3,
+          "paragraphs": [
+            "An incubator supports founders at the idea or pre-seed stage. It supplies workspace, shared services, mentorship, and introductions, usually on an open-ended timeline with no fixed graduation date. Many incubators are attached to universities, governments, or corporations, and a large share of them take little or no equity because their goal is ecosystem building rather than portfolio returns.",
+            "The trade is light-touch by design. You keep almost all of your equity and your independence. You also get almost none of the building done for you. An incubator fits a founder who has time, an early idea, and a need for structure and connections more than capital."
+          ]
+        },
+        {
+          "id": "accelerator-a-fixed-program-for-a-small-stake",
+          "heading": "Accelerator: a fixed program for a small stake",
+          "level": 3,
+          "paragraphs": [
+            "An accelerator takes a small, fixed slice of equity in exchange for a set investment, a cohort-based program of roughly three months, mentorship, and a demo day at the end. Y Combinator and Techstars are the canonical examples, and both publish standard terms that make the trade easy to read.",
+            "Y Combinator sets the template that the rest of the field echoes. It invests a fixed amount in every company it accepts, split between a small stake bought on a post-money SAFE and a larger uncapped SAFE that converts at the next priced round. Techstars runs the same shape at a smaller scale, with a standard deal of $20,000 for 6 percent of common stock plus a $100,000 convertible note the company can draw on.",
+            "The accelerator math is good when you need the network and the credibility stamp more than the cash. It gets expensive once you already have a team and traction, because you are paying a single-digit equity slice for a program you may have outgrown. The post-money SAFE that Y Combinator introduced in 2018 has become one of the most common instruments early US startups use to raise before a priced round, which is why accelerator terms are usually written as a SAFE rather than as a priced equity round."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Y Combinator's standard deal is $500,000 for every company it accepts. The first $125,000 buys 7 percent on a post-money SAFE, and the remaining $375,000 rides on an uncapped SAFE that converts at the next priced round.",
+            "attribution": "Y Combinator, standard deal terms (as of 2025)"
+          }
+        },
+        {
+          "id": "venture-studio-a-co-founder-that-builds-with-you",
+          "heading": "Venture studio: a co-founder that builds with you",
+          "level": 3,
+          "paragraphs": [
+            "A venture studio, sometimes called a startup studio or venture builder, does the most and therefore takes the most. It generates or pressure-tests the idea, supplies a founding team and build resources on day one, writes first capital, and puts operating partners inside the company rather than on a mentor roster. Industry surveys by the Global Startup Studio Network put the average studio stake at around a third of the company, the largest early stake of the three models.",
+            "That larger stake buys the one thing a solo domain expert cannot assemble alone. A working company, started the month you sign instead of the year you would have finished hiring. The cost is real, and so is the concentration question, since the same entity supplies the idea, the capital, and the operators."
+          ]
+        },
+        {
+          "id": "the-real-trade-involvement-priced-as-equity",
+          "heading": "The real trade: involvement priced as equity",
+          "level": 2,
+          "paragraphs": [
+            "Strip away the labels and all three models set the same dial. How much of the company you hand over at the start maps directly to how much of the work someone else does for you.",
+            "Read the difference as how much do I need built for me, not as cheap versus expensive. A studio stake looks large next to an accelerator's 7 percent, but the two are not selling the same thing. One sells a program. The other sells a company."
+          ],
+          "bullets": [
+            "Incubator. Little or no equity, and little or nothing built for you.",
+            "Accelerator. A single-digit stake for a check, a program, and a network.",
+            "Venture studio. The largest early stake, often around a third, for a company built around you."
+          ]
+        },
+        {
+          "id": "where-vc-fits",
+          "heading": "Where VC fits",
+          "level": 2,
+          "paragraphs": [
+            "Venture capital is a fourth path that sits alongside these three rather than inside them. A priced venture round typically costs 15 to 25 percent per round plus a board seat, and it leaves you owning the idea and the team you came in with. VC is fuel for a company that already exists. A studio, by contrast, helps the company exist in the first place. We break down that comparison in [venture studio vs accelerator vs VC](/en/library/studio-vs-accelerator-vs-vc)."
+          ]
+        },
+        {
+          "id": "which-one-should-you-pick",
+          "heading": "Which one should you pick",
+          "level": 2,
+          "paragraphs": [
+            "Match the path to the gap, not to the lowest dilution number. If you can already build and ship without help, a studio stake is overpriced for you, and if you cannot, an incubator's light touch will not close the gap. Buy what you are actually short on."
+          ],
+          "bullets": [
+            "Idea-stage founder who mainly needs structure, space, and connections. An incubator, so you keep your equity while you shape the idea.",
+            "Founder with a small team and an early product who wants a network and a deadline. An accelerator, where a small stake buys real momentum.",
+            "Domain expert with no team and no built product who wants operators building from day one. A venture studio, where you trade the most equity for the most build."
+          ]
+        },
+        {
+          "id": "where-avante-fits",
+          "heading": "Where Avante fits",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures is a venture studio that co-founds AI-native companies for Brazil and Latin America. The model fits the region for a structural reason. Services make up the majority of Brazilian output, software penetration is still low, and the cost of deploying AI infrastructure has fallen far enough that a lean team can put a working product in front of customers without waiting on a large first round.",
+            "In practice that means Avante starts a small number of ventures each year, supplies the founding build and first capital, and keeps operating partners engaged through the first revenue milestones rather than reviewing a deck once a quarter. The recurring pattern is a copilot that generates proprietary data, and that data then supports the next raise and the next build.",
+            "You can read why we believe studios win in this region in [why venture studios win in LATAM](/en/library/why-venture-studios-win-latam)."
+          ]
+        },
+        {
+          "id": "bottom-line",
+          "heading": "Bottom line",
+          "level": 2,
+          "paragraphs": [
+            "The three models are not ranked, they are priced. An incubator asks for little and builds little. An accelerator asks for a small stake and hands you a program and a network. A studio asks for the largest early stake and hands you a company. Choose by what you lack on the day you sign, and the equity math will follow the logic instead of fighting it."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is the difference between a venture studio, an accelerator, and an incubator?",
+          "a": "The difference is how much each one builds for you and how much equity it takes in return. An incubator offers space, mentorship, and connections for an early idea, usually for little or no equity. An accelerator puts a small cohort through a fixed program and takes a small stake, commonly around 7 percent. A venture studio co-founds the company with you, supplying the idea, the team, and first capital, and takes the largest early stake, often around a third."
+        },
+        {
+          "q": "How much equity does each model take?",
+          "a": "An incubator usually takes little or none, since many are run by universities or governments to build the local ecosystem. An accelerator takes a small stake for a set investment. Y Combinator, for example, takes 7 percent for its first $125,000. A venture studio takes the largest early stake, often around a third, because it co-founds the company instead of advising it."
+        },
+        {
+          "q": "Is an incubator or an accelerator better for an early-stage founder?",
+          "a": "It depends on what you lack. Choose an incubator if you have an early idea and mainly need structure, workspace, and connections while keeping your equity. Choose an accelerator if you already have a small team and an early product and want a check, a network, and a demo-day deadline to build momentum."
+        },
+        {
+          "q": "What are Y Combinator's and Techstars' standard deals?",
+          "a": "As of 2025, Y Combinator invests $500,000 in every company it accepts. The first $125,000 buys 7 percent on a post-money SAFE, and the remaining $375,000 rides on an uncapped SAFE that converts at the next priced round. Techstars' standard deal is $20,000 for 6 percent of common stock plus a $100,000 convertible note. Both are accelerator terms, not studio or VC terms."
+        },
+        {
+          "q": "When does a venture studio make more sense than an accelerator or an incubator?",
+          "a": "A venture studio makes sense when you are a domain expert without a team or a built product and you want operators building alongside you from day one. You give up the most equity of the three models, but you get the most built for you. If you can already build and ship on your own, a studio stake is overpriced and an accelerator or incubator fits better."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Venture Studio vs Aceleradora vs Incubadora (2026)",
+      "description": "Venture studio vs aceleradora vs incubadora: como cada um precifica equity e envolvimento, com os termos reais da YC e da Techstars e quem deve escolher o que.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Fundadores encontram esses três rótulos cedo, e os rótulos escondem a única coisa que importa. Quanto da sua empresa cada opção leva, e quanto ela de fato constrói para você em troca. Uma incubadora, uma aceleradora e um venture studio ficam em um espectro de envolvimento. Quanto mais você avança nele, mais é construído para você e mais equity você entrega.",
+            "Este guia traz os termos reais de cada modelo e diz quem deve escolher o que. A Avante Ventures cofunda empresas AI-native para o Brasil e a América Latina, então trabalhamos dentro do modelo de studio todos os dias. Também tentamos ser justos com os dois caminhos que não escolhemos."
+          ]
+        },
+        {
+          "id": "os-tres-modelos-lado-a-lado",
+          "heading": "Os três modelos lado a lado",
+          "level": 2,
+          "paragraphs": [
+            "Coloque os três lado a lado e a troca salta aos olhos. Cada modelo fica com mais equity à medida que faz mais da construção. Uma incubadora te dá espaço para amadurecer uma ideia. Uma aceleradora te dá um prazo, um cheque e uma rede. Um studio te dá uma empresa. O preço acompanha o envolvimento."
+          ],
+          "table": {
+            "headers": [
+              "",
+              "Incubadora",
+              "Aceleradora",
+              "Venture studio"
+            ],
+            "rows": [
+              [
+                "Equity que leva",
+                "Pouco ou nada",
+                "Pequeno, cerca de 7 por cento",
+                "O maior, muitas vezes em torno de um terço"
+              ],
+              [
+                "O que você recebe",
+                "Espaço, serviços, mentoria, conexões",
+                "Cheque definido, programa fixo, rede, demo day",
+                "Ideia, time fundador, primeiro capital, operadores cofundando"
+              ],
+              [
+                "Prazo",
+                "Aberto, sem formatura fixa",
+                "Turma fixa, cerca de três meses",
+                "Empresa construída desde o primeiro dia"
+              ],
+              [
+                "Melhor para",
+                "Fundadores em estágio de ideia que precisam de estrutura",
+                "Times com produto inicial que querem tração",
+                "Fundadores sem time ou sem produto que querem operadores"
+              ],
+              [
+                "Envolvimento",
+                "O menor",
+                "Médio",
+                "O maior"
+              ]
+            ],
+            "caption": "Como os três caminhos de estágio inicial se comparam em equity, apoio, prazo e envolvimento."
+          }
+        },
+        {
+          "id": "o-que-cada-modelo-realmente-e",
+          "heading": "O que cada modelo realmente é",
+          "level": 2,
+          "paragraphs": [
+            "Aqui está o que cada rótulo significa na prática, do toque mais leve ao mais pesado."
+          ]
+        },
+        {
+          "id": "incubadora-espaco-para-amadurecer-uma-ideia-inicial",
+          "heading": "Incubadora: espaço para amadurecer uma ideia inicial",
+          "level": 3,
+          "paragraphs": [
+            "Uma incubadora apoia fundadores no estágio de ideia ou pré-seed. Ela fornece espaço de trabalho, serviços compartilhados, mentoria e apresentações, geralmente em um prazo aberto, sem data fixa de formatura. Muitas incubadoras estão ligadas a universidades, governos ou grandes empresas, e boa parte delas leva pouco ou nenhum equity, porque o objetivo é construir ecossistema, e não gerar retorno de portfólio.",
+            "A troca é de baixa intervenção por design. Você mantém quase todo o seu equity e a sua independência. Você também recebe quase nada de construção pronta. Uma incubadora serve ao fundador que tem tempo, uma ideia inicial e uma necessidade de estrutura e conexões mais do que de capital."
+          ]
+        },
+        {
+          "id": "accelerator-a-fixed-program-for-a-small-stake",
+          "heading": "Aceleradora: um programa fixo por uma pequena fatia",
+          "level": 3,
+          "paragraphs": [
+            "Uma aceleradora leva uma fatia pequena e fixa de equity em troca de um investimento definido, um programa em formato de turma de cerca de três meses, mentoria e um demo day no final. A Y Combinator e a Techstars são os exemplos canônicos, e ambas publicam termos padrão que deixam a troca fácil de ler.",
+            "A Y Combinator define o modelo que o resto do setor repete. Ela investe um valor fixo em cada empresa que aceita, dividido entre uma pequena participação comprada em um SAFE pós-money e um SAFE maior sem cap que converte na próxima rodada precificada. A Techstars roda o mesmo formato em uma escala menor, com um acordo padrão de US$ 20.000 por 6 por cento em ações ordinárias, mais uma nota conversível de US$ 100.000 que a empresa pode sacar.",
+            "A conta da aceleradora fecha bem quando você precisa mais da rede e do selo de credibilidade do que do dinheiro. Ela fica cara quando você já tem time e tração, porque você está pagando uma fatia de um dígito de equity por um programa que talvez já tenha superado. O SAFE pós-money que a Y Combinator introduziu em 2018 se tornou um dos instrumentos mais comuns que startups americanas em estágio inicial usam para captar antes de uma rodada precificada, e é por isso que os termos de aceleradora costumam ser escritos como um SAFE, e não como uma rodada de equity precificada."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O acordo padrão da Y Combinator é de US$ 500.000 para cada empresa que ela aceita. Os primeiros US$ 125.000 compram 7 por cento em um SAFE pós-money, e os US$ 375.000 restantes seguem em um SAFE sem cap que converte na próxima rodada precificada.",
+            "attribution": "Y Combinator, standard deal terms (as of 2025)"
+          }
+        },
+        {
+          "id": "venture-studio-a-co-founder-that-builds-with-you",
+          "heading": "Venture studio: um cofundador que constrói com você",
+          "level": 3,
+          "paragraphs": [
+            "Um venture studio, às vezes chamado de startup studio ou venture builder, faz o máximo e, por isso, leva o máximo. Ele gera ou põe à prova a ideia, fornece um time fundador e recursos de construção desde o primeiro dia, aporta o primeiro capital e coloca sócios operadores dentro da empresa, e não em uma lista de mentores. Levantamentos do setor feitos pela Global Startup Studio Network apontam que a participação média de um studio fica em torno de um terço da empresa, a maior participação inicial dos três modelos.",
+            "Essa participação maior compra a única coisa que um especialista de domínio sozinho não consegue montar por conta própria. Uma empresa funcionando, iniciada no mês em que você assina, e não no ano em que você teria terminado de contratar. O custo é real, e a questão da concentração também, já que a mesma entidade fornece a ideia, o capital e os operadores."
+          ]
+        },
+        {
+          "id": "the-real-trade-involvement-priced-as-equity",
+          "heading": "A troca real: envolvimento precificado como equity",
+          "level": 2,
+          "paragraphs": [
+            "Tire os rótulos e os três modelos ajustam o mesmo botão. O quanto da empresa você entrega no início mapeia diretamente o quanto do trabalho outra pessoa faz por você.",
+            "Leia a diferença como o quanto eu preciso que construam para mim, e não como barato contra caro. A participação de um studio parece grande ao lado dos 7 por cento de uma aceleradora, mas as duas não estão vendendo a mesma coisa. Uma vende um programa. A outra vende uma empresa."
+          ],
+          "bullets": [
+            "Incubadora. Pouco ou nenhum equity, e pouco ou nada construído para você.",
+            "Aceleradora. Uma participação de um dígito por um cheque, um programa e uma rede.",
+            "Venture studio. A maior participação inicial, muitas vezes em torno de um terço, por uma empresa construída ao seu redor."
+          ]
+        },
+        {
+          "id": "where-vc-fits",
+          "heading": "Onde o VC se encaixa",
+          "level": 2,
+          "paragraphs": [
+            "O venture capital é um quarto caminho que fica ao lado destes três, e não dentro deles. Uma rodada de venture precificada costuma custar de 15 a 25 por cento por rodada, mais um assento no conselho, e deixa você dono da ideia e do time com que entrou. O VC é combustível para uma empresa que já existe. Um studio, por outro lado, ajuda a empresa a existir em primeiro lugar. A gente detalha essa comparação em [venture studio vs aceleradora vs VC](/pt/library/studio-vs-accelerator-vs-vc)."
+          ]
+        },
+        {
+          "id": "which-one-should-you-pick",
+          "heading": "Qual deles você deve escolher",
+          "level": 2,
+          "paragraphs": [
+            "Combine o caminho com a lacuna, e não com o menor número de diluição. Se você já consegue construir e lançar sem ajuda, a participação de um studio é cara demais para você, e se você não consegue, o toque leve de uma incubadora não vai fechar a lacuna. Compre aquilo de que você realmente está precisando."
+          ],
+          "bullets": [
+            "Fundador em estágio de ideia que precisa sobretudo de estrutura, espaço e conexões. Uma incubadora, para você manter seu equity enquanto molda a ideia.",
+            "Fundador com um time pequeno e um produto inicial que quer uma rede e um prazo. Uma aceleradora, onde uma pequena participação compra tração de verdade.",
+            "Especialista de domínio sem time e sem produto pronto que quer operadores construindo desde o primeiro dia. Um venture studio, onde você troca o máximo de equity pelo máximo de construção."
+          ]
+        },
+        {
+          "id": "where-avante-fits",
+          "heading": "Onde a Avante se encaixa",
+          "level": 2,
+          "paragraphs": [
+            "A Avante Ventures é um venture studio que cofunda empresas AI-native para o Brasil e a América Latina. O modelo se encaixa na região por uma razão estrutural. Os serviços formam a maior parte da produção brasileira, a penetração de software ainda é baixa, e o custo de implantar infraestrutura de IA caiu o suficiente para que um time enxuto coloque um produto funcionando na frente de clientes sem esperar por uma primeira rodada grande.",
+            "Na prática, isso significa que a Avante começa um pequeno número de ventures por ano, fornece a construção inicial e o primeiro capital, e mantém os sócios operadores engajados ao longo dos primeiros marcos de receita, em vez de revisar um deck uma vez por trimestre. O padrão recorrente é um copilot que gera dados proprietários, e esses dados então sustentam a próxima captação e a próxima construção.",
+            "Você pode ler por que acreditamos que os studios vencem nesta região em [por que os venture studios vencem na América Latina](/pt/library/why-venture-studios-win-latam)."
+          ]
+        },
+        {
+          "id": "bottom-line",
+          "heading": "Resumo final",
+          "level": 2,
+          "paragraphs": [
+            "Os três modelos não são ranqueados, eles são precificados. Uma incubadora pede pouco e constrói pouco. Uma aceleradora pede uma pequena participação e te entrega um programa e uma rede. Um studio pede a maior participação inicial e te entrega uma empresa. Escolha pelo que falta a você no dia em que assina, e a conta do equity vai seguir a lógica em vez de brigar com ela."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Qual é a diferença entre um venture studio, uma aceleradora e uma incubadora?",
+          "a": "A diferença é o quanto cada um constrói para você e quanto de equity leva em troca. Uma incubadora oferece espaço, mentoria e conexões para uma ideia inicial, geralmente por pouco ou nenhum equity. Uma aceleradora passa uma pequena turma por um programa fixo e leva uma participação pequena, comumente em torno de 7 por cento. Um venture studio cofunda a empresa com você, fornecendo a ideia, o time e o primeiro capital, e leva a maior participação inicial, muitas vezes em torno de um terço."
+        },
+        {
+          "q": "Quanto de equity cada modelo leva?",
+          "a": "Uma incubadora normalmente leva pouco ou nada, já que muitas são mantidas por universidades ou governos para construir o ecossistema local. Uma aceleradora leva uma pequena participação por um investimento definido. A Y Combinator, por exemplo, leva 7 por cento pelos seus primeiros US$ 125.000. Um venture studio leva a maior participação inicial, muitas vezes em torno de um terço, porque cofunda a empresa em vez de apenas aconselhá-la."
+        },
+        {
+          "q": "Uma incubadora ou uma aceleradora é melhor para um fundador em estágio inicial?",
+          "a": "Depende do que falta a você. Escolha uma incubadora se você tem uma ideia inicial e precisa sobretudo de estrutura, espaço de trabalho e conexões, mantendo o seu equity. Escolha uma aceleradora se você já tem um time pequeno e um produto inicial e quer um cheque, uma rede e o prazo de um demo day para ganhar tração."
+        },
+        {
+          "q": "Quais são os acordos padrão da Y Combinator e da Techstars?",
+          "a": "Em 2025, a Y Combinator investe US$ 500.000 em cada empresa que aceita. Os primeiros US$ 125.000 compram 7 por cento em um SAFE pós-money, e os US$ 375.000 restantes seguem em um SAFE sem cap que converte na próxima rodada precificada. O acordo padrão da Techstars é de US$ 20.000 por 6 por cento em ações ordinárias, mais uma nota conversível de US$ 100.000. Ambos são termos de aceleradora, não de studio nem de VC."
+        },
+        {
+          "q": "Quando um venture studio faz mais sentido do que uma aceleradora ou uma incubadora?",
+          "a": "Um venture studio faz sentido quando você é um especialista de domínio sem time ou sem produto pronto e quer operadores construindo ao seu lado desde o primeiro dia. Você abre mão do máximo de equity dos três modelos, mas recebe o máximo de construção pronta. Se você já consegue construir e lançar por conta própria, a participação de um studio é cara demais, e uma aceleradora ou incubadora se encaixa melhor."
         }
       ]
     }
