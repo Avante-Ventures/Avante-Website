@@ -1767,7 +1767,7 @@ const articleSiggaCaseStudy: Article = {
 // ─────────────────────────────────────────────────────────────────────
 
 // === CONTENT-ENGINE:START (managed by content-engine/merge.py — do not edit by hand) ===
-// 55 article(s) generated from content-engine/outputs. Edit the engine, not this block.
+// 62 article(s) generated from content-engine/outputs. Edit the engine, not this block.
 const engineArticles: Article[] = [
   {
     "slug": "accelerator-vs-vc-founder-guide",
@@ -4222,6 +4222,382 @@ const engineArticles: Article[] = [
             "Aquí está la parte que refleja el LLMflation. Resolver la plomería de la empresa una vez enruta cerca de $300K-500K de capital efectivo por venture hacia producto y tracción en vez de overhead. Haga la cosa cara una vez, de forma central, y deje que cada venture lance enjuto. La misma lógica que tira el costo de inferencia 10x al año, aplicada a la empresa misma.",
             "El mercado respalda el foco. Las startups brasileñas levantaron $2,1B en 2025, un alza de 10,5% sobre los $1,9B de 2024, según [Crunchbase](https://news.crunchbase.com/venture/vcs-bullish-latam-startup-funding-rebounds-2025/). Los servicios representan cerca del 70% del PIB brasileño, con baja penetración de software. La ventaja estructural son operadores de dominio con más de 10 años de cicatrices del mercado brasileño, sumados a un playbook de Silicon Valley y capital de primer cheque, montados el día uno. Puede leer la tesis completa en [/why-avante](/why-avante). La inferencia barata es el viento a favor. Nunca fue la empresa."
           ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "ai-startup-business-models-2026",
+    "category": "ai",
+    "type": "Explainer",
+    "readTime": "8 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-09",
+    "isPublished": true,
+    "en": {
+      "title": "AI Startup Business Models in 2026: A Field Guide to the Eight That Matter",
+      "description": "The eight AI startup business models of 2026, from per-seat to per-agent to outcome pricing. How each makes money, where it breaks, and which to pick.",
+      "sections": [
+        {
+          "paragraphs": [
+            "For two decades, business software had one default price. Count the humans who log in, charge per seat per month, and grow revenue by adding names to the account. AI is taking that default apart in public. When a single agent resolves the support ticket, writes the pull request, or reconciles the invoice, the seat you were billing for is the seat your product just removed. Charging per user to sell software that eliminates users is a contradiction buyers work out fast.",
+            "So the pricing question has moved from how many people use this to how much work it does. That shift, from billing for access to billing for output, runs through every serious AI pricing debate in 2026. The eight models below are the recognizable shapes that shift has produced. Each answers the same question a different way. Each has a place where it fits and a place where it quietly fails.",
+            "Read this as a field guide, not a ranking. It is a menu of trade-offs. Pick the model that matches how your product actually creates value."
+          ]
+        },
+        {
+          "id": "from-billing-for-access-to-billing-for-work",
+          "heading": "From billing for access to billing for work",
+          "level": 2,
+          "paragraphs": [
+            "The whole taxonomy sits on one spectrum. At one end you bill for access, a fixed fee for the right to use the software no matter how much anyone touches it. At the other end you bill for work, a price attached to each unit of output the product produces or to the outcome it delivers. Every model here is a point on that line.",
+            "The line matters more in 2026 than it did in 2020 because of cost structure. A traditional SaaS product had near-zero marginal cost per user, so per-seat pricing printed margin. An AI product pays real money for every inference it runs. The cost of that inference has fallen by roughly 1,000x in three years, per [a16z](https://a16z.com/llmflation-llm-inference-cost/), but it never reaches zero. When each action carries a variable cost, a price that ignores usage either bleeds margin on heavy users or overcharges light ones. Metered and outcome models exist to line up what you charge with what you spend and what you deliver."
+          ]
+        },
+        {
+          "id": "the-eight-ai-startup-business-models-of-2026",
+          "heading": "The eight AI startup business models of 2026",
+          "level": 2,
+          "paragraphs": [
+            "Here are the eight shapes, ordered from pure access to pure outcome."
+          ],
+          "bullets": [
+            "**Per-seat subscription.** The legacy default. A fixed monthly fee for each human user. It is still the cleanest model to sell and forecast, and still right when a person is in the loop on every action. It breaks the moment your product's whole promise is to remove that person.",
+            "**Usage-based consumption.** Bill per unit of work performed, such as tokens, API calls, messages, or minutes. Twilio became a public company by metering per message and per minute, and the foundation-model APIs from OpenAI and Anthropic run on the same logic. It aligns cost with revenue, at the price of an unpredictable bill for the buyer.",
+            "**Hybrid platform plus usage.** A base subscription for access, plus metered charges above an included allotment. Snowflake and most modern infrastructure companies price this way. It gives the vendor a predictable floor and the buyer a familiar entry point, which is why it has become the default for AI infrastructure.",
+            "**Per-agent, or digital-worker, pricing.** Charge for an AI worker the way you once charged for a human seat. The pricing is still settling in public. At its 2024 launch, Salesforce priced Agentforce at roughly $2 per conversation. By 2025 it had shifted to consumption-based Flex Credits at roughly $0.10 per action, a move toward billing for the work instead of the worker. A digital worker priced like a headcount but metered like a utility is still hunting for its unit.",
+            "**Outcome-based pricing.** Charge only when the product delivers the result. Intercom prices its Fin AI agent at $0.99 per resolution, so the buyer pays when a ticket is actually closed and nothing when it is not. This is the purest form of billing for work, and the hardest to build, because you must define, measure, and stand behind the outcome.",
+            "**Marketplace take-rate.** Sit between two sides of a transaction and take a percentage of the volume the product enables. It scales with the customer's success and needs no seat count at all. It only works when you genuinely own the transaction rather than merely observe it.",
+            "**Vertical full-stack, or AI-as-a-service.** Own an entire workflow in one industry and bill for the delivered result, often blending software with a thin layer of service. This is the services-to-product path, and in a services-heavy economy it is frequently the fastest route to revenue. The risk is staying a service business that never productizes.",
+            "**Open-core and open-weights.** Give the software or the model away, then charge for hosting, support, security, and enterprise features. It buys distribution and developer trust cheaply. It demands a disciplined line between free and paid, or the business never forms."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Intercom prices its Fin AI agent at $0.99 per resolution, charging only when the agent actually closes a customer's support issue.",
+            "attribution": "Intercom"
+          }
+        },
+        {
+          "id": "which-model-fits-your-product",
+          "heading": "Which model fits your product",
+          "level": 2,
+          "paragraphs": [
+            "Three questions settle most of the decision.",
+            "First, where is the human. If a person acts on every output, per-seat still fits. If the product acts on its own, you are pushed toward usage, per-agent, or outcome pricing.",
+            "Second, can you define the outcome. Outcome pricing is the strongest story a buyer will ever hear, because it moves the risk onto you. But if you cannot measure the result cleanly, or cannot survive being paid only when it lands, it will sink you. Many teams start metered and earn the right to price on outcomes once their reliability is proven.",
+            "Third, what does each action cost you to serve. Because inference is a real variable cost, your gross margin lives in the gap between what an action earns and what it costs. That gap is why most AI companies are drifting off flat per-seat plans toward some blend of platform fee and metered work.",
+            "These are not eight sealed boxes. The strongest 2026 pricing tends to layer them. A platform fee for access, metered usage above a line, and an outcome tier for buyers who want to pay purely for results. Treat the taxonomy as building blocks, not a single choice."
+          ]
+        },
+        {
+          "id": "how-avante-builds-around-the-model",
+          "heading": "How Avante builds around the model",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures is a venture studio building [AI-native companies](/en/library/ai-native-without-series-a) in Brazil and Latin America. Pricing is not a launch-week afterthought in that model. It is a product decision made on day one, because the business model shapes what you instrument, what data you keep, and how you prove value to the first customer.",
+            "The through-line across the portfolio is the [copilot to data to fund flywheel](/en/library/copilot-to-data-to-fund-flywheel). Build a copilot that does real work inside a workflow, price it for the work it does, and let the proprietary data that work generates become the moat. A per-resolution or per-action model is not only a way to bill. It is a way to instrument the product so every unit of value is measured, which is exactly the signal a studio needs to know a venture is working. Venture studios have historically outperformed traditional venture capital, and part of the reason is this discipline of tying price to delivered value from the first line of code. You can read the full argument at [why Avante builds this way](/en/why-avante).",
+            "The market rewards the focus. Services account for roughly 70% of Brazilian GDP, with low software penetration, which gives a vertical full-stack model that bills for a delivered result unusual room to run. The model you choose is not paperwork. It is the shape of the company."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What are the main AI startup business models in 2026?",
+          "a": "They all sit on one spectrum, from billing for access to billing for work. At the access end is the familiar per-seat subscription. As you move toward billing for work you get usage-based metering, per-agent or digital-worker pricing, and outcome-based pricing where the buyer pays only for a delivered result, plus marketplace, vertical full-stack, and open-core variants. The real 2026 decision is which point on that spectrum fits how your product creates value, and the strongest pricing usually blends two or three rather than picking one."
+        },
+        {
+          "q": "Why is per-seat pricing breaking down for AI products?",
+          "a": "Because AI products are built to do the work a seated user used to do. If one agent resolves the tickets a five-person team handled, charging per human seat prices the product for the headcount it removes. On top of that, every inference carries a real variable cost, so a flat per-seat fee bleeds margin on heavy users and overcharges light ones. That is why pricing is drifting toward usage and outcome models that track what the product actually does."
+        },
+        {
+          "q": "What is outcome-based pricing for AI, and does anyone actually use it?",
+          "a": "Outcome-based pricing charges only when the product delivers the result, not for access or usage. Intercom is the clearest public example. It prices its Fin AI agent at $0.99 per resolution, so a customer pays when a support issue is actually closed and nothing when it is not. It is the strongest pitch a buyer can hear because it shifts risk onto the vendor, and the hardest to run, because you have to define, measure, and stand behind the outcome."
+        },
+        {
+          "q": "How is Salesforce Agentforce priced?",
+          "a": "It has changed as the category matured. At its 2024 launch, Salesforce priced Agentforce at roughly $2 per conversation. By 2025 it had moved to consumption-based Flex Credits at roughly $0.10 per action, billing for the work performed rather than a flat per-agent fee. The shift is a useful signal for the whole market, showing per-agent pricing settling toward metered, work-based units."
+        },
+        {
+          "q": "Which business model should an AI startup choose?",
+          "a": "Start with three questions. Where is the human, since a person acting on every output still supports per-seat, while an autonomous product pushes toward usage or outcome pricing. Can you define and measure the outcome cleanly, since outcome pricing only works if you can. And what does each action cost you to serve, since inference is a real cost and your margin lives in the gap between what an action earns and what it costs. Many teams start metered and earn the right to price on outcomes once reliability is proven."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Modelos de Negócio de Startups de IA em 2026: Um Guia de Campo para os Oito Que Importam",
+      "description": "Os oito modelos de negócio de startups de IA em 2026, do preço por assento ao preço por agente e por resultado. Como cada um ganha dinheiro, onde falha e qual escolher.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Por duas décadas, o software corporativo teve um único preço padrão. Conte os humanos que fazem login, cobre por assento por mês e cresça a receita adicionando nomes à conta. A IA está desmontando esse padrão em público. Quando um único agente resolve o chamado de suporte, escreve o pull request ou concilia a fatura, o assento que você cobrava é o assento que o seu produto acabou de eliminar. Cobrar por usuário para vender um software que elimina usuários é uma contradição que os compradores percebem rápido.",
+            "Então a pergunta sobre preço deixou de ser quantas pessoas usam isto para quanto trabalho isto faz. Essa mudança, da cobrança pelo acesso à cobrança pela produção, atravessa todo debate sério sobre precificação de IA em 2026. Os oito modelos abaixo são os formatos reconhecíveis que essa mudança produziu. Cada um responde à mesma pergunta de um jeito diferente. Cada um tem um lugar onde se encaixa e um lugar onde falha em silêncio.",
+            "Leia isto como um guia de campo, não como um ranking. É um cardápio de trade-offs. Escolha o modelo que corresponde a como o seu produto realmente cria valor."
+          ]
+        },
+        {
+          "id": "da-cobranca-pelo-acesso-a-cobranca-pelo-trabalho",
+          "heading": "Da cobrança pelo acesso à cobrança pelo trabalho",
+          "level": 2,
+          "paragraphs": [
+            "Toda a taxonomia se apoia em um único espectro. Em uma ponta você cobra pelo acesso, uma taxa fixa pelo direito de usar o software não importa o quanto alguém o utilize. Na outra ponta você cobra pelo trabalho, um preço atrelado a cada unidade de produção que o produto gera ou ao resultado que ele entrega. Todo modelo aqui é um ponto nessa linha.",
+            "A linha importa mais em 2026 do que importava em 2020 por causa da estrutura de custos. Um produto SaaS tradicional tinha custo marginal quase zero por usuário, então o preço por assento imprimia margem. Um produto de IA paga dinheiro de verdade por cada inferência que executa. O custo dessa inferência caiu cerca de 1.000x em três anos, segundo a [a16z](https://a16z.com/llmflation-llm-inference-cost/), mas nunca chega a zero. Quando cada ação carrega um custo variável, um preço que ignora o uso ou sangra margem nos usuários pesados ou cobra demais dos leves. Modelos medidos e por resultado existem para alinhar o que você cobra com o que você gasta e o que você entrega."
+          ]
+        },
+        {
+          "id": "os-oito-modelos-de-negocio-de-startups-de-ia-em-2026",
+          "heading": "Os oito modelos de negócio de startups de IA em 2026",
+          "level": 2,
+          "paragraphs": [
+            "Aqui estão os oito formatos, ordenados do acesso puro ao resultado puro."
+          ],
+          "bullets": [
+            "**Assinatura por assento.** O padrão herdado. Uma taxa mensal fixa para cada usuário humano. Ainda é o modelo mais limpo de vender e prever, e ainda é o certo quando uma pessoa está no circuito de cada ação. Ele quebra no momento em que toda a promessa do seu produto é remover essa pessoa.",
+            "**Consumo por uso.** Cobre por unidade de trabalho realizado, como tokens, chamadas de API, mensagens ou minutos. A Twilio virou uma empresa de capital aberto medindo por mensagem e por minuto, e as APIs de modelos de fundação da OpenAI e da Anthropic funcionam com a mesma lógica. Alinha custo com receita, ao preço de uma conta imprevisível para o comprador.",
+            "**Plataforma híbrida mais uso.** Uma assinatura base pelo acesso, mais cobranças medidas acima de uma cota incluída. A Snowflake e a maioria das empresas modernas de infraestrutura precificam assim. Dá ao fornecedor um piso previsível e ao comprador uma porta de entrada familiar, e é por isso que se tornou o padrão para infraestrutura de IA.",
+            "**Preço por agente, ou trabalhador digital.** Cobre por um trabalhador de IA do jeito que você já cobrou por um assento humano. A precificação ainda está se acomodando em público. No lançamento em 2024, a Salesforce precificou o Agentforce em cerca de US$ 2 por conversa. Até 2025 já havia migrado para os Flex Credits baseados em consumo, a cerca de US$ 0,10 por ação, um movimento em direção a cobrar pelo trabalho em vez de pelo trabalhador. Um trabalhador digital precificado como um headcount, mas medido como uma utilidade, ainda está caçando a sua unidade.",
+            "**Preço por resultado.** Cobre apenas quando o produto entrega o resultado. A Intercom precifica seu agente de IA Fin em US$ 0,99 por resolução, então o comprador paga quando um chamado é de fato encerrado e nada quando não é. Esta é a forma mais pura de cobrar pelo trabalho, e a mais difícil de construir, porque você precisa definir, medir e responder pelo resultado.",
+            "**Take-rate de marketplace.** Fique entre os dois lados de uma transação e leve um percentual do volume que o produto viabiliza. Escala com o sucesso do cliente e não precisa de contagem de assentos nenhuma. Só funciona quando você de fato é dono da transação, em vez de apenas observá-la.",
+            "**Full-stack vertical, ou IA como serviço.** Seja dono de um fluxo de trabalho inteiro em um setor e cobre pelo resultado entregue, muitas vezes misturando software com uma camada fina de serviço. Este é o caminho de serviço para produto, e em uma economia intensiva em serviços é com frequência a rota mais rápida para a receita. O risco é continuar sendo um negócio de serviço que nunca se produtiza.",
+            "**Open-core e open-weights.** Dê o software ou o modelo de graça e depois cobre por hospedagem, suporte, segurança e recursos corporativos. Compra distribuição e a confiança dos desenvolvedores de forma barata. Exige uma linha disciplinada entre o gratuito e o pago, ou o negócio nunca se forma."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "A Intercom precifica seu agente de IA Fin em US$ 0,99 por resolução, cobrando apenas quando o agente de fato encerra o chamado de suporte de um cliente.",
+            "attribution": "Intercom"
+          }
+        },
+        {
+          "id": "qual-modelo-se-encaixa-no-seu-produto",
+          "heading": "Qual modelo se encaixa no seu produto",
+          "level": 2,
+          "paragraphs": [
+            "Três perguntas resolvem a maior parte da decisão.",
+            "Primeiro, onde está o humano. Se uma pessoa age sobre cada saída, o preço por assento ainda serve. Se o produto age por conta própria, você é empurrado para preço por uso, por agente ou por resultado.",
+            "Segundo, você consegue definir o resultado. O preço por resultado é a história mais forte que um comprador jamais vai ouvir, porque transfere o risco para você. Mas se você não consegue medir o resultado com clareza, ou não consegue sobreviver sendo pago só quando ele acontece, isso vai te afundar. Muitas equipes começam medindo o uso e conquistam o direito de precificar por resultado quando a sua confiabilidade está comprovada.",
+            "Terceiro, quanto cada ação custa para você entregar. Como a inferência é um custo variável real, a sua margem bruta vive na diferença entre o que uma ação rende e o que ela custa. Essa diferença é o motivo pelo qual a maioria das empresas de IA está se afastando dos planos fixos por assento em direção a alguma combinação de taxa de plataforma e trabalho medido.",
+            "Estas não são oito caixas lacradas. A precificação mais forte de 2026 tende a combiná-las em camadas. Uma taxa de plataforma pelo acesso, uso medido acima de uma linha e uma faixa por resultado para compradores que querem pagar puramente por resultados. Trate a taxonomia como blocos de construção, não como uma escolha única."
+          ]
+        },
+        {
+          "id": "como-a-avante-constroi-em-torno-do-modelo",
+          "heading": "Como a Avante constrói em torno do modelo",
+          "level": 2,
+          "paragraphs": [
+            "A Avante Ventures é um venture studio que constrói [empresas nativas de IA](/pt/library/ai-native-without-series-a) no Brasil e na América Latina. Preço não é uma reflexão tardia da semana de lançamento nesse modelo. É uma decisão de produto tomada no primeiro dia, porque o modelo de negócio molda o que você instrumenta, quais dados você guarda e como você prova valor para o primeiro cliente.",
+            "O fio condutor de todo o portfólio é o [flywheel de copiloto para dados para fundo](/pt/library/copilot-to-data-to-fund-flywheel). Construa um copiloto que faz trabalho real dentro de um fluxo de trabalho, precifique-o pelo trabalho que ele faz e deixe os dados proprietários que esse trabalho gera se tornarem o moat. Um modelo por resolução ou por ação não é apenas uma forma de cobrar. É uma forma de instrumentar o produto para que cada unidade de valor seja medida, que é exatamente o sinal de que um studio precisa para saber que uma empresa está funcionando. Os venture studios historicamente superaram o capital de risco tradicional, e parte da razão é essa disciplina de atrelar o preço ao valor entregue desde a primeira linha de código. Você pode ler o argumento completo em [por que a Avante constrói assim](/pt/why-avante).",
+            "O mercado recompensa o foco. Os serviços representam cerca de 70% do PIB brasileiro, com baixa penetração de software, o que dá a um modelo full-stack vertical que cobra por um resultado entregue um espaço incomum para crescer. O modelo que você escolhe não é papelada. É o formato da empresa."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Quais são os principais modelos de negócio de startups de IA em 2026?",
+          "a": "Todos se apoiam em um único espectro, da cobrança pelo acesso à cobrança pelo trabalho. Na ponta do acesso está a familiar assinatura por assento. À medida que você avança para a cobrança pelo trabalho, surgem a medição por uso, o preço por agente ou trabalhador digital e o preço por resultado, em que o comprador paga apenas por um resultado entregue, além das variantes de marketplace, full-stack vertical e open-core. A verdadeira decisão de 2026 é qual ponto desse espectro se encaixa em como o seu produto cria valor, e a precificação mais forte costuma combinar dois ou três em vez de escolher um só."
+        },
+        {
+          "q": "Por que o preço por assento está deixando de funcionar para produtos de IA?",
+          "a": "Porque os produtos de IA são feitos para fazer o trabalho que um usuário com assento costumava fazer. Se um agente resolve os chamados que uma equipe de cinco pessoas atendia, cobrar por assento humano precifica o produto pelo headcount que ele remove. Além disso, cada inferência carrega um custo variável real, então uma taxa fixa por assento sangra margem nos usuários pesados e cobra demais dos leves. É por isso que a precificação está migrando para modelos de uso e de resultado que acompanham o que o produto de fato faz."
+        },
+        {
+          "q": "O que é o preço por resultado para IA, e alguém realmente usa isso?",
+          "a": "O preço por resultado cobra apenas quando o produto entrega o resultado, não pelo acesso ou pelo uso. A Intercom é o exemplo público mais claro. Ela precifica seu agente de IA Fin em US$ 0,99 por resolução, então um cliente paga quando um chamado de suporte é de fato encerrado e nada quando não é. É o discurso mais forte que um comprador pode ouvir, porque transfere o risco para o fornecedor, e o mais difícil de operar, porque você precisa definir, medir e responder pelo resultado."
+        },
+        {
+          "q": "Como o Salesforce Agentforce é precificado?",
+          "a": "Isso mudou conforme a categoria amadureceu. No lançamento em 2024, a Salesforce precificou o Agentforce em cerca de US$ 2 por conversa. Até 2025 já havia migrado para os Flex Credits baseados em consumo, a cerca de US$ 0,10 por ação, cobrando pelo trabalho realizado em vez de uma taxa fixa por agente. A mudança é um sinal útil para todo o mercado, mostrando o preço por agente se acomodando em unidades medidas e baseadas em trabalho."
+        },
+        {
+          "q": "Qual modelo de negócio uma startup de IA deve escolher?",
+          "a": "Comece com três perguntas. Onde está o humano, já que uma pessoa agindo sobre cada saída ainda sustenta o preço por assento, enquanto um produto autônomo empurra para preço por uso ou por resultado. Você consegue definir e medir o resultado com clareza, já que o preço por resultado só funciona se você conseguir. E quanto cada ação custa para você entregar, já que a inferência é um custo real e a sua margem vive na diferença entre o que uma ação rende e o que ela custa. Muitas equipes começam medindo o uso e conquistam o direito de precificar por resultado quando a confiabilidade está comprovada."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "ai-startup-ideas-2026-latin-america",
+    "category": "ai",
+    "type": "Guide",
+    "readTime": "8 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-09",
+    "isPublished": true,
+    "en": {
+      "title": "AI Startup Ideas for 2026 in Latin America: Where to Actually Build",
+      "description": "The best AI startup ideas for 2026 in Latin America are built on Pix, Portuguese and Spanish languages, WhatsApp, and real Brazil and LATAM market gaps.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Ask what to build in Latin America in 2026 and the wrong answer is a translated copy of whatever is trending in San Francisco. The ideas that win here start from the region's own infrastructure and its unsolved problems. The shape is consistent. Build an AI-native product wired into Pix, fluent in Portuguese and Spanish, delivered over WhatsApp, and aimed at a workflow where local complexity keeps generic tools out. What follows is the test a real idea has to pass, the specific openings worth building into, and the honest reasons most attempts still fail."
+          ]
+        },
+        {
+          "id": "what-makes-a-strong-2026-idea-for-the-region",
+          "heading": "What makes a strong 2026 idea for the region",
+          "level": 2,
+          "paragraphs": [
+            "A strong idea is AI-native, not AI-flavored. The product should be impossible without a model doing real work at its core, not a chatbot bolted onto a dashboard. If removing the AI leaves a functioning SaaS tool, a larger incumbent will copy the feature and win on distribution.",
+            "The second test is local rails. Latin America has payment and data infrastructure that most of the world lacks, and building on it is a head start a foreign competitor cannot easily match. Pix moves money in seconds and produces a clean, real-time record of who paid whom. That record is an underwriting signal, a fraud signal, and a demand signal at the same time. A product that reads those rails natively starts with data a Silicon Valley clone has no access to.",
+            "The third test is a data loop. The best businesses here follow one motion. A copilot does useful work for a user, and in doing that work it produces proprietary data that no competitor can simply buy. That data trains a sharper product, which wins more users, which deepens the data. This is why a narrow, unglamorous workflow often beats a flashy horizontal tool. The narrow tool owns a loop.",
+            "The last test is distribution and language. WhatsApp is the default interface for hundreds of millions of people in the region, and a product that lives inside it meets users where they already are. Portuguese and Spanish are not a localization afterthought here. They are the entire market. A model tuned for Brazilian legal language or Colombian customer service is a different product from an English-first tool with a translation layer stapled on."
+          ]
+        },
+        {
+          "id": "why-2026-is-the-moment",
+          "heading": "Why 2026 is the moment",
+          "level": 2,
+          "paragraphs": [
+            "Three forces line up this year. The first is cost. AI infrastructure is now cheap enough that a focused team can reach real traction without raising a Series A first. The capital that once disappeared into servers and long build cycles now goes straight into product and go-to-market.",
+            "The second is scale. This is a large, connected, and rapidly banked market. Brazil's 2022 Census counted 203 million people, and the fintech wave of the last decade pulled tens of millions of them into the formal financial system for the first time. Nu Holdings, the parent company of Nubank, reported more than 100 million customers across Brazil, Mexico, and Colombia. Pix, launched by Banco Central do Brasil in 2020, grew to more than 150 million users and overtook cards as the country's most-used payment method. A founder in 2026 is building for consumers and small businesses who are already online, already paying digitally, and already leaving usable data trails.",
+            "The third is dislocation, and dislocation is where new tools get their opening. In 2023, Mexico overtook China as the largest source of goods imported into the United States, according to US Census Bureau trade data, and the nearshoring shift that number represents is still early. In the same year, Brazil approved a landmark tax reform that replaces a tangle of federal, state, and municipal taxes with a dual value-added tax, phased in across the rest of the decade. Every large regulatory transition is a window for a product that helps companies navigate the change. 2026 sits inside two of them at once."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Pix, launched in 2020, grew to more than 150 million users and overtook cards as Brazil's most-used payment method.",
+            "attribution": "Banco Central do Brasil"
+          }
+        },
+        {
+          "id": "the-best-ai-startup-ideas-for-2026-in-latin-america",
+          "heading": "The best AI startup ideas for 2026 in Latin America",
+          "level": 2,
+          "paragraphs": [
+            "**1. Credit underwriting for thin-file borrowers.** Tens of millions of people and small businesses have a real financial life but a thin formal credit record. An AI-native lender that underwrites on Pix flows, Open Finance data, and alternative signals can serve borrowers the incumbents still misprice. The data loop is the moat. Every loan repaid or missed sharpens the model. For a deeper look at this specific opening, see the [Brazilian fintech breakdown](/en/library/brazil-ai-fintech-market-opportunity).",
+            "**2. Tax and regulatory compliance copilots.** For years, the World Bank's Doing Business project ranked Brazil's tax system among the most time-consuming on earth, at well over 1,000 hours a year for a typical company to comply. The 2023 reform does not erase that burden. It rewrites it, which means a decade of transition that finance teams have to survive. A copilot that keeps a small business compliant through the shift has a captive, high-pain market that renews itself every year.",
+            "**3. Legal and judicial automation.** Brazilian courts carry tens of millions of pending cases, per the National Council of Justice. Law firms, in-house teams, and investors in judicial assets all drown in documents. An AI copilot that reads filings, drafts routine work, and scores the value of a claim turns a backlog into a workflow. This is a textbook copilot-to-data business, because every processed case teaches the model what a strong outcome looks like.",
+            "**4. Agriculture intelligence.** Brazil is the world's largest exporter of soybeans, beef, coffee, and sugar. Computer vision for crop and herd health, models for yield and disease, and traceability for export supply chains all sit on top of an industry the region already leads. The buyers have real budgets and a clear return to point the software at.",
+            "**5. Cross-border trade and logistics.** As nearshoring pulls manufacturing and trade toward Mexico and the wider region, customs paperwork, freight coordination, and compliance become the bottleneck. AI that automates the document-heavy middle of a shipment has a market that grows with every factory that relocates.",
+            "**6. Portuguese and Spanish voice and vertical agents.** Most foundation models are still English-first. A voice agent or vertical copilot tuned for the region's languages, and deployed over WhatsApp, is a product a generalist tool cannot match on quality. Customer service, collections, scheduling, and field support are all wide open."
+          ]
+        },
+        {
+          "id": "how-to-actually-build-one",
+          "heading": "How to actually build one",
+          "level": 2,
+          "paragraphs": [
+            "An idea is not a company, and the gap between them is where most of the value and most of the risk sits. The build that works in this region assembles three things on day one. A domain operator who has lived the problem for years. A technical team that can ship an AI-native product fast. And first-ticket capital, so the company is not stalled raising money before it has any proof.",
+            "That assembly is the case for the venture studio model. Avante co-founds AI-native companies for Brazil and LATAM, pairing operators who carry real market scar tissue with a build team and pre-seed capital from the start. The studio solves company plumbing once, so each venture routes more of its early capital into product and traction instead of overhead. The result is a company that reaches its first traction milestone months ahead of a comparable standalone team.",
+            "There is more than one path, and the honest answer is that the right one depends on the idea. Accelerators are a real option. Y Combinator makes a standard investment of USD 500,000, and Techstars and regional programs offer their own terms and networks. The choice is not about which logo looks best on a deck. It is about which structure gets your specific idea to proof of demand with the least wasted motion. Read [how the studio model works](/en/why-avante) for the long version."
+          ]
+        },
+        {
+          "id": "the-honest-failure-modes",
+          "heading": "The honest failure modes",
+          "level": 2,
+          "paragraphs": [
+            "Most of these ideas have a graveyard behind them, and pretending otherwise helps no one. Fintech is the most crowded and most regulated category in the region, and a thin AI layer on top of a bank API has no moat. Incumbents already own enormous data loops. A serious entrant needs a workflow and a dataset a generalist cannot copy, not a better landing page.",
+            "The second failure is the wrapper trap. If the whole product is a clever prompt in front of a frontier model, the frontier model's next release is your competitor. Defensibility has to come from proprietary data, a hard-won distribution channel, or a regulated workflow that takes years to earn trust in.",
+            "The third is distribution. A brilliant model with no path to users loses to an average product that already lives inside WhatsApp. Decide how you will reach the first thousand customers before you write the first line of code.",
+            "The opportunity is real and the timing is unusually good. The winners will not be the teams with the cleverest demo. They will be the ones who pick a narrow, painful, local problem, build a product only an AI-native company could ship, and compound the data that solving it produces. Browse the [Avante library](/en/library) for deeper breakdowns of the markets above."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What are the best AI startup ideas for 2026 in Latin America?",
+          "a": "The strongest ideas are AI-native companies built on local rails rather than copies of US tools. Six stand out for 2026: credit underwriting for thin-file borrowers using Pix and Open Finance data, tax and regulatory compliance copilots, legal and judicial automation, agriculture intelligence, cross-border trade and logistics, and Portuguese and Spanish voice or vertical agents delivered over WhatsApp. Each targets a workflow where local complexity keeps generic tools out."
+        },
+        {
+          "q": "Why build on Pix and WhatsApp instead of copying a US startup?",
+          "a": "Pix and WhatsApp are infrastructure a foreign competitor cannot easily match. Pix, run by Banco Central do Brasil, generates a real-time record of payments that doubles as an underwriting and fraud signal. WhatsApp is the default interface for hundreds of millions of people in the region. A product built natively on both starts with distribution and data that an English-first clone has to build from scratch."
+        },
+        {
+          "q": "Do you need to speak Portuguese or Spanish to build in the region?",
+          "a": "It helps a great deal, because language is the market, not a localization afterthought. Most foundation models are still English-first, so a copilot or voice agent tuned for Brazilian or Colombian usage is a genuinely different product. The more common pattern is a founding team that pairs a local domain operator who lives the language and the problem with technical builders."
+        },
+        {
+          "q": "How much capital do you need to start an AI company in Latin America in 2026?",
+          "a": "Far less than a Series A. AI infrastructure is now cheap enough that a focused team can reach real traction on pre-seed capital. Accelerators are one path, and Y Combinator makes a standard investment of USD 500,000. A venture studio is another, co-founding the company with operators and first-ticket capital from day one. The right structure depends on which one gets your specific idea to proof of demand fastest."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Ideias de Startups de IA para 2026 na América Latina: Onde Construir de Verdade",
+      "description": "As melhores ideias de startups de IA para 2026 na América Latina são construídas sobre o Pix, os idiomas português e espanhol, o WhatsApp e lacunas reais de mercado no Brasil e na América Latina.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Pergunte o que construir na América Latina em 2026 e a resposta errada é uma cópia traduzida do que está em alta em San Francisco. As ideias que vencem aqui partem da própria infraestrutura da região e dos seus problemas não resolvidos. O padrão é consistente. Construa um produto nativo de IA conectado ao Pix, fluente em português e espanhol, entregue pelo WhatsApp e voltado para um fluxo de trabalho onde a complexidade local mantém as ferramentas genéricas de fora. O que segue é o teste que uma ideia real precisa passar, as aberturas específicas nas quais vale a pena construir e as razões honestas pelas quais a maioria das tentativas ainda falha."
+          ]
+        },
+        {
+          "id": "o-que-torna-uma-ideia-forte-para-a-regiao-em-2026",
+          "heading": "O que torna uma ideia forte para a região em 2026",
+          "level": 2,
+          "paragraphs": [
+            "Uma ideia forte é nativa de IA, não apenas tem sabor de IA. O produto deveria ser impossível sem um modelo fazendo trabalho de verdade no seu núcleo, não um chatbot parafusado a um painel. Se remover a IA deixa uma ferramenta SaaS que ainda funciona, um incumbente maior vai copiar o recurso e vencer na distribuição.",
+            "O segundo teste são os trilhos locais. A América Latina tem uma infraestrutura de pagamentos e dados que falta à maior parte do mundo, e construir sobre ela é uma vantagem inicial que um concorrente estrangeiro não consegue igualar com facilidade. O Pix move dinheiro em segundos e produz um registro limpo, em tempo real, de quem pagou quem. Esse registro é um sinal de crédito, um sinal de fraude e um sinal de demanda ao mesmo tempo. Um produto que lê esses trilhos de forma nativa começa com dados aos quais um clone do Vale do Silício não tem acesso.",
+            "O terceiro teste é um ciclo de dados. Os melhores negócios aqui seguem um único movimento. Um copiloto faz trabalho útil para um usuário e, ao fazer esse trabalho, produz dados proprietários que nenhum concorrente pode simplesmente comprar. Esses dados treinam um produto mais afiado, que conquista mais usuários, que aprofunda os dados. É por isso que um fluxo de trabalho estreito e sem glamour muitas vezes supera uma ferramenta horizontal chamativa. A ferramenta estreita é dona de um ciclo.",
+            "O último teste é distribuição e idioma. O WhatsApp é a interface padrão para centenas de milhões de pessoas na região, e um produto que vive dentro dele encontra os usuários onde eles já estão. Português e espanhol não são uma tradução de última hora aqui. Eles são o mercado inteiro. Um modelo ajustado para a linguagem jurídica brasileira ou para o atendimento ao cliente colombiano é um produto diferente de uma ferramenta que nasce em inglês com uma camada de tradução grampeada por cima."
+          ]
+        },
+        {
+          "id": "por-que-2026-e-o-momento",
+          "heading": "Por que 2026 é o momento",
+          "level": 2,
+          "paragraphs": [
+            "Três forças se alinham neste ano. A primeira é o custo. A infraestrutura de IA hoje é barata o suficiente para que uma equipe focada alcance tração real sem antes levantar uma rodada Série A. O capital que antes desaparecia em servidores e longos ciclos de construção agora vai direto para produto e entrada no mercado.",
+            "A segunda é a escala. Este é um mercado grande, conectado e que se bancarizou rapidamente. O Censo de 2022 do Brasil contou 203 milhões de pessoas, e a onda de fintechs da última década trouxe dezenas de milhões delas para o sistema financeiro formal pela primeira vez. A Nu Holdings, controladora do Nubank, reportou mais de 100 milhões de clientes no Brasil, no México e na Colômbia. O Pix, lançado pelo Banco Central do Brasil em 2020, cresceu para mais de 150 milhões de usuários e ultrapassou os cartões como o método de pagamento mais usado do país. Um fundador em 2026 está construindo para consumidores e pequenas empresas que já estão online, já pagam digitalmente e já deixam rastros de dados aproveitáveis.",
+            "A terceira é o deslocamento, e o deslocamento é onde novas ferramentas encontram sua abertura. Em 2023, o México ultrapassou a China como a maior origem de bens importados pelos Estados Unidos, segundo dados de comércio do US Census Bureau, e a virada de nearshoring que esse número representa ainda está no começo. No mesmo ano, o Brasil aprovou uma reforma tributária histórica que substitui um emaranhado de tributos federais, estaduais e municipais por um imposto sobre valor agregado dual, implementado ao longo do resto da década. Toda grande transição regulatória é uma janela para um produto que ajuda as empresas a navegar pela mudança. 2026 está dentro de duas delas ao mesmo tempo."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O Pix, lançado em 2020, cresceu para mais de 150 milhões de usuários e ultrapassou os cartões como o método de pagamento mais usado do Brasil.",
+            "attribution": "Banco Central do Brasil"
+          }
+        },
+        {
+          "id": "as-melhores-ideias-de-startups-de-ia-para-2026-na-america-latina",
+          "heading": "As melhores ideias de startups de IA para 2026 na América Latina",
+          "level": 2,
+          "paragraphs": [
+            "**1. Análise de crédito para tomadores com histórico escasso.** Dezenas de milhões de pessoas e pequenas empresas têm uma vida financeira real, mas um histórico formal de crédito escasso. Um credor nativo de IA que avalia com base nos fluxos do Pix, em dados de Open Finance e em sinais alternativos pode atender tomadores que os incumbentes ainda precificam mal. O ciclo de dados é o fosso competitivo. Cada empréstimo pago ou não pago torna o modelo mais preciso. Para uma análise mais aprofundada dessa abertura específica, veja o [panorama das fintechs brasileiras](/pt/library/brazil-ai-fintech-market-opportunity).",
+            "**2. Copilotos de conformidade tributária e regulatória.** Durante anos, o projeto Doing Business do Banco Mundial classificou o sistema tributário do Brasil entre os mais demorados do planeta, com bem mais de 1.000 horas por ano para uma empresa típica cumprir suas obrigações. A reforma de 2023 não apaga esse fardo. Ela o reescreve, o que significa uma década de transição que as equipes financeiras têm de atravessar. Um copiloto que mantém uma pequena empresa em conformidade ao longo da mudança tem um mercado cativo e de alta dor que se renova todo ano.",
+            "**3. Automação jurídica e judicial.** Os tribunais brasileiros carregam dezenas de milhões de processos pendentes, segundo o Conselho Nacional de Justiça. Escritórios de advocacia, equipes internas e investidores em ativos judiciais todos se afogam em documentos. Um copiloto de IA que lê petições, redige o trabalho de rotina e pontua o valor de uma causa transforma um acúmulo em um fluxo de trabalho. Este é um negócio clássico de copiloto para dados, porque cada processo tratado ensina ao modelo como é um bom desfecho.",
+            "**4. Inteligência para o agronegócio.** O Brasil é o maior exportador mundial de soja, carne bovina, café e açúcar. Visão computacional para a saúde de lavouras e rebanhos, modelos para produtividade e doenças e rastreabilidade para as cadeias de exportação estão todos sobre uma indústria que a região já lidera. Os compradores têm orçamentos reais e um retorno claro para direcionar o software.",
+            "**5. Comércio e logística transfronteiriços.** À medida que o nearshoring puxa a manufatura e o comércio em direção ao México e à região mais ampla, a papelada aduaneira, a coordenação de fretes e a conformidade se tornam o gargalo. A IA que automatiza o miolo cheio de documentos de um embarque tem um mercado que cresce a cada fábrica que se muda.",
+            "**6. Agentes de voz e verticais em português e espanhol.** A maioria dos modelos de fundação ainda nasce em inglês. Um agente de voz ou copiloto vertical ajustado para os idiomas da região, e implantado pelo WhatsApp, é um produto que uma ferramenta generalista não consegue igualar em qualidade. Atendimento ao cliente, cobrança, agendamento e suporte em campo estão todos totalmente abertos."
+          ]
+        },
+        {
+          "id": "como-de-fato-construir-uma",
+          "heading": "Como de fato construir uma",
+          "level": 2,
+          "paragraphs": [
+            "Uma ideia não é uma empresa, e a distância entre as duas é onde está a maior parte do valor e a maior parte do risco. A construção que funciona nesta região reúne três coisas no primeiro dia. Um operador de domínio que viveu o problema por anos. Uma equipe técnica capaz de lançar um produto nativo de IA rápido. E capital de primeiro cheque, para que a empresa não fique travada levantando dinheiro antes de ter qualquer prova.",
+            "Essa montagem é o argumento a favor do modelo de venture studio. A Avante cofunda empresas nativas de IA para o Brasil e a América Latina, unindo operadores que carregam cicatrizes reais de mercado a um time de construção e capital pré-seed desde o início. O studio resolve o encanamento da empresa uma vez, de modo que cada venture direciona mais do seu capital inicial para produto e tração em vez de custos fixos. O resultado é uma empresa que alcança seu primeiro marco de tração meses antes de um time independente comparável.",
+            "Há mais de um caminho, e a resposta honesta é que o certo depende da ideia. Aceleradoras são uma opção real. A Y Combinator faz um investimento padrão de USD 500.000, e a Techstars e programas regionais oferecem seus próprios termos e redes de contato. A escolha não é sobre qual logotipo fica melhor em uma apresentação. É sobre qual estrutura leva a sua ideia específica à prova de demanda com o mínimo de movimento desperdiçado. Leia [como o modelo de studio funciona](/pt/why-avante) para a versão longa."
+          ]
+        },
+        {
+          "id": "os-modos-honestos-de-fracasso",
+          "heading": "Os modos honestos de fracasso",
+          "level": 2,
+          "paragraphs": [
+            "A maioria dessas ideias tem um cemitério atrás de si, e fingir o contrário não ajuda ninguém. Fintech é a categoria mais concorrida e mais regulada da região, e uma fina camada de IA sobre a API de um banco não tem fosso competitivo. Os incumbentes já são donos de enormes ciclos de dados. Um entrante sério precisa de um fluxo de trabalho e de um conjunto de dados que um generalista não consiga copiar, não de uma landing page melhor.",
+            "O segundo fracasso é a armadilha do invólucro. Se o produto inteiro é um prompt esperto na frente de um modelo de fronteira, o próximo lançamento desse modelo de fronteira é o seu concorrente. A defensabilidade tem de vir de dados proprietários, de um canal de distribuição conquistado a duras penas ou de um fluxo de trabalho regulado que leva anos para ganhar confiança.",
+            "O terceiro é a distribuição. Um modelo brilhante sem caminho até os usuários perde para um produto mediano que já vive dentro do WhatsApp. Decida como você vai alcançar os primeiros mil clientes antes de escrever a primeira linha de código.",
+            "A oportunidade é real e o momento é excepcionalmente bom. Os vencedores não serão as equipes com a demonstração mais engenhosa. Serão aquelas que escolhem um problema local, estreito e doloroso, constroem um produto que só uma empresa nativa de IA poderia lançar e capitalizam os dados que resolvê-lo produz. Navegue pela [biblioteca da Avante](/pt/library) para análises mais profundas dos mercados acima."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Quais são as melhores ideias de startups de IA para 2026 na América Latina?",
+          "a": "As ideias mais fortes são empresas nativas de IA construídas sobre trilhos locais, em vez de cópias de ferramentas dos Estados Unidos. Seis se destacam para 2026: análise de crédito para tomadores com histórico escasso usando o Pix e dados de Open Finance, copilotos de conformidade tributária e regulatória, automação jurídica e judicial, inteligência para o agronegócio, comércio e logística transfronteiriços e agentes de voz ou verticais em português e espanhol entregues pelo WhatsApp. Cada uma mira um fluxo de trabalho onde a complexidade local mantém as ferramentas genéricas de fora."
+        },
+        {
+          "q": "Por que construir sobre o Pix e o WhatsApp em vez de copiar uma startup dos Estados Unidos?",
+          "a": "O Pix e o WhatsApp são uma infraestrutura que um concorrente estrangeiro não consegue igualar com facilidade. O Pix, operado pelo Banco Central do Brasil, gera um registro de pagamentos em tempo real que serve também como sinal de crédito e de fraude. O WhatsApp é a interface padrão para centenas de milhões de pessoas na região. Um produto construído de forma nativa sobre os dois começa com distribuição e dados que um clone que nasce em inglês precisa construir do zero."
+        },
+        {
+          "q": "É preciso falar português ou espanhol para construir na região?",
+          "a": "Ajuda muito, porque o idioma é o mercado, não uma tradução de última hora. A maioria dos modelos de fundação ainda nasce em inglês, então um copiloto ou agente de voz ajustado para o uso brasileiro ou colombiano é um produto genuinamente diferente. O padrão mais comum é um time fundador que une um operador de domínio local, que vive o idioma e o problema, a construtores técnicos."
+        },
+        {
+          "q": "De quanto capital você precisa para começar uma empresa de IA na América Latina em 2026?",
+          "a": "Muito menos do que uma rodada Série A. A infraestrutura de IA hoje é barata o suficiente para que uma equipe focada alcance tração real com capital pré-seed. Aceleradoras são um caminho, e a Y Combinator faz um investimento padrão de USD 500.000. Um venture studio é outro, cofundando a empresa com operadores e capital de primeiro cheque desde o primeiro dia. A estrutura certa depende de qual delas leva a sua ideia específica à prova de demanda mais rápido."
         }
       ]
     }
@@ -10526,6 +10902,194 @@ const engineArticles: Article[] = [
     }
   },
   {
+    "slug": "how-to-build-an-ai-startup-in-2026",
+    "category": "ai",
+    "type": "Guide",
+    "readTime": "9 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-09",
+    "isPublished": true,
+    "en": {
+      "title": "How to Build an AI Startup in 2026: The End-to-End Guide",
+      "description": "How to build an AI startup in 2026: validate the problem, engineer defensibility, assemble a lean team, and raise on a SAFE, with a Brazil and LATAM lens.",
+      "sections": [
+        {
+          "paragraphs": [
+            "To build an AI startup in 2026, start with a painful, specific workflow and the proprietary data around it, not with a model. Validate demand with real users before you write production code, design defensibility from day zero because the underlying model is a commodity every competitor can rent, assemble a small team that pairs domain judgment with engineering, and raise your first capital on a SAFE or a local convertible instrument only once you have real signal. The founders who win in 2026 build the workflow, the data loop, and the distribution that a general-purpose model cannot replicate on its own."
+          ]
+        },
+        {
+          "id": "how-to-build-an-ai-startup-in-2026",
+          "heading": "How to Build an AI Startup in 2026",
+          "level": 2,
+          "paragraphs": [
+            "The playbook has changed. In 2023, a thin wrapper around a frontier model could pass for a product. In 2026 it rarely can, because the model layer improves every quarter and quietly absorbs simple features as it climbs. Building an AI-native company today is an exercise in sequencing four moves in the right order: validate the problem, engineer defensibility, assemble the team, and raise on founder-friendly terms. Get that order wrong and you burn a seed round proving demand you could have tested for free.",
+            "Here is the one line worth memorizing: an AI-native company in 2026 is not software with a model bolted on, it is a workflow, a proprietary data loop, and a distribution wedge wrapped around a model you rent. Everything below follows from that single definition.",
+            "None of this is a reason to wait. Foundation models, cloud credits, and open tooling have pushed the cost of a first working prototype close to zero, which is exactly why differentiation has moved up the stack, away from the model and toward everything around it. The barrier in 2026 is no longer building the thing, it is building something a well-funded competitor cannot copy in a weekend."
+          ]
+        },
+        {
+          "id": "step-1-validate-the-problem-before-you-write-production-code",
+          "heading": "Step 1: Validate the Problem Before You Write Production Code",
+          "level": 2,
+          "paragraphs": [
+            "Pick a workflow where the pain is measured in hours or in money, then confirm that a real buyer will pay to remove it. The cheapest version of this is not a prototype, it is fifteen honest conversations with people who live the problem every day. Narrow your ideal customer until you can name the exact role, the exact task, and the exact hour of the week it hurts. Then charge for a manual or half-automated version before you build the polished one. If nobody pays for the concierge version, more engineering will not rescue it.",
+            "Stronger still is a signed letter of intent or a small paid pilot, because a buyer who commits budget before the product exists is telling you the pain is real. Regional focus is an advantage here, not a limitation. In Brazil and across Latin America, the richest openings sit in verticals global tools were never tuned for: Portuguese and Spanish language nuance, local tax and regulatory logic, and the messy on-the-ground data that no product trained on San Francisco workflows understands. A model can generate fluent Portuguese, but it does not know how a mid-market Brazilian distributor actually reconciles an invoice. That gap is your opening."
+          ]
+        },
+        {
+          "id": "step-2-engineer-defensibility-from-day-zero",
+          "heading": "Step 2: Engineer Defensibility From Day Zero",
+          "level": 2,
+          "paragraphs": [
+            "Because anyone can call the same API you can, the first question a serious investor asks in 2026 is what you have beyond the model. If the honest answer is a clever prompt, you do not have a company, you have a feature that a foundation model or an incumbent will ship for free. The durable moats are unglamorous: proprietary data that compounds with every user, deep workflow integration that raises switching costs, a distribution channel rivals cannot cheaply copy, and hard-won domain judgment encoded into the product. If you are unsure whether yours holds up, our companion piece on [whether your AI startup actually has a moat](/en/library/does-my-ai-startup-have-a-moat) pressure-tests the usual answers.",
+            "The practical move is to design a data loop on day zero. Every interaction should make the product measurably better for the next user in a way a general model cannot reach, because it never sees your private usage. That compounding loop, not the model weights, is the asset that appreciates while everything downstream of the API keeps getting cheaper."
+          ]
+        },
+        {
+          "id": "step-3-assemble-a-small-senior-team",
+          "heading": "Step 3: Assemble a Small, Senior Team",
+          "level": 2,
+          "paragraphs": [
+            "AI-native companies stay smaller for longer than the previous generation of startups, because the same tooling that powers your product also compresses your own engineering, design, and support work. What you cannot compress is judgment. The strongest early teams pair one person who owns the domain, who has felt the problem firsthand, with one who can ship production software fast. If you have the domain but not the code, finding that counterpart is your most important early decision, and it is worth doing slowly. Our guide on [how to find a technical cofounder for an AI startup](/en/library/how-to-find-a-technical-cofounder-for-an-ai-startup) covers where they actually are and how to test for fit before you commit equity.",
+            "Resist the urge to staff up on the promise of a round. A lean team of two or three that ships every week will out-learn a team of ten still writing its onboarding documents, and it will spend far less of the runway you have not raised yet."
+          ]
+        },
+        {
+          "id": "step-4-raise-your-first-round-on-the-right-instrument",
+          "heading": "Step 4: Raise Your First Round on the Right Instrument",
+          "level": 2,
+          "paragraphs": [
+            "Only raise once you have signal, meaning real usage, real retention, or real revenue, because those are the levers that set your terms. When you do, most first rounds in 2026 still run on a SAFE, the Simple Agreement for Future Equity that Y Combinator introduced in 2013 and that has become the default early-stage instrument worldwide. In Brazil, the local equivalent is usually a convertible instrument such as a mútuo conversível, which does the same job under Brazilian law. Both let you take capital now and price the equity later, which protects a first-time founder from fixing a valuation before there is enough evidence to justify one.",
+            "Know the numbers before you negotiate. For reference, Y Combinator's standard deal invests $500,000 in every company it accepts, structured as $125,000 for 7% of the company plus $375,000 on an uncapped SAFE, a public benchmark that anchors how founders around the world think about early-stage price. As a rough rule of thumb, a seed round usually trades away a meaningful minority of the company, so guard your cap table and understand every conversion term before you sign. If you are weighing an accelerator's standard check against raising straight from a VC, work through when each path makes sense before you commit to either."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Y Combinator's standard deal invests $500,000 in every company it accepts, structured as $125,000 for 7% of the company plus $375,000 on an uncapped SAFE.",
+            "attribution": "Y Combinator, published standard deal terms"
+          }
+        },
+        {
+          "id": "consider-co-founding-instead-of-going-it-alone",
+          "heading": "Consider Co-Founding Instead of Going It Alone",
+          "level": 2,
+          "paragraphs": [
+            "There is a fourth path that sits between raising from passive investors and building entirely alone. A venture studio co-founds the company with you from day zero, contributing capital and hands-on building rather than a check and quarterly advice. For an AI-native company aimed at Brazil and Latin America, that model can compress the whole sequence above, because the validation, the defensibility work, the first engineering hires, and the first raise all happen next to a partner who has done each before. Avante Ventures co-founds AI-native companies for Brazil and LATAM on exactly this model, working beside founders from the first line of code rather than waiting on the sidelines for a finished pitch deck.",
+            "Building an AI startup in 2026 is less about access to models, which everyone now has, and more about the disciplined order in which you validate, defend, staff, and fund. The most common failure is not a weak idea, it is running the steps out of order: hiring before validating, raising before there is signal, or shipping a wrapper and hoping a moat appears later. Sequence it well and the model becomes what it should always have been, the cheapest and most replaceable part of your company."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "how to build an ai startup in 2026",
+          "a": "Build in four moves, in order. First, validate a painful, specific workflow with real buyers before you write production code. Second, engineer defensibility from day zero through a proprietary data loop, deep workflow integration, and distribution, because the model itself is rented. Third, assemble a small, senior team that pairs domain judgment with fast engineering. Fourth, raise your first round only once you have real usage, retention, or revenue, usually on a SAFE or a local convertible instrument."
+        },
+        {
+          "q": "Do you need to raise venture capital to build an AI startup in 2026?",
+          "a": "No. The cost of a first working prototype has fallen close to zero, so the smart sequence is to validate demand and reach real signal before you raise anything. When you do raise, most first rounds still run on a SAFE, which lets you take capital now and price the equity later. A venture studio that co-founds with you from day zero is a third path, supplying capital and hands-on building instead of a passive check."
+        },
+        {
+          "q": "What makes an AI startup defensible when the model is a commodity?",
+          "a": "Defensibility comes from what surrounds the model, not the model itself, since any competitor can call the same API. The durable moats are a proprietary data loop that compounds with every user, deep workflow integration that raises switching costs, a distribution channel rivals cannot cheaply copy, and hard-won domain judgment encoded into the product. In Brazil and LATAM, local language, regulation, and data make those moats easier to build and harder to copy from abroad."
+        },
+        {
+          "q": "What funding instrument do most AI startups use for a first round?",
+          "a": "Most early rounds in 2026 still run on a SAFE, the Simple Agreement for Future Equity that Y Combinator introduced in 2013 and that became a default early-stage instrument. In Brazil, the local equivalent is usually a convertible instrument such as a mútuo conversível, which does the same job under Brazilian law. Both let a founder take capital now and set the valuation later, once there is enough evidence to justify a price."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Como Construir uma Startup de IA em 2026: O Guia Completo",
+      "description": "Como construir uma startup de IA em 2026: valide o problema, projete defensibilidade, monte um time enxuto e capte com um SAFE, sob a ótica do Brasil e da América Latina.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Para construir uma startup de IA em 2026, comece por um fluxo de trabalho específico e doloroso e pelos dados proprietários ao redor dele, não por um modelo. Valide a demanda com usuários reais antes de escrever código de produção, projete a defensibilidade desde o dia zero porque o modelo subjacente é uma commodity que todo concorrente pode alugar, monte um time pequeno que combine julgamento de domínio com engenharia e capte seu primeiro capital com um SAFE ou um instrumento conversível local apenas quando tiver sinal real. Os fundadores que vencem em 2026 constroem o fluxo de trabalho, o ciclo de dados e a distribuição que um modelo de propósito geral não consegue replicar sozinho."
+          ]
+        },
+        {
+          "id": "como-construir-uma-startup-de-ia-em-2026",
+          "heading": "Como Construir uma Startup de IA em 2026",
+          "level": 2,
+          "paragraphs": [
+            "O manual mudou. Em 2023, um invólucro fino em torno de um modelo de fronteira podia passar por produto. Em 2026 raramente passa, porque a camada de modelo melhora a cada trimestre e absorve silenciosamente funcionalidades simples à medida que avança. Construir uma empresa nativa de IA hoje é um exercício de sequenciar quatro movimentos na ordem certa: validar o problema, projetar a defensibilidade, montar o time e captar em condições favoráveis ao fundador. Erre essa ordem e você queima uma rodada seed provando uma demanda que poderia ter testado de graça.",
+            "Aqui está a única frase que vale memorizar: uma empresa nativa de IA em 2026 não é software com um modelo acoplado, é um fluxo de trabalho, um ciclo de dados proprietário e uma cunha de distribuição em torno de um modelo que você aluga. Tudo o que vem abaixo decorre dessa única definição.",
+            "Nada disso é motivo para esperar. Modelos de fundação, créditos de nuvem e ferramentas abertas empurraram o custo de um primeiro protótipo funcional para perto de zero, e é justamente por isso que a diferenciação subiu na pilha, afastando-se do modelo e indo em direção a tudo o que o cerca. A barreira em 2026 não é mais construir a coisa, é construir algo que um concorrente bem financiado não consiga copiar em um fim de semana."
+          ]
+        },
+        {
+          "id": "passo-1-valide-o-problema-antes-de-escrever-codigo-de-producao",
+          "heading": "Passo 1: Valide o Problema Antes de Escrever Código de Produção",
+          "level": 2,
+          "paragraphs": [
+            "Escolha um fluxo de trabalho em que a dor seja medida em horas ou em dinheiro, então confirme que um comprador real vai pagar para removê-la. A versão mais barata disso não é um protótipo, são quinze conversas honestas com pessoas que vivem o problema todos os dias. Restrinja seu cliente ideal até conseguir nomear o cargo exato, a tarefa exata e a hora exata da semana em que dói. Depois cobre por uma versão manual ou semiautomatizada antes de construir a versão polida. Se ninguém pagar pela versão concierge, mais engenharia não vai resgatá-la.",
+            "Mais forte ainda é uma carta de intenções assinada ou um pequeno piloto pago, porque um comprador que compromete orçamento antes de o produto existir está dizendo que a dor é real. O foco regional é uma vantagem aqui, não uma limitação. No Brasil e em toda a América Latina, as melhores oportunidades estão em setores para os quais as ferramentas globais nunca foram ajustadas: as nuances do português e do espanhol, a lógica tributária e regulatória local e os dados bagunçados de campo que nenhum produto treinado em fluxos de São Francisco entende. Um modelo consegue gerar português fluente, mas não sabe como um distribuidor brasileiro de médio porte concilia de fato uma nota fiscal. Essa lacuna é a sua abertura."
+          ]
+        },
+        {
+          "id": "passo-2-projete-a-defensibilidade-desde-o-dia-zero",
+          "heading": "Passo 2: Projete a Defensibilidade Desde o Dia Zero",
+          "level": 2,
+          "paragraphs": [
+            "Como qualquer um pode chamar a mesma API que você, a primeira pergunta que um investidor sério faz em 2026 é o que você tem além do modelo. Se a resposta honesta for um prompt engenhoso, você não tem uma empresa, tem uma funcionalidade que um modelo de fundação ou um incumbente vai lançar de graça. Os fossos duráveis são pouco glamourosos: dados proprietários que se acumulam a cada usuário, integração profunda ao fluxo de trabalho que eleva os custos de troca, um canal de distribuição que os rivais não conseguem copiar de forma barata e um julgamento de domínio conquistado a duras penas e codificado no produto. Se você não tem certeza se o seu se sustenta, nosso texto complementar sobre [se a sua startup de IA realmente tem um fosso](/pt/library/does-my-ai-startup-have-a-moat) põe à prova as respostas de sempre.",
+            "O movimento prático é projetar um ciclo de dados no dia zero. Cada interação deve tornar o produto mensuravelmente melhor para o próximo usuário de um jeito que um modelo geral não alcança, porque ele nunca vê o seu uso privado. Esse ciclo que se acumula, e não os pesos do modelo, é o ativo que se valoriza enquanto tudo o que fica depois da API continua ficando mais barato."
+          ]
+        },
+        {
+          "id": "passo-3-monte-um-time-pequeno-e-senior",
+          "heading": "Passo 3: Monte um Time Pequeno e Sênior",
+          "level": 2,
+          "paragraphs": [
+            "Empresas nativas de IA permanecem menores por mais tempo do que a geração anterior de startups, porque as mesmas ferramentas que impulsionam o seu produto também comprimem o seu próprio trabalho de engenharia, design e suporte. O que você não consegue comprimir é o julgamento. Os times iniciais mais fortes combinam uma pessoa que domina o setor, que sentiu o problema na pele, com alguém que consegue entregar software de produção rápido. Se você tem o domínio mas não o código, encontrar essa contraparte é a sua decisão inicial mais importante, e vale a pena fazê-la devagar. Nosso guia sobre [como encontrar um cofundador técnico para uma startup de IA](/pt/library/how-to-find-a-technical-cofounder-for-an-ai-startup) mostra onde eles realmente estão e como testar a compatibilidade antes de você comprometer participação societária.",
+            "Resista à vontade de aumentar a equipe com base na promessa de uma rodada. Um time enxuto de dois ou três que entrega toda semana vai aprender mais rápido do que um time de dez ainda escrevendo os seus documentos de integração, e vai gastar bem menos do caixa que você ainda não captou."
+          ]
+        },
+        {
+          "id": "passo-4-capte-sua-primeira-rodada-com-o-instrumento-certo",
+          "heading": "Passo 4: Capte Sua Primeira Rodada com o Instrumento Certo",
+          "level": 2,
+          "paragraphs": [
+            "Só capte quando tiver sinal, ou seja, uso real, retenção real ou receita real, porque são essas as alavancas que definem os seus termos. Quando captar, a maioria das primeiras rodadas em 2026 ainda funciona com um SAFE, o Simple Agreement for Future Equity que a Y Combinator introduziu em 2013 e que se tornou o instrumento padrão de estágio inicial no mundo todo. No Brasil, o equivalente local costuma ser um instrumento conversível, como o mútuo conversível, que cumpre a mesma função sob a lei brasileira. Ambos permitem que você receba capital agora e precifique a participação depois, o que protege um fundador de primeira viagem de fixar um valuation antes de haver evidência suficiente para justificá-lo.",
+            "Conheça os números antes de negociar. Para referência, o acordo padrão da Y Combinator investe US$ 500.000 em cada empresa que aceita, estruturado como US$ 125.000 por 7% da empresa mais US$ 375.000 em um SAFE sem teto, um parâmetro público que ancora como os fundadores no mundo todo pensam sobre o preço de estágio inicial. Como regra geral aproximada, uma rodada seed costuma ceder uma minoria significativa da empresa, então proteja seu cap table e entenda cada termo de conversão antes de assinar. Se você está pesando o cheque padrão de uma aceleradora contra captar diretamente de um VC, avalie quando cada caminho faz sentido antes de se comprometer com qualquer um deles."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O acordo padrão da Y Combinator investe US$ 500.000 em cada empresa que aceita, estruturado como US$ 125.000 por 7% da empresa mais US$ 375.000 em um SAFE sem teto.",
+            "attribution": "Y Combinator, published standard deal terms"
+          }
+        },
+        {
+          "id": "considere-cofundar-em-vez-de-seguir-sozinho",
+          "heading": "Considere Cofundar em Vez de Seguir Sozinho",
+          "level": 2,
+          "paragraphs": [
+            "Existe um quarto caminho que fica entre captar de investidores passivos e construir totalmente sozinho. Um venture studio cofunda a empresa com você desde o dia zero, contribuindo com capital e construção prática em vez de um cheque e conselhos trimestrais. Para uma empresa nativa de IA voltada para o Brasil e a América Latina, esse modelo consegue comprimir toda a sequência acima, porque a validação, o trabalho de defensibilidade, as primeiras contratações de engenharia e a primeira captação acontecem ao lado de um parceiro que já fez cada uma dessas coisas antes. A Avante Ventures cofunda empresas nativas de IA para o Brasil e a América Latina exatamente nesse modelo, trabalhando ao lado dos fundadores desde a primeira linha de código em vez de esperar à margem por um pitch deck pronto.",
+            "Construir uma startup de IA em 2026 tem menos a ver com acesso a modelos, que todo mundo agora tem, e mais com a ordem disciplinada em que você valida, defende, contrata e financia. A falha mais comum não é uma ideia fraca, é rodar as etapas fora de ordem: contratar antes de validar, captar antes de haver sinal ou lançar um invólucro na esperança de que um fosso apareça depois. Sequencie isso bem e o modelo se torna o que sempre deveria ter sido, a parte mais barata e mais substituível da sua empresa."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "como construir uma startup de IA em 2026",
+          "a": "Construa em quatro movimentos, em ordem. Primeiro, valide um fluxo de trabalho específico e doloroso com compradores reais antes de escrever código de produção. Segundo, projete a defensibilidade desde o dia zero por meio de um ciclo de dados proprietário, integração profunda ao fluxo de trabalho e distribuição, porque o modelo em si é alugado. Terceiro, monte um time pequeno e sênior que combine julgamento de domínio com engenharia rápida. Quarto, capte sua primeira rodada apenas quando tiver uso, retenção ou receita reais, geralmente com um SAFE ou um instrumento conversível local."
+        },
+        {
+          "q": "É preciso captar capital de risco para construir uma startup de IA em 2026?",
+          "a": "Não. O custo de um primeiro protótipo funcional caiu para perto de zero, então a sequência inteligente é validar a demanda e chegar a sinal real antes de captar qualquer coisa. Quando você capta, a maioria das primeiras rodadas ainda funciona com um SAFE, que permite receber capital agora e precificar a participação depois. Um venture studio que cofunda com você desde o dia zero é um terceiro caminho, fornecendo capital e construção prática em vez de um cheque passivo."
+        },
+        {
+          "q": "O que torna uma startup de IA defensável quando o modelo é uma commodity?",
+          "a": "A defensibilidade vem do que cerca o modelo, não do modelo em si, já que qualquer concorrente pode chamar a mesma API. Os fossos duráveis são um ciclo de dados proprietário que se acumula a cada usuário, integração profunda ao fluxo de trabalho que eleva os custos de troca, um canal de distribuição que os rivais não conseguem copiar de forma barata e um julgamento de domínio conquistado a duras penas e codificado no produto. No Brasil e na América Latina, o idioma, a regulação e os dados locais tornam esses fossos mais fáceis de construir e mais difíceis de copiar de fora."
+        },
+        {
+          "q": "Qual instrumento de captação a maioria das startups de IA usa em uma primeira rodada?",
+          "a": "A maioria das rodadas iniciais em 2026 ainda funciona com um SAFE, o Simple Agreement for Future Equity que a Y Combinator introduziu em 2013 e que se tornou um instrumento padrão de estágio inicial. No Brasil, o equivalente local costuma ser um instrumento conversível, como o mútuo conversível, que cumpre a mesma função sob a lei brasileira. Ambos permitem que um fundador receba capital agora e defina o valuation depois, quando há evidência suficiente para justificar um preço."
+        }
+      ]
+    }
+  },
+  {
     "slug": "how-to-choose-a-venture-studio",
     "category": "insights",
     "type": "Guide",
@@ -14657,6 +15221,198 @@ const engineArticles: Article[] = [
     "ogImage": "/og/rag-vs-finetune-vs-long-context-playbook.png"
   },
   {
+    "slug": "safe-vs-priced-round-for-ai-startups",
+    "category": "insights",
+    "type": "Comparison",
+    "readTime": "7 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-09",
+    "isPublished": true,
+    "en": {
+      "title": "SAFE vs Priced Round for AI Startups in 2026",
+      "description": "SAFE vs priced round for AI startups in 2026: how each instrument works, what it really costs in dilution, and the Brazil and LATAM catch founders miss.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Picture an AI founder in São Paulo with a lead investor ready to wire a first check. The lawyer asks the one question that stalls everything: SAFE or priced round? For most startups raising early money in 2026, the SAFE is the faster, cheaper answer, and the priced round is the heavier one that pins down a valuation, issues stock immediately, and rarely appears before Series A. Which instrument fits depends on the size of the check, whether an investor wants preferred-stock protections and a board seat, and one factor almost every guide ignores. The SAFE was written for Delaware C-corps, so a company incorporated in Brazil or elsewhere in Latin America frequently cannot use one at all until it restructures."
+          ]
+        },
+        {
+          "id": "safe-vs-priced-round-for-ai-startups",
+          "heading": "SAFE vs Priced Round for AI Startups",
+          "level": 2,
+          "paragraphs": [
+            "The honest framing is that these two instruments are not really rivals at the same moment. They fit different stages of the same company. A SAFE, which stands for Simple Agreement for Future Equity, is what founders use to raise smaller and earlier money quickly, before anyone wants to argue about an exact valuation. A priced round is what happens when an investor writes a check large enough to justify lawyers, a term sheet, preferred shares, and often a seat on your board.",
+            "Here is the one-line version worth remembering. A SAFE is a promise to hand an investor equity later, and a priced round hands it over now at an agreed valuation. That single distinction drives almost every practical difference that follows: speed, legal cost, control, and how much dilution you can actually see on the day you sign."
+          ]
+        },
+        {
+          "id": "what-a-safe-actually-is",
+          "heading": "What a SAFE actually is",
+          "level": 2,
+          "paragraphs": [
+            "Y Combinator created the SAFE in late 2013 as a lighter alternative to the convertible note. The difference that matters most is that a SAFE is not debt. It carries no interest rate and no maturity date, so it cannot come due and push a young company toward default the way a note can. It converts into equity only when a future priced round happens, using terms you agree on today. Y Combinator now runs its own standard deal almost entirely on SAFEs, investing US$125,000 for 7 percent on a post-money SAFE plus US$375,000 on an uncapped MFN SAFE, US$500,000 in total with no priced round involved.",
+            "Those terms are usually a valuation cap, which sets the highest price at which your SAFE converts, and sometimes a discount, which in common practice tends to fall somewhere in the 10 to 20 percent range, rewarding early money with cheaper shares than the next round pays. Some SAFEs add a most-favored-nation clause, letting the investor adopt better terms if you hand them out later.",
+            "One detail trips up founders more than any other. In 2018, Y Combinator replaced the original pre-money SAFE with a post-money SAFE. The post-money version calculates the investor's ownership after all SAFE money is counted but before the new priced round comes in. It makes the investor's percentage far more predictable, and it quietly shifts future dilution onto you. If you stack several post-money SAFEs at different caps, the combined ownership you have sold can be larger than it feels, and you only see the full picture when everything converts at your priced round."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Y Combinator's standard deal invests US$125,000 for 7 percent of a company on a post-money SAFE, then adds US$375,000 on an uncapped MFN SAFE, for US$500,000 in total and none of it structured as a priced round.",
+            "attribution": "Y Combinator, published standard deal terms"
+          }
+        },
+        {
+          "id": "what-a-priced-round-actually-asks-of-you",
+          "heading": "What a priced round actually asks of you",
+          "level": 2,
+          "paragraphs": [
+            "A priced round sets a specific pre-money valuation and issues real shares on the spot, almost always preferred stock carrying rights that common shares do not have. In the United States, the paperwork usually follows the model legal documents published by the National Venture Capital Association, and it is substantial: a term sheet, a stock purchase agreement, an investor rights agreement, a voting agreement, and an amended charter. None of that is optional, and assembling it is why a priced round rarely closes in days the way a SAFE can.",
+            "That preferred stock typically comes with a liquidation preference, and the arrangement most early rounds treat as the default is one times non-participating, meaning the investor gets their money back first in a sale before common holders share the rest. A lead investor often takes a board seat and pro-rata rights to keep their percentage in later rounds. All of this costs real money and time in legal fees, which is exactly why founders avoid it until the round is big enough to be worth the friction.",
+            "The tradeoff is clarity. A priced round tells you precisely what you sold and to whom on the day you close, with no deferred surprise at conversion. If you are weighing this against other ways to fund early building, our comparison of a [venture studio versus raising a seed round](/en/library/venture-studio-vs-raising-a-seed-round) walks through the same decision from the opposite side of the table."
+          ]
+        },
+        {
+          "id": "the-2026-wrinkle-for-ai-startups",
+          "heading": "The 2026 wrinkle for AI startups",
+          "level": 2,
+          "paragraphs": [
+            "AI companies distort the usual pattern because they tend to raise more, and earlier, than the last generation of software startups. Compute is expensive, strong teams are contested, and investors are willing to fund on story and traction before revenue arrives. For an AI-native company, that early capital often flows straight into models, data, and a small senior team rather than a long runway of cheap experiments. The result in 2026 is a lot of pre-seed and seed money moving on SAFEs at high caps, often several SAFEs stacked before any priced round.",
+            "That is efficient, but it hides dilution. Every high-cap post-money SAFE you sign is a slice of the company promised away, and because SAFEs do not show up as issued shares until they convert, the cap table can look cleaner than it truly is. Before you sign the next one, model the fully-converted table as if every SAFE had already turned into stock. Understanding what you give up matters as much when you raise as it does when you weigh a studio, which is why founders should examine how much equity venture studios take with the same scrutiny they apply to their own cap."
+          ]
+        },
+        {
+          "id": "the-brazil-and-latam-catch-the-incumbents-ignore",
+          "heading": "The Brazil and LATAM catch the incumbents ignore",
+          "level": 2,
+          "paragraphs": [
+            "Almost every SAFE guide online assumes you are a Delaware C-corp, because the instrument was written for that structure. If your company is incorporated in Brazil as a Ltda or an S.A., or in another Latin American jurisdiction, a US-style SAFE does not slot neatly into local corporate law. This is the practical gap that generic advice skips.",
+            "Founders solve it in one of two ways. The first is the Delaware flip, where the operating company becomes a subsidiary of a newly formed US parent so it can raise on standard SAFEs from US investors. The second is to use a local convertible instrument. In Brazil, the traditional tool is the Contrato de Mútuo Conversível, a convertible loan that behaves more like the old convertible note than a SAFE.",
+            "The legal ground here improved recently. Brazil's Marco Legal das Startups, enacted as Complementary Law 182 in 2021, formalized how early investors can put money into a startup without immediately becoming quotaholders, building on the investidor-anjo figure created by Complementary Law 155 in 2016. Under those rules an angel investor is shielded from the company's debts and is not treated as a partner. It is not a SAFE, but it gives LATAM founders a real, statute-backed path to raise convertible money at home before deciding whether a Delaware flip is worth the cost."
+          ]
+        },
+        {
+          "id": "so-which-one-should-you-sign",
+          "heading": "So which one should you sign",
+          "level": 2,
+          "paragraphs": [
+            "Default to a SAFE for anything early, small, or fast, especially a first check where fighting over valuation would only slow you down. Move to a priced round when a lead is writing a check large enough to want preferred-stock protections and a board seat, or when your investors simply prefer the certainty of owning real shares today. And before you assume the US playbook applies, confirm your entity can actually use the instrument you picked, because in Brazil and much of LATAM that answer is often no until you restructure.",
+            "The deeper point is that the instrument is downstream of the plan. Deciding how to raise gets easier once you are clear on who is building alongside you and how they are compensated, whether that is investors, a technical co-founder, or a studio that co-builds AI-native companies from day zero. If that last model is new to you, start with [what a venture studio is](/en/library/what-is-a-venture-studio) and come back to the paperwork once the strategy is set."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is the difference between a SAFE and a priced round for an AI startup?",
+          "a": "A SAFE is the faster and cheaper instrument for early money, converting to equity at a later priced round using a valuation cap you set today. A priced round sets a real valuation now, issues preferred shares, and adds legal cost, board seats, and investor protections. Most AI startups raise their first rounds on SAFEs and move to a priced round at Series A, once the check is large enough to justify the paperwork."
+        },
+        {
+          "q": "Is a SAFE or a priced round better for a first-time AI founder?",
+          "a": "For a first check, a SAFE is usually better because it closes fast, costs little in legal fees, and lets you avoid negotiating a hard valuation before you have leverage. Switch to a priced round when a lead investor wants preferred-stock protections and a board seat, or when the round is large enough that everyone wants the certainty of issued shares."
+        },
+        {
+          "q": "Can a Brazilian startup raise on a SAFE?",
+          "a": "Not directly in most cases. The SAFE was written for Delaware C-corps and does not convert cleanly under Brazilian corporate law. Brazilian founders typically either flip to a US parent company to raise on standard SAFEs, or use a local Contrato de Mútuo Conversível, a convertible loan. Brazil's Marco Legal das Startups (Complementary Law 182 of 2021) also gives angel investors a statute-backed way to put in convertible money at home."
+        },
+        {
+          "q": "What is the difference between a SAFE and a convertible note?",
+          "a": "A convertible note is debt, so it carries an interest rate and a maturity date and can come due. A SAFE, created by Y Combinator in 2013, is not debt and has neither, so it cannot mature or trigger a default. Both convert into equity at a future priced round, usually with a valuation cap or a discount."
+        }
+      ]
+    },
+    "pt": {
+      "title": "SAFE vs Rodada Precificada para Startups de IA em 2026",
+      "description": "SAFE vs rodada precificada para startups de IA em 2026: como cada instrumento funciona, quanto ele realmente custa em diluição e o detalhe do Brasil e da América Latina que os fundadores ignoram.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Imagine um fundador de IA em São Paulo com um investidor-líder pronto para enviar o primeiro cheque. O advogado faz a única pergunta que trava tudo: SAFE ou rodada precificada? Para a maioria das startups que levantam capital cedo em 2026, o SAFE é a resposta mais rápida e barata, e a rodada precificada é a mais pesada, que fixa uma avaliação, emite ações imediatamente e raramente aparece antes da Série A. Qual instrumento serve depende do tamanho do cheque, de o investidor querer proteções de ações preferenciais e um assento no conselho, e de um fator que quase todo guia ignora. O SAFE foi escrito para C-corps de Delaware, então uma empresa constituída no Brasil ou em outra parte da América Latina muitas vezes não consegue usá-lo até se reestruturar."
+          ]
+        },
+        {
+          "id": "safe-vs-rodada-precificada-para-startups-de-ia",
+          "heading": "SAFE vs Rodada Precificada para Startups de IA",
+          "level": 2,
+          "paragraphs": [
+            "O enquadramento honesto é que esses dois instrumentos não são realmente rivais no mesmo momento. Eles servem a estágios diferentes da mesma empresa. Um SAFE, sigla em inglês para Simple Agreement for Future Equity, ou acordo simples para participação futura, é o que os fundadores usam para levantar dinheiro menor e mais cedo com rapidez, antes que alguém queira discutir uma avaliação exata. Uma rodada precificada é o que acontece quando um investidor assina um cheque grande o suficiente para justificar advogados, um term sheet, ações preferenciais e, muitas vezes, um assento no seu conselho.",
+            "Aqui está a versão de uma linha que vale a pena lembrar. Um SAFE é uma promessa de entregar participação a um investidor mais tarde, e uma rodada precificada a entrega agora, a uma avaliação acordada. Essa única distinção determina quase todas as diferenças práticas que se seguem: velocidade, custo jurídico, controle e quanta diluição você consegue de fato enxergar no dia em que assina."
+          ]
+        },
+        {
+          "id": "o-que-um-safe-realmente-e",
+          "heading": "O que um SAFE realmente é",
+          "level": 2,
+          "paragraphs": [
+            "A Y Combinator criou o SAFE no fim de 2013 como uma alternativa mais leve à nota conversível. A diferença que mais importa é que um SAFE não é dívida. Ele não carrega taxa de juros nem data de vencimento, então não pode vencer e empurrar uma empresa jovem para o calote como uma nota pode. Ele se converte em participação apenas quando uma futura rodada precificada acontece, usando termos que você acorda hoje. A Y Combinator agora conduz o próprio negócio-padrão quase inteiramente em SAFEs, investindo US$125.000 por 7 por cento em um SAFE post-money mais US$375.000 em um SAFE MFN sem teto, US$500.000 no total, sem nenhuma rodada precificada envolvida.",
+            "Esses termos são geralmente um teto de avaliação, que fixa o maior preço pelo qual seu SAFE se converte, e às vezes um desconto, que na prática comum tende a ficar em algum ponto na faixa de 10 a 20 por cento, recompensando o dinheiro que chega cedo com ações mais baratas do que a próxima rodada paga. Alguns SAFEs acrescentam uma cláusula de nação mais favorecida, permitindo que o investidor adote termos melhores se você os conceder depois.",
+            "Um detalhe confunde os fundadores mais do que qualquer outro. Em 2018, a Y Combinator substituiu o SAFE pre-money original por um SAFE post-money. A versão post-money calcula a participação do investidor depois que todo o dinheiro de SAFE é contado, mas antes que a nova rodada precificada entre. Isso torna a porcentagem do investidor muito mais previsível e, silenciosamente, transfere a diluição futura para você. Se você empilha vários SAFEs post-money com tetos diferentes, a participação combinada que vendeu pode ser maior do que parece, e você só enxerga o quadro completo quando tudo se converte na sua rodada precificada."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O negócio-padrão da Y Combinator investe US$125.000 por 7 por cento de uma empresa em um SAFE post-money, depois acrescenta US$375.000 em um SAFE MFN sem teto, somando US$500.000 no total, e nada disso estruturado como uma rodada precificada.",
+            "attribution": "Y Combinator, published standard deal terms"
+          }
+        },
+        {
+          "id": "o-que-uma-rodada-precificada-realmente-exige-de-voce",
+          "heading": "O que uma rodada precificada realmente exige de você",
+          "level": 2,
+          "paragraphs": [
+            "Uma rodada precificada fixa uma avaliação pre-money específica e emite ações reais na hora, quase sempre ações preferenciais que carregam direitos que as ações ordinárias não têm. Nos Estados Unidos, a papelada normalmente segue os documentos jurídicos modelo publicados pela National Venture Capital Association, e é substancial: um term sheet, um contrato de compra de ações, um acordo de direitos do investidor, um acordo de voto e um estatuto alterado. Nada disso é opcional, e montar tudo isso é o motivo pelo qual uma rodada precificada raramente se fecha em dias como um SAFE consegue.",
+            "Essa ação preferencial normalmente vem com uma preferência de liquidação, e o arranjo que a maioria das rodadas iniciais trata como padrão é o de uma vez não participante, o que significa que o investidor recebe o dinheiro de volta primeiro em uma venda, antes que os detentores de ações ordinárias dividam o restante. Um investidor-líder muitas vezes assume um assento no conselho e direitos pro-rata para manter sua porcentagem em rodadas posteriores. Tudo isso custa dinheiro e tempo reais em honorários jurídicos, o que é exatamente por que os fundadores evitam esse caminho até a rodada ser grande o suficiente para valer o atrito.",
+            "A contrapartida é clareza. Uma rodada precificada informa com precisão o que você vendeu e para quem no dia em que fecha, sem surpresa adiada na conversão. Se você está pesando isso contra outras formas de financiar a construção inicial, nossa comparação entre um [venture studio e levantar uma rodada seed](/pt/library/venture-studio-vs-raising-a-seed-round) percorre a mesma decisão do lado oposto da mesa."
+          ]
+        },
+        {
+          "id": "a-ressalva-de-2026-para-startups-de-ia",
+          "heading": "A ressalva de 2026 para startups de IA",
+          "level": 2,
+          "paragraphs": [
+            "As empresas de IA distorcem o padrão usual porque tendem a levantar mais, e mais cedo, do que a última geração de startups de software. Computação é cara, times fortes são disputados, e os investidores estão dispostos a financiar com base em narrativa e tração antes de a receita chegar. Para uma empresa nativa de IA, esse capital inicial muitas vezes flui direto para modelos, dados e um pequeno time sênior, em vez de uma longa pista de experimentos baratos. O resultado em 2026 é muito dinheiro de pre-seed e seed se movendo em SAFEs com tetos altos, muitas vezes vários SAFEs empilhados antes de qualquer rodada precificada.",
+            "Isso é eficiente, mas esconde diluição. Cada SAFE post-money de teto alto que você assina é uma fatia da empresa prometida, e como os SAFEs não aparecem como ações emitidas até se converterem, o cap table pode parecer mais limpo do que realmente é. Antes de assinar o próximo, modele a tabela totalmente convertida como se cada SAFE já tivesse virado ação. Entender o que você abre mão importa tanto quando você levanta capital quanto quando avalia um studio, e é por isso que os fundadores deveriam examinar quanto de participação os venture studios tomam com o mesmo escrutínio que aplicam ao próprio cap table."
+          ]
+        },
+        {
+          "id": "a-pegadinha-do-brasil-e-da-america-latina-que-os-incumbentes-ignoram",
+          "heading": "A pegadinha do Brasil e da América Latina que os incumbentes ignoram",
+          "level": 2,
+          "paragraphs": [
+            "Quase todo guia de SAFE na internet presume que você é uma C-corp de Delaware, porque o instrumento foi escrito para essa estrutura. Se a sua empresa está constituída no Brasil como uma Ltda ou uma S.A., ou em outra jurisdição latino-americana, um SAFE no estilo americano não se encaixa bem no direito societário local. Essa é a lacuna prática que o conselho genérico ignora.",
+            "Os fundadores resolvem isso de uma de duas maneiras. A primeira é o Delaware flip, em que a empresa operacional se torna subsidiária de uma nova controladora americana recém-criada, para poder levantar capital com SAFEs padrão de investidores americanos. A segunda é usar um instrumento conversível local. No Brasil, a ferramenta tradicional é o Contrato de Mútuo Conversível, um empréstimo conversível que se comporta mais como a antiga nota conversível do que como um SAFE.",
+            "O terreno jurídico aqui melhorou recentemente. O Marco Legal das Startups do Brasil, promulgado como a Lei Complementar 182 em 2021, formalizou como os investidores iniciais podem colocar dinheiro em uma startup sem imediatamente se tornarem quotistas, construindo sobre a figura do investidor-anjo criada pela Lei Complementar 155 em 2016. Sob essas regras, o investidor-anjo fica protegido das dívidas da empresa e não é tratado como sócio. Não é um SAFE, mas dá aos fundadores da América Latina um caminho real, respaldado por lei, para levantar dinheiro conversível em casa antes de decidir se um Delaware flip vale o custo."
+          ]
+        },
+        {
+          "id": "entao-qual-voce-deve-assinar",
+          "heading": "Então qual você deve assinar",
+          "level": 2,
+          "paragraphs": [
+            "Opte por um SAFE para qualquer coisa inicial, pequena ou rápida, especialmente um primeiro cheque em que brigar por avaliação só atrasaria você. Passe para uma rodada precificada quando um líder estiver assinando um cheque grande o suficiente para querer proteções de ações preferenciais e um assento no conselho, ou quando seus investidores simplesmente preferirem a certeza de possuir ações reais hoje. E antes de presumir que o manual dos Estados Unidos se aplica, confirme se a sua entidade consegue de fato usar o instrumento que você escolheu, porque no Brasil e em boa parte da América Latina essa resposta muitas vezes é não, até você se reestruturar.",
+            "O ponto mais profundo é que o instrumento é consequência do plano. Decidir como levantar capital fica mais fácil quando você tem clareza sobre quem está construindo ao seu lado e como essas pessoas são remuneradas, sejam investidores, um cofundador técnico ou um studio que constrói empresas nativas de IA em conjunto, desde o dia zero. Se esse último modelo é novo para você, comece com [o que é um venture studio](/pt/library/what-is-a-venture-studio) e volte à papelada depois que a estratégia estiver definida."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Qual é a diferença entre um SAFE e uma rodada precificada para uma startup de IA?",
+          "a": "Um SAFE é o instrumento mais rápido e barato para capital inicial, convertendo-se em participação em uma rodada precificada posterior usando um teto de avaliação que você fixa hoje. Uma rodada precificada fixa uma avaliação real agora, emite ações preferenciais e acrescenta custo jurídico, assentos no conselho e proteções ao investidor. A maioria das startups de IA levanta suas primeiras rodadas com SAFEs e passa para uma rodada precificada na Série A, quando o cheque é grande o suficiente para justificar a papelada."
+        },
+        {
+          "q": "Um SAFE ou uma rodada precificada é melhor para um fundador de IA de primeira viagem?",
+          "a": "Para um primeiro cheque, um SAFE costuma ser melhor porque se fecha rápido, custa pouco em honorários jurídicos e permite que você evite negociar uma avaliação fixa antes de ter poder de barganha. Mude para uma rodada precificada quando um investidor-líder quiser proteções de ações preferenciais e um assento no conselho, ou quando a rodada for grande o suficiente para que todos queiram a certeza de ações emitidas."
+        },
+        {
+          "q": "Uma startup brasileira pode levantar capital com um SAFE?",
+          "a": "Não diretamente, na maioria dos casos. O SAFE foi escrito para C-corps de Delaware e não se converte de forma limpa sob o direito societário brasileiro. Os fundadores brasileiros normalmente ou fazem o flip para uma controladora americana para levantar capital com SAFEs padrão, ou usam um Contrato de Mútuo Conversível local, um empréstimo conversível. O Marco Legal das Startups do Brasil (Lei Complementar 182 de 2021) também dá aos investidores-anjo uma maneira respaldada por lei de colocar dinheiro conversível em casa."
+        },
+        {
+          "q": "Qual é a diferença entre um SAFE e uma nota conversível?",
+          "a": "Uma nota conversível é dívida, então carrega uma taxa de juros e uma data de vencimento e pode vencer. Um SAFE, criado pela Y Combinator em 2013, não é dívida e não tem nenhum dos dois, então não pode vencer nem disparar um calote. Ambos se convertem em participação em uma futura rodada precificada, geralmente com um teto de avaliação ou um desconto."
+        }
+      ]
+    }
+  },
+  {
     "slug": "services-to-productized-ai-copilot-playbook",
     "category": "playbooks",
     "type": "Playbook",
@@ -18055,6 +18811,232 @@ const engineArticles: Article[] = [
     }
   },
   {
+    "slug": "venture-studio-vs-raising-a-seed-round",
+    "category": "insights",
+    "type": "Comparison",
+    "readTime": "7 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-09",
+    "isPublished": true,
+    "en": {
+      "title": "Venture Studio vs Raising a Seed Round: Which Fits a First-Time Founder?",
+      "description": "Venture studio or seed round? For a first-time AI founder, the real question is which gap to close first: capital, or a team that builds from day zero.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Picture a first-time AI founder with a sharp idea, a slide deck, and no technical co-founder. Two doors open. One is a seed round, where you raise capital, keep control, and then go hire the team yourself. The other is a venture studio, where you give up a larger slice of equity and gain a co-founding team that builds beside you from day zero. The wrong way to choose is to weigh which model sounds better in the abstract. The right way is to ask which gap actually blocks you first: the capital to operate, or the ability to build the product at all. That one question, not a theoretical scorecard, decides which door is yours."
+          ]
+        },
+        {
+          "id": "venture-studio-vs-raising-a-seed-round",
+          "heading": "Venture studio vs raising a seed round",
+          "level": 2,
+          "paragraphs": [
+            "The core difference is what your equity buys. In a seed round you sell a slice of the company for cash and, if you choose investors well, for advice and introductions. In a venture studio you trade a larger slice for cash plus a co-founding team that builds the product alongside you. A seed round assumes you can already execute. A studio exists precisely because execution, not capital, is where most first-time founders stall.",
+            "So the one-line rule is this. A venture studio hands a first-time founder a technical co-founder and a build engine on day zero in exchange for more equity, while a seed round hands you capital and control but leaves the building entirely to you. If you lack a team and traction, the studio closes the gap that keeps you from being fundable in the first place. If you already have both, a seed round lets you keep more of what you build.",
+            "Framing it as venture studio vs raising a seed round also hides an important truth: the two are rarely permanent rivals. A studio-founded company still raises a seed round later, often on stronger terms because the product already exists. The real question for a first-time founder is how you get from zero to that first institutional check."
+          ]
+        },
+        {
+          "id": "what-raising-a-seed-round-actually-gives-you",
+          "heading": "What raising a seed round actually gives you",
+          "level": 2,
+          "paragraphs": [
+            "A seed round is a financing event, not a building service. You sell equity, through either a [SAFE or a priced round](/en/library/safe-vs-priced-round-for-ai-startups), to angels or funds, and in return you get runway and a cap table full of people who want you to win. What you do not get is someone to build with you. The money buys time, and you remain responsible for turning that time into a product, a team, and a market.",
+            "For a first-time founder, that is the catch. Seed investors are underwriting a bet on you, your team, and your early traction. Without a prior exit, a working prototype, or real usage, the check is hard to land, and the terms get harsher the earlier and less proven you are. A typical priced seed round costs a founder somewhere in the commonly cited range of 15% to 25% of the company, and you still have to do all the work afterward.",
+            "The most transparent reference points for the cost of outside capital are the public accelerator terms, since a program is often a founder's on-ramp to a seed round. Y Combinator's standard deal invests $500,000 in every company it accepts, structured as $125,000 for 7% of the company on a post-money SAFE plus $375,000 on an uncapped SAFE with a most-favored-nation provision. Techstars has long published a standard offer of $20,000 for 6% of common stock, plus an optional $100,000 convertible note, for a three-month program. Those numbers set the market: if a top accelerator gives $500,000 for roughly 7%, a plain angel seed round is rarely cheaper per dollar for an unproven first-time founder."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Y Combinator's standard deal invests $500,000 in every company it accepts: $125,000 for 7% of the company on a post-money SAFE, plus $375,000 on an uncapped SAFE with a most-favored-nation provision.",
+            "attribution": "Y Combinator, published standard deal terms"
+          }
+        },
+        {
+          "id": "what-a-venture-studio-actually-gives-you",
+          "heading": "What a venture studio actually gives you",
+          "level": 2,
+          "paragraphs": [
+            "A [venture studio](/en/library/what-is-a-venture-studio) is an operating company that co-founds startups, contributing the initial idea or its validation, capital, and a shared team of engineers, designers, and operators who build the product with the founder from the first day. It is not a passive investor writing a check and waiting to see what happens. It is a co-founder with a balance sheet and a bench.",
+            "That is why studios take more equity than a seed fund would. Because the studio contributes labor and infrastructure, not only money, its founding stake is higher than a check-writer's. Published studio-equity benchmarks put the typical founding stake at around 30%, with the number climbing toward 50% or more in the cases where the studio supplies the original idea, builds the most, and enters the earliest. We go deeper on the numbers in [how much equity venture studios take](/en/library/how-much-equity-do-venture-studios-take), but the shape is simple: you give up more ownership up front, and in return you are not building alone.",
+            "For an AI-native company, that bench matters more than it used to. Shipping a defensible AI product in 2026 means data pipelines, model evaluation, and a real go-to-market motion, not a weekend wrapper around someone else's API. A studio that has built these things before compresses the path from idea to something an investor will actually fund."
+          ]
+        },
+        {
+          "id": "the-dilution-tradeoff-honestly",
+          "heading": "The dilution tradeoff, honestly",
+          "level": 2,
+          "paragraphs": [
+            "Here is the part founders underweight. A studio's stake looks expensive next to a seed round when you compare them on the same day. But you are not comparing the same day. You are comparing two different starting points.",
+            "A founder who raises a seed round alone keeps more equity but shoulders all of the execution risk, and many first-time founders never reach the seed round at all because they cannot build the first version. A founder who co-builds with a studio gives up more equity but starts with the product already moving, which raises the odds of reaching a priced round and, at that round, a higher valuation on the equity that remains. More of a smaller number can be worth far less than less of a much larger one.",
+            "The honest downside is real, so name it plainly. With a studio you have less control early, more voices at the table, and permanently more dilution than a founder who never needed the help. If you are the rare first-time founder who can already recruit a team, ship a prototype, and pull in a seed check on your own, the studio is probably not for you."
+          ]
+        },
+        {
+          "id": "side-by-side",
+          "heading": "Side by side",
+          "level": 2,
+          "paragraphs": [
+            "The two paths differ on cost, control, and speed. Here is how they compare on the dimensions that decide it."
+          ],
+          "bullets": [
+            "What you receive: a seed round gives capital, a network, and advice. A venture studio gives capital plus a team that builds with you.",
+            "Equity cost: a seed round runs roughly 15 to 25 percent for the round. A studio takes around 30 percent at inception, and up to 50 percent or more.",
+            "Who executes: with a seed round it is you, plus a team you still have to recruit. With a studio it is you, plus the studio team from day zero.",
+            "Best if you have: a seed round fits a team with early traction. A studio fits conviction and an idea but no technical co-founder.",
+            "Main risk: with a seed round all execution risk sits on you. With a studio you accept less control and more dilution early.",
+            "Speed to first build: a seed round depends on your hiring. A studio is fast because the team already exists."
+          ]
+        },
+        {
+          "id": "which-fits-a-first-time-founder",
+          "heading": "Which fits a first-time founder?",
+          "level": 2,
+          "paragraphs": [
+            "Choose the seed round if you can already answer three questions with a yes: do you have a co-founder who can build, do you have a prototype or early users, and can you realistically raise a check in your market. If all three are true, the extra dilution of a studio buys you something you do not need.",
+            "Choose the studio if your bottleneck is building, not believing. If the idea is strong but you cannot assemble the team or ship the first version, capital alone does not solve your problem, because a bank balance does not write code or close your first customers. A studio does solve it, by supplying the one thing a seed check cannot: people who build with you from day zero."
+          ]
+        },
+        {
+          "id": "the-brazil-and-latam-reality",
+          "heading": "The Brazil and LATAM reality",
+          "level": 2,
+          "paragraphs": [
+            "This tradeoff is sharper in Latin America than in Silicon Valley. Seed capital is thinner, investor pattern matching on first-time founders is weaker, and a founder without a network can spend a year raising a round that a comparable US founder closes in a month. In that environment, the studio model is not only an equity trade, it is often the difference between building and not building at all. Avante co-founds AI-native companies for Brazil and LATAM for exactly this reason: in this region, hands-on building from day zero closes a gap that a seed check, on its own, usually cannot.",
+            "So reject the false binary. It is not studio or seed forever. For most first-time AI founders in the region, co-building with a studio is how you earn the right to raise a strong seed round in the first place."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Venture studio vs raising a seed round: which is better?",
+          "a": "It depends on your bottleneck. If you already have a team and early traction, raise a seed round and keep more equity. If your idea is strong but you cannot build or ship the first version alone, a venture studio gives you a co-founding team plus capital from day zero, at the cost of a larger equity stake. For many first-time AI founders, the studio is the on-ramp that makes a strong seed round possible later."
+        },
+        {
+          "q": "How much more equity does a venture studio take than a seed investor?",
+          "a": "A priced seed round typically costs a founder roughly 15% to 25% of the company for that round. Published studio-equity benchmarks put a venture studio's founding stake at around 30%, rising toward 50% or more when the studio supplies the original idea, builds the most, and enters the earliest. The studio takes more because it contributes a build team and infrastructure rather than only cash, so you trade extra ownership for hands-on building from day one."
+        },
+        {
+          "q": "Can a studio-backed company still raise a seed round later?",
+          "a": "Yes, and it usually does. Co-building with a studio and raising a seed round are stages, not opposites. A studio helps you build the first product and hit the milestones that make a seed round easier to raise and better priced. The studio is how you reach the check, not a replacement for it."
+        },
+        {
+          "q": "Is a venture studio worth the extra dilution for a first-time founder?",
+          "a": "If your main gap is execution, usually yes. Owning less of a company that actually ships and raises can be worth far more than owning most of one that never gets built. If you can already recruit a team, ship a prototype, and land a check on your own, the extra dilution is probably not worth it."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Venture Studio vs Captar uma Rodada Seed: O Que Combina com um Fundador de Primeira Viagem?",
+      "description": "Venture studio ou rodada seed? Para um fundador de IA de primeira viagem, a verdadeira pergunta é qual lacuna fechar primeiro: capital ou um time que constrói desde o dia zero.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Imagine um fundador de IA de primeira viagem com uma ideia afiada, um slide deck e nenhum cofundador técnico. Duas portas se abrem. Uma é a rodada seed, na qual você capta recursos, mantém o controle e depois vai contratar o time por conta própria. A outra é o venture studio, no qual você abre mão de uma fatia maior de equity e ganha um time cofundador que constrói ao seu lado desde o dia zero. A forma errada de escolher é ponderar qual modelo soa melhor no abstrato. A forma certa é perguntar qual lacuna de fato bloqueia você primeiro: o capital para operar ou a capacidade de construir o produto. Essa única pergunta, e não um placar teórico, decide qual porta é a sua."
+          ]
+        },
+        {
+          "id": "venture-studio-vs-captar-uma-rodada-seed",
+          "heading": "Venture studio vs captar uma rodada seed",
+          "level": 2,
+          "paragraphs": [
+            "A diferença central está no que o seu equity compra. Em uma rodada seed, você vende uma fatia da empresa por dinheiro e, se escolher bem os investidores, por conselhos e apresentações. Em um venture studio, você troca uma fatia maior por dinheiro somado a um time cofundador que constrói o produto ao seu lado. Uma rodada seed pressupõe que você já sabe executar. Um studio existe justamente porque a execução, e não o capital, é onde a maioria dos fundadores de primeira viagem trava.",
+            "Então a regra em uma linha é esta. Um venture studio entrega a um fundador de primeira viagem um cofundador técnico e um motor de construção no dia zero em troca de mais equity, enquanto uma rodada seed entrega capital e controle, mas deixa toda a construção por sua conta. Se você não tem time nem tração, o studio fecha a lacuna que impede você de ser financiável em primeiro lugar. Se você já tem os dois, uma rodada seed permite que você mantenha mais do que constrói.",
+            "Enquadrar a decisão como venture studio vs captar uma rodada seed também esconde uma verdade importante: os dois raramente são rivais permanentes. Uma empresa fundada por um studio ainda capta uma rodada seed mais tarde, muitas vezes em condições melhores porque o produto já existe. A verdadeira pergunta para um fundador de primeira viagem é como sair do zero até aquele primeiro cheque institucional."
+          ]
+        },
+        {
+          "id": "o-que-captar-uma-rodada-seed-realmente-oferece",
+          "heading": "O que captar uma rodada seed realmente oferece",
+          "level": 2,
+          "paragraphs": [
+            "Uma rodada seed é um evento de financiamento, não um serviço de construção. Você vende equity, seja por meio de um [SAFE ou de uma rodada precificada](/pt/library/safe-vs-priced-round-for-ai-startups), para investidores-anjo ou fundos e, em troca, ganha fôlego de caixa e um cap table cheio de gente que quer o seu sucesso. O que você não ganha é alguém para construir com você. O dinheiro compra tempo, e você continua responsável por transformar esse tempo em um produto, um time e um mercado.",
+            "Para um fundador de primeira viagem, esse é o problema. Os investidores seed estão apostando em você, no seu time e na sua tração inicial. Sem uma saída anterior, um protótipo funcional ou uso real, o cheque é difícil de conseguir, e as condições ficam mais duras quanto mais cedo e menos comprovado você estiver. Uma rodada seed precificada típica custa a um fundador algo na faixa comumente citada de 15% a 25% da empresa, e você ainda precisa fazer todo o trabalho depois.",
+            "As referências mais transparentes para o custo do capital externo são os termos públicos das aceleradoras, já que um programa costuma ser a porta de entrada de um fundador para uma rodada seed. O acordo padrão da Y Combinator investe US$ 500 mil em toda empresa que aceita, estruturado como US$ 125 mil por 7% da empresa em um SAFE post-money mais US$ 375 mil em um SAFE sem cap com cláusula de nação mais favorecida. A Techstars publica há muito tempo uma oferta padrão de US$ 20 mil por 6% de ações ordinárias, mais uma nota conversível opcional de US$ 100 mil, para um programa de três meses. Esses números definem o mercado: se uma aceleradora de ponta dá US$ 500 mil por cerca de 7%, uma rodada seed comum com anjos raramente é mais barata por dólar para um fundador de primeira viagem não comprovado."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O acordo padrão da Y Combinator investe US$ 500 mil em toda empresa que aceita: US$ 125 mil por 7% da empresa em um SAFE post-money, mais US$ 375 mil em um SAFE sem cap com cláusula de nação mais favorecida.",
+            "attribution": "Y Combinator, published standard deal terms"
+          }
+        },
+        {
+          "id": "o-que-um-venture-studio-realmente-oferece",
+          "heading": "O que um venture studio realmente oferece",
+          "level": 2,
+          "paragraphs": [
+            "Um [venture studio](/pt/library/what-is-a-venture-studio) é uma empresa operacional que cofunda startups, contribuindo com a ideia inicial ou sua validação, capital e um time compartilhado de engenheiros, designers e operadores que constroem o produto com o fundador desde o primeiro dia. Não é um investidor passivo que assina um cheque e espera para ver o que acontece. É um cofundador com balanço financeiro e um banco de talentos.",
+            "É por isso que os studios ficam com mais equity do que um fundo seed ficaria. Como o studio contribui com trabalho e infraestrutura, não apenas com dinheiro, a sua participação de fundação é maior que a de quem só assina o cheque. Benchmarks publicados de equity de studios colocam a participação de fundação típica em torno de 30%, com o número subindo para 50% ou mais nos casos em que o studio fornece a ideia original, constrói a maior parte e entra mais cedo. Aprofundamos nos números em [quanto de equity os venture studios pegam](/pt/library/how-much-equity-do-venture-studios-take), mas o formato é simples: você abre mão de mais participação lá na frente e, em troca, não constrói sozinho.",
+            "Para uma empresa nativa de IA, esse banco de talentos importa mais do que antes. Lançar um produto de IA defensável em 2026 significa pipelines de dados, avaliação de modelos e um movimento real de go-to-market, não um wrapper de fim de semana em cima da API de outra pessoa. Um studio que já construiu essas coisas antes comprime o caminho da ideia até algo que um investidor de fato vai financiar."
+          ]
+        },
+        {
+          "id": "o-trade-off-da-diluicao-com-honestidade",
+          "heading": "O trade-off da diluição, com honestidade",
+          "level": 2,
+          "paragraphs": [
+            "Aqui está a parte que os fundadores subestimam. A participação de um studio parece cara ao lado de uma rodada seed quando você as compara no mesmo dia. Mas você não está comparando o mesmo dia. Você está comparando dois pontos de partida diferentes.",
+            "Um fundador que capta uma rodada seed sozinho mantém mais equity, mas carrega todo o risco de execução, e muitos fundadores de primeira viagem nunca chegam à rodada seed porque não conseguem construir a primeira versão. Um fundador que constrói junto com um studio abre mão de mais equity, mas começa com o produto já em movimento, o que aumenta as chances de chegar a uma rodada precificada e, nessa rodada, a um valuation maior sobre o equity que resta. Uma fatia maior de um número menor pode valer muito menos do que uma fatia menor de um número muito maior.",
+            "A desvantagem honesta é real, então vamos nomeá-la sem rodeios. Com um studio, você tem menos controle no início, mais vozes à mesa e, de forma permanente, mais diluição do que um fundador que nunca precisou de ajuda. Se você é aquele raro fundador de primeira viagem que já consegue recrutar um time, lançar um protótipo e trazer um cheque seed por conta própria, o studio provavelmente não é para você."
+          ]
+        },
+        {
+          "id": "lado-a-lado",
+          "heading": "Lado a lado",
+          "level": 2,
+          "paragraphs": [
+            "Os dois caminhos diferem em custo, controle e velocidade. Veja como se comparam nas dimensões que decidem a escolha."
+          ],
+          "bullets": [
+            "O que você recebe: uma rodada seed dá capital, rede de contatos e conselhos. Um venture studio dá capital mais um time que constrói com você.",
+            "Custo em equity: uma rodada seed fica em torno de 15 a 25 por cento pela rodada. Um studio pega cerca de 30 por cento no início, e até 50 por cento ou mais.",
+            "Quem executa: na rodada seed é você, mais um time que ainda precisa recrutar. Com um studio é você, mais o time do studio desde o dia zero.",
+            "Melhor se você tem: a rodada seed combina com um time e tração inicial. O studio combina com convicção e uma ideia, mas nenhum cofundador técnico.",
+            "Principal risco: na rodada seed todo o risco de execução recai sobre você. Com um studio você aceita menos controle e mais diluição no início.",
+            "Velocidade até a primeira construção: a rodada seed depende da sua contratação. O studio é rápido porque o time já existe."
+          ]
+        },
+        {
+          "id": "o-que-combina-com-um-fundador-de-primeira-viagem",
+          "heading": "O que combina com um fundador de primeira viagem?",
+          "level": 2,
+          "paragraphs": [
+            "Escolha a rodada seed se você já consegue responder sim a três perguntas: você tem um cofundador que sabe construir, você tem um protótipo ou usuários iniciais e você consegue, de forma realista, captar um cheque no seu mercado. Se as três forem verdadeiras, a diluição extra de um studio compra algo de que você não precisa.",
+            "Escolha o studio se o seu gargalo é construir, não acreditar. Se a ideia é forte, mas você não consegue montar o time ou lançar a primeira versão, o capital sozinho não resolve o seu problema, porque um saldo bancário não escreve código nem fecha os seus primeiros clientes. Um studio resolve, ao fornecer a única coisa que um cheque seed não pode: pessoas que constroem com você desde o dia zero."
+          ]
+        },
+        {
+          "id": "a-realidade-do-brasil-e-da-america-latina",
+          "heading": "A realidade do Brasil e da América Latina",
+          "level": 2,
+          "paragraphs": [
+            "Esse trade-off é mais acentuado na América Latina do que no Vale do Silício. O capital seed é mais escasso, o reconhecimento de padrões dos investidores sobre fundadores de primeira viagem é mais fraco, e um fundador sem uma rede de contatos pode passar um ano captando uma rodada que um fundador americano equivalente fecha em um mês. Nesse ambiente, o modelo de studio não é apenas uma troca de equity, é muitas vezes a diferença entre construir e não construir de jeito nenhum. A Avante cofunda empresas nativas de IA para o Brasil e a América Latina exatamente por essa razão: nesta região, a construção com as mãos na massa desde o dia zero fecha uma lacuna que um cheque seed, sozinho, normalmente não consegue.",
+            "Então rejeite o falso binário. Não é studio ou seed para sempre. Para a maioria dos fundadores de IA de primeira viagem na região, construir junto com um studio é como você conquista o direito de captar uma rodada seed forte em primeiro lugar."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Venture studio vs captar uma rodada seed: qual é melhor?",
+          "a": "Depende do seu gargalo. Se você já tem um time e tração inicial, capte uma rodada seed e mantenha mais equity. Se a sua ideia é forte, mas você não consegue construir ou lançar a primeira versão sozinho, um venture studio oferece um time cofundador mais capital desde o dia zero, ao custo de uma participação maior de equity. Para muitos fundadores de IA de primeira viagem, o studio é a porta de entrada que torna possível uma rodada seed forte mais tarde."
+        },
+        {
+          "q": "Quanto mais equity um venture studio fica em comparação com um investidor seed?",
+          "a": "Uma rodada seed precificada normalmente custa a um fundador cerca de 15% a 25% da empresa por aquela rodada. Benchmarks publicados de equity de studios colocam a participação de fundação de um venture studio em torno de 30%, subindo para 50% ou mais quando o studio fornece a ideia original, constrói a maior parte e entra mais cedo. O studio fica com mais porque contribui com um time de construção e infraestrutura em vez de apenas dinheiro, então você troca participação extra por construção com as mãos na massa desde o primeiro dia."
+        },
+        {
+          "q": "Uma empresa apoiada por um studio ainda pode captar uma rodada seed depois?",
+          "a": "Sim, e normalmente capta. Construir junto com um studio e captar uma rodada seed são estágios, não opostos. Um studio ajuda você a construir o primeiro produto e a atingir os marcos que tornam uma rodada seed mais fácil de captar e mais bem precificada. O studio é como você chega ao cheque, não um substituto dele."
+        },
+        {
+          "q": "Um venture studio vale a diluição extra para um fundador de primeira viagem?",
+          "a": "Se a sua principal lacuna é execução, geralmente sim. Ser dono de uma fatia menor de uma empresa que de fato lança e capta pode valer muito mais do que ser dono da maior parte de uma que nunca sai do papel. Se você já consegue recrutar um time, lançar um protótipo e conseguir um cheque por conta própria, a diluição extra provavelmente não vale a pena."
+        }
+      ]
+    }
+  },
+  {
     "slug": "venture-studio-vs-vc-explained",
     "category": "insights",
     "type": "Comparison",
@@ -19059,6 +20041,268 @@ const engineArticles: Article[] = [
     }
   },
   {
+    "slug": "what-is-a-venture-studio",
+    "category": "insights",
+    "type": "Explainer",
+    "readTime": "7 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-09",
+    "isPublished": true,
+    "en": {
+      "title": "What Is a Venture Studio? How the Model Works (2026)",
+      "description": "A venture studio co-founds companies from day zero, supplying the idea, capital, and a build team. How it works and how it differs from a VC or accelerator.",
+      "sections": [
+        {
+          "paragraphs": [
+            "A venture studio is an organization that co-founds companies from the ground up, supplying the starting idea, the first capital, and a hands-on team that builds the product alongside the founders. In exchange it takes founder-level equity rather than the minority stake an outside fund would hold. The simplest way to hold the concept in your head is this. A venture studio is a co-founder you build with, not an investor you pitch to.",
+            "Venture studios also go by startup studio, venture builder, or company builder. Whatever the label, the defining move is identical. The studio is inside the company from day zero instead of watching from a board seat."
+          ]
+        },
+        {
+          "id": "the-day-zero-difference-studio-versus-investor",
+          "heading": "The day-zero difference: studio versus investor",
+          "level": 2,
+          "paragraphs": [
+            "Most founders meet capital in one of two shapes. A venture capital fund writes a check into a company that already exists, then supports it from the outside through board meetings, introductions, and follow-on rounds. The day-to-day building stays entirely the founder's job. The fund is diversified across dozens of bets and stays deliberately hands-off on the product itself.",
+            "A venture studio inverts that arrangement. It commits people, not only money, and it commits them before there is a company to invest in. Designers, engineers, and operators employed by the studio sit down and build the first version with you. That is why the equity math looks different, and why the relationship reads less like a pitch and more like a partnership. A venture capital fund bets on founders who have already started, while a venture studio starts alongside them.",
+            "The model is often confused with two neighbors, the accelerator and the incubator, which offer very different things. If you want the clean separation between all three, the [difference between a venture studio, an accelerator, and an incubator](/en/library/venture-studio-vs-accelerator-vs-incubator) is worth reading before you decide which door to knock on."
+          ]
+        },
+        {
+          "id": "what-a-venture-studio-is-not",
+          "heading": "What a venture studio is not",
+          "level": 2,
+          "paragraphs": [
+            "Sharpening the definition by its edges helps. A studio is not an accelerator that runs a fixed cohort and ends in a demo day, and it is not an incubator that rents you a desk and offers light mentorship. It is not a venture capital fund that invests after a company already exists, and it is not a software agency you pay to build a product you then own by yourself. Each of those models hands you one resource and then steps back to watch.",
+            "A studio does the opposite. It takes co-founder equity precisely because it takes co-founder risk, treating the new company as its own and living with the result. When the company fails, the studio loses the months of designer, engineer, and operator time it poured in, not merely a line item in a diversified portfolio. That shared exposure is the reason a studio pushes as hard on distribution and hiring as it does on the code, and it is what a founder is really buying into."
+          ]
+        },
+        {
+          "id": "how-a-venture-studio-actually-works",
+          "heading": "How a venture studio actually works",
+          "level": 2,
+          "paragraphs": [
+            "The mechanics vary between studios, but nearly all of them run some version of the same loop."
+          ]
+        },
+        {
+          "id": "idea-and-validation",
+          "heading": "Idea and validation",
+          "level": 3,
+          "paragraphs": [
+            "The studio generates or pressure-tests an idea, usually from a thesis about a specific market gap. This is where a studio earns its keep before a single line of code exists, killing weak concepts quickly instead of funding them for a year and a half."
+          ]
+        },
+        {
+          "id": "assemble-the-founding-team",
+          "heading": "Assemble the founding team",
+          "level": 3,
+          "paragraphs": [
+            "The studio pairs the validated idea with a founder or founding team, sometimes recruited specifically for that company. Shared staff across engineering, design, legal, finance, and recruiting plug in, so the new company does not rebuild the scaffolding every startup otherwise wastes months constructing."
+          ]
+        },
+        {
+          "id": "build-the-first-product",
+          "heading": "Build the first product",
+          "level": 3,
+          "paragraphs": [
+            "This is the step that separates studios from every other model. The studio's own builders write real code and ship a real product. Speed to a working first version is the entire point, and it is why a studio can move a company from idea to launch in a fraction of the time a solo founder would need."
+          ]
+        },
+        {
+          "id": "spin-out-and-raise",
+          "heading": "Spin out and raise",
+          "level": 3,
+          "paragraphs": [
+            "Once the company shows traction, it becomes an independent entity with its own cap table and raises outside capital, typically a seed round. The studio keeps its founder-level stake and stays close, but the company now stands on its own feet."
+          ]
+        },
+        {
+          "id": "what-the-studio-puts-in-and-what-it-takes-back",
+          "heading": "What the studio puts in, and what it takes back",
+          "level": 2,
+          "paragraphs": [
+            "A serious studio contributes four things at once: capital to start, a team that actually builds, shared operational muscle, and a network of later-stage investors and customers. That bundle is worth more than a check of the same size, because it removes the two failures that kill most early companies at once, running out of money and running out of the right people.",
+            "The trade is equity. Because the studio acts as a co-founder rather than a passive backer, it takes a meaningfully larger slice than a fund would at the same moment. How large is a fair question with a real range behind it, and it is the one number every founder should understand before signing anything. Read [how much equity venture studios take](/en/library/how-much-equity-do-venture-studios-take) so the split holds no surprises later."
+          ]
+        },
+        {
+          "id": "the-model-has-a-real-track-record",
+          "heading": "The model has a real track record",
+          "level": 2,
+          "paragraphs": [
+            "This is not an unproven idea. Idealab, founded by Bill Gross in Pasadena in 1996, is one of the first modern startup studios and has created more than 150 companies across three decades, with over 45 of them reaching an IPO or an acquisition. In Berlin, Rocket Internet, launched by the Samwer brothers in 2007, industrialized the approach and produced public companies including HelloFresh, Delivery Hero, Zalando, and Jumia. Its own listing on the Frankfurt Stock Exchange in October 2014 raised more than 1 billion euros, one of Europe's largest technology IPOs that year. In the United States, the studio Atomic built Hims and Hers, now listed on the New York Stock Exchange, and Paris-based eFounders, since renamed Hexa, built software companies such as Front and Aircall.",
+            "The category has grown well past its pioneers, spreading from consumer apps to deep tech and from Europe to Latin America. The reason the model keeps spreading is compounding. Every company a studio builds sharpens the playbook for the next one, so the hiring, the fundraising, and the go-to-market get faster each cycle."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Rocket Internet, the Berlin company builder, raised more than 1 billion euros when it listed on the Frankfurt Stock Exchange in October 2014, one of Europe's largest technology IPOs of the year.",
+            "attribution": "Rocket Internet IPO, Frankfurt Stock Exchange, 2014"
+          }
+        },
+        {
+          "id": "why-the-model-fits-ai-native-companies-in-brazil-and-latam",
+          "heading": "Why the model fits AI-native companies in Brazil and LATAM",
+          "level": 2,
+          "paragraphs": [
+            "AI has compressed the distance between an idea and a working product, which is exactly the distance a studio was built to cross. When a founder can stand up a functional AI product in weeks rather than quarters, the bottleneck moves to everything surrounding the product. Distribution, regulatory reality, hiring, and the first serious raise all still take real work. A studio that co-builds from day zero absorbs that load instead of leaving it on one founder's desk.",
+            "This is the ground Avante works on. Avante co-founds AI-native companies for Brazil and LATAM, meeting founders at day zero with capital and a team that builds beside them, not a term sheet and a calendar invite. In a region where the gap between a good idea and a fundable company runs wider than it does in Silicon Valley, a co-founder who has already crossed that gap changes the odds.",
+            "None of this makes a studio the right path for every founder. If you already hold a technical co-founder, a shipped product, and a warm network of investors, you may not need one at all. The honest version of that trade-off, including the cases where you should walk away, is worth weighing carefully before you commit."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is a venture studio in simple terms?",
+          "a": "A venture studio is a company that co-founds startups in-house, on repeat. One team supplies the idea, the first capital, and a hands-on build team, then takes founder-level equity in each company it starts. The shorthand is that a studio is a co-founder you build with, not an investor you pitch to."
+        },
+        {
+          "q": "How is a venture studio different from a VC?",
+          "a": "A venture capital fund writes a check into a company that already exists and supports it from a board seat. A venture studio commits people before the company exists and builds the first product beside you. One backs founders who have already started. The other starts alongside them."
+        },
+        {
+          "q": "How much equity does a venture studio take?",
+          "a": "More than any other early path, because it contributes more. A studio supplies the idea, the first capital, the build team, and the operators, so it holds a founder-level stake rather than the minority slice a fund would take. The exact split covers a real range, which every founder should understand before signing."
+        },
+        {
+          "q": "Is a venture studio the same as an accelerator or incubator?",
+          "a": "No. An accelerator runs a fixed cohort and ends in a demo day, and an incubator offers space and light mentorship. Both support founders who already have an idea and a team. A studio originates the company and staffs it from day zero."
+        },
+        {
+          "q": "Are venture studios a proven model?",
+          "a": "Yes. Idealab has built companies since 1996, and Rocket Internet produced public companies such as HelloFresh, Delivery Hero, and Zalando before its own 2014 Frankfurt listing. The model has since spread worldwide across consumer, software, and deep tech."
+        }
+      ]
+    },
+    "pt": {
+      "title": "O Que É um Venture Studio? Como o Modelo Funciona (2026)",
+      "description": "Um venture studio cofunda empresas desde o dia zero, fornecendo a ideia, o capital e um time que constrói o produto. Como funciona e como se diferencia de um fundo de VC ou de uma aceleradora.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Um venture studio é uma organização que cofunda empresas do zero, fornecendo a ideia inicial, o primeiro capital e um time de mão na massa que constrói o produto ao lado dos fundadores. Em troca, ele fica com uma participação de cofundador, e não com a fatia minoritária que um fundo externo teria. A forma mais simples de guardar o conceito na cabeça é esta. Um venture studio é um cofundador com quem você constrói, não um investidor para quem você faz o pitch.",
+            "Venture studios também são chamados de startup studio, venture builder ou company builder. Seja qual for o rótulo, o movimento que os define é idêntico. O studio está dentro da empresa desde o dia zero, em vez de observar de uma cadeira no conselho."
+          ]
+        },
+        {
+          "id": "a-diferenca-do-dia-zero-studio-versus-investidor",
+          "heading": "A diferença do dia zero: studio versus investidor",
+          "level": 2,
+          "paragraphs": [
+            "A maioria dos fundadores encontra o capital em uma de duas formas. Um fundo de venture capital assina um cheque para uma empresa que já existe e depois a apoia de fora, por meio de reuniões de conselho, apresentações e rodadas subsequentes. A construção do dia a dia continua sendo inteiramente tarefa do fundador. O fundo é diversificado entre dezenas de apostas e se mantém deliberadamente afastado do produto em si.",
+            "Um venture studio inverte esse arranjo. Ele compromete pessoas, não apenas dinheiro, e as compromete antes de existir uma empresa na qual investir. Designers, engenheiros e operadores contratados pelo studio se sentam e constroem a primeira versão com você. É por isso que a conta de equity fica diferente, e por que a relação se parece menos com um pitch e mais com uma parceria. Um fundo de venture capital aposta em fundadores que já começaram, enquanto um venture studio começa ao lado deles.",
+            "O modelo é muitas vezes confundido com dois vizinhos, a aceleradora e a incubadora, que oferecem coisas bem diferentes. Se você quer a separação clara entre os três, vale a pena ler a [diferença entre um venture studio, uma aceleradora e uma incubadora](/pt/library/venture-studio-vs-accelerator-vs-incubator) antes de decidir em qual porta bater."
+          ]
+        },
+        {
+          "id": "o-que-um-venture-studio-nao-e",
+          "heading": "O que um venture studio não é",
+          "level": 2,
+          "paragraphs": [
+            "Afiar a definição pelas bordas ajuda. Um studio não é uma aceleradora que roda uma turma fixa e termina em um demo day, e não é uma incubadora que aluga uma mesa para você e oferece uma mentoria leve. Não é um fundo de venture capital que investe depois que a empresa já existe, e não é uma agência de software que você paga para construir um produto que depois é só seu. Cada um desses modelos entrega a você um único recurso e depois recua para assistir.",
+            "Um studio faz o oposto. Ele fica com equity de cofundador justamente porque assume o risco de cofundador, tratando a nova empresa como sua e convivendo com o resultado. Quando a empresa fracassa, o studio perde os meses de trabalho de designers, engenheiros e operadores que investiu, não apenas uma linha em um portfólio diversificado. Essa exposição compartilhada é a razão pela qual um studio se dedica tanto à distribuição e à contratação quanto ao código, e é isso que um fundador de fato está comprando."
+          ]
+        },
+        {
+          "id": "como-um-venture-studio-funciona-na-pratica",
+          "heading": "Como um venture studio funciona na prática",
+          "level": 2,
+          "paragraphs": [
+            "A mecânica varia de um studio para outro, mas quase todos rodam alguma versão do mesmo ciclo."
+          ]
+        },
+        {
+          "id": "ideia-e-validacao",
+          "heading": "Ideia e validação",
+          "level": 3,
+          "paragraphs": [
+            "O studio gera ou testa sob pressão uma ideia, normalmente a partir de uma tese sobre uma lacuna específica de mercado. É aqui que um studio justifica o próprio valor antes de existir uma única linha de código, matando conceitos frágeis rapidamente em vez de financiá-los por um ano e meio."
+          ]
+        },
+        {
+          "id": "montar-o-time-fundador",
+          "heading": "Montar o time fundador",
+          "level": 3,
+          "paragraphs": [
+            "O studio une a ideia validada a um fundador ou time fundador, às vezes recrutado especificamente para aquela empresa. Equipes compartilhadas de engenharia, design, jurídico, finanças e recrutamento entram em ação, de modo que a nova empresa não reconstrói a estrutura que toda startup, de outra forma, desperdiça meses erguendo."
+          ]
+        },
+        {
+          "id": "construir-o-primeiro-produto",
+          "heading": "Construir o primeiro produto",
+          "level": 3,
+          "paragraphs": [
+            "Este é o passo que separa os studios de todos os outros modelos. Os próprios construtores do studio escrevem código de verdade e lançam um produto de verdade. A velocidade até uma primeira versão funcional é o objetivo central, e é por isso que um studio consegue levar uma empresa da ideia ao lançamento em uma fração do tempo que um fundador solo precisaria."
+          ]
+        },
+        {
+          "id": "desmembrar-e-captar",
+          "heading": "Desmembrar e captar",
+          "level": 3,
+          "paragraphs": [
+            "Assim que a empresa mostra tração, ela se torna uma entidade independente, com seu próprio cap table, e capta capital externo, normalmente uma rodada seed. O studio mantém sua participação de cofundador e continua por perto, mas a empresa agora se sustenta com as próprias pernas."
+          ]
+        },
+        {
+          "id": "o-que-o-studio-coloca-e-o-que-leva-de-volta",
+          "heading": "O que o studio coloca, e o que leva de volta",
+          "level": 2,
+          "paragraphs": [
+            "Um studio sério contribui com quatro coisas ao mesmo tempo: capital para começar, um time que de fato constrói, músculo operacional compartilhado e uma rede de investidores de estágios mais avançados e de clientes. Esse pacote vale mais do que um cheque do mesmo tamanho, porque elimina de uma só vez as duas falhas que matam a maioria das empresas nascentes, ficar sem dinheiro e ficar sem as pessoas certas.",
+            "A troca é equity. Como o studio age como cofundador, e não como um financiador passivo, ele fica com uma fatia significativamente maior do que um fundo levaria no mesmo momento. Quão grande é uma pergunta legítima, com uma faixa real por trás, e é o único número que todo fundador deveria entender antes de assinar qualquer coisa. Leia [quanto equity os venture studios levam](/pt/library/how-much-equity-do-venture-studios-take) para que a divisão não guarde surpresas depois."
+          ]
+        },
+        {
+          "id": "o-modelo-tem-um-historico-real",
+          "heading": "O modelo tem um histórico real",
+          "level": 2,
+          "paragraphs": [
+            "Esta não é uma ideia sem comprovação. A Idealab, fundada por Bill Gross em Pasadena em 1996, é um dos primeiros startup studios modernos e criou mais de 150 empresas ao longo de três décadas, com mais de 45 delas chegando a um IPO ou a uma aquisição. Em Berlim, a Rocket Internet, lançada pelos irmãos Samwer em 2007, industrializou a abordagem e produziu empresas de capital aberto como HelloFresh, Delivery Hero, Zalando e Jumia. Sua própria abertura de capital na Bolsa de Frankfurt, em outubro de 2014, levantou mais de 1 bilhão de euros, um dos maiores IPOs de tecnologia da Europa naquele ano. Nos Estados Unidos, o studio Atomic construiu a Hims and Hers, hoje listada na Bolsa de Nova York, e a eFounders, de Paris, desde então renomeada como Hexa, construiu empresas de software como Front e Aircall.",
+            "A categoria cresceu muito além de seus pioneiros, espalhando-se de aplicativos de consumo até deep tech e da Europa até a América Latina. A razão pela qual o modelo continua se espalhando é o efeito composto. Cada empresa que um studio constrói aprimora o manual para a próxima, de modo que a contratação, a captação e o go-to-market ficam mais rápidos a cada ciclo."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "A Rocket Internet, a company builder de Berlim, levantou mais de 1 bilhão de euros quando abriu capital na Bolsa de Frankfurt, em outubro de 2014, um dos maiores IPOs de tecnologia da Europa no ano.",
+            "attribution": "Rocket Internet IPO, Frankfurt Stock Exchange, 2014"
+          }
+        },
+        {
+          "id": "por-que-o-modelo-combina-com-empresas-ai-native-no-brasil-e-na-america-latina",
+          "heading": "Por que o modelo combina com empresas AI-native no Brasil e na América Latina",
+          "level": 2,
+          "paragraphs": [
+            "A IA comprimiu a distância entre uma ideia e um produto funcionando, que é exatamente a distância que um studio foi feito para cruzar. Quando um fundador consegue colocar de pé um produto de IA funcional em semanas, e não em trimestres, o gargalo se desloca para tudo o que cerca o produto. Distribuição, realidade regulatória, contratação e a primeira captação séria ainda exigem trabalho de verdade. Um studio que coconstrói desde o dia zero absorve essa carga em vez de deixá-la sobre a mesa de um único fundador.",
+            "É nesse terreno que a Avante atua. A Avante cofunda empresas AI-native para o Brasil e a América Latina, encontrando os fundadores no dia zero com capital e um time que constrói ao lado deles, não com um term sheet e um convite de agenda. Em uma região onde a distância entre uma boa ideia e uma empresa capaz de captar é maior do que no Vale do Silício, um cofundador que já cruzou essa distância muda as probabilidades.",
+            "Nada disso faz de um studio o caminho certo para todo fundador. Se você já tem um cofundador técnico, um produto lançado e uma rede próxima de investidores, talvez nem precise de um. A versão honesta desse trade-off, incluindo os casos em que você deveria seguir sozinho, merece ser pesada com cuidado antes de você se comprometer."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "O que é um venture studio em termos simples?",
+          "a": "Um venture studio é uma empresa que cofunda startups internamente, de forma recorrente. Um único time fornece a ideia, o primeiro capital e um time de mão na massa para construir, e depois fica com uma participação de cofundador em cada empresa que inicia. O resumo é que um studio é um cofundador com quem você constrói, não um investidor para quem você faz o pitch."
+        },
+        {
+          "q": "Como um venture studio se diferencia de um fundo de VC?",
+          "a": "Um fundo de venture capital assina um cheque para uma empresa que já existe e a apoia de uma cadeira no conselho. Um venture studio compromete pessoas antes de a empresa existir e constrói o primeiro produto ao seu lado. Um aposta em fundadores que já começaram. O outro começa junto com eles."
+        },
+        {
+          "q": "Quanto equity um venture studio leva?",
+          "a": "Mais do que qualquer outro caminho inicial, porque contribui com mais. Um studio fornece a ideia, o primeiro capital, o time que constrói e os operadores, então fica com uma participação de cofundador, e não com a fatia minoritária que um fundo levaria. A divisão exata cobre uma faixa real, que todo fundador deveria entender antes de assinar."
+        },
+        {
+          "q": "Um venture studio é a mesma coisa que uma aceleradora ou incubadora?",
+          "a": "Não. Uma aceleradora roda uma turma fixa e termina em um demo day, e uma incubadora oferece espaço e uma mentoria leve. Ambas apoiam fundadores que já têm uma ideia e um time. Um studio origina a empresa e a monta desde o dia zero."
+        },
+        {
+          "q": "Os venture studios são um modelo comprovado?",
+          "a": "Sim. A Idealab constrói empresas desde 1996, e a Rocket Internet produziu empresas de capital aberto como HelloFresh, Delivery Hero e Zalando antes de sua própria abertura de capital em Frankfurt, em 2014. Desde então, o modelo se espalhou pelo mundo, passando por consumo, software e deep tech."
+        }
+      ]
+    }
+  },
+  {
     "slug": "why-venture-studios-win-latam",
     "category": "research",
     "type": "Research Report",
@@ -19343,6 +20587,208 @@ const engineArticles: Article[] = [
             "En la práctica, eso significa operadores dentro de la empresa, no en una llamada trimestral. Los operating partners siguen comprometidos hasta el primer hito de ingresos, luego migran a la supervisión a nivel de board. El portafolio actual abarca infraestructura de activos judiciales, precificación de seguros e inteligencia de subastas inmobiliarias, cada uno un vertical donde la [profundidad de dominio brasileña es el moat](/library/data-network-effects-vertical-ai). Vea cómo se conecta al modelo operativo en [/principles](/principles).",
             "El premio del studio no es secreto. Es el resultado predecible de poner constructores experimentados dentro de una empresa el primer día, en un mercado donde casi nadie más puede. Brasil no solo permite que el modelo de venture studio funcione. Es donde el modelo paga más."
           ]
+        }
+      ]
+    }
+  },
+  {
+    "slug": "yc-vs-techstars-vs-venture-studio",
+    "category": "insights",
+    "type": "Comparison",
+    "readTime": "7 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-09",
+    "isPublished": true,
+    "en": {
+      "title": "YC vs Techstars vs Venture Studio: Terms and Model Compared",
+      "description": "Y Combinator, Techstars, and venture studios compared on capital, equity, and how they engage. Which path fits a founder depends on what you are missing.",
+      "sections": [
+        {
+          "paragraphs": [
+            "The difference between Y Combinator, Techstars, and a venture studio comes down to how early they engage and how much they take. YC and Techstars are accelerators that invest a small check into a company you already started, take single-digit equity, and run a fixed program. A venture studio co-founds the company with you from day zero, supplying the idea, a build team, and first capital, and takes a founder-level stake in return."
+          ]
+        },
+        {
+          "id": "yc-vs-techstars-vs-venture-studio",
+          "heading": "YC vs Techstars vs venture studio",
+          "level": 2,
+          "paragraphs": [
+            "**Accelerators fund a company you already have. A studio helps build the company you do not have yet.** That single line explains most of the gap. Y Combinator and Techstars both back founders who have already started, run a roughly three-month program, and end in a demo day. A venture studio has no cohort and no demo day, because it is inside the company building alongside you from before there is a company to fund."
+          ]
+        },
+        {
+          "id": "y-combinator-the-standard-accelerator-deal",
+          "heading": "Y Combinator: the standard accelerator deal",
+          "level": 2,
+          "paragraphs": [
+            "Y Combinator invests 500,000 dollars in every company on identical public terms. The first 125,000 dollars buys 7 percent on a post-money SAFE, and the remaining 375,000 dollars comes as an uncapped SAFE with a most-favored-nation clause that converts at your next priced round. The program runs about three months and ends in a demo day, and its real edge is the alumni network and the investor access that follows. YC funds a team that has already begun building and leaves the building to them."
+          ]
+        },
+        {
+          "id": "techstars-mentor-driven-a-smaller-check",
+          "heading": "Techstars: mentor-driven, a smaller check",
+          "level": 2,
+          "paragraphs": [
+            "Techstars offers a standard deal of 20,000 dollars for 6 percent of common stock, plus access to a 100,000 dollar convertible note. Its programs are mentor-driven and often tied to a city or a corporate partner, running about three months and ending in a demo day. Like YC, Techstars invests into a company that already exists and stays hands-off on the actual product. The draw is depth of mentorship and a specific network rather than the size of the check."
+          ]
+        },
+        {
+          "id": "venture-studio-the-co-founding-model",
+          "heading": "Venture studio: the co-founding model",
+          "level": 2,
+          "paragraphs": [
+            "A venture studio is not an accelerator. It co-founds the company from day zero, contributing the starting idea, its own engineers and operators to build the first product, and first capital. There is no fixed cohort and no demo day. Because it acts as a co-founder rather than a passive backer, a studio takes a much larger stake, commonly in the range of 30 to 50 percent. You are not paying for a program. You are trading equity for a company that gets built with you."
+          ]
+        },
+        {
+          "id": "the-comparison-in-one-view",
+          "heading": "The comparison in one view",
+          "level": 2,
+          "paragraphs": [
+            "The three models line up cleanly once you separate what each one actually gives."
+          ],
+          "bullets": [
+            "Capital: YC puts in 500,000 dollars. Techstars puts in 20,000 dollars plus a 100,000 dollar note. A studio puts in first-ticket capital plus a team that builds.",
+            "Equity: YC takes about 7 percent. Techstars takes about 6 percent. A studio takes roughly 30 to 50 percent.",
+            "Engagement: YC and Techstars run a three-month program after you have started. A studio builds with you from before the company exists.",
+            "Best for: an accelerator suits a team with a product that needs capital, network, and validation. A studio suits a domain expert with no team and no product who wants it co-built."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Y Combinator invests 500,000 dollars on standard terms, 125,000 dollars for 7 percent on a post-money SAFE plus 375,000 dollars on an uncapped SAFE. Techstars offers 20,000 dollars for 6 percent of common stock plus a 100,000 dollar convertible note.",
+            "attribution": "Y Combinator and Techstars standard deal terms"
+          }
+        },
+        {
+          "id": "which-one-should-you-choose",
+          "heading": "Which one should you choose",
+          "level": 2,
+          "paragraphs": [
+            "Match the path to what you are missing, not to the lowest dilution number. If you already have a team and a shipping product, an accelerator check plus its network is the cheaper trade, and YC's brand or Techstars' mentor depth may decide it. If you are a domain expert with no team and no product, a studio closes a gap an accelerator cannot, because a three-month program will not build the company for you. The honest question is not which is best in general, but which supplies exactly what you do not have."
+          ]
+        },
+        {
+          "id": "where-avante-fits",
+          "heading": "Where Avante fits",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures is a venture studio, so weigh this as an interested view. Avante co-founds AI-native companies for Brazil and LATAM, meeting founders at day zero with capital and a team that builds beside them rather than a term sheet and a calendar invite. If you want the fuller separation of models, read the [difference between a venture studio, an accelerator, and an incubator](/en/library/venture-studio-vs-accelerator-vs-incubator), and to understand the trade, read [how much equity venture studios take](/en/library/how-much-equity-do-venture-studios-take)."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "yc vs techstars vs venture studio",
+          "a": "Y Combinator and Techstars are accelerators that invest a small check into a company you already started and take single-digit equity, about 7 percent and 6 percent respectively, then run a three-month program. A venture studio co-founds the company from day zero, supplies a build team and first capital, and takes a much larger founder-level stake, commonly 30 to 50 percent."
+        },
+        {
+          "q": "How much equity does Y Combinator take?",
+          "a": "Y Combinator invests 500,000 dollars in total. The first 125,000 dollars buys a fixed 7 percent on a post-money SAFE, and the remaining 375,000 dollars is an uncapped SAFE with a most-favored-nation clause that converts at the next priced round."
+        },
+        {
+          "q": "Is a venture studio better than YC or Techstars?",
+          "a": "Neither is better in the abstract, because they sell different things. An accelerator sells a program, a network, and a small check to a company that already exists. A studio co-founds the company and takes a larger stake for building it. Choose the accelerator if you have a team and need capital and network, and the studio if you need the company itself built with you."
+        },
+        {
+          "q": "Should I apply to an accelerator or join a venture studio?",
+          "a": "Decide by what you lack. If you have a team and a working product, an accelerator like YC or Techstars gives capital and network at low dilution. If you have domain insight but no team or product, a venture studio closes that gap by building alongside you, which a fixed-term accelerator program does not do."
+        }
+      ]
+    },
+    "pt": {
+      "title": "YC vs Techstars vs Venture Studio: Termos e Modelo Comparados",
+      "description": "Y Combinator, Techstars e venture studios comparados em capital, participação e forma de atuação. Qual caminho serve a um fundador depende daquilo que está faltando.",
+      "sections": [
+        {
+          "paragraphs": [
+            "A diferença entre Y Combinator, Techstars e um venture studio está em quão cedo eles entram e quanto eles pegam. YC e Techstars são aceleradoras que investem um cheque pequeno em uma empresa que você já começou, ficam com uma participação de um dígito e rodam um programa de duração fixa. Um venture studio cofunda a empresa com você desde o dia zero, fornecendo a ideia, um time para construir e o capital inicial, e recebe em troca uma participação de nível de fundador."
+          ]
+        },
+        {
+          "id": "yc-vs-techstars-vs-venture-studio",
+          "heading": "YC vs Techstars vs venture studio",
+          "level": 2,
+          "paragraphs": [
+            "**Aceleradoras financiam uma empresa que você já tem. Um studio ajuda a construir a empresa que você ainda não tem.** Essa única frase explica a maior parte da diferença. Y Combinator e Techstars apoiam fundadores que já começaram, rodam um programa de cerca de três meses e terminam em um demo day. Um venture studio não tem turma nem demo day, porque está dentro da empresa, construindo ao seu lado desde antes de existir uma empresa para financiar."
+          ]
+        },
+        {
+          "id": "y-combinator-the-standard-accelerator-deal",
+          "heading": "Y Combinator: o acordo padrão de aceleradora",
+          "level": 2,
+          "paragraphs": [
+            "A Y Combinator investe 500.000 dólares em cada empresa sob termos públicos idênticos. Os primeiros 125.000 dólares compram 7 por cento em um SAFE post-money, e os 375.000 dólares restantes vêm como um SAFE sem teto de avaliação, com uma cláusula de nação mais favorecida que converte na sua próxima rodada precificada. O programa dura cerca de três meses e termina em um demo day, e sua vantagem real é a rede de ex-alunos e o acesso a investidores que vem depois. A YC financia um time que já começou a construir e deixa a construção com ele."
+          ]
+        },
+        {
+          "id": "techstars-mentor-driven-a-smaller-check",
+          "heading": "Techstars: guiada por mentores, um cheque menor",
+          "level": 2,
+          "paragraphs": [
+            "A Techstars oferece um acordo padrão de 20.000 dólares por 6 por cento de ações ordinárias, mais acesso a uma nota conversível de 100.000 dólares. Seus programas são guiados por mentores e costumam estar ligados a uma cidade ou a um parceiro corporativo, durando cerca de três meses e terminando em um demo day. Assim como a YC, a Techstars investe em uma empresa que já existe e não se envolve no produto em si. O atrativo é a profundidade da mentoria e uma rede específica, mais do que o tamanho do cheque."
+          ]
+        },
+        {
+          "id": "venture-studio-the-co-founding-model",
+          "heading": "Venture studio: o modelo de cofundação",
+          "level": 2,
+          "paragraphs": [
+            "Um venture studio não é uma aceleradora. Ele cofunda a empresa desde o dia zero, contribuindo com a ideia inicial, com seus próprios engenheiros e operadores para construir o primeiro produto, e com o capital inicial. Não há turma fixa nem demo day. Como atua como cofundador, e não como um investidor passivo, um studio fica com uma participação bem maior, normalmente na faixa de 30 a 50 por cento. Você não está pagando por um programa. Você está trocando participação por uma empresa que é construída com você."
+          ]
+        },
+        {
+          "id": "the-comparison-in-one-view",
+          "heading": "A comparação em uma visão",
+          "level": 2,
+          "paragraphs": [
+            "Os três modelos se alinham de forma clara quando você separa o que cada um de fato entrega."
+          ],
+          "bullets": [
+            "Capital: a YC aporta 500.000 dólares. A Techstars aporta 20.000 dólares mais uma nota de 100.000 dólares. Um studio aporta o capital do primeiro cheque mais um time que constrói.",
+            "Participação: a YC fica com cerca de 7 por cento. A Techstars fica com cerca de 6 por cento. Um studio fica com algo entre 30 e 50 por cento.",
+            "Envolvimento: YC e Techstars rodam um programa de três meses depois que você já começou. Um studio constrói com você desde antes de a empresa existir.",
+            "Melhor para: uma aceleradora serve a um time com um produto que precisa de capital, rede e validação. Um studio serve a um especialista de domínio sem time e sem produto que quer construí-lo em conjunto."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "A Y Combinator investe 500.000 dólares em termos padrão, 125.000 dólares por 7 por cento em um SAFE post-money mais 375.000 dólares em um SAFE sem teto. A Techstars oferece 20.000 dólares por 6 por cento de ações ordinárias mais uma nota conversível de 100.000 dólares.",
+            "attribution": "Y Combinator and Techstars standard deal terms"
+          }
+        },
+        {
+          "id": "which-one-should-you-choose",
+          "heading": "Qual você deve escolher",
+          "level": 2,
+          "paragraphs": [
+            "Escolha o caminho pelo que está faltando, não pelo menor número de diluição. Se você já tem um time e um produto no mercado, o cheque de uma aceleradora somado à sua rede é a troca mais barata, e a marca da YC ou a profundidade de mentoria da Techstars pode decidir. Se você é um especialista de domínio sem time e sem produto, um studio fecha uma lacuna que uma aceleradora não consegue fechar, porque um programa de três meses não vai construir a empresa para você. A pergunta honesta não é qual é o melhor no geral, mas qual entrega exatamente aquilo que você não tem."
+          ]
+        },
+        {
+          "id": "where-avante-fits",
+          "heading": "Onde a Avante se encaixa",
+          "level": 2,
+          "paragraphs": [
+            "A Avante Ventures é um venture studio, então considere isto como uma visão interessada. A Avante cofunda empresas AI-native para o Brasil e a América Latina, encontrando fundadores no dia zero com capital e um time que constrói ao lado deles, em vez de um term sheet e um convite de calendário. Se você quer a separação mais completa dos modelos, leia a [diferença entre um venture studio, uma aceleradora e uma incubadora](/pt/library/venture-studio-vs-accelerator-vs-incubator), e para entender a troca, leia [quanto de participação os venture studios pegam](/pt/library/how-much-equity-do-venture-studios-take)."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "yc vs techstars vs venture studio",
+          "a": "Y Combinator e Techstars são aceleradoras que investem um cheque pequeno em uma empresa que você já começou e ficam com uma participação de um dígito, cerca de 7 por cento e 6 por cento respectivamente, e depois rodam um programa de três meses. Um venture studio cofunda a empresa desde o dia zero, fornece um time para construir e o capital inicial, e fica com uma participação de nível de fundador bem maior, normalmente de 30 a 50 por cento."
+        },
+        {
+          "q": "Quanta participação a Y Combinator pega?",
+          "a": "A Y Combinator investe 500.000 dólares no total. Os primeiros 125.000 dólares compram 7 por cento fixos em um SAFE post-money, e os 375.000 dólares restantes são um SAFE sem teto com uma cláusula de nação mais favorecida que converte na próxima rodada precificada."
+        },
+        {
+          "q": "Um venture studio é melhor que a YC ou a Techstars?",
+          "a": "Nenhum é melhor no abstrato, porque eles vendem coisas diferentes. Uma aceleradora vende um programa, uma rede e um cheque pequeno para uma empresa que já existe. Um studio cofunda a empresa e fica com uma participação maior por construí-la. Escolha a aceleradora se você tem um time e precisa de capital e rede, e o studio se você precisa que a própria empresa seja construída com você."
+        },
+        {
+          "q": "Devo me candidatar a uma aceleradora ou entrar em um venture studio?",
+          "a": "Decida pelo que falta a você. Se você tem um time e um produto funcionando, uma aceleradora como a YC ou a Techstars entrega capital e rede com baixa diluição. Se você tem conhecimento de domínio, mas nenhum time ou produto, um venture studio fecha essa lacuna construindo ao seu lado, algo que um programa de aceleradora com prazo fixo não faz."
         }
       ]
     }

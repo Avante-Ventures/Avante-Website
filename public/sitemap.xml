@@ -380,7 +380,7 @@
   <!-- 9. Global Venture Studio Data (DRAFT) -->
 
   <!-- CONTENT-ENGINE:START (managed by content-engine/merge.py - do not edit by hand) -->
-  <!-- 55 engine article(s) x 3 locales. Generated from content-engine/outputs. Edit the engine, not this block. -->
+  <!-- 62 engine article(s) x 3 locales. Generated from content-engine/outputs. Edit the engine, not this block. -->
   <url>
     <loc>https://avanteventures.com/en/library/accelerator-vs-vc-founder-guide</loc>
     <lastmod>2026-06-21</lastmod>
@@ -590,6 +590,66 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/ai-native-without-series-a"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/ai-native-without-series-a"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/ai-native-without-series-a"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/en/library/ai-startup-business-models-2026</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/ai-startup-business-models-2026"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/ai-startup-business-models-2026"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/ai-startup-business-models-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/ai-startup-business-models-2026"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/ai-startup-business-models-2026</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/ai-startup-business-models-2026"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/ai-startup-business-models-2026"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/ai-startup-business-models-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/ai-startup-business-models-2026"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/ai-startup-business-models-2026</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/ai-startup-business-models-2026"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/ai-startup-business-models-2026"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/ai-startup-business-models-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/ai-startup-business-models-2026"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/en/library/ai-startup-ideas-2026-latin-america</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/ai-startup-ideas-2026-latin-america"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/ai-startup-ideas-2026-latin-america"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/ai-startup-ideas-2026-latin-america"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/ai-startup-ideas-2026-latin-america"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/ai-startup-ideas-2026-latin-america</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/ai-startup-ideas-2026-latin-america"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/ai-startup-ideas-2026-latin-america"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/ai-startup-ideas-2026-latin-america"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/ai-startup-ideas-2026-latin-america"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/ai-startup-ideas-2026-latin-america</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/ai-startup-ideas-2026-latin-america"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/ai-startup-ideas-2026-latin-america"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/ai-startup-ideas-2026-latin-america"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/ai-startup-ideas-2026-latin-america"/>
   </url>
   <url>
     <loc>https://avanteventures.com/en/library/ai-wrapper-trap-defensible-ai-native</loc>
@@ -1222,6 +1282,36 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/how-much-equity-do-venture-studios-take"/>
   </url>
   <url>
+    <loc>https://avanteventures.com/en/library/how-to-build-an-ai-startup-in-2026</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/how-to-build-an-ai-startup-in-2026"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/how-to-build-an-ai-startup-in-2026"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/how-to-build-an-ai-startup-in-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/how-to-build-an-ai-startup-in-2026"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/how-to-build-an-ai-startup-in-2026</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/how-to-build-an-ai-startup-in-2026"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/how-to-build-an-ai-startup-in-2026"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/how-to-build-an-ai-startup-in-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/how-to-build-an-ai-startup-in-2026"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/how-to-build-an-ai-startup-in-2026</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/how-to-build-an-ai-startup-in-2026"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/how-to-build-an-ai-startup-in-2026"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/how-to-build-an-ai-startup-in-2026"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/how-to-build-an-ai-startup-in-2026"/>
+  </url>
+  <url>
     <loc>https://avanteventures.com/en/library/how-to-choose-a-venture-studio</loc>
     <lastmod>2026-07-07</lastmod>
     <changefreq>yearly</changefreq>
@@ -1612,6 +1702,36 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/rag-vs-finetune-vs-long-context-playbook"/>
   </url>
   <url>
+    <loc>https://avanteventures.com/en/library/safe-vs-priced-round-for-ai-startups</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/safe-vs-priced-round-for-ai-startups"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/safe-vs-priced-round-for-ai-startups"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/safe-vs-priced-round-for-ai-startups"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/safe-vs-priced-round-for-ai-startups"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/safe-vs-priced-round-for-ai-startups</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/safe-vs-priced-round-for-ai-startups"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/safe-vs-priced-round-for-ai-startups"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/safe-vs-priced-round-for-ai-startups"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/safe-vs-priced-round-for-ai-startups"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/safe-vs-priced-round-for-ai-startups</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/safe-vs-priced-round-for-ai-startups"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/safe-vs-priced-round-for-ai-startups"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/safe-vs-priced-round-for-ai-startups"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/safe-vs-priced-round-for-ai-startups"/>
+  </url>
+  <url>
     <loc>https://avanteventures.com/en/library/services-to-productized-ai-copilot-playbook</loc>
     <lastmod>2026-07-03</lastmod>
     <changefreq>yearly</changefreq>
@@ -1912,6 +2032,36 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/venture-studio-vs-incubator-explained"/>
   </url>
   <url>
+    <loc>https://avanteventures.com/en/library/venture-studio-vs-raising-a-seed-round</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/venture-studio-vs-raising-a-seed-round"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/venture-studio-vs-raising-a-seed-round"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/venture-studio-vs-raising-a-seed-round"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/venture-studio-vs-raising-a-seed-round"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/venture-studio-vs-raising-a-seed-round</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/venture-studio-vs-raising-a-seed-round"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/venture-studio-vs-raising-a-seed-round"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/venture-studio-vs-raising-a-seed-round"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/venture-studio-vs-raising-a-seed-round"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/venture-studio-vs-raising-a-seed-round</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/venture-studio-vs-raising-a-seed-round"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/venture-studio-vs-raising-a-seed-round"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/venture-studio-vs-raising-a-seed-round"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/venture-studio-vs-raising-a-seed-round"/>
+  </url>
+  <url>
     <loc>https://avanteventures.com/en/library/venture-studio-vs-vc-explained</loc>
     <lastmod>2026-06-21</lastmod>
     <changefreq>yearly</changefreq>
@@ -2002,6 +2152,36 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/what-is-a-startup-studio"/>
   </url>
   <url>
+    <loc>https://avanteventures.com/en/library/what-is-a-venture-studio</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/what-is-a-venture-studio"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/what-is-a-venture-studio"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/what-is-a-venture-studio"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/what-is-a-venture-studio"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/what-is-a-venture-studio</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/what-is-a-venture-studio"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/what-is-a-venture-studio"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/what-is-a-venture-studio"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/what-is-a-venture-studio"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/what-is-a-venture-studio</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/what-is-a-venture-studio"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/what-is-a-venture-studio"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/what-is-a-venture-studio"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/what-is-a-venture-studio"/>
+  </url>
+  <url>
     <loc>https://avanteventures.com/en/library/why-venture-studios-win-latam</loc>
     <lastmod>2026-06-02</lastmod>
     <changefreq>yearly</changefreq>
@@ -2030,6 +2210,36 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/why-venture-studios-win-latam"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/why-venture-studios-win-latam"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/why-venture-studios-win-latam"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/en/library/yc-vs-techstars-vs-venture-studio</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/yc-vs-techstars-vs-venture-studio"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/yc-vs-techstars-vs-venture-studio"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/yc-vs-techstars-vs-venture-studio"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/yc-vs-techstars-vs-venture-studio"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/yc-vs-techstars-vs-venture-studio</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/yc-vs-techstars-vs-venture-studio"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/yc-vs-techstars-vs-venture-studio"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/yc-vs-techstars-vs-venture-studio"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/yc-vs-techstars-vs-venture-studio"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/yc-vs-techstars-vs-venture-studio</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/yc-vs-techstars-vs-venture-studio"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/yc-vs-techstars-vs-venture-studio"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/yc-vs-techstars-vs-venture-studio"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/yc-vs-techstars-vs-venture-studio"/>
   </url>
   <!-- CONTENT-ENGINE:END -->
 
