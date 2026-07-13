@@ -1767,7 +1767,7 @@ const articleSiggaCaseStudy: Article = {
 // ─────────────────────────────────────────────────────────────────────
 
 // === CONTENT-ENGINE:START (managed by content-engine/merge.py — do not edit by hand) ===
-// 62 article(s) generated from content-engine/outputs. Edit the engine, not this block.
+// 70 article(s) generated from content-engine/outputs. Edit the engine, not this block.
 const engineArticles: Article[] = [
   {
     "slug": "accelerator-vs-vc-founder-guide",
@@ -5231,6 +5231,216 @@ const engineArticles: Article[] = [
         {
           "q": "Cómo aborda Avante Ventures la IA aplicada?",
           "a": "Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina y que construye IA aplicada en workflows verticales en lugar de herramientas generativas horizontales. Lanza 3-4 ventures por año por un sistema de seis etapas, aporta US$ 500K-1.5M por venture, y corre el flywheel copilot, dato, capital para que cada venture sea dueña de un loop de datos propietario que un modelo de fundación no copia."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "board-seats-founder-gives-up-seed",
+    "category": "insights",
+    "type": "Guide",
+    "readTime": "6 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-13",
+    "isPublished": true,
+    "en": {
+      "title": "How Many Board Seats Does a Founder Give Up at Seed?",
+      "description": "At seed, most founders give up zero to one investor board seat. SAFEs and notes usually add none. Here is the control math that matters more than the count.",
+      "sections": [
+        {
+          "paragraphs": [
+            "The default answer at seed is zero to one investor board seat, and the number itself is the least important part of the decision. If you raise on SAFEs or convertible notes, you usually give up none, because no priced board is formed yet. If you raise a priced round, expect to add at most one investor seat while keeping founders in the majority. What actually decides your control is the math around that seat: who appoints the remaining directors and what any single director can block. Solve for that structure before you argue about the headcount."
+          ]
+        },
+        {
+          "id": "the-short-answer",
+          "heading": "The short answer",
+          "level": 2,
+          "paragraphs": [
+            "At the seed stage a founder typically gives up zero to one investor board seat. Which end of that range you land on depends almost entirely on the instrument you raise on.",
+            "If the round is done on SAFEs or convertible notes, the usual outcome is zero. These instruments defer the priced valuation and, in their standard forms, do not create a board or grant a board seat at all. A priced round is different. When investors buy preferred shares at a set valuation, they often ask for a formal board, and the common result is a small board with the founders in the majority and at most one seat designated by the lead investor.",
+            "That is the mechanical answer. The more useful answer is that the seat count is a proxy for something founders should care about far more, which is the control structure the seat sits inside."
+          ]
+        },
+        {
+          "id": "why-safes-and-notes-usually-mean-zero-board-seats",
+          "heading": "Why SAFEs and notes usually mean zero board seats",
+          "level": 2,
+          "paragraphs": [
+            "Raising on SAFEs or convertible notes is an increasingly common way seed rounds in Brazil and LATAM are structured, in large part because Y Combinator popularized the post-money SAFE as a fast, low-friction instrument. The appeal is simple. You raise money now, you defer the valuation and the full shareholder machinery to a later [priced round](/en/library/safe-vs-priced-round-seed-latam), and you avoid negotiating a full set of investor rights while the company is still tiny.",
+            "A direct consequence of that structure is board composition. Because a SAFE or a note is not an equity purchase at a fixed price, it does not, by default, reorganize your board or hand a seat to an investor. In practice this means many seed founders who raise this way keep a founder-only board, or no formal board at all, until the first priced round converts everything into preferred shares.",
+            "That is the trade. You keep board control longer, and in exchange the valuation and the investor rights get negotiated later, often when you have less leverage than you expect and more capital riding on the outcome."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Y Combinator's standard post-money SAFE, the most widely used seed-stage instrument, grants investors no board seat and no board voting rights on its own. A board seat is negotiated only when the SAFE later converts in a priced round.",
+            "attribution": "Y Combinator, standard post-money SAFE documentation"
+          }
+        },
+        {
+          "id": "what-a-priced-seed-round-actually-adds",
+          "heading": "What a priced seed round actually adds",
+          "level": 2,
+          "paragraphs": [
+            "A priced seed round is where the board question becomes real. When investors buy preferred stock, they are buying a set of rights, and board representation is frequently one of them.",
+            "The most common configuration is a three-person board: two founders and one director designated by the lead investor. Founders keep the majority of seats. The investor gets a voice and information rights, but not the votes to unilaterally control ordinary board decisions. Some rounds instead use a two-founder board with the investor taking only a board observer seat, which carries the right to attend and speak but not to vote.",
+            "The point is that even at the higher end of the range, one investor seat on a founder-majority board is a very different thing from losing control. The number is small on purpose."
+          ]
+        },
+        {
+          "id": "reading-the-nvca-model-documents-correctly",
+          "heading": "Reading the NVCA model documents correctly",
+          "level": 2,
+          "paragraphs": [
+            "Much of the vocabulary founders hear at this stage traces back to the National Venture Capital Association. The NVCA publishes a set of model financing documents, including a model Voting Agreement, that are widely used as the starting template for US priced venture rounds and are referenced in LATAM deals as well.",
+            "It is worth being precise about what those documents do. The NVCA model Voting Agreement is a template for how the board is elected, and in its standard structure it contemplates founders electing a majority of directors and a single director designated by the preferred investors. That is a feature of how the template is written, not a claim about what any specific investor intends in your deal. Treat the model documents as the default menu that most priced-round paperwork starts from, then negotiate the specifics, rather than assuming the template describes a fixed outcome."
+          ]
+        },
+        {
+          "id": "the-control-math-that-matters-more-than-the-count",
+          "heading": "The control math that matters more than the count",
+          "level": 2,
+          "paragraphs": [
+            "Two founders can hold a majority of board seats and still be constrained on the decisions that matter most. This is why the seat count alone is a weak signal.",
+            "Watch three things instead:"
+          ],
+          "bullets": [
+            "**Protective provisions.** Preferred investors usually get a list of decisions that require their consent regardless of board votes, such as selling the company, raising more money, or changing the share structure. A single investor seat paired with broad [protective provisions](/en/library/protective-provisions-founder-guide) is more control than two seats with narrow ones.",
+            "**Who fills the remaining seats.** A three-person board with a defined process for the third, independent seat behaves very differently from one where that seat is left open or effectively appointed by the investor.",
+            "**What triggers a board change.** Some terms expand investor board rights automatically at the next round or if certain milestones are missed. The seat you give up at seed can quietly grow at Series A."
+          ]
+        },
+        {
+          "id": "how-we-frame-this-with-the-founders-we-co-found",
+          "heading": "How we frame this with the founders we co-found",
+          "level": 2,
+          "paragraphs": [
+            "Avante co-founds AI-native companies for Brazil and LATAM, which means we sit on the founder side of this table from day one. Our guidance is consistent. Do not optimize for zero investor seats as a point of pride. Optimize for a board and a set of rights that still let you run the company, raise the next round, and reach an outcome without needing permission at every turn.",
+            "For most seed founders that looks like this: raise on a clean instrument, keep the board small and founder-majority when it becomes priced, give a strong lead investor at most one seat, and spend your negotiating energy on the protective provisions and the appointment process rather than on the number itself. The seat is visible. The control math is what you actually live with."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How many board seats do founders typically give up at the seed stage?",
+          "a": "Usually zero to one investor board seat. Rounds raised on SAFEs or convertible notes generally add none because no priced board is formed. Priced seed rounds commonly add at most one seat designated by the lead investor, on a board where founders keep the majority."
+        },
+        {
+          "q": "Do SAFEs or convertible notes give investors a board seat?",
+          "a": "In their standard forms, no. A SAFE or note defers the priced valuation and does not, by default, create a board or grant an investor seat. Board representation is typically negotiated later, when the instrument converts into preferred shares in a priced round."
+        },
+        {
+          "q": "What does a typical priced seed board look like?",
+          "a": "A common configuration is a three-person board with two founders and one director designated by the lead investor, keeping founders in the majority. Some rounds instead give the investor a non-voting board observer seat rather than a full director seat."
+        },
+        {
+          "q": "Why does the number of board seats matter less than founders think?",
+          "a": "Because control lives in the details around the seat. Protective provisions that require investor consent for major decisions, the process for filling any independent seat, and terms that expand investor board rights at the next round can matter far more than whether an investor holds one seat or none."
+        },
+        {
+          "q": "What are NVCA model documents and do they apply outside the US?",
+          "a": "The National Venture Capital Association publishes model financing documents, including a model Voting Agreement, that serve as the standard starting template for US priced venture rounds and are also referenced in LATAM deals. Their standard structure contemplates founders electing a board majority and preferred investors designating a single director, which you then negotiate rather than accept as fixed."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Quantos assentos de conselho um fundador cede no seed?",
+      "description": "No seed, a maioria dos fundadores cede de zero a um assento de conselho para investidores. SAFEs e notas geralmente não adicionam nenhum. Aqui está a matemática de controle que importa mais do que a contagem.",
+      "sections": [
+        {
+          "paragraphs": [
+            "A resposta padrão no seed é de zero a um assento de conselho para investidores, e o número em si é a parte menos importante da decisão. Se você capta com SAFEs ou notas conversíveis, normalmente não cede nenhum, porque ainda não se forma um conselho precificado. Se você faz uma rodada precificada, espere adicionar no máximo um assento de investidor mantendo os fundadores na maioria. O que de fato decide o seu controle é a matemática em torno desse assento: quem indica os demais conselheiros e o que qualquer conselheiro isolado pode vetar. Resolva essa estrutura antes de discutir o número."
+          ]
+        },
+        {
+          "id": "the-short-answer",
+          "heading": "A resposta curta",
+          "level": 2,
+          "paragraphs": [
+            "No estágio seed, um fundador normalmente cede de zero a um assento de conselho para investidores. Em qual extremo dessa faixa você vai parar depende quase inteiramente do instrumento com o qual você capta.",
+            "Se a rodada é feita com SAFEs ou notas conversíveis, o resultado usual é zero. Esses instrumentos adiam a avaliação precificada e, em suas formas padrão, não criam um conselho nem concedem qualquer assento de conselho. Uma rodada precificada é diferente. Quando os investidores compram ações preferenciais a uma avaliação definida, eles frequentemente pedem um conselho formal, e o resultado comum é um conselho pequeno com os fundadores na maioria e no máximo um assento indicado pelo investidor líder.",
+            "Essa é a resposta mecânica. A resposta mais útil é que a contagem de assentos é um indicador de algo com que os fundadores deveriam se importar muito mais, que é a estrutura de controle na qual o assento está inserido."
+          ]
+        },
+        {
+          "id": "why-safes-and-notes-usually-mean-zero-board-seats",
+          "heading": "Por que SAFEs e notas normalmente significam zero assentos de conselho",
+          "level": 2,
+          "paragraphs": [
+            "Captar com SAFEs ou notas conversíveis é uma forma cada vez mais comum de estruturar rodadas seed no Brasil e na América Latina, em grande parte porque a Y Combinator popularizou o post-money SAFE como um instrumento rápido e de baixo atrito. O apelo é simples. Você capta dinheiro agora, adia a avaliação e toda a maquinaria societária para uma [rodada precificada](/pt/library/safe-vs-priced-round-seed-latam) posterior, e evita negociar um conjunto completo de direitos de investidor enquanto a empresa ainda é pequena.",
+            "Uma consequência direta dessa estrutura é a composição do conselho. Como um SAFE ou uma nota não é uma compra de participação a um preço fixo, ele não, por padrão, reorganiza o seu conselho nem entrega um assento a um investidor. Na prática, isso significa que muitos fundadores em seed que captam dessa forma mantêm um conselho apenas de fundadores, ou nenhum conselho formal, até que a primeira rodada precificada converta tudo em ações preferenciais.",
+            "Essa é a troca. Você mantém o controle do conselho por mais tempo e, em contrapartida, a avaliação e os direitos de investidor são negociados depois, muitas vezes quando você tem menos poder de barganha do que espera e mais capital em jogo no resultado."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O post-money SAFE padrão da Y Combinator, o instrumento de estágio seed mais usado, não concede aos investidores nenhum assento de conselho nem direitos de voto no conselho por si só. Um assento de conselho só é negociado quando o SAFE depois converte em uma rodada precificada.",
+            "attribution": "Y Combinator, documentação do post-money SAFE padrão"
+          }
+        },
+        {
+          "id": "what-a-priced-seed-round-actually-adds",
+          "heading": "O que uma rodada seed precificada de fato acrescenta",
+          "level": 2,
+          "paragraphs": [
+            "Uma rodada seed precificada é onde a questão do conselho se torna real. Quando os investidores compram ações preferenciais, eles estão comprando um conjunto de direitos, e a representação no conselho é frequentemente um deles.",
+            "A configuração mais comum é um conselho de três pessoas: dois fundadores e um conselheiro indicado pelo investidor líder. Os fundadores mantêm a maioria dos assentos. O investidor ganha voz e direitos de informação, mas não os votos para controlar unilateralmente as decisões ordinárias do conselho. Algumas rodadas usam, em vez disso, um conselho de dois fundadores com o investidor assumindo apenas um assento de observador de conselho, que dá o direito de comparecer e falar, mas não de votar.",
+            "O ponto é que, mesmo no extremo mais alto da faixa, um assento de investidor em um conselho com maioria de fundadores é algo muito diferente de perder o controle. O número é pequeno de propósito."
+          ]
+        },
+        {
+          "id": "reading-the-nvca-model-documents-correctly",
+          "heading": "Lendo os documentos-modelo da NVCA corretamente",
+          "level": 2,
+          "paragraphs": [
+            "Grande parte do vocabulário que os fundadores ouvem nesse estágio remonta à National Venture Capital Association. A NVCA publica um conjunto de documentos-modelo de financiamento, incluindo um modelo de Acordo de Votação, que são amplamente usados como o template inicial para rodadas de venture precificadas nos Estados Unidos e são referência em negócios na América Latina também.",
+            "Vale ser preciso sobre o que esses documentos fazem. O modelo de Acordo de Votação da NVCA é um template de como o conselho é eleito e, em sua estrutura padrão, ele contempla os fundadores elegendo a maioria dos conselheiros e um único conselheiro indicado pelos investidores preferenciais. Isso é uma característica de como o template foi escrito, não uma afirmação sobre o que qualquer investidor específico pretende no seu negócio. Trate os documentos-modelo como o menu padrão do qual a maior parte da papelada de rodada precificada parte, e então negocie os detalhes, em vez de assumir que o template descreve um resultado fixo."
+          ]
+        },
+        {
+          "id": "the-control-math-that-matters-more-than-the-count",
+          "heading": "A matemática de controle que importa mais do que a contagem",
+          "level": 2,
+          "paragraphs": [
+            "Dois fundadores podem deter a maioria dos assentos do conselho e ainda assim estar limitados nas decisões que mais importam. É por isso que a contagem de assentos, sozinha, é um sinal fraco.",
+            "Observe três coisas em vez disso:"
+          ],
+          "bullets": [
+            "**Cláusulas de proteção.** Os investidores preferenciais costumam obter uma lista de decisões que exigem o consentimento deles independentemente dos votos do conselho, como vender a empresa, captar mais dinheiro ou mudar a estrutura acionária. Um único assento de investidor combinado com [cláusulas de proteção](/pt/library/protective-provisions-founder-guide) amplas é mais controle do que dois assentos com cláusulas restritas.",
+            "**Quem preenche os assentos restantes.** Um conselho de três pessoas com um processo definido para o terceiro assento, o independente, se comporta de forma muito diferente de um em que esse assento fica em aberto ou é efetivamente indicado pelo investidor.",
+            "**O que dispara uma mudança no conselho.** Alguns termos ampliam automaticamente os direitos de conselho do investidor na próxima rodada ou se certos marcos não forem atingidos. O assento que você cede no seed pode crescer silenciosamente na Série A."
+          ]
+        },
+        {
+          "id": "how-we-frame-this-with-the-founders-we-co-found",
+          "heading": "Como enquadramos isso com os fundadores que co-fundamos",
+          "level": 2,
+          "paragraphs": [
+            "A Avante co-funda empresas nativas de IA para o Brasil e a América Latina, o que significa que sentamos do lado do fundador desta mesa desde o primeiro dia. Nossa orientação é consistente. Não otimize para zero assentos de investidor como ponto de orgulho. Otimize para um conselho e um conjunto de direitos que ainda permitam que você toque a empresa, capte a próxima rodada e chegue a um resultado sem precisar de permissão a cada passo.",
+            "Para a maioria dos fundadores em seed, isso se parece com o seguinte: capte com um instrumento limpo, mantenha o conselho pequeno e com maioria de fundadores quando ele se tornar precificado, dê a um investidor líder forte no máximo um assento, e gaste sua energia de negociação nas cláusulas de proteção e no processo de indicação, em vez de no número em si. O assento é visível. A matemática de controle é o que você de fato vive."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Quantos assentos de conselho os fundadores normalmente cedem no estágio seed?",
+          "a": "Normalmente de zero a um assento de conselho para investidores. Rodadas captadas com SAFEs ou notas conversíveis geralmente não adicionam nenhum, porque nenhum conselho precificado é formado. Rodadas seed precificadas costumam adicionar no máximo um assento indicado pelo investidor líder, em um conselho no qual os fundadores mantêm a maioria."
+        },
+        {
+          "q": "SAFEs ou notas conversíveis dão aos investidores um assento de conselho?",
+          "a": "Em suas formas padrão, não. Um SAFE ou nota adia a avaliação precificada e não, por padrão, cria um conselho nem concede um assento a um investidor. A representação no conselho é normalmente negociada depois, quando o instrumento converte em ações preferenciais em uma rodada precificada."
+        },
+        {
+          "q": "Como é um conselho seed precificado típico?",
+          "a": "Uma configuração comum é um conselho de três pessoas com dois fundadores e um conselheiro indicado pelo investidor líder, mantendo os fundadores na maioria. Algumas rodadas dão, em vez disso, ao investidor um assento de observador de conselho sem direito a voto, em vez de um assento pleno de conselheiro."
+        },
+        {
+          "q": "Por que o número de assentos de conselho importa menos do que os fundadores pensam?",
+          "a": "Porque o controle vive nos detalhes em torno do assento. Cláusulas de proteção que exigem o consentimento do investidor para decisões importantes, o processo para preencher qualquer assento independente e termos que ampliam os direitos de conselho do investidor na próxima rodada podem importar muito mais do que se um investidor detém um assento ou nenhum."
+        },
+        {
+          "q": "O que são os documentos-modelo da NVCA e eles se aplicam fora dos Estados Unidos?",
+          "a": "A National Venture Capital Association publica documentos-modelo de financiamento, incluindo um modelo de Acordo de Votação, que servem como o template inicial padrão para rodadas de venture precificadas nos Estados Unidos e também são referência em negócios na América Latina. Sua estrutura padrão contempla os fundadores elegendo a maioria do conselho e os investidores preferenciais indicando um único conselheiro, o que você então negocia em vez de aceitar como fixo."
         }
       ]
     }
@@ -8731,6 +8941,308 @@ const engineArticles: Article[] = [
     "ogImage": "/og/build-ai-eval-harness-playbook.png"
   },
   {
+    "slug": "convertible-note-vs-safe-ai-startups",
+    "category": "insights",
+    "type": "Comparison",
+    "readTime": "7 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-13",
+    "isPublished": true,
+    "en": {
+      "title": "Convertible Note vs SAFE for AI Startups: A Founder's Guide",
+      "description": "A plain-English breakdown of convertible notes versus SAFEs for AI startup founders, plus how the terms work in Brazil and LATAM.",
+      "sections": [
+        {
+          "paragraphs": [
+            "A convertible note is debt that converts to equity and carries an interest rate and a maturity date. A SAFE is a lighter agreement for future equity with no interest and no maturity. Most early AI startups now raise on SAFEs because they are faster and cheaper to close, which is exactly why Y Combinator built the SAFE and uses it in its standard deal. In Brazil and LATAM the closest local instrument is the contrato de mútuo conversível, and the right structure usually depends on where your fundable entity sits."
+          ]
+        },
+        {
+          "id": "the-short-version",
+          "heading": "The short version",
+          "level": 2,
+          "paragraphs": [
+            "If you are raising a pre-seed or seed round for an AI company, you will almost certainly be handed one of two documents: a convertible note or a SAFE. They rhyme, so founders often treat them as interchangeable. They are not.",
+            "A **convertible note** is a loan. It has an interest rate, a maturity date, and the legal weight of debt. It converts into equity later, usually at your next priced round.",
+            "A **SAFE** (Simple Agreement for Future Equity) is not a loan. It has no interest and no maturity date. It is a promise to give the investor equity in the future when a triggering event happens, most often your next priced round.",
+            "Both let you delay the hard question of what your company is worth today. They just carry very different amounts of baggage."
+          ]
+        },
+        {
+          "id": "what-a-convertible-note-actually-is",
+          "heading": "What a convertible note actually is",
+          "level": 2,
+          "paragraphs": [
+            "A convertible note is structured as debt on your cap table until it converts. That means three moving parts matter:",
+            "The maturity date is the part that bites. An AI startup burning capital on compute and talent can easily slip past 24 months without a priced round. A note that comes due creates a pressure point you do not want during a hard fundraising market."
+          ],
+          "bullets": [
+            "**Interest rate.** Typically a few percent per year. It accrues and usually converts into additional equity rather than being paid back in cash.",
+            "**Maturity date.** A hard deadline, often 18 to 24 months out. If you have not raised a qualifying round by then, the note technically comes due. In practice investors renegotiate, but the leverage sits with them.",
+            "**Discount and valuation cap.** The mechanics that reward the investor for taking early risk, by letting the note convert at a lower price than the new money pays."
+          ]
+        },
+        {
+          "id": "what-a-safe-actually-is",
+          "heading": "What a SAFE actually is",
+          "level": 2,
+          "paragraphs": [
+            "The SAFE was introduced by Y Combinator in 2013 as a founder-friendly alternative to the convertible note. Its whole design goal was to strip out the debt features. No interest. No maturity date. No repayment risk hanging over the company.",
+            "Y Combinator later revised the instrument. The original SAFE was pre-money, and in 2018 Y Combinator moved to a **post-money SAFE**, which makes dilution far easier to calculate because the investor owns a fixed percentage after the SAFE money is counted. When someone hands you a SAFE today, ask whether it is pre-money or post-money, because the answer changes your ownership math.",
+            "A SAFE still uses a valuation cap, a discount, or both. What it removes is the ticking clock."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "The SAFE was introduced by Y Combinator in 2013, and Y Combinator moved to the post-money SAFE in 2018 to make dilution easier to calculate.",
+            "attribution": "Y Combinator"
+          }
+        },
+        {
+          "id": "convertible-note-versus-safe-side-by-side",
+          "heading": "Convertible note versus SAFE, side by side",
+          "level": 2,
+          "paragraphs": [
+            "Here is the same comparison across the features that matter most."
+          ],
+          "bullets": [
+            "Legal nature: a convertible note is debt, a SAFE is not debt.",
+            "Interest rate: a note carries one, a SAFE does not.",
+            "Maturity date: a note has one, a SAFE does not.",
+            "Repayment risk: a note can come due, a SAFE cannot.",
+            "Speed and cost to close: a note is slower and needs more negotiation, a SAFE is faster and standardized.",
+            "Valuation cap or discount: a note usually carries both, a SAFE can use a cap, a discount, or both.",
+            "Standard form origin: notes come from various law firms, the SAFE came from Y Combinator in 2013."
+          ]
+        },
+        {
+          "id": "why-ai-startups-lean-toward-safes",
+          "heading": "Why AI startups lean toward SAFEs",
+          "level": 2,
+          "paragraphs": [
+            "AI companies tend to raise early, raise often, and spend fast. Three things make SAFEs the default in this world.",
+            "First, **speed**. A standardized SAFE can close in days with minimal legal spend. Every dollar you do not pay a lawyer to negotiate a note is a dollar that goes into models, data, or hiring.",
+            "Second, **no maturity pressure**. AI roadmaps are lumpy. A SAFE does not punish you for taking 26 months instead of 18 to reach your next priced round.",
+            "Third, **investor familiarity**. The people writing the earliest checks into AI, including accelerators and experienced angels, already default to SAFEs, so you spend less time explaining the paper.",
+            "The tradeoff worth naming: because a SAFE has no maturity and no interest, it gives the investor less downside protection. That is precisely why founders like it and why some later-stage or more conservative investors still prefer notes."
+          ]
+        },
+        {
+          "id": "what-the-standard-accelerator-deals-actually-use",
+          "heading": "What the standard accelerator deals actually use",
+          "level": 2,
+          "paragraphs": [
+            "The clearest public benchmarks come from the two best known accelerators, and both publish their terms.",
+            "**Y Combinator's standard deal invests $500,000 in every company it accepts.** That total is split into two instruments: **$125,000 for 7 percent of the company on a post-money SAFE, plus $375,000 on an uncapped SAFE with a most-favored-nation (MFN) provision.** It is worth being precise here, because the $125,000 for 7 percent number gets quoted on its own, which understates the full deal. The $375,000 uncapped tranche converts on the terms of your next priced round.",
+            "**Techstars' standard deal is different.** Techstars invests **$20,000 for 6 percent of the company in common stock, plus an optional $100,000 convertible note.** So one of the two most influential accelerators in the world still uses a convertible note as part of its core offer. Notes are not obsolete. They are a tool, and serious investors still reach for them.",
+            "The takeaway is not that one instrument won. It is that the paper you sign should match your situation, not a blog post. For a deeper comparison of these programs, see our guide on [YC vs Techstars vs the studio model](/en/library/yc-vs-techstars-vs-studio)."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Y Combinator's standard deal invests $500,000 in every company it accepts: $125,000 for 7 percent on a post-money SAFE, plus $375,000 on an uncapped SAFE with an MFN provision.",
+            "attribution": "Y Combinator, published standard deal terms"
+          }
+        },
+        {
+          "id": "the-brazil-and-latam-reality",
+          "heading": "The Brazil and LATAM reality",
+          "level": 2,
+          "paragraphs": [
+            "If your company is built for Brazil and LATAM, the US SAFE is not automatically enforceable the way it is in Delaware. The closest and most common local instrument is the **contrato de mútuo conversível**, a convertible loan contract that behaves much like a convertible note. It is debt that converts into equity on agreed triggers.",
+            "Brazil also modernized its startup framework with **Lei Complementar 182/2021**, the Marco Legal das Startups, which created clearer rules for how investors can put capital into a startup without being treated as full partners exposed to the company's liabilities. That framework made convertible-style investing more predictable, but it did not import the US SAFE wholesale into Brazilian law.",
+            "A common approach for cross-border AI startups is to hold the fundable entity, or a holding structure above it, in a jurisdiction where a US-style SAFE is enforceable, while operating locally in Brazil. To be clear, that is a pattern founders and investors often use, not legal advice. The exact instrument and entity structure should be confirmed with cross-border counsel before you sign anything, because getting the entity and the instrument to line up is where deals actually break."
+          ]
+        },
+        {
+          "id": "how-avante-thinks-about-it",
+          "heading": "How Avante thinks about it",
+          "level": 2,
+          "paragraphs": [
+            "Avante co-founds AI-native companies for Brazil and LATAM, so this question is not academic for us. We help founders pick the instrument that matches where their fundable entity sits and who is writing the check, rather than defaulting to whichever template showed up first.",
+            "Studio-built companies tend to reach the point of raising outside capital with cleaner cap tables and clearer paperwork, which is part of why the [studio model](/en/library/startup-studio-model-explained) has drawn attention as a way to de-risk the earliest stage. We keep our own results qualitative here on purpose, and point founders to the mechanics rather than to promises about outcomes."
+          ]
+        },
+        {
+          "id": "bottom-line",
+          "heading": "Bottom line",
+          "level": 2,
+          "paragraphs": [
+            "Use a **SAFE** when you want speed, standard terms, and no debt overhang, which is the common case for an early AI raise. Consider a **convertible note** when an investor wants downside protection or when you are working inside a program, like Techstars, that uses one. If you are building for Brazil and LATAM, expect the **contrato de mútuo conversível** to be the local-language equivalent, and get the entity structure right before you argue about the cap.",
+            "Whichever you sign, read for two things above all: the valuation cap and, if it is a note, the maturity date. Those two numbers shape your next round more than any other clause in the document."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is the main difference between a convertible note and a SAFE?",
+          "a": "A convertible note is debt. It carries an interest rate and a maturity date, and it converts into equity at your next priced round. A SAFE is not debt. It has no interest and no maturity date, and it is simply a promise of future equity when a triggering event happens. The practical difference is that a note can come due and create repayment pressure, while a SAFE cannot."
+        },
+        {
+          "q": "Do most AI startups use SAFEs or convertible notes?",
+          "a": "Most early-stage AI startups raise on SAFEs because they are faster and cheaper to close and carry no maturity pressure, which suits the lumpy timelines of AI roadmaps. Convertible notes are still used, especially when an investor wants more downside protection or when a program uses one by default."
+        },
+        {
+          "q": "What instrument does Y Combinator use in its standard deal?",
+          "a": "Y Combinator's standard deal invests $500,000 in every accepted company. That total is $125,000 for 7 percent of the company on a post-money SAFE, plus $375,000 on an uncapped SAFE with a most-favored-nation provision. The $125,000 for 7 percent figure is only one part of the deal, not the whole thing."
+        },
+        {
+          "q": "What does Techstars use, a SAFE or a convertible note?",
+          "a": "Techstars' standard deal is $20,000 for 6 percent of the company in common stock, plus an optional $100,000 convertible note. So one of the most influential accelerators still uses a convertible note as part of its core offer, which shows notes remain a legitimate tool rather than an outdated one."
+        },
+        {
+          "q": "What is the equivalent of a SAFE in Brazil?",
+          "a": "The closest and most common Brazilian instrument is the contrato de mútuo conversível, a convertible loan contract that behaves much like a convertible note. Brazil also modernized its framework with Lei Complementar 182/2021, the Marco Legal das Startups, though that law did not import the US SAFE wholesale. Many cross-border founders hold the fundable entity in a jurisdiction where a US-style SAFE is enforceable, but the exact structure should be confirmed with cross-border counsel."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Nota Conversível vs SAFE para Startups de IA: Um Guia para Fundadores",
+      "description": "Uma explicação em linguagem simples sobre notas conversíveis versus SAFEs para fundadores de startups de IA, além de como os termos funcionam no Brasil e na América Latina.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Uma nota conversível é uma dívida que se converte em participação societária e carrega uma taxa de juros e uma data de vencimento. Um SAFE é um acordo mais leve para participação futura, sem juros e sem vencimento. A maioria das startups de IA em estágio inicial hoje capta com SAFEs porque eles são mais rápidos e mais baratos de fechar, que é exatamente o motivo pelo qual a Y Combinator criou o SAFE e o usa em seu contrato padrão. No Brasil e na América Latina, o instrumento local mais próximo é o contrato de mútuo conversível, e a estrutura certa geralmente depende de onde está a sua entidade capaz de captar."
+          ]
+        },
+        {
+          "id": "the-short-version",
+          "heading": "A versão curta",
+          "level": 2,
+          "paragraphs": [
+            "Se você está captando uma rodada pre-seed ou seed para uma empresa de IA, quase certamente receberá um de dois documentos: uma nota conversível ou um SAFE. Eles se parecem, então fundadores costumam tratá-los como intercambiáveis. Não são.",
+            "Uma **nota conversível** é um empréstimo. Ela tem uma taxa de juros, uma data de vencimento e o peso jurídico de uma dívida. Ela se converte em participação depois, normalmente na sua próxima rodada precificada.",
+            "Um **SAFE** (Simple Agreement for Future Equity) não é um empréstimo. Ele não tem juros nem data de vencimento. É uma promessa de entregar participação ao investidor no futuro, quando ocorrer um evento que a acione, na maioria das vezes a sua próxima rodada precificada.",
+            "Ambos permitem adiar a pergunta difícil sobre quanto a sua empresa vale hoje. Eles apenas carregam quantidades muito diferentes de bagagem."
+          ]
+        },
+        {
+          "id": "what-a-convertible-note-actually-is",
+          "heading": "O que é de fato uma nota conversível",
+          "level": 2,
+          "paragraphs": [
+            "Uma nota conversível é estruturada como dívida na sua cap table até se converter. Isso significa que três peças móveis importam:",
+            "A data de vencimento é a parte que morde. Uma startup de IA queimando capital em computação e talento pode facilmente passar dos 24 meses sem uma rodada precificada. Uma nota que vence cria um ponto de pressão que você não quer durante um mercado de captação difícil."
+          ],
+          "bullets": [
+            "**Taxa de juros.** Normalmente alguns por cento ao ano. Ela acumula e geralmente se converte em participação adicional, em vez de ser paga de volta em dinheiro.",
+            "**Data de vencimento.** Um prazo rígido, muitas vezes de 18 a 24 meses. Se você não tiver captado uma rodada qualificada até lá, a nota tecnicamente vence. Na prática, os investidores renegociam, mas a alavancagem fica com eles.",
+            "**Desconto e teto de avaliação.** Os mecanismos que recompensam o investidor por assumir risco cedo, permitindo que a nota se converta a um preço menor do que o dinheiro novo paga."
+          ]
+        },
+        {
+          "id": "what-a-safe-actually-is",
+          "heading": "O que é de fato um SAFE",
+          "level": 2,
+          "paragraphs": [
+            "O SAFE foi introduzido pela Y Combinator em 2013 como uma alternativa amigável ao fundador em relação à nota conversível. Todo o seu objetivo de design era remover as características de dívida. Sem juros. Sem data de vencimento. Sem risco de pagamento pairando sobre a empresa.",
+            "A Y Combinator revisou o instrumento depois. O SAFE original era pre-money, e em 2018 a Y Combinator migrou para um **SAFE post-money**, que torna a diluição muito mais fácil de calcular porque o investidor detém um percentual fixo depois que o dinheiro do SAFE é contabilizado. Quando alguém lhe entregar um SAFE hoje, pergunte se ele é pre-money ou post-money, porque a resposta muda a sua conta de participação.",
+            "Um SAFE ainda usa um teto de avaliação, um desconto, ou ambos. O que ele remove é o relógio correndo."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O SAFE foi introduzido pela Y Combinator em 2013, e a Y Combinator migrou para o SAFE post-money em 2018 para tornar a diluição mais fácil de calcular.",
+            "attribution": "Y Combinator"
+          }
+        },
+        {
+          "id": "convertible-note-versus-safe-side-by-side",
+          "heading": "Nota conversível versus SAFE, lado a lado",
+          "level": 2,
+          "paragraphs": [
+            "Aqui está a mesma comparação nas características que mais importam."
+          ],
+          "bullets": [
+            "Natureza jurídica: uma nota conversível é dívida, um SAFE não é dívida.",
+            "Taxa de juros: a nota carrega uma, o SAFE não.",
+            "Data de vencimento: a nota tem uma, o SAFE não.",
+            "Risco de pagamento: a nota pode vencer, o SAFE não.",
+            "Velocidade e custo para fechar: a nota é mais lenta e exige mais negociação, o SAFE é mais rápido e padronizado.",
+            "Teto de avaliação ou desconto: a nota geralmente carrega ambos, o SAFE pode usar um teto, um desconto, ou ambos.",
+            "Origem do formato padrão: as notas vêm de diversos escritórios de advocacia, o SAFE veio da Y Combinator em 2013."
+          ]
+        },
+        {
+          "id": "why-ai-startups-lean-toward-safes",
+          "heading": "Por que startups de IA preferem SAFEs",
+          "level": 2,
+          "paragraphs": [
+            "Empresas de IA tendem a captar cedo, captar com frequência e gastar rápido. Três coisas tornam os SAFEs o padrão nesse mundo.",
+            "Primeiro, **velocidade**. Um SAFE padronizado pode fechar em dias com gasto jurídico mínimo. Cada dólar que você não paga a um advogado para negociar uma nota é um dólar que vai para modelos, dados ou contratações.",
+            "Segundo, **sem pressão de vencimento**. Roteiros de IA são irregulares. Um SAFE não pune você por levar 26 meses em vez de 18 para chegar à sua próxima rodada precificada.",
+            "Terceiro, **familiaridade do investidor**. As pessoas que escrevem os primeiros cheques em IA, incluindo aceleradoras e anjos experientes, já usam SAFEs por padrão, então você gasta menos tempo explicando o documento.",
+            "O trade-off que vale nomear: como um SAFE não tem vencimento nem juros, ele dá ao investidor menos proteção contra perdas. É exatamente por isso que os fundadores gostam dele e por que alguns investidores de estágio mais avançado ou mais conservadores ainda preferem notas."
+          ]
+        },
+        {
+          "id": "what-the-standard-accelerator-deals-actually-use",
+          "heading": "O que os contratos padrão das aceleradoras realmente usam",
+          "level": 2,
+          "paragraphs": [
+            "Os parâmetros públicos mais claros vêm das duas aceleradoras mais conhecidas, e ambas publicam seus termos.",
+            "**O contrato padrão da Y Combinator investe US$ 500.000 em cada empresa que aceita.** Esse total é dividido em dois instrumentos: **US$ 125.000 por 7 por cento da empresa em um SAFE post-money, mais US$ 375.000 em um SAFE sem teto com uma cláusula de nação mais favorecida (MFN).** Vale ser preciso aqui, porque o número de US$ 125.000 por 7 por cento é citado isoladamente, o que subestima o contrato completo. A parcela de US$ 375.000 sem teto se converte nos termos da sua próxima rodada precificada.",
+            "**O contrato padrão da Techstars é diferente.** A Techstars investe **US$ 20.000 por 6 por cento da empresa em ações ordinárias, mais uma nota conversível opcional de US$ 100.000.** Então uma das duas aceleradoras mais influentes do mundo ainda usa uma nota conversível como parte de sua oferta central. As notas não estão obsoletas. Elas são uma ferramenta, e investidores sérios ainda recorrem a elas.",
+            "A lição não é que um instrumento venceu. É que o documento que você assina deve corresponder à sua situação, não a um post de blog. Para uma comparação mais profunda desses programas, veja nosso guia sobre [YC vs Techstars vs o modelo de studio](/pt/library/yc-vs-techstars-vs-studio)."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O contrato padrão da Y Combinator investe US$ 500.000 em cada empresa que aceita: US$ 125.000 por 7 por cento em um SAFE post-money, mais US$ 375.000 em um SAFE sem teto com uma cláusula de nação mais favorecida (MFN).",
+            "attribution": "Y Combinator, termos padrão publicados"
+          }
+        },
+        {
+          "id": "the-brazil-and-latam-reality",
+          "heading": "A realidade no Brasil e na América Latina",
+          "level": 2,
+          "paragraphs": [
+            "Se a sua empresa é construída para o Brasil e a América Latina, o SAFE americano não é automaticamente exequível como é em Delaware. O instrumento local mais próximo e mais comum é o **contrato de mútuo conversível**, um contrato de empréstimo conversível que se comporta muito como uma nota conversível. É dívida que se converte em participação a partir de gatilhos acordados.",
+            "O Brasil também modernizou seu arcabouço para startups com a **Lei Complementar 182/2021**, o Marco Legal das Startups, que criou regras mais claras sobre como investidores podem aportar capital em uma startup sem serem tratados como sócios plenos expostos aos passivos da empresa. Esse arcabouço tornou o investimento no estilo conversível mais previsível, mas não importou o SAFE americano por inteiro para a lei brasileira.",
+            "Uma abordagem comum para startups de IA transfronteiriças é manter a entidade capaz de captar, ou uma estrutura de holding acima dela, em uma jurisdição onde um SAFE no estilo americano seja exequível, enquanto se opera localmente no Brasil. Para ser claro, esse é um padrão que fundadores e investidores costumam usar, não aconselhamento jurídico. O instrumento exato e a estrutura societária devem ser confirmados com assessoria jurídica transfronteiriça antes de você assinar qualquer coisa, porque fazer a entidade e o instrumento se encaixarem é onde os negócios de fato quebram."
+          ]
+        },
+        {
+          "id": "how-avante-thinks-about-it",
+          "heading": "Como a Avante enxerga isso",
+          "level": 2,
+          "paragraphs": [
+            "A Avante co-funda empresas nativas de IA para o Brasil e a América Latina, então essa pergunta não é acadêmica para nós. Ajudamos fundadores a escolher o instrumento que corresponde a onde está a sua entidade capaz de captar e a quem está assinando o cheque, em vez de recorrer ao modelo que apareceu primeiro.",
+            "Empresas construídas em studio tendem a chegar ao momento de captar capital externo com cap tables mais limpas e documentação mais clara, que é parte do motivo pelo qual o [modelo de studio](/pt/library/startup-studio-model-explained) tem atraído atenção como uma forma de reduzir o risco do estágio mais inicial. Mantemos nossos próprios resultados qualitativos aqui de propósito, e apontamos os fundadores para os mecanismos, em vez de promessas sobre resultados."
+          ]
+        },
+        {
+          "id": "bottom-line",
+          "heading": "Conclusão",
+          "level": 2,
+          "paragraphs": [
+            "Use um **SAFE** quando quiser velocidade, termos padrão e nenhum peso de dívida, que é o caso comum para uma captação inicial de IA. Considere uma **nota conversível** quando um investidor quiser proteção contra perdas ou quando você estiver dentro de um programa, como a Techstars, que usa uma. Se você está construindo para o Brasil e a América Latina, espere que o **contrato de mútuo conversível** seja o equivalente na língua local, e acerte a estrutura societária antes de discutir sobre o teto.",
+            "Qualquer que seja o que você assine, leia acima de tudo por duas coisas: o teto de avaliação e, se for uma nota, a data de vencimento. Esses dois números moldam a sua próxima rodada mais do que qualquer outra cláusula do documento."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Qual é a principal diferença entre uma nota conversível e um SAFE?",
+          "a": "Uma nota conversível é dívida. Ela carrega uma taxa de juros e uma data de vencimento, e se converte em participação na sua próxima rodada precificada. Um SAFE não é dívida. Ele não tem juros nem data de vencimento, e é simplesmente uma promessa de participação futura quando ocorre um evento que a aciona. A diferença prática é que uma nota pode vencer e criar pressão de pagamento, enquanto um SAFE não pode."
+        },
+        {
+          "q": "A maioria das startups de IA usa SAFEs ou notas conversíveis?",
+          "a": "A maioria das startups de IA em estágio inicial capta com SAFEs porque eles são mais rápidos e mais baratos de fechar e não carregam pressão de vencimento, o que combina com os prazos irregulares dos roteiros de IA. Notas conversíveis ainda são usadas, especialmente quando um investidor quer mais proteção contra perdas ou quando um programa usa uma por padrão."
+        },
+        {
+          "q": "Qual instrumento a Y Combinator usa em seu contrato padrão?",
+          "a": "O contrato padrão da Y Combinator investe US$ 500.000 em cada empresa aceita. Esse total é US$ 125.000 por 7 por cento da empresa em um SAFE post-money, mais US$ 375.000 em um SAFE sem teto com uma cláusula de nação mais favorecida. O número de US$ 125.000 por 7 por cento é apenas uma parte do contrato, não o todo."
+        },
+        {
+          "q": "O que a Techstars usa, um SAFE ou uma nota conversível?",
+          "a": "O contrato padrão da Techstars é US$ 20.000 por 6 por cento da empresa em ações ordinárias, mais uma nota conversível opcional de US$ 100.000. Então uma das aceleradoras mais influentes ainda usa uma nota conversível como parte de sua oferta central, o que mostra que as notas continuam sendo uma ferramenta legítima, e não algo ultrapassado."
+        },
+        {
+          "q": "Qual é o equivalente de um SAFE no Brasil?",
+          "a": "O instrumento brasileiro mais próximo e mais comum é o contrato de mútuo conversível, um contrato de empréstimo conversível que se comporta muito como uma nota conversível. O Brasil também modernizou seu arcabouço com a Lei Complementar 182/2021, o Marco Legal das Startups, embora essa lei não tenha importado o SAFE americano por inteiro. Muitos fundadores transfronteiriços mantêm a entidade capaz de captar em uma jurisdição onde um SAFE no estilo americano seja exequível, mas a estrutura exata deve ser confirmada com assessoria jurídica transfronteiriça."
+        }
+      ]
+    }
+  },
+  {
     "slug": "copilot-to-data-to-fund-flywheel",
     "category": "ai",
     "type": "Playbook",
@@ -10714,6 +11226,202 @@ const engineArticles: Article[] = [
     }
   },
   {
+    "slug": "how-much-dilution-per-funding-round",
+    "category": "insights",
+    "type": "Explainer",
+    "readTime": "7 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-13",
+    "isPublished": true,
+    "en": {
+      "title": "How Much Dilution Per Funding Round? A Founder's Guide",
+      "description": "Typical founder dilution runs 15 to 25 percent per round. See a round-by-round cap table, why the option pool bites hardest, and public YC and Techstars terms.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Founders ask one blunt question before they raise a dollar: how much of the company do I hand over at each round. There is no universal answer, but there are well-worn ranges that hold across most venture-backed paths, and knowing them turns a scary negotiation into a planning exercise.",
+            "Dilution is simply the reduction in your ownership percentage when a company issues new shares. It happens for two reasons at once. New investors buy a slice of equity, and the company usually tops up an employee option pool out of the founders' pre-money ownership. Both effects land on the same cap table in the same round, which is why the number founders feel is almost always larger than the headline investor stake alone."
+          ]
+        },
+        {
+          "id": "the-rough-shape-of-a-full-journey",
+          "heading": "The rough shape of a full journey",
+          "level": 2,
+          "paragraphs": [
+            "Across a typical priced-equity path, founders give up somewhere in the range of 15 to 25 percent per institutional round. Stack four or five of those and the founding team commonly holds a minority position by the time a company reaches Series C, even when the business is performing well. That is not a failure. It is the arithmetic of trading ownership for capital and talent.",
+            "The table below is illustrative, not a promise. Real outcomes swing with leverage, sector heat, and how hot the specific deal is.",
+            "Round by round, the rough shape looks like this.",
+            "Read the table this way. The \"founder ownership after\" column already nets out both the new investor stake and the option pool for that round, so the three middle columns are not additive across to the last one. Total dilution inside a single round is roughly the investor stake plus the pool top-up. At Seed, for example, an investor stake near 15 to 20 percent plus a fresh pool near 10 to 15 percent implies total dilution closer to 25 to 30 percent that round, which is why founder ownership steps down from the low eighties to the low sixties rather than falling by only the investor figure. Apply the same reading to Series A, B, and C."
+          ],
+          "bullets": [
+            "Formation: common stock, founders hold 100 percent.",
+            "Pre-seed: a post-money SAFE, new investors take about 10 to 15 percent and a 5 to 10 percent option pool is added, leaving founders around 75 to 85 percent.",
+            "Seed: a SAFE or priced equity, about 15 to 20 percent to new investors plus a 10 to 15 percent pool, founders around 55 to 65 percent.",
+            "Series A: preferred equity, about 15 to 20 percent to investors plus a 5 to 10 percent pool, founders around 40 to 50 percent.",
+            "Series B: preferred equity, about 10 to 15 percent to investors plus a 5 percent pool, founders around 30 to 40 percent.",
+            "Series C: preferred equity, about 8 to 12 percent to investors plus a 3 to 5 percent pool, founders around 22 to 30 percent."
+          ]
+        },
+        {
+          "id": "why-the-option-pool-bites-harder-than-founders-expect",
+          "heading": "Why the option pool bites harder than founders expect",
+          "level": 2,
+          "paragraphs": [
+            "Investors almost always require the option pool to be created or expanded before their money goes in, which means the pool comes out of the pre-money valuation. In practice the existing shareholders, mostly the founders, absorb that dilution rather than the incoming investor. A 10 percent pool top-up negotiated as \"pre-money\" can quietly cost founders as much ownership as a mid-sized chunk of the round itself. This dynamic, often called the [option pool shuffle](/en/library/option-pool-shuffle), is the single most common place where a founder's mental math and the closing cap table diverge."
+          ]
+        },
+        {
+          "id": "standard-early-stage-terms-you-can-anchor-on",
+          "heading": "Standard early-stage terms you can anchor on",
+          "level": 2,
+          "paragraphs": [
+            "Two of the most public benchmarks in startup finance come from the best-known accelerators, and they are worth memorizing because they set expectations for what an early check buys.",
+            "Y Combinator's standard deal invests 125,000 dollars for 7 percent of the company on a post-money SAFE, and then adds 375,000 dollars on an uncapped SAFE with a most-favored-nation provision. Techstars' standard investment is 120,000 dollars for 6 percent of common equity, alongside a convertible note. These are not the only ways to raise, but they are concrete, published reference points that tell you roughly what single-digit early dilution looks like in exchange for a first institutional check."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Y Combinator's standard deal invests 125,000 dollars for 7 percent of a company on a post-money SAFE, plus 375,000 dollars on an uncapped most-favored-nation SAFE.",
+            "attribution": "Y Combinator, published standard deal terms"
+          }
+        },
+        {
+          "id": "does-the-studio-and-co-founding-model-change-the-numbers",
+          "heading": "Does the studio and co-founding model change the numbers",
+          "level": 2,
+          "paragraphs": [
+            "There is real evidence that companies built with an operating partner from day one clear early milestones at a higher rate. The Global Startup Studio Network has reported studio-built startups advancing from formation to a first priced round at a rate reported in the range of roughly 50 percent, against approximately 19 percent for the broader comparison set. Treat those as directional approximations rather than precise constants, because methodology and cohort definitions vary.",
+            "The trade-off is that a co-founding or studio partner typically holds meaningful founding equity, which is a different kind of dilution than a passive check. Avante co-founds AI-native companies for Brazil and LATAM, which means the relationship starts closer to a founding team than to an arms-length investor. For a LATAM founder, the practical question is not only how much equity leaves the table, but how much operating leverage, capital, and go-to-market muscle arrives with it. A larger early founding stake that materially raises the odds of reaching Series A can be worth more than a thinner stake on a company that stalls at seed."
+          ]
+        },
+        {
+          "id": "how-to-protect-your-ownership",
+          "heading": "How to protect your ownership",
+          "level": 2,
+          "paragraphs": [
+            "You cannot avoid dilution and still raise venture capital, but you can shape it. Raise only what the next 18 to 24 months of milestones actually require, because every extra dollar at a fixed valuation is extra percentage gone. Negotiate the option pool as hard as the valuation, and push for a pool sized to a real hiring plan rather than an inflated round-number default. Understand [pre-money versus post-money framing](/en/library/pre-money-vs-post-money-valuation) on every SAFE before you sign, since the same nominal cap can imply very different ownership depending on which side of \"money\" the pool sits. And model the full stack, not one round, so you can see where founder control actually lands by Series B.",
+            "The founders who feel ambushed by their cap table are almost always the ones who optimized a single round in isolation. The founders who stay in control model the whole path early, treat the option pool as a first-class line item, and choose partners whose arrival raises the probability that later rounds happen at all."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How much equity do founders typically give up per funding round?",
+          "a": "For a priced institutional round, founders usually part with roughly 15 to 25 percent once you count both the new investor stake and the option pool top-up. Over four or five rounds the founding team often ends up in a minority position by Series C, even when the company is doing well."
+        },
+        {
+          "q": "Why is my actual dilution bigger than the investor's stake?",
+          "a": "Because two things happen in the same round. The investor buys equity, and the company usually expands the employee option pool out of the pre-money valuation. Existing shareholders, mostly the founders, absorb that pool. So total dilution is roughly the investor stake plus the pool top-up, not the investor stake alone."
+        },
+        {
+          "q": "What are Y Combinator and Techstars standard terms?",
+          "a": "Y Combinator's standard deal invests 125,000 dollars for 7 percent on a post-money SAFE, plus 375,000 dollars on an uncapped most-favored-nation SAFE. Techstars invests 120,000 dollars for 6 percent of common equity alongside a convertible note. Both are public reference points for early single-digit dilution."
+        },
+        {
+          "q": "Does building with a startup studio change dilution?",
+          "a": "A co-founding or studio partner usually holds meaningful founding equity, which is a different kind of dilution than a passive check. The Global Startup Studio Network has reported studio-built startups reaching a first priced round at a rate reported in the range of roughly 50 percent, against approximately 19 percent for the broader set, so the trade is more founding equity for higher odds of advancing."
+        },
+        {
+          "q": "How can founders reduce dilution?",
+          "a": "Raise only what the next 18 to 24 months of milestones require, negotiate the option pool as hard as the valuation, understand pre-money versus post-money framing on every SAFE, and model the entire funding path rather than optimizing one round in isolation."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Quanta Diluição por Rodada de Investimento? Um Guia para Fundadores",
+      "description": "A diluição típica de um fundador fica entre 15 e 25 por cento por rodada. Veja uma tabela de capitalização rodada a rodada, por que o pool de opções pesa mais e os termos públicos de YC e Techstars.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Os fundadores fazem uma pergunta direta antes de captar um único dólar: quanto da empresa eu entrego a cada rodada. Não existe resposta universal, mas existem faixas bem conhecidas que valem para a maioria dos caminhos financiados por venture capital, e conhecê-las transforma uma negociação assustadora em um exercício de planejamento.",
+            "Diluição é simplesmente a redução do seu percentual de participação quando a empresa emite novas ações. Isso acontece por duas razões ao mesmo tempo. Novos investidores compram uma fatia do capital, e a empresa normalmente amplia um pool de opções para funcionários retirado da participação pre-money dos fundadores. Os dois efeitos caem na mesma tabela de capitalização, na mesma rodada, e é por isso que o número que os fundadores sentem quase sempre é maior do que a participação anunciada do investidor sozinha."
+          ]
+        },
+        {
+          "id": "the-rough-shape-of-a-full-journey",
+          "heading": "O formato aproximado de uma jornada completa",
+          "level": 2,
+          "paragraphs": [
+            "Ao longo de um caminho típico de equity precificado, os fundadores abrem mão de algo na faixa de 15 a 25 por cento por rodada institucional. Empilhe quatro ou cinco dessas e o time fundador costuma ficar em posição minoritária quando a empresa chega à Série C, mesmo quando o negócio vai bem. Isso não é um fracasso. É a aritmética de trocar participação por capital e talento.",
+            "A tabela abaixo é ilustrativa, não uma promessa. Os resultados reais variam com o poder de negociação, o aquecimento do setor e o quão disputado é o negócio específico.",
+            "Rodada a rodada, o formato aproximado é este.",
+            "Leia a tabela desta forma. A coluna \"participação dos fundadores depois\" já desconta tanto a participação do novo investidor quanto o pool de opções daquela rodada, então as três colunas do meio não se somam até a última. A diluição total dentro de uma única rodada é aproximadamente a participação do investidor mais a ampliação do pool. No Seed, por exemplo, uma participação de investidor perto de 15 a 20 por cento mais um pool novo perto de 10 a 15 por cento implica uma diluição total mais próxima de 25 a 30 por cento naquela rodada, e é por isso que a participação dos fundadores cai da casa dos oitenta para a casa dos sessenta em vez de cair apenas pelo número do investidor. Aplique a mesma leitura às Séries A, B e C."
+          ],
+          "bullets": [
+            "Constituição: ações ordinárias, os fundadores detêm 100 por cento.",
+            "Pre-seed: um SAFE post-money, os novos investidores ficam com cerca de 10 a 15 por cento e um pool de opções de 5 a 10 por cento é adicionado, deixando os fundadores em torno de 75 a 85 por cento.",
+            "Seed: um SAFE ou equity precificado, cerca de 15 a 20 por cento para novos investidores mais um pool de 10 a 15 por cento, fundadores em torno de 55 a 65 por cento.",
+            "Série A: equity preferencial, cerca de 15 a 20 por cento para investidores mais um pool de 5 a 10 por cento, fundadores em torno de 40 a 50 por cento.",
+            "Série B: equity preferencial, cerca de 10 a 15 por cento para investidores mais um pool de 5 por cento, fundadores em torno de 30 a 40 por cento.",
+            "Série C: equity preferencial, cerca de 8 a 12 por cento para investidores mais um pool de 3 a 5 por cento, fundadores em torno de 22 a 30 por cento."
+          ]
+        },
+        {
+          "id": "why-the-option-pool-bites-harder-than-founders-expect",
+          "heading": "Por que o pool de opções pesa mais do que os fundadores esperam",
+          "level": 2,
+          "paragraphs": [
+            "Os investidores quase sempre exigem que o pool de opções seja criado ou ampliado antes de o dinheiro entrar, o que significa que o pool sai da avaliação pre-money. Na prática, os acionistas existentes, na maioria os fundadores, absorvem essa diluição, e não o investidor que está entrando. Uma ampliação de pool de 10 por cento negociada como \"pre-money\" pode custar aos fundadores, de forma silenciosa, tanta participação quanto uma fatia média da própria rodada. Essa dinâmica, muitas vezes chamada de [option pool shuffle](/pt/library/option-pool-shuffle), é o ponto mais comum em que a conta mental do fundador e a tabela de capitalização final divergem."
+          ]
+        },
+        {
+          "id": "standard-early-stage-terms-you-can-anchor-on",
+          "heading": "Termos padrão de estágio inicial em que você pode se ancorar",
+          "level": 2,
+          "paragraphs": [
+            "Dois dos benchmarks mais públicos das finanças de startups vêm das aceleradoras mais conhecidas, e vale a pena memorizá-los porque eles definem as expectativas sobre o que um cheque inicial compra.",
+            "O acordo padrão da Y Combinator investe 125.000 dólares por 7 por cento da empresa em um SAFE post-money, e depois adiciona 375.000 dólares em um SAFE sem teto com cláusula de nação mais favorecida. O investimento padrão da Techstars é de 120.000 dólares por 6 por cento do capital ordinário, junto de uma nota conversível. Essas não são as únicas formas de captar, mas são pontos de referência concretos e publicados que mostram, de forma aproximada, como é a diluição inicial de um dígito em troca do primeiro cheque institucional."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O acordo padrão da Y Combinator investe 125.000 dólares por 7 por cento de uma empresa em um SAFE post-money, mais 375.000 dólares em um SAFE sem teto com cláusula de nação mais favorecida.",
+            "attribution": "Y Combinator, termos padrão publicados"
+          }
+        },
+        {
+          "id": "does-the-studio-and-co-founding-model-change-the-numbers",
+          "heading": "O modelo de studio e cofundação muda os números",
+          "level": 2,
+          "paragraphs": [
+            "Há evidência real de que empresas construídas com um sócio operacional desde o primeiro dia superam marcos iniciais a uma taxa mais alta. A Global Startup Studio Network relatou que startups construídas em studio avançam da constituição até uma primeira rodada precificada a uma taxa relatada na faixa de aproximadamente 50 por cento, contra aproximadamente 19 por cento para o conjunto de comparação mais amplo. Trate esses números como aproximações direcionais, e não como constantes precisas, porque a metodologia e as definições de coorte variam.",
+            "O trade-off é que um sócio de cofundação ou de studio normalmente detém participação fundadora relevante, que é um tipo de diluição diferente de um cheque passivo. A Avante cofunda empresas AI-native para o Brasil e a América Latina, o que significa que a relação começa mais perto de um time fundador do que de um investidor de longo alcance. Para um fundador da América Latina, a pergunta prática não é apenas quanto de participação sai da mesa, mas quanto de alavancagem operacional, capital e músculo de go-to-market chega junto. Uma participação fundadora inicial maior que aumenta de forma material as chances de chegar à Série A pode valer mais do que uma fatia mais fina em uma empresa que trava no seed."
+          ]
+        },
+        {
+          "id": "how-to-protect-your-ownership",
+          "heading": "Como proteger a sua participação",
+          "level": 2,
+          "paragraphs": [
+            "Você não consegue evitar a diluição e ainda captar venture capital, mas consegue moldá-la. Capte apenas o que os próximos 18 a 24 meses de marcos realmente exigem, porque cada dólar extra a uma avaliação fixa é percentual extra que se perde. Negocie o pool de opções com o mesmo rigor da avaliação, e defenda um pool dimensionado para um plano real de contratação em vez de um padrão inflado de número redondo. Entenda o [enquadramento pre-money versus post-money](/pt/library/pre-money-vs-post-money-valuation) em cada SAFE antes de assinar, já que o mesmo teto nominal pode implicar participações muito diferentes dependendo de qual lado do \"dinheiro\" o pool fica. E modele a pilha inteira, não uma rodada, para enxergar onde o controle dos fundadores realmente aterrissa na Série B.",
+            "Os fundadores que se sentem emboscados pela própria tabela de capitalização quase sempre são os que otimizaram uma única rodada de forma isolada. Os fundadores que permanecem no controle modelam todo o caminho cedo, tratam o pool de opções como uma linha de primeira classe e escolhem sócios cuja chegada aumenta a probabilidade de que as rodadas posteriores aconteçam."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Quanto de participação os fundadores costumam ceder por rodada de investimento?",
+          "a": "Em uma rodada institucional precificada, os fundadores costumam ceder cerca de 15 a 25 por cento quando você conta tanto a participação do novo investidor quanto a ampliação do pool de opções. Ao longo de quatro ou cinco rodadas, o time fundador muitas vezes termina em posição minoritária na Série C, mesmo quando a empresa vai bem."
+        },
+        {
+          "q": "Por que a minha diluição real é maior do que a participação do investidor?",
+          "a": "Porque duas coisas acontecem na mesma rodada. O investidor compra capital, e a empresa normalmente amplia o pool de opções para funcionários a partir da avaliação pre-money. Os acionistas existentes, na maioria os fundadores, absorvem esse pool. Então a diluição total é aproximadamente a participação do investidor mais a ampliação do pool, e não a participação do investidor sozinha."
+        },
+        {
+          "q": "Quais são os termos padrão da Y Combinator e da Techstars?",
+          "a": "O acordo padrão da Y Combinator investe 125.000 dólares por 7 por cento em um SAFE post-money, mais 375.000 dólares em um SAFE sem teto com cláusula de nação mais favorecida. A Techstars investe 120.000 dólares por 6 por cento do capital ordinário junto de uma nota conversível. Ambos são pontos de referência públicos para a diluição inicial de um dígito."
+        },
+        {
+          "q": "Construir com um startup studio muda a diluição?",
+          "a": "Um sócio de cofundação ou de studio normalmente detém participação fundadora relevante, que é um tipo de diluição diferente de um cheque passivo. A Global Startup Studio Network relatou que startups construídas em studio chegam a uma primeira rodada precificada a uma taxa relatada na faixa de aproximadamente 50 por cento, contra aproximadamente 19 por cento para o conjunto mais amplo, então a troca é mais participação fundadora por chances maiores de avançar."
+        },
+        {
+          "q": "Como os fundadores podem reduzir a diluição?",
+          "a": "Capte apenas o que os próximos 18 a 24 meses de marcos exigem, negocie o pool de opções com o mesmo rigor da avaliação, entenda o enquadramento pre-money versus post-money em cada SAFE e modele todo o caminho de captação em vez de otimizar uma rodada de forma isolada."
+        }
+      ]
+    }
+  },
+  {
     "slug": "how-much-equity-do-venture-studios-take",
     "category": "insights",
     "type": "Explainer",
@@ -10897,6 +11605,650 @@ const engineArticles: Article[] = [
         {
           "q": "A Avante fica com uma participação de controle nas empresas que constrói?",
           "a": "A Avante Ventures cofunda empresas AI-native para o Brasil e a América Latina e fica com uma participação de cofundadora em vez de uma minoria passiva, em linha com a forma como os venture studios são precificados. Ela contribui com o primeiro capital e com trabalho operacional prático desde o dia zero e instala fundadores dedicados para tocar cada empresa. A divisão exata é definida acordo a acordo, e o ponto da participação é a propriedade compartilhada de uma empresa construída em conjunto, não o controle por si só."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "how-much-equity-startup-advisor",
+    "category": "insights",
+    "type": "Explainer",
+    "readTime": "6 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-13",
+    "isPublished": true,
+    "en": {
+      "title": "How Much Equity Should a Startup Advisor Get?",
+      "description": "Advisor equity usually lands between 0.10 and 1.00 percent, set by company stage and advisor role. See the Founder Institute FAST benchmark and how to structure it.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Most startup advisors receive between 0.10 percent and 1.00 percent of a company in equity, vesting over one to two years. The exact figure depends on two things: how early the company is and how much the advisor actually contributes.",
+            "The most widely used reference point is the Founder Institute FAST Agreement, which maps advisor role against company stage on a simple grid."
+          ]
+        },
+        {
+          "id": "short-answer",
+          "heading": "The short answer",
+          "level": 2,
+          "paragraphs": [
+            "A startup advisor typically earns between 0.10 percent and 1.00 percent of the company in equity. That equity almost always vests over one to two years rather than being granted up front, and it is granted as stock options or restricted stock, not cash.",
+            "Two variables move the number inside that range. The first is company stage. The earlier and riskier the company, the more equity an advisor takes for the same amount of help, because the shares are worth less on paper and the risk of the company failing is higher. The second is the depth of the relationship. An advisor who takes a monthly call is worth far less equity than one who opens doors, recruits, or shapes the product roadmap."
+          ]
+        },
+        {
+          "id": "fast-benchmark",
+          "heading": "The FAST benchmark",
+          "level": 2,
+          "paragraphs": [
+            "The clearest public reference for advisor equity is the FAST Agreement, short for Founder / Advisor Standard Template, published by the Founder Institute at fi.co/fast. The Founder Institute released it to the public in 2011 and has revised it since, so always check the current version on their site before you rely on a specific figure.",
+            "The current FAST grid sets equity by advisor role and company stage. Here are the exact percentages as published by the Founder Institute.",
+            "Read the grid this way. A standard advisor takes regular calls and gives feedback. An expert advisor does more, such as making introductions, joining specific projects, or lending real credibility. The percentages fall as the company matures, because a share of a Series A company is worth much more than a share of a pre-seed idea.",
+            "Note that these figures are one organization's recommended template, not a legal standard. Older and alternative versions of the FAST grid circulate online with different tier names and slightly different numbers, which is exactly why you should quote the live version rather than a screenshot someone pasted years ago. Use the grid as an anchor for negotiation, not as a fixed price."
+          ],
+          "bullets": [
+            "Pre-seed company: a standard advisor with monthly meetings takes 0.50 percent, while an expert advisor who brings contacts and projects takes 1.00 percent.",
+            "Seed company: a standard advisor takes 0.25 percent, while an expert advisor takes 0.75 percent.",
+            "Series A company: a standard advisor takes 0.10 percent, while an expert advisor takes 0.50 percent."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "The Founder Institute FAST Agreement caps advisor equity at 1.00 percent (an expert advisor to a pre-seed company) and floors it at 0.10 percent (a standard advisor to a Series A company).",
+            "attribution": "Founder Institute, FAST Agreement, fi.co/fast"
+          }
+        },
+        {
+          "id": "why-advisor-equity-smaller",
+          "heading": "Why advisor equity is so much smaller than investor equity",
+          "level": 2,
+          "paragraphs": [
+            "Founders sometimes anchor on the wrong number because they confuse advisors with investors. The gap is large and deliberate.",
+            "For context on the investor side, Y Combinator's standard deal is 125,000 US dollars for 7 percent of a company, and Techstars invests roughly 20,000 US dollars for common stock plus a follow-on convertible note. Those programs write real checks and take real board-level positions, so they command whole percentage points. An advisor contributes time and access, not capital, so a fraction of a single percent is the norm. If an advisor is asking for 2 or 3 percent without investing money or joining as an operator, that is a red flag, not a market rate."
+          ]
+        },
+        {
+          "id": "how-to-structure-grant",
+          "heading": "How to structure the grant, not just the size",
+          "level": 2,
+          "paragraphs": [
+            "The percentage is only half the deal. The structure protects both sides."
+          ],
+          "bullets": [
+            "Vesting. Advisor equity should vest over time, commonly one to two years, so the company keeps the shares only for as long as the advisor keeps showing up. The FAST Agreement is built around monthly vesting for exactly this reason.",
+            "Cliff. Many founder and employee grants use a one-year cliff, meaning nothing vests until the first anniversary. Advisor grants often use a shorter cliff or monthly vesting from day one, because the relationship is lighter and easier to end. Decide this on purpose.",
+            "Acceleration and termination. Spell out what happens if the company is acquired or if either side ends the relationship early. A clean template like FAST already handles these cases so you do not have to draft them from scratch.",
+            "Option pool. Advisor grants come out of the same employee option pool that funds early hires. Every fraction of a percent you give an advisor is a fraction you cannot give a future engineer, so budget the pool as a whole rather than granting equity one handshake at a time."
+          ]
+        },
+        {
+          "id": "simple-way-to-decide",
+          "heading": "A simple way to decide",
+          "level": 2,
+          "paragraphs": [
+            "Work through three questions before you name a number."
+          ],
+          "bullets": [
+            "What stage are you? Find your row on the FAST grid. Pre-seed founders give the most, Series A founders give the least.",
+            "What will this person actually do? Be honest about whether they are a standard advisor or a true expert. Most advisors are standard. Reserve the top of the range for people who measurably change your trajectory.",
+            "Can you defer the decision? If you are unsure, offer the lower end with a review after six months. It is far easier to grant more later than to claw back an over-generous grant."
+          ]
+        },
+        {
+          "id": "brazil-latam",
+          "heading": "How this plays out in Brazil and LATAM",
+          "level": 2,
+          "paragraphs": [
+            "At Avante, we co-found AI-native companies for Brazil and Latin America, which means we sit on the founder side of these conversations regularly. The mechanics above are global, but the context here has its own texture. Advisor talent with deep enterprise or regulatory access is scarcer in the region, so a well-connected expert advisor can be worth the top of the FAST range in a way that is genuinely earned. At the same time, cap tables in early LATAM startups are often thinner and less formal, so founders benefit even more from using a clean, boring template and from vesting every grant. The discipline of a standard agreement matters most where the ecosystem is still maturing.",
+            "The takeaway is the same everywhere. Anchor on the FAST grid, pay in vesting equity rather than large up-front grants, and match the percentage to what the advisor will really deliver."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How much equity does a startup advisor typically get?",
+          "a": "Most advisors receive between 0.10 percent and 1.00 percent of the company, vesting over one to two years. Using the Founder Institute FAST Agreement as a reference, a pre-seed company typically grants a standard advisor about 0.50 percent, while an expert advisor to a pre-seed company can reach 1.00 percent. The figure drops as the company matures."
+        },
+        {
+          "q": "Should advisor equity vest or be granted all at once?",
+          "a": "It should vest. Advisor equity is almost always structured to vest over one to two years, often with monthly vesting, so the company keeps the shares only for as long as the advisor stays engaged. The FAST Agreement is built around this model. Granting all the equity up front removes your only protection if the relationship ends early."
+        },
+        {
+          "q": "Is advisor equity the same as investor equity?",
+          "a": "No, and the gap is large on purpose. Investors write checks and take board-level positions, so accelerators like Y Combinator take 7 percent for their 125,000 US dollar investment. Advisors contribute time and access rather than capital, so a fraction of a single percent is standard. An advisor asking for several percent without investing money is a warning sign."
+        },
+        {
+          "q": "What is the FAST Agreement?",
+          "a": "FAST stands for Founder / Advisor Standard Template. It is a free, widely used advisor equity template published by the Founder Institute at fi.co/fast, first released to the public in 2011 and revised since. It provides a grid that maps advisor role against company stage and handles vesting and termination, so founders do not have to draft an agreement from scratch. Check the current version on their site before quoting a specific number."
+        },
+        {
+          "q": "How do I decide between the low and high end of the range?",
+          "a": "Match the percentage to what the advisor will actually do. Reserve the top of the range for people who make introductions, recruit, or measurably change your trajectory. Give the lower end to advisors who mainly take a monthly call. If you are unsure, offer the lower figure with a review after six months, since it is easier to grant more later than to claw back an over-generous grant."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Quanto de equity um advisor de startup deve receber?",
+      "description": "O equity de advisor costuma ficar entre 0,10 e 1,00 por cento, definido pelo estágio da empresa e pelo papel do advisor. Veja o benchmark FAST do Founder Institute e como estruturá-lo.",
+      "sections": [
+        {
+          "paragraphs": [
+            "A maioria dos advisors de startup recebe entre 0,10 por cento e 1,00 por cento de equity da empresa, com vesting ao longo de um a dois anos. O número exato depende de duas coisas: quão cedo está a empresa e quanto o advisor realmente contribui.",
+            "A referência mais utilizada é o FAST Agreement do Founder Institute, que cruza o papel do advisor com o estágio da empresa em uma grade simples."
+          ]
+        },
+        {
+          "id": "short-answer",
+          "heading": "A resposta curta",
+          "level": 2,
+          "paragraphs": [
+            "Um advisor de startup normalmente recebe entre 0,10 por cento e 1,00 por cento de equity da empresa. Esse equity quase sempre tem vesting ao longo de um a dois anos, em vez de ser concedido de uma vez, e é entregue como stock options ou ações restritas, não como dinheiro.",
+            "Duas variáveis movem o número dentro dessa faixa. A primeira é o estágio da empresa. Quanto mais cedo e arriscada a empresa, mais equity o advisor recebe pela mesma ajuda, porque as ações valem menos no papel e o risco de a empresa quebrar é maior. A segunda é a profundidade da relação. Um advisor que participa de uma call mensal vale muito menos equity do que aquele que abre portas, recruta ou molda o roadmap do produto."
+          ]
+        },
+        {
+          "id": "fast-benchmark",
+          "heading": "O benchmark FAST",
+          "level": 2,
+          "paragraphs": [
+            "A referência pública mais clara para equity de advisor é o FAST Agreement, sigla para Founder / Advisor Standard Template, publicado pelo Founder Institute em fi.co/fast. O Founder Institute o disponibilizou ao público em 2011 e o revisou desde então, então sempre confira a versão atual no site antes de confiar em um número específico.",
+            "A grade FAST atual define o equity pelo papel do advisor e pelo estágio da empresa. Aqui estão as porcentagens exatas como publicadas pelo Founder Institute.",
+            "Leia a grade assim. Um advisor padrão participa de calls regulares e dá feedback. Um advisor especialista faz mais, como apresentar contatos, entrar em projetos específicos ou emprestar credibilidade real. As porcentagens caem conforme a empresa amadurece, porque uma fração de uma empresa em Series A vale muito mais do que uma fração de uma ideia em pré-seed.",
+            "Observe que esses números são o template recomendado por uma organização, não um padrão legal. Versões mais antigas e alternativas da grade FAST circulam online com nomes de níveis diferentes e números levemente distintos, e é exatamente por isso que você deve citar a versão viva em vez de um print que alguém colou anos atrás. Use a grade como âncora de negociação, não como preço fixo."
+          ],
+          "bullets": [
+            "Empresa em pré-seed: um advisor padrão com reuniões mensais recebe 0,50 por cento, enquanto um advisor especialista que traz contatos e projetos recebe 1,00 por cento.",
+            "Empresa em seed: um advisor padrão recebe 0,25 por cento, enquanto um advisor especialista recebe 0,75 por cento.",
+            "Empresa em Series A: um advisor padrão recebe 0,10 por cento, enquanto um advisor especialista recebe 0,50 por cento."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O FAST Agreement do Founder Institute limita o equity de advisor a 1,00 por cento (um advisor especialista de uma empresa em pré-seed) e o fixa no piso de 0,10 por cento (um advisor padrão de uma empresa em Series A).",
+            "attribution": "Founder Institute, FAST Agreement, fi.co/fast"
+          }
+        },
+        {
+          "id": "why-advisor-equity-smaller",
+          "heading": "Por que o equity de advisor é tão menor que o de investidor",
+          "level": 2,
+          "paragraphs": [
+            "Founders às vezes se ancoram no número errado porque confundem advisors com investidores. A diferença é grande e proposital.",
+            "Para contexto do lado do investidor, o deal padrão da Y Combinator é de 125.000 dólares por 7 por cento de uma empresa, e a Techstars investe cerca de 20.000 dólares por ações ordinárias mais uma nota conversível de follow-on. Esses programas assinam cheques de verdade e assumem posições reais no conselho, por isso comandam pontos percentuais inteiros. Um advisor contribui com tempo e acesso, não com capital, então uma fração de um único por cento é a norma. Se um advisor pede 2 ou 3 por cento sem investir dinheiro nem entrar como operador, isso é um sinal de alerta, não uma taxa de mercado."
+          ]
+        },
+        {
+          "id": "how-to-structure-grant",
+          "heading": "Como estruturar a concessão, não apenas o tamanho",
+          "level": 2,
+          "paragraphs": [
+            "A porcentagem é apenas metade do acordo. A estrutura protege os dois lados."
+          ],
+          "bullets": [
+            "Vesting. O equity de advisor deve ter vesting ao longo do tempo, geralmente um a dois anos, para que a empresa mantenha as ações apenas enquanto o advisor continuar presente. O FAST Agreement é construído em torno de vesting mensal exatamente por essa razão.",
+            "Cliff. Muitas concessões para founders e funcionários usam um cliff de um ano, ou seja, nada tem vesting até o primeiro aniversário. As concessões para advisors costumam usar um cliff mais curto ou vesting mensal desde o primeiro dia, porque a relação é mais leve e mais fácil de encerrar. Decida isso de propósito.",
+            "Aceleração e término. Deixe claro o que acontece se a empresa for adquirida ou se qualquer um dos lados encerrar a relação cedo. Um template limpo como o FAST já cuida desses casos para você não ter que redigi-los do zero.",
+            "Pool de opções. As concessões para advisors saem do mesmo pool de opções de funcionários que financia as primeiras contratações. Cada fração de um por cento que você dá a um advisor é uma fração que você não poderá dar a um futuro engenheiro, então orçe o pool como um todo em vez de conceder equity a cada aperto de mão."
+          ]
+        },
+        {
+          "id": "simple-way-to-decide",
+          "heading": "Uma forma simples de decidir",
+          "level": 2,
+          "paragraphs": [
+            "Passe por três perguntas antes de definir um número."
+          ],
+          "bullets": [
+            "Em que estágio você está? Encontre sua linha na grade FAST. Founders em pré-seed dão o máximo, founders em Series A dão o mínimo.",
+            "O que essa pessoa vai realmente fazer? Seja honesto sobre se ela é um advisor padrão ou um verdadeiro especialista. A maioria dos advisors é padrão. Reserve o topo da faixa para pessoas que mudam de forma mensurável a sua trajetória.",
+            "Você pode adiar a decisão? Se estiver em dúvida, ofereça a ponta baixa com uma revisão após seis meses. É muito mais fácil conceder mais depois do que recuperar uma concessão generosa demais."
+          ]
+        },
+        {
+          "id": "brazil-latam",
+          "heading": "Como isso funciona no Brasil e na América Latina",
+          "level": 2,
+          "paragraphs": [
+            "Na Avante, cofundamos empresas AI-native para o Brasil e a América Latina, o que significa que estamos do lado do founder nessas conversas com frequência. A mecânica acima é global, mas o contexto aqui tem sua própria textura. Talento de advisor com acesso profundo a grandes empresas ou a temas regulatórios é mais escasso na região, então um advisor especialista bem conectado pode valer o topo da faixa FAST de um jeito genuinamente merecido. Ao mesmo tempo, os cap tables de startups iniciais na América Latina costumam ser mais finos e menos formais, então os founders se beneficiam ainda mais de usar um template limpo e sem graça e de aplicar vesting a cada concessão. A disciplina de um acordo padrão importa mais onde o ecossistema ainda está amadurecendo.",
+            "A conclusão é a mesma em todo lugar. Ancore na grade FAST, pague em equity com vesting em vez de grandes concessões adiantadas, e ajuste a porcentagem ao que o advisor realmente vai entregar."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Quanto de equity um advisor de startup normalmente recebe?",
+          "a": "A maioria dos advisors recebe entre 0,10 por cento e 1,00 por cento da empresa, com vesting ao longo de um a dois anos. Usando o FAST Agreement do Founder Institute como referência, uma empresa em pré-seed costuma conceder a um advisor padrão cerca de 0,50 por cento, enquanto um advisor especialista de uma empresa em pré-seed pode chegar a 1,00 por cento. O número cai conforme a empresa amadurece."
+        },
+        {
+          "q": "O equity de advisor deve ter vesting ou ser concedido de uma vez?",
+          "a": "Deve ter vesting. O equity de advisor é quase sempre estruturado com vesting ao longo de um a dois anos, muitas vezes com vesting mensal, para que a empresa mantenha as ações apenas enquanto o advisor continuar engajado. O FAST Agreement é construído em torno desse modelo. Conceder todo o equity de uma vez remove a sua única proteção se a relação terminar cedo."
+        },
+        {
+          "q": "O equity de advisor é o mesmo que o equity de investidor?",
+          "a": "Não, e a diferença é grande de propósito. Investidores assinam cheques e assumem posições no conselho, por isso aceleradoras como a Y Combinator recebem 7 por cento pelo seu investimento de 125.000 dólares. Advisors contribuem com tempo e acesso em vez de capital, então uma fração de um único por cento é o padrão. Um advisor que pede vários por cento sem investir dinheiro é um sinal de alerta."
+        },
+        {
+          "q": "O que é o FAST Agreement?",
+          "a": "FAST significa Founder / Advisor Standard Template. É um template gratuito e amplamente usado de equity para advisors, publicado pelo Founder Institute em fi.co/fast, disponibilizado ao público pela primeira vez em 2011 e revisado desde então. Ele oferece uma grade que cruza o papel do advisor com o estágio da empresa e cuida de vesting e término, para que os founders não precisem redigir um acordo do zero. Confira a versão atual no site antes de citar um número específico."
+        },
+        {
+          "q": "Como decido entre a ponta baixa e a ponta alta da faixa?",
+          "a": "Ajuste a porcentagem ao que o advisor realmente vai fazer. Reserve o topo da faixa para pessoas que apresentam contatos, recrutam ou mudam de forma mensurável a sua trajetória. Dê a ponta baixa a advisors que basicamente participam de uma call mensal. Se estiver em dúvida, ofereça o número mais baixo com uma revisão após seis meses, já que é mais fácil conceder mais depois do que recuperar uma concessão generosa demais."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "how-much-runway-ai-startup-2026",
+    "category": "insights",
+    "type": "Explainer",
+    "readTime": "7 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-13",
+    "isPublished": true,
+    "en": {
+      "title": "How Much Runway Does an AI Startup Need in 2026?",
+      "description": "A practical guide to sizing runway for an AI-native startup in 2026, covering burn math, the standard 18 to 24 month convention, and LATAM cost realities.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Most AI-native startups should raise enough to fund 18 to 24 months of operation after a priced round, sized from net monthly burn rather than a headline number. In Brazil and LATAM, lower comp costs can stretch the same raise further, but model spend, GPU access, and a longer enterprise sales cycle argue for a deliberate cushion rather than a thin one."
+          ]
+        },
+        {
+          "id": "runway-math-problem",
+          "heading": "Runway is a math problem before it is a fundraising target",
+          "level": 2,
+          "paragraphs": [
+            "Runway is simply how many months a company can operate before it runs out of cash. The formula has not changed for AI startups. You take cash in the bank and divide it by net monthly burn, where net burn is cash going out minus cash coming in. A company holding 1.2 million dollars that spends a net of 100,000 dollars a month has 12 months of runway. Everything else in this article is about getting those two inputs right.",
+            "The reason runway matters so much is blunt. According to CB Insights, in its widely cited analysis \"The Top 12 Reasons Startups Fail,\" 38 percent of failed startups pointed to running out of cash or being unable to raise new capital as a primary cause. That makes cash management the single most common failure mode a founder can actually control. Sizing runway well is not a finance nicety. It is survival planning."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "38 percent of failed startups cited running out of cash or an inability to raise new capital as a primary reason for failure.",
+            "attribution": "CB Insights, The Top 12 Reasons Startups Fail"
+          }
+        },
+        {
+          "id": "standard-target-18-to-24-months",
+          "heading": "The standard target: 18 to 24 months after a priced round",
+          "level": 2,
+          "paragraphs": [
+            "A widely followed seed-stage convention is to hold 18 to 24 months of runway after a priced round. The logic is straightforward. It usually takes six to nine months of real traction to open a credible next round, then three to six months to close it. Building in that window plus a buffer for slippage lands most companies in the 18 to 24 month range. Raise for much less and you are fundraising again before you have proof. Raise for far more and you may dilute more than you need to at an early, low valuation.",
+            "Treat that band as a planning heuristic rather than a hard rule handed down by any single institution. What actually decides the number is your burn, your milestones, and how volatile your market is. Paul Graham's well-known framing of [default alive versus default dead](/en/library/default-alive-startup-finance) is the useful test here. At current spend and growth, does the company reach profitability or a fundable milestone before the cash runs out? If the honest answer is no, the runway is too short regardless of what the average says."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "A widely followed seed-stage convention is 18 to 24 months of runway after a priced round.",
+            "attribution": "Standard seed-stage venture practice"
+          }
+        },
+        {
+          "id": "what-is-different-ai-native-burn",
+          "heading": "What is different about AI-native burn",
+          "level": 2,
+          "paragraphs": [
+            "The classic burn model was dominated by salaries. For an AI-native company, two extra cost centers deserve their own lines in the model.",
+            "The first is inference and training spend. Every user interaction that hits a model has a marginal cost, and heavy usage can turn a variable cost into a structural one. The general downward trend in model costs helps here, since the price per token for a given capability has broadly fallen over recent years. That trend is real but not guaranteed to continue at any fixed rate, so it is safer to model current prices and treat future savings as upside rather than baking aggressive cost declines into the plan.",
+            "The second is compute access. GPU availability, reserved capacity, and the choice between hosted APIs and self-hosted infrastructure all move burn materially. A team that commits early to reserved compute trades flexibility for a lower unit cost. A team that stays on pay-as-you-go keeps optionality but pays a premium. Neither is wrong, but the decision belongs in the runway model explicitly, not as an afterthought."
+          ]
+        },
+        {
+          "id": "latam-worked-example",
+          "heading": "A LATAM worked example",
+          "level": 2,
+          "paragraphs": [
+            "Cost structure is where geography changes the answer, and this is exactly where Avante focuses, co-founding [AI-native companies](/en/library/ai-native-company-building) for Brazil and LATAM.",
+            "Consider an illustrative example, not a benchmark. Imagine two versions of the same six-person team, one modeled at a typical US cost base and one modeled at a LATAM cost base. Suppose the US version carries roughly 140,000 dollars of gross monthly burn once you load salaries, benefits, and overhead. The LATAM version of the same team might be modeled at closer to 90,000 dollars for the equivalent seniority. These figures are a scenario to show the mechanic, not a claimed market rate, and real numbers vary widely by role, city, and seniority.",
+            "Two things follow. First, on the same raise, the LATAM-based team buys more calendar months of runway, which can be the difference between reaching a fundable milestone and stalling out. Second, the savings are concentrated in people, not in model or compute spend. Inference costs the same whether the engineer sits in Sao Paulo or San Francisco. So as an AI company scales usage, the LATAM advantage compresses in percentage terms even as it stays valuable in absolute dollars. The practical takeaway is to convert the labor-cost edge into a deliberately longer runway rather than a leaner one."
+          ]
+        },
+        {
+          "id": "how-to-size-your-number",
+          "heading": "How to size your own number",
+          "level": 2,
+          "paragraphs": [
+            "Work it in this order."
+          ],
+          "bullets": [
+            "Build a monthly model with three cost blocks: people, model and compute, and everything else. Keep model and compute separate from generic infrastructure so you can see it move.",
+            "Define the milestone the next round requires, not just a date. Name the revenue, retention, or usage proof a Series A investor will want to see.",
+            "Estimate the calendar time to reach that milestone, then add the six to nine months of raising it, then add a buffer for slippage.",
+            "Multiply the resulting months by net monthly burn to get the raise, and pressure-test it against the 18 to 24 month convention. If your number is far outside that band, you should be able to explain why."
+          ]
+        },
+        {
+          "id": "when-to-hold-more-or-less",
+          "heading": "When to hold more, and when to hold less",
+          "level": 2,
+          "paragraphs": [
+            "Hold more runway when your sales cycle is long, which is common in regulated or enterprise AI, when your burn is genuinely uncertain because usage could spike, or when the funding environment is tight and rounds are taking longer to close. Hold somewhat less when you have a short, self-serve monetization path and early revenue, since real revenue reduces net burn directly and is the cleanest way to extend runway without raising a dollar.",
+            "The goal is not to hit a magic number. It is to make sure the company is default alive long enough to earn its next round on evidence rather than optimism. For an AI-native company built in Brazil and LATAM, a disciplined labor-cost advantage, combined with honest modeling of model and compute spend, is one of the strongest levers a founder has to get there."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How much runway should an AI startup raise for in 2026?",
+          "a": "A widely followed seed-stage convention is 18 to 24 months of runway after a priced round. That window covers the six to nine months typically needed to reach a fundable milestone plus the three to six months to close the next round, with a buffer for slippage. Treat it as a planning heuristic and size the actual number from your own net monthly burn and milestones."
+        },
+        {
+          "q": "How is runway calculated?",
+          "a": "Runway equals cash in the bank divided by net monthly burn, where net burn is cash going out minus cash coming in. A company with 1.2 million dollars in cash and 100,000 dollars of net monthly burn has 12 months of runway. Growing revenue lowers net burn and extends runway without raising more capital."
+        },
+        {
+          "q": "Why do AI startups burn differently from other startups?",
+          "a": "AI-native companies carry two cost centers beyond salaries: inference and training spend, which scales with usage, and compute access, which depends on GPU availability and whether you use hosted APIs or reserved capacity. Both belong as explicit lines in the burn model rather than being folded into generic infrastructure."
+        },
+        {
+          "q": "Does building in LATAM change how much runway you need?",
+          "a": "It can change the cost side. Lower labor costs in Brazil and LATAM can let the same raise fund more calendar months for an equivalent team. That advantage is concentrated in people, though, since model and compute costs are roughly the same everywhere, so the edge compresses in percentage terms as usage scales. The practical move is to convert the saving into a longer, safer runway."
+        },
+        {
+          "q": "What is the biggest runway mistake founders make?",
+          "a": "Underestimating time to the next milestone and to closing the next round, which leaves the company fundraising from weakness. CB Insights found that 38 percent of failed startups cited running out of cash or an inability to raise new capital, so the safer error is a deliberate cushion rather than a thin runway."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Quanto runway uma startup de IA precisa em 2026?",
+      "description": "Um guia prático para dimensionar o runway de uma startup nativa de IA em 2026, cobrindo a matemática do burn, a convenção padrão de 18 a 24 meses e as realidades de custo da América Latina.",
+      "sections": [
+        {
+          "paragraphs": [
+            "A maioria das startups nativas de IA deve captar o suficiente para financiar de 18 a 24 meses de operação após uma rodada precificada, dimensionando esse valor a partir do burn mensal líquido e não de um número de manchete. No Brasil e na América Latina, custos de remuneração mais baixos podem esticar a mesma captação por mais tempo, mas o gasto com modelos, o acesso a GPUs e um ciclo de vendas corporativas mais longo justificam uma folga deliberada em vez de uma margem apertada."
+          ]
+        },
+        {
+          "id": "runway-math-problem",
+          "heading": "Runway é um problema de matemática antes de ser uma meta de captação",
+          "level": 2,
+          "paragraphs": [
+            "Runway é simplesmente quantos meses uma empresa consegue operar antes de ficar sem caixa. A fórmula não mudou para as startups de IA. Você pega o caixa disponível e divide pelo burn mensal líquido, em que o burn líquido é o dinheiro que sai menos o dinheiro que entra. Uma empresa com 1,2 milhão de dólares que gasta um líquido de 100 mil dólares por mês tem 12 meses de runway. Todo o resto deste artigo trata de acertar esses dois números.",
+            "O motivo pelo qual o runway importa tanto é direto. Segundo a CB Insights, em sua análise amplamente citada \"The Top 12 Reasons Startups Fail\", 38 por cento das startups que fracassaram apontaram ficar sem caixa ou não conseguir captar novo capital como causa principal. Isso torna a gestão de caixa o modo de falha mais comum que um fundador realmente pode controlar. Dimensionar bem o runway não é um detalhe financeiro. É planejamento de sobrevivência."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "38 por cento das startups que fracassaram citaram ficar sem caixa ou a incapacidade de captar novo capital como razão principal do fracasso.",
+            "attribution": "CB Insights, The Top 12 Reasons Startups Fail"
+          }
+        },
+        {
+          "id": "standard-target-18-to-24-months",
+          "heading": "A meta padrão: de 18 a 24 meses após uma rodada precificada",
+          "level": 2,
+          "paragraphs": [
+            "Uma convenção bastante seguida no estágio seed é manter de 18 a 24 meses de runway após uma rodada precificada. A lógica é simples. Costuma levar de seis a nove meses de tração real para abrir uma próxima rodada com credibilidade, e depois de três a seis meses para fechá-la. Somar essa janela mais uma folga para atrasos coloca a maioria das empresas na faixa de 18 a 24 meses. Capte muito menos e você estará captando de novo antes de ter provas. Capte muito mais e talvez dilua mais do que precisa em um estágio inicial e de baixo valuation.",
+            "Trate essa faixa como uma heurística de planejamento e não como uma regra rígida ditada por qualquer instituição. O que de fato decide o número é o seu burn, os seus marcos e o quanto o seu mercado é volátil. O conhecido conceito de Paul Graham de [default alive versus default dead](/pt/library/default-alive-startup-finance) é o teste útil aqui. No ritmo atual de gasto e crescimento, a empresa chega à lucratividade ou a um marco financiável antes de o caixa acabar? Se a resposta honesta for não, o runway é curto demais, independentemente do que diz a média."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Uma convenção bastante seguida no estágio seed é de 18 a 24 meses de runway após uma rodada precificada.",
+            "attribution": "Prática padrão de venture no estágio seed"
+          }
+        },
+        {
+          "id": "what-is-different-ai-native-burn",
+          "heading": "O que é diferente no burn nativo de IA",
+          "level": 2,
+          "paragraphs": [
+            "O modelo clássico de burn era dominado por salários. Para uma empresa nativa de IA, dois centros de custo extras merecem suas próprias linhas no modelo.",
+            "O primeiro é o gasto com inferência e treinamento. Cada interação de usuário que aciona um modelo tem um custo marginal, e o uso intenso pode transformar um custo variável em um custo estrutural. A tendência geral de queda nos custos de modelos ajuda aqui, já que o preço por token para uma dada capacidade caiu de forma ampla nos últimos anos. Essa tendência é real, mas não há garantia de que continue a qualquer ritmo fixo, então é mais seguro modelar os preços atuais e tratar economias futuras como um ganho adicional em vez de embutir quedas agressivas de custo no plano.",
+            "O segundo é o acesso a compute. A disponibilidade de GPUs, a capacidade reservada e a escolha entre APIs hospedadas e infraestrutura própria movem o burn de forma relevante. Um time que se compromete cedo com compute reservado troca flexibilidade por um custo unitário menor. Um time que fica no pague conforme o uso mantém a opcionalidade, mas paga um prêmio. Nenhum dos dois está errado, mas a decisão deve estar explícita no modelo de runway, e não como algo secundário."
+          ]
+        },
+        {
+          "id": "latam-worked-example",
+          "heading": "Um exemplo prático na América Latina",
+          "level": 2,
+          "paragraphs": [
+            "A estrutura de custos é onde a geografia muda a resposta, e é exatamente nisso que a Avante foca, cofundando [empresas nativas de IA](/pt/library/ai-native-company-building) para o Brasil e a América Latina.",
+            "Considere um exemplo ilustrativo, não um benchmark. Imagine duas versões do mesmo time de seis pessoas, uma modelada com uma base de custos típica dos Estados Unidos e outra modelada com uma base de custos da América Latina. Suponha que a versão americana tenha cerca de 140 mil dólares de burn mensal bruto depois de somar salários, benefícios e overhead. A versão latino-americana do mesmo time poderia ser modelada em algo mais próximo de 90 mil dólares para a mesma senioridade. Esses valores são um cenário para mostrar a mecânica, não uma taxa de mercado afirmada, e os números reais variam muito por cargo, cidade e senioridade.",
+            "Duas coisas decorrem disso. Primeiro, na mesma captação, o time baseado na América Latina compra mais meses de calendário de runway, o que pode ser a diferença entre alcançar um marco financiável e travar. Segundo, a economia se concentra em pessoas, não no gasto com modelos ou compute. A inferência custa o mesmo, esteja o engenheiro em São Paulo ou em São Francisco. Assim, à medida que uma empresa de IA escala o uso, a vantagem latino-americana comprime em termos percentuais, mesmo que continue valiosa em dólares absolutos. A conclusão prática é converter a vantagem de custo de mão de obra em um runway deliberadamente mais longo, e não apenas mais enxuto."
+          ]
+        },
+        {
+          "id": "how-to-size-your-number",
+          "heading": "Como dimensionar o seu próprio número",
+          "level": 2,
+          "paragraphs": [
+            "Faça nesta ordem."
+          ],
+          "bullets": [
+            "Monte um modelo mensal com três blocos de custo: pessoas, modelos e compute, e todo o resto. Mantenha modelos e compute separados da infraestrutura genérica para conseguir ver esse custo se mover.",
+            "Defina o marco que a próxima rodada exige, não apenas uma data. Nomeie a prova de receita, retenção ou uso que um investidor de Série A vai querer ver.",
+            "Estime o tempo de calendário para alcançar esse marco, depois some os seis a nove meses de captação e, em seguida, some uma folga para atrasos.",
+            "Multiplique os meses resultantes pelo burn mensal líquido para chegar à captação e teste esse valor contra a convenção de 18 a 24 meses. Se o seu número estiver bem fora dessa faixa, você deveria conseguir explicar por quê."
+          ]
+        },
+        {
+          "id": "when-to-hold-more-or-less",
+          "heading": "Quando manter mais e quando manter menos",
+          "level": 2,
+          "paragraphs": [
+            "Mantenha mais runway quando o seu ciclo de vendas for longo, o que é comum em IA regulada ou corporativa, quando o seu burn for genuinamente incerto porque o uso pode disparar, ou quando o ambiente de captação estiver apertado e as rodadas estiverem demorando mais para fechar. Mantenha um pouco menos quando você tiver um caminho de monetização curto e self-serve com receita inicial, já que a receita real reduz o burn líquido diretamente e é a forma mais limpa de estender o runway sem captar um dólar.",
+            "O objetivo não é atingir um número mágico. É garantir que a empresa fique default alive por tempo suficiente para conquistar a próxima rodada com base em evidências e não em otimismo. Para uma empresa nativa de IA construída no Brasil e na América Latina, uma vantagem disciplinada de custo de mão de obra, combinada com uma modelagem honesta do gasto com modelos e compute, é uma das alavancas mais fortes que um fundador tem para chegar lá."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Para quantos meses de runway uma startup de IA deve captar em 2026?",
+          "a": "Uma convenção bastante seguida no estágio seed é de 18 a 24 meses de runway após uma rodada precificada. Essa janela cobre os seis a nove meses normalmente necessários para alcançar um marco financiável mais os três a seis meses para fechar a próxima rodada, com uma folga para atrasos. Trate isso como uma heurística de planejamento e dimensione o número real a partir do seu próprio burn mensal líquido e dos seus marcos."
+        },
+        {
+          "q": "Como o runway é calculado?",
+          "a": "O runway é igual ao caixa disponível dividido pelo burn mensal líquido, em que o burn líquido é o dinheiro que sai menos o dinheiro que entra. Uma empresa com 1,2 milhão de dólares em caixa e 100 mil dólares de burn mensal líquido tem 12 meses de runway. Aumentar a receita reduz o burn líquido e estende o runway sem captar mais capital."
+        },
+        {
+          "q": "Por que as startups de IA queimam caixa de forma diferente de outras startups?",
+          "a": "As empresas nativas de IA carregam dois centros de custo além dos salários: o gasto com inferência e treinamento, que escala com o uso, e o acesso a compute, que depende da disponibilidade de GPUs e de você usar APIs hospedadas ou capacidade reservada. Ambos devem entrar como linhas explícitas no modelo de burn em vez de serem diluídos na infraestrutura genérica."
+        },
+        {
+          "q": "Construir na América Latina muda quanto runway você precisa?",
+          "a": "Pode mudar o lado do custo. Custos de mão de obra mais baixos no Brasil e na América Latina podem permitir que a mesma captação financie mais meses de calendário para um time equivalente. Essa vantagem se concentra em pessoas, porém, já que os custos de modelos e compute são praticamente os mesmos em qualquer lugar, de modo que a vantagem comprime em termos percentuais conforme o uso escala. O movimento prático é converter a economia em um runway mais longo e seguro."
+        },
+        {
+          "q": "Qual é o maior erro de runway que os fundadores cometem?",
+          "a": "Subestimar o tempo até o próximo marco e até fechar a próxima rodada, o que deixa a empresa captando a partir de uma posição de fraqueza. A CB Insights descobriu que 38 por cento das startups que fracassaram citaram ficar sem caixa ou a incapacidade de captar novo capital, então o erro mais seguro é uma folga deliberada em vez de um runway apertado."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "how-much-should-a-founder-pay-themselves",
+    "category": "insights",
+    "type": "Explainer",
+    "readTime": "6 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-13",
+    "isPublished": true,
+    "en": {
+      "title": "How Much Should a Founder Pay Themselves?",
+      "description": "A practical guide to founder salary at seed stage, anchored on Kruze Consulting salary data, the runway math behind the number, and how it scales in Brazil and LATAM.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Most funded founders pay themselves a modest salary rather than a market-rate one, with Kruze Consulting reporting that the average funded startup CEO takes home roughly 150,000 dollars a year and seed-stage founders usually sitting well below that. The right number is the one that covers your living costs without draining the runway you just raised. In Brazil and LATAM, where Avante co-founds AI-native companies, that figure scales down with local cost of living rather than following a US benchmark."
+          ]
+        },
+        {
+          "id": "the-real-question-behind-the-number",
+          "heading": "The real question behind the number",
+          "level": 2,
+          "paragraphs": [
+            "Founder pay is one of the few line items where the founder sets their own price, and that is exactly why it feels awkward. Pay yourself too little and you burn out or quietly run down your savings. Pay yourself too much and you shorten the runway that is supposed to buy you time to find product-market fit. The number that resolves this tension is rarely a market-rate salary. It is the smallest amount that lets you stop thinking about money and go back to building.",
+            "The best public benchmark comes from Kruze Consulting, an accounting firm that publishes an annual startup salary report drawn from hundreds of venture-backed companies. Their data consistently shows funded startup CEOs paying themselves on the order of 150,000 dollars a year on average, with seed-stage founders sitting meaningfully below that once you strip out the later-stage companies that pull the average up. Treat that average as a ceiling to reason from, not a target to hit."
+          ]
+        },
+        {
+          "id": "what-the-data-actually-says",
+          "heading": "What the data actually says",
+          "level": 2,
+          "paragraphs": [
+            "If you want a working range for a US-based founder, roughly 80,000 to 150,000 dollars a year is a defensible band. That band is a judgment call, not a hard benchmark, and it is worth understanding where its edges come from.",
+            "The top edge has a well-known source. In Zero to One, Peter Thiel observed that across the companies he funded, the lower a CEO paid themselves, the better the company tended to do, and that he rarely saw a well-performing early-stage CEO earning much more than about 150,000 dollars. His reasoning was not about frugality for its own sake. A founder on a low salary is signaling that their upside lives in the equity, which aligns them with every other shareholder and with the long game.",
+            "The bottom edge is set by reality rather than principle. Below a certain point you are subsidizing the company out of personal savings, which works for a while and then quietly becomes a source of stress, resentment, and bad decisions. The floor is wherever your actual fixed costs sit."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Funded startup CEOs pay themselves roughly 150,000 dollars a year on average, with seed-stage founders sitting well below that.",
+            "attribution": "Kruze Consulting annual startup salary report"
+          }
+        },
+        {
+          "id": "the-rule-underneath-the-number",
+          "heading": "The rule underneath the number",
+          "level": 2,
+          "paragraphs": [
+            "Strip away the benchmarks and the logic is simple. Your salary should cover your genuine living costs, rent or mortgage, food, healthcare, dependents, and the recurring obligations you cannot pause, and very little beyond that. This is not martyrdom. A founder who is anxious about making rent is a worse operator than one who is paid enough to think clearly, and investors know it.",
+            "The mistake in both directions comes from anchoring on the wrong reference point. Anchoring on your last corporate salary pushes the number too high. Anchoring on an idealized image of the suffering founder pushes it too low. Anchoring on your real monthly costs, plus a small margin, gets you to a number you can defend to any investor in one sentence."
+          ]
+        },
+        {
+          "id": "what-accelerator-terms-tell-you-about-the-math",
+          "heading": "What accelerator terms tell you about the math",
+          "level": 2,
+          "paragraphs": [
+            "Accelerator deals are a useful reality check because they put a concrete dollar figure on how much runway a small round actually buys. Y Combinator's standard deal is 500,000 dollars, structured as 125,000 on a [post-money SAFE](/en/library/how-safes-work-for-founders) for 7 percent plus 375,000 on an uncapped SAFE with a most-favored-nation provision. Techstars, for comparison, invests 120,000 dollars, historically in exchange for roughly 6 percent equity.",
+            "Run the burn math on the YC figure and the discipline becomes obvious. If two co-founders each pay themselves 150,000 dollars, salaries alone consume 300,000 dollars a year, which is more than half of that 500,000 before you have paid for a single server, contractor, or software subscription. That is why early rounds and founder salaries are sized together. Every dollar of pay is a dollar less of experimentation, and at seed stage experimentation is the entire point."
+          ]
+        },
+        {
+          "id": "the-brazil-and-latam-adjustment",
+          "heading": "The Brazil and LATAM adjustment",
+          "level": 2,
+          "paragraphs": [
+            "US salary figures travel badly. Avante co-founds AI-native companies for Brazil and LATAM, and in those markets the same principle produces a much lower number because the cost of covering a founder's genuine living expenses is lower. Importing a US benchmark into a Real-denominated or peso-denominated budget quietly destroys runway and sends the wrong signal to local investors, who read an inflated founder salary as a founder who has not internalized the cost structure of the market they operate in.",
+            "The correct move is to run the same living-costs calculation against local reality. A founder in Sao Paulo, Bogota, or Mexico City should anchor on what it actually costs to live and work there, not on a San Francisco comparison. The frugality logic is identical. The absolute number is simply smaller, and that is a feature, because it means a given round buys far more months of runway in the region than the same round would in the US."
+          ]
+        },
+        {
+          "id": "a-simple-way-to-set-your-number",
+          "heading": "A simple way to set your number",
+          "level": 2,
+          "paragraphs": [
+            "You can settle this in an afternoon. Add up your true monthly fixed costs, multiply by twelve, add a modest buffer of ten to fifteen percent for the irregular expenses that always appear, and stop there. Sanity-check the result against two things. First, does it stay comfortably under the range your peers at the same stage and geography are paying themselves. Second, would you be comfortable saying the number out loud to your lead investor. If both answers are yes, you have found your salary.",
+            "The deeper point is that founder pay is a signaling instrument as much as a compensation decision. A number that is visibly tied to your real costs tells everyone, investors, co-founders, and early employees, that you understand the game you are playing. In a [studio model](/en/library/what-is-a-startup-studio), that alignment is not left to chance. Co-founding companies alongside operators means the salary conversation happens early and honestly, before it becomes a source of friction, and it gets calibrated to the market the company actually serves.",
+            "The right founder salary is not a badge of sacrifice or a reward for raising a round. It is the quiet, boring number that removes money from your list of daily worries so that everything else you do can be about the company."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is the average salary a startup founder pays themselves?",
+          "a": "Kruze Consulting's annual startup salary report puts the average funded startup CEO at roughly 150,000 dollars a year across its sample of venture-backed companies. Seed-stage founders typically sit well below that average, and the number scales down further in markets like Brazil and LATAM where the cost of living is lower."
+        },
+        {
+          "q": "Why do investors prefer founders to take a low salary?",
+          "a": "A low founder salary signals that the founder's real upside is in the equity, which aligns them with every other shareholder. In Zero to One, Peter Thiel noted that the lower a CEO paid themselves, the better the company tended to do, and he rarely saw a well-performing early-stage CEO earning much above 150,000 dollars."
+        },
+        {
+          "q": "How much does an accelerator round actually cover?",
+          "a": "Y Combinator's standard deal is 500,000 dollars, structured as 125,000 on a post-money SAFE for 7 percent plus 375,000 on an uncapped SAFE. Techstars invests 120,000 dollars, historically for about 6 percent. If two co-founders each took 150,000 dollars, salaries alone would eat more than half of a 500,000 dollar round before any other spending."
+        },
+        {
+          "q": "Should founders in Brazil or LATAM use US salary benchmarks?",
+          "a": "No. US figures assume US living costs and will quietly drain runway if applied to a Real or peso budget. Founders should run the same living-costs calculation against local reality. The principle stays the same and the absolute number is simply smaller, which means a given round buys more runway in the region."
+        },
+        {
+          "q": "What is the simplest way to decide a founder salary?",
+          "a": "Add up your true monthly fixed costs, multiply by twelve, add a buffer of ten to fifteen percent, and stop there. Then check that the result stays under what peers at your stage and geography pay themselves and that you would be comfortable stating it to your lead investor."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Quanto um fundador deveria pagar a si mesmo?",
+      "description": "Um guia prático sobre o salário do fundador no estágio seed, ancorado nos dados salariais da Kruze Consulting, na conta de runway por trás do número e em como ele se ajusta no Brasil e na América Latina.",
+      "sections": [
+        {
+          "paragraphs": [
+            "A maioria dos fundadores com capital levantado paga a si mesma um salário modesto em vez de um valor de mercado, e a Kruze Consulting relata que o CEO médio de uma startup financiada leva para casa cerca de 150.000 dólares por ano, com os fundadores em estágio seed geralmente ficando bem abaixo disso. O número certo é aquele que cobre seu custo de vida sem drenar o runway que você acabou de levantar. No Brasil e na América Latina, onde a Avante co-funda empresas nativas de IA, esse valor diminui conforme o custo de vida local em vez de seguir um benchmark dos Estados Unidos."
+          ]
+        },
+        {
+          "id": "the-real-question-behind-the-number",
+          "heading": "A verdadeira questão por trás do número",
+          "level": 2,
+          "paragraphs": [
+            "A remuneração do fundador é um dos poucos itens de despesa em que o próprio fundador define seu preço, e é exatamente por isso que ela parece desconfortável. Pague pouco a si mesmo e você se esgota ou consome silenciosamente suas economias. Pague demais e você encurta o runway que deveria comprar o tempo necessário para encontrar o product-market fit. O número que resolve essa tensão raramente é um salário de mercado. É a menor quantia que permite parar de pensar em dinheiro e voltar a construir.",
+            "O melhor benchmark público vem da Kruze Consulting, uma firma de contabilidade que publica um relatório anual de salários de startups baseado em centenas de empresas investidas por venture capital. Os dados mostram consistentemente que CEOs de startups financiadas pagam a si mesmos na ordem de 150.000 dólares por ano em média, com fundadores em estágio seed ficando significativamente abaixo disso quando você retira as empresas de estágio mais avançado que puxam a média para cima. Trate essa média como um teto a partir do qual raciocinar, não como uma meta a atingir."
+          ]
+        },
+        {
+          "id": "what-the-data-actually-says",
+          "heading": "O que os dados realmente dizem",
+          "level": 2,
+          "paragraphs": [
+            "Se você quer uma faixa prática para um fundador baseado nos Estados Unidos, algo entre 80.000 e 150.000 dólares por ano é uma banda defensável. Essa banda é uma questão de julgamento, não um benchmark rígido, e vale a pena entender de onde vêm suas bordas.",
+            "A borda superior tem uma fonte conhecida. Em Zero to One, Peter Thiel observou que, entre as empresas que ele financiou, quanto menos um CEO pagava a si mesmo, melhor a empresa tendia a se sair, e que ele raramente via um CEO de estágio inicial com bom desempenho ganhando muito mais do que cerca de 150.000 dólares. Seu raciocínio não era sobre frugalidade por si só. Um fundador com salário baixo está sinalizando que seu upside está no equity, o que o alinha com todos os demais acionistas e com o jogo de longo prazo.",
+            "A borda inferior é definida pela realidade, não pelo princípio. Abaixo de certo ponto você está subsidiando a empresa com as economias pessoais, o que funciona por um tempo e depois se torna silenciosamente uma fonte de estresse, ressentimento e más decisões. O piso é onde quer que estejam seus custos fixos reais."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "CEOs de startups financiadas pagam a si mesmos cerca de 150.000 dólares por ano em média, com fundadores em estágio seed ficando bem abaixo disso.",
+            "attribution": "Relatório anual de salários de startups da Kruze Consulting"
+          }
+        },
+        {
+          "id": "the-rule-underneath-the-number",
+          "heading": "A regra por trás do número",
+          "level": 2,
+          "paragraphs": [
+            "Tire os benchmarks e a lógica é simples. Seu salário deve cobrir seus custos de vida genuínos, aluguel ou financiamento, alimentação, saúde, dependentes e as obrigações recorrentes que você não pode pausar, e muito pouco além disso. Isto não é martírio. Um fundador ansioso em pagar o aluguel é um operador pior do que um que recebe o suficiente para pensar com clareza, e os investidores sabem disso.",
+            "O erro nas duas direções vem de ancorar no ponto de referência errado. Ancorar no seu último salário corporativo empurra o número para cima demais. Ancorar em uma imagem idealizada do fundador sofredor empurra o número para baixo demais. Ancorar nos seus custos mensais reais, mais uma pequena margem, leva você a um número que você pode defender para qualquer investidor em uma frase."
+          ]
+        },
+        {
+          "id": "what-accelerator-terms-tell-you-about-the-math",
+          "heading": "O que os termos das aceleradoras dizem sobre a conta",
+          "level": 2,
+          "paragraphs": [
+            "Os acordos de aceleradoras são um bom teste de realidade porque colocam um valor concreto em dólares sobre quanto runway uma rodada pequena realmente compra. O acordo padrão da Y Combinator é de 500.000 dólares, estruturado como 125.000 em um [SAFE post-money](/pt/library/how-safes-work-for-founders) por 7 por cento mais 375.000 em um SAFE sem teto com uma cláusula de nação mais favorecida. A Techstars, para comparação, investe 120.000 dólares, historicamente em troca de cerca de 6 por cento de equity.",
+            "Faça a conta do burn sobre o valor da YC e a disciplina fica óbvia. Se dois cofundadores pagam a si mesmos 150.000 dólares cada, só os salários consomem 300.000 dólares por ano, o que é mais da metade daqueles 500.000 antes de você ter pago por um único servidor, prestador de serviço ou assinatura de software. É por isso que as rodadas iniciais e os salários dos fundadores são dimensionados juntos. Cada dólar de remuneração é um dólar a menos de experimentação, e no estágio seed a experimentação é todo o objetivo."
+          ]
+        },
+        {
+          "id": "the-brazil-and-latam-adjustment",
+          "heading": "O ajuste para o Brasil e a América Latina",
+          "level": 2,
+          "paragraphs": [
+            "Os números salariais dos Estados Unidos viajam mal. A Avante co-funda empresas nativas de IA para o Brasil e a América Latina, e nesses mercados o mesmo princípio produz um número muito menor porque o custo de cobrir as despesas de vida genuínas de um fundador é mais baixo. Importar um benchmark dos Estados Unidos para um orçamento denominado em reais ou em pesos destrói silenciosamente o runway e envia o sinal errado para os investidores locais, que leem um salário inflado de fundador como um fundador que não internalizou a estrutura de custos do mercado em que atua.",
+            "O movimento correto é fazer o mesmo cálculo de custos de vida contra a realidade local. Um fundador em São Paulo, Bogotá ou Cidade do México deve se ancorar no que realmente custa viver e trabalhar ali, não em uma comparação com São Francisco. A lógica da frugalidade é idêntica. O número absoluto é simplesmente menor, e isso é uma vantagem, porque significa que uma dada rodada compra muito mais meses de runway na região do que a mesma rodada compraria nos Estados Unidos."
+          ]
+        },
+        {
+          "id": "a-simple-way-to-set-your-number",
+          "heading": "Uma maneira simples de definir o seu número",
+          "level": 2,
+          "paragraphs": [
+            "Você pode resolver isto em uma tarde. Some seus verdadeiros custos fixos mensais, multiplique por doze, adicione uma margem modesta de dez a quinze por cento para as despesas irregulares que sempre aparecem, e pare por aí. Verifique o resultado contra duas coisas. Primeiro, ele fica confortavelmente abaixo da faixa que seus pares no mesmo estágio e geografia pagam a si mesmos. Segundo, você se sentiria confortável dizendo o número em voz alta para o seu investidor líder. Se ambas as respostas forem sim, você encontrou seu salário.",
+            "O ponto mais profundo é que a remuneração do fundador é um instrumento de sinalização tanto quanto uma decisão de compensação. Um número visivelmente ligado aos seus custos reais diz a todos, investidores, cofundadores e primeiros funcionários, que você entende o jogo que está jogando. Em um [modelo de studio](/pt/library/what-is-a-startup-studio), esse alinhamento não é deixado ao acaso. Co-fundar empresas ao lado de operadores significa que a conversa sobre salário acontece cedo e com honestidade, antes de se tornar uma fonte de atrito, e é calibrada para o mercado que a empresa realmente atende.",
+            "O salário certo do fundador não é um distintivo de sacrifício nem uma recompensa por ter levantado uma rodada. É o número quieto e sem graça que remove o dinheiro da sua lista de preocupações diárias para que tudo o mais que você faça possa ser sobre a empresa."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Qual é o salário médio que um fundador de startup paga a si mesmo?",
+          "a": "O relatório anual de salários de startups da Kruze Consulting coloca o CEO médio de uma startup financiada em cerca de 150.000 dólares por ano em sua amostra de empresas investidas por venture capital. Fundadores em estágio seed normalmente ficam bem abaixo dessa média, e o número diminui ainda mais em mercados como Brasil e América Latina, onde o custo de vida é mais baixo."
+        },
+        {
+          "q": "Por que os investidores preferem que os fundadores tenham um salário baixo?",
+          "a": "Um salário baixo do fundador sinaliza que o verdadeiro upside do fundador está no equity, o que o alinha com todos os demais acionistas. Em Zero to One, Peter Thiel observou que quanto menos um CEO pagava a si mesmo, melhor a empresa tendia a se sair, e ele raramente via um CEO de estágio inicial com bom desempenho ganhando muito acima de 150.000 dólares."
+        },
+        {
+          "q": "Quanto uma rodada de aceleradora realmente cobre?",
+          "a": "O acordo padrão da Y Combinator é de 500.000 dólares, estruturado como 125.000 em um SAFE post-money por 7 por cento mais 375.000 em um SAFE sem teto. A Techstars investe 120.000 dólares, historicamente por cerca de 6 por cento. Se dois cofundadores tomassem 150.000 dólares cada, só os salários consumiriam mais da metade de uma rodada de 500.000 dólares antes de qualquer outro gasto."
+        },
+        {
+          "q": "Fundadores no Brasil ou na América Latina devem usar benchmarks salariais dos Estados Unidos?",
+          "a": "Não. Os números dos Estados Unidos assumem custos de vida americanos e vão drenar silenciosamente o runway se aplicados a um orçamento em reais ou em pesos. Os fundadores devem fazer o mesmo cálculo de custos de vida contra a realidade local. O princípio permanece o mesmo e o número absoluto é simplesmente menor, o que significa que uma dada rodada compra mais runway na região."
+        },
+        {
+          "q": "Qual é a maneira mais simples de decidir o salário de um fundador?",
+          "a": "Some seus verdadeiros custos fixos mensais, multiplique por doze, adicione uma margem de dez a quinze por cento, e pare por aí. Depois verifique se o resultado fica abaixo do que seus pares no mesmo estágio e geografia pagam a si mesmos e se você se sentiria confortável em declará-lo ao seu investidor líder."
         }
       ]
     }
@@ -19640,6 +20992,278 @@ const engineArticles: Article[] = [
     }
   },
   {
+    "slug": "what-is-a-down-round",
+    "category": "insights",
+    "type": "Explainer",
+    "readTime": "6 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-13",
+    "isPublished": true,
+    "en": {
+      "title": "What Is a Down Round? Definition, Causes, and What It Means for Founders",
+      "description": "A down round is a startup financing at a lower valuation than the prior round. Learn what causes them, how they dilute founders, and how to avoid one.",
+      "sections": [
+        {
+          "paragraphs": [
+            "A down round is a financing in which a startup raises money at a lower valuation than its previous round, meaning investors pay a lower price per share than they did last time. It is dilutive and carries stigma, but in a repricing market it is common and survivable. Carta data shows down rounds reached about 20 percent of all priced rounds at the end of 2023, up from the single digits during the 2021 boom, which reframes the down round as a feature of the cycle rather than an isolated failure."
+          ]
+        },
+        {
+          "id": "what-is-a-down-round",
+          "heading": "What is a down round?",
+          "level": 2,
+          "paragraphs": [
+            "A down round is a financing in which a company raises capital at a lower valuation than its previous round. Put simply, the price per share investors pay is below the price paid in the prior round. If a startup raised its Series A at a $40 million post-money valuation and later closes a Series B at $30 million, that Series B is a down round.",
+            "The opposite is an up round, where the valuation rises. A flat round holds the valuation steady. Down rounds carry a stigma because they signal that the market now values the company below its last mark, but they are a normal feature of tighter funding cycles and not automatically a sign of failure."
+          ]
+        },
+        {
+          "id": "how-a-down-round-actually-happens",
+          "heading": "How a down round actually happens",
+          "level": 2,
+          "paragraphs": [
+            "Valuation in venture financing is set by what a lead investor is willing to pay per share. When a startup has grown into its prior valuation more slowly than planned, or when the broader market resets pricing, the next lead may only commit at a lower price. Common triggers include:",
+            "The key mechanic is that valuation is relative. A company can be growing in absolute terms and still take a down round if it was priced for faster growth than it delivered, or if comparable companies have repriced."
+          ],
+          "bullets": [
+            "Missed growth or revenue targets against an aggressive prior valuation",
+            "A wider market correction that compresses multiples across the sector",
+            "Running low on runway with no better-priced offer on the table",
+            "A shift in investor sentiment toward profitability over growth"
+          ]
+        },
+        {
+          "id": "why-down-rounds-became-common-again",
+          "heading": "Why down rounds became common again",
+          "level": 2,
+          "paragraphs": [
+            "After the 2021 boom, when cheap capital pushed valuations to record highs, the tightening cycle that followed forced many companies to raise at lower marks. Carta, which administers cap tables for tens of thousands of startups, tracks this directly in its State of Private Markets reports.",
+            "That shift matters because it reframes the down round from an isolated embarrassment into a structural outcome of the cycle. At that low point, roughly one in five priced rounds carried a valuation below the one before it. Being repriced put a company in wide company, not on an island."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Down rounds reached about 20 percent of all priced funding rounds in the fourth quarter of 2023, the highest share on record and up sharply from the single digits during the 2021 boom.",
+            "attribution": "Carta, State of Private Markets (Q4 2023)"
+          }
+        },
+        {
+          "id": "what-a-down-round-means-for-founders",
+          "heading": "What a down round means for founders",
+          "level": 2,
+          "paragraphs": [
+            "The most immediate consequence is dilution. Because new shares are issued at a lower price, founders and existing shareholders give up more ownership per dollar raised than they would in an up round.",
+            "Anti-dilution provisions add another layer. Most priced venture rounds include anti-dilution protection for preferred shareholders, and the two standard forms behave very differently in a down round:",
+            "Employee equity also takes a hit. Option holders who joined at the higher valuation may find their strike price underwater, which is why down rounds are often paired with option repricing or fresh grants to retain the team."
+          ],
+          "bullets": [
+            "Weighted-average anti-dilution, the market standard, adjusts the conversion price of earlier preferred shares based on the size and price of the new round. It softens the blow for prior investors while limiting the damage to founders.",
+            "Full-ratchet anti-dilution, far more aggressive and now uncommon, resets earlier investors' conversion price all the way down to the new lower price, regardless of how small the new round is. This can dramatically dilute founders and employees."
+          ]
+        },
+        {
+          "id": "the-financing-mechanics-behind-the-numbers",
+          "heading": "The financing mechanics behind the numbers",
+          "level": 2,
+          "paragraphs": [
+            "To see why the price of each round matters so much, it helps to anchor on standard early-stage terms. Accelerators publish theirs openly.",
+            "Techstars, for comparison, invests $20,000 for 6 percent of common equity and offers a $100,000 convertible note. These fixed reference points make the dilution math concrete. Every subsequent round, up or down, is measured against the ownership already committed at the start.",
+            "Because SAFEs and convertible notes convert into equity at the priced round, a lower valuation at that round increases the percentage those earlier instruments claim, which compounds founder dilution beyond the new money alone."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Y Combinator's standard deal invests $125,000 for 7 percent of a company on a post-money SAFE, plus an additional uncapped amount on most-favored-nation terms.",
+            "attribution": "Y Combinator, published program terms"
+          }
+        },
+        {
+          "id": "alternatives-founders-weigh-first",
+          "heading": "Alternatives founders weigh first",
+          "level": 2,
+          "paragraphs": [
+            "Before accepting a down round, most teams look at less dilutive or less visible options:",
+            "Each carries trade-offs. Structured flat rounds can protect the optics of a valuation while stacking preferences that hurt founders more than a clean down round would. Sometimes a clean down round is the healthier outcome, because it resets the cap table honestly instead of hiding the damage in fine print."
+          ],
+          "bullets": [
+            "A bridge or extension round on convertible instruments, buying time to hit milestones before setting a new price",
+            "Venture debt, which avoids repricing equity but adds repayment obligations",
+            "Structured terms, such as additional liquidation preferences, that preserve the headline valuation while giving investors downside protection",
+            "Cutting burn to extend runway and raise later from a position of strength"
+          ]
+        },
+        {
+          "id": "where-ai-native-companies-fit",
+          "heading": "Where AI-native companies fit",
+          "level": 2,
+          "paragraphs": [
+            "The current cycle rewards capital efficiency, and AI-native companies that reach revenue with lean teams are often better positioned to avoid or recover from a down round. Avante Ventures co-founds AI-native companies for Brazil and Latin America, building them to be capital-efficient from the first line of code so that valuation is anchored to real traction rather than hype. When a company grows into its valuation on fundamentals, it has far more control over the price of its next round."
+          ]
+        },
+        {
+          "id": "bottom-line",
+          "heading": "Bottom line",
+          "level": 2,
+          "paragraphs": [
+            "A down round is a financing at a lower valuation than the last one. It is uncomfortable and dilutive, but in a repricing market it is common and survivable. The founders who navigate it best understand the mechanics in advance, negotiate anti-dilution terms and deal structure deliberately, and build the kind of durable, efficient business that gives them pricing power when the market turns."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is a down round in simple terms?",
+          "a": "A down round is when a startup raises new funding at a lower valuation than its previous round, so investors pay a lower price per share than they did last time. If your last round valued the company at $40 million and the new one values it at $30 million, that is a down round."
+        },
+        {
+          "q": "Are down rounds always a sign a startup is failing?",
+          "a": "No. A down round can reflect a broader market repricing rather than a specific company failing. Carta reported that down rounds reached about 20 percent of all priced rounds in the fourth quarter of 2023, up from the single digits during the 2021 boom, which shows how often strong companies get caught in a wider correction."
+        },
+        {
+          "q": "How does a down round dilute founders?",
+          "a": "Because new shares are issued at a lower price, the company must give up more ownership for every dollar it raises. Anti-dilution provisions can add to the effect. Weighted-average protection, the market standard, is relatively mild, while full-ratchet protection, now uncommon, can be severe for founders and employees."
+        },
+        {
+          "q": "What are the alternatives to a down round?",
+          "a": "Founders often consider a bridge or extension round on convertible instruments, venture debt, structured terms that preserve the headline valuation, or cutting burn to extend runway and raise later. Each has trade-offs, and a structured flat round can sometimes hurt founders more than a clean down round would."
+        },
+        {
+          "q": "How can a startup avoid a down round?",
+          "a": "The most reliable way is to grow into the valuation on fundamentals and stay capital-efficient so the next round is priced on real traction rather than hype. Companies that reach revenue with lean teams have far more control over the timing and price of their next raise."
+        }
+      ]
+    },
+    "pt": {
+      "title": "O que é uma down round? Definição, causas e o que significa para os fundadores",
+      "description": "Uma down round é um financiamento de startup a uma avaliação menor do que a rodada anterior. Entenda o que as causa, como diluem os fundadores e como evitar uma.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Uma down round é um financiamento no qual uma startup capta recursos a uma avaliação menor do que a da rodada anterior, o que significa que os investidores pagam um preço por ação menor do que pagaram da última vez. Ela é dilutiva e carrega estigma, mas em um mercado que reprecifica ela é comum e superável. Dados da Carta mostram que as down rounds chegaram a cerca de 20 por cento de todas as rodadas precificadas no fim de 2023, acima dos dígitos únicos durante o boom de 2021, o que reposiciona a down round como uma característica do ciclo e não como um fracasso isolado."
+          ]
+        },
+        {
+          "id": "what-is-a-down-round",
+          "heading": "O que é uma down round?",
+          "level": 2,
+          "paragraphs": [
+            "Uma down round é um financiamento no qual uma empresa capta capital a uma avaliação menor do que a da rodada anterior. Em termos simples, o preço por ação que os investidores pagam fica abaixo do preço pago na rodada anterior. Se uma startup levantou sua Série A com uma avaliação post-money de 40 milhões de dólares e depois fecha uma Série B a 30 milhões de dólares, essa Série B é uma down round.",
+            "O oposto é uma up round, em que a avaliação sobe. Uma flat round mantém a avaliação estável. As down rounds carregam um estigma porque sinalizam que o mercado agora avalia a empresa abaixo de sua última marca, mas elas são uma característica normal de ciclos de financiamento mais apertados e não automaticamente um sinal de fracasso."
+          ]
+        },
+        {
+          "id": "how-a-down-round-actually-happens",
+          "heading": "Como uma down round realmente acontece",
+          "level": 2,
+          "paragraphs": [
+            "A avaliação em um financiamento de venture é definida pelo que um investidor líder está disposto a pagar por ação. Quando uma startup cresceu para dentro de sua avaliação anterior mais lentamente do que o planejado, ou quando o mercado mais amplo reprecifica, o próximo líder pode se comprometer apenas a um preço menor. Gatilhos comuns incluem:",
+            "A mecânica central é que a avaliação é relativa. Uma empresa pode estar crescendo em termos absolutos e ainda assim aceitar uma down round se foi precificada para um crescimento mais rápido do que entregou, ou se empresas comparáveis foram reprecificadas."
+          ],
+          "bullets": [
+            "Metas de crescimento ou receita não atingidas frente a uma avaliação anterior agressiva",
+            "Uma correção de mercado mais ampla que comprime os múltiplos em todo o setor",
+            "Ficar com pouco runway sem uma oferta melhor precificada na mesa",
+            "Uma mudança no sentimento dos investidores em direção à lucratividade em vez do crescimento"
+          ]
+        },
+        {
+          "id": "why-down-rounds-became-common-again",
+          "heading": "Por que as down rounds voltaram a ser comuns",
+          "level": 2,
+          "paragraphs": [
+            "Depois do boom de 2021, quando o capital barato empurrou as avaliações para máximas recordes, o ciclo de aperto que se seguiu forçou muitas empresas a captar a marcas menores. A Carta, que administra cap tables de dezenas de milhares de startups, acompanha isso diretamente em seus relatórios State of Private Markets.",
+            "Essa mudança importa porque reposiciona a down round de um constrangimento isolado para um resultado estrutural do ciclo. Naquele ponto baixo, cerca de uma em cada cinco rodadas precificadas carregava uma avaliação abaixo da anterior. Ser reprecificada colocava uma empresa em ampla companhia, não em uma ilha."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "As down rounds chegaram a cerca de 20 por cento de todas as rodadas de financiamento precificadas no quarto trimestre de 2023, a maior participação já registrada e bem acima dos dígitos únicos durante o boom de 2021.",
+            "attribution": "Carta, State of Private Markets (Q4 2023)"
+          }
+        },
+        {
+          "id": "what-a-down-round-means-for-founders",
+          "heading": "O que uma down round significa para os fundadores",
+          "level": 2,
+          "paragraphs": [
+            "A consequência mais imediata é a diluição. Como novas ações são emitidas a um preço menor, os fundadores e os acionistas existentes abrem mão de mais participação por dólar captado do que abririam em uma up round.",
+            "As cláusulas anti-diluição adicionam outra camada. A maioria das rodadas de venture precificadas inclui proteção anti-diluição para os acionistas preferenciais, e as duas formas padrão se comportam de maneira muito diferente em uma down round:",
+            "A participação dos funcionários também é afetada. Detentores de opções que entraram na avaliação mais alta podem descobrir que seu preço de exercício está submerso, e é por isso que as down rounds são frequentemente acompanhadas de reprecificação de opções ou novas concessões para reter o time."
+          ],
+          "bullets": [
+            "A anti-diluição de média ponderada, o padrão de mercado, ajusta o preço de conversão das ações preferenciais anteriores com base no tamanho e no preço da nova rodada. Ela suaviza o golpe para os investidores anteriores enquanto limita o dano aos fundadores.",
+            "A anti-diluição full-ratchet, bem mais agressiva e hoje incomum, redefine o preço de conversão dos investidores anteriores todo o caminho até o novo preço menor, independentemente de quão pequena seja a nova rodada. Isso pode diluir dramaticamente fundadores e funcionários."
+          ]
+        },
+        {
+          "id": "the-financing-mechanics-behind-the-numbers",
+          "heading": "A mecânica de financiamento por trás dos números",
+          "level": 2,
+          "paragraphs": [
+            "Para entender por que o preço de cada rodada importa tanto, ajuda ancorar em termos padrão de estágio inicial. As aceleradoras publicam os seus abertamente.",
+            "A Techstars, para comparação, investe 20.000 dólares por 6 por cento de equity comum e oferece uma nota conversível de 100.000 dólares. Esses pontos de referência fixos tornam a matemática da diluição concreta. Toda rodada subsequente, para cima ou para baixo, é medida em relação à participação já comprometida no início.",
+            "Como os SAFEs e as notas conversíveis convertem em equity na rodada precificada, uma avaliação menor nessa rodada aumenta a porcentagem que esses instrumentos anteriores reivindicam, o que agrava a diluição dos fundadores além do dinheiro novo em si."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O acordo padrão da Y Combinator investe 125.000 dólares por 7 por cento de uma empresa em um SAFE post-money, além de um valor adicional sem cap em termos de nação mais favorecida.",
+            "attribution": "Y Combinator, published program terms"
+          }
+        },
+        {
+          "id": "alternatives-founders-weigh-first",
+          "heading": "Alternativas que os fundadores avaliam primeiro",
+          "level": 2,
+          "paragraphs": [
+            "Antes de aceitar uma down round, a maioria dos times avalia opções menos dilutivas ou menos visíveis:",
+            "Cada uma carrega trade-offs. Flat rounds estruturadas podem proteger a ótica de uma avaliação enquanto empilham preferências que prejudicam os fundadores mais do que uma down round limpa faria. Às vezes uma down round limpa é o resultado mais saudável, porque reajusta o cap table de forma honesta em vez de esconder o dano nas letras miúdas."
+          ],
+          "bullets": [
+            "Uma rodada ponte ou de extensão em instrumentos conversíveis, ganhando tempo para atingir marcos antes de definir um novo preço",
+            "Venture debt, que evita reprecificar o equity mas adiciona obrigações de pagamento",
+            "Termos estruturados, como preferências de liquidação adicionais, que preservam a avaliação de manchete enquanto dão aos investidores proteção contra queda",
+            "Cortar o burn para estender o runway e captar mais tarde a partir de uma posição de força"
+          ]
+        },
+        {
+          "id": "where-ai-native-companies-fit",
+          "heading": "Onde as empresas AI-native se encaixam",
+          "level": 2,
+          "paragraphs": [
+            "O ciclo atual recompensa a eficiência de capital, e as empresas AI-native que chegam à receita com times enxutos costumam estar mais bem posicionadas para evitar ou se recuperar de uma down round. A Avante Ventures co-funda empresas AI-native para o Brasil e a América Latina, construindo-as para serem eficientes em capital desde a primeira linha de código, de modo que a avaliação seja ancorada em tração real em vez de hype. Quando uma empresa cresce para dentro de sua avaliação com base em fundamentos, ela tem muito mais controle sobre o preço de sua próxima rodada."
+          ]
+        },
+        {
+          "id": "bottom-line",
+          "heading": "Conclusão",
+          "level": 2,
+          "paragraphs": [
+            "Uma down round é um financiamento a uma avaliação menor do que a anterior. É desconfortável e dilutivo, mas em um mercado que reprecifica é comum e superável. Os fundadores que a navegam melhor entendem a mecânica com antecedência, negociam os termos de anti-diluição e a estrutura do acordo de forma deliberada, e constroem o tipo de negócio durável e eficiente que lhes dá poder de precificação quando o mercado vira."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "O que é uma down round em termos simples?",
+          "a": "Uma down round é quando uma startup capta novos recursos a uma avaliação menor do que a da rodada anterior, então os investidores pagam um preço por ação menor do que pagaram da última vez. Se sua última rodada avaliou a empresa em 40 milhões de dólares e a nova a avalia em 30 milhões de dólares, isso é uma down round."
+        },
+        {
+          "q": "As down rounds são sempre um sinal de que uma startup está fracassando?",
+          "a": "Não. Uma down round pode refletir uma reprecificação mais ampla do mercado em vez do fracasso de uma empresa específica. A Carta relatou que as down rounds chegaram a cerca de 20 por cento de todas as rodadas precificadas no quarto trimestre de 2023, acima dos dígitos únicos durante o boom de 2021, o que mostra com que frequência empresas fortes são pegas em uma correção mais ampla."
+        },
+        {
+          "q": "Como uma down round dilui os fundadores?",
+          "a": "Como novas ações são emitidas a um preço menor, a empresa precisa abrir mão de mais participação para cada dólar que capta. As cláusulas anti-diluição podem somar ao efeito. A proteção de média ponderada, o padrão de mercado, é relativamente branda, enquanto a proteção full-ratchet, hoje incomum, pode ser severa para fundadores e funcionários."
+        },
+        {
+          "q": "Quais são as alternativas a uma down round?",
+          "a": "Os fundadores frequentemente consideram uma rodada ponte ou de extensão em instrumentos conversíveis, venture debt, termos estruturados que preservam a avaliação de manchete, ou cortar o burn para estender o runway e captar mais tarde. Cada uma tem trade-offs, e uma flat round estruturada às vezes pode prejudicar os fundadores mais do que uma down round limpa faria."
+        },
+        {
+          "q": "Como uma startup pode evitar uma down round?",
+          "a": "A forma mais confiável é crescer para dentro da avaliação com base em fundamentos e permanecer eficiente em capital, de modo que a próxima rodada seja precificada sobre tração real em vez de hype. Empresas que chegam à receita com times enxutos têm muito mais controle sobre o timing e o preço de sua próxima captação."
+        }
+      ]
+    }
+  },
+  {
     "slug": "what-is-a-startup-studio",
     "category": "insights",
     "type": "Explainer",
@@ -20298,6 +21922,218 @@ const engineArticles: Article[] = [
         {
           "q": "Os venture studios são um modelo comprovado?",
           "a": "Sim. A Idealab constrói empresas desde 1996, e a Rocket Internet produziu empresas de capital aberto como HelloFresh, Delivery Hero e Zalando antes de sua própria abertura de capital em Frankfurt, em 2014. Desde então, o modelo se espalhou pelo mundo, passando por consumo, software e deep tech."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "what-is-a-vesting-cliff",
+    "category": "insights",
+    "type": "Explainer",
+    "readTime": "6 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-13",
+    "isPublished": true,
+    "en": {
+      "title": "What Is a Vesting Cliff? A Founder's Guide for Brazil and LATAM",
+      "description": "A vesting cliff is the waiting period before any founder equity is earned. Learn how the standard four-year vest with a one-year cliff works, and how it plays out under both US and Brazilian law.",
+      "sections": [
+        {
+          "paragraphs": [
+            "A vesting cliff is a set period, most commonly one year, during which a founder or employee earns no equity at all. Stay past the cliff and a first block vests at once. Leave before it and you walk away with nothing. The market standard is four-year vesting with a one-year cliff. For founders building AI-native companies in Brazil and LATAM, the mechanics are the same, but the tax and enforcement rules depend heavily on whether your shares sit under a US structure or under Brazilian law."
+          ]
+        },
+        {
+          "id": "what-a-vesting-cliff-actually-is",
+          "heading": "What a vesting cliff actually is",
+          "level": 2,
+          "paragraphs": [
+            "A vesting cliff is a waiting period at the start of a vesting schedule during which you earn no equity. If you leave before the cliff date, you keep zero shares. If you stay past it, a first chunk of your equity vests in a single step, and the rest continues to vest gradually after that.",
+            "The purpose is simple. Equity is meant to reward people who stick around and build. A cliff filters out anyone who joins, collects a slice of the cap table, and exits a few months later. It protects the founders who stay and the investors who back them.",
+            "The near-universal structure is four-year vesting with a one-year cliff. You vest nothing in the first twelve months. On the one-year anniversary, one quarter of your equity vests at once. From there the remaining three quarters usually vest monthly over the next thirty-six months.",
+            "This is not an obscure preference. It is written into standard startup guidance and reflected in almost every priced round and option plan you will encounter."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Four-year vesting with a one-year cliff is the standard structure recommended for startup founders.",
+            "attribution": "Sam Altman, Startup Playbook (Y Combinator)"
+          }
+        },
+        {
+          "id": "why-cliffs-exist",
+          "heading": "Why cliffs exist",
+          "level": 2,
+          "paragraphs": [
+            "Picture a three-person founding team that [splits equity evenly](/en/library/founder-equity-split-cofounders) with no vesting. One founder leaves after four months. That person now owns a third of the company forever, contributes nothing further, and sits on the cap table as dead weight that future investors will refuse to fund around.",
+            "A one-year cliff removes that risk. The departing founder in that scenario earned nothing, because they left before the cliff. The equity returns to the pool for the people still building. Investors treat founder vesting with a cliff as a baseline signal that the cap table is clean and that the team is committed. Skipping it is a red flag in diligence."
+          ]
+        },
+        {
+          "id": "the-83b-election-and-who-it-actually-binds",
+          "heading": "The 83(b) election, and who it actually binds",
+          "level": 2,
+          "paragraphs": [
+            "If your company is incorporated in the United States, typically as a Delaware C-corp, and you receive founder shares subject to vesting, there is a tax step you cannot ignore. It is the Section 83(b) election.",
+            "Filing an 83(b) election tells the US tax authority to treat your shares as taxed at grant, when they are worth almost nothing, rather than taxed as they vest, when they may be worth far more. The election has a hard, unforgiving deadline.",
+            "Read that qualifier carefully. The thirty-day clock is a United States rule. It matters if you incorporate in Delaware, raise on a US SAFE, or otherwise hold US restricted stock. A founder whose company exists only under Brazilian law is not filing an 83(b) election at all, and should not assume the thirty-day deadline applies to them."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "A Section 83(b) election must be filed with the IRS within 30 days of the restricted stock grant. This deadline binds founders who hold United States restricted stock, such as shares in a Delaware C-corp, and does not apply to shares issued only under Brazilian or other LATAM law.",
+            "attribution": "US Internal Revenue Code, Section 83(b)"
+          }
+        },
+        {
+          "id": "how-vesting-cliffs-work-in-brazil-and-latam",
+          "heading": "How vesting cliffs work in Brazil and LATAM",
+          "level": 2,
+          "paragraphs": [
+            "This is where founders in the region need their own map, not a translated US one.",
+            "First, enforcement. In Brazil, vesting is not a native statutory concept the way it is in the United States. It is built contractually, most often inside the shareholders' agreement (acordo de acionistas) or the quota-holders' agreement, and it relies on the Brazilian Civil Code and the Corporations Law (Lei 6.404/76). The cliff and the vesting schedule are only as strong as the clauses that describe what happens to unvested shares when someone leaves. Poorly drafted repurchase and forfeiture terms are the most common failure point we see.",
+            "Second, tax. For years there was real uncertainty about whether founder and employee equity plans in Brazil would be treated as salary, which would trigger heavy labor and social-security charges. In 2024 that question got a clear answer at the highest level.",
+            "That ruling is the LATAM counterpart to the 83(b) conversation. It does not create a thirty-day election, but it does settle when the tax event happens, at sale, and how it is charged, as capital gain. For a Brazilian founder, that clarity is worth more than any US mechanic, because it tells you the real cost of your equity is deferred to a liquidity event rather than triggered as you vest."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "In 2024 Brazil's Superior Court of Justice ruled, under Tema Repetitivo 1226, that stock option plans have a mercantile nature. Personal income tax falls when the shares are sold and is charged as a capital gain, not at grant or vesting.",
+            "attribution": "Superior Tribunal de Justiça (STJ), Tema Repetitivo 1226, 2024"
+          }
+        },
+        {
+          "id": "what-this-means-for-ai-native-founders-in-the-region",
+          "heading": "What this means for AI-native founders in the region",
+          "level": 2,
+          "paragraphs": [
+            "Avante co-founds AI-native companies for Brazil and LATAM, and the vesting question comes up in almost every company we start. The practical guidance is consistent.",
+            "Set founder vesting from day one. Use the four-year schedule with a one-year cliff as your default, because it is what every serious investor expects.",
+            "Match the paperwork to the jurisdiction. If you incorporate in Delaware or raise on a US [SAFE](/en/library/what-is-a-safe-note), the 83(b) thirty-day deadline is real and you file it. If your shares live under Brazilian law, your protection lives in the shareholders' agreement and your tax treatment follows Tema 1226, not the US code.",
+            "Get the forfeiture terms right. The cliff only works if the contract clearly says unvested shares return to the company or the pool when someone leaves. That single clause is what separates a clean cap table from a lawsuit.",
+            "A vesting cliff is a small paragraph in a founding document. Handled well, it keeps your team aligned and your company fundable. Handled carelessly, in the wrong jurisdiction, it becomes the most expensive sentence you never read closely."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is a vesting cliff in simple terms?",
+          "a": "It is a waiting period, usually one year, during which you earn no equity. If you leave before the cliff date you keep nothing. If you stay past it, a first block of your equity, typically a quarter of the total, vests all at once, and the rest continues to vest gradually after that."
+        },
+        {
+          "q": "What is the standard vesting schedule for startup founders?",
+          "a": "Four-year vesting with a one-year cliff. You vest nothing in the first twelve months, one quarter vests on the one-year anniversary, and the remaining three quarters usually vest monthly over the following thirty-six months. This structure is recommended in standard startup guidance such as Y Combinator's Startup Playbook."
+        },
+        {
+          "q": "Does the 83(b) election apply to founders in Brazil?",
+          "a": "Only if you hold United States restricted stock, for example founder shares in a Delaware C-corp. The Section 83(b) election and its thirty-day filing deadline are US rules. A founder whose company is incorporated solely under Brazilian law does not file an 83(b) election and should not assume the thirty-day clock applies."
+        },
+        {
+          "q": "How is founder equity taxed in Brazil?",
+          "a": "In 2024 Brazil's Superior Court of Justice ruled under Tema Repetitivo 1226 that stock option plans have a mercantile nature. That means personal income tax is due when the shares are sold and is charged as a capital gain, rather than being taxed as salary at grant or at vesting."
+        },
+        {
+          "q": "How is a vesting cliff enforced under Brazilian law?",
+          "a": "Vesting is not a native statutory concept in Brazil. It is created contractually, most often inside the shareholders' agreement, relying on the Brazilian Civil Code and the Corporations Law (Lei 6.404/76). The cliff is only as strong as the clauses defining what happens to unvested shares when a founder or employee leaves."
+        }
+      ]
+    },
+    "pt": {
+      "title": "O que é um vesting cliff? Um guia para fundadores no Brasil e na América Latina",
+      "description": "Um vesting cliff é o período de carência antes de qualquer participação do fundador ser adquirida. Entenda como funciona o padrão de vesting de quatro anos com cliff de um ano, e como ele se aplica tanto sob a lei dos Estados Unidos quanto sob a lei brasileira.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Um vesting cliff é um período determinado, mais comumente de um ano, durante o qual um fundador ou colaborador não adquire nenhuma participação societária. Permaneça além do cliff e um primeiro bloco é adquirido de uma só vez. Saia antes dele e você fica sem nada. O padrão de mercado é o vesting de quatro anos com cliff de um ano. Para fundadores que constroem empresas nativas de IA no Brasil e na América Latina, a mecânica é a mesma, mas as regras tributárias e de execução dependem fortemente de as suas ações estarem sob uma estrutura dos Estados Unidos ou sob a lei brasileira."
+          ]
+        },
+        {
+          "id": "what-a-vesting-cliff-actually-is",
+          "heading": "O que é de fato um vesting cliff",
+          "level": 2,
+          "paragraphs": [
+            "Um vesting cliff é um período de carência no início de um cronograma de vesting durante o qual você não adquire nenhuma participação. Se você sair antes da data do cliff, fica com zero ações. Se permanecer além dela, uma primeira parcela da sua participação é adquirida em uma única etapa, e o restante continua a ser adquirido gradualmente depois disso.",
+            "O propósito é simples. A participação societária existe para recompensar quem permanece e constrói. O cliff filtra qualquer pessoa que entra, pega uma fatia do cap table e sai poucos meses depois. Ele protege os fundadores que ficam e os investidores que os apoiam.",
+            "A estrutura quase universal é o vesting de quatro anos com cliff de um ano. Você não adquire nada nos primeiros doze meses. No aniversário de um ano, um quarto da sua participação é adquirido de uma só vez. A partir daí, os três quartos restantes costumam ser adquiridos mensalmente ao longo dos trinta e seis meses seguintes.",
+            "Isso não é uma preferência obscura. Está escrito nas orientações padrão para startups e refletido em quase toda rodada precificada e plano de opções que você encontrará."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O vesting de quatro anos com cliff de um ano é a estrutura padrão recomendada para fundadores de startups.",
+            "attribution": "Sam Altman, Startup Playbook (Y Combinator)"
+          }
+        },
+        {
+          "id": "why-cliffs-exist",
+          "heading": "Por que os cliffs existem",
+          "level": 2,
+          "paragraphs": [
+            "Imagine um time fundador de três pessoas que [divide a participação em partes iguais](/pt/library/founder-equity-split-cofounders) sem vesting. Um fundador sai após quatro meses. Essa pessoa agora detém um terço da empresa para sempre, não contribui com mais nada e permanece no cap table como peso morto que futuros investidores se recusarão a financiar.",
+            "Um cliff de um ano elimina esse risco. O fundador que sai nesse cenário não adquiriu nada, porque saiu antes do cliff. A participação retorna ao pool para as pessoas que continuam construindo. Os investidores tratam o vesting de fundadores com cliff como um sinal básico de que o cap table está limpo e de que o time está comprometido. Ignorá-lo é um sinal de alerta na diligência."
+          ]
+        },
+        {
+          "id": "the-83b-election-and-who-it-actually-binds",
+          "heading": "A eleição 83(b) e quem ela realmente vincula",
+          "level": 2,
+          "paragraphs": [
+            "Se a sua empresa é constituída nos Estados Unidos, normalmente como uma Delaware C-corp, e você recebe ações de fundador sujeitas a vesting, existe uma etapa tributária que você não pode ignorar. É a eleição da Seção 83(b).",
+            "Protocolar uma eleição 83(b) informa à autoridade tributária dos Estados Unidos que suas ações devem ser tributadas na concessão, quando valem quase nada, em vez de tributadas conforme são adquiridas, quando podem valer muito mais. A eleição tem um prazo rígido e implacável.",
+            "Leia esse qualificador com atenção. O prazo de trinta dias é uma regra dos Estados Unidos. Ele importa se você se constitui em Delaware, capta por meio de um SAFE dos Estados Unidos ou de outra forma detém ações restritas dos Estados Unidos. Um fundador cuja empresa existe apenas sob a lei brasileira não está protocolando nenhuma eleição 83(b) e não deve presumir que o prazo de trinta dias se aplica a ele."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "A eleição da Seção 83(b) deve ser protocolada junto ao IRS no prazo de 30 dias a partir da concessão das ações restritas. Esse prazo vincula fundadores que detêm ações restritas dos Estados Unidos, como participações em uma Delaware C-corp, e não se aplica a ações emitidas apenas sob a lei brasileira ou de outros países da América Latina.",
+            "attribution": "US Internal Revenue Code, Section 83(b)"
+          }
+        },
+        {
+          "id": "how-vesting-cliffs-work-in-brazil-and-latam",
+          "heading": "Como os vesting cliffs funcionam no Brasil e na América Latina",
+          "level": 2,
+          "paragraphs": [
+            "É aqui que os fundadores da região precisam do seu próprio mapa, e não de uma versão traduzida do mapa dos Estados Unidos.",
+            "Primeiro, a execução. No Brasil, o vesting não é um conceito estatutário nativo como é nos Estados Unidos. Ele é construído de forma contratual, na maioria das vezes dentro do acordo de acionistas ou do acordo de quotistas, e se apoia no Código Civil brasileiro e na Lei das Sociedades por Ações (Lei 6.404/76). O cliff e o cronograma de vesting só são tão fortes quanto as cláusulas que descrevem o que acontece com as ações não adquiridas quando alguém sai. Cláusulas de recompra e de perda mal redigidas são o ponto de falha mais comum que vemos.",
+            "Segundo, o imposto. Durante anos houve real incerteza sobre se os planos de participação de fundadores e colaboradores no Brasil seriam tratados como salário, o que acionaria pesados encargos trabalhistas e previdenciários. Em 2024 essa questão recebeu uma resposta clara no mais alto nível.",
+            "Essa decisão é a contraparte latino-americana da conversa sobre a 83(b). Ela não cria uma eleição de trinta dias, mas define quando o fato gerador ocorre, na venda, e como é cobrado, como ganho de capital. Para um fundador brasileiro, essa clareza vale mais do que qualquer mecanismo dos Estados Unidos, porque diz que o custo real da sua participação é diferido para um evento de liquidez em vez de ser acionado conforme você adquire as ações."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Em 2024, o Superior Tribunal de Justiça (STJ) decidiu, sob o Tema Repetitivo 1226, que os planos de stock options têm natureza mercantil. O imposto de renda pessoa física incide no momento em que as ações são vendidas e é cobrado como ganho de capital, não na concessão nem no vesting.",
+            "attribution": "Superior Tribunal de Justiça (STJ), Tema Repetitivo 1226, 2024"
+          }
+        },
+        {
+          "id": "what-this-means-for-ai-native-founders-in-the-region",
+          "heading": "O que isso significa para fundadores nativos de IA na região",
+          "level": 2,
+          "paragraphs": [
+            "A Avante co-funda empresas nativas de IA para o Brasil e a América Latina, e a questão do vesting aparece em quase toda empresa que iniciamos. A orientação prática é consistente.",
+            "Defina o vesting dos fundadores desde o primeiro dia. Use o cronograma de quatro anos com cliff de um ano como padrão, porque é o que todo investidor sério espera.",
+            "Ajuste a documentação à jurisdição. Se você se constitui em Delaware ou capta por meio de um [SAFE](/pt/library/what-is-a-safe-note) dos Estados Unidos, o prazo de trinta dias da 83(b) é real e você o protocola. Se as suas ações vivem sob a lei brasileira, a sua proteção está no acordo de acionistas e o seu tratamento tributário segue o Tema 1226, não o código dos Estados Unidos.",
+            "Acerte as cláusulas de perda. O cliff só funciona se o contrato disser claramente que as ações não adquiridas retornam à empresa ou ao pool quando alguém sai. Essa única cláusula é o que separa um cap table limpo de um processo judicial.",
+            "Um vesting cliff é um pequeno parágrafo em um documento de fundação. Bem tratado, ele mantém o seu time alinhado e a sua empresa financiável. Tratado com descuido, na jurisdição errada, torna-se a frase mais cara que você nunca leu com atenção."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "O que é um vesting cliff em termos simples?",
+          "a": "É um período de carência, geralmente de um ano, durante o qual você não adquire nenhuma participação. Se você sair antes da data do cliff, fica sem nada. Se permanecer além dela, um primeiro bloco da sua participação, tipicamente um quarto do total, é adquirido de uma só vez, e o restante continua a ser adquirido gradualmente depois disso."
+        },
+        {
+          "q": "Qual é o cronograma de vesting padrão para fundadores de startups?",
+          "a": "Vesting de quatro anos com cliff de um ano. Você não adquire nada nos primeiros doze meses, um quarto é adquirido no aniversário de um ano, e os três quartos restantes costumam ser adquiridos mensalmente ao longo dos trinta e seis meses seguintes. Essa estrutura é recomendada em orientações padrão para startups, como o Startup Playbook da Y Combinator."
+        },
+        {
+          "q": "A eleição 83(b) se aplica a fundadores no Brasil?",
+          "a": "Somente se você detiver ações restritas dos Estados Unidos, por exemplo ações de fundador em uma Delaware C-corp. A eleição da Seção 83(b) e o seu prazo de protocolo de trinta dias são regras dos Estados Unidos. Um fundador cuja empresa é constituída exclusivamente sob a lei brasileira não protocola uma eleição 83(b) e não deve presumir que o prazo de trinta dias se aplica."
+        },
+        {
+          "q": "Como a participação de fundadores é tributada no Brasil?",
+          "a": "Em 2024, o Superior Tribunal de Justiça decidiu, sob o Tema Repetitivo 1226, que os planos de stock options têm natureza mercantil. Isso significa que o imposto de renda pessoa física é devido quando as ações são vendidas e é cobrado como ganho de capital, em vez de ser tributado como salário na concessão ou no vesting."
+        },
+        {
+          "q": "Como um vesting cliff é executado sob a lei brasileira?",
+          "a": "O vesting não é um conceito estatutário nativo no Brasil. Ele é criado de forma contratual, na maioria das vezes dentro do acordo de acionistas, apoiando-se no Código Civil brasileiro e na Lei das Sociedades por Ações (Lei 6.404/76). O cliff só é tão forte quanto as cláusulas que definem o que acontece com as ações não adquiridas quando um fundador ou colaborador sai."
         }
       ]
     }
