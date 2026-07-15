@@ -94,6 +94,40 @@ const OPERATORS: Operator[] = [
     companies: ["Mahway", "500 Global", "O.school"],
     highlight: { value: "$100M+", label: { en: "USD coached", pt: "USD em coaching", es: "USD en coaching" } },
   },
+  {
+    slug: "cristian",
+    name: "Cristian Mendivelso",
+    linkedin: "https://www.linkedin.com/in/cristianmendi/",
+    role: { en: "Full Stack AI-Native Builder", pt: "Full Stack AI-Native Builder", es: "Full Stack AI-Native Builder" },
+    house: "Avante",
+    city: "São Paulo",
+    coord: "23°33′S",
+    accent: "#2fb6a3",
+    fact: {
+      en: "8+ years building across LATAM and the USA. Full-stack, AI-native operator behind NEXA TECH, WIR · AXA and BR Auction Intel — ships products and GTM systems end-to-end.",
+      pt: "Mais de 8 anos construindo entre a LATAM e os EUA. Operador full-stack e AI-native por trás de NEXA TECH, WIR · AXA e BR Auction Intel — entrega produtos e sistemas de GTM de ponta a ponta.",
+      es: "Más de 8 años construyendo entre LATAM y EE. UU. Operador full-stack y AI-native detrás de NEXA TECH, WIR · AXA y BR Auction Intel — entrega productos y sistemas de GTM de punta a punta.",
+    },
+    companies: ["NEXA TECH", "WIR", "BR Auction Intel", "Mahway"],
+    highlight: { value: "8+ yrs", label: { en: "building across LATAM & USA", pt: "construindo entre LATAM e EUA", es: "construyendo entre LATAM y EE. UU." } },
+  },
+  {
+    slug: "luiz",
+    name: "Luiz Mitidiero",
+    linkedin: "https://www.linkedin.com/in/luizmitidiero/",
+    role: { en: "Senior Software Engineer", pt: "Senior Software Engineer", es: "Senior Software Engineer" },
+    house: "Avante / FP AI",
+    city: "São Paulo",
+    coord: "23°33′S",
+    accent: "#4d8df0",
+    fact: {
+      en: "18 years as a senior software engineer — developer to director of engineering, with products driving $20M+ in revenue across companies. Ships LLMs, RAG and multi-agent systems into production, bridging Avante's portcos with Futureproofing.dev's pre-vetted AI bench.",
+      pt: "18 anos como engenheiro de software sênior — de desenvolvedor a diretor de engenharia, com produtos gerando mais de US$20M em receita em diversas empresas. Coloca LLMs, RAG e sistemas multiagentes em produção, conectando as empresas do portfólio da Avante ao time de IA pré-selecionado da Futureproofing.dev.",
+      es: "18 años como ingeniero de software senior — de desarrollador a director de ingeniería, con productos que generaron más de US$20M en ingresos en distintas empresas. Lleva LLMs, RAG y sistemas multiagente a producción, conectando las portcos de Avante con el equipo de IA preseleccionado de Futureproofing.dev.",
+    },
+    companies: ["Futureproofing.dev"],
+    highlight: { value: "$20M+", label: { en: "revenue built across companies", pt: "receita construída em várias empresas", es: "ingresos construidos en varias empresas" } },
+  },
 ];
 
 // Company wordmark-chips link out to the real company when a URL exists.
@@ -107,6 +141,7 @@ const COMPANY_URLS: Record<string, string> = {
   "O.school": "https://www.o.school/",
   "Forbes 30 Under 30": "https://www.forbes.com/profile/jessica-ma/",
   "YPO": "https://www.ypo.org/",
+  "Futureproofing.dev": "https://futureproofing.dev",
 };
 
 export function WhoWeAreScene() {
@@ -194,7 +229,7 @@ export function WhoWeAreScene() {
           >
             <div className="avt-lbl" style={{ marginBottom: "18px" }}>{t("WHO WE ARE", "QUEM SOMOS", "QUIÉNES SOMOS")}</div>
             <h2 style={{ margin: 0, fontFamily: "var(--avt-font-serif)", fontWeight: 500, fontSize: "clamp(30px, 4.4vw, 60px)", lineHeight: 1.04, letterSpacing: "-0.015em", color: "var(--avt-txt)" }}>
-              {t("Four operators.", "Quatro operadores.", "Cuatro operadores.")}{" "}
+              {t("Six operators.", "Seis operadores.", "Seis operadores.")}{" "}
               <span className="avt-grad">{t("One conclusion.", "Uma conclusão.", "Una conclusión.")}</span>
             </h2>
             <p style={{ margin: "20px 0 0", fontFamily: "var(--avt-font-body)", color: "var(--avt-muted)", fontSize: "clamp(15px, 1.4vw, 18px)", lineHeight: 1.65, maxWidth: "52ch" }}>
