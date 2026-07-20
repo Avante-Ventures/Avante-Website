@@ -1767,7 +1767,7 @@ const articleSiggaCaseStudy: Article = {
 // ─────────────────────────────────────────────────────────────────────
 
 // === CONTENT-ENGINE:START (managed by content-engine/merge.py — do not edit by hand) ===
-// 70 article(s) generated from content-engine/outputs. Edit the engine, not this block.
+// 80 article(s) generated from content-engine/outputs. Edit the engine, not this block.
 const engineArticles: Article[] = [
   {
     "slug": "accelerator-vs-vc-founder-guide",
@@ -4413,6 +4413,199 @@ const engineArticles: Article[] = [
         }
       ]
     }
+  },
+  {
+    "slug": "ai-startup-gross-margin-benchmark-2026",
+    "category": "ai",
+    "type": "Explainer",
+    "readTime": "8 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-20",
+    "isPublished": true,
+    "en": {
+      "title": "AI Startup Gross Margins Run 50 to 60 Percent Not the SaaS 80 Percent",
+      "description": "A good gross margin for an AI startup in 2026 is roughly 50 to 60 percent, below the 60 to 80 percent SaaS standard, because inference sits in COGS.",
+      "sections": [
+        {
+          "paragraphs": [
+            "A good gross margin for an AI startup in 2026 is roughly 50 to 60 percent, not the 60 to 80 percent or higher that defined classic SaaS. Andreessen Horowitz documented the gap in its 2020 analysis \"The New Business of AI (and How It's Different From Traditional Software),\" by Martin Casado and Matt Bornstein, which found AI company gross margins often in the 50 to 60 percent range, well below the 60 to 80 percent or higher benchmark for comparable software. The reason is structural. Every model call consumes real compute, so inference spend lands in cost of goods sold instead of fixed research and development. The figure is a floor, not a ceiling. Inference prices are falling fast, and founders who underwrite compute at build time and route each task to the cheapest capable model can pull margins back toward software norms."
+          ]
+        },
+        {
+          "id": "what-is-a-good-gross-margin-for-an-ai-startup-in-2026",
+          "heading": "What is a good gross margin for an AI startup in 2026?",
+          "level": 2,
+          "paragraphs": [
+            "A good gross margin for an AI startup in 2026 is roughly 50 to 60 percent. That sits a full band below the 60 to 80 percent or higher that investors learned to expect from pure software, and the gap is not a defect. It is the normal shape of a business that pays for compute every time a customer uses the product. Andreessen Horowitz named the pattern in 2020, and it still holds in 2026. Founders who plan around it build durable companies. Founders who assume classic SaaS economics and price at an 80 percent margin run out of gross profit long before they run out of demand."
+          ]
+        },
+        {
+          "id": "why-ai-margins-sit-below-the-saas-80-percent",
+          "heading": "Why AI margins sit below the SaaS 80 percent",
+          "level": 2,
+          "paragraphs": [
+            "The clearest source on this is Andreessen Horowitz. In \"The New Business of AI (and How It's Different From Traditional Software),\" published in 2020 by Martin Casado and Matt Bornstein, the firm reported a consistent pattern across the financials of AI companies: gross margins often in the 50 to 60 percent range, well below the 60 to 80 percent or higher benchmark for comparable SaaS businesses. Six years later that observation has aged well, because the underlying cause has not changed. A software company serves one more user at almost no additional cost. An AI product has to run a model to answer, and that model call has a price.",
+            "There is a second, quieter drag the same analysis flagged. AI companies carry more human work in the loop than pure software does. Data cleaning, edge case review, model tuning, and forward deployed engineering all sit close to delivery rather than in fixed overhead. That labor does useful work, but it also keeps cost of revenue higher than a self serve SaaS dashboard would ever see."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "AI company gross margins often run in the 50 to 60 percent range, well below the 60 to 80 percent or higher benchmark for comparable SaaS businesses.",
+            "attribution": "Andreessen Horowitz, \"The New Business of AI (and How It's Different From Traditional Software),\" Martin Casado and Matt Bornstein, 2020"
+          }
+        },
+        {
+          "id": "inference-is-a-cost-of-goods-not-a-rounding-error",
+          "heading": "Inference is a cost of goods, not a rounding error",
+          "level": 2,
+          "paragraphs": [
+            "The single biggest reason AI margins compress is that inference belongs in cost of goods sold. Every prompt, every retrieval, every generated token is variable cost that scales directly with usage. Treat it as a footnote and the reported gross margin will flatter the business until volume arrives and the truth shows up in the numbers. We break this down in detail in [why inference cost belongs in COGS not OpEx](/en/library/is-inference-cost-cogs-or-opex), and in [how much it costs to run an AI agent and how to measure it](/en/library/how-much-does-it-cost-to-run-an-ai-agent).",
+            "The practical test is simple. Take one paying customer, count every model call your product makes to serve them for a month, price those calls at your real provider rates, and subtract from what they pay. If the answer is comfortably positive, you have a business. If it is thin or negative at your current pricing, no amount of growth fixes it. Growth only multiplies the loss."
+          ]
+        },
+        {
+          "id": "where-founders-get-the-benchmark-wrong",
+          "heading": "Where founders get the benchmark wrong",
+          "level": 2,
+          "paragraphs": [
+            "Two mistakes recur. The first is quoting a gross margin that excludes inference entirely, usually by parking model spend in operating expense or research and development so the headline looks like software. That does not change the economics, it only delays the reckoning. The second is treating the 50 to 60 percent band as a verdict on the whole category rather than a snapshot of one architecture at one point in time. A retrieval heavy product with tight caching and a well routed model stack can sit at the top of the band or above it. A product that pipes every request to the most expensive model available will sit below it. The benchmark describes a distribution, and where you land inside it is a choice."
+          ]
+        },
+        {
+          "id": "the-benchmark-is-a-floor-not-a-ceiling",
+          "heading": "The benchmark is a floor, not a ceiling",
+          "level": 2,
+          "paragraphs": [
+            "The 50 to 60 percent band is a starting point, not a life sentence. Inference prices are falling fast. In its 2024 analysis \"LLMflation,\" Andreessen Horowitz estimated that for a model of equivalent performance, inference cost is dropping about 10x per year, supported by a roughly 1,000x reduction over three years. Capability that cost a premium in 2023 is close to free in 2026, which means the same product can serve the same quality at a fraction of the compute bill.",
+            "That tailwind only reaches your margin if you are built to capture it. A team locked to a single frontier model pays frontier prices on every request forever. A team that can swap the model underneath its product inherits each price drop the moment it lands. Falling inference cost rewards architecture, not luck."
+          ]
+        },
+        {
+          "id": "how-to-defend-margin-at-build-time",
+          "heading": "How to defend margin at build time",
+          "level": 2,
+          "paragraphs": [
+            "Margin is decided in the build, not recovered in a board meeting. Avante co-founds AI-native companies for Brazil and LATAM, and the discipline we push from day one is to underwrite compute cost before writing production code and to route each task to the cheapest model that can do it well. That means reserving expensive frontier models for the reasoning that truly needs them, sending routine classification and extraction to small cheap models, and caching anything that repeats. The result is a product engineered to ride the cost curve down instead of being trapped at the top of it.",
+            "Pricing has to match the cost shape too. Flat all you can use pricing on a variable cost product is how AI startups quietly subsidize their heaviest users. Usage aware pricing, seat plus consumption, or credits keep the marginal customer profitable. Margin discipline and the broader efficiency picture connect directly to [the Rule of 40 for AI startups](/en/library/rule-of-40-for-ai-startups), and both belong in any honest plan to [build an AI startup in 2026](/en/library/how-to-build-an-ai-startup-in-2026).",
+            "For companies built for Brazil and LATAM the same math carries an extra edge. Willingness to pay is often lower than in the United States, so a loose margin that a US startup can outgrow becomes existential faster here. Underwriting compute early is not a nicety in this market, it is survival, and it is why margin gets designed in rather than patched later."
+          ]
+        },
+        {
+          "id": "what-a-healthy-2026-margin-looks-like-in-practice",
+          "heading": "What a healthy 2026 margin looks like in practice",
+          "level": 2,
+          "paragraphs": [
+            "Set the expectation at roughly 50 to 60 percent at the gross line for a compute heavy product, and treat anything above that as earned through routing, caching, and pricing rather than assumed from a SaaS template. A margin in that band with a credible path upward as inference prices fall is a strong 2026 position. A reported 80 percent that ignores inference is not a better company. It is usually a company that has not yet counted its cost of goods. The winners in this cycle are the teams that name the real number, build to bend it upward, and let the falling cost of compute do the rest."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is a good gross margin for an AI startup in 2026?",
+          "a": "Roughly 50 to 60 percent. Andreessen Horowitz's 2020 analysis \"The New Business of AI\" found AI company gross margins often in the 50 to 60 percent range, below the 60 to 80 percent or higher benchmark for comparable SaaS. Treat that band as healthy for a compute heavy product and work upward from there through routing, caching, and pricing."
+        },
+        {
+          "q": "Why are AI gross margins lower than SaaS gross margins?",
+          "a": "Because inference costs real money on every request. In classic SaaS the marginal cost of serving one more user is close to zero, so gross margin runs high. An AI product pays for model compute each time it answers, which lands in cost of goods sold and compresses the margin."
+        },
+        {
+          "q": "Can an AI startup ever reach 80 percent gross margin?",
+          "a": "It can move toward software norms over time. Inference prices are falling fast. Andreessen Horowitz's 2024 LLMflation analysis estimated the cost of equivalent model performance is dropping about 10x per year. Teams that route each task to the cheapest capable model, cache aggressively, and reserve frontier models for the work that needs them can lift margins materially, though a compute heavy product rarely matches a zero marginal cost SaaS."
+        }
+      ]
+    },
+    "pt": {
+      "title": "As Margens Brutas de Startups de IA Ficam em 50 a 60 Por Cento, Não os 80 Por Cento do SaaS",
+      "description": "Uma boa margem bruta para uma startup de IA em 2026 fica em torno de 50 a 60 por cento, abaixo do padrão de 60 a 80 por cento do SaaS, porque a inferência entra no custo dos produtos vendidos.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Uma boa margem bruta para uma startup de IA em 2026 fica em torno de 50 a 60 por cento, não os 60 a 80 por cento ou mais que definiram o SaaS clássico. A Andreessen Horowitz documentou essa diferença em sua análise de 2020 \"The New Business of AI (and How It's Different From Traditional Software),\" de Martin Casado e Matt Bornstein, que constatou margens brutas de empresas de IA frequentemente na faixa de 50 a 60 por cento, bem abaixo do parâmetro de 60 a 80 por cento ou mais para software comparável. A razão é estrutural. Cada chamada de modelo consome computação real, então o gasto com inferência entra no custo dos produtos vendidos em vez de ficar em pesquisa e desenvolvimento fixos. O número é um piso, não um teto. Os preços de inferência estão caindo rápido, e fundadores que dimensionam o custo de computação já na construção e roteiam cada tarefa para o modelo capaz mais barato conseguem puxar as margens de volta para os padrões de software."
+          ]
+        },
+        {
+          "id": "o-que-e-uma-boa-margem-bruta-para-uma-startup-de-ia-em-2026",
+          "heading": "O que é uma boa margem bruta para uma startup de IA em 2026?",
+          "level": 2,
+          "paragraphs": [
+            "Uma boa margem bruta para uma startup de IA em 2026 fica em torno de 50 a 60 por cento. Isso está uma faixa inteira abaixo dos 60 a 80 por cento ou mais que os investidores aprenderam a esperar de software puro, e essa diferença não é um defeito. É o formato normal de um negócio que paga por computação toda vez que um cliente usa o produto. A Andreessen Horowitz nomeou esse padrão em 2020, e ele continua válido em 2026. Fundadores que planejam com base nisso constroem empresas duráveis. Fundadores que assumem a economia clássica de SaaS e precificam com margem de 80 por cento ficam sem lucro bruto muito antes de ficarem sem demanda."
+          ]
+        },
+        {
+          "id": "por-que-as-margens-de-ia-ficam-abaixo-dos-80-por-cento-do-saas",
+          "heading": "Por que as margens de IA ficam abaixo dos 80 por cento do SaaS",
+          "level": 2,
+          "paragraphs": [
+            "A fonte mais clara sobre isso é a Andreessen Horowitz. Em \"The New Business of AI (and How It's Different From Traditional Software),\" publicado em 2020 por Martin Casado e Matt Bornstein, a firma relatou um padrão consistente nas finanças de empresas de IA: margens brutas frequentemente na faixa de 50 a 60 por cento, bem abaixo do parâmetro de 60 a 80 por cento ou mais para negócios de SaaS comparáveis. Seis anos depois, essa observação envelheceu bem, porque a causa subjacente não mudou. Uma empresa de software atende mais um usuário a um custo adicional quase nulo. Um produto de IA precisa rodar um modelo para responder, e essa chamada de modelo tem um preço.",
+            "Há um segundo arrasto, mais silencioso, que a mesma análise apontou. Empresas de IA carregam mais trabalho humano no fluxo do que o software puro. Limpeza de dados, revisão de casos extremos, ajuste de modelos e engenharia de implantação avançada ficam todos próximos da entrega em vez de ficarem em custos fixos indiretos. Esse trabalho cumpre uma função útil, mas também mantém o custo da receita mais alto do que um painel de SaaS de autoatendimento jamais veria."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "As margens brutas de empresas de IA frequentemente ficam na faixa de 50 a 60 por cento, bem abaixo do parâmetro de 60 a 80 por cento ou mais para negócios de SaaS comparáveis.",
+            "attribution": "Andreessen Horowitz, \"The New Business of AI (and How It's Different From Traditional Software),\" Martin Casado and Matt Bornstein, 2020"
+          }
+        },
+        {
+          "id": "inferencia-e-um-custo-dos-produtos-vendidos-nao-um-erro-de-arredondamento",
+          "heading": "Inferência é um custo dos produtos vendidos, não um erro de arredondamento",
+          "level": 2,
+          "paragraphs": [
+            "A maior razão isolada para as margens de IA se comprimirem é que a inferência pertence ao custo dos produtos vendidos. Cada prompt, cada recuperação, cada token gerado é custo variável que escala diretamente com o uso. Trate isso como uma nota de rodapé e a margem bruta reportada vai embelezar o negócio até o volume chegar e a verdade aparecer nos números. Detalhamos isso a fundo em [por que o custo de inferência pertence ao CPV e não ao OpEx](/pt/library/is-inference-cost-cogs-or-opex), e em [quanto custa operar um agente de IA e como medir](/pt/library/how-much-does-it-cost-to-run-an-ai-agent).",
+            "O teste prático é simples. Pegue um cliente pagante, conte cada chamada de modelo que seu produto faz para atendê-lo durante um mês, precifique essas chamadas pelas suas tarifas reais de fornecedor e subtraia do que ele paga. Se a resposta for confortavelmente positiva, você tem um negócio. Se for apertada ou negativa no seu preço atual, nenhum crescimento resolve. O crescimento apenas multiplica o prejuízo."
+          ]
+        },
+        {
+          "id": "onde-os-fundadores-erram-no-parametro",
+          "heading": "Onde os fundadores erram no parâmetro",
+          "level": 2,
+          "paragraphs": [
+            "Dois erros se repetem. O primeiro é citar uma margem bruta que exclui a inferência por completo, geralmente ao estacionar o gasto com modelos em despesa operacional ou pesquisa e desenvolvimento para que o número de destaque pareça software. Isso não muda a economia, apenas adia o acerto de contas. O segundo é tratar a faixa de 50 a 60 por cento como um veredito sobre toda a categoria em vez de um retrato de uma arquitetura em um momento específico. Um produto intensivo em recuperação, com cache bem ajustado e uma pilha de modelos bem roteada, pode ficar no topo da faixa ou acima dela. Um produto que envia toda requisição para o modelo mais caro disponível vai ficar abaixo dela. O parâmetro descreve uma distribuição, e onde você se posiciona dentro dela é uma escolha."
+          ]
+        },
+        {
+          "id": "o-parametro-e-um-piso-nao-um-teto",
+          "heading": "O parâmetro é um piso, não um teto",
+          "level": 2,
+          "paragraphs": [
+            "A faixa de 50 a 60 por cento é um ponto de partida, não uma sentença perpétua. Os preços de inferência estão caindo rápido. Em sua análise de 2024 \"LLMflation,\" a Andreessen Horowitz estimou que, para um modelo de desempenho equivalente, o custo de inferência está caindo cerca de 10x por ano, sustentado por uma redução de aproximadamente 1.000x ao longo de três anos. Uma capacidade que custava um prêmio em 2023 está perto de ser gratuita em 2026, o que significa que o mesmo produto pode entregar a mesma qualidade por uma fração da conta de computação.",
+            "Esse vento a favor só chega à sua margem se você estiver construído para capturá-lo. Uma equipe presa a um único modelo de fronteira paga preços de fronteira em cada requisição para sempre. Uma equipe que consegue trocar o modelo por baixo do seu produto herda cada queda de preço no instante em que ela acontece. A queda no custo de inferência recompensa a arquitetura, não a sorte."
+          ]
+        },
+        {
+          "id": "como-defender-a-margem-no-momento-da-construcao",
+          "heading": "Como defender a margem no momento da construção",
+          "level": 2,
+          "paragraphs": [
+            "A margem é decidida na construção, não recuperada em uma reunião de conselho. A Avante cofunda empresas nativas de IA para o Brasil e a América Latina, e a disciplina que defendemos desde o primeiro dia é dimensionar o custo de computação antes de escrever código de produção e rotear cada tarefa para o modelo mais barato capaz de executá-la bem. Isso significa reservar modelos de fronteira caros para o raciocínio que realmente precisa deles, enviar classificação e extração rotineiras para modelos pequenos e baratos, e armazenar em cache tudo o que se repete. O resultado é um produto projetado para descer a curva de custo em vez de ficar preso no topo dela.",
+            "O preço também precisa acompanhar o formato do custo. Preço plano do tipo use à vontade em um produto de custo variável é como as startups de IA silenciosamente subsidiam seus usuários mais pesados. Preço consciente do uso, assinatura mais consumo, ou créditos mantêm o cliente marginal lucrativo. A disciplina de margem e o quadro mais amplo de eficiência se conectam diretamente à [Regra de 40 para startups de IA](/pt/library/rule-of-40-for-ai-startups), e ambos pertencem a qualquer plano honesto para [construir uma startup de IA em 2026](/pt/library/how-to-build-an-ai-startup-in-2026).",
+            "Para empresas construídas para o Brasil e a América Latina, a mesma conta carrega uma vantagem extra. A disposição a pagar costuma ser menor do que nos Estados Unidos, então uma margem folgada que uma startup dos EUA consegue superar com crescimento se torna existencial mais rápido aqui. Dimensionar o custo de computação cedo não é um luxo neste mercado, é sobrevivência, e é por isso que a margem é projetada desde o início em vez de remendada depois."
+          ]
+        },
+        {
+          "id": "como-e-uma-margem-saudavel-de-2026-na-pratica",
+          "heading": "Como é uma margem saudável de 2026 na prática",
+          "level": 2,
+          "paragraphs": [
+            "Defina a expectativa em torno de 50 a 60 por cento na linha bruta para um produto intensivo em computação, e trate qualquer coisa acima disso como algo conquistado por roteamento, cache e precificação, e não presumido a partir de um modelo de SaaS. Uma margem nessa faixa, com um caminho crível de subida à medida que os preços de inferência caem, é uma posição forte para 2026. Um número reportado de 80 por cento que ignora a inferência não é uma empresa melhor. Geralmente é uma empresa que ainda não contabilizou seu custo dos produtos vendidos. Os vencedores deste ciclo são as equipes que nomeiam o número real, constroem para dobrá-lo para cima, e deixam o custo decrescente de computação fazer o resto."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "O que é uma boa margem bruta para uma startup de IA em 2026?",
+          "a": "Em torno de 50 a 60 por cento. A análise de 2020 da Andreessen Horowitz, \"The New Business of AI,\" constatou margens brutas de empresas de IA frequentemente na faixa de 50 a 60 por cento, abaixo do parâmetro de 60 a 80 por cento ou mais para SaaS comparável. Trate essa faixa como saudável para um produto intensivo em computação e trabalhe para cima a partir dali por meio de roteamento, cache e precificação."
+        },
+        {
+          "q": "Por que as margens brutas de IA são menores que as margens brutas de SaaS?",
+          "a": "Porque a inferência custa dinheiro real em cada requisição. No SaaS clássico, o custo marginal de atender mais um usuário é próximo de zero, então a margem bruta fica alta. Um produto de IA paga por computação de modelo toda vez que responde, o que entra no custo dos produtos vendidos e comprime a margem."
+        },
+        {
+          "q": "Uma startup de IA pode chegar a uma margem bruta de 80 por cento?",
+          "a": "Ela pode se aproximar dos padrões de software ao longo do tempo. Os preços de inferência estão caindo rápido. A análise LLMflation de 2024 da Andreessen Horowitz estimou que o custo de desempenho equivalente de modelo está caindo cerca de 10x por ano. Equipes que roteiam cada tarefa para o modelo capaz mais barato, usam cache de forma agressiva e reservam modelos de fronteira para o trabalho que precisa deles conseguem elevar as margens de forma material, embora um produto intensivo em computação raramente iguale um SaaS de custo marginal zero."
+        }
+      ]
+    },
+    "ogImage": "/og/ai-startup-gross-margin-benchmark-2026.png"
   },
   {
     "slug": "ai-startup-ideas-2026-latin-america",
@@ -11038,6 +11231,209 @@ const engineArticles: Article[] = [
     }
   },
   {
+    "slug": "good-burn-multiple-ai-startup-2026",
+    "category": "insights",
+    "type": "Explainer",
+    "readTime": "7 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-20",
+    "isPublished": true,
+    "en": {
+      "title": "A Good Burn Multiple for an AI Startup Is Under 1.5x",
+      "description": "A good burn multiple for an AI startup is under 1.5x: less than $1.50 burned per $1 of net new ARR. Inference COGS makes it harder to hit.",
+      "sections": [
+        {
+          "paragraphs": [
+            "A good burn multiple for an AI startup is under 1.5x, which means the company burns less than $1.50 of net cash for every $1.00 of net new annual recurring revenue (ARR) it adds. On the scale popularized by investor David Sacks, under 1x is amazing, 1x to 1.5x is great, and 1.5x to 2x is still good. AI startups face a stiffer version of this test than classic software companies, because inference and GPU compute live inside cost of goods sold, so each dollar of growth consumes more cash than it would in a pure SaaS model."
+          ]
+        },
+        {
+          "id": "what-is-a-good-burn-multiple-for-an-ai-startup",
+          "heading": "What is a good burn multiple for an AI startup?",
+          "level": 2,
+          "paragraphs": [
+            "A good burn multiple for an AI startup is under 1.5x. The burn multiple measures how much net cash a company burns to add each new dollar of annual recurring revenue, calculated as net burn divided by net new ARR over the same period. A reading under 1x means the business is generating more than a dollar of new ARR for every dollar it burns, which is exceptional at any stage. Between 1x and 1.5x is great, and between 1.5x and 2x is still acceptable for a company that is deliberately spending to grow. For AI-native startups, where inference and GPU compute sit inside cost of goods sold and pull gross margin well below the 70 to 80 percent that classic software typically enjoys, clearing 1.5x is a stronger signal of discipline than the same figure would be for a traditional SaaS company. Anything above 2x deserves a hard look."
+          ]
+        },
+        {
+          "id": "how-to-calculate-the-burn-multiple",
+          "heading": "How to calculate the burn multiple",
+          "level": 2,
+          "paragraphs": [
+            "The formula is deliberately simple. Burn multiple equals net burn divided by net new ARR. Net burn is the cash a company spent minus the cash it brought in over a period, usually a quarter or a full year. Net new ARR is the increase in annual recurring revenue over that same window. If a startup burned $2 million in a quarter and grew ARR by $1.6 million, its burn multiple is 1.25x, which lands in the great band. If it burned the same $2 million but only added $700,000 of ARR, the burn multiple jumps to roughly 2.9x, which is a warning sign.",
+            "The metric is powerful because it collapses growth and efficiency into one number. A company can post fast growth and still look reckless if it is buying that growth at three or four dollars of burn per dollar of revenue. It can also grow slowly yet efficiently and score well. That is why the burn multiple has become a favorite board-level shorthand. It sits alongside the rest of the [unit economics every founder should model from day one](/en/library/unit-economics-101-ltv-cac-day-one), and it is one of the cleanest early reads on whether a business compounds or leaks."
+          ]
+        },
+        {
+          "id": "the-david-sacks-burn-multiple-bands",
+          "heading": "The David Sacks burn multiple bands",
+          "level": 2,
+          "paragraphs": [
+            "Investor David Sacks popularized the burn multiple in a 2020 essay and paired it with a scale that founders and investors still use as shorthand. The bands turn a raw ratio into a verdict, which is exactly why they travel so well between a founder and a board. What Sacks is on record for is the formula and those five efficiency bands, not a fixed table of per-stage targets.",
+            "Read the number against stage, though, because the same ratio can carry a different verdict at different points. As a rough venture convention, an earlier-stage company still searching for product-market fit is given more tolerance, and the expectation tightens with every round, trending toward zero as the business approaches profitability. So a 1.8x burn multiple is not just a number. It is a company that is officially \"good\" but still has room to tighten before the next round."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "David Sacks' burn multiple scale reads: under 1x is amazing, 1x to 1.5x is great, 1.5x to 2x is good, 2x to 3x is suspect, and over 3x is bad, where burn multiple equals net burn divided by net new ARR.",
+            "attribution": "David Sacks, \"The Burn Multiple\" (2020)"
+          }
+        },
+        {
+          "id": "why-ai-startups-have-a-harder-time-hitting-a-low-burn-multiple",
+          "heading": "Why AI startups have a harder time hitting a low burn multiple",
+          "level": 2,
+          "paragraphs": [
+            "The burn multiple was defined in a SaaS world where the marginal cost of serving one more customer was close to zero. AI changes that math. Every prompt, every agent run, and every generated token carries a real compute cost, and that cost belongs in cost of goods sold, not in a line item you can wave away. Agentic products make it sharper still, because a single task can trigger many model calls and burn far more tokens than a simple chat response.",
+            "The result is that an AI company adding a dollar of ARR often spends materially more to deliver it than a classic software company did, which pushes the burn multiple up before sales and marketing even enter the picture. A rising burn multiple also shortens [runway](/en/library/how-much-runway-ai-startup-2026), so the compute bill is not an accounting curiosity, it is a survival variable. Founders who treat inference as a fixed background cost rather than a per-transaction COGS line tend to discover the problem only after the burn multiple has already drifted past 2x, when the fix requires renegotiating pricing or re-architecting the product under pressure."
+          ]
+        },
+        {
+          "id": "how-a-venture-studio-bends-the-burn-multiple-down",
+          "heading": "How a venture studio bends the burn multiple down",
+          "level": 2,
+          "paragraphs": [
+            "This is where the build model matters. At Avante, we co-found AI-native companies for Brazil and Latin America, and we underwrite capital efficiency at the moment of building rather than after the fact. Two levers move the burn multiple in a studio's favor.",
+            "The first is the shared cost base. When engineering, design, data, and go-to-market infrastructure are spread across a portfolio instead of rebuilt inside every new company, the net burn side of the ratio starts lower, so the same revenue growth produces a better multiple. The second lever is model routing and inference discipline. Because the studio underwrites cost of goods sold before a product ships, portfolio companies route each workload to the cheapest model that clears the quality bar and measure themselves on cost per successful task rather than raw token spend. That keeps gross margin defensible and the burn multiple honest as the company scales.",
+            "A burn multiple under 1x is also what makes it realistic to build an AI-native company without rushing into a Series A, because a business that adds more ARR than it burns controls its own timeline. Capital efficiency stops being a fundraising talking point and becomes the thing that buys optionality."
+          ]
+        },
+        {
+          "id": "what-a-good-burn-multiple-looks-like-in-2026",
+          "heading": "What a good burn multiple looks like in 2026",
+          "level": 2,
+          "paragraphs": [
+            "Benchmarks have tightened as capital has gotten more selective, and the direction of travel is clear even where precise 2026 medians are still settling. Efficient AI companies at Series A are expected to operate close to 1x, strong ones sit in the 1x to 1.5x band, and the median company is under more pressure than it was in the cheap-money era, because heavier inference COGS eats into the growth-per-dollar it can show. Treat the specific number for your stage as a moving target and the band as the anchor.",
+            "The practical test is direction plus level. If your burn multiple is under 1.5x and trending down, you are compounding capital and you can raise on your own schedule. If it is drifting above 2x, the honest question is whether that spend is buying durable growth or quietly subsidizing revenue that does not carry its own weight."
+          ]
+        },
+        {
+          "id": "the-bottom-line",
+          "heading": "The bottom line",
+          "level": 2,
+          "paragraphs": [
+            "A good burn multiple for an AI startup is under 1.5x, and the best companies push under 1x. The scale is simple, but AI economics make it harder to earn, because inference sits in COGS and every unit of growth costs real compute. That is why the metric rewards discipline built in from the first architecture decision rather than bolted on during a later cost-cutting scramble. Measure net burn against net new ARR every quarter, watch the trend more than any single reading, and treat any drift past 2x as a prompt to interrogate both your pricing and your model spend."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is a good burn multiple for an AI startup?",
+          "a": "A good burn multiple for an AI startup is under 1.5x, meaning it burns less than $1.50 of net cash for every $1.00 of net new ARR it adds. On David Sacks' scale, under 1x is amazing, 1x to 1.5x is great, and 1.5x to 2x is good. AI companies have to work harder to reach it because inference and GPU costs sit inside cost of goods sold and depress gross margin, so anything above 2x deserves scrutiny."
+        },
+        {
+          "q": "How do you calculate a burn multiple?",
+          "a": "Divide net burn by net new ARR over the same period. Net burn is cash out minus cash in, and net new ARR is the increase in annual recurring revenue over that window. For example, burning $2 million while adding $1.6 million of ARR gives a burn multiple of 1.25x."
+        },
+        {
+          "q": "Why is the burn multiple higher for AI startups than for SaaS?",
+          "a": "Because inference is a real per-transaction cost that belongs in cost of goods sold. Every prompt, token, and agent run consumes compute, so each dollar of new revenue costs more to deliver than it does in classic SaaS. That pushes the ratio up before sales and marketing spend is even counted."
+        },
+        {
+          "q": "What burn multiple do investors want to see at Series A?",
+          "a": "Investors generally want Series A companies operating near or below 1.5x, with the most capital-efficient closer to 1x. A reading drifting above 2x invites questions about whether the spend is buying durable growth or subsidizing revenue that does not carry its own weight."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Um bom burn multiple para uma startup de IA fica abaixo de 1.5x",
+      "description": "Um bom burn multiple para uma startup de IA fica abaixo de 1.5x: menos de US$ 1,50 queimados por US$ 1 de novo ARR líquido. O custo de inferência no COGS torna essa marca mais difícil de alcançar.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Um bom burn multiple para uma startup de IA fica abaixo de 1.5x, o que significa que a empresa queima menos de US$ 1,50 de caixa líquido para cada US$ 1,00 de nova receita recorrente anual (ARR) que adiciona. Na escala popularizada pelo investidor David Sacks, abaixo de 1x é incrível, de 1x a 1.5x é ótimo e de 1.5x a 2x ainda é bom. As startups de IA enfrentam uma versão mais severa desse teste do que as empresas de software clássicas, porque a inferência e o processamento em GPU vivem dentro do custo dos produtos vendidos, então cada dólar de crescimento consome mais caixa do que consumiria em um modelo de SaaS puro."
+          ]
+        },
+        {
+          "id": "o-que-e-um-bom-burn-multiple-para-uma-startup-de-ia",
+          "heading": "O que é um bom burn multiple para uma startup de IA?",
+          "level": 2,
+          "paragraphs": [
+            "Um bom burn multiple para uma startup de IA fica abaixo de 1.5x. O burn multiple mede quanto caixa líquido uma empresa queima para adicionar cada novo dólar de receita recorrente anual, calculado como o burn líquido dividido pelo novo ARR líquido no mesmo período. Uma leitura abaixo de 1x significa que o negócio está gerando mais de um dólar de novo ARR para cada dólar que queima, o que é excepcional em qualquer estágio. Entre 1x e 1.5x é ótimo, e entre 1.5x e 2x ainda é aceitável para uma empresa que está gastando de forma deliberada para crescer. Para startups nativas de IA, onde a inferência e o processamento em GPU ficam dentro do custo dos produtos vendidos e puxam a margem bruta bem abaixo dos 70 a 80 por cento que o software clássico costuma desfrutar, ficar abaixo de 1.5x é um sinal de disciplina mais forte do que o mesmo número seria para uma empresa de SaaS tradicional. Qualquer coisa acima de 2x merece um olhar atento."
+          ]
+        },
+        {
+          "id": "como-calcular-o-burn-multiple",
+          "heading": "Como calcular o burn multiple",
+          "level": 2,
+          "paragraphs": [
+            "A fórmula é deliberadamente simples. O burn multiple é igual ao burn líquido dividido pelo novo ARR líquido. O burn líquido é o caixa que uma empresa gastou menos o caixa que ela recebeu ao longo de um período, geralmente um trimestre ou um ano inteiro. O novo ARR líquido é o aumento da receita recorrente anual nessa mesma janela. Se uma startup queimou US$ 2 milhões em um trimestre e aumentou o ARR em US$ 1,6 milhão, seu burn multiple é 1.25x, o que fica na faixa ótima. Se ela queimou os mesmos US$ 2 milhões, mas adicionou apenas US$ 700 mil de ARR, o burn multiple salta para cerca de 2.9x, o que é um sinal de alerta.",
+            "A métrica é poderosa porque condensa crescimento e eficiência em um único número. Uma empresa pode registrar crescimento rápido e ainda parecer imprudente se estiver comprando esse crescimento a três ou quatro dólares de burn por dólar de receita. Ela também pode crescer devagar, porém de forma eficiente, e pontuar bem. É por isso que o burn multiple se tornou um atalho favorito no nível do conselho. Ele acompanha o restante da [economia unitária que todo fundador deveria modelar desde o primeiro dia](/pt/library/unit-economics-101-ltv-cac-day-one), e é uma das leituras iniciais mais limpas sobre se um negócio compõe ou vaza."
+          ]
+        },
+        {
+          "id": "as-faixas-do-burn-multiple-de-david-sacks",
+          "heading": "As faixas do burn multiple de David Sacks",
+          "level": 2,
+          "paragraphs": [
+            "O investidor David Sacks popularizou o burn multiple em um ensaio de 2020 e o combinou com uma escala que fundadores e investidores ainda usam como atalho. As faixas transformam uma razão bruta em um veredito, que é exatamente por que elas viajam tão bem entre um fundador e um conselho. O que Sacks tem registrado é a fórmula e essas cinco faixas de eficiência, não uma tabela fixa de metas por estágio.",
+            "Leia o número em relação ao estágio, porém, porque a mesma razão pode carregar um veredito diferente em pontos diferentes. Como convenção aproximada de venture, uma empresa em estágio mais inicial ainda em busca do encaixe entre produto e mercado recebe mais tolerância, e a expectativa aperta a cada rodada, tendendo a zero conforme o negócio se aproxima da lucratividade. Então um burn multiple de 1.8x não é apenas um número. É uma empresa que é oficialmente \"boa\", mas ainda tem espaço para apertar antes da próxima rodada."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "A escala de burn multiple de David Sacks diz: abaixo de 1x é excelente, de 1x a 1.5x é ótimo, de 1.5x a 2x é bom, de 2x a 3x é suspeito e acima de 3x é ruim, onde o burn multiple é igual ao burn líquido dividido pelo novo ARR líquido.",
+            "attribution": "David Sacks, \"The Burn Multiple\" (2020)"
+          }
+        },
+        {
+          "id": "por-que-as-startups-de-ia-tem-mais-dificuldade-para-atingir-um-burn-multiple-baixo",
+          "heading": "Por que as startups de IA têm mais dificuldade para atingir um burn multiple baixo",
+          "level": 2,
+          "paragraphs": [
+            "O burn multiple foi definido em um mundo de SaaS onde o custo marginal de servir mais um cliente era próximo de zero. A IA muda essa conta. Cada prompt, cada execução de agente e cada token gerado carrega um custo real de processamento, e esse custo pertence ao custo dos produtos vendidos, não a uma linha que você pode ignorar. Os produtos agênticos deixam isso ainda mais nítido, porque uma única tarefa pode disparar muitas chamadas de modelo e queimar muito mais tokens do que uma simples resposta de chat.",
+            "O resultado é que uma empresa de IA que adiciona um dólar de ARR muitas vezes gasta materialmente mais para entregá-lo do que uma empresa de software clássica gastava, o que empurra o burn multiple para cima antes mesmo de vendas e marketing entrarem em cena. Um burn multiple crescente também encurta o [runway](/pt/library/how-much-runway-ai-startup-2026), então a conta de processamento não é uma curiosidade contábil, é uma variável de sobrevivência. Fundadores que tratam a inferência como um custo de fundo fixo em vez de uma linha de COGS por transação tendem a descobrir o problema apenas depois que o burn multiple já derivou além de 2x, quando a correção exige renegociar preços ou rearquitetar o produto sob pressão."
+          ]
+        },
+        {
+          "id": "como-um-venture-studio-empurra-o-burn-multiple-para-baixo",
+          "heading": "Como um venture studio empurra o burn multiple para baixo",
+          "level": 2,
+          "paragraphs": [
+            "É aqui que o modelo de construção importa. Na Avante, cofundamos empresas nativas de IA para o Brasil e a América Latina, e subscrevemos a eficiência de capital no momento da construção, em vez de depois do fato. Duas alavancas movem o burn multiple a favor de um studio.",
+            "A primeira é a base de custos compartilhada. Quando engenharia, design, dados e infraestrutura de go-to-market são distribuídos por um portfólio em vez de reconstruídos dentro de cada nova empresa, o lado do burn líquido da razão começa mais baixo, então o mesmo crescimento de receita produz um multiple melhor. A segunda alavanca é o roteamento de modelos e a disciplina de inferência. Como o studio subscreve o custo dos produtos vendidos antes de um produto ser lançado, as empresas do portfólio direcionam cada carga de trabalho para o modelo mais barato que passa na barra de qualidade e se medem por custo por tarefa bem-sucedida, em vez do gasto bruto de tokens. Isso mantém a margem bruta defensável e o burn multiple honesto conforme a empresa cresce.",
+            "Um burn multiple abaixo de 1x também é o que torna realista construir uma empresa nativa de IA sem correr para um Series A, porque um negócio que adiciona mais ARR do que queima controla o próprio cronograma. A eficiência de capital deixa de ser um argumento de captação e passa a ser aquilo que compra opcionalidade."
+          ]
+        },
+        {
+          "id": "como-e-um-bom-burn-multiple-em-2026",
+          "heading": "Como é um bom burn multiple em 2026",
+          "level": 2,
+          "paragraphs": [
+            "Os benchmarks se apertaram conforme o capital ficou mais seletivo, e a direção do movimento é clara mesmo onde as medianas precisas de 2026 ainda estão se assentando. Espera-se que empresas de IA eficientes no Series A operem perto de 1x, as fortes ficam na faixa de 1x a 1.5x, e a empresa mediana está sob mais pressão do que estava na era do dinheiro barato, porque o COGS de inferência mais pesado corrói o crescimento por dólar que ela consegue mostrar. Trate o número específico do seu estágio como um alvo móvel e a faixa como a âncora.",
+            "O teste prático é direção mais nível. Se o seu burn multiple está abaixo de 1.5x e em queda, você está compondo capital e pode captar no seu próprio cronograma. Se ele está derivando acima de 2x, a pergunta honesta é se esse gasto está comprando crescimento durável ou subsidiando silenciosamente uma receita que não carrega o próprio peso."
+          ]
+        },
+        {
+          "id": "o-resumo-final",
+          "heading": "O resumo final",
+          "level": 2,
+          "paragraphs": [
+            "Um bom burn multiple para uma startup de IA fica abaixo de 1.5x, e as melhores empresas empurram para baixo de 1x. A escala é simples, mas a economia da IA torna esse número mais difícil de conquistar, porque a inferência fica no COGS e cada unidade de crescimento custa processamento real. É por isso que a métrica recompensa a disciplina construída desde a primeira decisão de arquitetura, em vez de acoplada durante um corte de custos posterior e apressado. Meça o burn líquido contra o novo ARR líquido a cada trimestre, observe a tendência mais do que qualquer leitura isolada e trate qualquer deriva além de 2x como um chamado para questionar tanto seus preços quanto seu gasto com modelos."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "O que é um bom burn multiple para uma startup de IA?",
+          "a": "Um bom burn multiple para uma startup de IA fica abaixo de 1.5x, o que significa que ela queima menos de US$ 1,50 de caixa líquido para cada US$ 1,00 de novo ARR líquido que adiciona. Na escala de David Sacks, abaixo de 1x é incrível, de 1x a 1.5x é ótimo e de 1.5x a 2x é bom. As empresas de IA precisam se esforçar mais para chegar lá porque os custos de inferência e de GPU ficam dentro do custo dos produtos vendidos e reduzem a margem bruta, então qualquer coisa acima de 2x merece escrutínio."
+        },
+        {
+          "q": "Como se calcula um burn multiple?",
+          "a": "Divida o burn líquido pelo novo ARR líquido no mesmo período. O burn líquido é o caixa que saiu menos o caixa que entrou, e o novo ARR líquido é o aumento da receita recorrente anual nessa janela. Por exemplo, queimar US$ 2 milhões enquanto adiciona US$ 1,6 milhão de ARR dá um burn multiple de 1.25x."
+        },
+        {
+          "q": "Por que o burn multiple é mais alto para startups de IA do que para SaaS?",
+          "a": "Porque a inferência é um custo real por transação que pertence ao custo dos produtos vendidos. Cada prompt, token e execução de agente consome processamento, então cada dólar de nova receita custa mais para entregar do que no SaaS clássico. Isso empurra a razão para cima antes mesmo de o gasto com vendas e marketing ser contabilizado."
+        },
+        {
+          "q": "Qual burn multiple os investidores querem ver no Series A?",
+          "a": "Os investidores geralmente querem empresas de Series A operando perto ou abaixo de 1.5x, com as mais eficientes em capital mais próximas de 1x. Uma leitura que deriva acima de 2x levanta perguntas sobre se o gasto está comprando crescimento durável ou subsidiando uma receita que não carrega o próprio peso."
+        }
+      ]
+    },
+    "ogImage": "/og/good-burn-multiple-ai-startup-2026.png"
+  },
+  {
     "slug": "how-do-venture-studios-make-money",
     "category": "insights",
     "type": "Explainer",
@@ -11224,6 +11620,217 @@ const engineArticles: Article[] = [
         }
       ]
     }
+  },
+  {
+    "slug": "how-long-venture-studio-startup-reaches-series-a",
+    "category": "insights",
+    "type": "Comparison",
+    "readTime": "7 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-20",
+    "isPublished": true,
+    "en": {
+      "title": "How Long a Venture Studio Startup Takes to Reach Series A: About 25 Months",
+      "description": "Venture studio startups reach Series A in about 25 months, roughly half the traditional path, and about 72 percent of seed-funded studio startups advance, per GSSN.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Startups built inside a venture studio reach Series A in about 25 months, which is roughly half the time the traditional path takes, according to the Global Startup Studio Network (GSSN). Speed, though, is only the most visible part of the advantage. Studio startups also move from stage to stage at far higher rates than companies built the conventional way, and it is that combination of pace and survival, not either one on its own, that makes the model worth understanding for any founder deciding how to build. The rest of this piece breaks down the timeline, the conversion rates behind it, and what both mean for founders building in Brazil and Latin America."
+          ]
+        },
+        {
+          "id": "how-long-does-a-venture-studio-startup-take-to-reach-series-a",
+          "heading": "How long does a venture studio startup take to reach Series A?",
+          "level": 2,
+          "paragraphs": [
+            "A [venture studio](/en/library/what-is-a-venture-studio) startup reaches Series A in about 25 months on average, compared with roughly 56 months for a company built the conventional way. That figure comes from the GSSN benchmark \"Disrupting the Venture Landscape,\" which analyzed studio-born companies against traditional startups. In practical terms, the studio path compresses more than two years out of the journey from first line of code to a priced institutional round.",
+            "The reason the gap is so wide is structural. A studio does not wait for a founder to assemble a team, validate a market, and stumble toward product-market fit one step at a time. It runs those steps in parallel, with shared operators, capital, and infrastructure already in place on day one."
+          ]
+        },
+        {
+          "id": "speed-is-only-half-the-story",
+          "heading": "Speed is only half the story",
+          "level": 2,
+          "paragraphs": [
+            "The headline number is time, but the more durable advantage is conversion. According to GSSN, about 84 percent of studio startups go on to raise a seed round. Of those seed-funded studio startups, about 72 percent advance to Series A. By comparison, roughly 42 percent of traditional venture-backed startups that raise seed make the same jump.",
+            "Read the two numbers together and the picture sharpens. A studio startup is not only faster to Series A, it is meaningfully more likely to get there at all. The 72 percent figure is specifically a seed to Series A graduation rate, not a share of every idea a studio ever touches, which matters because the seed round is itself a filter that most concepts never clear.",
+            "That framing lines up with what the wider market shows. CB Insights, in its widely cited Venture Capital Funnel analysis, tracked a cohort of seed-funded companies and found that fewer than half, about 48 percent, ever raised a second round of funding at all. Against that baseline, a model where roughly seven in ten seed-funded companies reach a priced Series A stands out sharply."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Across the broader market, fewer than half of seed-funded companies, about 48 percent, ever raise a second round of funding, underscoring how steep the seed to Series A climb is outside the studio model.",
+            "attribution": "CB Insights, Venture Capital Funnel analysis"
+          }
+        },
+        {
+          "id": "why-the-studio-model-compresses-the-timeline",
+          "heading": "Why the studio model compresses the timeline",
+          "level": 2,
+          "paragraphs": [
+            "Three mechanics explain most of the compression.",
+            "First, studios remove the cold-start problem. Ideas are pressure-tested internally before a dedicated founder is recruited, so the company begins life with evidence rather than a hunch, and the earliest and riskiest months of a normal startup are already behind it.",
+            "Second, studios share operating leverage. Engineering, design, growth, legal, and finance are pooled across the portfolio, so a new company does not rebuild the same functions from scratch. The founder spends time on the wedge, not on hiring a first recruiter or choosing a payroll provider.",
+            "Third, studios de-risk the earliest capital. Because the studio co-founds and co-owns the company, the first check is effectively committed before external investors are approached, which shortens the fundraising cycle that usually stretches traditional timelines by months.",
+            "None of this guarantees an outcome. It changes the base rates, and base rates are what compound across a portfolio of companies."
+          ]
+        },
+        {
+          "id": "what-the-model-implies-for-returns",
+          "heading": "What the model implies for returns",
+          "level": 2,
+          "paragraphs": [
+            "The stage-conversion advantage also shows up at the fund level. GSSN's benchmark associates the studio model with an internal rate of return of approximately 50 percent, against approximately 19 percent for the traditional venture path. Those figures are directional and reflect a specific dataset rather than a promise, but they are consistent with the underlying logic. Faster cycles and higher graduation rates mean capital is tied up for less time and works harder while it is deployed.",
+            "The honest caveat is that studio datasets are still young and self-selected. The GSSN benchmark is the most cited source in this space, and this article leans on it deliberately, but it is one lens, corroborated here by the broader CB Insights funnel rather than treated as the last word."
+          ]
+        },
+        {
+          "id": "why-this-matters-for-founders-in-brazil-and-latam",
+          "heading": "Why this matters for founders in Brazil and LATAM",
+          "level": 2,
+          "paragraphs": [
+            "Most of the studio evidence to date comes from North American and European data. The mechanics, though, travel. In markets like Brazil and the rest of Latin America, where the operator talent to build an AI-native company is scarcer and the cost of a false start is higher, the studio model's core promise of shared operators and committed first capital is arguably more valuable than it is in deeper, better-funded ecosystems.",
+            "This is the thesis Avante is built on. Avante co-founds [AI-native companies for Brazil and LATAM](/en/library/ai-native-companies-brazil-latam), pairing regional founders with an operating team so that the timeline compression and higher graduation rates seen in global studio data have a real chance to show up locally. The returns case for the region stays deliberately qualitative here, because the honest answer is that LATAM studio track records are still being written."
+          ]
+        },
+        {
+          "id": "the-number-to-take-away",
+          "heading": "The number to take away",
+          "level": 2,
+          "paragraphs": [
+            "If you remember one figure, make it about 25 months to Series A for a studio startup, set against roughly 56 months on the traditional path, and paired with a seed to Series A graduation rate near 72 percent for companies that have already raised seed. Speed and survival, together, are the studio's real product."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Startups launched from venture studios reach Series A in about 25 months, compared with roughly 56 months for the traditional path, and about 72 percent of seed-funded studio startups advance to Series A versus about 42 percent of traditional startups that raise seed.",
+            "attribution": "Global Startup Studio Network, Disrupting the Venture Landscape (2020)"
+          }
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How long does a venture studio startup take to reach Series A?",
+          "a": "About 25 months on average, according to the Global Startup Studio Network, compared with roughly 56 months for a startup built the traditional way."
+        },
+        {
+          "q": "Do most studio startups actually reach Series A?",
+          "a": "Studios convert at high rates but not universally. GSSN reports that about 84 percent of studio startups raise a seed round, and about 72 percent of those seed-funded studio startups then advance to Series A. The 72 percent figure applies to companies that already raised seed, not to every idea a studio explores."
+        },
+        {
+          "q": "How does that compare with traditional startups?",
+          "a": "For traditional venture-backed startups, roughly 42 percent of those that raise seed reach Series A. CB Insights' Venture Capital Funnel analysis found that fewer than half of seed-funded companies, about 48 percent, ever raise a second round at all."
+        },
+        {
+          "q": "Why are venture studios faster?",
+          "a": "Studios validate ideas internally, share operating teams across the portfolio, and commit the first capital themselves, so a new company starts with a team, infrastructure, and funding already in place instead of building each from zero."
+        },
+        {
+          "q": "Are studio return figures reliable?",
+          "a": "They are directional. GSSN's benchmark associates studios with an internal rate of return near approximately 50 percent versus approximately 19 percent for traditional venture, but studio datasets are young and self-selected, so treat the numbers as indicative rather than guaranteed."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Quanto tempo uma startup de venture studio leva para chegar à Série A: cerca de 25 meses",
+      "description": "Startups de venture studio chegam à Série A em cerca de 25 meses, aproximadamente metade do caminho tradicional, e cerca de 72 por cento das startups de studio com seed avançam, segundo a GSSN.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Startups construídas dentro de um venture studio chegam à Série A em cerca de 25 meses, o que representa aproximadamente metade do tempo que o caminho tradicional exige, segundo a Global Startup Studio Network (GSSN). A velocidade, porém, é apenas a parte mais visível da vantagem. As startups de studio também avançam de estágio para estágio a taxas muito mais altas do que as empresas construídas da forma convencional, e é essa combinação de ritmo e sobrevivência, e não uma delas isoladamente, que torna o modelo digno de compreensão para qualquer fundador que decide como construir. O restante deste texto detalha o cronograma, as taxas de conversão por trás dele e o que ambos significam para fundadores que constroem no Brasil e na América Latina."
+          ]
+        },
+        {
+          "id": "quanto-tempo-uma-startup-de-venture-studio-leva-para-chegar-a-serie-a",
+          "heading": "Quanto tempo uma startup de venture studio leva para chegar à Série A?",
+          "level": 2,
+          "paragraphs": [
+            "Uma startup de [venture studio](/pt/library/what-is-a-venture-studio) chega à Série A em cerca de 25 meses em média, em comparação com aproximadamente 56 meses para uma empresa construída da forma convencional. Esse número vem do benchmark da GSSN \"Disrupting the Venture Landscape\", que analisou empresas nascidas em studios frente a startups tradicionais. Na prática, o caminho do studio comprime mais de dois anos da jornada que vai da primeira linha de código até uma rodada institucional precificada.",
+            "A razão pela qual a diferença é tão grande é estrutural. Um studio não espera que um fundador monte uma equipe, valide um mercado e caminhe aos tropeços rumo ao product-market fit um passo de cada vez. Ele executa essas etapas em paralelo, com operadores, capital e infraestrutura compartilhados já disponíveis desde o primeiro dia."
+          ]
+        },
+        {
+          "id": "velocidade-e-apenas-metade-da-historia",
+          "heading": "Velocidade é apenas metade da história",
+          "level": 2,
+          "paragraphs": [
+            "O número de destaque é o tempo, mas a vantagem mais duradoura é a conversão. Segundo a GSSN, cerca de 84 por cento das startups de studio chegam a levantar uma rodada seed. Dessas startups de studio financiadas com seed, cerca de 72 por cento avançam para a Série A. Em comparação, aproximadamente 42 por cento das startups tradicionais com aporte de risco que levantam seed dão o mesmo salto.",
+            "Leia os dois números juntos e o quadro fica mais nítido. Uma startup de studio não é apenas mais rápida para chegar à Série A, ela é significativamente mais propensa a chegar lá. O número de 72 por cento é especificamente uma taxa de graduação de seed para Série A, e não uma fatia de cada ideia que um studio já tocou, o que importa porque a própria rodada seed é um filtro que a maioria dos conceitos nunca supera.",
+            "Esse enquadramento se alinha ao que o mercado mais amplo mostra. A CB Insights, em sua amplamente citada análise Venture Capital Funnel, acompanhou um grupo de empresas financiadas com seed e constatou que menos da metade, cerca de 48 por cento, chegou a levantar uma segunda rodada de financiamento. Diante dessa referência, um modelo em que aproximadamente sete em cada dez empresas financiadas com seed chegam a uma Série A precificada se destaca de forma marcante."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "No mercado mais amplo, menos da metade das empresas financiadas com seed, cerca de 48 por cento, chega a levantar uma segunda rodada de financiamento, o que evidencia o quão íngreme é a subida de seed para Série A fora do modelo de studio.",
+            "attribution": "CB Insights, Venture Capital Funnel analysis"
+          }
+        },
+        {
+          "id": "por-que-o-modelo-de-studio-comprime-o-cronograma",
+          "heading": "Por que o modelo de studio comprime o cronograma",
+          "level": 2,
+          "paragraphs": [
+            "Três mecanismos explicam a maior parte dessa compressão.",
+            "Primeiro, os studios eliminam o problema do começo do zero. As ideias são testadas sob pressão internamente antes de um fundador dedicado ser recrutado, de modo que a empresa começa sua vida com evidências em vez de um palpite, e os meses mais iniciais e arriscados de uma startup normal já ficaram para trás.",
+            "Segundo, os studios compartilham alavancagem operacional. Engenharia, design, growth, jurídico e finanças são reunidos em todo o portfólio, de modo que uma nova empresa não reconstrói as mesmas funções do zero. O fundador dedica tempo ao ponto de entrada do produto, e não à contratação de um primeiro recrutador ou à escolha de um provedor de folha de pagamento.",
+            "Terceiro, os studios reduzem o risco do capital mais inicial. Como o studio cofunda e é cossócio da empresa, o primeiro cheque está efetivamente comprometido antes de os investidores externos serem procurados, o que encurta o ciclo de captação que costuma estender os cronogramas tradicionais em meses.",
+            "Nada disso garante um resultado. Isso muda as taxas de base, e as taxas de base são o que se acumula ao longo de um portfólio de empresas."
+          ]
+        },
+        {
+          "id": "o-que-o-modelo-implica-para-os-retornos",
+          "heading": "O que o modelo implica para os retornos",
+          "level": 2,
+          "paragraphs": [
+            "A vantagem de conversão entre estágios também aparece no nível do fundo. O benchmark da GSSN associa o modelo de studio a uma taxa interna de retorno de aproximadamente 50 por cento, frente a aproximadamente 19 por cento do caminho tradicional de venture. Esses números são direcionais e refletem um conjunto de dados específico, e não uma promessa, mas são consistentes com a lógica subjacente. Ciclos mais rápidos e taxas de graduação mais altas significam que o capital fica imobilizado por menos tempo e trabalha com mais intensidade enquanto está alocado.",
+            "A ressalva honesta é que os conjuntos de dados de studios ainda são jovens e autosselecionados. O benchmark da GSSN é a fonte mais citada nesse espaço, e este artigo se apoia nele deliberadamente, mas ele é uma lente, corroborada aqui pelo funil mais amplo da CB Insights em vez de ser tratada como a palavra final."
+          ]
+        },
+        {
+          "id": "por-que-isso-importa-para-fundadores-no-brasil-e-na-america-latina",
+          "heading": "Por que isso importa para fundadores no Brasil e na América Latina",
+          "level": 2,
+          "paragraphs": [
+            "A maior parte das evidências sobre studios até hoje vem de dados norte-americanos e europeus. Os mecanismos, no entanto, viajam. Em mercados como o Brasil e o restante da América Latina, onde o talento de operadores para construir uma empresa nativa de IA é mais escasso e o custo de um começo em falso é mais alto, a promessa central do modelo de studio, de operadores compartilhados e primeiro capital comprometido, é indiscutivelmente mais valiosa do que em ecossistemas mais profundos e mais bem financiados.",
+            "Esta é a tese sobre a qual a Avante foi construída. A Avante cofunda [empresas nativas de IA para o Brasil e a América Latina](/pt/library/ai-native-companies-brazil-latam), unindo fundadores regionais a uma equipe operacional para que a compressão de cronograma e as taxas de graduação mais altas vistas nos dados globais de studios tenham uma chance real de aparecer localmente. O caso de retornos para a região permanece deliberadamente qualitativo aqui, porque a resposta honesta é que os históricos de studios na América Latina ainda estão sendo escritos."
+          ]
+        },
+        {
+          "id": "o-numero-para-levar",
+          "heading": "O número para levar",
+          "level": 2,
+          "paragraphs": [
+            "Se você lembrar de um único número, que seja cerca de 25 meses até a Série A para uma startup de studio, contrastado com aproximadamente 56 meses no caminho tradicional, e combinado com uma taxa de graduação de seed para Série A perto de 72 por cento para empresas que já levantaram seed. Velocidade e sobrevivência, juntas, são o verdadeiro produto do studio."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Startups lançadas a partir de venture studios chegam à Série A em cerca de 25 meses, em comparação com aproximadamente 56 meses no caminho tradicional, e cerca de 72 por cento das startups de studio financiadas com seed avançam para a Série A, frente a cerca de 42 por cento das startups tradicionais que levantam seed.",
+            "attribution": "Global Startup Studio Network, Disrupting the Venture Landscape (2020)"
+          }
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Quanto tempo uma startup de venture studio leva para chegar à Série A?",
+          "a": "Cerca de 25 meses em média, segundo a Global Startup Studio Network, em comparação com aproximadamente 56 meses para uma startup construída da forma tradicional."
+        },
+        {
+          "q": "A maioria das startups de studio realmente chega à Série A?",
+          "a": "Os studios convertem a taxas altas, mas não de forma universal. A GSSN relata que cerca de 84 por cento das startups de studio levantam uma rodada seed, e cerca de 72 por cento dessas startups de studio financiadas com seed depois avançam para a Série A. O número de 72 por cento se aplica a empresas que já levantaram seed, e não a cada ideia que um studio explora."
+        },
+        {
+          "q": "Como isso se compara com startups tradicionais?",
+          "a": "Para startups tradicionais com aporte de risco, aproximadamente 42 por cento das que levantam seed chegam à Série A. A análise Venture Capital Funnel da CB Insights constatou que menos da metade das empresas financiadas com seed, cerca de 48 por cento, chega a levantar uma segunda rodada."
+        },
+        {
+          "q": "Por que os venture studios são mais rápidos?",
+          "a": "Os studios validam ideias internamente, compartilham equipes operacionais em todo o portfólio e comprometem eles próprios o primeiro capital, de modo que uma nova empresa começa com equipe, infraestrutura e financiamento já disponíveis em vez de construir cada um a partir do zero."
+        },
+        {
+          "q": "Os números de retorno de studios são confiáveis?",
+          "a": "Eles são direcionais. O benchmark da GSSN associa os studios a uma taxa interna de retorno perto de aproximadamente 50 por cento frente a aproximadamente 19 por cento do venture tradicional, mas os conjuntos de dados de studios são jovens e autosselecionados, portanto trate os números como indicativos e não como garantidos."
+        }
+      ]
+    },
+    "ogImage": "/og/how-long-venture-studio-startup-reaches-series-a.png"
   },
   {
     "slug": "how-much-dilution-per-funding-round",
@@ -11420,6 +12027,203 @@ const engineArticles: Article[] = [
         }
       ]
     }
+  },
+  {
+    "slug": "how-much-does-it-cost-to-run-an-ai-agent",
+    "category": "ai",
+    "type": "Guide",
+    "readTime": "8 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-20",
+    "isPublished": true,
+    "en": {
+      "title": "How Much It Costs to Run an AI Agent and How to Measure It",
+      "description": "The cost of running an AI agent is driven by tokens consumed per task, not price per token. Here is how to measure cost per successful task.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Running an AI agent costs far more than a single model call because the agent loops, and the real driver of the bill is tokens consumed per task, not the price per token. In Anthropic's own data, agents used roughly 4 times more tokens than a chat interaction and multi-agent systems about 15 times more. The number to budget against is cost per successful task, not cost per token, because a cheap model that fails often quietly inflates the true bill through retries."
+          ]
+        },
+        {
+          "id": "how-much-does-it-cost-to-run-an-ai-agent",
+          "heading": "How much does it cost to run an AI agent?",
+          "level": 2,
+          "paragraphs": [
+            "The cost of running an AI agent is driven mostly by the tokens it consumes, not by the sticker price of the model. An agent does not answer once and stop. It loops through reasoning steps, calls tools, reads what comes back, and reasons again, so it burns far more tokens than a single chat reply for the same task. In Anthropic's own data, agents used about 4 times more tokens than a chat interaction, and multi-agent systems used about 15 times more. That is why the honest unit of cost is not price per token. It is cost per successful task, a figure that folds in retries, failures, and the tokens spent on attempts that never shipped a usable result.",
+            "The short version: estimate the tokens one attempt consumes, multiply by how many attempts it takes to succeed, and you have a number you can plan a budget around."
+          ]
+        },
+        {
+          "id": "why-token-usage-not-model-price-sets-the-bill",
+          "heading": "Why token usage, not model price, sets the bill",
+          "level": 2,
+          "paragraphs": [
+            "Founders comparing agents usually start with the price sheet, meaning how many cents per million input and output tokens each model charges. That number matters, but it is the smaller lever. The larger lever is how many tokens the agent spends to finish the job. Output tokens usually cost several times more than input tokens, and an agent that reasons through many steps produces a lot of output, so the loop itself is where the money goes.",
+            "Anthropic measured the effect directly. In its analysis of its own multi-agent research system, token usage alone explained about 80 percent of the performance variance on its BrowseComp evaluation, with the number of tool calls and the model choice as the two other explanatory factors. Read carefully, that figure describes one company's internal evaluation of one research task, not a universal law of agent behavior. But the direction it points is hard to argue with. How many tokens you spend swamps almost everything else about how the system performs and what it costs.",
+            "The practical consequence is that a cheaper model can be the more expensive choice. If a lower-cost model needs more reasoning steps, more tool calls, or more retries to reach the same answer, it can consume enough extra tokens to erase its per-token discount."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "In Anthropic's analysis of its own multi-agent research system, token usage alone explained about 80 percent of the performance variance on its BrowseComp evaluation, with the number of tool calls and the model choice as the two other factors.",
+            "attribution": "Anthropic Engineering, How We Built Our Multi-Agent Research System (2026)"
+          }
+        },
+        {
+          "id": "cost-per-successful-task-is-the-only-honest-unit",
+          "heading": "Cost per successful task is the only honest unit",
+          "level": 2,
+          "paragraphs": [
+            "The trap is optimizing for cost per token. A team that does this will happily ship a cheap model that fails, say, two in five tasks, and never notice that the retries and human clean-up cost more than a pricier model that gets it right the first time. That failure rate is a hypothetical for the sake of argument, not a measured figure, but the mechanism behind it is real. Every failed attempt still burns tokens, and someone still has to redo the work.",
+            "The fix is to measure cost per successful task, which is roughly the cost of one attempt divided by the success rate. As an illustration, not an industry figure, suppose a task takes 40,000 tokens per attempt and succeeds four times out of five. You pay for five attempts to land four clean results, so your true cost per successful task runs about 25 percent above the naive per-attempt number. The digits here are invented to show the shape of the math. The lesson is that a failure rate you ignore shows up as a cost you pay. This is the same discipline as unit economics anywhere else in a business. If you have never mapped it, our primer on [unit economics from day one](/en/library/unit-economics-101-ltv-cac-day-one) covers the vocabulary."
+          ]
+        },
+        {
+          "id": "a-worked-example-as-an-illustration-only",
+          "heading": "A worked example, as an illustration only",
+          "level": 2,
+          "paragraphs": [
+            "Walk one task through, keeping in mind that these numbers are an illustration and not a benchmark for any real workload.",
+            "Suppose a single agent run on a support-triage task consumes 40,000 tokens across its reasoning and tool calls, and suppose it succeeds four times out of five, so one run in five has to be retried. To ship 100 clean results you actually run about 125 attempts, which is roughly 5,000,000 tokens rather than the 4,000,000 you would guess if you assumed every run succeeded. That is the 25 percent uplift again, arriving through the back door of the failure rate.",
+            "Now change one variable. A model that costs more per token but succeeds nine times out of ten needs far fewer retries. Even at a higher headline price, its cost per successful task can land below the cheaper option. You cannot see that on a price sheet. You can only see it once you measure success rate and token use together."
+          ]
+        },
+        {
+          "id": "how-to-measure-and-control-agent-cost",
+          "heading": "How to measure and control agent cost",
+          "level": 2,
+          "paragraphs": [
+            "A few levers move the number the most.",
+            "Route by difficulty. Send easy steps to a small, cheap model and reserve the frontier model for the hard ones. Most tasks do not need your most capable model at every step. Our [model routing and inference cost playbook](/en/library/model-routing-inference-cost-playbook) walks through how to set this up without giving up quality.",
+            "Cap the loop. Agents fail expensively when they spin in circles, so put limits on tool calls and reasoning steps and make the agent stop or escalate to a human rather than churn tokens indefinitely.",
+            "Cache what repeats. System prompts, tool schemas, and shared context are re-sent on every step, so prompt caching can cut a meaningful share of input-token cost on long-running agents.",
+            "Instrument before you optimize. Log tokens and success for every task from day one. You cannot manage cost per successful task if the only thing you measure is cost per token, and most teams discover this the hard way after the first invoice."
+          ]
+        },
+        {
+          "id": "what-this-means-for-latam-founders",
+          "heading": "What this means for LATAM founders",
+          "level": 2,
+          "paragraphs": [
+            "Avante co-founds AI-native companies for Brazil and LATAM, and this cost math is where a lot of AI products quietly break. Frontier inference is priced in dollars while much of the region earns in reais and pesos, so a model call that looks trivial in a San Francisco pitch deck can be a real margin line in a Brazilian or Colombian P&L. Designing around cost per successful task from the first prototype, rather than discovering it after launch, is what keeps an AI-native product profitable as it scales.",
+            "The underlying trend helps. Inference prices have fallen steeply and keep falling, which widens the set of agent use cases that clear their own cost. We track that curve for the region in our [LATAM AI infrastructure cost curve](/en/library/ai-infrastructure-cost-curve-latam). The founders who win are not the ones waiting for models to get cheaper. They are the ones who measure honestly today, then route, cap, and cache their way to a defensible cost per successful task."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How much does it cost to run an AI agent?",
+          "a": "It depends mostly on tokens, not on the model's headline price. Estimate the tokens one attempt consumes, then multiply by how many attempts it takes to succeed. Because agents loop through reasoning and tool calls, they use far more tokens than a single chat reply, so the figure worth budgeting is cost per successful task."
+        },
+        {
+          "q": "Why do AI agents cost more than a single chat completion?",
+          "a": "Agents do not answer once and stop. They loop, calling tools and reasoning repeatedly, which multiplies token use. In Anthropic's own data, agents used about 4 times more tokens than a chat interaction and multi-agent systems about 15 times more."
+        },
+        {
+          "q": "What is cost per successful task?",
+          "a": "It is the cost of one attempt divided by the success rate. If attempts fail some of the time, you pay for the failed runs too, so the real cost of each usable result is higher than the raw per-attempt price. It is the only unit that captures retries and failures honestly."
+        },
+        {
+          "q": "Does a cheaper model always lower agent cost?",
+          "a": "No. A model with a lower price per token can still cost more overall if it needs more reasoning steps, more tool calls, or more retries to reach the same answer. Measuring success rate and token use together is the only way to know which model is actually cheaper for the job."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Quanto Custa Rodar um Agente de IA e Como Medir Isso",
+      "description": "O custo de rodar um agente de IA é determinado pelos tokens consumidos por tarefa, não pelo preço por token. Veja como medir o custo por tarefa bem-sucedida.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Rodar um agente de IA custa muito mais do que uma única chamada de modelo porque o agente entra em loop, e o verdadeiro motor da conta são os tokens consumidos por tarefa, não o preço por token. Nos próprios dados da Anthropic, os agentes usaram cerca de 4 vezes mais tokens do que uma interação de chat e os sistemas multiagente cerca de 15 vezes mais. O número que você deve usar como base de orçamento é o custo por tarefa bem-sucedida, não o custo por token, porque um modelo barato que falha com frequência infla silenciosamente a conta real por meio de novas tentativas."
+          ]
+        },
+        {
+          "id": "quanto-custa-rodar-um-agente-de-ia",
+          "heading": "Quanto custa rodar um agente de IA?",
+          "level": 2,
+          "paragraphs": [
+            "O custo de rodar um agente de IA é determinado principalmente pelos tokens que ele consome, não pelo preço de tabela do modelo. Um agente não responde uma vez e para. Ele percorre etapas de raciocínio, chama ferramentas, lê o que retorna e raciocina de novo, então consome muito mais tokens do que uma única resposta de chat para a mesma tarefa. Nos próprios dados da Anthropic, os agentes usaram cerca de 4 vezes mais tokens do que uma interação de chat, e os sistemas multiagente usaram cerca de 15 vezes mais. É por isso que a unidade honesta de custo não é o preço por token. É o custo por tarefa bem-sucedida, um número que incorpora novas tentativas, falhas e os tokens gastos em tentativas que nunca entregaram um resultado utilizável.",
+            "A versão curta: estime os tokens que uma tentativa consome, multiplique por quantas tentativas são necessárias para ter sucesso e você terá um número em torno do qual planejar um orçamento."
+          ]
+        },
+        {
+          "id": "por-que-o-uso-de-tokens-nao-o-preco-do-modelo-define-a-conta",
+          "heading": "Por que o uso de tokens, e não o preço do modelo, define a conta",
+          "level": 2,
+          "paragraphs": [
+            "Fundadores que comparam agentes costumam começar pela tabela de preços, ou seja, quantos centavos por milhão de tokens de entrada e de saída cada modelo cobra. Esse número importa, mas é a alavanca menor. A alavanca maior é quantos tokens o agente gasta para concluir o trabalho. Os tokens de saída costumam custar várias vezes mais do que os de entrada, e um agente que raciocina por muitas etapas produz muita saída, então o próprio loop é onde o dinheiro vai.",
+            "A Anthropic mediu o efeito diretamente. Em sua análise do próprio sistema de pesquisa multiagente, o uso de tokens sozinho explicou cerca de 80 por cento da variação de desempenho em sua avaliação BrowseComp, com o número de chamadas de ferramentas e a escolha do modelo como os outros dois fatores explicativos. Lido com atenção, esse número descreve a avaliação interna de uma empresa sobre uma tarefa de pesquisa, não uma lei universal do comportamento de agentes. Mas a direção que ele aponta é difícil de contestar. Quantos tokens você gasta supera quase tudo o mais sobre como o sistema se comporta e quanto ele custa.",
+            "A consequência prática é que um modelo mais barato pode ser a escolha mais cara. Se um modelo de menor custo precisar de mais etapas de raciocínio, mais chamadas de ferramentas ou mais novas tentativas para chegar à mesma resposta, ele pode consumir tokens extras suficientes para anular seu desconto por token."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Na análise da Anthropic sobre seu próprio sistema de pesquisa multiagente, o uso de tokens sozinho explicou cerca de 80 por cento da variação de desempenho em sua avaliação BrowseComp, com o número de chamadas de ferramentas e a escolha do modelo como os outros dois fatores.",
+            "attribution": "Anthropic Engineering, How We Built Our Multi-Agent Research System (2026)"
+          }
+        },
+        {
+          "id": "custo-por-tarefa-bem-sucedida-e-a-unica-unidade-honesta",
+          "heading": "Custo por tarefa bem-sucedida é a única unidade honesta",
+          "level": 2,
+          "paragraphs": [
+            "A armadilha é otimizar para o custo por token. Uma equipe que faz isso vai alegremente colocar em produção um modelo barato que falha, digamos, duas em cada cinco tarefas, e nunca perceber que as novas tentativas e a correção manual custam mais do que um modelo mais caro que acerta de primeira. Essa taxa de falha é uma hipótese para fins de argumentação, não um número medido, mas o mecanismo por trás dela é real. Toda tentativa que falha ainda consome tokens, e alguém ainda precisa refazer o trabalho.",
+            "A solução é medir o custo por tarefa bem-sucedida, que é aproximadamente o custo de uma tentativa dividido pela taxa de sucesso. Como ilustração, e não um número do setor, suponha que uma tarefa consuma 40.000 tokens por tentativa e tenha sucesso quatro em cada cinco vezes. Você paga por cinco tentativas para obter quatro resultados limpos, então seu custo real por tarefa bem-sucedida fica cerca de 25 por cento acima do número ingênuo por tentativa. Os dígitos aqui são inventados para mostrar o formato da conta. A lição é que uma taxa de falha que você ignora aparece como um custo que você paga. Essa é a mesma disciplina da economia unitária em qualquer outra parte de um negócio. Se você nunca mapeou isso, nosso guia sobre [economia unitária desde o primeiro dia](/pt/library/unit-economics-101-ltv-cac-day-one) cobre o vocabulário."
+          ]
+        },
+        {
+          "id": "um-exemplo-pratico-apenas-como-ilustracao",
+          "heading": "Um exemplo prático, apenas como ilustração",
+          "level": 2,
+          "paragraphs": [
+            "Acompanhe uma tarefa do início ao fim, tendo em mente que esses números são uma ilustração e não uma referência para qualquer carga de trabalho real.",
+            "Suponha que uma única execução de agente em uma tarefa de triagem de suporte consuma 40.000 tokens ao longo de seu raciocínio e chamadas de ferramentas, e suponha que ela tenha sucesso quatro em cada cinco vezes, então uma execução em cada cinco precisa ser repetida. Para entregar 100 resultados limpos você na verdade roda cerca de 125 tentativas, o que dá aproximadamente 5.000.000 de tokens em vez dos 4.000.000 que você estimaria se supusesse que toda execução tem sucesso. É o acréscimo de 25 por cento de novo, chegando pela porta dos fundos da taxa de falha.",
+            "Agora mude uma variável. Um modelo que custa mais por token, mas tem sucesso nove em cada dez vezes, precisa de muito menos repetições. Mesmo com um preço de tabela mais alto, seu custo por tarefa bem-sucedida pode ficar abaixo da opção mais barata. Você não consegue ver isso em uma tabela de preços. Você só consegue ver depois de medir a taxa de sucesso e o uso de tokens juntos."
+          ]
+        },
+        {
+          "id": "como-medir-e-controlar-o-custo-do-agente",
+          "heading": "Como medir e controlar o custo do agente",
+          "level": 2,
+          "paragraphs": [
+            "Algumas alavancas movem o número mais do que as outras.",
+            "Roteie por dificuldade. Envie as etapas fáceis para um modelo pequeno e barato e reserve o modelo de fronteira para as difíceis. A maioria das tarefas não precisa do seu modelo mais capaz em cada etapa. Nosso [manual de roteamento de modelos e custo de inferência](/pt/library/model-routing-inference-cost-playbook) mostra como configurar isso sem abrir mão da qualidade.",
+            "Limite o loop. Os agentes falham de forma cara quando ficam girando em círculos, então coloque limites em chamadas de ferramentas e etapas de raciocínio e faça o agente parar ou escalar para um humano em vez de queimar tokens indefinidamente.",
+            "Faça cache do que se repete. Prompts de sistema, esquemas de ferramentas e contexto compartilhado são reenviados a cada etapa, então o cache de prompts pode reduzir uma parcela significativa do custo de tokens de entrada em agentes de longa duração.",
+            "Instrumente antes de otimizar. Registre tokens e sucesso para cada tarefa desde o primeiro dia. Você não consegue gerenciar o custo por tarefa bem-sucedida se a única coisa que você mede é o custo por token, e a maioria das equipes descobre isso da maneira difícil depois da primeira fatura."
+          ]
+        },
+        {
+          "id": "o-que-isso-significa-para-fundadores-da-america-latina",
+          "heading": "O que isso significa para fundadores da América Latina",
+          "level": 2,
+          "paragraphs": [
+            "A Avante cofunda empresas nativas de IA para o Brasil e a América Latina, e é nessa conta de custo que muitos produtos de IA quebram silenciosamente. A inferência de fronteira é precificada em dólares, enquanto boa parte da região ganha em reais e pesos, então uma chamada de modelo que parece trivial em um pitch deck de San Francisco pode ser uma linha de margem real em um resultado brasileiro ou colombiano. Projetar em torno do custo por tarefa bem-sucedida desde o primeiro protótipo, em vez de descobri-lo depois do lançamento, é o que mantém um produto nativo de IA lucrativo à medida que ele cresce.",
+            "A tendência de fundo ajuda. Os preços de inferência caíram acentuadamente e continuam caindo, o que amplia o conjunto de casos de uso de agentes que cobrem o próprio custo. Acompanhamos essa curva para a região em nossa [curva de custo de infraestrutura de IA na América Latina](/pt/library/ai-infrastructure-cost-curve-latam). Os fundadores que vencem não são os que esperam os modelos ficarem mais baratos. São os que medem com honestidade hoje, e então roteiam, limitam e fazem cache até chegar a um custo por tarefa bem-sucedida defensável."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Quanto custa rodar um agente de IA?",
+          "a": "Depende principalmente dos tokens, não do preço de tabela do modelo. Estime os tokens que uma tentativa consome e depois multiplique por quantas tentativas são necessárias para ter sucesso. Como os agentes entram em loop de raciocínio e chamadas de ferramentas, eles usam muito mais tokens do que uma única resposta de chat, então o número que vale a pena orçar é o custo por tarefa bem-sucedida."
+        },
+        {
+          "q": "Por que os agentes de IA custam mais do que uma única resposta de chat?",
+          "a": "Os agentes não respondem uma vez e param. Eles entram em loop, chamando ferramentas e raciocinando repetidamente, o que multiplica o uso de tokens. Nos próprios dados da Anthropic, os agentes usaram cerca de 4 vezes mais tokens do que uma interação de chat e os sistemas multiagente cerca de 15 vezes mais."
+        },
+        {
+          "q": "O que é custo por tarefa bem-sucedida?",
+          "a": "É o custo de uma tentativa dividido pela taxa de sucesso. Se as tentativas falham parte do tempo, você paga também pelas execuções que falharam, então o custo real de cada resultado utilizável é maior do que o preço bruto por tentativa. É a única unidade que captura novas tentativas e falhas de forma honesta."
+        },
+        {
+          "q": "Um modelo mais barato sempre reduz o custo do agente?",
+          "a": "Não. Um modelo com preço por token mais baixo ainda pode custar mais no total se precisar de mais etapas de raciocínio, mais chamadas de ferramentas ou mais novas tentativas para chegar à mesma resposta. Medir a taxa de sucesso e o uso de tokens juntos é a única maneira de saber qual modelo é realmente mais barato para o trabalho."
+        }
+      ]
+    },
+    "ogImage": "/og/how-much-does-it-cost-to-run-an-ai-agent.png"
   },
   {
     "slug": "how-much-equity-do-venture-studios-take",
@@ -14278,6 +15082,243 @@ const engineArticles: Article[] = [
     }
   },
   {
+    "slug": "is-inference-cost-cogs-or-opex",
+    "category": "ai",
+    "type": "Explainer",
+    "readTime": "6 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-20",
+    "isPublished": true,
+    "en": {
+      "title": "AI Inference Cost Belongs in COGS Not OpEx",
+      "description": "Inference cost is COGS, not OpEx: it is a direct variable cost of delivering your AI product and reduces gross margin. Only training belongs in R&D.",
+      "sections": [
+        {
+          "paragraphs": [
+            "**Inference cost is COGS, not OpEx.** For an AI startup, the compute you spend to run a model in production and generate the output a paying customer consumes is a direct, variable cost of delivering the product, so it belongs in cost of goods sold (also called cost of revenue) and reduces gross margin. Only the compute used to build or improve the model, such as training and fine-tuning, has a credible claim to sit in operating expense as research and development."
+          ]
+        },
+        {
+          "id": "is-inference-cost-cogs-or-opex-for-an-ai-startup",
+          "heading": "Is inference cost COGS or OpEx for an AI startup?",
+          "level": 2,
+          "paragraphs": [
+            "Inference cost is COGS. Inference is the compute an AI startup spends to run its model in production and generate the response a paying customer consumes, so it is a direct and variable cost of delivering the product and belongs in cost of goods sold, not operating expense. The matching principle in accrual accounting requires costs to be recorded against the revenue they generate, and because inference scales with usage and therefore with revenue, it matches revenue closely. Booking it anywhere else, such as inside research and development or a generic infrastructure line under OpEx, overstates gross margin and hides the true unit economics of the business. The narrow exception is model training and fine-tuning, which build a durable asset and can reasonably sit in R&D."
+          ]
+        },
+        {
+          "id": "why-inference-is-a-cost-of-revenue-and-not-an-operating-expense",
+          "heading": "Why inference is a cost of revenue and not an operating expense",
+          "level": 2,
+          "paragraphs": [
+            "The line between COGS and OpEx is not a matter of taste. Cost of goods sold captures the costs you cannot avoid if you want to deliver one more unit of the product. Operating expense captures the costs of running the company that do not scale one to one with each unit sold, such as sales, marketing, general and administrative spend, and most research and development. The test is direct attribution and variability. If the cost rises every time a customer uses the product, it is almost certainly a cost of revenue.",
+            "Inference fails no part of that test. Every prompt, every generated image, every agent run, and every token returned to a paying user triggers a metered charge from a model provider or a GPU bill from your own cluster. You cannot serve the request without paying for the compute. That is the textbook definition of a cost of revenue.",
+            "This is not a novel treatment invented for AI. Traditional software companies already book cloud hosting, content delivery, third party API fees required to run the product, and payment processing inside cost of revenue. Inference is simply the newest and largest line in that same category. Revenue recognition standards such as ASC 606 and IFRS 15 govern when you record the revenue from a customer contract, and the matching principle then pairs that recognized revenue with the direct costs of fulfilling it. Inference is one of those direct fulfillment costs. Treating it as anything else breaks the match between what you earned and what it cost you to earn it. If you want the fuller picture of how these costs move together, our primer on [unit economics from day one](/en/library/unit-economics-101-ltv-cac-day-one) walks through the same logic at the level of a single customer."
+          ]
+        },
+        {
+          "id": "the-one-real-exception-training-versus-inference",
+          "heading": "The one real exception: training versus inference",
+          "level": 2,
+          "paragraphs": [
+            "The cleanest way to keep your books honest is to separate the compute that builds the model from the compute that serves it."
+          ]
+        },
+        {
+          "id": "training-and-fine-tuning-can-sit-in-r-and-d",
+          "heading": "Training and fine-tuning can sit in R&D",
+          "level": 3,
+          "paragraphs": [
+            "Training a foundation model, fine-tuning an open weight model on your own data, or running large evaluation sweeps creates a durable asset that you expect to use across many future customers. That spend behaves like research and development, and it is defensible to classify it as an operating expense, or in some cases to capitalize it, rather than to bury it in the cost of this quarter's revenue. Training is lumpy and forward looking. It does not scale with today's usage."
+          ]
+        },
+        {
+          "id": "inference-is-delivery-so-it-is-cogs",
+          "heading": "Inference is delivery, so it is COGS",
+          "level": 3,
+          "paragraphs": [
+            "Inference is the opposite. It is consumed the moment a customer is served and it never becomes an asset. A run you paid for yesterday delivers no value tomorrow. Because it is tied to the act of delivery, it is a cost of revenue in the same way that server time is for any hosted product.",
+            "Two gray areas are worth naming honestly. Inference spent serving free tier or trial users can be argued into sales and marketing as a customer acquisition cost, though many teams still book it in COGS for simplicity and conservatism. And experimental inference during model development, such as prompt engineering and internal testing, can travel with R&D. The paid delivery path, which is the part that actually determines your gross margin, is COGS without ambiguity."
+          ]
+        },
+        {
+          "id": "what-hiding-inference-in-opex-does-to-your-margin",
+          "heading": "What hiding inference in OpEx does to your margin",
+          "level": 2,
+          "paragraphs": [
+            "The temptation to park inference outside COGS is strong because gross margin is the number investors, acquirers, and your own board watch most closely. Move the largest variable cost off the cost of revenue line and your reported gross margin can appear to jump materially on paper. Nothing about the business changed. You simply stopped telling yourself the truth.",
+            "That truth is what makes AI companies structurally different from classic software, and it is why the classification matters so much more here than it did for a pure SaaS product.",
+            "Read that with inference correctly booked as COGS and a 50 to 60 percent gross margin is the honest baseline you plan against. Read it with inference hidden in OpEx and you will convince yourself you are running an 80 percent margin software company, price as if you were, raise as if you were, and then discover the gap the first time compute usage spikes. The classification is not cosmetic. It changes how you price, how much runway a dollar buys, and whether your growth is actually creating value. How much revenue inference consumes varies widely by product and workload, so the safest move is to measure your own number rather than trust a benchmark. The pressure on that number is not static either, because the regional cost picture in LATAM differs from the US default."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "a16z found that AI companies often have gross margins in the 50 to 60 percent range, well below the 60 to 80 percent that is common for SaaS businesses, with some AI companies spending 25 percent or more of revenue on cloud resources.",
+            "attribution": "Andreessen Horowitz (a16z), The New Business of AI"
+          }
+        },
+        {
+          "id": "how-a-venture-studio-books-it-from-day-zero",
+          "heading": "How a venture studio books it from day zero",
+          "level": 2,
+          "paragraphs": [
+            "This is where the operating discipline matters more than the accounting theory. Avante Ventures co-founds AI-native companies for Brazil and LATAM, working alongside founders from day zero with capital and hands-on building, and one of the first things that build touches is the financial model. We set up the chart of accounts so inference lands in cost of revenue from the first invoice, not after a later cleanup when a diligence process forces the correction.",
+            "The reason is not conservatism for its own sake. When gross margin is honest from the start, three decisions get easier. Pricing gets anchored to a real margin rather than a flattering one, so founders do not underprice a product that costs a quarter of its revenue to serve. Fundraising conversations stay credible, because the margin an investor sees is the margin the company will still show after diligence. And the engineering roadmap gets a clear target, because a cost that sits visibly in COGS is a cost the team is motivated to attack.",
+            "Attacking it is the other half of the discipline. Booking inference as COGS tells you the margin problem exists. Defending the margin is an engineering job, largely a routing job: sending each request to the cheapest model that can complete it, caching aggressively, batching where latency allows, and reserving the frontier models for the tasks that genuinely need them. Our [model routing and inference cost playbook](/en/library/model-routing-inference-cost-playbook) covers those tactics in depth. The accounting makes the problem visible, and the routing makes it smaller. A studio can do both across a portfolio at once, which is part of why building AI-native companies inside a shared operating stack is more capital efficient than doing it alone."
+          ]
+        },
+        {
+          "id": "a-quick-classification-guide",
+          "heading": "A quick classification guide",
+          "level": 2,
+          "paragraphs": [
+            "Use this to place any AI compute cost on your income statement.",
+            "The durable rule underneath all of it is simple. If the compute is spent to deliver what a customer paid for, it is a cost of revenue. Book it there, watch your real gross margin, and build the company on numbers you will not have to walk back."
+          ],
+          "bullets": [
+            "Compute to serve a paying request in production: COGS, every time.",
+            "Cloud hosting, vector database, and third party API calls required to deliver the product: COGS.",
+            "Model training, fine-tuning, and large evaluation runs that build a reusable asset: R&D, inside OpEx, or capitalized where appropriate.",
+            "Inference for internal development, prompt testing, and experimentation: R&D.",
+            "Inference serving free trial users: defensible as sales and marketing, though many teams keep it in COGS for a cleaner, more conservative margin."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Is inference cost COGS or OpEx for an AI startup?",
+          "a": "Inference cost is COGS. The compute an AI startup spends to run its model in production and serve a paying customer is a direct, variable cost of delivering the product, so it belongs in cost of revenue and reduces gross margin. The matching principle pairs it with the revenue it generates. The only credible exception is model training and fine-tuning, which build a reusable asset and can sit in R&D under operating expense."
+        },
+        {
+          "q": "Does booking inference as COGS reduce gross margin?",
+          "a": "Yes. Because inference is a cost of revenue, every dollar of inference lowers gross margin directly. This is why a16z found AI companies often run 50 to 60 percent gross margins versus the 60 to 80 percent or more of classic SaaS. Hiding inference in OpEx would inflate the reported margin without changing the underlying economics of the business."
+        },
+        {
+          "q": "Should model training also go in COGS?",
+          "a": "Usually not. Training and fine-tuning build a durable asset you reuse across many customers, so they behave like research and development and belong in operating expense, or can be capitalized in some cases. Inference is consumed the instant a customer is served and never becomes an asset, which is why it is COGS. Keeping training and inference separate is the cleanest way to book AI compute."
+        },
+        {
+          "q": "Why does it matter whether inference is COGS or OpEx?",
+          "a": "Because gross margin drives pricing, fundraising, and how much runway a dollar buys. Booking inference as COGS gives you an honest margin to plan against, while parking it in OpEx can inflate reported gross margin materially and lead you to underprice and misjudge unit economics. It also creates a clear engineering target, since a visible COGS line is one the team is motivated to reduce through model routing and caching."
+        }
+      ]
+    },
+    "pt": {
+      "title": "O custo de inferência de IA pertence ao COGS, não ao OpEx",
+      "description": "O custo de inferência é COGS, não OpEx: é um custo variável direto de entregar seu produto de IA e reduz a margem bruta. Apenas o treinamento pertence a P&D.",
+      "sections": [
+        {
+          "paragraphs": [
+            "**O custo de inferência é COGS, não OpEx.** Para uma startup de IA, a computação que você gasta para rodar um modelo em produção e gerar a saída que um cliente pagante consome é um custo direto e variável de entregar o produto, então ela pertence ao custo dos produtos vendidos (também chamado de custo da receita) e reduz a margem bruta. Apenas a computação usada para construir ou melhorar o modelo, como treinamento e ajuste fino, tem uma alegação crível de ficar em despesa operacional como pesquisa e desenvolvimento."
+          ]
+        },
+        {
+          "id": "o-custo-de-inferencia-e-cogs-ou-opex-para-uma-startup-de-ia",
+          "heading": "O custo de inferência é COGS ou OpEx para uma startup de IA?",
+          "level": 2,
+          "paragraphs": [
+            "O custo de inferência é COGS. Inferência é a computação que uma startup de IA gasta para rodar seu modelo em produção e gerar a resposta que um cliente pagante consome, então é um custo direto e variável de entregar o produto e pertence ao custo dos produtos vendidos, não à despesa operacional. O princípio da competência na contabilidade de exercício exige que os custos sejam registrados contra a receita que eles geram, e como a inferência escala com o uso e, portanto, com a receita, ela acompanha a receita de perto. Registrá-la em qualquer outro lugar, como dentro de pesquisa e desenvolvimento ou de uma linha genérica de infraestrutura sob OpEx, superestima a margem bruta e esconde a verdadeira economia unitária do negócio. A exceção estreita é o treinamento e o ajuste fino do modelo, que constroem um ativo durável e podem razoavelmente ficar em P&D."
+          ]
+        },
+        {
+          "id": "por-que-a-inferencia-e-um-custo-da-receita-e-nao-uma-despesa-operacional",
+          "heading": "Por que a inferência é um custo da receita e não uma despesa operacional",
+          "level": 2,
+          "paragraphs": [
+            "A linha entre COGS e OpEx não é uma questão de gosto. O custo dos produtos vendidos captura os custos que você não pode evitar se quiser entregar mais uma unidade do produto. A despesa operacional captura os custos de tocar a empresa que não escalam um para um com cada unidade vendida, como vendas, marketing, gastos gerais e administrativos e a maior parte da pesquisa e desenvolvimento. O teste é atribuição direta e variabilidade. Se o custo sobe toda vez que um cliente usa o produto, ele é quase certamente um custo da receita.",
+            "A inferência não falha em nenhuma parte desse teste. Cada prompt, cada imagem gerada, cada execução de agente e cada token devolvido a um usuário pagante dispara uma cobrança medida de um provedor de modelo ou uma conta de GPU do seu próprio cluster. Você não consegue atender à requisição sem pagar pela computação. Essa é a definição clássica de um custo da receita.",
+            "Este não é um tratamento inédito inventado para a IA. Empresas de software tradicionais já registram hospedagem em nuvem, entrega de conteúdo, taxas de APIs de terceiros necessárias para rodar o produto e processamento de pagamentos dentro do custo da receita. A inferência é simplesmente a linha mais nova e maior dessa mesma categoria. Normas de reconhecimento de receita como a ASC 606 e a IFRS 15 governam quando você registra a receita de um contrato com o cliente, e o princípio da competência então casa essa receita reconhecida com os custos diretos de cumpri-lo. A inferência é um desses custos diretos de cumprimento. Tratá-la como qualquer outra coisa quebra o casamento entre o que você ganhou e o que custou para ganhar. Se você quer o quadro mais completo de como esses custos se movem juntos, nosso guia sobre [economia unitária desde o primeiro dia](/pt/library/unit-economics-101-ltv-cac-day-one) percorre a mesma lógica no nível de um único cliente."
+          ]
+        },
+        {
+          "id": "a-unica-excecao-real-treinamento-versus-inferencia",
+          "heading": "A única exceção real: treinamento versus inferência",
+          "level": 2,
+          "paragraphs": [
+            "A maneira mais limpa de manter seus livros honestos é separar a computação que constrói o modelo da computação que o serve."
+          ]
+        },
+        {
+          "id": "treinamento-e-ajuste-fino-podem-ficar-em-p-and-d",
+          "heading": "Treinamento e ajuste fino podem ficar em P&D",
+          "level": 3,
+          "paragraphs": [
+            "Treinar um modelo de fundação, fazer o ajuste fino de um modelo de pesos abertos com seus próprios dados ou rodar grandes varreduras de avaliação cria um ativo durável que você espera usar ao longo de muitos clientes futuros. Esse gasto se comporta como pesquisa e desenvolvimento, e é defensável classificá-lo como despesa operacional, ou em alguns casos capitalizá-lo, em vez de enterrá-lo no custo da receita deste trimestre. O treinamento é irregular e voltado para o futuro. Ele não escala com o uso de hoje."
+          ]
+        },
+        {
+          "id": "a-inferencia-e-entrega-entao-e-cogs",
+          "heading": "A inferência é entrega, então é COGS",
+          "level": 3,
+          "paragraphs": [
+            "A inferência é o oposto. Ela é consumida no momento em que um cliente é atendido e nunca se torna um ativo. Uma execução que você pagou ontem não entrega valor nenhum amanhã. Como está ligada ao ato de entrega, é um custo da receita da mesma forma que o tempo de servidor é para qualquer produto hospedado.",
+            "Duas áreas cinzentas merecem ser nomeadas com honestidade. A inferência gasta atendendo usuários de camada gratuita ou de teste pode ser argumentada para dentro de vendas e marketing como um custo de aquisição de cliente, embora muitas equipes ainda a registrem em COGS por simplicidade e conservadorismo. E a inferência experimental durante o desenvolvimento do modelo, como engenharia de prompt e testes internos, pode acompanhar P&D. O caminho de entrega paga, que é a parte que de fato determina sua margem bruta, é COGS sem ambiguidade."
+          ]
+        },
+        {
+          "id": "o-que-esconder-a-inferencia-em-opex-faz-com-a-sua-margem",
+          "heading": "O que esconder a inferência em OpEx faz com a sua margem",
+          "level": 2,
+          "paragraphs": [
+            "A tentação de estacionar a inferência fora do COGS é forte porque a margem bruta é o número que investidores, compradores e o seu próprio conselho observam mais de perto. Mova o maior custo variável para fora da linha de custo da receita e a sua margem bruta reportada pode parecer saltar materialmente no papel. Nada no negócio mudou. Você simplesmente parou de contar a verdade a si mesmo.",
+            "Essa verdade é o que torna as empresas de IA estruturalmente diferentes do software clássico, e é por isso que a classificação importa tanto mais aqui do que importava para um produto puro de SaaS.",
+            "Leia isso com a inferência corretamente registrada como COGS e uma margem bruta de 50 a 60 por cento é a linha de base honesta contra a qual você planeja. Leia isso com a inferência escondida em OpEx e você vai se convencer de que está tocando uma empresa de software com margem de 80 por cento, precificar como se estivesse, captar como se estivesse e então descobrir a diferença na primeira vez que o uso de computação disparar. A classificação não é cosmética. Ela muda como você precifica, quanto de fôlego um dólar compra e se o seu crescimento está de fato criando valor. Quanto da receita a inferência consome varia muito por produto e carga de trabalho, então o movimento mais seguro é medir o seu próprio número em vez de confiar em um benchmark. A pressão sobre esse número também não é estática, porque o quadro regional de custos na América Latina difere do padrão dos Estados Unidos."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "A a16z constatou que empresas de IA muitas vezes têm margens brutas na faixa de 50 a 60 por cento, bem abaixo dos 60 a 80 por cento que são comuns em negócios de SaaS, com algumas empresas de IA gastando 25 por cento ou mais da receita em recursos de nuvem.",
+            "attribution": "Andreessen Horowitz (a16z), The New Business of AI"
+          }
+        },
+        {
+          "id": "como-um-venture-studio-registra-isso-desde-o-dia-zero",
+          "heading": "Como um venture studio registra isso desde o dia zero",
+          "level": 2,
+          "paragraphs": [
+            "É aqui que a disciplina operacional importa mais do que a teoria contábil. A Avante Ventures cofunda empresas nativas de IA para o Brasil e a América Latina, trabalhando ao lado dos fundadores desde o dia zero com capital e construção prática, e uma das primeiras coisas que essa construção toca é o modelo financeiro. Nós configuramos o plano de contas para que a inferência caia no custo da receita desde a primeira nota fiscal, e não depois de uma limpeza posterior quando um processo de due diligence força a correção.",
+            "A razão não é conservadorismo pelo conservadorismo. Quando a margem bruta é honesta desde o começo, três decisões ficam mais fáceis. A precificação fica ancorada em uma margem real em vez de uma lisonjeira, então os fundadores não subprecificam um produto que custa um quarto da sua receita para servir. As conversas de captação seguem críveis, porque a margem que um investidor vê é a margem que a empresa ainda vai mostrar depois da due diligence. E o roteiro de engenharia ganha um alvo claro, porque um custo que fica visível no COGS é um custo que a equipe se sente motivada a atacar.",
+            "Atacá-lo é a outra metade da disciplina. Registrar a inferência como COGS diz a você que o problema de margem existe. Defender a margem é um trabalho de engenharia, em grande parte um trabalho de roteamento: enviar cada requisição para o modelo mais barato que consegue completá-la, fazer cache de forma agressiva, agrupar em lotes quando a latência permite e reservar os modelos de fronteira para as tarefas que genuinamente precisam deles. Nosso [manual de roteamento de modelos e custo de inferência](/pt/library/model-routing-inference-cost-playbook) cobre essas táticas em profundidade. A contabilidade torna o problema visível, e o roteamento o torna menor. Um studio consegue fazer as duas coisas em um portfólio inteiro de uma vez, o que é parte do motivo pelo qual construir empresas nativas de IA dentro de uma pilha operacional compartilhada é mais eficiente em capital do que fazê-lo sozinho."
+          ]
+        },
+        {
+          "id": "um-guia-rapido-de-classificacao",
+          "heading": "Um guia rápido de classificação",
+          "level": 2,
+          "paragraphs": [
+            "Use isto para posicionar qualquer custo de computação de IA na sua demonstração de resultados.",
+            "A regra durável por trás de tudo isso é simples. Se a computação é gasta para entregar aquilo que um cliente pagou, ela é um custo da receita. Registre-a ali, acompanhe a sua margem bruta real e construa a empresa sobre números que você não vai ter que voltar atrás."
+          ],
+          "bullets": [
+            "Computação para atender uma requisição paga em produção: COGS, toda vez.",
+            "Hospedagem em nuvem, banco de dados vetorial e chamadas de APIs de terceiros necessárias para entregar o produto: COGS.",
+            "Treinamento de modelo, ajuste fino e grandes execuções de avaliação que constroem um ativo reutilizável: P&D, dentro do OpEx, ou capitalizado quando apropriado.",
+            "Inferência para desenvolvimento interno, testes de prompt e experimentação: P&D.",
+            "Inferência atendendo usuários de teste gratuito: defensável como vendas e marketing, embora muitas equipes a mantenham em COGS para uma margem mais limpa e conservadora."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "O custo de inferência é COGS ou OpEx para uma startup de IA?",
+          "a": "O custo de inferência é COGS. A computação que uma startup de IA gasta para rodar seu modelo em produção e atender um cliente pagante é um custo direto e variável de entregar o produto, então pertence ao custo da receita e reduz a margem bruta. O princípio da competência o casa com a receita que ele gera. A única exceção crível é o treinamento e o ajuste fino do modelo, que constroem um ativo reutilizável e podem ficar em P&D dentro da despesa operacional."
+        },
+        {
+          "q": "Registrar a inferência como COGS reduz a margem bruta?",
+          "a": "Sim. Como a inferência é um custo da receita, cada dólar de inferência reduz a margem bruta diretamente. É por isso que a a16z constatou que empresas de IA muitas vezes operam com margens brutas de 50 a 60 por cento contra os 60 a 80 por cento ou mais do SaaS clássico. Esconder a inferência em OpEx inflaria a margem reportada sem mudar a economia subjacente do negócio."
+        },
+        {
+          "q": "O treinamento de modelo também deveria ir para COGS?",
+          "a": "Geralmente não. O treinamento e o ajuste fino constroem um ativo durável que você reutiliza ao longo de muitos clientes, então eles se comportam como pesquisa e desenvolvimento e pertencem à despesa operacional, ou podem ser capitalizados em alguns casos. A inferência é consumida no instante em que um cliente é atendido e nunca se torna um ativo, e é por isso que ela é COGS. Manter treinamento e inferência separados é a maneira mais limpa de registrar a computação de IA."
+        },
+        {
+          "q": "Por que importa se a inferência é COGS ou OpEx?",
+          "a": "Porque a margem bruta orienta a precificação, a captação e quanto de fôlego um dólar compra. Registrar a inferência como COGS dá a você uma margem honesta contra a qual planejar, enquanto estacioná-la em OpEx pode inflar materialmente a margem bruta reportada e levá-lo a subprecificar e a julgar mal a economia unitária. Isso também cria um alvo claro de engenharia, já que uma linha visível de COGS é uma que a equipe se sente motivada a reduzir por meio de roteamento de modelos e cache."
+        }
+      ]
+    },
+    "ogImage": "/og/is-inference-cost-cogs-or-opex.png"
+  },
+  {
     "slug": "is-my-ai-startup-just-a-wrapper",
     "category": "ai",
     "type": "Essay",
@@ -16573,6 +17614,219 @@ const engineArticles: Article[] = [
     "ogImage": "/og/rag-vs-finetune-vs-long-context-playbook.png"
   },
   {
+    "slug": "rule-of-40-for-ai-startups",
+    "category": "ai",
+    "type": "Framework",
+    "readTime": "7 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-20",
+    "isPublished": true,
+    "en": {
+      "title": "The Rule of 40 Still Applies to AI Startups but the Math Changes",
+      "description": "The Rule of 40 still applies to AI startups, but thinner gross margins mean you must grow faster to clear the same score of 40.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Yes, the Rule of 40 still applies to AI startups, but the bar is harder to clear. The metric itself does not change. What changes is the profit side of the equation, because inference and compute costs sit inside gross margin and pull it down. That forces AI-native founders to lean harder on growth to reach the same combined score of 40."
+          ]
+        },
+        {
+          "id": "does-the-rule-of-40-apply-to-ai-startups",
+          "heading": "Does the Rule of 40 Apply to AI Startups?",
+          "level": 2,
+          "paragraphs": [
+            "Yes. The Rule of 40 applies to AI startups just as it does to any software business, and it stays a useful shorthand for balancing growth against profitability. The rule says that a company's revenue growth rate plus its profit margin should add up to at least 40. A company growing 60 percent a year while running at a 20 percent loss still scores 40, and so does a company growing 20 percent with a 20 percent profit margin. The reason it matters more for AI companies is that their gross margins tend to be structurally lower than classic software-as-a-service, so the profit half of the equation starts from a weaker position and growth has to make up the difference."
+          ]
+        },
+        {
+          "id": "what-the-rule-of-40-actually-measures",
+          "heading": "What the Rule of 40 Actually Measures",
+          "level": 2,
+          "paragraphs": [
+            "The Rule of 40 is a balance test, not a growth target or a profit target on its own. It became a standard health check for software businesses around the middle of the last decade after investor Brad Feld wrote about it, and firms that study software companies, including McKinsey and Bessemer Venture Partners, have used it since. The formula is simple. Take your year-over-year revenue growth rate as a percentage, add your profit margin as a percentage, and check whether the total reaches 40.",
+            "The profit side can be measured a few ways. Common choices are EBITDA margin, free cash flow margin, or operating margin. The exact definition matters less than using the same one consistently every quarter. The point of the rule is to stop founders and investors from celebrating growth that is bought with unsustainable losses, or from praising profitability that comes at the cost of no growth at all. A healthy software company is allowed to trade one for the other, as long as the two numbers together clear the bar. In practice, sustaining a score above 40 year after year is the exception rather than the norm, which is exactly why it works as a filter."
+          ]
+        },
+        {
+          "id": "why-ai-margins-change-the-math",
+          "heading": "Why AI Margins Change the Math",
+          "level": 2,
+          "paragraphs": [
+            "Here is the AI-specific twist. Classic software companies serve a product that costs almost nothing to run for each additional customer, which is why their gross margins commonly land between 60 and 80 percent or higher. AI-native companies are different. Every model call has a real variable cost, and heavy products can spend meaningfully on inference, GPUs, third-party model APIs, and human review. When those costs are booked correctly as [inference inside cost of goods sold](/en/library/is-inference-cost-cogs-or-opex), gross margin falls.",
+            "Andreessen Horowitz documented this pattern in its widely cited 2020 essay, The New Business of AI, reporting that the AI companies it studied ran gross margins in the range of 50 to 60 percent, well below the 60 to 80 percent or higher typical of comparable software-as-a-service businesses. That gap is the whole story. A lower gross-margin ceiling means the profit half of the Rule of 40 has less room to work with, so [AI startup gross margins near 50 to 60 percent](/en/library/ai-startup-gross-margin-benchmark-2026) quietly raise the growth rate you need just to stay healthy."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "AI companies studied by Andreessen Horowitz posted gross margins of roughly 50 to 60 percent, versus the 60 to 80 percent or higher typical of comparable software-as-a-service businesses.",
+            "attribution": "Andreessen Horowitz, The New Business of AI (2020)"
+          }
+        },
+        {
+          "id": "the-growth-premium-ai-startups-pay",
+          "heading": "The Growth Premium AI Startups Pay",
+          "level": 2,
+          "paragraphs": [
+            "Work through a simple illustration. Imagine two companies that both want to post a 20 percent profit margin. The classic software company with an 80 percent gross margin has plenty of headroom to fund sales and marketing and still keep 20 percent of revenue, so to score 40 it needs to grow only about 20 percent. The AI company with a 50 percent gross margin has far less left after serving each customer, so reaching that same 20 percent profit margin is much harder. If its realistic margin is closer to breakeven or even a small loss, it may need to grow 40, 50, or more percent a year just to keep the combined score at 40.",
+            "This is why growth-stage discipline looks different for AI founders. The same Rule of 40 score demands a higher growth rate, which usually means more spend on go-to-market, which pressures the [burn multiple](/en/library/good-burn-multiple-ai-startup-2026) at the same time. The trade-off is real, and pretending AI economics mirror software economics is how founders end up surprised by their own numbers on a board slide."
+          ]
+        },
+        {
+          "id": "when-the-rule-of-40-does-not-apply-yet",
+          "heading": "When the Rule of 40 Does Not Apply Yet",
+          "level": 2,
+          "paragraphs": [
+            "One honest caveat. The Rule of 40 is built for companies that already have real, recurring revenue at some scale, usually from a Series A onward. A pre-revenue or very early seed-stage AI startup cannot meaningfully score itself against it, because a tiny revenue base makes growth rates look enormous and margins swing wildly on a single contract. At that stage the rule is a direction to grow into, not a test to pass.",
+            "Founders should still track both inputs early, though, because the habits that protect gross margin are far cheaper to build in from the first line of code than to retrofit once the cost base is locked. Honest COGS accounting and disciplined model spend are exactly those habits. Treat the Rule of 40 as the standard your unit economics should converge toward as revenue becomes real, and let it shape the product and pricing decisions you make long before you formally clear it."
+          ]
+        },
+        {
+          "id": "how-to-apply-the-rule-of-40-to-an-ai-startup",
+          "heading": "How to Apply the Rule of 40 to an AI Startup",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "Book honestly. Put inference, GPU, model API, and human-in-the-loop costs in cost of goods sold, so your gross margin reflects reality rather than a software-era assumption.",
+            "Pick one profit definition. Use EBITDA, operating, or free cash flow margin, and hold it constant across every board update so the number stays comparable.",
+            "Read growth and margin together. A score of 45 built on 60 percent growth and a 15 percent loss is a very different company than a 45 built on 20 percent growth and a 25 percent profit.",
+            "Watch the trend, not just the level. A score that rises as you scale matters far more than a single quarter that happens to clear 40.",
+            "Defend the margin on purpose. Model routing, caching, and prompt discipline can lift gross margin over time, and every point of margin you recover relaxes the growth you are forced to chase."
+          ]
+        },
+        {
+          "id": "where-a-venture-studio-fits",
+          "heading": "Where a Venture Studio Fits",
+          "level": 2,
+          "paragraphs": [
+            "The reason the Rule of 40 is worth internalizing early is that AI-native margin structure is a design decision, not just an accounting outcome. Which models you route to, how aggressively you cache, and whether you fine-tune a smaller model instead of paying for a frontier one on every request all move gross margin, and gross margin is what sets how hard you have to grow.",
+            "That is the trade-off Avante Ventures engineers from day zero. As a venture studio that co-founds AI-native companies for Brazil and LATAM, Avante builds cost discipline into the product before the first customer, so the margin side of the Rule of 40 starts stronger and the growth premium a founder has to pay is smaller. A studio that has already lived through inference bills and model-routing decisions across a portfolio brings that pattern to each new company rather than letting every founder rediscover it the hard way.",
+            "The rule still applies to AI startups, and it stays worth taking seriously. What has changed is the difficulty setting. Thinner AI gross margins mean the same score of 40 asks more of your growth engine, so the founders who win are the ones who treat margin as a product decision from the very start and make the math winnable before the numbers ever reach a board slide."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Does the Rule of 40 apply to AI startups?",
+          "a": "Yes. The Rule of 40 applies to AI startups the same way it applies to any software business. It just tends to be harder to clear, because AI gross margins are structurally lower than classic software margins, which means growth has to carry more of the combined score."
+        },
+        {
+          "q": "How is the Rule of 40 calculated?",
+          "a": "Add your year-over-year revenue growth rate to your profit margin, each expressed as a percentage. If the two together reach 40 or more, you pass. The profit margin can be EBITDA, operating, or free cash flow margin, as long as you use the same definition consistently."
+        },
+        {
+          "q": "Why do AI startups have lower gross margins than SaaS?",
+          "a": "Because serving each customer costs real money. Inference, GPUs, third-party model APIs, and human review are variable costs that belong in cost of goods sold. Andreessen Horowitz reported AI gross margins around 50 to 60 percent versus 60 to 80 percent or higher for comparable SaaS, and that gap is what pushes the growth requirement up."
+        },
+        {
+          "q": "What is a good Rule of 40 score for an AI startup?",
+          "a": "The bar is the same 40, but the path there is different. Because margins start lower, an AI company usually needs a higher growth rate to reach 40 than a SaaS company would. Track the trend as you scale, and defend gross margin actively so the growth you need stays realistic."
+        }
+      ]
+    },
+    "pt": {
+      "title": "A Regra de 40 Ainda Se Aplica a Startups de IA, mas a Conta Muda",
+      "description": "A Regra de 40 ainda se aplica a startups de IA, mas margens brutas mais estreitas significam que você precisa crescer mais rápido para alcançar a mesma pontuação de 40.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Sim, a Regra de 40 ainda se aplica a startups de IA, mas a barra é mais difícil de superar. A métrica em si não muda. O que muda é o lado do lucro da equação, porque os custos de inferência e computação ficam dentro da margem bruta e a puxam para baixo. Isso força os fundadores nativos de IA a se apoiarem mais no crescimento para alcançar a mesma pontuação combinada de 40."
+          ]
+        },
+        {
+          "id": "a-regra-de-40-se-aplica-a-startups-de-ia",
+          "heading": "A Regra de 40 Se Aplica a Startups de IA?",
+          "level": 2,
+          "paragraphs": [
+            "Sim. A Regra de 40 se aplica a startups de IA da mesma forma que se aplica a qualquer negócio de software, e continua sendo um atalho útil para equilibrar crescimento e lucratividade. A regra diz que a taxa de crescimento de receita de uma empresa mais sua margem de lucro devem somar pelo menos 40. Uma empresa que cresce 60 por cento ao ano enquanto opera com um prejuízo de 20 por cento ainda marca 40, e o mesmo vale para uma empresa que cresce 20 por cento com uma margem de lucro de 20 por cento. A razão pela qual isso importa mais para empresas de IA é que suas margens brutas tendem a ser estruturalmente mais baixas do que o software como serviço clássico, então a metade do lucro da equação parte de uma posição mais fraca e o crescimento precisa compensar a diferença."
+          ]
+        },
+        {
+          "id": "o-que-a-regra-de-40-realmente-mede",
+          "heading": "O Que a Regra de 40 Realmente Mede",
+          "level": 2,
+          "paragraphs": [
+            "A Regra de 40 é um teste de equilíbrio, não uma meta de crescimento nem uma meta de lucro isoladamente. Ela se tornou uma verificação de saúde padrão para negócios de software por volta da metade da década passada, depois que o investidor Brad Feld escreveu sobre ela, e empresas que estudam companhias de software, incluindo a McKinsey e a Bessemer Venture Partners, a usam desde então. A fórmula é simples. Pegue sua taxa de crescimento de receita ano a ano como porcentagem, some sua margem de lucro como porcentagem e verifique se o total chega a 40.",
+            "O lado do lucro pode ser medido de algumas maneiras. Escolhas comuns são a margem EBITDA, a margem de fluxo de caixa livre ou a margem operacional. A definição exata importa menos do que usar a mesma de forma consistente todo trimestre. O objetivo da regra é impedir que fundadores e investidores comemorem um crescimento comprado com prejuízos insustentáveis, ou que elogiem uma lucratividade que vem ao custo de nenhum crescimento. Uma empresa de software saudável tem permissão para trocar um pelo outro, desde que os dois números juntos superem a barra. Na prática, sustentar uma pontuação acima de 40 ano após ano é a exceção, não a norma, que é exatamente por que ela funciona como um filtro."
+          ]
+        },
+        {
+          "id": "por-que-as-margens-de-ia-mudam-a-conta",
+          "heading": "Por Que as Margens de IA Mudam a Conta",
+          "level": 2,
+          "paragraphs": [
+            "Aqui está a peculiaridade específica da IA. As empresas de software clássicas oferecem um produto que custa quase nada para operar a cada cliente adicional, e é por isso que suas margens brutas costumam ficar entre 60 e 80 por cento ou mais. As empresas nativas de IA são diferentes. Cada chamada de modelo tem um custo variável real, e produtos pesados podem gastar de forma significativa com inferência, GPUs, APIs de modelos de terceiros e revisão humana. Quando esses custos são contabilizados corretamente como [inferência dentro do custo dos produtos vendidos](/pt/library/is-inference-cost-cogs-or-opex), a margem bruta cai.",
+            "A Andreessen Horowitz documentou esse padrão em seu ensaio de 2020 amplamente citado, The New Business of AI, relatando que as empresas de IA que estudou operavam com margens brutas na faixa de 50 a 60 por cento, bem abaixo dos 60 a 80 por cento ou mais típicos de negócios comparáveis de software como serviço. Essa diferença é a história toda. Um teto de margem bruta mais baixo significa que a metade do lucro da Regra de 40 tem menos espaço para trabalhar, então [margens brutas de startups de IA perto de 50 a 60 por cento](/pt/library/ai-startup-gross-margin-benchmark-2026) elevam silenciosamente a taxa de crescimento de que você precisa apenas para se manter saudável."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "As empresas de IA estudadas pela Andreessen Horowitz apresentaram margens brutas de cerca de 50 a 60 por cento, ante os 60 a 80 por cento ou mais típicos de negócios comparáveis de software como serviço.",
+            "attribution": "Andreessen Horowitz, The New Business of AI (2020)"
+          }
+        },
+        {
+          "id": "o-premio-de-crescimento-que-startups-de-ia-pagam",
+          "heading": "O Prêmio de Crescimento Que Startups de IA Pagam",
+          "level": 2,
+          "paragraphs": [
+            "Vamos trabalhar com uma ilustração simples. Imagine duas empresas que ambas querem registrar uma margem de lucro de 20 por cento. A empresa de software clássica com uma margem bruta de 80 por cento tem bastante folga para financiar vendas e marketing e ainda manter 20 por cento da receita, então, para marcar 40, ela precisa crescer apenas cerca de 20 por cento. A empresa de IA com uma margem bruta de 50 por cento tem muito menos sobrando depois de atender cada cliente, então alcançar essa mesma margem de lucro de 20 por cento é muito mais difícil. Se sua margem realista está mais perto do ponto de equilíbrio ou até de um pequeno prejuízo, ela pode precisar crescer 40, 50 ou mais por cento ao ano apenas para manter a pontuação combinada em 40.",
+            "É por isso que a disciplina em estágio de crescimento é diferente para fundadores de IA. A mesma pontuação da Regra de 40 exige uma taxa de crescimento mais alta, o que geralmente significa mais gastos com ida ao mercado, o que pressiona o [múltiplo de queima](/pt/library/good-burn-multiple-ai-startup-2026) ao mesmo tempo. O trade-off é real, e fingir que a economia da IA espelha a economia do software é como os fundadores acabam surpreendidos pelos próprios números em um slide de conselho."
+          ]
+        },
+        {
+          "id": "quando-a-regra-de-40-ainda-nao-se-aplica",
+          "heading": "Quando a Regra de 40 Ainda Não Se Aplica",
+          "level": 2,
+          "paragraphs": [
+            "Uma ressalva honesta. A Regra de 40 foi feita para empresas que já têm receita real e recorrente em alguma escala, geralmente a partir de uma Série A. Uma startup de IA pré-receita ou em estágio seed muito inicial não consegue se avaliar de forma significativa contra ela, porque uma base de receita minúscula faz as taxas de crescimento parecerem enormes e as margens oscilarem descontroladamente com um único contrato. Nesse estágio, a regra é uma direção para a qual crescer, não um teste a passar.",
+            "Ainda assim, os fundadores devem acompanhar os dois insumos desde cedo, porque os hábitos que protegem a margem bruta são muito mais baratos de construir desde a primeira linha de código do que de readaptar depois que a base de custos está travada. Contabilidade honesta de custo dos produtos vendidos e gasto disciplinado com modelos são exatamente esses hábitos. Trate a Regra de 40 como o padrão para o qual sua economia unitária deve convergir à medida que a receita se torna real, e deixe que ela molde as decisões de produto e preço que você toma muito antes de superá-la formalmente."
+          ]
+        },
+        {
+          "id": "como-aplicar-a-regra-de-40-a-uma-startup-de-ia",
+          "heading": "Como Aplicar a Regra de 40 a uma Startup de IA",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "Contabilize com honestidade. Coloque os custos de inferência, GPU, API de modelos e humano no circuito no custo dos produtos vendidos, para que sua margem bruta reflita a realidade em vez de uma suposição da era do software.",
+            "Escolha uma definição de lucro. Use a margem EBITDA, operacional ou de fluxo de caixa livre, e mantenha-a constante em cada atualização ao conselho para que o número permaneça comparável.",
+            "Leia crescimento e margem juntos. Uma pontuação de 45 construída sobre 60 por cento de crescimento e 15 por cento de prejuízo é uma empresa muito diferente de uma pontuação de 45 construída sobre 20 por cento de crescimento e 25 por cento de lucro.",
+            "Observe a tendência, não apenas o nível. Uma pontuação que sobe à medida que você escala importa muito mais do que um único trimestre que por acaso supera 40.",
+            "Defenda a margem de propósito. Roteamento de modelos, cache e disciplina de prompt podem elevar a margem bruta ao longo do tempo, e cada ponto de margem que você recupera alivia o crescimento que você é forçado a perseguir."
+          ]
+        },
+        {
+          "id": "onde-entra-um-venture-studio",
+          "heading": "Onde Entra um Venture Studio",
+          "level": 2,
+          "paragraphs": [
+            "A razão pela qual vale a pena internalizar a Regra de 40 desde cedo é que a estrutura de margem nativa de IA é uma decisão de design, não apenas um resultado contábil. Para quais modelos você roteia, com que agressividade você faz cache e se você faz fine-tuning de um modelo menor em vez de pagar por um de fronteira a cada requisição, tudo isso move a margem bruta, e a margem bruta é o que define o quão difícil você precisa crescer.",
+            "Esse é o trade-off que a Avante Ventures projeta desde o dia zero. Como um venture studio que cofunda empresas nativas de IA para o Brasil e a América Latina, a Avante constrói disciplina de custo no produto antes do primeiro cliente, para que o lado da margem da Regra de 40 comece mais forte e o prêmio de crescimento que um fundador precisa pagar seja menor. Um estúdio que já viveu contas de inferência e decisões de roteamento de modelos em um portfólio traz esse padrão para cada nova empresa, em vez de deixar cada fundador redescobri-lo do jeito difícil.",
+            "A regra ainda se aplica a startups de IA, e continua valendo a pena levá-la a sério. O que mudou é o nível de dificuldade. Margens brutas mais estreitas de IA significam que a mesma pontuação de 40 exige mais do seu motor de crescimento, então os fundadores que vencem são os que tratam a margem como uma decisão de produto desde o início e tornam a conta vencível antes que os números cheguem a um slide de conselho."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "A Regra de 40 se aplica a startups de IA?",
+          "a": "Sim. A Regra de 40 se aplica a startups de IA da mesma forma que se aplica a qualquer negócio de software. Ela apenas tende a ser mais difícil de superar, porque as margens brutas de IA são estruturalmente mais baixas do que as margens de software clássico, o que significa que o crescimento precisa carregar mais da pontuação combinada."
+        },
+        {
+          "q": "Como a Regra de 40 é calculada?",
+          "a": "Some sua taxa de crescimento de receita ano a ano à sua margem de lucro, cada uma expressa como porcentagem. Se as duas juntas chegarem a 40 ou mais, você passa. A margem de lucro pode ser EBITDA, operacional ou de fluxo de caixa livre, desde que você use a mesma definição de forma consistente."
+        },
+        {
+          "q": "Por que startups de IA têm margens brutas mais baixas do que SaaS?",
+          "a": "Porque atender cada cliente custa dinheiro de verdade. Inferência, GPUs, APIs de modelos de terceiros e revisão humana são custos variáveis que pertencem ao custo dos produtos vendidos. A Andreessen Horowitz relatou margens brutas de IA em torno de 50 a 60 por cento ante 60 a 80 por cento ou mais para SaaS comparável, e essa diferença é o que empurra a exigência de crescimento para cima."
+        },
+        {
+          "q": "Qual é uma boa pontuação da Regra de 40 para uma startup de IA?",
+          "a": "A barra é a mesma, 40, mas o caminho até lá é diferente. Como as margens começam mais baixas, uma empresa de IA geralmente precisa de uma taxa de crescimento mais alta para chegar a 40 do que uma empresa de SaaS precisaria. Acompanhe a tendência à medida que você escala e defenda a margem bruta ativamente para que o crescimento de que você precisa permaneça realista."
+        }
+      ]
+    },
+    "ogImage": "/og/rule-of-40-for-ai-startups.png"
+  },
+  {
     "slug": "safe-vs-priced-round-for-ai-startups",
     "category": "insights",
     "type": "Comparison",
@@ -17579,6 +18833,219 @@ const engineArticles: Article[] = [
     "ogImage": "/og/ship-ai-regulated-latam-vertical-playbook.png"
   },
   {
+    "slug": "startup-option-pool-size-benchmark",
+    "category": "insights",
+    "type": "Guide",
+    "readTime": "7 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-20",
+    "isPublished": true,
+    "en": {
+      "title": "A Seed Stage Option Pool Runs About 10 to 15 Percent",
+      "description": "A seed option pool usually runs 10 to 15 percent of equity, with Carta data near 12 to 13 percent. How to size it and dodge the option-pool shuffle.",
+      "sections": [
+        {
+          "paragraphs": [
+            "A seed-stage startup option pool usually runs about 10 to 15 percent of fully diluted equity. Carta's cap-table data puts the typical figure near 12 to 13 percent, and Index Ventures, drawing on more than 20,000 option grants from over 1,650 startups across the US and Europe, benchmarks grants in the same broad band. Size the pool to the specific hires you need before your next round rather than to a round-number default, because every unused point is dilution you gave away early."
+          ]
+        },
+        {
+          "id": "how-big-should-a-startup-option-pool-be-at-seed",
+          "heading": "How Big Should a Startup Option Pool Be at Seed?",
+          "level": 2,
+          "paragraphs": [
+            "A seed-stage option pool usually runs about 10 to 15 percent of fully diluted equity, and that band holds across most first priced rounds. Carta's cap-table data puts the typical seed pool in the low teens, near 12 to 13 percent, and Index Ventures benchmarks grants from a large seed dataset in the same broad range. The right number for your company is not the median. It is whatever covers the specific hires you plan to make before your next round, because every point you reserve and never use is dilution you handed over early."
+          ]
+        },
+        {
+          "id": "what-the-option-pool-actually-pays-for",
+          "heading": "What the option pool actually pays for",
+          "level": 3,
+          "paragraphs": [
+            "The employee option pool is a block of equity set aside for future hires: engineers, early operators, and the first executives who join after the founders. It is not investor equity and it is not founder equity. It is a reserve carved out of the cap table so the company can pay talent in ownership when cash is tight, which for a seed-stage startup is always. Most of that pool goes to the engineers you hire early, which is why [finding a technical co-founder](/en/library/how-to-find-a-technical-cofounder-for-an-ai-startup) and sizing the pool are really the same planning exercise.",
+            "The pool matters most in the exact moment founders tend to overlook it. When you raise a priced round, investors almost always require the pool to be sized or topped up before their money goes in. That timing is where the ownership math turns expensive."
+          ]
+        },
+        {
+          "id": "the-benchmarks-and-what-they-do-and-do-not-say",
+          "heading": "The benchmarks, and what they do and do not say",
+          "level": 3,
+          "paragraphs": [
+            "Two reference points are worth knowing before you pick a number, and both are widely cited for good reason.",
+            "Index Ventures publishes OptionPlan, a seed equity calculator that early-stage founders use to size individual grants. It is built on a large grant dataset, but it is a calculator for sizing grants, not a published table of stage-level pool medians. Treat it as a tool for pressure-testing offers rather than as a benchmark of what pool percentage to reserve.",
+            "Carta, the cap-table platform used by tens of thousands of startups, reports equity data drawn from its own customer base. Its figures have put the typical seed pool in the low teens, near 12 to 13 percent. Read that as a center of gravity, not a target. Two companies with identical raises can justify very different pools depending on how many senior hires sit in the next twelve months."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Index Ventures built its OptionPlan seed tool on more than 20,000 option grants from over 1,650 startups across the US and Europe.",
+            "attribution": "Index Ventures, OptionPlan"
+          }
+        },
+        {
+          "id": "the-option-pool-shuffle-where-hidden-dilution-lives",
+          "heading": "The option-pool shuffle, where hidden dilution lives",
+          "level": 3,
+          "paragraphs": [
+            "Here is the mechanic that surprises most first-time founders. In a priced seed round, the new option pool is almost always created out of the pre-money valuation, which means it dilutes the founders and existing shareholders, not the incoming investor. Investors call this the option-pool shuffle, and it is standard practice rather than a trick.",
+            "The effect is that a pool you agreed to as a headline percentage lands entirely on your side of the table. A 15 percent pool created pre-money can cost founders several points of ownership beyond the investor's stake in that single round. That is why pool size is a negotiation and not a formality. Whether the pool is calculated pre-money or post-money changes who pays for it, and that clause deserves as much attention as the valuation itself.",
+            "Every unused point makes it worse over time. Options you reserve and do not grant stay in the pool, get carried into the next round, and dilute you again when investors require a top-up. An oversized pool is not a safety margin. It is dilution you pay for twice."
+          ]
+        },
+        {
+          "id": "safes-delay-the-pool-they-do-not-remove-it",
+          "heading": "SAFEs delay the pool, they do not remove it",
+          "level": 3,
+          "paragraphs": [
+            "If you raise on a [SAFE instead of a priced round](/en/library/safe-vs-priced-round-for-ai-startups), you may not create a formal pool on day one. That can feel like avoiding the problem. It only defers it. When the SAFE converts at your first priced round, the pool question arrives with it, usually on the same pre-money terms that push the cost onto founders. Planning the pool early, even while you are still raising on SAFEs, means you negotiate from a hiring plan instead of accepting a round number under time pressure."
+          ]
+        },
+        {
+          "id": "how-to-size-the-pool-from-the-bottom-up",
+          "heading": "How to size the pool from the bottom up",
+          "level": 3,
+          "paragraphs": [
+            "The defensible way to set a pool is to build it from a hiring plan, not from a benchmark.",
+            "List the roles you will hire before the next raise. Assign a rough equity grant to each based on seniority, using a public calculator like Index Ventures OptionPlan to sanity-check individual grants. Add them up, then add a modest buffer for hires you cannot yet name. The total is your pool. If that bottom-up number comes in at 9 percent, do not pad it to 15 to match a benchmark, because the padding is pure dilution. If it comes in at 17 percent because you are hiring a full senior team, defend the larger number with the plan behind it.",
+            "The benchmark exists to tell you when your number is unusual enough to double-check. It does not exist to set your number for you. A pool sized to reality is also easier to defend in a term-sheet negotiation, because you can point to named roles instead of a vague reserve."
+          ]
+        },
+        {
+          "id": "how-avante-handles-this-for-its-ventures",
+          "heading": "How Avante handles this for its ventures",
+          "level": 3,
+          "paragraphs": [
+            "Avante co-founds AI-native companies for Brazil and LATAM, and cap-table design is decided once and reused across the portfolio rather than renegotiated venture by venture. Each company launches with a pre-built structure: founder vesting over four years with a one-year cliff, a pool sized to the actual first-year hiring plan, and pool timing negotiated up front so the option-pool shuffle does not quietly transfer founder ownership at the first priced round. It is the same discipline that governs [how much equity a venture studio takes](/en/library/how-much-equity-do-venture-studios-take) in the first place. The point is not a magic percentage. It is that founders spend their first ninety days on customers and hires instead of relearning cap-table mechanics the hard way."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How big should a seed-stage option pool be?",
+          "a": "Most seed pools run about 10 to 15 percent of fully diluted equity, and Carta's cap-table data puts the typical figure near 12 to 13 percent. The better approach is to size the pool to the hires you plan to make before your next round rather than defaulting to a benchmark number."
+        },
+        {
+          "q": "Does the option pool dilute founders or investors?",
+          "a": "In a priced round the new pool is almost always created out of the pre-money valuation, so it dilutes founders and existing shareholders rather than the incoming investor. This is called the option-pool shuffle, and it is standard practice, which is why pool size is worth negotiating."
+        },
+        {
+          "q": "What is the option-pool shuffle?",
+          "a": "It is the common practice of creating or topping up the employee option pool before an investor's money goes in, out of the pre-money valuation. The result is that the pool comes entirely from the founders' and existing shareholders' ownership, not the new investor's stake."
+        },
+        {
+          "q": "How should I decide the exact pool percentage?",
+          "a": "Build it from the bottom up. List the roles you will hire before the next raise, assign each a rough equity grant by seniority, add a small buffer, and total it. A tool like Index Ventures OptionPlan helps sanity-check individual grants. Use the 10 to 15 percent benchmark only to check whether your number is unusual."
+        },
+        {
+          "q": "Do unused options just disappear?",
+          "a": "No. Unused options stay in the pool and are carried into the next round, where investors typically require the pool to be topped back up. Because that top-up usually comes from the pre-money valuation again, an oversized pool dilutes founders more than once."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Um pool de opções no estágio seed fica entre 10 e 15 por cento",
+      "description": "Um pool de opções no seed costuma ficar entre 10 e 15 por cento do capital, com dados da Carta perto de 12 a 13 por cento. Como dimensioná-lo e evitar o option-pool shuffle.",
+      "sections": [
+        {
+          "paragraphs": [
+            "O pool de opções de uma startup no estágio seed costuma ficar em torno de 10 a 15 por cento do capital totalmente diluído. Os dados de cap table da Carta colocam o número típico perto de 12 a 13 por cento, e a Index Ventures, com base em mais de 20.000 concessões de opções de mais de 1.650 startups nos Estados Unidos e na Europa, referencia as concessões na mesma faixa ampla. Dimensione o pool para as contratações específicas que você precisa fazer antes da próxima rodada, em vez de recorrer a um número redondo padrão, porque cada ponto não utilizado é diluição que você entregou cedo demais."
+          ]
+        },
+        {
+          "id": "qual-deve-ser-o-tamanho-do-pool-de-opcoes-de-uma-startup-no-seed",
+          "heading": "Qual deve ser o tamanho do pool de opções de uma startup no seed?",
+          "level": 2,
+          "paragraphs": [
+            "Um pool de opções no estágio seed costuma ficar em torno de 10 a 15 por cento do capital totalmente diluído, e essa faixa se mantém na maioria das primeiras rodadas precificadas. Os dados de cap table da Carta colocam o pool típico de seed na casa baixa dos dez por cento, perto de 12 a 13 por cento, e a Index Ventures referencia concessões de um grande conjunto de dados de seed na mesma faixa ampla. O número certo para a sua empresa não é a mediana. É aquele que cobre as contratações específicas que você planeja fazer antes da próxima rodada, porque cada ponto que você reserva e nunca usa é diluição que você entregou cedo."
+          ]
+        },
+        {
+          "id": "para-o-que-o-pool-de-opcoes-realmente-serve",
+          "heading": "Para o que o pool de opções realmente serve",
+          "level": 3,
+          "paragraphs": [
+            "O pool de opções para funcionários é um bloco de capital reservado para contratações futuras: engenheiros, operadores iniciais e os primeiros executivos que entram depois dos fundadores. Não é capital dos investidores nem capital dos fundadores. É uma reserva separada do cap table para que a empresa possa pagar talentos em participação quando o caixa está apertado, o que, para uma startup no estágio seed, é sempre. A maior parte desse pool vai para os engenheiros que você contrata cedo, e é por isso que [encontrar um cofundador técnico](/pt/library/how-to-find-a-technical-cofounder-for-an-ai-startup) e dimensionar o pool são, na prática, o mesmo exercício de planejamento.",
+            "O pool importa mais exatamente no momento que os fundadores tendem a ignorar. Quando você levanta uma rodada precificada, os investidores quase sempre exigem que o pool seja dimensionado ou reforçado antes de o dinheiro deles entrar. É nesse momento que a matemática da participação fica cara."
+          ]
+        },
+        {
+          "id": "os-benchmarks-e-o-que-eles-dizem-e-nao-dizem",
+          "heading": "Os benchmarks, e o que eles dizem e não dizem",
+          "level": 3,
+          "paragraphs": [
+            "Vale conhecer dois pontos de referência antes de escolher um número, e ambos são amplamente citados por bons motivos.",
+            "A Index Ventures publica o OptionPlan, uma calculadora de equity para seed que fundadores em estágio inicial usam para dimensionar concessões individuais. Ela é construída sobre um grande conjunto de dados de concessões, mas é uma calculadora para dimensionar concessões, não uma tabela publicada de medianas de pool por estágio. Trate-a como uma ferramenta para testar ofertas sob pressão, e não como um benchmark de qual percentual de pool reservar.",
+            "A Carta, a plataforma de cap table usada por dezenas de milhares de startups, divulga dados de equity extraídos de sua própria base de clientes. Seus números colocam o pool típico de seed na casa baixa dos dez por cento, perto de 12 a 13 por cento. Leia isso como um centro de gravidade, não como uma meta. Duas empresas com captações idênticas podem justificar pools bem diferentes dependendo de quantas contratações seniores estão previstas para os próximos doze meses."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "A Index Ventures construiu sua ferramenta OptionPlan para seed com base em mais de 20.000 concessões de opções de mais de 1.650 startups nos Estados Unidos e na Europa.",
+            "attribution": "Index Ventures, OptionPlan"
+          }
+        },
+        {
+          "id": "o-option-pool-shuffle-onde-mora-a-diluicao-oculta",
+          "heading": "O option-pool shuffle, onde mora a diluição oculta",
+          "level": 3,
+          "paragraphs": [
+            "Aqui está o mecanismo que surpreende a maioria dos fundadores de primeira viagem. Em uma rodada seed precificada, o novo pool de opções é quase sempre criado a partir do valuation pre-money, o que significa que ele dilui os fundadores e os acionistas existentes, não o investidor que está entrando. Os investidores chamam isso de option-pool shuffle, e é prática padrão, não um truque.",
+            "O efeito é que um pool que você aceitou como um percentual de manchete recai inteiramente sobre o seu lado da mesa. Um pool de 15 por cento criado pre-money pode custar aos fundadores vários pontos de participação além da fatia do investidor naquela única rodada. É por isso que o tamanho do pool é uma negociação, e não uma formalidade. Se o pool é calculado pre-money ou post-money muda quem paga por ele, e essa cláusula merece tanta atenção quanto o próprio valuation.",
+            "Cada ponto não utilizado piora a situação com o tempo. As opções que você reserva e não concede permanecem no pool, são levadas para a rodada seguinte e diluem você de novo quando os investidores exigem um reforço. Um pool superdimensionado não é uma margem de segurança. É diluição que você paga duas vezes."
+          ]
+        },
+        {
+          "id": "safes-adiam-o-pool-mas-nao-o-eliminam",
+          "heading": "SAFEs adiam o pool, mas não o eliminam",
+          "level": 3,
+          "paragraphs": [
+            "Se você capta com um [SAFE em vez de uma rodada precificada](/pt/library/safe-vs-priced-round-for-ai-startups), pode não criar um pool formal no primeiro dia. Isso pode parecer evitar o problema. Só o adia. Quando o SAFE converte na sua primeira rodada precificada, a questão do pool chega junto, normalmente nos mesmos termos pre-money que empurram o custo para os fundadores. Planejar o pool cedo, mesmo enquanto você ainda está captando com SAFEs, significa que você negocia a partir de um plano de contratações em vez de aceitar um número redondo sob pressão de tempo."
+          ]
+        },
+        {
+          "id": "como-dimensionar-o-pool-de-baixo-para-cima",
+          "heading": "Como dimensionar o pool de baixo para cima",
+          "level": 3,
+          "paragraphs": [
+            "A forma defensável de definir um pool é construí-lo a partir de um plano de contratações, não de um benchmark.",
+            "Liste as funções que você vai contratar antes da próxima captação. Atribua a cada uma uma concessão aproximada de equity com base na senioridade, usando uma calculadora pública como o OptionPlan da Index Ventures para conferir as concessões individuais. Some tudo e depois acrescente uma reserva modesta para contratações que você ainda não consegue nomear. O total é o seu pool. Se esse número de baixo para cima ficar em 9 por cento, não o infle para 15 só para bater com um benchmark, porque o excesso é pura diluição. Se ficar em 17 por cento porque você está contratando um time sênior completo, defenda o número maior com o plano por trás dele.",
+            "O benchmark existe para dizer quando o seu número é incomum o suficiente para você conferir duas vezes. Ele não existe para definir o seu número por você. Um pool dimensionado para a realidade também é mais fácil de defender em uma negociação de term sheet, porque você pode apontar funções nomeadas em vez de uma reserva vaga."
+          ]
+        },
+        {
+          "id": "como-a-avante-lida-com-isso-em-suas-ventures",
+          "heading": "Como a Avante lida com isso em suas ventures",
+          "level": 3,
+          "paragraphs": [
+            "A Avante co-funda empresas AI-native para o Brasil e a América Latina, e o desenho do cap table é decidido uma vez e reaproveitado em todo o portfólio, em vez de renegociado venture por venture. Cada empresa nasce com uma estrutura pré-construída: vesting dos fundadores ao longo de quatro anos com um cliff de um ano, um pool dimensionado para o plano real de contratações do primeiro ano e o momento do pool negociado logo de início para que o option-pool shuffle não transfira silenciosamente a participação dos fundadores na primeira rodada precificada. É a mesma disciplina que rege [quanto de equity um venture studio fica](/pt/library/how-much-equity-do-venture-studios-take) em primeiro lugar. O ponto não é um percentual mágico. É que os fundadores passam seus primeiros noventa dias com clientes e contratações em vez de reaprender a mecânica do cap table do jeito difícil."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Qual deve ser o tamanho de um pool de opções no estágio seed?",
+          "a": "A maioria dos pools de seed fica em torno de 10 a 15 por cento do capital totalmente diluído, e os dados de cap table da Carta colocam o número típico perto de 12 a 13 por cento. A melhor abordagem é dimensionar o pool para as contratações que você planeja fazer antes da próxima rodada, em vez de recorrer a um número de benchmark."
+        },
+        {
+          "q": "O pool de opções dilui os fundadores ou os investidores?",
+          "a": "Em uma rodada precificada, o novo pool é quase sempre criado a partir do valuation pre-money, então ele dilui os fundadores e os acionistas existentes, e não o investidor que está entrando. Isso é chamado de option-pool shuffle, e é prática padrão, e é por isso que vale a pena negociar o tamanho do pool."
+        },
+        {
+          "q": "O que é o option-pool shuffle?",
+          "a": "É a prática comum de criar ou reforçar o pool de opções para funcionários antes de o dinheiro do investidor entrar, a partir do valuation pre-money. O resultado é que o pool vem inteiramente da participação dos fundadores e dos acionistas existentes, não da fatia do novo investidor."
+        },
+        {
+          "q": "Como devo decidir o percentual exato do pool?",
+          "a": "Construa de baixo para cima. Liste as funções que você vai contratar antes da próxima captação, atribua a cada uma uma concessão aproximada de equity por senioridade, acrescente uma pequena reserva e some tudo. Uma ferramenta como o OptionPlan da Index Ventures ajuda a conferir as concessões individuais. Use o benchmark de 10 a 15 por cento apenas para checar se o seu número é incomum."
+        },
+        {
+          "q": "As opções não utilizadas simplesmente desaparecem?",
+          "a": "Não. As opções não utilizadas permanecem no pool e são levadas para a rodada seguinte, onde os investidores normalmente exigem que o pool seja reforçado novamente. Como esse reforço costuma vir do valuation pre-money mais uma vez, um pool superdimensionado dilui os fundadores mais de uma vez."
+        }
+      ]
+    },
+    "ogImage": "/og/startup-option-pool-size-benchmark.png"
+  },
+  {
     "slug": "studio-vs-accelerator-vs-vc",
     "category": "insights",
     "type": "Comparison",
@@ -18226,6 +19693,191 @@ const engineArticles: Article[] = [
         }
       ]
     }
+  },
+  {
+    "slug": "typical-safe-valuation-cap-pre-seed",
+    "category": "insights",
+    "type": "Guide",
+    "readTime": "8 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-20",
+    "isPublished": true,
+    "en": {
+      "title": "Typical Pre-Seed SAFE Valuation Caps Sit Near 10 Million Dollars and Higher for AI",
+      "description": "A typical pre-seed SAFE valuation cap sits near $10M, and runs higher for AI startups. Here is how to set yours with a post-money SAFE.",
+      "sections": [
+        {
+          "paragraphs": [
+            "A typical pre-seed SAFE valuation cap sits near $10 million, with most generalist rounds landing between roughly $8 million and $15 million depending on how much you raise. The instrument is almost always a post-money SAFE with a cap and no discount, which Carta's pre-seed data shows is now the default in the vast majority of deals. For AI and machine-learning startups the cap runs meaningfully higher, because investors price in a sector premium before there is any revenue to underwrite."
+          ]
+        },
+        {
+          "id": "what-is-a-typical-safe-valuation-cap-for-a-pre-seed-round",
+          "heading": "What is a typical SAFE valuation cap for a pre-seed round?",
+          "level": 2,
+          "paragraphs": [
+            "A typical pre-seed SAFE valuation cap in 2026 is about $10 million for a generalist software startup, rising toward roughly $15 million as the amount raised climbs toward $2.5 million, based on Carta's pre-seed data. The near-universal structure is a post-money SAFE with a valuation cap and no discount, which fixes the maximum company valuation at which your SAFE converts into equity in the next priced round. AI-native companies sit above that baseline, with caps that run higher because scarce technical talent and category demand push early prices up. The cap is a ceiling, not a valuation today. It sets the worst case for the investor and the dilution floor for you."
+          ]
+        },
+        {
+          "id": "what-a-valuation-cap-actually-does",
+          "heading": "What a valuation cap actually does",
+          "level": 2,
+          "paragraphs": [
+            "A SAFE, short for Simple Agreement for Future Equity, is not priced equity. You take the money now, and the investor gets the right to shares later, when a real priced round sets a per-share price. The valuation cap is the maximum company valuation used to calculate how many shares that early money buys. If you cap at $10 million and later raise a seed round at a $30 million pre-money valuation, the SAFE investor converts as if the company were worth $10 million, so they get roughly three times the ownership their dollars would otherwise have bought. That upside is the compensation for backing you first, before the idea was proven.",
+            "Since Y Combinator introduced the post-money SAFE in 2018, the post-money version has become the market standard. The word \"post-money\" matters. It means the cap is measured after all SAFEs convert, so you can calculate your exact dilution the moment you sign rather than discovering it later when everything converts at once. That clarity cuts both ways. It is cleaner math, but it also means every additional SAFE you raise dilutes you and not the earlier SAFE holders. Knowing [how much dilution per funding round](/en/library/how-much-dilution-per-funding-round) you are signing up for is the difference between a clean cap table and an unpleasant surprise at seed."
+          ]
+        },
+        {
+          "id": "the-numbers-where-pre-seed-caps-land",
+          "heading": "The numbers: where pre-seed caps land",
+          "level": 2,
+          "paragraphs": [
+            "Carta's pre-seed data, drawn from tens of thousands of convertible instruments, shows a clear pattern. The post-money SAFE with a cap and no discount is the standard pre-seed instrument, used in the vast majority of deals. Median caps sit near $10 million, running from roughly $8 million on the smallest generalist rounds up toward $15 million as the raise grows past $1 million. In other words, the more you raise, the higher the cap the market will bear, and the two move together in a fairly tight band.",
+            "A few practical notes. Caps are negotiated, not quoted from a table, so a strong founder with a warm lead investor can push above the median while a first-time founder raising cold often lands below it. Geography matters too. US coastal caps run richer than the global median, and LATAM pre-seed caps have historically sat lower, though that gap is compressing fast as more regional and cross-border capital chases AI deals."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Carta's pre-seed data shows the post-money SAFE with a valuation cap and no discount is the standard instrument, used in the vast majority of pre-seed rounds. Median caps sit near $10 million, running from roughly $8 million on the smallest rounds up toward $15 million as the raise approaches $2.5 million.",
+            "attribution": "Carta pre-seed SAFE data"
+          }
+        },
+        {
+          "id": "why-ai-startups-carry-a-higher-cap",
+          "heading": "Why AI startups carry a higher cap",
+          "level": 2,
+          "paragraphs": [
+            "The AI premium is real, and it shows up before the first dollar of revenue. Early-stage AI and machine-learning companies consistently raise at higher caps than generalist peers, and the gap is visible in the earliest rounds well before there is traction to underwrite. Treat the size of that premium as directional rather than precise, because sample sizes at pre-seed are small and the numbers move month to month.",
+            "The premium has a logic behind it. Technical founders who can ship a working model are scarce, the addressable markets are framed as enormous, and investors are afraid of missing the category. The risk for founders is symmetric. A cap that is too high feels like a win, but it raises the bar for your next round. If you price your pre-seed far above what a realistic seed round can clear, you are staring at a down round before you have found product-market fit. A cap you can grow into beats a vanity number every time."
+          ]
+        },
+        {
+          "id": "setting-the-cap-you-can-live-with",
+          "heading": "Setting the cap you can live with",
+          "level": 2,
+          "paragraphs": [
+            "Before you fixate on the number, decide on the instrument. Most AI founders default to a post-money SAFE because it is fast, cheap, and standard, but a [convertible note versus a SAFE](/en/library/convertible-note-vs-safe-ai-startups) is a real choice with different consequences for interest, maturity, and investor rights. Once the instrument is set, the cap becomes a negotiation between two forces. You want to raise enough to reach the milestones that unlock your seed, and you want the cap low enough that your seed valuation clears it comfortably. A rule of thumb many operators use is to set the cap so a realistic seed round lands at two to three times it. That protects everyone and signals discipline.",
+            "The other lever is total SAFE volume. Because post-money SAFEs stack, raising a string of them at different caps can quietly hand away far more of the company than a single priced round would. Model the fully diluted outcome before you sign the second and third SAFE, not after. Whether a SAFE or a [priced round](/en/library/safe-vs-priced-round-for-ai-startups) is the right structure at all depends on how much you are raising and how many investors are involved."
+          ]
+        },
+        {
+          "id": "what-this-means-for-latam-founders",
+          "heading": "What this means for LATAM founders",
+          "level": 2,
+          "paragraphs": [
+            "In the US, SAFE norms are common knowledge, passed down through accelerators and a dense investor network. In Brazil and across LATAM, the post-money SAFE is newer and less understood, which means regional founders often accept caps set entirely by the investor or, worse, sign convertible structures they have not modeled. That information gap is expensive, and it compounds at every later round.",
+            "This is the exact moment Avante works inside. As a venture studio that co-founds AI-native companies for Brazil and LATAM, Avante sits with founders from day zero, bringing capital and hands-on building rather than advice from the sidelines. Part of that work is setting a first-ticket cap table that reflects the AI premium honestly without over-pricing the next round, structuring the SAFE so the math is clean at seed, and translating US market norms into terms that hold up with regional and cross-border investors. A cap is a small number on a one-page document. It shapes who owns the company for years. Getting it right at pre-seed is one of the highest-leverage decisions an AI founder makes, and it is far easier to get right alongside a co-founder who has priced it before."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is a typical SAFE valuation cap for a pre-seed round?",
+          "a": "A typical pre-seed SAFE valuation cap is about $10 million for a generalist startup, running from roughly $8 million on the smallest rounds up toward $15 million as the raise approaches $2.5 million, based on Carta's pre-seed data. The standard instrument is a post-money SAFE with a cap and no discount. AI and machine-learning startups usually carry higher caps, reflecting a sector premium that investors price in before there is revenue."
+        },
+        {
+          "q": "Is a valuation cap the same as a valuation?",
+          "a": "No. A cap is the maximum valuation used to convert your SAFE into equity later, not a priced valuation today. If your next round prices above the cap, early investors convert at the lower capped price and get more ownership. If it prices below the cap, they usually convert at that lower actual price instead."
+        },
+        {
+          "q": "Should AI startups set a higher SAFE cap?",
+          "a": "Often yes, because the market supports it and AI pre-seed caps run higher than generalist rounds. But a higher cap raises the bar for your seed round. Aim for a cap your realistic seed valuation can clear at two to three times, so you avoid a down round before product-market fit."
+        },
+        {
+          "q": "Post-money or pre-money SAFE for a pre-seed round?",
+          "a": "The post-money SAFE, released by Y Combinator in September 2018, is now the standard and the version Carta sees in the majority of pre-seed deals. It lets you calculate exact dilution the moment you sign. The trade-off is that each new SAFE dilutes you rather than earlier SAFE holders, so model your total SAFE volume before stacking them."
+        }
+      ]
+    },
+    "pt": {
+      "title": "O teto de avaliacao de um SAFE pre-seed costuma ficar perto de 10 milhoes de dolares, e mais alto para IA",
+      "description": "O teto de avaliação típico de um SAFE pré-seed fica perto de US$ 10 milhões, e sobe para startups de IA. Veja como definir o seu com um SAFE post-money.",
+      "sections": [
+        {
+          "paragraphs": [
+            "O teto de avaliação típico de um SAFE pré-seed fica perto de US$ 10 milhões, com a maioria das rodadas generalistas ficando entre cerca de US$ 8 milhões e US$ 15 milhões, dependendo de quanto você capta. O instrumento é quase sempre um SAFE post-money com teto e sem desconto, que os dados de pré-seed da Carta mostram ser hoje o padrão na grande maioria dos negócios. Para startups de IA e de machine learning, o teto sobe de forma relevante, porque os investidores precificam um prêmio de setor antes de existir qualquer receita para sustentar a análise."
+          ]
+        },
+        {
+          "id": "qual-e-o-teto-de-avaliacao-tipico-de-um-safe-para-uma-rodada-pre-seed",
+          "heading": "Qual é o teto de avaliação típico de um SAFE para uma rodada pré-seed?",
+          "level": 2,
+          "paragraphs": [
+            "Um teto de avaliação típico de SAFE pré-seed em 2026 fica em torno de US$ 10 milhões para uma startup de software generalista, subindo para cerca de US$ 15 milhões à medida que o valor captado se aproxima de US$ 2,5 milhões, com base nos dados de pré-seed da Carta. A estrutura quase universal é um SAFE post-money com teto de avaliação e sem desconto, que fixa a avaliação máxima da empresa na qual o seu SAFE converte em participação na próxima rodada precificada. Empresas AI-native ficam acima dessa base, com tetos mais altos porque o talento técnico escasso e a demanda pela categoria empurram os preços iniciais para cima. O teto é um limite máximo, não uma avaliação de hoje. Ele define o pior cenário para o investidor e o piso de diluição para você."
+          ]
+        },
+        {
+          "id": "o-que-um-teto-de-avaliacao-realmente-faz",
+          "heading": "O que um teto de avaliação realmente faz",
+          "level": 2,
+          "paragraphs": [
+            "Um SAFE, sigla em inglês para Simple Agreement for Future Equity, ou Acordo Simples para Participação Futura, não é participação precificada. Você recebe o dinheiro agora, e o investidor ganha o direito a ações depois, quando uma rodada precificada de verdade define um preço por ação. O teto de avaliação é a avaliação máxima da empresa usada para calcular quantas ações aquele dinheiro inicial compra. Se você define um teto de US$ 10 milhões e depois capta uma rodada seed com avaliação pré-money de US$ 30 milhões, o investidor do SAFE converte como se a empresa valesse US$ 10 milhões, então ele fica com cerca de três vezes a participação que seus dólares teriam comprado de outra forma. Esse ganho é a compensação por apostar em você primeiro, antes de a ideia estar comprovada.",
+            "Desde que a Y Combinator introduziu o SAFE post-money em 2018, a versão post-money virou o padrão de mercado. A palavra \"post-money\" importa. Ela significa que o teto é medido depois que todos os SAFEs convertem, de modo que você consegue calcular a sua diluição exata no momento em que assina, em vez de descobri-la mais tarde, quando tudo converte de uma vez. Essa clareza corta dos dois lados. A conta fica mais limpa, mas também significa que cada SAFE adicional que você capta dilui você, e não os detentores de SAFE anteriores. Saber [quanta diluição por rodada de captação](/pt/library/how-much-dilution-per-funding-round) você está aceitando é a diferença entre um cap table limpo e uma surpresa desagradável no seed."
+          ]
+        },
+        {
+          "id": "os-numeros-onde-ficam-os-tetos-de-pre-seed",
+          "heading": "Os números: onde ficam os tetos de pré-seed",
+          "level": 2,
+          "paragraphs": [
+            "Os dados de pré-seed da Carta, extraídos de dezenas de milhares de instrumentos conversíveis, mostram um padrão claro. O SAFE post-money com teto e sem desconto é o instrumento padrão de pré-seed, usado na grande maioria dos negócios. Os tetos medianos ficam perto de US$ 10 milhões, indo de cerca de US$ 8 milhões nas menores rodadas generalistas até cerca de US$ 15 milhões à medida que a captação cresce acima de US$ 1 milhão. Em outras palavras, quanto mais você capta, maior o teto que o mercado aceita, e os dois se movem juntos em uma faixa bastante estreita.",
+            "Algumas observações práticas. Os tetos são negociados, não retirados de uma tabela, então um fundador forte com um investidor líder receptivo consegue ir acima da mediana, enquanto um fundador de primeira viagem captando a frio muitas vezes fica abaixo dela. A geografia também importa. Os tetos das costas dos Estados Unidos são mais generosos que a mediana global, e os tetos de pré-seed da América Latina historicamente ficaram mais baixos, embora essa diferença esteja se comprimindo rápido à medida que mais capital regional e transfronteiriço persegue negócios de IA."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Os dados de pré-seed da Carta mostram que o SAFE post-money com teto de avaliação e sem desconto é o instrumento padrão, usado na grande maioria das rodadas pré-seed. Os tetos medianos ficam perto de US$ 10 milhões, indo de cerca de US$ 8 milhões nas rodadas menores até cerca de US$ 15 milhões à medida que a captação se aproxima de US$ 2,5 milhões.",
+            "attribution": "Carta pre-seed SAFE data"
+          }
+        },
+        {
+          "id": "por-que-startups-de-ia-carregam-um-teto-mais-alto",
+          "heading": "Por que startups de IA carregam um teto mais alto",
+          "level": 2,
+          "paragraphs": [
+            "O prêmio de IA é real, e aparece antes do primeiro dólar de receita. Empresas de IA e de machine learning em estágio inicial captam de forma consistente com tetos mais altos que os pares generalistas, e essa diferença é visível já nas primeiras rodadas, bem antes de existir tração para sustentar a análise. Trate o tamanho desse prêmio como uma direção, e não como um número preciso, porque as amostras no pré-seed são pequenas e os valores mudam de mês para mês.",
+            "O prêmio tem uma lógica por trás. Fundadores técnicos capazes de entregar um modelo funcional são escassos, os mercados endereçáveis são enquadrados como enormes, e os investidores têm medo de perder a categoria. O risco para os fundadores é simétrico. Um teto alto demais parece uma vitória, mas eleva a barra para a sua próxima rodada. Se você precificar seu pré-seed muito acima do que uma rodada seed realista consegue atingir, você fica diante de uma rodada de baixa antes mesmo de encontrar o encaixe entre produto e mercado. Um teto no qual você consegue crescer vence um número de vaidade toda vez."
+          ]
+        },
+        {
+          "id": "definindo-o-teto-com-o-qual-voce-consegue-conviver",
+          "heading": "Definindo o teto com o qual você consegue conviver",
+          "level": 2,
+          "paragraphs": [
+            "Antes de fixar-se no número, decida o instrumento. A maioria dos fundadores de IA opta por um SAFE post-money porque é rápido, barato e padrão, mas escolher entre uma [nota conversível e um SAFE](/pt/library/convertible-note-vs-safe-ai-startups) é uma decisão real, com consequências diferentes para juros, vencimento e direitos do investidor. Definido o instrumento, o teto passa a ser uma negociação entre duas forças. Você quer captar o suficiente para atingir os marcos que destravam o seu seed, e quer o teto baixo o bastante para que a avaliação do seu seed o supere com folga. Uma regra de bolso que muitos operadores usam é definir o teto de modo que uma rodada seed realista fique em duas a três vezes esse valor. Isso protege todo mundo e sinaliza disciplina.",
+            "A outra alavanca é o volume total de SAFE. Como os SAFEs post-money se acumulam, captar uma sequência deles com tetos diferentes pode entregar silenciosamente uma parte muito maior da empresa do que uma única rodada precificada entregaria. Modele o resultado totalmente diluído antes de assinar o segundo e o terceiro SAFE, não depois. Se um SAFE ou uma [rodada precificada](/pt/library/safe-vs-priced-round-for-ai-startups) é a estrutura certa, isso depende de quanto você está captando e de quantos investidores estão envolvidos."
+          ]
+        },
+        {
+          "id": "o-que-isso-significa-para-fundadores-da-america-latina",
+          "heading": "O que isso significa para fundadores da América Latina",
+          "level": 2,
+          "paragraphs": [
+            "Nos Estados Unidos, as normas de SAFE são conhecimento comum, transmitidas por aceleradoras e por uma rede densa de investidores. No Brasil e em toda a América Latina, o SAFE post-money é mais novo e menos compreendido, o que faz com que fundadores regionais muitas vezes aceitem tetos definidos inteiramente pelo investidor ou, pior, assinem estruturas conversíveis que não modelaram. Essa lacuna de informação é cara, e ela se acumula a cada rodada seguinte.",
+            "Este é exatamente o momento em que a Avante atua. Como um venture studio que cofunda empresas AI-native para o Brasil e a América Latina, a Avante senta ao lado dos fundadores desde o dia zero, trazendo capital e construção prática em vez de conselhos vindos da arquibancada. Parte desse trabalho é montar um primeiro cap table que reflita o prêmio de IA de forma honesta sem superprecificar a próxima rodada, estruturar o SAFE para que a conta fique limpa no seed e traduzir as normas do mercado americano em termos que se sustentem com investidores regionais e transfronteiriços. Um teto é um número pequeno em um documento de uma página. Ele define quem é dono da empresa por anos. Acertá-lo no pré-seed é uma das decisões de maior alavancagem que um fundador de IA toma, e é muito mais fácil acertar ao lado de um cofundador que já precificou isso antes."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Qual é o teto de avaliação típico de um SAFE para uma rodada pré-seed?",
+          "a": "Um teto de avaliação típico de SAFE pré-seed fica em torno de US$ 10 milhões para uma startup generalista, indo de cerca de US$ 8 milhões nas menores rodadas até cerca de US$ 15 milhões à medida que a captação se aproxima de US$ 2,5 milhões, com base nos dados de pré-seed da Carta. O instrumento padrão é um SAFE post-money com teto e sem desconto. Startups de IA e de machine learning costumam carregar tetos mais altos, refletindo um prêmio de setor que os investidores precificam antes de haver receita."
+        },
+        {
+          "q": "Um teto de avaliação é a mesma coisa que uma avaliação?",
+          "a": "Não. Um teto é a avaliação máxima usada para converter o seu SAFE em participação mais tarde, não uma avaliação precificada de hoje. Se a sua próxima rodada for precificada acima do teto, os investidores iniciais convertem pelo preço mais baixo do teto e ficam com mais participação. Se for precificada abaixo do teto, eles geralmente convertem por esse preço real mais baixo."
+        },
+        {
+          "q": "Startups de IA devem definir um teto de SAFE mais alto?",
+          "a": "Muitas vezes sim, porque o mercado sustenta isso e os tetos de pré-seed de IA são mais altos que os das rodadas generalistas. Mas um teto mais alto eleva a barra para a sua rodada seed. Mire em um teto que a avaliação realista do seu seed consiga superar em duas a três vezes, para evitar uma rodada de baixa antes do encaixe entre produto e mercado."
+        },
+        {
+          "q": "SAFE post-money ou pré-money para uma rodada pré-seed?",
+          "a": "O SAFE post-money, lançado pela Y Combinator em setembro de 2018, é hoje o padrão e a versão que a Carta vê na maioria dos negócios de pré-seed. Ele permite calcular a diluição exata no momento em que você assina. O contrapeso é que cada novo SAFE dilui você, e não os detentores de SAFE anteriores, então modele o seu volume total de SAFE antes de empilhá-los."
+        }
+      ]
+    },
+    "ogImage": "/og/typical-safe-valuation-cap-pre-seed.png"
   },
   {
     "slug": "venture-builders-brazil-vs-usa-benchmark",
@@ -21262,6 +22914,414 @@ const engineArticles: Article[] = [
         }
       ]
     }
+  },
+  {
+    "slug": "what-is-a-forward-deployed-engineer",
+    "category": "ai",
+    "type": "Explainer",
+    "readTime": "7 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-20",
+    "isPublished": true,
+    "en": {
+      "title": "What a Forward Deployed Engineer Is and Why AI Startups Hire Them",
+      "description": "A forward deployed engineer (FDE) embeds inside a customer to turn an AI model into working software. Here is what the role is and why AI labs hire them.",
+      "sections": [
+        {
+          "paragraphs": [
+            "A forward deployed engineer (FDE) is a software engineer who works directly inside a customer's business, building and adapting a vendor's product to solve that customer's specific problem instead of staying behind the scenes on the core codebase. The role fuses strong engineering with consulting and hands-on customer discovery, embedding with the client to ship working software in days rather than quarters. It began at Palantir in the late 2000s and has become one of the most sought-after hires at AI companies including OpenAI, Anthropic, Ramp, and Cursor."
+          ]
+        },
+        {
+          "id": "what-is-a-forward-deployed-engineer",
+          "heading": "What is a forward deployed engineer",
+          "level": 2,
+          "paragraphs": [
+            "A forward deployed engineer is a technical hire who deploys forward, out of headquarters and into the customer's environment, to configure, extend, and integrate a company's product against a real workflow. Unlike a traditional software engineer who ships features for every user at once, an FDE builds for one account at a time, translating messy business requirements into shipped code and feeding what they learn back to the core product team. The job sits at the intersection of engineering, solutions consulting, and product management, and it exists because complex software, especially AI software, rarely works out of the box."
+          ]
+        },
+        {
+          "id": "where-the-forward-deployed-engineer-role-came-from",
+          "heading": "Where the forward deployed engineer role came from",
+          "level": 2,
+          "paragraphs": [
+            "Palantir pioneered the modern FDE. According to Bloomberg reporting, Palantir began working with JPMorgan around 2009, and over the course of the engagement as many as 120 forward deployed engineers were embedded at the bank, working on Metropolis, Palantir's data integration and analytics platform. That approach became the blueprint for how Palantir sells. Send engineers to live with the customer, learn the domain, and build the thing that actually solves the problem. For more than a decade the title stayed mostly a Palantir signature. Then generative AI created a wave of buyers who wanted powerful models but had no clear path to wire them into their own data, security constraints, and processes, and the role broke out across the industry."
+          ]
+        },
+        {
+          "id": "why-ai-startups-are-hiring-forward-deployed-engineers-now",
+          "heading": "Why AI startups are hiring forward deployed engineers now",
+          "level": 2,
+          "paragraphs": [
+            "Foundation models are general. Enterprise problems are specific. The distance between a capable model and a working deployment is exactly the gap a forward deployed engineer closes. An off-the-shelf language model cannot read a bank's internal schemas, respect a hospital's access rules, or fit a logistics operator's exception process on its own. Someone has to sit with the customer, map the workflow, and build the connective tissue that makes the model useful. In the AI era that someone is increasingly an FDE, because the product is only half finished until it meets a real environment.",
+            "The demand shows up in the market. OpenAI and Anthropic both post publicly for forward deployed engineers, and startups such as Ramp, Cursor, and Scale AI have hired for the role too. In our own experience building companies, forward deployed engineering is one of the scarcest talent profiles in AI, because the same person needs strong engineering fundamentals, real customer instinct, and the judgment to make product calls in the field. Compensation reflects that scarcity. According to United States Department of Labor H-1B disclosure filings, base salaries for the role commonly sit in the low six figures and run higher for senior hires. At frontier AI labs, total compensation climbs well into the mid six figures once equity is layered on top of base. Those equity-loaded figures are directional rather than a fixed benchmark and vary widely by company, stage, and location, but the direction is clear. Companies are paying a premium for engineers who can make hard technology work inside someone else's building."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Across 196 forward deployed engineer roles in United States Department of Labor H-1B disclosure filings, the median base salary sits near 155,000 dollars, and Palantir alone accounts for 127 of those filings, nearly two in three.",
+            "attribution": "h1bdata.info, from U.S. Department of Labor H-1B LCA disclosures. Query the job title forward deployed engineer at h1bdata.info."
+          }
+        },
+        {
+          "id": "what-a-forward-deployed-engineer-actually-does",
+          "heading": "What a forward deployed engineer actually does",
+          "level": 2,
+          "paragraphs": [
+            "The work moves through a repeating loop. First comes discovery, where the FDE learns the customer's real problem rather than the one written in the sales deck, a discipline closer to field research than to ticket triage. Strong forward deployed teams treat every deployment as a live experiment in what buyers will actually pay for, which is why the role pairs naturally with a rigorous approach to [AI customer discovery](/en/library/ai-customer-discovery-b2b-playbook). Next comes building, where the engineer integrates the product with the customer's systems, writes the glue code, and prototypes against real data instead of a sanitized demo set. Then comes the feedback loop, where hard-won lessons from one account get generalized and pushed back into the core product so the next deployment is faster and cheaper. Done well, the FDE is not a consultant billing hours. The FDE is a scout who turns one customer's edge case into the whole company's next feature."
+          ]
+        },
+        {
+          "id": "forward-deployed-engineer-vs-solutions-engineer",
+          "heading": "Forward deployed engineer vs solutions engineer",
+          "level": 2,
+          "paragraphs": [
+            "The titles overlap, but the center of gravity differs. A solutions engineer or sales engineer mostly supports the sale, running demos, scoping requirements, and answering technical questions to help close a deal. A forward deployed engineer keeps going after the contract is signed and actually builds the deployed system, writing production code inside the customer's stack. The FDE is closer to a founding engineer temporarily assigned to a single account, accountable for whether the software delivers an outcome rather than whether the demo went well. That ownership of the result is what separates the role from adjacent customer-facing jobs."
+          ]
+        },
+        {
+          "id": "the-forward-deployed-engineer-as-a-services-to-product-wedge",
+          "heading": "The forward deployed engineer as a services-to-product wedge",
+          "level": 2,
+          "paragraphs": [
+            "This is where the role becomes strategic rather than tactical, and it is the lens Avante applies as a venture studio that co-founds AI-native companies for Brazil and LATAM. Early enterprise AI revenue almost always looks like services. A team embeds, builds something bespoke, and gets paid for outcomes. The trap is staying there forever, stuck in custom work that never compounds into a product. The forward deployed model is the escape hatch. Each embedded build is designed from the start to harden into reusable software, so bespoke engagements become the raw material for a [productized AI copilot](/en/library/services-to-productized-ai-copilot-playbook) instead of a services backlog that resets to zero with every new client.",
+            "Avante uses forward deployed engineers as exactly this wedge inside LATAM enterprises. Rather than selling a finished platform into a market that has never bought one, the studio embeds engineers next to the operator, ships a working copilot against a live workflow, and lets real usage reveal what deserves to be generalized. The bespoke work funds the learning. The learning becomes the product. It is a deliberate path from services revenue on day one toward software margins over time, run in a region where enterprise buyers reward proof over promises and a working system in the building beats a polished pitch every time."
+          ]
+        },
+        {
+          "id": "when-your-company-needs-a-forward-deployed-engineer",
+          "heading": "When your company needs a forward deployed engineer",
+          "level": 2,
+          "paragraphs": [
+            "Not every startup should hire one early. The role earns its cost when the product is genuinely powerful but genuinely hard to adopt, when a handful of large accounts can move the whole business, and when the founding team is willing to let field lessons rewrite the roadmap. If your product installs itself in an afternoon, you do not need forward deployment. If your buyers need a partner to make the technology real inside their four walls, you do. The same instinct that makes the FDE model work, meeting the customer where they operate and automating their actual process, is the instinct behind any good operator's guide to AI automation. Hire the role when adoption, not capability, is the thing standing between you and revenue."
+          ]
+        },
+        {
+          "id": "the-bottom-line",
+          "heading": "The bottom line",
+          "level": 2,
+          "paragraphs": [
+            "A forward deployed engineer is the person who makes advanced software real for one customer at a time, and then hands the rest of the company a shortcut to doing it for everyone. Palantir proved the model. AI has made it mainstream. For founders building AI-native companies, especially in markets like Brazil and LATAM where trust is earned in the field, the forward deployed engineer is not a cost of doing business. It is the mechanism that turns bespoke effort into a durable product."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is a forward deployed engineer?",
+          "a": "A forward deployed engineer (FDE) is a software engineer who works directly inside a customer's business, building, integrating, and operating a product against that customer's real data and workflows instead of shipping generic features from headquarters. The role blends engineering, solutions consulting, and product management. It exists because complex software, especially AI software, rarely works out of the box, so someone has to embed with the customer, learn the workflow, and make the technology deliver an outcome."
+        },
+        {
+          "q": "Which companies hire forward deployed engineers?",
+          "a": "Palantir pioneered the role. Today OpenAI and Anthropic both post publicly for forward deployed engineers, and startups such as Ramp, Cursor, and Scale AI have hired for it too. Beyond the frontier labs, any company selling powerful but hard-to-adopt software uses the model, and venture studios use forward deployed engineers to put AI to work inside enterprise customers."
+        },
+        {
+          "q": "What is the difference between a forward deployed engineer and a solutions engineer?",
+          "a": "A solutions engineer or sales engineer mostly supports the sale by running demos, scoping requirements, and answering technical questions to help close a deal. A forward deployed engineer keeps going after the contract is signed and builds the deployed system, writing production code inside the customer's stack. The FDE is closer to a founding engineer temporarily assigned to a single account and is accountable for whether the software delivers an outcome, not whether the demo went well."
+        },
+        {
+          "q": "How much does a forward deployed engineer make?",
+          "a": "United States Department of Labor H-1B disclosure filings indexed by h1bdata.info show a median base salary near 155,000 dollars across 196 forward deployed engineer roles, with Palantir accounting for 127 of them. At frontier AI labs, total compensation climbs well into the mid six figures once equity is layered on top of base. Those equity-loaded figures are directional and vary widely by company, stage, and location."
+        }
+      ]
+    },
+    "pt": {
+      "title": "O que é um forward deployed engineer e por que startups de IA os contratam",
+      "description": "Um forward deployed engineer (FDE) se integra ao cliente para transformar um modelo de IA em software funcional. Veja o que é o papel e por que os laboratórios de IA os contratam.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Um forward deployed engineer (FDE) é um engenheiro de software que atua diretamente dentro do negócio do cliente, construindo e adaptando o produto de um fornecedor para resolver o problema específico daquele cliente, em vez de ficar nos bastidores no código central. O papel funde uma engenharia forte com consultoria e descoberta prática junto ao cliente, integrando-se à empresa para entregar software funcional em dias, e não em trimestres. Começou na Palantir no fim dos anos 2000 e se tornou uma das contratações mais disputadas em empresas de IA, incluindo OpenAI, Anthropic, Ramp e Cursor."
+          ]
+        },
+        {
+          "id": "o-que-e-um-forward-deployed-engineer",
+          "heading": "O que é um forward deployed engineer",
+          "level": 2,
+          "paragraphs": [
+            "Um forward deployed engineer é uma contratação técnica que se desloca para frente, para fora da matriz e para dentro do ambiente do cliente, a fim de configurar, estender e integrar o produto de uma empresa a um fluxo de trabalho real. Diferentemente de um engenheiro de software tradicional, que entrega funcionalidades para todos os usuários de uma só vez, um FDE constrói para uma conta de cada vez, traduzindo requisitos de negócio confusos em código entregue e devolvendo o que aprende para a equipe do produto central. O trabalho fica na interseção entre engenharia, consultoria de soluções e gestão de produto, e existe porque software complexo, sobretudo software de IA, raramente funciona pronto para uso."
+          ]
+        },
+        {
+          "id": "de-onde-veio-o-papel-de-forward-deployed-engineer",
+          "heading": "De onde veio o papel de forward deployed engineer",
+          "level": 2,
+          "paragraphs": [
+            "A Palantir foi pioneira do FDE moderno. Segundo reportagem da Bloomberg, a Palantir começou a trabalhar com o JPMorgan por volta de 2009 e, ao longo do trabalho, até 120 forward deployed engineers foram integrados ao banco, atuando no Metropolis, a plataforma de integração e análise de dados da Palantir. Essa abordagem se tornou o modelo de como a Palantir vende. Enviar engenheiros para viver com o cliente, aprender o domínio e construir aquilo que de fato resolve o problema. Por mais de uma década o título permaneceu quase uma assinatura da Palantir. Então a IA generativa criou uma onda de compradores que queriam modelos poderosos, mas não tinham um caminho claro para conectá-los aos próprios dados, restrições de segurança e processos, e o papel se espalhou por todo o setor."
+          ]
+        },
+        {
+          "id": "por-que-as-startups-de-ia-estao-contratando-forward-deployed-engineers-agora",
+          "heading": "Por que as startups de IA estão contratando forward deployed engineers agora",
+          "level": 2,
+          "paragraphs": [
+            "Os modelos de fundação são gerais. Os problemas corporativos são específicos. A distância entre um modelo capaz e uma implantação funcional é exatamente a lacuna que um forward deployed engineer fecha. Um modelo de linguagem de prateleira não consegue ler os esquemas internos de um banco, respeitar as regras de acesso de um hospital ou se encaixar no processo de exceções de um operador logístico por conta própria. Alguém precisa sentar com o cliente, mapear o fluxo de trabalho e construir o tecido conectivo que torna o modelo útil. Na era da IA, esse alguém é cada vez mais um FDE, porque o produto só está metade pronto até encontrar um ambiente real.",
+            "A demanda aparece no mercado. OpenAI e Anthropic publicam vagas abertas para forward deployed engineers, e startups como Ramp, Cursor e Scale AI também contrataram para o papel. Em nossa própria experiência construindo empresas, a engenharia forward deployed é um dos perfis de talento mais escassos em IA, porque a mesma pessoa precisa de fundamentos sólidos de engenharia, instinto real de cliente e o discernimento para tomar decisões de produto em campo. A remuneração reflete essa escassez. Segundo registros de divulgação de H-1B do Departamento do Trabalho dos Estados Unidos, os salários-base para o papel costumam ficar na faixa baixa de seis dígitos e sobem para contratações sênior. Nos principais laboratórios de IA de fronteira, a remuneração total avança bem para a faixa média de seis dígitos quando o equity é somado à base. Esses valores carregados de equity são direcionais, e não um parâmetro fixo, e variam bastante conforme empresa, estágio e localização, mas a direção é clara. As empresas estão pagando um prêmio por engenheiros capazes de fazer tecnologia difícil funcionar dentro do prédio de outra pessoa."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Entre 196 vagas de forward deployed engineer nos registros de divulgação de H-1B do Departamento do Trabalho dos Estados Unidos, o salário-base mediano fica perto de 155.000 dólares, e a Palantir sozinha responde por 127 desses registros, quase dois em cada três.",
+            "attribution": "h1bdata.info, from U.S. Department of Labor H-1B LCA disclosures. Query the job title forward deployed engineer at h1bdata.info."
+          }
+        },
+        {
+          "id": "o-que-um-forward-deployed-engineer-realmente-faz",
+          "heading": "O que um forward deployed engineer realmente faz",
+          "level": 2,
+          "paragraphs": [
+            "O trabalho segue um ciclo que se repete. Primeiro vem a descoberta, em que o FDE aprende o problema real do cliente, e não aquele escrito no material de vendas, uma disciplina mais próxima de pesquisa de campo do que da triagem de chamados. Times forward deployed fortes tratam cada implantação como um experimento vivo sobre aquilo que os compradores realmente vão pagar, e é por isso que o papel combina naturalmente com uma abordagem rigorosa de [descoberta de clientes de IA](/pt/library/ai-customer-discovery-b2b-playbook). Em seguida vem a construção, em que o engenheiro integra o produto aos sistemas do cliente, escreve o código de ligação e prototipa com dados reais em vez de um conjunto de demonstração higienizado. Depois vem o ciclo de feedback, em que lições arduamente conquistadas em uma conta são generalizadas e devolvidas ao produto central, para que a próxima implantação seja mais rápida e mais barata. Bem executado, o FDE não é um consultor faturando horas. O FDE é um batedor que transforma o caso extremo de um cliente na próxima funcionalidade de toda a empresa."
+          ]
+        },
+        {
+          "id": "forward-deployed-engineer-versus-solutions-engineer",
+          "heading": "Forward deployed engineer versus solutions engineer",
+          "level": 2,
+          "paragraphs": [
+            "Os títulos se sobrepõem, mas o centro de gravidade é diferente. Um solutions engineer ou sales engineer apoia sobretudo a venda, conduzindo demonstrações, definindo requisitos e respondendo a perguntas técnicas para ajudar a fechar o negócio. Um forward deployed engineer continua depois que o contrato é assinado e de fato constrói o sistema implantado, escrevendo código de produção dentro da stack do cliente. O FDE está mais próximo de um engenheiro fundador temporariamente designado para uma única conta, responsável por saber se o software entrega um resultado, e não se a demonstração foi bem. Essa responsabilidade pelo resultado é o que separa o papel de funções adjacentes voltadas ao cliente."
+          ]
+        },
+        {
+          "id": "o-forward-deployed-engineer-como-cunha-de-servicos-para-produto",
+          "heading": "O forward deployed engineer como cunha de serviços para produto",
+          "level": 2,
+          "paragraphs": [
+            "É aqui que o papel se torna estratégico, e não apenas tático, e é a lente que a Avante aplica como um venture studio que cofunda empresas nativas de IA para o Brasil e a América Latina. A receita inicial de IA corporativa quase sempre parece serviço. Um time se integra, constrói algo sob medida e é pago por resultados. A armadilha é ficar ali para sempre, preso em trabalho customizado que nunca se acumula em um produto. O modelo forward deployed é a saída de emergência. Cada construção integrada é projetada desde o início para se consolidar em software reutilizável, de modo que os trabalhos sob medida se tornam a matéria-prima de um [copiloto de IA produtizado](/pt/library/services-to-productized-ai-copilot-playbook) em vez de um backlog de serviços que zera a cada novo cliente.",
+            "A Avante usa forward deployed engineers exatamente como essa cunha dentro de empresas da América Latina. Em vez de vender uma plataforma pronta para um mercado que nunca comprou uma, o estúdio integra engenheiros ao lado do operador, entrega um copiloto funcional contra um fluxo de trabalho ao vivo e deixa que o uso real revele o que merece ser generalizado. O trabalho sob medida financia o aprendizado. O aprendizado vira o produto. É um caminho deliberado da receita de serviços no primeiro dia rumo a margens de software ao longo do tempo, conduzido em uma região onde os compradores corporativos recompensam a prova mais do que a promessa, e um sistema funcional dentro do prédio vence uma apresentação polida toda vez."
+          ]
+        },
+        {
+          "id": "quando-a-sua-empresa-precisa-de-um-forward-deployed-engineer",
+          "heading": "Quando a sua empresa precisa de um forward deployed engineer",
+          "level": 2,
+          "paragraphs": [
+            "Nem toda startup deve contratar um cedo. O papel justifica seu custo quando o produto é genuinamente poderoso, mas genuinamente difícil de adotar, quando um punhado de grandes contas pode mover todo o negócio e quando o time fundador está disposto a deixar as lições de campo reescreverem o roadmap. Se o seu produto se instala sozinho em uma tarde, você não precisa de forward deployment. Se os seus compradores precisam de um parceiro para tornar a tecnologia real dentro das quatro paredes deles, você precisa. O mesmo instinto que faz o modelo FDE funcionar, encontrar o cliente onde ele opera e automatizar o processo real dele, é o instinto por trás de qualquer bom guia do operador para automação com IA. Contrate o papel quando a adoção, e não a capacidade, for o que está entre você e a receita."
+          ]
+        },
+        {
+          "id": "o-resumo-final",
+          "heading": "O resumo final",
+          "level": 2,
+          "paragraphs": [
+            "Um forward deployed engineer é a pessoa que torna o software avançado real para um cliente de cada vez e, então, entrega ao resto da empresa um atalho para fazer o mesmo por todos. A Palantir provou o modelo. A IA o tornou comum. Para fundadores que constroem empresas nativas de IA, sobretudo em mercados como o Brasil e a América Latina, onde a confiança é conquistada em campo, o forward deployed engineer não é um custo de fazer negócios. É o mecanismo que transforma esforço sob medida em um produto duradouro."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "O que é um forward deployed engineer?",
+          "a": "Um forward deployed engineer (FDE) é um engenheiro de software que atua diretamente dentro do negócio do cliente, construindo, integrando e operando um produto contra os dados e fluxos de trabalho reais daquele cliente, em vez de entregar funcionalidades genéricas a partir da matriz. O papel combina engenharia, consultoria de soluções e gestão de produto. Ele existe porque software complexo, sobretudo software de IA, raramente funciona pronto para uso, então alguém precisa se integrar ao cliente, aprender o fluxo de trabalho e fazer a tecnologia entregar um resultado."
+        },
+        {
+          "q": "Quais empresas contratam forward deployed engineers?",
+          "a": "A Palantir foi pioneira do papel. Hoje, OpenAI e Anthropic publicam vagas abertas para forward deployed engineers, e startups como Ramp, Cursor e Scale AI também contrataram para a função. Além dos laboratórios de fronteira, qualquer empresa que venda software poderoso, porém difícil de adotar, usa o modelo, e venture studios usam forward deployed engineers para colocar a IA para trabalhar dentro de clientes corporativos."
+        },
+        {
+          "q": "Qual é a diferença entre um forward deployed engineer e um solutions engineer?",
+          "a": "Um solutions engineer ou sales engineer apoia sobretudo a venda, conduzindo demonstrações, definindo requisitos e respondendo a perguntas técnicas para ajudar a fechar o negócio. Um forward deployed engineer continua depois que o contrato é assinado e constrói o sistema implantado, escrevendo código de produção dentro da stack do cliente. O FDE está mais próximo de um engenheiro fundador temporariamente designado para uma única conta e é responsável por saber se o software entrega um resultado, e não se a demonstração foi bem."
+        },
+        {
+          "q": "Quanto ganha um forward deployed engineer?",
+          "a": "Registros de divulgação de H-1B do Departamento do Trabalho dos Estados Unidos indexados pelo h1bdata.info mostram um salário-base mediano perto de 155.000 dólares entre 196 vagas de forward deployed engineer, com a Palantir respondendo por 127 delas. Nos principais laboratórios de IA de fronteira, a remuneração total avança bem para a faixa média de seis dígitos quando o equity é somado à base. Esses valores carregados de equity são direcionais e variam bastante conforme empresa, estágio e localização."
+        }
+      ]
+    },
+    "ogImage": "/og/what-is-a-forward-deployed-engineer.png"
+  },
+  {
+    "slug": "what-is-a-reverse-acquihire",
+    "category": "insights",
+    "type": "Explainer",
+    "readTime": "7 min",
+    "featured": false,
+    "date": "Jul 2026",
+    "datePublished": "2026-07-20",
+    "isPublished": true,
+    "en": {
+      "title": "What a Reverse Acquihire Is and What It Means for Your Cap Table",
+      "description": "A reverse acquihire is when Big Tech hires a startup's founders and licenses its tech without buying the company, reshaping the cap table.",
+      "sections": [
+        {
+          "paragraphs": [
+            "A reverse acquihire is a deal in which a large company hires a startup's founders and key engineers and pays to license its technology, without buying the company itself. The startup's legal entity stays alive and its cap table stays intact, while the acquirer sidesteps the antitrust review that a full acquisition would trigger. For founders and early investors it lands somewhere between a real exit and a shutdown, which is exactly why the structure deserves a hard look long before a term sheet is on the table."
+          ]
+        },
+        {
+          "id": "what-is-a-reverse-acquihire",
+          "heading": "What is a reverse acquihire?",
+          "level": 2,
+          "paragraphs": [
+            "A reverse acquihire is a talent-and-technology deal in which a large company hires a startup's founding team and licenses its technology, usually on a non-exclusive basis, but does not acquire the startup as a corporate entity. The acquirer walks away with the people and the intellectual property it wanted. The startup keeps its name, its bank balance, and its cap table, yet loses the founders and core engineers who made it valuable in the first place. Because there is no change of control and no purchase of the whole company, the deal is deliberately shaped to stay under the thresholds that would force a formal merger review, and that regulatory workaround is a large part of why the structure exists."
+          ]
+        },
+        {
+          "id": "why-it-is-called-reverse",
+          "heading": "Why it is called \"reverse\"",
+          "level": 2,
+          "paragraphs": [
+            "In a classic acquihire, a big company buys a small startup mostly for its team and quietly winds the product down. The company disappears and the talent moves over. A reverse acquihire inverts the corporate outcome. The talent still moves over, but the company is left standing. What survives is a diminished entity, sometimes called the remainco, that holds a licensing check and a skeleton crew but no longer has the people who set its direction. The direction of talent flow is the same as a normal acquihire. The fate of the company is reversed, and that inversion is where the name comes from."
+          ]
+        },
+        {
+          "id": "reverse-acquihire-vs-acquisition-vs-traditional-acquihire",
+          "heading": "Reverse acquihire vs acquisition vs traditional acquihire",
+          "level": 2,
+          "paragraphs": [
+            "The cleanest way to hold the three apart is by what happens to the company. In a full acquisition, the buyer takes the whole entity, the cap table is cashed out, and the deal goes through merger review. In a traditional acquihire, the buyer absorbs the team and shuts the product, so the company effectively ends. In a reverse acquihire, the buyer takes the team and a technology license but leaves the company legally alive and independent, which is what keeps the deal below the reporting thresholds. The first is a clean exit, the second is a wind-down disguised as a hire, and the third is a partial outcome that has to be actively managed because the company keeps existing."
+          ]
+        },
+        {
+          "id": "the-deals-that-turned-it-into-a-pattern",
+          "heading": "The deals that turned it into a pattern",
+          "level": 2,
+          "paragraphs": [
+            "The structure moved from oddity to playbook across 2024 and 2025 as frontier AI labs became too expensive and too legally fraught to buy outright. Microsoft hired Inflection cofounder Mustafa Suleyman and much of his team in March 2024 and, as Bloomberg reported, paid roughly 650 million dollars to license the technology on a non-exclusive basis. Amazon hired Adept cofounder and CEO David Luan along with key staff and took a technology license in June 2024, a deal Reuters covered at the time. Google hired Windsurf CEO Varun Mohan and part of his team and took a non-exclusive license to the company's technology in July 2025, also reported by Reuters. The canonical example is Character.AI, where, according to The Wall Street Journal, Google paid about 2.7 billion dollars in August 2024 to license the models and bring back cofounder Noam Shazeer while the app kept running as an independent consumer product.",
+            "No audited public tally exists for what Big Tech has spent on license-and-hire deals in total, because full deal terms are rarely disclosed. What is on the record is enough to show the scale. The individual checks that have been reported, from Inflection to Character.AI, already run into the billions of dollars each."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Google paid about 2.7 billion dollars in August 2024 to license Character.AI's technology and hire its founders, while the startup kept operating as an independent consumer app.",
+            "attribution": "The Wall Street Journal"
+          }
+        },
+        {
+          "id": "what-a-reverse-acquihire-does-to-your-cap-table",
+          "heading": "What a reverse acquihire does to your cap table",
+          "level": 2,
+          "paragraphs": [
+            "Here is where the founder-facing reality lives, and it is a fundraising-mechanics story rather than an antitrust one. The licensing fee is paid to the company, not directly to shareholders. That cash then has to travel down the cap table, and it moves through the liquidation preference stack first. Preferred investors usually get paid before common holders, so a license payment that looks large at the top can leave very little for the founders and employees holding common stock and options. Understanding the [order in which money is distributed on the cap table](/en/library/how-much-dilution-per-funding-round) is the difference between a soft landing and a paper outcome for the team that stayed behind.",
+            "For investors, a reverse acquihire is often positioned as an alternative to raising a [down round](/en/library/what-is-a-down-round). Rather than mark the company down and dilute everyone in a fresh financing, the founders leave, a licensing check arrives, and early backers may recover some or all of their capital as a distribution. That can be a real rescue for a company that would otherwise hit zero. It is rarely the venture-scale return the cap table was designed to produce, and it caps the upside that convertible instruments were betting on. If your early money came in on a SAFE or a priced round, the conversion mechanics and preference terms you agreed to at the seed stage are what decide who actually gets paid when a license-and-hire offer lands on the table."
+          ]
+        },
+        {
+          "id": "how-it-changes-seed-stage-risk-and-exit-math",
+          "heading": "How it changes seed-stage risk and exit math",
+          "level": 2,
+          "paragraphs": [
+            "The rise of the reverse acquihire adds a new node to the exit distribution that founders and studios have to price in from day zero. The old mental model had three broad outcomes: zero, a modest acquisition, or a venture-scale exit. The license-and-hire deal inserts a fourth, a middling outcome where the founders are made whole through employment at the acquirer, investors get a partial recovery, and the remaining shareholders are left holding equity in a gutted company. That is better than a total loss and worse than a clean sale, and it should change how you think about preferences, control provisions, and what success even means for the people who are not founders.",
+            "This is the lens Avante applies as a venture studio that co-founds AI-native companies for Brazil and LATAM. Because the studio sits on the cap table as a co-founder from day zero rather than arriving as a late check, it has to reason about the full range of exits, including the license-and-hire path, before the first dollar goes in. In practice that means being deliberate about liquidation preferences, about how much of the company the founders and operators hold in common stock, and about not stacking terms in a way that would wipe out the builders in exactly the partial-exit scenario a reverse acquihire creates. For most LATAM founders the frontier-lab bidding war is a distant headline, yet the underlying cap-table lessons are universal. A structure that can pay investors and founders while leaving employees with nothing is a structure worth understanding well before you need it."
+          ]
+        },
+        {
+          "id": "what-founders-should-take-from-this",
+          "heading": "What founders should take from this",
+          "level": 2,
+          "paragraphs": [
+            "Do not confuse a reverse acquihire with a win for everyone on your cap table. It can be a strong outcome for founders and a fair one for early investors while being close to worthless for later employees, depending entirely on the preference stack you built round by round. Read every term sheet for who gets paid first in a partial liquidity event, not only for headline valuation and dilution. And if you are building an AI-native company where the team itself is the asset, design the cap table so that the outcome which rewards the founders does not quietly strip the people who built the thing alongside them."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is a reverse acquihire?",
+          "a": "A reverse acquihire is a deal in which a large company hires a startup's founders and key engineers and licenses its technology, usually non-exclusively, without buying the company as a corporate entity. The acquirer gets the talent and the intellectual property, while the startup stays legally independent but loses the people who made it valuable. The structure is shaped this way to stay below the thresholds that would trigger a formal antitrust merger review."
+        },
+        {
+          "q": "How is a reverse acquihire different from an acquisition?",
+          "a": "In a full acquisition, the buyer takes the entire company, cashes out the cap table, and goes through merger review. In a reverse acquihire, the buyer only hires the team and licenses the technology, leaving the company legally alive and independent. That difference is what keeps the deal below regulatory reporting thresholds and why the remaining shareholders are left holding equity in a company that lost its founders."
+        },
+        {
+          "q": "Do employees get paid in a reverse acquihire?",
+          "a": "Not necessarily. The licensing fee is paid to the company, then flows down the cap table through the liquidation preference stack, and preferred investors typically get paid before common holders. Employees holding common stock and options can be left with very little even when the headline check looks large. The outcome depends entirely on the preference terms agreed at each round."
+        },
+        {
+          "q": "Why do companies do reverse acquihires instead of buying the startup?",
+          "a": "Buying a frontier AI startup outright is expensive and invites antitrust scrutiny, so acquirers structure a license-and-hire deal instead. By taking the team and a technology license without acquiring the whole entity, they avoid a change of control and stay under merger review thresholds. It lets Big Tech absorb talent and IP with far less regulatory friction."
+        }
+      ]
+    },
+    "pt": {
+      "title": "O Que É um Reverse Acquihire e o Que Isso Significa para o Seu Cap Table",
+      "description": "Um reverse acquihire acontece quando uma Big Tech contrata os fundadores de uma startup e licencia sua tecnologia sem comprar a empresa, redesenhando o cap table.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Um reverse acquihire é um acordo no qual uma grande empresa contrata os fundadores e os principais engenheiros de uma startup e paga para licenciar sua tecnologia, sem comprar a empresa em si. A entidade jurídica da startup continua viva e seu cap table permanece intacto, enquanto a adquirente evita a análise antitruste que uma aquisição completa acionaria. Para fundadores e investidores iniciais, o resultado fica em algum ponto entre uma saída de verdade e um encerramento, e é exatamente por isso que a estrutura merece uma análise cuidadosa muito antes de um term sheet estar sobre a mesa."
+          ]
+        },
+        {
+          "id": "what-is-a-reverse-acquihire",
+          "heading": "O que é um reverse acquihire?",
+          "level": 2,
+          "paragraphs": [
+            "Um reverse acquihire é um acordo de talento e tecnologia no qual uma grande empresa contrata o time fundador de uma startup e licencia sua tecnologia, normalmente em base não exclusiva, mas não adquire a startup como entidade corporativa. A adquirente sai com as pessoas e a propriedade intelectual que queria. A startup mantém o nome, o saldo em caixa e o cap table, mas perde os fundadores e os engenheiros centrais que a tornaram valiosa em primeiro lugar. Como não há mudança de controle nem compra da empresa inteira, o acordo é deliberadamente desenhado para ficar abaixo dos limites que forçariam uma análise formal de fusão, e esse contorno regulatório é boa parte do motivo pelo qual a estrutura existe."
+          ]
+        },
+        {
+          "id": "why-it-is-called-reverse",
+          "heading": "Por que se chama \"reverse\"",
+          "level": 2,
+          "paragraphs": [
+            "Em um acquihire clássico, uma grande empresa compra uma pequena startup principalmente pelo time e encerra o produto discretamente. A empresa desaparece e o talento migra. Um reverse acquihire inverte o desfecho corporativo. O talento ainda migra, mas a empresa continua de pé. O que sobrevive é uma entidade diminuída, às vezes chamada de remainco, que fica com um cheque de licenciamento e uma equipe mínima, mas não tem mais as pessoas que definiam seu rumo. A direção do fluxo de talento é a mesma de um acquihire normal. O destino da empresa é invertido, e é dessa inversão que vem o nome."
+          ]
+        },
+        {
+          "id": "reverse-acquihire-vs-acquisition-vs-traditional-acquihire",
+          "heading": "Reverse acquihire vs aquisição vs acquihire tradicional",
+          "level": 2,
+          "paragraphs": [
+            "A forma mais limpa de separar os três é pelo que acontece com a empresa. Em uma aquisição completa, o comprador leva a entidade inteira, o cap table é liquidado em dinheiro e o acordo passa pela análise de fusão. Em um acquihire tradicional, o comprador absorve o time e encerra o produto, então a empresa efetivamente acaba. Em um reverse acquihire, o comprador leva o time e uma licença de tecnologia, mas deixa a empresa juridicamente viva e independente, o que é justamente o que mantém o acordo abaixo dos limites de notificação. O primeiro é uma saída limpa, o segundo é um encerramento disfarçado de contratação, e o terceiro é um resultado parcial que precisa ser gerido ativamente porque a empresa continua existindo."
+          ]
+        },
+        {
+          "id": "the-deals-that-turned-it-into-a-pattern",
+          "heading": "Os acordos que transformaram isso em um padrão",
+          "level": 2,
+          "paragraphs": [
+            "A estrutura passou de curiosidade a manual entre 2024 e 2025, à medida que os laboratórios de IA de fronteira ficaram caros demais e juridicamente arriscados demais para serem comprados por inteiro. A Microsoft contratou o cofundador da Inflection, Mustafa Suleyman, e boa parte de sua equipe em março de 2024 e, segundo a Bloomberg, pagou cerca de 650 milhões de dólares para licenciar a tecnologia em base não exclusiva. A Amazon contratou o cofundador e CEO da Adept, David Luan, junto com pessoas-chave e obteve uma licença de tecnologia em junho de 2024, um acordo que a Reuters cobriu na época. O Google contratou o CEO da Windsurf, Varun Mohan, e parte de seu time e obteve uma licença não exclusiva da tecnologia da empresa em julho de 2025, também noticiado pela Reuters. O exemplo canônico é a Character.AI, onde, segundo o The Wall Street Journal, o Google pagou cerca de 2,7 bilhões de dólares em agosto de 2024 para licenciar os modelos e trazer de volta o cofundador Noam Shazeer, enquanto o aplicativo seguiu funcionando como um produto de consumo independente.",
+            "Não existe uma contagem pública auditada do total que as Big Techs gastaram em acordos de licenciamento e contratação, porque os termos completos raramente são divulgados. O que está registrado já basta para mostrar a escala. Os cheques individuais que foram noticiados, da Inflection à Character.AI, já chegam à casa dos bilhões de dólares cada um."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O Google pagou cerca de 2,7 bilhões de dólares em agosto de 2024 para licenciar a tecnologia da Character.AI e contratar seus fundadores, enquanto a startup seguiu operando como um aplicativo de consumo independente.",
+            "attribution": "The Wall Street Journal"
+          }
+        },
+        {
+          "id": "what-a-reverse-acquihire-does-to-your-cap-table",
+          "heading": "O que um reverse acquihire faz com o seu cap table",
+          "level": 2,
+          "paragraphs": [
+            "É aqui que mora a realidade que os fundadores enfrentam, e é uma história de mecânica de captação, não de antitruste. A taxa de licenciamento é paga à empresa, não diretamente aos acionistas. Esse dinheiro então precisa descer pelo cap table, e passa primeiro pela pilha de preferências de liquidação. Investidores preferenciais costumam receber antes dos detentores de ações ordinárias, então um pagamento de licença que parece grande no topo pode deixar muito pouco para os fundadores e funcionários que têm ações ordinárias e opções. Entender a [ordem em que o dinheiro é distribuído no cap table](/pt/library/how-much-dilution-per-funding-round) é a diferença entre um pouso suave e um resultado no papel para o time que ficou para trás.",
+            "Para os investidores, um reverse acquihire costuma ser posicionado como uma alternativa a captar um [down round](/pt/library/what-is-a-down-round). Em vez de marcar a empresa para baixo e diluir todo mundo em uma nova rodada, os fundadores saem, um cheque de licenciamento chega, e os investidores iniciais podem recuperar parte ou todo o capital como uma distribuição. Isso pode ser um resgate real para uma empresa que, de outra forma, chegaria a zero. Raramente é o retorno em escala de venture que o cap table foi desenhado para produzir, e limita o potencial de alta que os instrumentos conversíveis estavam apostando. Se o seu dinheiro inicial entrou via SAFE ou rodada precificada, a mecânica de conversão e os termos de preferência que você aceitou na fase seed são o que decide quem de fato recebe quando uma oferta de licenciamento e contratação chega à mesa."
+          ]
+        },
+        {
+          "id": "how-it-changes-seed-stage-risk-and-exit-math",
+          "heading": "Como isso muda o risco na fase seed e a matemática de saída",
+          "level": 2,
+          "paragraphs": [
+            "A ascensão do reverse acquihire acrescenta um novo nó à distribuição de saídas que fundadores e studios precisam precificar desde o dia zero. O antigo modelo mental tinha três grandes desfechos: zero, uma aquisição modesta ou uma saída em escala de venture. O acordo de licenciamento e contratação insere um quarto, um desfecho intermediário no qual os fundadores ficam inteiros por meio de emprego na adquirente, os investidores obtêm uma recuperação parcial, e os acionistas remanescentes ficam segurando participação em uma empresa esvaziada. Isso é melhor do que uma perda total e pior do que uma venda limpa, e deveria mudar a forma como você pensa sobre preferências, cláusulas de controle e o que sucesso sequer significa para as pessoas que não são fundadoras.",
+            "Essa é a lente que a Avante aplica como um venture studio que cofunda empresas nativas de IA para o Brasil e a América Latina. Como o studio ocupa o cap table como cofundador desde o dia zero, em vez de chegar como um cheque tardio, ele precisa raciocinar sobre toda a gama de saídas, incluindo o caminho de licenciamento e contratação, antes de o primeiro dólar entrar. Na prática, isso significa ser deliberado quanto às preferências de liquidação, quanto à fatia da empresa que fundadores e operadores mantêm em ações ordinárias, e quanto a não empilhar termos de um jeito que apagaria os construtores exatamente no cenário de saída parcial que um reverse acquihire cria. Para a maioria dos fundadores da América Latina, a guerra de lances dos laboratórios de fronteira é uma manchete distante, mas as lições de cap table por trás dela são universais. Uma estrutura que consegue pagar investidores e fundadores enquanto deixa os funcionários sem nada é uma estrutura que vale a pena entender bem antes de você precisar dela."
+          ]
+        },
+        {
+          "id": "what-founders-should-take-from-this",
+          "heading": "O que os fundadores devem tirar disso",
+          "level": 2,
+          "paragraphs": [
+            "Não confunda um reverse acquihire com uma vitória para todos no seu cap table. Pode ser um bom resultado para os fundadores e justo para os investidores iniciais, ao mesmo tempo em que fica perto de não valer nada para os funcionários mais tardios, dependendo inteiramente da pilha de preferências que você construiu rodada a rodada. Leia todo term sheet buscando quem recebe primeiro em um evento parcial de liquidez, não apenas a valuation e a diluição de manchete. E se você está construindo uma empresa nativa de IA em que o próprio time é o ativo, desenhe o cap table de modo que o desfecho que recompensa os fundadores não retire silenciosamente as pessoas que construíram a coisa ao lado deles."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "O que é um reverse acquihire?",
+          "a": "Um reverse acquihire é um acordo no qual uma grande empresa contrata os fundadores e os principais engenheiros de uma startup e licencia sua tecnologia, normalmente de forma não exclusiva, sem comprar a empresa como entidade corporativa. A adquirente fica com o talento e a propriedade intelectual, enquanto a startup permanece juridicamente independente, mas perde as pessoas que a tornaram valiosa. A estrutura é desenhada assim para ficar abaixo dos limites que acionariam uma análise antitruste formal de fusão."
+        },
+        {
+          "q": "Como um reverse acquihire é diferente de uma aquisição?",
+          "a": "Em uma aquisição completa, o comprador leva a empresa inteira, liquida o cap table em dinheiro e passa pela análise de fusão. Em um reverse acquihire, o comprador apenas contrata o time e licencia a tecnologia, deixando a empresa juridicamente viva e independente. Essa diferença é o que mantém o acordo abaixo dos limites regulatórios de notificação e o motivo pelo qual os acionistas remanescentes ficam segurando participação em uma empresa que perdeu seus fundadores."
+        },
+        {
+          "q": "Os funcionários recebem em um reverse acquihire?",
+          "a": "Não necessariamente. A taxa de licenciamento é paga à empresa e então desce pelo cap table através da pilha de preferências de liquidação, e os investidores preferenciais normalmente recebem antes dos detentores de ações ordinárias. Funcionários com ações ordinárias e opções podem ficar com muito pouco, mesmo quando o cheque de manchete parece grande. O resultado depende inteiramente dos termos de preferência acordados em cada rodada."
+        },
+        {
+          "q": "Por que as empresas fazem reverse acquihires em vez de comprar a startup?",
+          "a": "Comprar uma startup de IA de fronteira por inteiro é caro e atrai escrutínio antitruste, então as adquirentes estruturam um acordo de licenciamento e contratação. Ao levar o time e uma licença de tecnologia sem adquirir a entidade inteira, elas evitam uma mudança de controle e ficam abaixo dos limites de análise de fusão. Isso permite que as Big Techs absorvam talento e propriedade intelectual com muito menos atrito regulatório."
+        }
+      ]
+    },
+    "ogImage": "/og/what-is-a-reverse-acquihire.png"
   },
   {
     "slug": "what-is-a-startup-studio",

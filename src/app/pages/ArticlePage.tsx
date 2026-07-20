@@ -776,6 +776,148 @@ function articleTaxonomy(slug: string): {
     sameAs: 'https://avanteventures.com',
   }
   switch (slug) {
+    case 'ai-startup-gross-margin-benchmark-2026':
+      return {
+        keywords: ['AI startup gross margin', 'AI gross margin 2026', 'AI vs SaaS margins', 'inference COGS', 'AI unit economics', 'gross margin benchmark', 'AI-native economics'],
+        about: [
+          { '@type': 'Thing', name: 'Gross margin', sameAs: 'https://en.wikipedia.org/wiki/Gross_margin' },
+          { '@type': 'Thing', name: 'Cost of goods sold', sameAs: 'https://en.wikipedia.org/wiki/Cost_of_goods_sold' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Andreessen Horowitz', sameAs: 'https://a16z.com' },
+          { '@type': 'Person', name: 'Martin Casado', sameAs: 'https://a16z.com/author/martin-casado/' },
+          { '@type': 'Person', name: 'Matt Bornstein' },
+          { '@type': 'Organization', name: 'ICONIQ Capital', sameAs: 'https://www.iconiqcapital.com' },
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'what-is-a-forward-deployed-engineer':
+      return {
+        keywords: ['forward deployed engineer', 'FDE', 'Palantir forward deployed engineer', 'AI startup hiring', 'services to product', 'enterprise AI deployment', 'AI go to market'],
+        about: [
+          { '@type': 'Thing', name: 'Forward deployed engineer' },
+          { '@type': 'Thing', name: 'Software engineering', sameAs: 'https://en.wikipedia.org/wiki/Software_engineering' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Palantir Technologies', sameAs: 'https://www.palantir.com' },
+          { '@type': 'Organization', name: 'OpenAI', sameAs: 'https://openai.com' },
+          { '@type': 'Organization', name: 'Anthropic', sameAs: 'https://www.anthropic.com' },
+          { '@type': 'Organization', name: 'Cursor', sameAs: 'https://www.cursor.com' },
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'how-long-venture-studio-startup-reaches-series-a':
+      return {
+        keywords: ['venture studio time to Series A', 'venture studio speed', 'Series A timeline', 'startup studio benchmark', 'GSSN data', 'venture building', 'startup studio'],
+        about: [
+          { '@type': 'Thing', name: 'Venture studio model' },
+          { '@type': 'Thing', name: 'Series A round', sameAs: 'https://en.wikipedia.org/wiki/Series_A_round' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Global Startup Studio Network', sameAs: 'https://www.gssn.co' },
+          { '@type': 'Organization', name: 'CB Insights', sameAs: 'https://www.cbinsights.com' },
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'how-much-does-it-cost-to-run-an-ai-agent':
+      return {
+        keywords: ['AI agent cost', 'cost to run an AI agent', 'agentic workflow cost', 'cost per task', 'token cost', 'LLM inference cost', 'AI COGS'],
+        about: [
+          { '@type': 'Thing', name: 'AI agent', sameAs: 'https://en.wikipedia.org/wiki/Intelligent_agent' },
+          { '@type': 'Thing', name: 'Inference cost' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Anthropic', sameAs: 'https://www.anthropic.com' },
+          { '@type': 'Organization', name: 'OpenAI', sameAs: 'https://openai.com' },
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'what-is-a-reverse-acquihire':
+      return {
+        keywords: ['reverse acquihire', 'reverse acqui-hire', 'AI acquihire', 'license and hire deal', 'cap table', 'startup exit', 'acquihire meaning'],
+        about: [
+          { '@type': 'Thing', name: 'Acqui-hiring', sameAs: 'https://en.wikipedia.org/wiki/Acqui-hiring' },
+          { '@type': 'Thing', name: 'Capitalization table' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Character.AI', sameAs: 'https://character.ai' },
+          { '@type': 'Organization', name: 'Inflection AI', sameAs: 'https://inflection.ai' },
+          { '@type': 'Organization', name: 'Microsoft', sameAs: 'https://www.microsoft.com' },
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'good-burn-multiple-ai-startup-2026':
+      return {
+        keywords: ['burn multiple', 'good burn multiple', 'AI startup burn', 'capital efficiency', 'net burn', 'burn rate', 'startup finance metrics'],
+        about: [
+          { '@type': 'Thing', name: 'Burn rate', sameAs: 'https://en.wikipedia.org/wiki/Burn_rate' },
+          { '@type': 'Thing', name: 'Capital efficiency' },
+        ],
+        mentions: [
+          { '@type': 'Person', name: 'David Sacks', sameAs: 'https://en.wikipedia.org/wiki/David_O._Sacks' },
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'typical-safe-valuation-cap-pre-seed':
+      return {
+        keywords: ['SAFE valuation cap', 'pre-seed SAFE', 'typical valuation cap', 'SAFE agreement', 'AI startup valuation', 'pre-seed funding', 'post-money SAFE'],
+        about: [
+          { '@type': 'Thing', name: 'Simple agreement for future equity', sameAs: 'https://en.wikipedia.org/wiki/Simple_agreement_for_future_equity' },
+          { '@type': 'Thing', name: 'Startup company valuation' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Carta', sameAs: 'https://carta.com' },
+          { '@type': 'Organization', name: 'Y Combinator', sameAs: 'https://www.ycombinator.com' },
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'rule-of-40-for-ai-startups':
+      return {
+        keywords: ['Rule of 40', 'Rule of 40 AI startups', 'growth vs profitability', 'SaaS metrics', 'AI gross margin', 'capital efficiency', 'software benchmarks'],
+        about: [
+          { '@type': 'Thing', name: 'Rule of 40' },
+          { '@type': 'Thing', name: 'Profit margin', sameAs: 'https://en.wikipedia.org/wiki/Profit_margin' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'McKinsey and Company', sameAs: 'https://www.mckinsey.com' },
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'is-inference-cost-cogs-or-opex':
+      return {
+        keywords: ['inference cost COGS', 'inference OpEx', 'AI accounting', 'ASC 606', 'cost of goods sold', 'AI gross margin', 'SaaS accounting'],
+        about: [
+          { '@type': 'Thing', name: 'Cost of goods sold', sameAs: 'https://en.wikipedia.org/wiki/Cost_of_goods_sold' },
+          { '@type': 'Thing', name: 'Operating expense', sameAs: 'https://en.wikipedia.org/wiki/Operating_expense' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Financial Accounting Standards Board', sameAs: 'https://www.fasb.org' },
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'startup-option-pool-size-benchmark':
+      return {
+        keywords: ['option pool size', 'seed option pool', 'ESOP size', 'employee stock option pool', 'option pool shuffle', 'startup equity', 'cap table dilution'],
+        about: [
+          { '@type': 'Thing', name: 'Employee stock ownership plan', sameAs: 'https://en.wikipedia.org/wiki/Employee_stock_ownership_plan' },
+          { '@type': 'Thing', name: 'Startup equity dilution' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Carta', sameAs: 'https://carta.com' },
+          { '@type': 'Organization', name: 'Index Ventures', sameAs: 'https://www.indexventures.com' },
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+          COMMON_AVANTE,
+        ],
+      }
     case 'ai-capex-boom-application-layer-opportunity':
       return {
         keywords: ['AI capex 2026', 'AI infrastructure spending', 'AI models commodity', 'AI application layer', 'AI value chain', 'LATAM AI startups', 'venture studio AI'],
