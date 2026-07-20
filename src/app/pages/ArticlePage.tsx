@@ -376,33 +376,91 @@ export default function ArticlePage() {
               '¿Quieres más? Recibe un ensayo a la semana sobre venture building, negocios AI-native y la oportunidad Brasil.'
             )}
           </p>
-          <Link
-            to={`/${language}/library`}
+          <form
+            onSubmit={(e) => {
+              e.preventDefault()
+              const input = e.currentTarget.elements.namedItem('email') as HTMLInputElement | null
+              const email = input?.value?.trim() || ''
+              const base = 'https://avanteventures.substack.com/subscribe'
+              const url = email ? `${base}?email=${encodeURIComponent(email)}` : base
+              window.open(url, '_blank', 'noopener,noreferrer')
+            }}
             style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
-              padding: '12px 24px',
-              borderRadius: '8px',
-              background: 'rgba(249, 180, 55, 0.15)',
-              border: '1px solid rgba(249, 180, 55, 0.4)',
-              color: '#F9B437',
-              fontSize: '14px',
-              fontWeight: 600,
-              textDecoration: 'none',
-              transition: 'all 0.2s ease',
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = 'rgba(249, 180, 55, 0.25)'
-              e.currentTarget.style.borderColor = 'rgba(249, 180, 55, 0.7)'
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = 'rgba(249, 180, 55, 0.15)'
-              e.currentTarget.style.borderColor = 'rgba(249, 180, 55, 0.4)'
+              display: 'flex',
+              flexWrap: 'wrap',
+              justifyContent: 'center',
+              gap: '10px',
+              maxWidth: '460px',
+              margin: '0 auto',
             }}
           >
-            {t('Browse the Library', 'Ver Biblioteca completa', 'Ver Biblioteca completa')} →
-          </Link>
+            <input
+              type="email"
+              name="email"
+              required
+              placeholder={t('you@email.com', 'voce@email.com', 'tu@email.com')}
+              aria-label={t('Email address', 'Endereco de email', 'Correo electronico')}
+              style={{
+                flex: '1 1 220px',
+                minWidth: 0,
+                padding: '12px 16px',
+                borderRadius: '8px',
+                background: 'rgba(255, 255, 255, 0.04)',
+                border: '1px solid var(--avt-hair)',
+                color: 'var(--avt-txt)',
+                fontSize: '14px',
+                outline: 'none',
+              }}
+            />
+            <button
+              type="submit"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px',
+                padding: '12px 24px',
+                borderRadius: '8px',
+                background: 'rgba(249, 180, 55, 0.15)',
+                border: '1px solid rgba(249, 180, 55, 0.4)',
+                color: '#F9B437',
+                fontSize: '14px',
+                fontWeight: 600,
+                cursor: 'pointer',
+                whiteSpace: 'nowrap',
+                transition: 'all 0.2s ease',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = 'rgba(249, 180, 55, 0.25)'
+                e.currentTarget.style.borderColor = 'rgba(249, 180, 55, 0.7)'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'rgba(249, 180, 55, 0.15)'
+                e.currentTarget.style.borderColor = 'rgba(249, 180, 55, 0.4)'
+              }}
+            >
+              {t('Subscribe free', 'Assinar gratis', 'Suscribirse gratis')} →
+            </button>
+          </form>
+
+          <p
+            style={{
+              fontSize: '12px',
+              color: 'var(--avt-meta)',
+              margin: '14px 0 0 0',
+            }}
+          >
+            {t(
+              'Avante Intelligence · weekly · no spam. Or ',
+              'Avante Intelligence · semanal · sem spam. Ou ',
+              'Avante Intelligence · semanal · sin spam. O '
+            )}
+            <Link
+              to={`/${language}/library`}
+              style={{ color: '#F9B437', textDecoration: 'underline' }}
+            >
+              {t('browse the Library', 'ver a Biblioteca', 'ver la Biblioteca')}
+            </Link>
+          </p>
         </div>
       </article>
 
