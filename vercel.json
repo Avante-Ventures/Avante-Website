@@ -4,6 +4,12 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.avanteventures.com" }],
+      "destination": "https://avanteventures.com/$1",
+      "permanent": true
+    },
     { "source": "/", "destination": "/en", "permanent": true }
   ],
   "rewrites": [
