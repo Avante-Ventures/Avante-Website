@@ -62,6 +62,32 @@
       })();
     </script>
 
+    <!-- Google Analytics 4 (gtag.js) — property G-C92YJ36HCY.
+
+         Guarded with `navigator.webdriver` for the SAME reason as the font
+         injection above: scripts/prerender.mjs runs headless Chromium over 47
+         routes on every build, and an unguarded gtag would fire ~47 phantom
+         pageview hits per deploy from the build host (localhost), polluting
+         GA4 with bot traffic. Puppeteer sets navigator.webdriver === true, so
+         the tag loads in real browsers only and never during prerender. This
+         also means the tag is injected at runtime and is intentionally ABSENT
+         from the prerendered static HTML — expected, not a bug. -->
+    <script>
+      (function () {
+        if (typeof navigator !== 'undefined' && navigator.webdriver) return;
+        var id = 'G-C92YJ36HCY';
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + id;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', id);
+      })();
+    </script>
+
     <!-- Favicons + PWA manifest -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
