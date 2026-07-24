@@ -5,6 +5,7 @@ import { BackToTop } from '@/app/components/BackToTop'
 import { Footer } from '@/app/components/Footer'
 import { SEOHelmet } from '@/app/components/SEOHelmet'
 import { AvanteLockup } from '@/app/components/AvanteLockup'
+import { RelatedInSeries } from '@/app/components/RelatedInSeries'
 import { articleBySlug, type ArticleSection } from '@/app/data/articles'
 
 export default function ArticlePage() {
@@ -313,6 +314,10 @@ export default function ArticlePage() {
             heading={t('Frequently asked questions', 'Perguntas frequentes', 'Preguntas frecuentes')}
           />
         )}
+
+        {/* Hub-and-spoke cluster links: pillar + rotating siblings, driven by
+            data/clusters.ts (code-only, survives content-engine re-merges). */}
+        <RelatedInSeries slug={article.slug} />
 
         {/* Tier 3 / use 10 — Newsletter signature. Closes the article as a
             signed editorial letter from the firm rather than an anonymous
