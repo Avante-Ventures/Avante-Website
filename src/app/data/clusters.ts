@@ -64,6 +64,30 @@ export const CLUSTERS: Cluster[] = [
       'technical-cofounder-vs-venture-studio',
     ],
   },
+  {
+    id: 'brazil-market',
+    hub: 'brazil-ai-market-report-2026',
+    label: {
+      en: 'More on the Brazil AI market',
+      pt: 'Mais sobre o mercado de IA no Brasil',
+      es: 'Más sobre el mercado de IA en Brasil',
+    },
+    members: [
+      'brazil-services-economy-opportunity',
+      'brazilian-regulatory-complexity-as-moat',
+      'brazil-ai-fintech-market-opportunity',
+      'brazil-generative-ai-market-opportunity',
+      'brazil-industrial-ai-market-opportunity',
+      'brazil-computer-vision-market-opportunity',
+      'brazil-ai-agriculture-agritech-opportunity',
+      'brazil-ai-cybersecurity-opportunity',
+      'brazil-receivables-automation-ai-opportunity',
+      // Test batch (2026-07):
+      'brazil-ai-studio-market-opportunity',
+      'brazil-mobile-ai-market-opportunity',
+      'brazil-ai-image-generator-market-opportunity',
+    ],
+  },
 ]
 
 // Deterministic string hash (no Math.random) so prerendered HTML stays stable.

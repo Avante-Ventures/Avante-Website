@@ -380,7 +380,7 @@
   <!-- 9. Global Venture Studio Data (DRAFT) -->
 
   <!-- CONTENT-ENGINE:START (managed by content-engine/merge.py - do not edit by hand) -->
-  <!-- 85 engine article(s) x 3 locales. Generated from content-engine/outputs. Edit the engine, not this block. -->
+  <!-- 88 engine article(s) x 3 locales. Generated from content-engine/outputs. Edit the engine, not this block. -->
   <url>
     <loc>https://avanteventures.com/en/library/accelerator-vs-vc-founder-guide</loc>
     <lastmod>2026-06-21</lastmod>
@@ -922,6 +922,66 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/brazil-ai-fintech-market-opportunity"/>
   </url>
   <url>
+    <loc>https://avanteventures.com/en/library/brazil-ai-image-generator-market-opportunity</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/brazil-ai-image-generator-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/brazil-ai-image-generator-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/brazil-ai-image-generator-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/brazil-ai-image-generator-market-opportunity"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/brazil-ai-image-generator-market-opportunity</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/brazil-ai-image-generator-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/brazil-ai-image-generator-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/brazil-ai-image-generator-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/brazil-ai-image-generator-market-opportunity"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/brazil-ai-image-generator-market-opportunity</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/brazil-ai-image-generator-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/brazil-ai-image-generator-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/brazil-ai-image-generator-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/brazil-ai-image-generator-market-opportunity"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/en/library/brazil-ai-studio-market-opportunity</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/brazil-ai-studio-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/brazil-ai-studio-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/brazil-ai-studio-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/brazil-ai-studio-market-opportunity"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/brazil-ai-studio-market-opportunity</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/brazil-ai-studio-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/brazil-ai-studio-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/brazil-ai-studio-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/brazil-ai-studio-market-opportunity"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/brazil-ai-studio-market-opportunity</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/brazil-ai-studio-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/brazil-ai-studio-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/brazil-ai-studio-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/brazil-ai-studio-market-opportunity"/>
+  </url>
+  <url>
     <loc>https://avanteventures.com/en/library/brazil-computer-vision-market-opportunity</loc>
     <lastmod>2026-06-21</lastmod>
     <changefreq>yearly</changefreq>
@@ -1010,6 +1070,36 @@
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/brazil-industrial-ai-market-opportunity"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/brazil-industrial-ai-market-opportunity"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/brazil-industrial-ai-market-opportunity"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/en/library/brazil-mobile-ai-market-opportunity</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/brazil-mobile-ai-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/brazil-mobile-ai-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/brazil-mobile-ai-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/brazil-mobile-ai-market-opportunity"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/pt/library/brazil-mobile-ai-market-opportunity</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/brazil-mobile-ai-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/brazil-mobile-ai-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/brazil-mobile-ai-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/brazil-mobile-ai-market-opportunity"/>
+  </url>
+  <url>
+    <loc>https://avanteventures.com/es/library/brazil-mobile-ai-market-opportunity</loc>
+    <lastmod>2026-07-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/brazil-mobile-ai-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/brazil-mobile-ai-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/brazil-mobile-ai-market-opportunity"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/brazil-mobile-ai-market-opportunity"/>
   </url>
   <url>
     <loc>https://avanteventures.com/en/library/brazil-receivables-automation-ai-opportunity</loc>
