@@ -31,6 +31,12 @@ Our model: pre-traction capital + repeatable operational system + in-market exec
 - Brazil-native execution: SF venture-building standards adapted to fragmented LATAM markets
 - AI-native approach: AI is core to product design, not bolted on
 
+## Elsewhere
+
+- LinkedIn: https://www.linkedin.com/company/avante-ventures/
+- Substack (Avante Intelligence, weekly analysis): https://avanteventures.substack.com
+- GitHub: https://github.com/Avante-Ventures
+
 ## Pages (English)
 
 - [Home](https://avanteventures.com/en): Mission, model, ventures, team, contact
