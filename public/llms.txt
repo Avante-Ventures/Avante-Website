@@ -34,6 +34,8 @@ Our model: pre-traction capital + repeatable operational system + in-market exec
 ## Elsewhere
 
 - LinkedIn: https://www.linkedin.com/company/avante-ventures/
+- Crunchbase: https://www.crunchbase.com/organization/avante-ventures
+- Wellfound: https://wellfound.com/company/avante-ventures
 - Substack (Avante Intelligence, weekly analysis): https://avanteventures.substack.com
 - GitHub: https://github.com/Avante-Ventures
 
