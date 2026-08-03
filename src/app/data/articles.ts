@@ -1770,6 +1770,236 @@ const articleSiggaCaseStudy: Article = {
 // 88 article(s) generated from content-engine/outputs. Edit the engine, not this block.
 const engineArticles: Article[] = [
   {
+    "slug": "what-is-avante-ventures-ai-native-company-builder-brazil",
+    "category": "insights",
+    "type": "Article",
+    "readTime": "5 min",
+    "featured": false,
+    "date": "Aug 2026",
+    "datePublished": "2026-08-03",
+    "isPublished": true,
+    "en": {
+      "title": "What Is Avante Ventures and How Does It Build AI-Native Companies",
+      "description": "Avante Ventures is a venture builder that co-founds and operates AI-native companies in Brazil from day one. It is not a fund that writes checks and waits. It i",
+      "sections": [
+        {
+          "paragraphs": [
+            "Avante Ventures is a venture builder that co-founds and operates AI-native companies in Brazil from day one. It is not a fund that writes checks and waits. It is an operating team that gets into the work alongside founders."
+          ]
+        },
+        {
+          "heading": "Why People Are Searching for Avante Ventures Right Now",
+          "level": 2,
+          "paragraphs": [
+            "Search interest in Avante Ventures went from zero to real in a single week. That is not a coincidence. It is a signal. The Brazilian market is waking up to a specific question: who is actually building AI-native companies here, with operational discipline, not just capital?",
+            "Most of the searches landing on us are not casual. They come from founders who are tired of pitching to funds that do not understand product. From operators who want to build something that matters. From investors and partners who are looking for a credible, structured entry point into Brazilian AI.",
+            "We are writing this article because the demand is real and the answer deserves to be clear."
+          ]
+        },
+        {
+          "heading": "AI as the Foundation, Not the Feature",
+          "level": 2,
+          "paragraphs": [
+            "Most companies add AI. They bolt it onto existing workflows, call it a product, and ship a press release. That is not what we do. At Avante, AI is the architectural decision made on day one, before the first line of code, before the first hire.",
+            "This distinction matters more than most people realize. A company built on AI thinks differently about data, about unit economics, about how it scales. It does not retrofit intelligence into a broken process. It designs the process around intelligence from the start.",
+            "Brazil has a specific opportunity here. The market is large, underdigitized in key sectors, and still early in the AI adoption curve. Companies that get the foundation right now will be structurally harder to compete with in three years. That window is the bet we are making."
+          ],
+          "bullets": [
+            "AI-native means decisions, workflows, and business models are designed around AI from inception",
+            "Not an add-on feature — a core architectural principle",
+            "Founders who understand this build faster, leaner, and with cleaner unit economics"
+          ]
+        },
+        {
+          "heading": "The Venture Builder Model vs. the Traditional Fund",
+          "level": 2,
+          "paragraphs": [
+            "A traditional fund raises capital, deploys it into startups, and manages a portfolio from the outside. The value-add is usually network, governance, and follow-on checks. That model works. But it is not what the AI-native moment in Brazil requires.",
+            "A venture builder co-founds. It shows up before the product exists. It helps define the problem, the architecture, the first team, the go-to-market motion. It takes operational risk alongside the founder. The relationship is not investor-to-portfolio. It is co-builder-to-company.",
+            "Avante operates as a venture builder. We bring a repeatable playbook, a network of operators, and hands-on support across strategy, product, and execution. We do not advise from the sideline. We sit at the table.",
+            "For founders, this means you are not alone in the early chaos. For investors and partners, it means there is an experienced operating layer between capital and company risk."
+          ]
+        },
+        {
+          "heading": "The Playbook: Proven Frameworks, Brazilian Context",
+          "level": 2,
+          "paragraphs": [
+            "There is a way to build technology companies that has been tested and refined over decades in the most competitive startup ecosystems in the world. The principles are not secret. Speed of iteration. Tight feedback loops. Hiring for ownership. Designing for distribution from day one.",
+            "What has been missing in Brazil is not access to these ideas. It is the operational translation. What does a two-week sprint cycle look like when your engineering team is in São Paulo and your customer is a mid-sized enterprise in Porto Alegre? How do you run a growth loop in a market where B2B sales still depends heavily on relationships and trust?",
+            "Avante exists to answer those questions with specificity. Not with frameworks from a slide deck. With decisions we have made, mistakes we have absorbed, and patterns we have seen repeat. To understand more about how the AI studio model fits into the Brazilian market, [Brazil AI Studio Market: What It Is and Why It Matters Now](https://avanteventures.com/library/brazil-ai-studio-market-what-it-is-why-it-matters) is worth reading before your first conversation with us.",
+            "The playbook is not a rigid system. It is a set of principles applied with judgment. That judgment comes from having built before."
+          ],
+          "bullets": [
+            "Speed of iteration adapted to Brazilian enterprise sales cycles",
+            "Go-to-market motion built for relationship-driven B2B markets",
+            "Hiring frameworks tuned for the local talent landscape",
+            "Growth loops designed for markets with strong regional variation"
+          ]
+        },
+        {
+          "heading": "Building in the Open: What Portfolio Construction Looks Like",
+          "level": 2,
+          "paragraphs": [
+            "We do not hide the portfolio in a PDF. We build in the open. That means being transparent about what we are working on, what stage companies are at, and what problems we are trying to solve.",
+            "This is a deliberate choice. The best founders, operators, and potential co-builders find us because they see the work, not because we ran a campaign. Transparency about the portfolio also keeps us honest. We do not get to claim progress we have not made.",
+            "Right now, the portfolio is in early construction. That is not a weakness. It is an invitation. If you are a founder with a real problem and the conviction to build something AI-native in Brazil, this is the moment to have the conversation."
+          ]
+        },
+        {
+          "heading": "Who Is Behind the Thesis",
+          "level": 2,
+          "paragraphs": [
+            "Venture builders fail when they are run by people who have only invested, never built. The operating credibility has to be real. At Avante, the team behind the thesis has done the work — shipping products, managing teams, navigating the specific friction of the Brazilian market.",
+            "This is not a credential flex. It is a functional requirement. When a portfolio founder hits a wall at 2am, the value of the venture builder is not a warm introduction. It is someone who has hit the same wall and knows which way to turn.",
+            "The operators behind Avante are not advisors. They are in the building."
+          ]
+        },
+        {
+          "heading": "What This Means for Founders Looking to Build",
+          "level": 2,
+          "paragraphs": [
+            "If you are a founder or operator with a specific problem in mind, a strong point of view on a sector, and the appetite to build an AI-native company in Brazil — this is directly relevant to you.",
+            "What Avante offers is not just capital. It is a co-building relationship with people who will work alongside you from zero to one, with a playbook that reduces the cost of mistakes in the early stage, and with a network that opens doors that take most founders years to reach on their own.",
+            "The bar to start a conversation is low. A real problem. A real conviction. The rest we can figure out together.",
+            "If you are an investor or strategic partner looking for structured exposure to Brazilian AI, the venture builder model offers something a fund typically cannot: an operating layer that is actively managing company risk, not just capital risk."
+          ],
+          "bullets": [
+            "Co-building from day zero, not check-writing from the sideline",
+            "Operational support across product, strategy, and go-to-market",
+            "Access to a tested playbook for the Brazilian AI-native context",
+            "A portfolio being built with transparency and rigor"
+          ]
+        },
+        {
+          "heading": "The Next Step Is Simple",
+          "level": 2,
+          "paragraphs": [
+            "If you searched for Avante Ventures and landed here, the next move is direct. Explore what we are building at avanteventures.com. Read the thinking behind the thesis. Look at how we approach the venture builder model in the Brazilian AI context.",
+            "If something resonates, reach out. We respond to founders with real problems. We engage with partners who understand the market. We do not do long application forms or formal pitch processes at the early stage.",
+            "The conversation is the beginning of the work."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "a": "Avante Ventures is a venture builder that co-founds and operates AI-native companies in Brazil. Unlike a traditional fund, we get involved before the company exists — helping define the problem, the product architecture, the team, and the go-to-market strategy. We work alongside founders as operators, not observers.",
+          "q": "What exactly does Avante Ventures do?"
+        },
+        {
+          "a": "Neither label fits perfectly. Avante is a venture builder — a model that combines the capital function of a fund with the operational depth of a startup studio. We take equity, we co-build, and we stay involved through the critical early stages. The distinction matters because it changes what founders actually get from the relationship.",
+          "q": "Is Avante Ventures a fund or a startup studio?"
+        },
+        {
+          "a": "Start by exploring the thesis and the portfolio at avanteventures.com. If you are a founder with a real problem and conviction to build an AI-native company in Brazil, reach out directly. If you are an investor or strategic partner looking for structured exposure to Brazilian AI, the conversation starts the same way — a direct message, no formal process required at this stage.",
+          "q": "How can I work with Avante Ventures as a founder or partner?"
+        }
+      ]
+    },
+    "pt": {
+      "title": "O Que É a Avante Ventures e Como Ela Constrói Empresas AI-Native",
+      "description": "A Avante Ventures é uma venture builder que co-funda e opera empresas AI-native no Brasil desde o primeiro dia. Não é um fundo que assina cheques e espera. É um",
+      "sections": [
+        {
+          "paragraphs": [
+            "A Avante Ventures é uma venture builder que co-funda e opera empresas AI-native no Brasil desde o primeiro dia. Não é um fundo que assina cheques e espera. É um time de operadores que entra no trabalho junto com os fundadores."
+          ]
+        },
+        {
+          "heading": "Por Que as Pessoas Estão Buscando Avante Ventures Agora",
+          "level": 2,
+          "paragraphs": [
+            "O interesse de busca pela Avante Ventures foi do zero a real em uma única semana. Não é coincidência. É um sinal. O mercado brasileiro está acordando para uma pergunta específica: quem está de fato construindo empresas AI-native por aqui, com disciplina operacional — não só com capital?",
+            "A maioria das buscas que chegam até nós não é casual. Vêm de fundadores cansados de fazer pitch para fundos que não entendem de produto. De operadores que querem construir algo que importa. De investidores e parceiros que procuram um ponto de entrada estruturado e confiável no ecossistema de IA brasileiro.",
+            "Estamos escrevendo este artigo porque a demanda é real e a resposta merece ser clara."
+          ]
+        },
+        {
+          "heading": "IA Como Fundação, Não Como Feature",
+          "level": 2,
+          "paragraphs": [
+            "A maioria das empresas adiciona IA. Cola ela em cima de processos existentes, chama de produto e manda um press release. Não é isso que fazemos. Na Avante, IA é a decisão arquitetural tomada no dia zero — antes da primeira linha de código, antes da primeira contratação.",
+            "Essa distinção importa mais do que a maioria das pessoas percebe. Uma empresa construída sobre IA pensa de forma diferente sobre dados, sobre unit economics, sobre como escala. Ela não retrofita inteligência em um processo quebrado. Ela desenha o processo em torno da inteligência desde o início.",
+            "O Brasil tem uma oportunidade específica aqui. O mercado é grande, subdigitalizado em setores-chave e ainda no início da curva de adoção de IA. As empresas que acertarem a fundação agora serão estruturalmente mais difíceis de competir em três anos. Essa janela é a aposta que estamos fazendo."
+          ],
+          "bullets": [
+            "AI-native significa que decisões, fluxos de trabalho e modelos de negócio são desenhados em torno da IA desde a concepção",
+            "Não é uma feature adicional — é um princípio arquitetural central",
+            "Fundadores que entendem isso constroem mais rápido, com menos gordura e com unit economics mais limpas"
+          ]
+        },
+        {
+          "heading": "O Modelo de Venture Builder vs. o Fundo Tradicional",
+          "level": 2,
+          "paragraphs": [
+            "Um fundo tradicional capta capital, investe em startups e gerencia um portfólio de fora. O valor agregado costuma ser rede de contatos, governança e cheques de follow-on. Esse modelo funciona. Mas não é o que o momento AI-native no Brasil exige.",
+            "Uma venture builder co-funda. Aparece antes de o produto existir. Ajuda a definir o problema, a arquitetura, o primeiro time, o movimento de go-to-market. Assume risco operacional junto com o fundador. A relação não é investidor-portfólio. É co-construtor-empresa.",
+            "A Avante opera como uma venture builder. Trazemos um playbook replicável, uma rede de operadores e suporte hands-on em estratégia, produto e execução. Não aconselhamos da arquibancada. Sentamos à mesa.",
+            "Para fundadores, isso significa que você não está sozinho no caos inicial. Para investidores e parceiros, significa que há uma camada operacional experiente entre o capital e o risco da empresa."
+          ]
+        },
+        {
+          "heading": "O Playbook: Frameworks Testados, Contexto Brasileiro",
+          "level": 2,
+          "paragraphs": [
+            "Existe uma forma de construir empresas de tecnologia que foi testada e refinada ao longo de décadas nos ecossistemas de startups mais competitivos do mundo. Os princípios não são segredo. Velocidade de iteração. Ciclos curtos de feedback. Contratações orientadas a ownership. Produto desenhado para distribuição desde o primeiro dia.",
+            "O que faltou no Brasil não foi acesso a essas ideias. Foi a tradução operacional. Como é um ciclo de sprint de duas semanas quando o time de engenharia está em São Paulo e o cliente é uma empresa de médio porte em Porto Alegre? Como você constrói um growth loop em um mercado onde o B2B ainda depende muito de relacionamento e confiança?",
+            "A Avante existe para responder a essas perguntas com especificidade. Não com frameworks de slide deck. Com decisões que tomamos, erros que absorvemos e padrões que vimos se repetir. Para entender melhor como o modelo de AI studio se encaixa no mercado brasileiro, vale a leitura de [Brazil AI Studio Market: What It Is and Why It Matters Now](https://avanteventures.com/library/brazil-ai-studio-market-what-it-is-why-it-matters) antes da sua primeira conversa conosco.",
+            "O playbook não é um sistema rígido. É um conjunto de princípios aplicados com julgamento. E esse julgamento vem de já ter construído antes."
+          ],
+          "bullets": [
+            "Velocidade de iteração adaptada aos ciclos de vendas enterprise no Brasil",
+            "Movimento de go-to-market construído para mercados B2B orientados a relacionamento",
+            "Frameworks de contratação calibrados para o cenário local de talentos",
+            "Growth loops desenhados para mercados com forte variação regional"
+          ]
+        },
+        {
+          "heading": "Construindo em Público: Como É a Construção do Portfólio",
+          "level": 2,
+          "paragraphs": [
+            "Não escondemos o portfólio em um PDF. Construímos em público. Isso significa ser transparente sobre o que estamos trabalhando, em que estágio as empresas estão e quais problemas estamos tentando resolver.",
+            "É uma escolha deliberada. Os melhores fundadores, operadores e potenciais co-construtores nos encontram porque veem o trabalho — não porque rodamos uma campanha. A transparência sobre o portfólio também nos mantém honestos. Não podemos reivindicar progresso que ainda não fizemos.",
+            "Agora, o portfólio está em construção inicial. Isso não é fraqueza. É um convite. Se você é um fundador com um problema real e a convicção de construir algo AI-native no Brasil, este é o momento de ter essa conversa."
+          ]
+        },
+        {
+          "heading": "Quem Está por Trás da Tese",
+          "level": 2,
+          "paragraphs": [
+            "Venture builders fracassam quando são tocadas por pessoas que só investiram, nunca construíram. A credibilidade operacional precisa ser real. Na Avante, o time por trás da tese fez o trabalho — entregou produtos, gerenciou times, navegou o atrito específico do mercado brasileiro.",
+            "Isso não é flexibilização de currículo. É um requisito funcional. Quando um fundador do portfólio bate em uma parede às 2 da manhã, o valor da venture builder não é uma introdução calorosa. É alguém que já bateu na mesma parede e sabe para qual lado virar.",
+            "Os operadores por trás da Avante não são advisors. Eles estão dentro do prédio."
+          ]
+        },
+        {
+          "heading": "O Que Isso Significa para Fundadores Que Querem Construir",
+          "level": 2,
+          "paragraphs": [
+            "Se você é fundador ou operador com um problema específico em mente, um ponto de vista forte sobre um setor e o apetite para construir uma empresa AI-native no Brasil — isso é diretamente relevante para você.",
+            "O que a Avante oferece não é só capital. É uma relação de co-construção com pessoas que vão trabalhar junto com você do zero ao um, com um playbook que reduz o custo dos erros no estágio inicial, e com uma rede que abre portas que levam anos para a maioria dos fundadores alcançar por conta própria.",
+            "A barra para começar uma conversa é baixa. Um problema real. Uma convicção real. O resto a gente descobre junto.",
+            "Se você é um investidor ou parceiro estratégico buscando exposição estruturada ao ecossistema de IA brasileiro, o modelo de venture builder oferece algo que um fundo tipicamente não consegue: uma camada operacional que gerencia ativamente o risco da empresa — não só o risco do capital."
+          ],
+          "bullets": [
+            "Co-construção desde o dia zero, não assinatura de cheque da arquibancada",
+            "Suporte operacional em produto, estratégia e go-to-market",
+            "Acesso a um playbook testado para o contexto AI-native brasileiro",
+            "Um portfólio sendo construído com transparência e rigor"
+          ]
+        },
+        {
+          "heading": "O Próximo Passo É Simples",
+          "level": 2,
+          "paragraphs": [
+            "Se você buscou pela Avante Ventures e chegou até aqui, o próximo movimento é direto. Explore o que estamos construindo em avanteventures.com. Leia o raciocínio por trás da tese. Veja como abordamos o modelo de venture builder no contexto de IA brasileiro.",
+            "Se algo ressoar, entre em contato. Respondemos a fundadores com problemas reais. Nos engajamos com parceiros que entendem o mercado. Não fazemos formulários longos nem processos formais de pitch no estágio inicial.",
+            "A conversa é o começo do trabalho."
+          ]
+        }
+      ]
+    }
+  },
+  {
     "slug": "how-do-venture-studios-make-money",
     "category": "insights",
     "type": "Article",
