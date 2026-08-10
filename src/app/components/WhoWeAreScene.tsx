@@ -25,6 +25,14 @@ type Operator = {
   highlight: { value: string; label: { en: string; pt: string; es: string } };
 };
 
+// ⚠️ This list is duplicated by hand in the investor portal:
+//      avante-hub/src/data/team.ts → TEAM[]
+//    Separate repos, so neither can import the other. Framing may differ
+//    (marketing vs IC track-record), but FACTS must not.
+//
+//    Canonical facts + the log of resolved conflicts:
+//      ~/Claude/projects/avante/TEAM-FACTS.md
+//    Update that file first, then propagate to both surfaces.
 const OPERATORS: Operator[] = [
   {
     slug: "amanda",
@@ -104,11 +112,11 @@ const OPERATORS: Operator[] = [
     coord: "23°33′S",
     accent: "#2fb6a3",
     fact: {
-      en: "8+ years building across LATAM and the USA. Full-stack, AI-native operator behind NEXA TECH, WIR · AXA and BR Auction Intel — ships products and GTM systems end-to-end.",
-      pt: "Mais de 8 anos construindo entre a LATAM e os EUA. Operador full-stack e AI-native por trás de NEXA TECH, WIR · AXA e BR Auction Intel — entrega produtos e sistemas de GTM de ponta a ponta.",
-      es: "Más de 8 años construyendo entre LATAM y EE. UU. Operador full-stack y AI-native detrás de NEXA TECH, WIR · AXA y BR Auction Intel — entrega productos y sistemas de GTM de punta a punta.",
+      en: "8+ years building across LATAM and the USA. Full-stack, AI-native operator behind AlphaJuri, WIR · AXA and BR Auction Intel — ships products and GTM systems end-to-end.",
+      pt: "Mais de 8 anos construindo entre a LATAM e os EUA. Operador full-stack e AI-native por trás de AlphaJuri, WIR · AXA e BR Auction Intel — entrega produtos e sistemas de GTM de ponta a ponta.",
+      es: "Más de 8 años construyendo entre LATAM y EE. UU. Operador full-stack y AI-native detrás de AlphaJuri, WIR · AXA y BR Auction Intel — entrega productos y sistemas de GTM de punta a punta.",
     },
-    companies: ["NEXA TECH", "WIR", "BR Auction Intel", "Mahway"],
+    companies: ["AlphaJuri", "WIR", "BR Auction Intel", "Mahway"],
     highlight: { value: "8+ yrs", label: { en: "building across LATAM & USA", pt: "construindo entre LATAM e EUA", es: "construyendo entre LATAM y EE. UU." } },
   },
   {
