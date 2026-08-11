@@ -3,10 +3,19 @@
 Vite **6.3.5** SPA + prerender. Trilingual **EN / PT / ES**.
 Repo `Avante-Ventures/Avante-Website`. Vercel project `avante-website`.
 
-> ⚠️ **Scope (verified 2026-08-10):** this project lives in `team_C8qbNEPkePG8k7PL1YF5Bq9w` — a third
-> Vercel org, **neither** team Avante nor the personal scope. The Vercel token connected to Claude
-> returns **403** for it, so this project cannot be inspected or deployed through Claude's Vercel tools.
-> Use the dashboard or a CLI session authenticated against that org.
+> ⚠️ **Scope (verified 2026-08-10):** this project lives in `team_C8qbNEPkePG8k7PL1YF5Bq9w`, slug
+> **`cristian-mendivelsos-projects`** — Cristian's *second* personal Vercel account, distinct from
+> `cristian-2293s-projects` (which holds `avante-hub-new`, `avante-brain`, `wir-website`) and from
+> team Avante (which holds only `alphajuri-webapp`).
+>
+> The Vercel token connected to Claude is authenticated against the *other* personal account, so it
+> returns **403** here — this project cannot be inspected or deployed through Claude's Vercel tools.
+> To watch a deploy without dashboard access:
+> `gh api repos/Avante-Ventures/Avante-Website/commits/<sha>/status` — the `target_url` is the
+> deployment, and `state` goes pending → success.
+>
+> Auto-deploy on push to `main` **is** wired and works. Budget ~8 minutes end to end
+> (Vite build + prerender + IndexNow + cache purge), not the ~2 a plain Vite build suggests.
 
 ## Build pings IndexNow automatically
 

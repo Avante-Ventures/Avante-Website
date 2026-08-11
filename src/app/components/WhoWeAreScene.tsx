@@ -123,7 +123,7 @@ const OPERATORS: Operator[] = [
     slug: "luiz",
     name: "Luiz Mitidiero",
     linkedin: "https://www.linkedin.com/in/luizmitidiero/",
-    role: { en: "Senior Software Engineer", pt: "Senior Software Engineer", es: "Senior Software Engineer" },
+    role: { en: "Head of Engineering", pt: "Head of Engineering", es: "Head of Engineering" },
     house: "Avante / FP AI",
     city: "São Paulo",
     coord: "23°33′S",
