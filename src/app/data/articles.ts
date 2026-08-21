@@ -1770,6 +1770,236 @@ const articleSiggaCaseStudy: Article = {
 // 88 article(s) generated from content-engine/outputs. Edit the engine, not this block.
 const engineArticles: Article[] = [
   {
+    "slug": "building-in-public-real-time-documentation-ai-native-companies",
+    "category": "insights",
+    "type": "Article",
+    "readTime": "6 min",
+    "featured": false,
+    "date": "Aug 2026",
+    "datePublished": "2026-08-21",
+    "isPublished": true,
+    "en": {
+      "title": "Building in Public: Why Real-Time Documentation Changes Everything",
+      "description": "Most companies are built behind closed doors and documented after the fact — if at all. Avante does the opposite: we document the build as it happens, because t",
+      "sections": [
+        {
+          "paragraphs": [
+            "Most companies are built behind closed doors and documented after the fact — if at all. Avante does the opposite: we document the build as it happens, because the process itself is the proof of thesis."
+          ]
+        },
+        {
+          "heading": "The Silence Behind Most Company Builds",
+          "level": 2,
+          "paragraphs": [
+            "Walk through any venture portfolio and ask a simple question: where is the real story of how this company was built? Not the pitch deck. Not the press release announcing the Series A. Not the founder interview recorded two years after the hard decisions were made.",
+            "It does not exist. The construction is invisible. What survives is the narrative — sanitized, compressed, told from a position of safety.",
+            "This is not a coincidence. It is a habit. Founders stay quiet because they fear signaling weakness to competitors, to investors, to the market. Studios and funds stay quiet because their edge is supposedly proprietary. Everyone waits until success is confirmed before speaking.",
+            "The result is a massive gap in the ecosystem. There is almost no real documentation of how AI-native companies actually get built — decision by decision, pivot by pivot, in real time."
+          ]
+        },
+        {
+          "heading": "Why the Gap Exists and Why It Matters",
+          "level": 2,
+          "paragraphs": [
+            "The absence of real-time documentation is not just a content problem. It is a structural problem that slows everything down.",
+            "When no one documents the build, every new founder starts from zero. They make the same mistakes. They hit the same walls. They waste months on questions that someone else already answered — but never published.",
+            "In the context of AI-native companies specifically, the problem compounds. The playbook for building with AI as a foundation — not as a feature bolted on — is still being written. There is no established canon. No standard curriculum. The builders who are figuring it out right now have a responsibility to show their work.",
+            "Avante was built on exactly this premise. If we are constructing a portfolio of AI-native companies in Brazil using a venture builder model, and we genuinely believe our approach is differentiated, then hiding that approach defeats the purpose. The documentation is part of the thesis."
+          ]
+        },
+        {
+          "heading": "What Real-Time Documentation Actually Means",
+          "level": 2,
+          "paragraphs": [
+            "It does not mean posting every internal Slack message. It does not mean narrating every failure before you understand what failed. Real-time documentation has a specific meaning at Avante.",
+            "It means capturing decisions as they are made — the reasoning, the tradeoffs, the information available at the time — not the cleaned-up version written with hindsight. It means publishing frameworks before they are proven, because the proving happens in public.",
+            "It means being specific. Not 'we are building AI-native companies in Brazil' in the abstract. But 'here is how we structured the equity split for a co-builder joining at this stage' and 'here is why we chose this AI architecture for this specific vertical' and 'here is what broke in the first sixty days and what we changed.'",
+            "This is operationally uncomfortable. It requires discipline. It requires genuine conviction that transparency compounds faster than secrecy."
+          ],
+          "bullets": [
+            "Decisions documented at the time they are made, not reconstructed later",
+            "Frameworks published before they are validated — with clear reasoning",
+            "Failures named specifically, not softened into 'learnings'",
+            "Architecture choices explained, not just announced",
+            "Co-builder relationships described in real terms, including equity and responsibility"
+          ]
+        },
+        {
+          "heading": "The Competitive Logic of Building in Public",
+          "level": 2,
+          "paragraphs": [
+            "There is a counterintuitive truth here. Most builders assume that publishing your process exposes you to competition. The actual dynamic is the opposite.",
+            "When you document the build in real time, you create an asymmetric advantage. You attract the exact people who can accelerate the work — operators, co-builders, domain experts, potential partners — who would never have found you inside a closed process. You compress the trust cycle that normally takes years to develop.",
+            "For a venture builder model specifically, this matters even more. Avante is not just building one company. We are building a portfolio, a methodology, a repeatable system. The documentation of that system is itself a competitive moat. It cannot be easily copied because the knowledge is embedded in the people and the decisions, not just the published words.",
+            "Investors and strategic partners operating in Brazil's AI market need more than a deck. They need evidence of operational thinking. Real-time documentation provides exactly that — a living record of how we think, how we move, and how we correct when we are wrong. You can read more about how this model works structurally in [What Is Avante Ventures and How Does It Build AI-Native Companies](https://avanteventures.com/en/library/what-is-avante-ventures-ai-native-company-builder-brazil)."
+          ]
+        },
+        {
+          "heading": "AI-Native Companies Demand a New Kind of Transparency",
+          "level": 2,
+          "paragraphs": [
+            "There is a specific reason this matters more for AI-native companies than for any other category right now.",
+            "When AI is the foundation — not the feature — the architectural decisions made in the first weeks of a company's life determine everything that follows. The choice of which AI systems to integrate at the core, how to structure data flows, where to place human judgment and where to automate — these are not implementation details. They are strategic decisions that compound.",
+            "No one is publishing these decisions in real time. The field moves fast, and the builders who are ahead are, by default, ahead in silence. This means the rest of the ecosystem learns slowly, from failures that happen to become visible through accidents rather than through deliberate sharing.",
+            "Avante's bet is that publishing the AI-native build process — the actual decisions, not just the outcomes — will define what good looks like in this market faster than any closed approach could. This is directly connected to the opportunity we see in the [Brazil AI Studio Market: What It Is and Why It Matters Now](https://avanteventures.com/en/library/brazil-ai-studio-market-what-it-is-why-it-matters)."
+          ]
+        },
+        {
+          "heading": "The Operators Behind the Documentation",
+          "level": 2,
+          "paragraphs": [
+            "Documentation without operational credibility is just content. The reason real-time build documentation works at Avante is that it comes from people who are making actual decisions, not commenting on decisions made by others.",
+            "The operators at Avante are inside the work. They are structuring the equity, hiring the first engineers, choosing the infrastructure, negotiating the first customer contracts. When they write about how a decision was made, it is because they made it — that week, not three years ago.",
+            "This is the distinction that matters. There is a growing ecosystem of people who write about building companies without building them. The documentation has a different texture. It is more abstract, more hedged, more careful. Real-time documentation from operators inside the build reads differently because the stakes are real.",
+            "Co-builders and founders who come to Avante are not getting a consultant's perspective on how companies are built. They are getting access to the active reasoning of people mid-build."
+          ]
+        },
+        {
+          "heading": "What This Means for Founders Considering Avante",
+          "level": 2,
+          "paragraphs": [
+            "If you are a founder or co-builder thinking about building an AI-native company in Brazil, the documentation we publish is not marketing. It is a preview of how we operate.",
+            "The frameworks we share publicly are the same frameworks we use internally. The decisions we document externally are the same quality of decisions we make in building the portfolio. There is no gap between what we say and what we do — because we are documenting what we do as we do it.",
+            "This creates a specific kind of trust that is hard to manufacture. By the time a founder sits down with Avante to talk seriously, they have already read how we think about equity structures, AI architecture decisions, co-builder relationships, and operational milestones. The conversation starts further along.",
+            "It also creates accountability. When you document your process in real time, you cannot quietly revise history. The record exists. That is a constraint that keeps the work honest."
+          ],
+          "bullets": [
+            "Frameworks published publicly are the same ones used internally",
+            "No gap between stated process and actual process",
+            "Potential co-builders arrive informed — conversations start at depth",
+            "Public documentation creates accountability that cannot be revised retroactively"
+          ]
+        },
+        {
+          "heading": "Start Here: Follow the Build",
+          "level": 2,
+          "paragraphs": [
+            "Avante publishes the build as it happens. Not summaries. Not retrospectives. The actual process — decisions, reasoning, corrections — documented in real time as we construct AI-native companies in Brazil.",
+            "If you are a founder who wants to understand how this works before committing to anything, start by reading. The library is the clearest signal of how Avante thinks and operates. If you are an investor or strategic partner evaluating exposure to Brazil's AI market, the documentation gives you something no deck can: evidence of operational discipline under real conditions.",
+            "The next step is simple. Read what we have published. If it resonates — if the reasoning matches how you think about building — reach out. We are not looking for everyone. We are looking for the people who read this and immediately understand why it matters."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "a": "Because the process is the proof. Avante's thesis is that building AI-native companies with a venture builder model is differentiated — but claims without evidence are just positioning. Real-time documentation creates a verifiable record of how decisions are made, which attracts the right co-builders and partners faster, creates genuine accountability, and contributes to an ecosystem that is desperately short on honest operational knowledge.",
+          "q": "Why does Avante document the company-building process in real time instead of waiting until success is confirmed?"
+        },
+        {
+          "a": "No — and this is a common misreading of how competitive advantage works in a venture builder context. The moat is not in the words published. It is in the people making the decisions, the relationships built through trust, and the compounding knowledge that accumulates inside the actual portfolio companies. Publishing the reasoning accelerates trust and attracts talent. It does not meaningfully help anyone who lacks the operational infrastructure to execute.",
+          "q": "Does publishing the build process expose Avante to competitors copying the model?"
+        },
+        {
+          "a": "Typical founder content is written from safety — after the outcome is known, after the narrative is clean. Real-time documentation captures decisions as they are made, with the information available at that moment, including the uncertainty. It reads differently because the stakes are still live. At Avante, the people writing are the same people making the decisions — not observers, not commentators, not ghostwriters working from interview notes.",
+          "q": "How is real-time documentation different from typical founder content or venture storytelling?"
+        }
+      ]
+    },
+    "pt": {
+      "title": "Construindo em Público: Por Que Documentar em Tempo Real Muda Tudo",
+      "description": "A maioria das empresas é construída a portas fechadas e documentada depois do fato — quando é documentada. A Avante faz o oposto: documentamos a construção enqu",
+      "sections": [
+        {
+          "paragraphs": [
+            "A maioria das empresas é construída a portas fechadas e documentada depois do fato — quando é documentada. A Avante faz o oposto: documentamos a construção enquanto ela acontece, porque o processo em si é a prova da tese."
+          ]
+        },
+        {
+          "heading": "O Silêncio por Trás da Maioria das Construções",
+          "level": 2,
+          "paragraphs": [
+            "Percorra qualquer portfólio de venture e faça uma pergunta simples: onde está a história real de como essa empresa foi construída? Não o pitch deck. Não o press release anunciando o Series A. Não a entrevista com o fundador gravada dois anos depois que as decisões difíceis já tinham sido tomadas.",
+            "Ela não existe. A construção é invisível. O que sobrevive é a narrativa — higienizada, comprimida, contada de um lugar seguro.",
+            "Isso não é coincidência. É um hábito. Fundadores ficam quietos porque temem sinalizar fraqueza para concorrentes, investidores e para o mercado. Studios e fundos ficam quietos porque supostamente seu diferencial é proprietário. Todo mundo espera o sucesso ser confirmado antes de falar.",
+            "O resultado é uma lacuna enorme no ecossistema. Quase não existe documentação real de como empresas AI-native são de fato construídas — decisão por decisão, pivô por pivô, em tempo real."
+          ]
+        },
+        {
+          "heading": "Por Que a Lacuna Existe e Por Que Isso Importa",
+          "level": 2,
+          "paragraphs": [
+            "A ausência de documentação em tempo real não é apenas um problema de conteúdo. É um problema estrutural que desacelera tudo.",
+            "Quando ninguém documenta a construção, cada novo fundador começa do zero. Comete os mesmos erros. Bate nas mesmas paredes. Desperdiça meses em perguntas que alguém já respondeu — mas nunca publicou.",
+            "No contexto de empresas AI-native especificamente, o problema se agrava. O playbook para construir com IA como fundação — não como uma feature adicionada depois — ainda está sendo escrito. Não existe um cânone estabelecido. Nenhum currículo padrão. Os builders que estão descobrindo isso agora têm a responsabilidade de mostrar seu trabalho.",
+            "A Avante foi construída exatamente sobre essa premissa. Se estamos montando um portfólio de empresas AI-native no Brasil usando um modelo de venture builder, e genuinamente acreditamos que nossa abordagem é diferenciada, então esconder essa abordagem derrota o propósito. A documentação é parte da tese."
+          ]
+        },
+        {
+          "heading": "O Que Documentação em Tempo Real Realmente Significa",
+          "level": 2,
+          "paragraphs": [
+            "Não significa publicar cada mensagem interna do Slack. Não significa narrar cada falha antes de entender o que falhou. Documentação em tempo real tem um significado específico na Avante.",
+            "Significa capturar decisões no momento em que são tomadas — o raciocínio, os trade-offs, as informações disponíveis naquele momento — não a versão polida escrita com o benefício do retrospecto. Significa publicar frameworks antes de eles serem provados, porque a prova acontece em público.",
+            "Significa ser específico. Não 'estamos construindo empresas AI-native no Brasil' em abstrato. Mas 'aqui está como estruturamos a divisão de equity para um co-builder que entrou nessa fase' e 'aqui está por que escolhemos essa arquitetura de IA para esse vertical específico' e 'aqui está o que quebrou nos primeiros sessenta dias e o que mudamos'.",
+            "Isso é operacionalmente desconfortável. Exige disciplina. Exige convicção genuína de que a transparência composta cresce mais rápido do que o segredo."
+          ],
+          "bullets": [
+            "Decisões documentadas no momento em que são tomadas, não reconstruídas depois",
+            "Frameworks publicados antes de serem validados — com raciocínio claro",
+            "Falhas nomeadas especificamente, não suavizadas em 'aprendizados'",
+            "Escolhas de arquitetura explicadas, não apenas anunciadas",
+            "Relações com co-builders descritas em termos reais, incluindo equity e responsabilidades"
+          ]
+        },
+        {
+          "heading": "A Lógica Competitiva de Construir em Público",
+          "level": 2,
+          "paragraphs": [
+            "Existe uma verdade contraintuitiva aqui. A maioria dos builders assume que publicar seu processo os expõe à concorrência. A dinâmica real é o oposto.",
+            "Quando você documenta a construção em tempo real, cria uma vantagem assimétrica. Você atrai exatamente as pessoas que podem acelerar o trabalho — operadores, co-builders, especialistas de domínio, parceiros em potencial — que jamais teriam te encontrado dentro de um processo fechado. Você comprime o ciclo de confiança que normalmente leva anos para se desenvolver.",
+            "Para um modelo de venture builder especificamente, isso importa ainda mais. A Avante não está construindo apenas uma empresa. Estamos construindo um portfólio, uma metodologia, um sistema replicável. A documentação desse sistema é em si um moat competitivo. Ele não pode ser facilmente copiado porque o conhecimento está embutido nas pessoas e nas decisões, não apenas nas palavras publicadas.",
+            "Investidores e parceiros estratégicos atuando no mercado de IA do Brasil precisam de mais do que um deck. Precisam de evidência de pensamento operacional. A documentação em tempo real oferece exatamente isso — um registro vivo de como pensamos, como nos movemos e como corrigimos quando estamos errados. Você pode ler mais sobre como esse modelo funciona estruturalmente em [O Que É a Avante Ventures e Como Ela Constrói Empresas AI-Native](https://avanteventures.com/en/library/what-is-avante-ventures-ai-native-company-builder-brazil)."
+          ]
+        },
+        {
+          "heading": "Empresas AI-Native Exigem um Novo Tipo de Transparência",
+          "level": 2,
+          "paragraphs": [
+            "Existe uma razão específica pela qual isso importa mais para empresas AI-native do que para qualquer outra categoria agora.",
+            "Quando a IA é a fundação — não a feature — as decisões arquiteturais tomadas nas primeiras semanas de vida de uma empresa determinam tudo o que vem depois. A escolha de quais sistemas de IA integrar no núcleo, como estruturar os fluxos de dados, onde colocar o julgamento humano e onde automatizar — esses não são detalhes de implementação. São decisões estratégicas que se compõem.",
+            "Ninguém está publicando essas decisões em tempo real. O campo se move rápido, e os builders que estão à frente estão, por padrão, à frente em silêncio. Isso significa que o restante do ecossistema aprende devagar, a partir de falhas que se tornam visíveis por acidentes em vez de por compartilhamento deliberado.",
+            "A aposta da Avante é que publicar o processo de construção AI-native — as decisões reais, não apenas os resultados — vai definir o que significa fazer bem feito nesse mercado mais rápido do que qualquer abordagem fechada poderia. Isso está diretamente conectado à oportunidade que enxergamos no [Mercado de AI Studios no Brasil: O Que É e Por Que Importa Agora](https://avanteventures.com/en/library/brazil-ai-studio-market-what-it-is-why-it-matters)."
+          ]
+        },
+        {
+          "heading": "Os Operadores por Trás da Documentação",
+          "level": 2,
+          "paragraphs": [
+            "Documentação sem credibilidade operacional é apenas conteúdo. A razão pela qual a documentação de construção em tempo real funciona na Avante é que ela vem de pessoas que estão tomando decisões reais, não comentando decisões tomadas por outros.",
+            "Os operadores da Avante estão dentro do trabalho. Estão estruturando o equity, contratando os primeiros engenheiros, escolhendo a infraestrutura, negociando os primeiros contratos com clientes. Quando escrevem sobre como uma decisão foi tomada, é porque a tomaram — naquela semana, não três anos atrás.",
+            "Essa é a distinção que importa. Existe um ecossistema crescente de pessoas que escrevem sobre construir empresas sem construí-las. A documentação tem uma textura diferente. É mais abstrata, mais cautelosa, mais comedida. A documentação em tempo real de operadores dentro da construção tem uma leitura diferente porque as apostas são reais.",
+            "Co-builders e fundadores que chegam à Avante não estão recebendo a perspectiva de um consultor sobre como empresas são construídas. Estão tendo acesso ao raciocínio ativo de pessoas no meio da construção."
+          ]
+        },
+        {
+          "heading": "O Que Isso Significa para Fundadores Considerando a Avante",
+          "level": 2,
+          "paragraphs": [
+            "Se você é um fundador ou co-builder pensando em construir uma empresa AI-native no Brasil, a documentação que publicamos não é marketing. É uma prévia de como operamos.",
+            "Os frameworks que compartilhamos publicamente são os mesmos que usamos internamente. As decisões que documentamos externamente têm a mesma qualidade das decisões que tomamos na construção do portfólio. Não há gap entre o que dizemos e o que fazemos — porque estamos documentando o que fazemos enquanto fazemos.",
+            "Isso cria um tipo específico de confiança difícil de fabricar. Quando um fundador senta com a Avante para conversar de verdade, ele já leu como pensamos sobre estruturas de equity, decisões de arquitetura de IA, relações com co-builders e marcos operacionais. A conversa começa mais adiante.",
+            "Também cria responsabilidade. Quando você documenta seu processo em tempo real, não pode silenciosamente revisar a história. O registro existe. Essa é uma restrição que mantém o trabalho honesto."
+          ],
+          "bullets": [
+            "Frameworks publicados publicamente são os mesmos usados internamente",
+            "Nenhum gap entre processo declarado e processo real",
+            "Potenciais co-builders chegam informados — as conversas começam com profundidade",
+            "A documentação pública cria responsabilidade que não pode ser revisada retroativamente"
+          ]
+        },
+        {
+          "heading": "Comece Aqui: Acompanhe a Construção",
+          "level": 2,
+          "paragraphs": [
+            "A Avante publica a construção enquanto ela acontece. Não resumos. Não retrospectivas. O processo real — decisões, raciocínio, correções — documentado em tempo real enquanto construímos empresas AI-native no Brasil.",
+            "Se você é um fundador que quer entender como isso funciona antes de se comprometer com qualquer coisa, comece lendo. A biblioteca é o sinal mais claro de como a Avante pensa e opera. Se você é um investidor ou parceiro estratégico avaliando exposição ao mercado de IA do Brasil, a documentação oferece algo que nenhum deck consegue: evidência de disciplina operacional sob condições reais.",
+            "O próximo passo é simples. Leia o que publicamos. Se ressoar — se o raciocínio combinar com a forma como você pensa sobre construção — entre em contato. Não estamos em busca de todo mundo. Estamos em busca das pessoas que leem isso e imediatamente entendem por que importa."
+          ]
+        }
+      ]
+    }
+  },
+  {
     "slug": "alphajuri-build-log-errors-we-made-fixed-and-learned",
     "category": "insights",
     "type": "Article",
