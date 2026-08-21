@@ -1770,6 +1770,230 @@ const articleSiggaCaseStudy: Article = {
 // 88 article(s) generated from content-engine/outputs. Edit the engine, not this block.
 const engineArticles: Article[] = [
   {
+    "slug": "alphajuri-build-log-errors-we-made-fixed-and-learned",
+    "category": "insights",
+    "type": "Article",
+    "readTime": "6 min",
+    "featured": false,
+    "date": "Aug 2026",
+    "datePublished": "2026-08-21",
+    "isPublished": true,
+    "en": {
+      "title": "AlphaJuri Build Log: Errors We Made, Fixed, and Learned From",
+      "description": "Building AI-native legal tech means failing fast and fixing faster. At Avante, we document every meaningful error in our portfolio companies — not as a postmort",
+      "sections": [
+        {
+          "paragraphs": [
+            "Building AI-native legal tech means failing fast and fixing faster. At Avante, we document every meaningful error in our portfolio companies — not as a postmortem ritual, but as a live operating discipline that compounds over time."
+          ]
+        },
+        {
+          "heading": "Why We Publish This at All",
+          "level": 2,
+          "paragraphs": [
+            "Most venture builders hide their mistakes. They publish milestone announcements, not failure logs. Avante does the opposite.",
+            "AlphaJuri is one of our companies in active construction. It sits at the intersection of legal intelligence and AI — a space where the margin for hallucination, misclassification, and trust erosion is essentially zero. Every error costs credibility. Every fix compounds learning.",
+            "So we write it down. Publicly. Not because it's comfortable, but because the founders and co-builders who want to work with Avante deserve to see how we actually operate — not how we say we operate."
+          ]
+        },
+        {
+          "heading": "Error #1: We Let the LLM Cite Clauses That Didn't Exist",
+          "level": 2,
+          "paragraphs": [
+            "The most embarrassing week in AlphaJuri's short life came when our document analysis module confidently cited Article 473, Paragraph 2 of a contract — a clause the contract did not contain.",
+            "The model was pattern-matching from training data on similar contract structures, not grounding output in the actual uploaded document. The retrieval layer was too loose. The prompt gave the model too much latitude to 'fill in' what should have been there.",
+            "What we fixed: We tightened the retrieval-augmented generation (RAG) pipeline to require strict source attribution. Every clause reference now must be pulled verbatim from the indexed document. If it isn't there, the model says so instead of inventing it.",
+            "What we learned: Confidence calibration in legal AI is not a UX problem — it's an architecture problem. You solve it upstream, not with a disclaimer at the bottom of the screen."
+          ]
+        },
+        {
+          "heading": "Error #2: We Shipped a Feature the User Never Asked For",
+          "level": 2,
+          "paragraphs": [
+            "We built a contract comparison view that showed clause-by-clause diffs side by side. Clean interface. Good engineering. Zero usage in the first two weeks.",
+            "We went back to the early users. They didn't want to compare clauses. They wanted to know which party held more risk exposure in a given clause — a judgment call, not a visual diff.",
+            "The feature answered the wrong question because we built from assumptions instead of sessions. We had not sat with a lawyer and watched them actually work through a contract review in real time.",
+            "What we fixed: We replaced the diff view with a risk-scoring layer per clause. The model now flags which party bears obligation, what triggers that obligation, and what the consequence of breach looks like in plain language.",
+            "What we learned: In legal tech, the job-to-be-done is almost never 'show me more information.' It's 'tell me what to worry about.' Those are fundamentally different product directions."
+          ]
+        },
+        {
+          "heading": "Error #3: Our Onboarding Assumed Too Much Legal Sophistication",
+          "level": 2,
+          "paragraphs": [
+            "AlphaJuri's early positioning skewed toward senior lawyers. The onboarding copy reflected that — dense, terminology-heavy, minimal hand-holding.",
+            "Then we watched a paralegal try to use the product. She uploaded a document, saw the output, and didn't know what to do with it. Not because the output was wrong — because the interface gave her no action prompt. Just analysis. No 'here's what to do next.'",
+            "This is a common failure mode in AI products: the model does the hard cognitive work, then drops the user in an empty room.",
+            "What we fixed: We added structured action prompts after every analysis block. The interface now surfaces three possible next steps based on what the model found — draft a response, flag for escalation, or mark as resolved.",
+            "What we learned: AI output without workflow integration is a research tool, not a work tool. AlphaJuri needs to be the latter."
+          ]
+        },
+        {
+          "heading": "Error #4: We Ignored Latency Until Users Started Ignoring Us",
+          "level": 2,
+          "paragraphs": [
+            "Legal professionals work under time pressure. A contract review that takes forty-five seconds to load is not a minor inconvenience — it breaks the work rhythm and trains users to stop expecting the product to be fast.",
+            "We had optimized for output quality at the expense of response time. Our pipeline was running sequential calls where parallel calls were entirely viable. We hadn't profiled it. We assumed it was fast enough because it felt fast in internal testing.",
+            "It wasn't. Real documents are longer. Real users don't wait.",
+            "What we fixed: We restructured the pipeline to run document chunking and clause classification in parallel. Response time dropped significantly. We also added a streaming output view so users see partial results as they arrive instead of waiting for the full response.",
+            "What we learned: In AI-native products, perceived speed is a product feature, not an infrastructure detail. It belongs in the spec, not the backlog."
+          ]
+        },
+        {
+          "heading": "Error #5: We Didn't Define 'Done' for the AI Layer",
+          "level": 2,
+          "paragraphs": [
+            "This is the most structural error on the list — and the one that took us longest to name.",
+            "When you're building with AI, there's a persistent temptation to keep iterating on the model behavior without declaring a stable baseline. Every week the outputs get slightly better. Every week you resist shipping because 'we can improve it a little more.'",
+            "We fell into this trap with AlphaJuri's clause classification module. We spent three weeks in quality iteration without a defined acceptance threshold. The team was doing real work, but without a ship condition, 'good enough' had no meaning.",
+            "What we fixed: We now define explicit quality gates before any model component enters the build sprint. The gate has three elements — a minimum accuracy floor on a test set of real documents, a maximum hallucination rate, and a user task completion benchmark from observed sessions.",
+            "What we learned: AI development without acceptance criteria is not R&D — it's drift. You need the same engineering discipline you'd apply to any other system, applied to model behavior."
+          ],
+          "bullets": [
+            "Define the quality gate before you start iterating.",
+            "Separate 'improvement work' from 'ship-readiness work' in your sprint structure.",
+            "Real documents, not synthetic test sets, are your ground truth."
+          ]
+        },
+        {
+          "heading": "The Pattern Across All Five Errors",
+          "level": 2,
+          "paragraphs": [
+            "Look at these five errors together and a pattern emerges: every one of them traces back to the gap between what we assumed and what was actually true.",
+            "We assumed the model would stay grounded. It didn't. We assumed users wanted comparison. They wanted judgment. We assumed lawyers would onboard easily. Paralegals couldn't. We assumed our pipeline was fast. It wasn't under real conditions. We assumed improvement was always worth doing. It was — but only when pointed at a defined target.",
+            "This is the core operating discipline at Avante: assumptions are hypotheses, not facts. You test them as fast as possible, with real users, on real work. That's how [What Is Avante Ventures and How Does It Build AI-Native Companies](https://avanteventures.com/en/library/what-is-avante-ventures-ai-native-company-builder-brazil) actually translates into building — not just positioning.",
+            "AlphaJuri is not unique in making these errors. Every AI-native company in legal tech is navigating the same terrain. What matters is the velocity of detection and correction. A mistake that takes a week to find and fix is a feature, not a failure."
+          ]
+        },
+        {
+          "heading": "What This Means for Founders Building in AI-Native Verticals",
+          "level": 2,
+          "paragraphs": [
+            "If you're building an AI-native company in a high-stakes vertical — legal, health, finance, compliance — the error taxonomy above is not specific to AlphaJuri. It's close to universal.",
+            "The hallucination problem is architectural. The feature-market fit problem is a listening problem. The onboarding problem is a workflow integration problem. The latency problem is a prioritization problem. The 'done' problem is a discipline problem.",
+            "None of them are fixed by better prompts. All of them are fixed by operational rigor applied to AI as a first-class engineering system.",
+            "The venture builder model — where operators are inside the company, not observing from a cap table — is what makes this error log possible. Avante teams work inside AlphaJuri. We see the errors when they happen, not in a quarterly board deck. That's the structural advantage, and it's worth understanding how it differs from traditional fund structures. The [How Do Venture Studios Make Money? The Honest Breakdown](https://avanteventures.com/en/library/how-do-venture-studios-make-money) piece gets into why that alignment matters beyond the feel-good version.",
+            "If you're a founder who wants to build this way — with real operational support, documented learning, and AI as the foundation rather than a feature — Avante is building that infrastructure now."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "a": "AlphaJuri is an AI-native legal intelligence company being built inside the Avante venture studio. Avante provides operational co-building support — meaning Avante operators work directly inside AlphaJuri's development process, not as investors watching from the outside. It's one of several companies Avante is actively constructing in Brazil's AI-native ecosystem.",
+          "q": "What is AlphaJuri and how does it relate to Avante?"
+        },
+        {
+          "a": "Because the founders and co-builders Avante works with need to see the real operating method, not the polished version. Publishing error logs builds trust with the right audience — people who know that fast error detection and correction is a competitive advantage, not an embarrassment. It also keeps internal teams honest about velocity and discipline.",
+          "q": "Why does Avante publish internal error logs publicly?"
+        },
+        {
+          "a": "Yes. Hallucination in document-grounded tasks, feature-market fit drift, onboarding assumptions, latency underestimation, and undefined quality gates are structural challenges across AI-native products in high-stakes verticals. The errors themselves are not unusual — what varies is how fast teams find them, name them clearly, and fix them at the architectural level rather than patching symptoms.",
+          "q": "Are these errors common in other AI-native legal tech products?"
+        }
+      ]
+    },
+    "pt": {
+      "title": "Build Log do AlphaJuri: Erros que Cometemos, Corrigimos e Aprendemos",
+      "description": "Construir legal tech com IA no centro significa errar rápido e corrigir mais rápido ainda. Na Avante, documentamos cada erro relevante das nossas empresas do po",
+      "sections": [
+        {
+          "paragraphs": [
+            "Construir legal tech com IA no centro significa errar rápido e corrigir mais rápido ainda. Na Avante, documentamos cada erro relevante das nossas empresas do portfólio — não como ritual de pós-morte, mas como disciplina operacional viva que se acumula com o tempo."
+          ]
+        },
+        {
+          "heading": "Por Que Publicamos Isso",
+          "level": 2,
+          "paragraphs": [
+            "A maioria dos venture builders esconde seus erros. Publicam anúncios de marcos, não registros de falhas. A Avante faz o oposto.",
+            "O AlphaJuri é uma das nossas empresas em construção ativa. Ele opera na interseção entre inteligência jurídica e IA — um espaço onde a margem para alucinação, classificação errada e erosão de confiança é essencialmente zero. Cada erro custa credibilidade. Cada correção acumula aprendizado.",
+            "Por isso, escrevemos. Publicamente. Não porque é confortável, mas porque os fundadores e co-construtores que querem trabalhar com a Avante merecem ver como operamos de verdade — não como dizemos que operamos."
+          ]
+        },
+        {
+          "heading": "Erro #1: Deixamos o LLM Citar Cláusulas que Não Existiam",
+          "level": 2,
+          "paragraphs": [
+            "A semana mais constrangedora da curta vida do AlphaJuri foi quando nosso módulo de análise de documentos citou com total confiança o Artigo 473, Parágrafo 2º de um contrato — uma cláusula que o contrato simplesmente não continha.",
+            "O modelo estava fazendo correspondência de padrões com dados de treinamento sobre estruturas contratuais similares, em vez de ancorar a resposta no documento real enviado. A camada de recuperação estava frouxa demais. O prompt dava ao modelo liberdade demais para 'preencher' o que deveria estar lá.",
+            "O que corrigimos: Ajustamos o pipeline de geração aumentada por recuperação (RAG) para exigir atribuição estrita de fonte. Toda referência a cláusulas agora precisa ser extraída literalmente do documento indexado. Se não estiver lá, o modelo diz isso em vez de inventar.",
+            "O que aprendemos: A calibração de confiança em IA jurídica não é um problema de UX — é um problema de arquitetura. Você resolve isso na origem, não com um aviso de isenção de responsabilidade no rodapé da tela."
+          ]
+        },
+        {
+          "heading": "Erro #2: Entregamos uma Funcionalidade que o Usuário Nunca Pediu",
+          "level": 2,
+          "paragraphs": [
+            "Construímos uma visualização de comparação de contratos que mostrava diferenças cláusula por cláusula lado a lado. Interface limpa. Engenharia bem feita. Zero uso nas primeiras duas semanas.",
+            "Voltamos aos primeiros usuários. Eles não queriam comparar cláusulas. Queriam saber qual parte assumia mais exposição a risco em uma determinada cláusula — um julgamento, não uma diferença visual.",
+            "A funcionalidade respondia à pergunta errada porque construímos a partir de suposições, não de sessões de observação. Não tínhamos sentado com um advogado e observado ele revisando um contrato de verdade, em tempo real.",
+            "O que corrigimos: Substituímos a visualização de diferenças por uma camada de pontuação de risco por cláusula. O modelo agora sinaliza qual parte assume a obrigação, o que a aciona e qual é a consequência do descumprimento em linguagem simples.",
+            "O que aprendemos: Em legal tech, o trabalho a ser feito quase nunca é 'me mostre mais informação'. É 'me diga o que devo me preocupar'. São direções de produto fundamentalmente diferentes."
+          ]
+        },
+        {
+          "heading": "Erro #3: Nosso Onboarding Assumiu Sofisticação Jurídica Demais",
+          "level": 2,
+          "paragraphs": [
+            "O posicionamento inicial do AlphaJuri era voltado para advogados seniores. O conteúdo de onboarding refletia isso — denso, cheio de terminologia, com apoio mínimo ao usuário.",
+            "Então observamos uma paralegal tentando usar o produto. Ela fez o upload de um documento, viu o resultado e não soube o que fazer com ele. Não porque o resultado estava errado — mas porque a interface não dava nenhum prompt de ação. Só análise. Nenhum 'aqui está o que fazer a seguir'.",
+            "Esse é um padrão de falha comum em produtos de IA: o modelo faz o trabalho cognitivo pesado e depois abandona o usuário em uma sala vazia.",
+            "O que corrigimos: Adicionamos prompts de ação estruturados após cada bloco de análise. A interface agora apresenta três possíveis próximos passos com base no que o modelo encontrou — redigir uma resposta, escalar para revisão ou marcar como resolvido.",
+            "O que aprendemos: Resultado de IA sem integração ao fluxo de trabalho é uma ferramenta de pesquisa, não uma ferramenta de trabalho. O AlphaJuri precisa ser a segunda."
+          ]
+        },
+        {
+          "heading": "Erro #4: Ignoramos a Latência até os Usuários Começarem a nos Ignorar",
+          "level": 2,
+          "paragraphs": [
+            "Profissionais jurídicos trabalham sob pressão de tempo. Uma revisão de contrato que leva quarenta e cinco segundos para carregar não é um inconveniente menor — ela quebra o ritmo de trabalho e treina os usuários a parar de esperar que o produto seja rápido.",
+            "Tínhamos otimizado a qualidade do resultado às custas do tempo de resposta. Nosso pipeline executava chamadas sequenciais onde chamadas paralelas eram totalmente viáveis. Não tínhamos feito profiling. Assumimos que estava rápido o suficiente porque parecia rápido nos testes internos.",
+            "Não estava. Documentos reais são mais longos. Usuários reais não esperam.",
+            "O que corrigimos: Reestruturamos o pipeline para executar o chunking de documentos e a classificação de cláusulas em paralelo. O tempo de resposta caiu significativamente. Também adicionamos uma visualização de saída em streaming para que os usuários vejam resultados parciais à medida que chegam, em vez de aguardar a resposta completa.",
+            "O que aprendemos: Em produtos nativos de IA, velocidade percebida é uma funcionalidade do produto, não um detalhe de infraestrutura. Ela pertence à especificação, não ao backlog."
+          ]
+        },
+        {
+          "heading": "Erro #5: Não Definimos o que era 'Pronto' para a Camada de IA",
+          "level": 2,
+          "paragraphs": [
+            "Este é o erro mais estrutural da lista — e o que mais demorou para nomearmos.",
+            "Quando você constrói com IA, existe uma tentação persistente de continuar iterando sobre o comportamento do modelo sem declarar uma linha de base estável. A cada semana os resultados melhoram um pouco. A cada semana você resiste em entregar porque 'ainda dá para melhorar mais um pouco'.",
+            "Caímos nessa armadilha com o módulo de classificação de cláusulas do AlphaJuri. Passamos três semanas em iteração de qualidade sem um critério de aceitação definido. O time estava fazendo trabalho real, mas sem uma condição de entrega, 'bom o suficiente' não tinha significado.",
+            "O que corrigimos: Agora definimos gates de qualidade explícitos antes de qualquer componente de modelo entrar no sprint de construção. O gate tem três elementos — um piso mínimo de acurácia em um conjunto de teste com documentos reais, uma taxa máxima de alucinação e um benchmark de conclusão de tarefa observada em sessões com usuários.",
+            "O que aprendemos: Desenvolvimento de IA sem critérios de aceitação não é P&D — é deriva. Você precisa da mesma disciplina de engenharia que aplicaria a qualquer outro sistema, aplicada ao comportamento do modelo."
+          ],
+          "bullets": [
+            "Defina o gate de qualidade antes de começar a iterar.",
+            "Separe 'trabalho de melhoria' de 'trabalho de prontidão para entrega' na estrutura do seu sprint.",
+            "Documentos reais, não conjuntos de teste sintéticos, são sua fonte de verdade."
+          ]
+        },
+        {
+          "heading": "O Padrão por Trás dos Cinco Erros",
+          "level": 2,
+          "paragraphs": [
+            "Olhe para esses cinco erros juntos e um padrão emerge: todos eles remetem à lacuna entre o que assumimos e o que era verdadeiro de fato.",
+            "Assumimos que o modelo ficaria ancorado. Não ficou. Assumimos que os usuários queriam comparação. Queriam julgamento. Assumimos que advogados fariam o onboarding com facilidade. Paralegais não conseguiram. Assumimos que nosso pipeline era rápido. Não era sob condições reais. Assumimos que melhorar era sempre válido. Era — mas só quando apontado para um alvo definido.",
+            "Essa é a disciplina operacional central da Avante: suposições são hipóteses, não fatos. Você as testa o mais rápido possível, com usuários reais, em trabalho real. É assim que o modelo de construção da Avante se traduz em prática — não apenas em posicionamento.",
+            "O AlphaJuri não é único em cometer esses erros. Toda empresa nativa de IA em legal tech está navegando pelo mesmo terreno. O que importa é a velocidade de detecção e correção. Um erro que leva uma semana para ser encontrado e corrigido é uma funcionalidade, não uma falha."
+          ]
+        },
+        {
+          "heading": "O que Isso Significa para Fundadores Construindo em Verticais Nativas de IA",
+          "level": 2,
+          "paragraphs": [
+            "Se você está construindo uma empresa nativa de IA em uma vertical de alto risco — jurídico, saúde, finanças, compliance — a taxonomia de erros acima não é específica do AlphaJuri. É próxima do universal.",
+            "O problema de alucinação é arquitetural. O problema de fit funcionalidade-mercado é um problema de escuta. O problema de onboarding é um problema de integração ao fluxo de trabalho. O problema de latência é um problema de priorização. O problema do 'pronto' é um problema de disciplina.",
+            "Nenhum deles é resolvido com prompts melhores. Todos são resolvidos com rigor operacional aplicado à IA como um sistema de engenharia de primeira classe.",
+            "O modelo de venture builder — onde operadores estão dentro da empresa, não observando de uma posição no cap table — é o que torna esse registro de erros possível. Os times da Avante trabalham dentro do AlphaJuri. Vemos os erros quando acontecem, não em um relatório trimestral para o board. Essa é a vantagem estrutural, e vale entender como ela difere das estruturas tradicionais de fundo.",
+            "Se você é um fundador que quer construir dessa forma — com suporte operacional real, aprendizado documentado e IA como fundação em vez de funcionalidade — a Avante está construindo essa infraestrutura agora."
+          ]
+        }
+      ]
+    }
+  },
+  {
     "slug": "what-is-avante-ventures-ai-native-company-builder-brazil",
     "category": "insights",
     "type": "Article",
