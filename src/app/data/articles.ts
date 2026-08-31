@@ -8325,8 +8325,8 @@ const engineArticles: Article[] = [
     "datePublished": "2026-07-26",
     "isPublished": true,
     "en": {
-      "title": "Brazil AI Image Generator Market 2026: Where a Studio Would Build Past the Model",
-      "description": "The Brazil AI image generator market is small but marketing and e-commerce demand is large. The model is not the moat. Here is where a venture builds.",
+      "title": "Brazil AI Image Generator Market: USD 12.6M to USD 77.4M by 2035",
+      "description": "Brazil AI image generator market: USD 12.6 million in 2024 to USD 77.4 million by 2035 at 17.94 percent CAGR. A small market feeding very large marketing demand.",
       "sections": [
         {
           "paragraphs": [
@@ -8434,8 +8434,8 @@ const engineArticles: Article[] = [
       ]
     },
     "pt": {
-      "title": "Mercado de Geradores de Imagem por IA no Brasil em 2026: Onde um Studio Construiria Além do Modelo",
-      "description": "O mercado de geradores de imagem por IA no Brasil é pequeno como produto e enorme como demanda. A camada de modelo não é o moat. Veja onde construir.",
+      "title": "Mercado de Geradores de Imagem por IA no Brasil: USD 12,6M a USD 77,4M",
+      "description": "Mercado de geradores de imagem por IA no Brasil: USD 12,6 milhões em 2024 para USD 77,4 milhões até 2035, a 17,94 por cento de CAGR. Mercado pequeno, demanda enorme.",
       "sections": [
         {
           "paragraphs": [
@@ -8545,8 +8545,8 @@ const engineArticles: Article[] = [
       ]
     },
     "es": {
-      "title": "Mercado de Generador de Imágenes por IA en Brasil en 2026: Dónde Construiría un Studio Más Allá del Modelo",
-      "description": "El mercado de generador de imágenes por IA en Brasil es pequeño, pero la adopción en marketing y e-commerce es enorme. El modelo no es el moat.",
+      "title": "Mercado de Generador de Imágenes por IA en Brasil: USD 12,6M a USD 77,4M",
+      "description": "Mercado de generador de imágenes por IA en Brasil: USD 12,6 millones en 2024 a USD 77,4 millones para 2035, a 17,94 por ciento de CAGR. Demanda muy superior al mercado.",
       "sections": [
         {
           "paragraphs": [
@@ -9017,8 +9017,8 @@ const engineArticles: Article[] = [
     "datePublished": "2026-06-21",
     "isPublished": true,
     "en": {
-      "title": "Brazil Computer Vision Market: The Build Behind the Plant and the Field",
-      "description": "The Brazil computer vision market scales past USD 800 million by 2030. The moat is a proprietary labeled dataset, not the model. Where a venture would build.",
+      "title": "Brazil Computer Vision Market Size: USD 838M by 2030",
+      "description": "Brazil computer vision market: USD 838.3 million by 2030 at 18.5 percent CAGR, per Grand View Research. The drivers, and why the moat is the dataset not the model.",
       "sections": [
         {
           "paragraphs": [
@@ -9133,8 +9133,8 @@ const engineArticles: Article[] = [
       ]
     },
     "pt": {
-      "title": "Mercado de Visão Computacional no Brasil: A Construção Por Trás da Fábrica e do Campo",
-      "description": "O mercado de visão computacional no Brasil supera US$ 800 milhões até 2030. O moat é um dataset rotulado proprietário, não o modelo. Veja onde construir.",
+      "title": "Mercado de Visão Computacional no Brasil: USD 838 Milhões até 2030",
+      "description": "Mercado de visão computacional no Brasil: USD 838,3 milhões até 2030 a 18,5 por cento de CAGR, segundo a Grand View Research. Por que o moat é o dataset.",
       "sections": [
         {
           "paragraphs": [
@@ -9249,8 +9249,8 @@ const engineArticles: Article[] = [
       ]
     },
     "es": {
-      "title": "Mercado de Visión por Computadora en Brasil: La Construcción Detrás de la Planta y el Campo",
-      "description": "El mercado de visión por computadora en Brasil supera los USD 800 millones para 2030. El moat es un dataset etiquetado propio, no el modelo. Dónde construir.",
+      "title": "Mercado de Visión por Computadora en Brasil: USD 838M para 2030",
+      "description": "Mercado de visión por computadora en Brasil: USD 838,3 millones para 2030 a 18,5 por ciento de CAGR, según Grand View Research. Por qué el moat es el dataset.",
       "sections": [
         {
           "paragraphs": [
@@ -9375,8 +9375,8 @@ const engineArticles: Article[] = [
     "datePublished": "2026-06-21",
     "isPublished": true,
     "en": {
-      "title": "Brazil Generative AI Market: Where a Studio Would Build Past the Hype",
-      "description": "The Brazil generative AI market scales toward USD 1.5 billion by the mid-2030s. The model layer is not the moat. Here is where a venture actually builds.",
+      "title": "Brazil Generative AI Market Size: USD 371M in 2025 to USD 1.48B by 2034",
+      "description": "Brazil generative AI market: USD 371.2 million in 2025 reaching USD 1.48 billion by 2034 at 16.63 percent CAGR, per IMARC. Why the model layer is not the moat.",
       "sections": [
         {
           "paragraphs": [
@@ -9493,8 +9493,8 @@ const engineArticles: Article[] = [
       ]
     },
     "pt": {
-      "title": "Mercado de IA Generativa no Brasil: Onde um Studio Construiria Além do Hype",
-      "description": "O mercado de IA generativa no Brasil escala rumo a US$ 1,5 bilhão até meados da década de 2030. A camada de modelo não é o moat. Veja onde construir.",
+      "title": "Mercado de IA Generativa no Brasil: USD 371M em 2025 a USD 1,48B até 2034",
+      "description": "Mercado de IA generativa no Brasil: USD 371,2 milhões em 2025 a USD 1,48 bilhão até 2034, a 16,63 por cento de CAGR, segundo a IMARC. Por que o modelo não é o moat.",
       "sections": [
         {
           "paragraphs": [
@@ -9611,8 +9611,8 @@ const engineArticles: Article[] = [
       ]
     },
     "es": {
-      "title": "Mercado de IA Generativa en Brasil: Dónde Construiría un Studio Más Allá del Hype",
-      "description": "El mercado de IA generativa en Brasil escala hacia USD 1,5 mil millones para mediados de la década de 2030. La capa de modelo no es el moat. Dónde construir.",
+      "title": "Mercado de IA Generativa en Brasil: USD 371M en 2025 a USD 1,48B para 2034",
+      "description": "Mercado de IA generativa en Brasil: USD 371,2 millones en 2025 a USD 1,48 mil millones para 2034, a 16,63 por ciento de CAGR, según IMARC. El modelo no es el moat.",
       "sections": [
         {
           "paragraphs": [
@@ -9739,8 +9739,8 @@ const engineArticles: Article[] = [
     "datePublished": "2026-06-21",
     "isPublished": true,
     "en": {
-      "title": "Brazil Industrial AI Market: Where a Studio Would Build",
-      "description": "The Brazil industrial AI market more than doubled to 41.9 percent factory adoption in two years. Past the numbers, here is where an AI-native venture would build.",
+      "title": "Brazil Industrial AI Market: USD 1.15B to USD 4.8B by 2031",
+      "description": "Brazil industrial AI market: USD 1.15 billion in 2025 to USD 4.80 billion by 2031 at 26.6 percent CAGR, with factory adoption already at 41.9 percent.",
       "sections": [
         {
           "paragraphs": [
@@ -9848,8 +9848,8 @@ const engineArticles: Article[] = [
       ]
     },
     "pt": {
-      "title": "Mercado de IA Industrial no Brasil: Onde um Studio Construiria",
-      "description": "O mercado de IA industrial no Brasil mais que dobrou para 41,9 por cento de adoção na indústria em dois anos. Além dos números, onde uma venture AI-native construiria.",
+      "title": "Mercado de IA Industrial no Brasil: USD 1,15B a USD 4,8B até 2031",
+      "description": "Mercado de IA industrial no Brasil: USD 1,15 bilhão em 2025 para USD 4,80 bilhões até 2031, a 26,6 por cento de CAGR, com adoção nas fábricas já em 41,9 por cento.",
       "sections": [
         {
           "paragraphs": [
@@ -9957,8 +9957,8 @@ const engineArticles: Article[] = [
       ]
     },
     "es": {
-      "title": "Mercado de IA Industrial en Brasil: Dónde Construiría un Studio",
-      "description": "El mercado de IA industrial en Brasil más que duplicó la adopción en planta a 41,9 por ciento en dos años. Más allá de los números, dónde construiría una venture AI-native.",
+      "title": "Mercado de IA Industrial en Brasil: USD 1,15B a USD 4,8B para 2031",
+      "description": "Mercado de IA industrial en Brasil: USD 1,15 mil millones en 2025 a USD 4,80 mil millones para 2031, a 26,6 por ciento de CAGR, con adopción fabril ya en 41,9 por ciento.",
       "sections": [
         {
           "paragraphs": [
