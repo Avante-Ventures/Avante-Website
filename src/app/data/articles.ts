@@ -29122,7 +29122,7 @@ const engineArticles: Article[] = [
       "sections": [
         {
           "paragraphs": [
-            "Startup advisor equity under the FAST agreement runs from 0.25 percent to 1 percent, allocated on two axes: how senior the advisor is and how mature the company is. FAST stands for Founder Advisor Standard Template, a free template published by Founder Institute, and it exists because advisor grants used to be negotiated from nothing every single time, which reliably ended with founders overpaying for a name."
+            "Startup advisor equity under the FAST agreement runs from 0.25 percent to 1 percent, allocated on two axes: how senior the advisor is and how mature the company is. FAST stands for Founder Advisor Standard Template, a free template published by Founder Institute, and it exists because advisor grants used to be negotiated from nothing every single time, which reliably ended with founders overpaying for a name. Usually a famous one."
           ]
         },
         {
@@ -29130,7 +29130,7 @@ const engineArticles: Article[] = [
           "level": 2,
           "paragraphs": [
             "The template sorts advisors into three tiers by the depth of the commitment, and sorts companies into three stages. An advisor at the top tier joining at the idea stage sits at the top of the band. The same advisor joining a company with revenue and a funded round sits well below it, because the equity is worth more and the risk they are absorbing is lower.",
-            "The anchor most founders are looking for is the idea stage column, which is where the widely published 0.25 to 1 percent range comes from."
+            "Most founders are hunting for one number. It is the idea stage column, and it is where the widely published 0.25 to 1 percent range comes from."
           ],
           "table": {
             "headers": [
@@ -29171,7 +29171,7 @@ const engineArticles: Article[] = [
           "heading": "Why the Percentage Falls as the Company Matures",
           "level": 2,
           "paragraphs": [
-            "The same 0.5 percent means something completely different at three points in a company's life, which is why FAST scales the grant down rather than holding it constant.",
+            "The same 0.5 percent means three different things across a company's life. That is why FAST scales the grant down instead of holding it flat.",
             "At the idea stage the equity is close to worthless in cash terms, the risk that it stays worthless is very high, and the advisor is being paid for conviction as much as for advice. At the growth stage the equity has a real price, the company can often pay cash instead, and the advisor is taking almost no risk.",
             "This is also why a grant made at the idea stage should not be quietly renewed at the same percentage two years later. Re granting on the old scale transfers a large amount of value for an unchanged level of involvement."
           ]
@@ -29181,7 +29181,7 @@ const engineArticles: Article[] = [
           "level": 2,
           "paragraphs": [
             "The percentage gets all the attention and the vesting schedule does all the work. Under FAST the grant vests monthly across two years, which means an advisor who disengages after four months keeps roughly four months of equity rather than the whole grant.",
-            "That structure is what makes an advisor relationship safe to enter. You are not betting the grant on a relationship you have not tested, you are paying for it in monthly instalments as the value actually arrives.",
+            "That is what makes an advisor relationship safe to enter. You are not betting the whole grant on someone you have not tested. You pay in monthly instalments, as the value actually arrives.",
             "Two clauses are worth checking before you sign anything. The first is termination, since either side should be able to end the relationship with short notice while the advisor keeps what has vested. The second is what happens on an acquisition, because acceleration language written for employees can behave strangely when applied to an advisor who has been on a monthly call."
           ],
           "bullets": [
@@ -29210,7 +29210,7 @@ const engineArticles: Article[] = [
           "heading": "Advisors in Brazil and LATAM",
           "level": 2,
           "paragraphs": [
-            "In Brazil and LATAM the advisor question carries a specific weight, because what is genuinely scarce is not capital advice but domain operators with 10 or more years of local scar tissue. Someone who has actually navigated a regulated Brazilian sector is worth an Expert tier grant in a way that a generalist introduction network is not.",
+            "In Brazil and LATAM the advisor question carries a specific weight, because what is genuinely scarce is not capital advice but domain operators with 10 or more years of local scar tissue. Someone who has actually operated inside a regulated Brazilian sector is worth an Expert tier grant. A generalist introduction network is not.",
             "The practical adaptation is to be stricter about tiering and looser about geography. Take the local operator at Expert terms and put the well connected international name at Standard, which is usually the inverse of what founders instinctively do.",
             "For the broader picture on advisor compensation, see [How Much Equity Should a Startup Advisor Get](https://avanteventures.com/en/library/how-much-equity-startup-advisor). If you are sizing the pool these grants come out of, start with [Startup Option Pool Size Benchmark](https://avanteventures.com/en/library/startup-option-pool-size-benchmark)."
           ]
@@ -29245,7 +29245,7 @@ const engineArticles: Article[] = [
       "sections": [
         {
           "paragraphs": [
-            "O equity de advisor de startup sob o FAST agreement vai de 0,25 por cento a 1 por cento, alocado em dois eixos: o quanto o advisor é sênior e o quanto a empresa é madura. FAST significa Founder Advisor Standard Template, um modelo gratuito publicado pelo Founder Institute, e existe porque concessões a advisors eram negociadas do zero toda vez, o que terminava com o fundador pagando caro demais por um nome."
+            "O equity de advisor de startup sob o FAST agreement vai de 0,25 por cento a 1 por cento, alocado em dois eixos: o quanto o advisor é sênior e o quanto a empresa é madura. FAST significa Founder Advisor Standard Template, um modelo gratuito publicado pelo Founder Institute, e existe porque concessões a advisors eram negociadas do zero toda vez, o que terminava com o fundador pagando caro demais por um nome. Em geral um nome famoso."
           ]
         },
         {
@@ -29253,7 +29253,7 @@ const engineArticles: Article[] = [
           "level": 2,
           "paragraphs": [
             "O modelo separa advisors em três níveis pela profundidade do compromisso, e separa empresas em três estágios. Um advisor do nível mais alto entrando no estágio de ideia fica no topo da faixa. O mesmo advisor entrando em uma empresa com receita e rodada captada fica bem abaixo, porque o equity vale mais e o risco que ele absorve é menor.",
-            "A âncora que a maioria dos fundadores procura é a coluna do estágio de ideia, de onde vem a faixa amplamente publicada de 0,25 a 1 por cento."
+            "A maioria dos fundadores procura um número só. É a coluna do estágio de ideia, de onde vem a faixa amplamente publicada de 0,25 a 1 por cento."
           ],
           "table": {
             "headers": [
@@ -29294,7 +29294,7 @@ const engineArticles: Article[] = [
           "heading": "Por Que o Percentual Cai Conforme a Empresa Amadurece",
           "level": 2,
           "paragraphs": [
-            "Os mesmos 0,5 por cento significam coisas completamente diferentes em três momentos da vida de uma empresa, e é por isso que o FAST reduz a concessão em vez de mantê-la constante.",
+            "Os mesmos 0,5 por cento significam três coisas diferentes ao longo da vida de uma empresa. É por isso que o FAST reduz a concessão em vez de mantê-la fixa.",
             "No estágio de ideia o equity é quase sem valor em dinheiro, o risco de continuar sem valor é altíssimo, e o advisor está sendo pago tanto pela convicção quanto pelo conselho. No estágio de crescimento o equity tem preço real, a empresa muitas vezes consegue pagar em dinheiro, e o advisor assume quase nenhum risco.",
             "É também por isso que uma concessão feita no estágio de ideia não deve ser renovada em silêncio no mesmo percentual dois anos depois. Reconceder na escala antiga transfere muito valor por um nível de envolvimento que não mudou."
           ]
@@ -29304,7 +29304,7 @@ const engineArticles: Article[] = [
           "level": 2,
           "paragraphs": [
             "O percentual recebe toda a atenção e o cronograma de vesting faz todo o trabalho. No FAST a concessão adquire mensalmente ao longo de dois anos, o que significa que um advisor que se desengaja depois de quatro meses fica com cerca de quatro meses de equity e não com a concessão inteira.",
-            "Essa estrutura é o que torna seguro entrar em uma relação de advisor. Você não aposta a concessão inteira em uma relação que ainda não testou, você paga em parcelas mensais conforme o valor efetivamente chega.",
+            "É isso que torna seguro entrar em uma relação de advisor. Você não aposta a concessão inteira em alguém que ainda não testou. Paga em parcelas mensais, conforme o valor efetivamente chega.",
             "Duas cláusulas merecem leitura antes de assinar. A primeira é a de rescisão, já que qualquer um dos lados deve poder encerrar com aviso curto enquanto o advisor mantém o que já adquiriu. A segunda é o que acontece em uma aquisição, porque linguagem de aceleração escrita para funcionários se comporta de forma estranha quando aplicada a um advisor que fazia uma call por mês."
           ],
           "bullets": [
@@ -29333,7 +29333,7 @@ const engineArticles: Article[] = [
           "heading": "Advisors no Brasil e na América Latina",
           "level": 2,
           "paragraphs": [
-            "No Brasil e na América Latina a questão do advisor tem um peso específico, porque o que é genuinamente escasso não é conselho sobre capital e sim operadores de domínio com 10 ou mais anos de cicatriz de mercado local. Quem de fato navegou um setor regulado brasileiro vale uma concessão de nível Expert de um jeito que uma rede genérica de apresentações não vale.",
+            "No Brasil e na América Latina a questão do advisor tem um peso específico, porque o que é genuinamente escasso não é conselho sobre capital e sim operadores de domínio com 10 ou mais anos de cicatriz de mercado local. Quem de fato operou dentro de um setor regulado brasileiro vale uma concessão de nível Expert. Uma rede genérica de apresentações não vale.",
             "A adaptação prática é ser mais rigoroso no nível e mais flexível na geografia. Coloque o operador local em termos de Expert e o nome internacional bem relacionado em Standard, o que costuma ser o inverso do que o fundador faz por instinto.",
             "Para o panorama mais amplo de remuneração de advisor, veja [Quanto Equity um Advisor de Startup Deve Receber](https://avanteventures.com/pt/library/how-much-equity-startup-advisor). Se você está dimensionando o pool de onde saem essas concessões, comece por [Benchmark de Tamanho do Pool de Opções](https://avanteventures.com/pt/library/startup-option-pool-size-benchmark)."
           ]
