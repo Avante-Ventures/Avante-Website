@@ -28607,6 +28607,1300 @@ const engineArticles: Article[] = [
       ]
     }
   },
+  {
+    "slug": "flat-round-vs-down-round",
+    "category": "insights",
+    "type": "Explainer",
+    "readTime": "7 min",
+    "featured": false,
+    "date": "Aug 2026",
+    "datePublished": "2026-08-31",
+    "isPublished": true,
+    "en": {
+      "title": "Flat Round vs Down Round: The Difference and When to Choose Each",
+      "description": "A flat round prices your company at the last valuation, a down round prices it below. The mechanics barely differ. The optics, the option strike, and the terms do.",
+      "sections": [
+        {
+          "paragraphs": [
+            "A flat round and a down round both price a company at a valuation that is not higher than the last one, and exactly one thing separates them. A flat round holds the previous valuation. A down round sets it lower. That single step matters far less to your cap table than most founders assume, and far more to how the round is read by employees, candidates and the investor who prices you next."
+          ]
+        },
+        {
+          "heading": "Flat Round vs Down Round: The Difference in One Paragraph",
+          "level": 2,
+          "paragraphs": [
+            "A flat round is a financing priced at the same valuation as the previous round. A down round is priced below it. Both sit on the same side of the only line founders actually care about, which is the line between up and not up.",
+            "The mechanical consequence is anti-dilution. In a flat round the price per share does not fall, so the anti-dilution protection sitting in your prior preferred stock is not triggered. In a down round the price per share falls, that protection activates, and the adjustment comes out of common stock, which means founders and employees.",
+            "That is the entire technical difference. Everything else attached to these two words is signalling, and signalling is where the real money moves."
+          ]
+        },
+        {
+          "heading": "Why the Optics Diverge So Sharply",
+          "level": 2,
+          "paragraphs": [
+            "Investors read a flat round as a pause and a down round as a correction. That is not a rational distinction when the underlying business is identical, but it is a real one, because a valuation is a public number other people use to make decisions about you.",
+            "Employees feel it first, and they feel it through the strike price. Options granted at the last round have a strike set at that valuation. A flat round keeps the gap between strike and current value at zero. A down round puts those options underwater, and underwater options stop functioning as retention within about a quarter.",
+            "The second-order effect is recruiting. Every serious candidate asks what the last round was priced at. Founders who have been through both will tell you the flat round answer takes one sentence and the down round answer takes twenty minutes."
+          ]
+        },
+        {
+          "heading": "How to Use a Flat Round to Avoid the Optics of a Down Round",
+          "level": 2,
+          "paragraphs": [
+            "The honest version of this play is narrower than it looks. You can hold the valuation flat when the business genuinely supports the old price and the market moved rather than the company. You cannot hold it flat when the business itself deteriorated, because holding the price then does not remove the pain, it relocates it into the terms.",
+            "The mechanism is the structured flat round. The headline valuation stays where it was and the concession moves somewhere less visible: a larger liquidation preference, participation rights, a bigger option pool refresh taken pre-money, warrant coverage, or a ratchet. The number in the announcement survives intact. The economics do not.",
+            "This is a legitimate tool and it is also where founders get quietly taken apart. A 1x non participating preference at a flat valuation is a mild concession. A 2x participating preference at that same flat valuation can leave common stock worse off than a clean down round priced 40% lower would have.",
+            "The test is arithmetic, not judgement. Model the exit waterfall at three outcomes, a bad one, a base one and a good one, and compare what common stock receives under the structured flat round versus the clean down round. Founders who actually run that model pick the clean down round more often than they expected to."
+          ],
+          "bullets": [
+            "Extend runway first. A bridge on existing terms buys time to grow into the old price.",
+            "Cut burn before you price. A round negotiated against a lower burn is a different conversation.",
+            "Look at an internal round. Existing investors have the strongest reason to keep the mark flat.",
+            "If you accept structure, cap it at one concession rather than a stack of them.",
+            "Model the common stock waterfall before agreeing to any headline number."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Down rounds went from roughly one in twenty priced rounds in early 2022 to about one in five through 2023 and 2024, which is what turned a rare event into an ordinary one.",
+            "attribution": "Carta, State of Private Markets"
+          }
+        },
+        {
+          "heading": "What a Flat Round Actually Costs You",
+          "level": 2,
+          "paragraphs": [
+            "Dilution does not disappear because the valuation held. Raise the same dollars at the same price and you sell the same share of the company you sold last time, except you do it having already spent a year of runway to get there.",
+            "The subtler cost is the reset you postponed. A flat round carrying heavy structure pushes the unresolved gap into the next financing, where it compounds. The preference stack grows, common stock sits further behind it, and the next investor prices that reality rather than your narrative.",
+            "There is also recapitalization risk. Companies that stack structure across two consecutive flat rounds frequently end up in a recap anyway, and a recap destroys far more founder and employee ownership than a single clean down round ever would."
+          ]
+        },
+        {
+          "heading": "When a Down Round Is the Honest Answer",
+          "level": 2,
+          "paragraphs": [
+            "Take the down round when the company is genuinely worth less, when the previous price was set in a market that no longer exists, or when the structure required to hold the price flat would bury common stock under a preference stack it cannot climb out of.",
+            "A clean down round has one property founders consistently undervalue. It resets the strike price. You reprice options, the team holds real equity again, and the retention problem you were about to have simply stops existing. When the team is the asset, that is worth more than a headline number in almost every case.",
+            "Handle the communication directly. Give the team the number before they read it somewhere else, separate what changed in the market from what changed in the company, and show them the repricing in the same conversation. Teams forgive a down round. They do not forgive hearing about it from a third party."
+          ]
+        },
+        {
+          "heading": "The LATAM Version of This Decision",
+          "level": 2,
+          "paragraphs": [
+            "In Brazil and the broader LATAM market this decision carries an extra variable, which is the depth of the local investor base. There are fewer funds able to lead a recovery round, so the internal round is more often the only round on the table.",
+            "That concentrates leverage with existing investors and raises the odds a founder is offered a flat round with structure rather than a clean price. It also means the reputational cost of a down round is smaller than founders fear, because the local ecosystem already understands the funding environment it is operating in.",
+            "The practical guidance is to negotiate the term sheet rather than the headline. Ask what the preference stack looks like after this round closes, and whether the option pool refresh is taken pre-money or post-money. Those two answers shape your outcome more than the valuation does.",
+            "If you are earlier in the funding path, the round by round mechanics are in [How Much Dilution Per Funding Round](https://avanteventures.com/en/library/how-much-dilution-per-funding-round), and the definitional groundwork is in [What Is a Down Round](https://avanteventures.com/en/library/what-is-a-down-round)."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is the difference between a flat round and a down round?",
+          "a": "A flat round is priced at the same valuation as the previous round and a down round is priced below it. The practical difference is anti-dilution. A flat round does not lower the price per share, so anti-dilution protection in existing preferred stock stays dormant. A down round lowers it, the protection activates, and the adjustment is paid by common stock, meaning founders and employees."
+        },
+        {
+          "q": "How do you use a flat round to avoid the optics of a down round?",
+          "a": "By holding the headline valuation and moving the concession into the terms, which is called a structured flat round. Common structures are a larger liquidation preference, participation rights, warrant coverage, a ratchet, or an option pool refresh taken pre-money. It is legitimate when the market moved rather than the business. It is dangerous when the structure stacks, because a 2x participating preference at a flat price can leave common stock worse off than a clean down round at a 40% lower valuation."
+        },
+        {
+          "q": "Does a flat round trigger anti-dilution protection?",
+          "a": "Generally no. Anti-dilution provisions in preferred stock trigger on an issuance below the prior price per share. A true flat round holds that price, so the ratchet or weighted average formula does not engage. Confirm it against your own documents, because a pre-money option pool refresh can push the effective price per share below the prior round even when the headline valuation is unchanged."
+        },
+        {
+          "q": "Is a flat round bad for founders?",
+          "a": "Not by itself. A clean flat round is close to a neutral event, since the dilution is the same dilution you would take at any price and the option strike stays intact. It becomes bad when it is purchased with structure. The cost is not visible in the valuation, it is visible in the exit waterfall, which is why you model common stock at a bad, base and good outcome before you sign."
+        },
+        {
+          "q": "When should a founder accept a down round instead?",
+          "a": "When the business is genuinely worth less than the last price, when the previous valuation was set in a market that no longer exists, or when the terms needed to hold the price flat would put common stock behind a preference stack it cannot escape. The clean down round also resets the option strike, which restores retention. That single benefit often outweighs the reputational cost."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Flat Round vs Down Round: A Diferença e Quando Escolher Cada Uma",
+      "description": "Um flat round precifica a empresa na mesma valuation da rodada anterior e um down round precifica abaixo. A mecânica quase não muda. A ótica, o strike e os termos mudam.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Um flat round e um down round precificam a empresa em uma valuation que não é maior que a anterior, e exatamente uma coisa separa os dois. O flat round mantém a valuation anterior. O down round fixa abaixo dela. Esse passo importa muito menos para o seu cap table do que a maioria dos fundadores imagina, e muito mais para como a rodada é lida por funcionários, candidatos e pelo investidor que vai te precificar em seguida."
+          ]
+        },
+        {
+          "heading": "Flat Round vs Down Round: A Diferença em Um Parágrafo",
+          "level": 2,
+          "paragraphs": [
+            "Um flat round é uma captação precificada na mesma valuation da rodada anterior. Um down round é precificado abaixo dela. Os dois ficam do mesmo lado da única linha que o fundador realmente observa, que é a linha entre subir e não subir.",
+            "A consequência mecânica é a antidiluição. No flat round o preço por ação não cai, então a proteção antidiluição que existe nas preferenciais anteriores não é acionada. No down round o preço por ação cai, essa proteção entra em ação, e o ajuste sai das ações ordinárias, ou seja, dos fundadores e do time.",
+            "Essa é a diferença técnica inteira. Todo o resto ligado a esses dois termos é sinalização, e é na sinalização que o dinheiro de verdade se move."
+          ]
+        },
+        {
+          "heading": "Por Que a Ótica Diverge Tanto",
+          "level": 2,
+          "paragraphs": [
+            "Investidores leem um flat round como uma pausa e um down round como uma correção. Não é uma distinção racional quando o negócio por baixo é idêntico, mas é uma distinção real, porque valuation é um número público que outras pessoas usam para tomar decisões sobre você.",
+            "O time sente primeiro, e sente pelo strike. Opções concedidas na rodada anterior têm strike fixado naquela valuation. O flat round mantém a distância entre strike e valor atual em zero. O down round joga essas opções para debaixo d'água, e opção submersa deixa de funcionar como retenção em cerca de um trimestre.",
+            "O efeito de segunda ordem é recrutamento. Todo candidato sério pergunta em quanto foi precificada a última rodada. Quem já passou pelas duas situações vai te dizer que a resposta do flat round leva uma frase e a resposta do down round leva vinte minutos."
+          ]
+        },
+        {
+          "heading": "Como Usar um Flat Round para Evitar a Ótica de um Down Round",
+          "level": 2,
+          "paragraphs": [
+            "A versão honesta dessa jogada é mais estreita do que parece. Dá para segurar a valuation quando o negócio genuinamente sustenta o preço antigo e foi o mercado que se mexeu, não a empresa. Não dá para segurar quando o próprio negócio se deteriorou, porque manter o preço nesse caso não elimina a dor, apenas a transfere para os termos.",
+            "O mecanismo é o flat round estruturado. A valuation de manchete permanece e a concessão se desloca para um lugar menos visível: uma preferência de liquidação maior, direito de participação, um aumento do pool de opções tomado pré-money, cobertura de warrants ou um ratchet. O número do anúncio sobrevive intacto. A economia não.",
+            "É uma ferramenta legítima e é também onde fundadores são desmontados em silêncio. Uma preferência de 1x sem participação em valuation flat é uma concessão leve. Uma preferência de 2x com participação na mesma valuation flat pode deixar as ordinárias em situação pior do que um down round limpo precificado 40% abaixo.",
+            "O teste é aritmético, não é julgamento. Modele a cascata de saída em três cenários, um ruim, um base e um bom, e compare o que as ordinárias recebem no flat round estruturado contra o down round limpo. Fundadores que de fato rodam esse modelo escolhem o down round limpo com mais frequência do que esperavam."
+          ],
+          "bullets": [
+            "Estenda o runway primeiro. Uma ponte nos termos atuais compra tempo para crescer até o preço antigo.",
+            "Corte o burn antes de precificar. Uma rodada negociada contra um burn menor é outra conversa.",
+            "Considere uma rodada interna. Os investidores atuais são os que mais têm motivo para manter a marcação.",
+            "Se aceitar estrutura, limite a uma concessão em vez de um empilhamento.",
+            "Modele a cascata das ordinárias antes de concordar com qualquer número de manchete."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Down rounds passaram de cerca de uma em cada vinte rodadas precificadas no início de 2022 para cerca de uma em cada cinco ao longo de 2023 e 2024, o que transformou um evento raro em um evento comum.",
+            "attribution": "Carta, State of Private Markets"
+          }
+        },
+        {
+          "heading": "O Que um Flat Round Realmente Custa",
+          "level": 2,
+          "paragraphs": [
+            "A diluição não desaparece porque a valuation se manteve. Capte os mesmos dólares no mesmo preço e você vende a mesma fatia que venderia antes, só que agora depois de ter gasto um ano de runway para chegar até ali.",
+            "O custo mais sutil é o acerto que você adiou. Um flat round carregado de estrutura empurra o desajuste não resolvido para a próxima captação, onde ele compõe. A pilha de preferências cresce, as ordinárias ficam mais atrás dela, e o próximo investidor precifica essa realidade e não a sua narrativa.",
+            "Existe ainda o risco de recapitalização. Empresas que empilham estrutura em dois flat rounds seguidos com frequência acabam em um recap mesmo assim, e um recap destrói muito mais participação de fundadores e do time do que um único down round limpo destruiria."
+          ]
+        },
+        {
+          "heading": "Quando o Down Round É a Resposta Honesta",
+          "level": 2,
+          "paragraphs": [
+            "Aceite o down round quando a empresa realmente vale menos, quando o preço anterior foi fixado em um mercado que não existe mais, ou quando a estrutura necessária para segurar o preço enterraria as ordinárias sob uma pilha de preferências da qual elas não conseguem sair.",
+            "O down round limpo tem uma propriedade que fundadores subestimam com consistência. Ele reseta o strike. Você reprecifica as opções, o time volta a ter equity de verdade, e o problema de retenção que estava se formando simplesmente deixa de existir. Quando o time é o ativo, isso vale mais do que um número de manchete em quase todos os casos.",
+            "Comunique de forma direta. Dê o número ao time antes que ele leia em outro lugar, separe o que mudou no mercado do que mudou na empresa, e mostre a reprecificação na mesma conversa. Times perdoam um down round. Não perdoam saber dele por terceiros."
+          ]
+        },
+        {
+          "heading": "A Versão LATAM Dessa Decisão",
+          "level": 2,
+          "paragraphs": [
+            "No Brasil e na América Latina essa decisão carrega uma variável extra, que é a profundidade da base local de investidores. Há menos fundos capazes de liderar uma rodada de recuperação, então a rodada interna é com mais frequência a única rodada disponível.",
+            "Isso concentra poder de barganha nos investidores atuais e aumenta a chance de o fundador receber um flat round com estrutura em vez de um preço limpo. Também significa que o custo reputacional de um down round é menor do que o fundador teme, porque o ecossistema local já entende o ambiente de captação em que está operando.",
+            "A orientação prática é negociar o term sheet e não a manchete. Pergunte como fica a pilha de preferências depois que a rodada fechar, e se o aumento do pool de opções é tomado pré-money ou pós-money. Essas duas respostas moldam mais o seu resultado do que a valuation.",
+            "Se você está mais cedo na trilha de captação, a mecânica rodada a rodada está em [Quanta Diluição por Rodada de Captação](https://avanteventures.com/pt/library/how-much-dilution-per-funding-round), e a base conceitual está em [O Que É um Down Round](https://avanteventures.com/pt/library/what-is-a-down-round)."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Qual a diferença entre um flat round e um down round?",
+          "a": "O flat round é precificado na mesma valuation da rodada anterior e o down round é precificado abaixo dela. A diferença prática é a antidiluição. O flat round não reduz o preço por ação, então a proteção antidiluição das preferenciais existentes permanece inativa. O down round reduz, a proteção é acionada, e o ajuste é pago pelas ações ordinárias, ou seja, por fundadores e time."
+        },
+        {
+          "q": "Como usar um flat round para evitar a ótica de um down round?",
+          "a": "Mantendo a valuation de manchete e deslocando a concessão para os termos, o que se chama flat round estruturado. As estruturas comuns são preferência de liquidação maior, direito de participação, cobertura de warrants, ratchet ou aumento do pool de opções tomado pré-money. É legítimo quando foi o mercado que se moveu e não o negócio. É perigoso quando a estrutura empilha, porque uma preferência de 2x com participação em preço flat pode deixar as ordinárias pior do que um down round limpo 40% abaixo."
+        },
+        {
+          "q": "Um flat round aciona a proteção antidiluição?",
+          "a": "Em geral não. As cláusulas de antidiluição nas preferenciais disparam em uma emissão abaixo do preço por ação anterior. Um flat round verdadeiro mantém esse preço, então a fórmula de ratchet ou de média ponderada não engata. Confirme nos seus próprios documentos, porque um aumento de pool tomado pré-money pode empurrar o preço por ação efetivo para baixo do preço anterior mesmo com a valuation de manchete inalterada."
+        },
+        {
+          "q": "Um flat round é ruim para o fundador?",
+          "a": "Por si só não. Um flat round limpo é quase um evento neutro, já que a diluição é a mesma que você tomaria em qualquer preço e o strike das opções permanece intacto. Ele fica ruim quando é comprado com estrutura. O custo não aparece na valuation, aparece na cascata de saída, e é por isso que você modela as ordinárias em cenário ruim, base e bom antes de assinar."
+        },
+        {
+          "q": "Quando o fundador deveria aceitar um down round?",
+          "a": "Quando o negócio realmente vale menos que o último preço, quando a valuation anterior foi fixada em um mercado que não existe mais, ou quando os termos necessários para segurar o preço colocariam as ordinárias atrás de uma pilha de preferências da qual não conseguem escapar. O down round limpo ainda reseta o strike das opções, o que restaura a retenção. Esse único benefício com frequência supera o custo reputacional."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "founder-institute-vs-yc-vs-techstars",
+    "category": "insights",
+    "type": "Comparison",
+    "readTime": "7 min",
+    "featured": false,
+    "date": "Aug 2026",
+    "datePublished": "2026-08-31",
+    "isPublished": true,
+    "en": {
+      "title": "Founder Institute vs YC vs Techstars: Terms, Equity and Fit Compared",
+      "description": "YC invests 500K for 7% plus an uncapped SAFE, Techstars invests 120K for 6%, and Founder Institute invests no cash and takes equity through a warrant. Here is what that means.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Founder Institute, Y Combinator and Techstars are usually compared as three versions of the same product, and they are not. YC and Techstars are accelerators that write a check and take priced equity. Founder Institute is a pre-seed program that writes no check, charges a fee and takes equity through a warrant. Comparing them on acceptance rate misses the decision. The real comparison is what stage you are at, what you give up, and what you get that you could not buy."
+          ]
+        },
+        {
+          "heading": "Founder Institute vs YC vs Techstars: The Terms Compared",
+          "level": 2,
+          "paragraphs": [
+            "Start with the cash and the equity, because that is the part founders most often get wrong when they compare these three."
+          ],
+          "table": {
+            "headers": [
+              "",
+              "Founder Institute",
+              "Y Combinator",
+              "Techstars"
+            ],
+            "rows": [
+              [
+                "Cash invested",
+                "None. The founder pays a program fee",
+                "500,000 dollars",
+                "120,000 dollars"
+              ],
+              [
+                "Equity structure",
+                "Warrant, commonly published at around 4 percent",
+                "125,000 dollars for 7 percent on a post money SAFE, plus 375,000 dollars on an uncapped SAFE with MFN",
+                "20,000 dollars for 6 percent common stock, plus a 100,000 dollar convertible note"
+              ],
+              [
+                "Stage it fits",
+                "Idea and pre incorporation",
+                "Pre seed to seed, usually with something working",
+                "Pre seed to seed, usually with early traction"
+              ],
+              [
+                "Core asset",
+                "Structured curriculum and local founder network",
+                "Brand, investor demand at Demo Day and the YC alumni network",
+                "Mentor density and a global program network"
+              ],
+              [
+                "Selection",
+                "Accepts broadly and selects at graduation",
+                "Highly selective at entry",
+                "Highly selective at entry"
+              ]
+            ],
+            "caption": "Terms as published by each program. Confirm the current agreement for your own cohort before signing."
+          }
+        },
+        {
+          "heading": "What Each Program Is Actually Selling",
+          "level": 2,
+          "paragraphs": [
+            "Y Combinator sells demand. The money is real, but the reason the deal clears at that price is that a YC batch concentrates investor attention in a way nothing else reproduces. You are buying a compressed fundraising cycle and a permanent alumni network, and you are paying for it with roughly 7 percent plus whatever the uncapped portion converts at later.",
+            "Techstars sells mentors. The structure is built around a mentor pool per program, and the value tracks the quality of that specific program and that specific managing director far more than it tracks the Techstars brand. Two Techstars programs can be genuinely different products.",
+            "Founder Institute sells structure at the idea stage, which is a real need that almost nothing else serves. It is the only one of the three that will take a founder who has not incorporated, and it is the only one where the founder pays rather than gets paid. That inversion is the whole product. You are buying a forcing function and a deadline."
+          ]
+        },
+        {
+          "heading": "The Equity Math Founders Skip",
+          "level": 2,
+          "paragraphs": [
+            "The headline percentages are not comparable, because they are attached to different instruments at different times.",
+            "The YC deal looks like 7 percent, and the 375,000 dollars on an uncapped SAFE with most favored nation terms converts at the price of your next priced round. If that round is strong, the additional dilution is small. If it is weak, it is not. Founders who model YC at a flat 7 percent are modelling the best case only.",
+            "The Techstars 6 percent is common stock, purchased for 20,000 dollars, and the 100,000 dollars sits separately as a note that converts later. A note is not free equity. It is future dilution with a discount attached.",
+            "The Founder Institute warrant is the one most founders misread. A warrant is a right to buy shares later, not shares held today, so it does not appear on your cap table the way an accelerator stake does. It still dilutes when exercised. Read the specific document you are given, because the terms have changed across cohorts and geographies."
+          ],
+          "bullets": [
+            "Model every instrument at conversion, not at announcement.",
+            "Ask what the uncapped or MFN portion converts into under a weak next round.",
+            "Treat a convertible note as dilution you have already agreed to.",
+            "For a warrant, find the exercise price, the term and the trigger before you sign.",
+            "Add the program fee to the true cost when the program does not invest cash."
+          ]
+        },
+        {
+          "heading": "Acceptance Rate Is Not the Same as Fit",
+          "level": 2,
+          "paragraphs": [
+            "YC and Techstars both accept a very small share of applicants, and founders read that number as a quality signal. It is really a capacity signal. Both run fixed batch sizes against enormous application volume, so selectivity is a function of seats rather than of how good the median applicant is.",
+            "Founder Institute inverts this. It accepts broadly and then selects on the way out, which means enrolling is easy and finishing is not. For a founder who needs a deadline and a peer group to test whether an idea deserves a company, that inversion is a feature. For a founder who already has a product in market, it is a poor use of a quarter.",
+            "The practical filter is stage. If you have not incorporated and are not sure the idea is a company, Founder Institute is the only one of the three built for you. If you have something working and need the fundraising cycle compressed, YC is the strongest instrument in the market. If you need domain mentors more than you need brand, look at the specific Techstars program rather than at Techstars."
+          ]
+        },
+        {
+          "heading": "Where a Venture Studio Sits in This Comparison",
+          "level": 2,
+          "paragraphs": [
+            "All three programs share one assumption, which is that the company already exists or is about to, and that the founder is the one who assembles it. A venture studio removes that assumption. The studio starts the company, supplies the operating team and writes the first check, and the founder joins a build that is already underway.",
+            "The trade is explicit. A studio takes co founder economics rather than an accelerator sized stake, which is a much larger share. What you receive against it is a company that is already staffed, funded and structured, which is why a studio venture typically launches 6 to 9 months ahead of a comparably funded standalone team.",
+            "That is a different product, not a better one. It is the right product for an operator with deep domain experience and no appetite to spend a year assembling infrastructure, and the wrong one for a founder whose main asset is an idea they want to own outright."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Venture studios have produced roughly 50 percent IRR against an industry standard of roughly 19 percent for traditional venture capital, about 2.5x, over realistic time horizons.",
+            "attribution": "Global Startup Studio Network (GSSN)"
+          }
+        },
+        {
+          "heading": "How to Choose",
+          "level": 2,
+          "paragraphs": [
+            "Decide on stage first, then on what you actually lack. Founders reliably choose the program with the strongest brand rather than the program that closes their specific gap, and that is the expensive mistake.",
+            "If the gap is validation and discipline at the idea stage, Founder Institute closes it. If the gap is capital and investor access with a working product, YC closes it. If the gap is domain expertise and operating guidance, the right Techstars program closes it. If the gap is the entire company around a domain insight, a venture studio closes it.",
+            "For the deeper comparison of accelerator and studio economics, see [YC vs Techstars vs Venture Studio](https://avanteventures.com/en/library/yc-vs-techstars-vs-venture-studio) and [How Much Equity Do Venture Studios Take](https://avanteventures.com/en/library/how-much-equity-do-venture-studios-take)."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Founder Institute vs YC vs Techstars, which is best?",
+          "a": "They serve different stages, so best depends on what you lack. Founder Institute is the only one of the three built for founders who have not incorporated, and it charges a fee rather than investing cash. Y Combinator invests 500,000 dollars and is strongest when you have something working and need a compressed fundraising cycle. Techstars invests 120,000 dollars and is strongest when you need domain mentors, though quality varies by program and managing director more than by brand."
+        },
+        {
+          "q": "How much equity does each program take?",
+          "a": "Y Combinator takes 7 percent for 125,000 dollars on a post money SAFE and adds 375,000 dollars on an uncapped SAFE with most favored nation terms that converts at your next priced round. Techstars takes 6 percent common stock for 20,000 dollars and adds a 100,000 dollar convertible note. Founder Institute takes equity through a warrant rather than a purchased stake, commonly published at around 4 percent, and terms have varied across cohorts, so read the document you are actually given."
+        },
+        {
+          "q": "Does Founder Institute invest money in your startup?",
+          "a": "No. Founder Institute is the one program of the three that does not write a check. The founder pays a program fee and the program takes equity through a warrant. That inversion is deliberate, because it operates at the idea stage where there is often no company to invest in yet. What you are buying is structure, a deadline and a peer group rather than capital."
+        },
+        {
+          "q": "Is a low acceptance rate a sign of a better accelerator?",
+          "a": "Not really. YC and Techstars run fixed batch sizes against very large application volume, so their selectivity mostly reflects available seats rather than the quality of the median applicant. Founder Institute inverts the model by accepting broadly and selecting at graduation, which makes enrolment easy and completion hard. Judge fit by stage and by the specific gap the program closes for you."
+        },
+        {
+          "q": "How does a venture studio compare to these three?",
+          "a": "A venture studio starts the company rather than supporting one that already exists. It supplies the operating team and the first capital, and the founder joins a build already in motion. The cost is co founder economics, which is far more than an accelerator stake, and the return is speed, since a studio venture typically launches 6 to 9 months ahead of a comparably funded standalone team."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Founder Institute vs YC vs Techstars: Termos, Equity e Encaixe Comparados",
+      "description": "A YC investe 500 mil por 7%, a Techstars 120 mil por 6%, e o Founder Institute não investe caixa e pega equity via warrant. Veja o que isso significa na prática.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Founder Institute, Y Combinator e Techstars costumam ser comparados como três versões do mesmo produto, e não são. YC e Techstars são aceleradoras que assinam um cheque e tomam equity precificado. O Founder Institute é um programa pré-seed que não assina cheque, cobra uma taxa e toma equity por meio de um warrant. Comparar os três pela taxa de aceitação erra a decisão. A comparação real é em que estágio você está, o que você entrega e o que recebe que não poderia comprar."
+          ]
+        },
+        {
+          "heading": "Founder Institute vs YC vs Techstars: Os Termos Comparados",
+          "level": 2,
+          "paragraphs": [
+            "Comece pelo caixa e pelo equity, porque é a parte que os fundadores mais erram ao comparar os três."
+          ],
+          "table": {
+            "headers": [
+              "",
+              "Founder Institute",
+              "Y Combinator",
+              "Techstars"
+            ],
+            "rows": [
+              [
+                "Caixa investido",
+                "Nenhum. O fundador paga uma taxa de programa",
+                "500 mil dólares",
+                "120 mil dólares"
+              ],
+              [
+                "Estrutura de equity",
+                "Warrant, publicado comumente em torno de 4 por cento",
+                "125 mil dólares por 7 por cento em SAFE post money, mais 375 mil dólares em SAFE sem cap com MFN",
+                "20 mil dólares por 6 por cento de ações ordinárias, mais nota conversível de 100 mil dólares"
+              ],
+              [
+                "Estágio adequado",
+                "Ideia e antes da constituição",
+                "Pré-seed a seed, em geral com algo funcionando",
+                "Pré-seed a seed, em geral com tração inicial"
+              ],
+              [
+                "Ativo central",
+                "Currículo estruturado e rede local de fundadores",
+                "Marca, demanda de investidores no Demo Day e rede de alumni",
+                "Densidade de mentores e rede global de programas"
+              ],
+              [
+                "Seleção",
+                "Aceita de forma ampla e seleciona na formatura",
+                "Muito seletiva na entrada",
+                "Muito seletiva na entrada"
+              ]
+            ],
+            "caption": "Termos conforme publicados por cada programa. Confirme o contrato vigente da sua turma antes de assinar."
+          }
+        },
+        {
+          "heading": "O Que Cada Programa Realmente Vende",
+          "level": 2,
+          "paragraphs": [
+            "A Y Combinator vende demanda. O dinheiro é real, mas a razão pela qual o negócio fecha nesse preço é que uma turma da YC concentra atenção de investidor de um jeito que nada mais reproduz. Você está comprando um ciclo de captação comprimido e uma rede permanente de alumni, e paga por isso com cerca de 7 por cento mais o que a parcela sem cap converter depois.",
+            "A Techstars vende mentores. A estrutura é construída em torno de um pool de mentores por programa, e o valor acompanha a qualidade daquele programa específico e daquele managing director específico muito mais do que a marca Techstars. Dois programas Techstars podem ser produtos genuinamente diferentes.",
+            "O Founder Institute vende estrutura no estágio de ideia, que é uma necessidade real e quase não atendida. É o único dos três que aceita um fundador que ainda não constituiu empresa, e o único em que o fundador paga em vez de receber. Essa inversão é o produto inteiro. Você está comprando um mecanismo de força e um prazo."
+          ]
+        },
+        {
+          "heading": "A Conta de Equity Que os Fundadores Pulam",
+          "level": 2,
+          "paragraphs": [
+            "As porcentagens de manchete não são comparáveis, porque estão presas a instrumentos diferentes em momentos diferentes.",
+            "O acordo da YC parece 7 por cento, e os 375 mil dólares em SAFE sem cap com cláusula de nação mais favorecida convertem no preço da sua próxima rodada precificada. Se essa rodada for forte, a diluição adicional é pequena. Se for fraca, não é. Quem modela a YC como 7 por cento fixos está modelando apenas o melhor cenário.",
+            "Os 6 por cento da Techstars são ações ordinárias, compradas por 20 mil dólares, e os 100 mil dólares ficam à parte como nota que converte depois. Nota não é equity de graça. É diluição futura com desconto embutido.",
+            "O warrant do Founder Institute é o que mais gera leitura errada. Um warrant é o direito de comprar ações depois, não ações detidas hoje, então ele não aparece no cap table como aparece a participação de uma aceleradora. Ainda assim dilui quando exercido. Leia o documento específico que você recebeu, porque os termos mudaram entre turmas e geografias."
+          ],
+          "bullets": [
+            "Modele cada instrumento na conversão, não no anúncio.",
+            "Pergunte no que a parcela sem cap ou com MFN converte em uma próxima rodada fraca.",
+            "Trate nota conversível como diluição que você já aceitou.",
+            "No warrant, descubra preço de exercício, prazo e gatilho antes de assinar.",
+            "Some a taxa do programa ao custo real quando o programa não investe caixa."
+          ]
+        },
+        {
+          "heading": "Taxa de Aceitação Não É a Mesma Coisa Que Encaixe",
+          "level": 2,
+          "paragraphs": [
+            "YC e Techstars aceitam uma fatia muito pequena dos candidatos, e fundadores leem esse número como sinal de qualidade. Na verdade é sinal de capacidade. Ambas rodam turmas de tamanho fixo contra um volume enorme de inscrições, então a seletividade é função de vagas e não da qualidade do candidato mediano.",
+            "O Founder Institute inverte isso. Aceita de forma ampla e seleciona na saída, o que torna entrar fácil e terminar difícil. Para quem precisa de um prazo e de um grupo de pares para testar se a ideia merece virar empresa, essa inversão é uma vantagem. Para quem já tem produto no mercado, é um trimestre mal usado.",
+            "O filtro prático é o estágio. Se você não constituiu empresa e não tem certeza de que a ideia é um negócio, o Founder Institute é o único dos três feito para você. Se você tem algo funcionando e precisa comprimir o ciclo de captação, a YC é o instrumento mais forte do mercado. Se você precisa de mentores de domínio mais do que de marca, olhe o programa Techstars específico e não a Techstars."
+          ]
+        },
+        {
+          "heading": "Onde um Venture Studio Entra Nessa Comparação",
+          "level": 2,
+          "paragraphs": [
+            "Os três programas compartilham uma premissa, que é a de que a empresa já existe ou está prestes a existir, e que o fundador é quem a monta. Um venture studio elimina essa premissa. O studio começa a empresa, fornece o time operacional e assina o primeiro cheque, e o fundador entra em uma construção que já está em andamento.",
+            "A troca é explícita. Um studio toma economia de cofundador em vez de uma participação de aceleradora, o que é uma fatia muito maior. O que você recebe em contrapartida é uma empresa já montada, capitalizada e estruturada, razão pela qual uma venture de studio normalmente lança de 6 a 9 meses à frente de um time independente com capital equivalente.",
+            "É um produto diferente, não um produto melhor. É o produto certo para um operador com experiência profunda de domínio e nenhum apetite para passar um ano montando infraestrutura, e o errado para um fundador cujo principal ativo é uma ideia que ele quer possuir por inteiro."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Venture studios produziram cerca de 50 por cento de TIR contra um padrão de indústria de cerca de 19 por cento do venture capital tradicional, aproximadamente 2,5x, em horizontes de tempo realistas.",
+            "attribution": "Global Startup Studio Network (GSSN)"
+          }
+        },
+        {
+          "heading": "Como Escolher",
+          "level": 2,
+          "paragraphs": [
+            "Decida primeiro pelo estágio e depois pelo que de fato está faltando. Fundadores escolhem com regularidade o programa de marca mais forte em vez do programa que fecha a lacuna específica deles, e esse é o erro caro.",
+            "Se a lacuna é validação e disciplina no estágio de ideia, o Founder Institute fecha. Se a lacuna é capital e acesso a investidor com produto funcionando, a YC fecha. Se a lacuna é conhecimento de domínio e orientação operacional, o programa Techstars certo fecha. Se a lacuna é a empresa inteira em torno de uma percepção de domínio, um venture studio fecha.",
+            "Para a comparação mais profunda de economia entre aceleradora e studio, veja [YC vs Techstars vs Venture Studio](https://avanteventures.com/pt/library/yc-vs-techstars-vs-venture-studio) e [Quanto Equity um Venture Studio Pega](https://avanteventures.com/pt/library/how-much-equity-do-venture-studios-take)."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Founder Institute vs YC vs Techstars, qual é melhor?",
+          "a": "Atendem estágios diferentes, então melhor depende do que falta. O Founder Institute é o único dos três feito para quem ainda não constituiu empresa, e cobra taxa em vez de investir caixa. A Y Combinator investe 500 mil dólares e é mais forte quando você já tem algo funcionando e precisa comprimir a captação. A Techstars investe 120 mil dólares e é mais forte quando você precisa de mentores de domínio, ainda que a qualidade varie mais por programa e managing director do que por marca."
+        },
+        {
+          "q": "Quanto equity cada programa pega?",
+          "a": "A Y Combinator pega 7 por cento por 125 mil dólares em SAFE post money e adiciona 375 mil dólares em SAFE sem cap com cláusula de nação mais favorecida, que converte na sua próxima rodada precificada. A Techstars pega 6 por cento de ordinárias por 20 mil dólares e adiciona nota conversível de 100 mil dólares. O Founder Institute pega equity via warrant e não via participação comprada, publicado comumente em torno de 4 por cento, com termos que variaram entre turmas, então leia o documento que você recebeu."
+        },
+        {
+          "q": "O Founder Institute investe dinheiro na sua startup?",
+          "a": "Não. O Founder Institute é o único dos três que não assina cheque. O fundador paga uma taxa de programa e o programa toma equity por meio de um warrant. A inversão é deliberada, porque ele opera no estágio de ideia, em que muitas vezes ainda não existe empresa para receber investimento. O que você compra é estrutura, prazo e um grupo de pares, e não capital."
+        },
+        {
+          "q": "Taxa de aceitação baixa indica aceleradora melhor?",
+          "a": "Não exatamente. YC e Techstars rodam turmas de tamanho fixo contra um volume muito grande de inscrições, então a seletividade reflete sobretudo as vagas disponíveis e não a qualidade do candidato mediano. O Founder Institute inverte o modelo aceitando de forma ampla e selecionando na formatura, o que torna a entrada fácil e a conclusão difícil. Avalie encaixe por estágio e pela lacuna específica que o programa fecha."
+        },
+        {
+          "q": "Como um venture studio se compara a esses três?",
+          "a": "Um venture studio começa a empresa em vez de apoiar uma que já existe. Fornece o time operacional e o primeiro capital, e o fundador entra em uma construção já em movimento. O custo é economia de cofundador, muito acima de uma participação de aceleradora, e o retorno é velocidade, já que uma venture de studio costuma lançar de 6 a 9 meses à frente de um time independente com capital equivalente."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "fast-agreement-advisor-equity-benchmark",
+    "category": "insights",
+    "type": "Guide",
+    "readTime": "7 min",
+    "featured": false,
+    "date": "Aug 2026",
+    "datePublished": "2026-08-31",
+    "isPublished": true,
+    "en": {
+      "title": "FAST Agreement Advisor Equity: The 0.25% to 1% Standard Explained",
+      "description": "The FAST agreement sets startup advisor equity between 0.25% and 1%, scaled by advisor tier and company stage, vesting monthly over two years. Here is how to apply it.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Startup advisor equity under the FAST agreement runs from 0.25 percent to 1 percent, allocated on two axes: how senior the advisor is and how mature the company is. FAST stands for Founder Advisor Standard Template, a free template published by Founder Institute, and it exists because advisor grants used to be negotiated from nothing every single time, which reliably ended with founders overpaying for a name."
+          ]
+        },
+        {
+          "heading": "FAST Agreement Advisor Equity Percentages: 0.25% to 1%",
+          "level": 2,
+          "paragraphs": [
+            "The template sorts advisors into three tiers by the depth of the commitment, and sorts companies into three stages. An advisor at the top tier joining at the idea stage sits at the top of the band. The same advisor joining a company with revenue and a funded round sits well below it, because the equity is worth more and the risk they are absorbing is lower.",
+            "The anchor most founders are looking for is the idea stage column, which is where the widely published 0.25 to 1 percent range comes from."
+          ],
+          "table": {
+            "headers": [
+              "Advisor tier",
+              "What the commitment actually is",
+              "Idea stage grant"
+            ],
+            "rows": [
+              [
+                "Standard",
+                "A call every month or two, reactive help, introductions when asked",
+                "About 0.25 percent"
+              ],
+              [
+                "Strategic",
+                "Monthly working sessions, active on a specific function, takes assignments",
+                "About 0.50 percent"
+              ],
+              [
+                "Expert",
+                "Deep and recurring involvement, opens doors that change the trajectory, effectively part time on the business",
+                "About 1.00 percent"
+              ]
+            ],
+            "caption": "Idea stage figures per the FAST template. Grants scale down at the Startup and Growth stages. Percentages have varied across FAST versions, so read the version you are signing."
+          }
+        },
+        {
+          "heading": "What the Three Tiers Actually Mean",
+          "level": 2,
+          "paragraphs": [
+            "The tiers are defined by time and by obligation, not by how impressive the advisor is. That distinction is the entire value of the template.",
+            "A Standard advisor is someone you call when you are stuck. They respond, they are useful, and they are not carrying any of the work. A Strategic advisor takes on a defined area, shows up on a schedule and can be handed something to own. An Expert advisor is close to a fractional operator, involved deeply enough that their absence would be felt inside a month.",
+            "Founders get into trouble by grading advisors on reputation rather than on this scale. A well known name who answers a message every six weeks is a Standard advisor no matter what their title is, and paying Expert equity for Standard involvement is the single most common advisor mistake."
+          ]
+        },
+        {
+          "heading": "Why the Percentage Falls as the Company Matures",
+          "level": 2,
+          "paragraphs": [
+            "The same 0.5 percent means something completely different at three points in a company's life, which is why FAST scales the grant down rather than holding it constant.",
+            "At the idea stage the equity is close to worthless in cash terms, the risk that it stays worthless is very high, and the advisor is being paid for conviction as much as for advice. At the growth stage the equity has a real price, the company can often pay cash instead, and the advisor is taking almost no risk.",
+            "This is also why a grant made at the idea stage should not be quietly renewed at the same percentage two years later. Re granting on the old scale transfers a large amount of value for an unchanged level of involvement."
+          ]
+        },
+        {
+          "heading": "Vesting Is the Part That Protects You",
+          "level": 2,
+          "paragraphs": [
+            "The percentage gets all the attention and the vesting schedule does all the work. Under FAST the grant vests monthly across two years, which means an advisor who disengages after four months keeps roughly four months of equity rather than the whole grant.",
+            "That structure is what makes an advisor relationship safe to enter. You are not betting the grant on a relationship you have not tested, you are paying for it in monthly instalments as the value actually arrives.",
+            "Two clauses are worth checking before you sign anything. The first is termination, since either side should be able to end the relationship with short notice while the advisor keeps what has vested. The second is what happens on an acquisition, because acceleration language written for employees can behave strangely when applied to an advisor who has been on a monthly call."
+          ],
+          "bullets": [
+            "Grade the advisor on committed time, not on reputation.",
+            "Put every grant on a two year monthly vest with no exception for famous people.",
+            "Write down the specific commitment, meaning frequency and scope, inside the agreement.",
+            "Re evaluate at the end of the term rather than auto renewing at the original percentage.",
+            "Keep the total advisor pool bounded so it does not quietly become another funding round of dilution."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "The FAST template sets advisor equity between 0.25 percent and 1 percent, vesting monthly over a two year term, which was designed to end the case by case negotiation that pushed grants far higher.",
+            "attribution": "Founder Institute, FAST agreement"
+          }
+        },
+        {
+          "heading": "Where Founders Overpay",
+          "level": 2,
+          "paragraphs": [
+            "The failure mode is almost never a single bad grant. It is accumulation. Five advisors at 1 percent is 5 percent of the company, which is more than a seed investor buys for real money, handed to people with no obligation to show up.",
+            "The second failure mode is paying for access that never materialises. An advisor promising introductions is selling a future action, and future actions are exactly what a monthly vest is designed to price. If the introductions do not happen, the vesting stops meaning something and you renegotiate.",
+            "The third is treating advisor equity as free because it is not cash. It is the most expensive currency you have at the idea stage, since it is the only one you can spend before you have anything."
+          ]
+        },
+        {
+          "heading": "Advisors in Brazil and LATAM",
+          "level": 2,
+          "paragraphs": [
+            "In Brazil and LATAM the advisor question carries a specific weight, because what is genuinely scarce is not capital advice but domain operators with 10 or more years of local scar tissue. Someone who has actually navigated a regulated Brazilian sector is worth an Expert tier grant in a way that a generalist introduction network is not.",
+            "The practical adaptation is to be stricter about tiering and looser about geography. Take the local operator at Expert terms and put the well connected international name at Standard, which is usually the inverse of what founders instinctively do.",
+            "For the broader picture on advisor compensation, see [How Much Equity Should a Startup Advisor Get](https://avanteventures.com/en/library/how-much-equity-startup-advisor). If you are sizing the pool these grants come out of, start with [Startup Option Pool Size Benchmark](https://avanteventures.com/en/library/startup-option-pool-size-benchmark)."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What are the FAST agreement advisor equity percentages?",
+          "a": "The FAST template places advisor equity between 0.25 percent and 1 percent, set by advisor tier and company stage. At the idea stage a Standard advisor is around 0.25 percent, a Strategic advisor around 0.50 percent and an Expert advisor around 1 percent. Grants scale down at the Startup and Growth stages, because the equity is worth more and the advisor carries less risk. Percentages have varied across versions of the template, so read the version you are signing."
+        },
+        {
+          "q": "What is the FAST agreement?",
+          "a": "FAST stands for Founder Advisor Standard Template, a free standardised advisor agreement published by Founder Institute. It exists to remove the case by case negotiation that used to surround advisor equity, which consistently produced oversized grants. It defines three advisor tiers, three company stages, a matching equity band and a standard vesting schedule."
+        },
+        {
+          "q": "How does advisor equity vest under FAST?",
+          "a": "It vests monthly across a two year term. That is the protection mechanism. An advisor who disengages after four months keeps roughly four months of equity rather than the entire grant, so you are paying in instalments as the value arrives rather than betting the full grant on an untested relationship. Check the termination and change of control clauses before signing, since acceleration language written for employees behaves oddly for advisors."
+        },
+        {
+          "q": "How much equity should I give a startup advisor?",
+          "a": "Grade the commitment before you pick the number. Monthly reactive help is a Standard grant near 0.25 percent at the idea stage, a defined ongoing workstream is Strategic near 0.50 percent, and near fractional operator involvement is Expert near 1 percent. Reputation is not the input, committed time is. Paying Expert equity for Standard involvement is the most common and most expensive advisor mistake founders make."
+        },
+        {
+          "q": "How many advisors is too many?",
+          "a": "The risk is cumulative rather than individual. Five advisors at 1 percent is 5 percent of the company given to people with no obligation to appear, which is more than some seed investors buy with real capital. Bound the total advisor allocation explicitly, review each grant at the end of its term instead of auto renewing, and treat the equity as the most expensive currency you hold at the idea stage."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Equity de Advisor no FAST Agreement: o Padrão de 0,25% a 1% Explicado",
+      "description": "O FAST agreement define equity de advisor entre 0,25% e 1%, escalado por nível do advisor e estágio da empresa, com vesting mensal em dois anos. Veja como aplicar.",
+      "sections": [
+        {
+          "paragraphs": [
+            "O equity de advisor de startup sob o FAST agreement vai de 0,25 por cento a 1 por cento, alocado em dois eixos: o quanto o advisor é sênior e o quanto a empresa é madura. FAST significa Founder Advisor Standard Template, um modelo gratuito publicado pelo Founder Institute, e existe porque concessões a advisors eram negociadas do zero toda vez, o que terminava com o fundador pagando caro demais por um nome."
+          ]
+        },
+        {
+          "heading": "Percentuais de Equity de Advisor no FAST: de 0,25% a 1%",
+          "level": 2,
+          "paragraphs": [
+            "O modelo separa advisors em três níveis pela profundidade do compromisso, e separa empresas em três estágios. Um advisor do nível mais alto entrando no estágio de ideia fica no topo da faixa. O mesmo advisor entrando em uma empresa com receita e rodada captada fica bem abaixo, porque o equity vale mais e o risco que ele absorve é menor.",
+            "A âncora que a maioria dos fundadores procura é a coluna do estágio de ideia, de onde vem a faixa amplamente publicada de 0,25 a 1 por cento."
+          ],
+          "table": {
+            "headers": [
+              "Nível do advisor",
+              "Qual é o compromisso de fato",
+              "Concessão no estágio de ideia"
+            ],
+            "rows": [
+              [
+                "Standard",
+                "Uma call a cada mês ou dois, ajuda reativa, apresentações quando pedidas",
+                "Cerca de 0,25 por cento"
+              ],
+              [
+                "Strategic",
+                "Sessões de trabalho mensais, atuação em uma função específica, aceita tarefas",
+                "Cerca de 0,50 por cento"
+              ],
+              [
+                "Expert",
+                "Envolvimento profundo e recorrente, abre portas que mudam a trajetória, na prática meio período no negócio",
+                "Cerca de 1,00 por cento"
+              ]
+            ],
+            "caption": "Valores de estágio de ideia conforme o modelo FAST. As concessões diminuem nos estágios Startup e Growth. Os percentuais variaram entre versões do FAST, então leia a versão que você vai assinar."
+          }
+        },
+        {
+          "heading": "O Que os Três Níveis Realmente Significam",
+          "level": 2,
+          "paragraphs": [
+            "Os níveis são definidos por tempo e por obrigação, não por quão impressionante é o advisor. Essa distinção é todo o valor do modelo.",
+            "Um advisor Standard é alguém que você liga quando está travado. Ele responde, é útil e não carrega nenhuma parte do trabalho. Um advisor Strategic assume uma área definida, aparece com regularidade e pode receber algo para tocar. Um advisor Expert está perto de um operador fracionado, envolvido a ponto de a ausência dele ser sentida em menos de um mês.",
+            "O fundador se complica ao avaliar advisors por reputação em vez de por essa escala. Um nome conhecido que responde uma mensagem a cada seis semanas é um advisor Standard, seja qual for o título dele, e pagar equity de Expert por envolvimento de Standard é o erro mais comum com advisors."
+          ]
+        },
+        {
+          "heading": "Por Que o Percentual Cai Conforme a Empresa Amadurece",
+          "level": 2,
+          "paragraphs": [
+            "Os mesmos 0,5 por cento significam coisas completamente diferentes em três momentos da vida de uma empresa, e é por isso que o FAST reduz a concessão em vez de mantê-la constante.",
+            "No estágio de ideia o equity é quase sem valor em dinheiro, o risco de continuar sem valor é altíssimo, e o advisor está sendo pago tanto pela convicção quanto pelo conselho. No estágio de crescimento o equity tem preço real, a empresa muitas vezes consegue pagar em dinheiro, e o advisor assume quase nenhum risco.",
+            "É também por isso que uma concessão feita no estágio de ideia não deve ser renovada em silêncio no mesmo percentual dois anos depois. Reconceder na escala antiga transfere muito valor por um nível de envolvimento que não mudou."
+          ]
+        },
+        {
+          "heading": "O Vesting É a Parte Que Protege Você",
+          "level": 2,
+          "paragraphs": [
+            "O percentual recebe toda a atenção e o cronograma de vesting faz todo o trabalho. No FAST a concessão adquire mensalmente ao longo de dois anos, o que significa que um advisor que se desengaja depois de quatro meses fica com cerca de quatro meses de equity e não com a concessão inteira.",
+            "Essa estrutura é o que torna seguro entrar em uma relação de advisor. Você não aposta a concessão inteira em uma relação que ainda não testou, você paga em parcelas mensais conforme o valor efetivamente chega.",
+            "Duas cláusulas merecem leitura antes de assinar. A primeira é a de rescisão, já que qualquer um dos lados deve poder encerrar com aviso curto enquanto o advisor mantém o que já adquiriu. A segunda é o que acontece em uma aquisição, porque linguagem de aceleração escrita para funcionários se comporta de forma estranha quando aplicada a um advisor que fazia uma call por mês."
+          ],
+          "bullets": [
+            "Avalie o advisor pelo tempo comprometido, não pela reputação.",
+            "Coloque toda concessão em vesting mensal de dois anos, sem exceção para gente famosa.",
+            "Escreva o compromisso específico, com frequência e escopo, dentro do contrato.",
+            "Reavalie ao fim do prazo em vez de renovar automaticamente no percentual original.",
+            "Mantenha o pool total de advisors limitado para não virar em silêncio outra rodada de diluição."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O modelo FAST define equity de advisor entre 0,25 por cento e 1 por cento, com vesting mensal em prazo de dois anos, desenhado para encerrar a negociação caso a caso que empurrava as concessões para muito mais alto.",
+            "attribution": "Founder Institute, FAST agreement"
+          }
+        },
+        {
+          "heading": "Onde o Fundador Paga Demais",
+          "level": 2,
+          "paragraphs": [
+            "O modo de falha quase nunca é uma concessão ruim isolada. É o acúmulo. Cinco advisors a 1 por cento são 5 por cento da empresa, mais do que um investidor seed compra com dinheiro de verdade, entregues a pessoas sem obrigação de aparecer.",
+            "O segundo modo de falha é pagar por acesso que nunca se materializa. Um advisor que promete apresentações está vendendo uma ação futura, e ação futura é exatamente o que o vesting mensal serve para precificar. Se as apresentações não acontecem, o vesting deixa de fazer sentido e você renegocia.",
+            "O terceiro é tratar equity de advisor como gratuito porque não é caixa. É a moeda mais cara que você tem no estágio de ideia, já que é a única que você consegue gastar antes de ter qualquer coisa."
+          ]
+        },
+        {
+          "heading": "Advisors no Brasil e na América Latina",
+          "level": 2,
+          "paragraphs": [
+            "No Brasil e na América Latina a questão do advisor tem um peso específico, porque o que é genuinamente escasso não é conselho sobre capital e sim operadores de domínio com 10 ou mais anos de cicatriz de mercado local. Quem de fato navegou um setor regulado brasileiro vale uma concessão de nível Expert de um jeito que uma rede genérica de apresentações não vale.",
+            "A adaptação prática é ser mais rigoroso no nível e mais flexível na geografia. Coloque o operador local em termos de Expert e o nome internacional bem relacionado em Standard, o que costuma ser o inverso do que o fundador faz por instinto.",
+            "Para o panorama mais amplo de remuneração de advisor, veja [Quanto Equity um Advisor de Startup Deve Receber](https://avanteventures.com/pt/library/how-much-equity-startup-advisor). Se você está dimensionando o pool de onde saem essas concessões, comece por [Benchmark de Tamanho do Pool de Opções](https://avanteventures.com/pt/library/startup-option-pool-size-benchmark)."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Quais são os percentuais de equity de advisor no FAST agreement?",
+          "a": "O modelo FAST coloca o equity de advisor entre 0,25 por cento e 1 por cento, definido pelo nível do advisor e pelo estágio da empresa. No estágio de ideia, um advisor Standard fica em torno de 0,25 por cento, um Strategic em torno de 0,50 por cento e um Expert em torno de 1 por cento. As concessões diminuem nos estágios Startup e Growth, porque o equity vale mais e o advisor corre menos risco. Os percentuais variaram entre versões do modelo, então leia a versão que você vai assinar."
+        },
+        {
+          "q": "O que é o FAST agreement?",
+          "a": "FAST significa Founder Advisor Standard Template, um contrato padronizado e gratuito de advisor publicado pelo Founder Institute. Ele existe para eliminar a negociação caso a caso que cercava o equity de advisor e que produzia concessões grandes demais com consistência. Define três níveis de advisor, três estágios de empresa, uma faixa de equity correspondente e um cronograma padrão de vesting."
+        },
+        {
+          "q": "Como funciona o vesting de advisor no FAST?",
+          "a": "Adquire mensalmente ao longo de dois anos. Esse é o mecanismo de proteção. Um advisor que se desengaja depois de quatro meses fica com cerca de quatro meses de equity e não com a concessão inteira, então você paga em parcelas conforme o valor chega em vez de apostar tudo em uma relação não testada. Verifique as cláusulas de rescisão e de mudança de controle antes de assinar, já que linguagem de aceleração escrita para funcionários se comporta de forma estranha para advisors."
+        },
+        {
+          "q": "Quanto equity devo dar a um advisor de startup?",
+          "a": "Classifique o compromisso antes de escolher o número. Ajuda reativa mensal é uma concessão Standard perto de 0,25 por cento no estágio de ideia, uma frente de trabalho definida e contínua é Strategic perto de 0,50 por cento, e envolvimento próximo de operador fracionado é Expert perto de 1 por cento. O insumo não é reputação, é tempo comprometido. Pagar equity de Expert por envolvimento de Standard é o erro mais comum e mais caro que fundadores cometem com advisors."
+        },
+        {
+          "q": "Quantos advisors são demais?",
+          "a": "O risco é cumulativo e não individual. Cinco advisors a 1 por cento são 5 por cento da empresa entregues a pessoas sem obrigação de aparecer, mais do que alguns investidores seed compram com capital de verdade. Limite a alocação total de advisors de forma explícita, revise cada concessão ao fim do prazo em vez de renovar automaticamente, e trate esse equity como a moeda mais cara que você tem no estágio de ideia."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "corporate-venture-studio-cost-and-budget",
+    "category": "insights",
+    "type": "Guide",
+    "readTime": "8 min",
+    "featured": false,
+    "date": "Aug 2026",
+    "datePublished": "2026-08-31",
+    "isPublished": true,
+    "en": {
+      "title": "How Much Does a Venture Studio Cost? Fees, Equity and a Year One Budget",
+      "description": "Corporate venture studio deals are priced three ways: fee only, equity only, or a hybrid. Here is what each costs, what a realistic year one budget contains, and what to ask.",
+      "sections": [
+        {
+          "paragraphs": [
+            "A corporate venture studio deal is priced in one of three ways, and the choice determines everything else about the relationship. A fee only model pays the studio to build and leaves the corporate owning the venture. An equity only model has the studio build at risk in exchange for co founder economics. A hybrid covers part of the operating cost in cash and prices the rest in equity. For a year one budget, the number that actually matters is capital per venture rather than the fee, and a studio deploying at pre seed is typically working with 500,000 to 1.5 million dollars per venture."
+          ]
+        },
+        {
+          "heading": "How Corporate Venture Studio Deals Are Priced: Fees vs Equity",
+          "level": 2,
+          "paragraphs": [
+            "The fee versus equity question is not really about price. It is about who carries the risk and who ends up owning the outcome, and corporates get it wrong when they treat a studio like an agency with a build quote.",
+            "In a fee only structure the corporate pays for the build and keeps the venture. It is the cleanest ownership outcome and the weakest incentive alignment, because the studio is paid whether or not the venture reaches traction. In an equity only structure the studio absorbs the build cost and is paid in ownership, which aligns incentives tightly and means the studio will decline ideas it does not believe in. That refusal is a feature, and corporates consistently misread it as a lack of flexibility.",
+            "The hybrid is where most serious corporate studio deals land. A retainer or build fee covers the operating team so the studio is not funding your venture from its own balance sheet, and a meaningful equity stake carries the upside. The ratio between those two is the real negotiation."
+          ],
+          "table": {
+            "headers": [
+              "Model",
+              "Who carries build risk",
+              "Corporate ownership",
+              "When it fits"
+            ],
+            "rows": [
+              [
+                "Fee only",
+                "The corporate",
+                "Highest",
+                "A clearly defined build where the corporate already knows the venture is viable"
+              ],
+              [
+                "Equity only",
+                "The studio",
+                "Lowest",
+                "An unproven thesis where the corporate wants validation before committing capital"
+              ],
+              [
+                "Hybrid, fee plus equity",
+                "Shared",
+                "Middle",
+                "Most corporate venture builds, since it funds the team and keeps incentives aligned"
+              ]
+            ],
+            "caption": "The pricing model determines incentive alignment more than it determines total cost."
+          }
+        },
+        {
+          "heading": "What a Realistic Year One Budget Contains",
+          "level": 2,
+          "paragraphs": [
+            "Corporates usually budget for the studio fee and forget the two line items that decide whether year one produces anything. The fee buys the team. The venture capital buys the attempt.",
+            "The capital per venture is the anchor. A studio building AI native companies at pre seed typically deploys 500,000 to 1.5 million dollars per venture, and that range covers the product build, the first commercial hires and enough runway to reach a real traction signal. A year one programme that funds the studio fee but underfunds the venture produces a well run process with nothing at the end of it.",
+            "Cadence is the second anchor. A studio that builds properly launches 3 to 4 ventures per year, not a dozen. Any proposal promising substantially more is describing an idea pipeline rather than a build capability, and a corporate budgeting for volume rather than depth will fund a portfolio of prototypes."
+          ],
+          "bullets": [
+            "Studio operating fee, which funds the operating partner and build team.",
+            "Capital per venture at 500,000 to 1.5 million dollars for a pre seed build.",
+            "Legal and entity setup for each venture, kept separate from the parent.",
+            "A validation budget spent before any build starts, which is the cheapest money in the programme.",
+            "A reserve for the ventures that work, because the failure case is cheap and the success case needs a follow on."
+          ]
+        },
+        {
+          "heading": "How Much Equity the Studio Takes",
+          "level": 2,
+          "paragraphs": [
+            "A venture studio takes co founder economics, and that is a materially larger share than an accelerator or a seed investor takes. It is the correct comparison point too, since the studio is not investing in a company that exists, it is creating one.",
+            "The number is negotiable but the logic is not. The studio supplies the founding team, the operating playbook, the first capital and the infrastructure, and it does that before there is any evidence the venture will work. Pricing that as if it were a service contract with a small equity kicker produces a studio that behaves like a vendor, which is the outcome the corporate least wants.",
+            "What a corporate should negotiate hard on is not the headline percentage. It is the dilution path, the conditions under which the studio stake reduces, and what happens to the venture if the corporate wants to acquire it outright later. Those three terms decide the economics far more than the founding split does."
+          ]
+        },
+        {
+          "heading": "What You Are Actually Buying",
+          "level": 2,
+          "paragraphs": [
+            "The product is compressed time and absorbed risk. A studio venture typically launches 6 to 9 months ahead of a comparably funded standalone team, because the legal setup, the hiring loop, the payroll and accounting stack, the security baseline and the first go to market playbook already exist and get inherited on day one.",
+            "That compression has a cash value. Solving company plumbing once rather than per venture routes roughly 300,000 to 500,000 dollars of effective capital per venture into product and traction instead of overhead. For a corporate running three ventures a year, that is the difference between three attempts and four.",
+            "The structural case for the model is well documented at the returns level, and it is worth understanding before treating a studio as an expensive consultancy."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Venture studios have produced roughly 50 percent IRR against an industry standard of roughly 19 percent for traditional venture capital, about 2.5x, over realistic time horizons.",
+            "attribution": "Global Startup Studio Network (GSSN)"
+          }
+        },
+        {
+          "heading": "The Questions to Ask Before Signing",
+          "level": 2,
+          "paragraphs": [
+            "Most corporate studio deals fail on governance rather than on price. The venture is built well and then dies inside the parent because nobody agreed in advance who decides what.",
+            "Ask who holds the hiring decision for the venture CEO, and whether the venture can hire outside the corporate salary band. Ask whether the venture can sell to the parent's competitors. Ask what the operating partner's engagement actually ends at, since a studio worth working with stays engaged through the first revenue milestone and then moves to board level oversight rather than disappearing at launch.",
+            "Then ask the uncomfortable one. What happens when the venture's best commercial path conflicts with the parent's existing business. If there is no answer to that question in the agreement, the venture will lose that fight in year two, and the year one budget was spent for nothing.",
+            "For the founder side of the same economics, see [How Much Equity Do Venture Studios Take](https://avanteventures.com/en/library/how-much-equity-do-venture-studios-take), and for the model comparison see [Venture Studio vs Accelerator Explained](https://avanteventures.com/en/library/venture-studio-vs-accelerator-explained)."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How are corporate venture studio deals priced, fees versus equity?",
+          "a": "Three ways. A fee only model has the corporate pay for the build and keep the venture, which gives maximum ownership and minimum incentive alignment. An equity only model has the studio build at risk for co founder economics, which aligns incentives tightly and means the studio will refuse theses it does not believe in. A hybrid covers the operating team through a retainer or build fee and prices the upside in equity, which is where most serious corporate studio deals land."
+        },
+        {
+          "q": "What is a typical year one budget for a corporate venture studio?",
+          "a": "Budget the studio operating fee plus capital per venture, because the fee buys the team and the capital buys the attempt. A studio building at pre seed typically deploys 500,000 to 1.5 million dollars per venture, and a credible studio launches 3 to 4 ventures per year rather than a dozen. Add entity and legal setup per venture, a validation budget spent before any build begins, and a reserve for follow on funding of the ventures that work."
+        },
+        {
+          "q": "How much does a venture studio cost compared to building in house?",
+          "a": "The comparison is not fee against salary, it is time and absorbed risk. A studio venture typically launches 6 to 9 months ahead of a comparably funded standalone team because legal setup, hiring, payroll, accounting, security and the first go to market playbook are inherited rather than rebuilt. Solving that plumbing once routes roughly 300,000 to 500,000 dollars of effective capital per venture into product and traction instead of overhead."
+        },
+        {
+          "q": "How much equity does a venture studio take from a corporate venture?",
+          "a": "A studio takes co founder economics, which is materially more than an accelerator or seed investor takes, because it creates the company rather than investing in one that exists. The percentage is negotiable but the more important terms are the dilution path, the conditions under which the studio stake reduces over time, and what happens if the corporate wants to acquire the venture outright later."
+        },
+        {
+          "q": "What is the most common reason corporate venture studio deals fail?",
+          "a": "Governance, not price. The venture gets built and then dies inside the parent because nobody agreed in advance who decides. Settle before signing who owns the venture CEO hiring decision, whether the venture can hire outside the corporate salary band, whether it can sell to the parent's competitors, and what happens when the venture's best commercial path conflicts with the parent's existing business."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Quanto Custa um Venture Studio? Fees, Equity e o Orçamento do Ano Um",
+      "description": "Negócios de venture studio corporativo são precificados de três formas: só fee, só equity ou híbrido. Veja o custo de cada uma, o orçamento do ano um e o que perguntar.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Um acordo de venture studio corporativo é precificado de uma entre três formas, e a escolha determina todo o resto da relação. O modelo só de fee paga o studio para construir e deixa a venture com a corporação. O modelo só de equity faz o studio construir no risco em troca de economia de cofundador. O híbrido cobre parte do custo operacional em caixa e precifica o restante em equity. Para o orçamento do ano um, o número que realmente importa é capital por venture e não o fee, e um studio operando em pré-seed trabalha normalmente com 500 mil a 1,5 milhão de dólares por venture."
+          ]
+        },
+        {
+          "heading": "Como Negócios de Venture Studio Corporativo São Precificados: Fee vs Equity",
+          "level": 2,
+          "paragraphs": [
+            "A questão fee contra equity não é sobre preço. É sobre quem carrega o risco e quem termina dono do resultado, e a corporação erra quando trata o studio como uma agência com um orçamento de construção.",
+            "Na estrutura só de fee a corporação paga a construção e fica com a venture. É o melhor desfecho de propriedade e o pior de alinhamento de incentivo, porque o studio é pago independentemente de a venture alcançar tração. Na estrutura só de equity o studio absorve o custo de construção e é pago em participação, o que alinha incentivos com força e faz o studio recusar ideias em que não acredita. Essa recusa é uma qualidade, e corporações leem isso com frequência como falta de flexibilidade.",
+            "O híbrido é onde a maioria dos acordos corporativos sérios aterrissa. Um retainer ou fee de construção cobre o time operacional para o studio não financiar a sua venture com o próprio balanço, e uma participação relevante carrega o upside. A proporção entre os dois é a negociação de verdade."
+          ],
+          "table": {
+            "headers": [
+              "Modelo",
+              "Quem carrega o risco de construção",
+              "Propriedade da corporação",
+              "Quando encaixa"
+            ],
+            "rows": [
+              [
+                "Só fee",
+                "A corporação",
+                "Máxima",
+                "Construção bem definida em que a corporação já sabe que a venture é viável"
+              ],
+              [
+                "Só equity",
+                "O studio",
+                "Mínima",
+                "Tese não comprovada em que a corporação quer validação antes de comprometer capital"
+              ],
+              [
+                "Híbrido, fee mais equity",
+                "Compartilhado",
+                "Intermediária",
+                "A maioria das construções corporativas, porque financia o time e mantém incentivos alinhados"
+              ]
+            ],
+            "caption": "O modelo de precificação determina mais o alinhamento de incentivos do que o custo total."
+          }
+        },
+        {
+          "heading": "O Que um Orçamento Realista de Ano Um Contém",
+          "level": 2,
+          "paragraphs": [
+            "Corporações costumam orçar o fee do studio e esquecer as duas linhas que decidem se o ano um produz alguma coisa. O fee compra o time. O capital da venture compra a tentativa.",
+            "O capital por venture é a âncora. Um studio que constrói empresas AI-native em pré-seed normalmente aloca 500 mil a 1,5 milhão de dólares por venture, e essa faixa cobre a construção do produto, as primeiras contratações comerciais e runway suficiente para chegar a um sinal real de tração. Um programa de ano um que financia o fee do studio e subfinancia a venture produz um processo bem conduzido sem nada no final.",
+            "A cadência é a segunda âncora. Um studio que constrói direito lança 3 a 4 ventures por ano, não uma dúzia. Qualquer proposta que prometa muito mais está descrevendo um funil de ideias e não capacidade de construção, e a corporação que orça por volume em vez de profundidade vai financiar um portfólio de protótipos."
+          ],
+          "bullets": [
+            "Fee operacional do studio, que financia o operating partner e o time de construção.",
+            "Capital por venture de 500 mil a 1,5 milhão de dólares para uma construção pré-seed.",
+            "Estruturação jurídica e societária de cada venture, mantida separada da controladora.",
+            "Orçamento de validação gasto antes de qualquer construção, que é o dinheiro mais barato do programa.",
+            "Reserva para as ventures que funcionam, porque o caso de falha é barato e o caso de sucesso exige follow on."
+          ]
+        },
+        {
+          "heading": "Quanto Equity o Studio Pega",
+          "level": 2,
+          "paragraphs": [
+            "Um venture studio toma economia de cofundador, e isso é uma fatia materialmente maior do que a de uma aceleradora ou de um investidor seed. Também é a comparação correta, já que o studio não investe em uma empresa que existe, ele cria uma.",
+            "O número é negociável, a lógica não. O studio fornece o time fundador, o playbook operacional, o primeiro capital e a infraestrutura, e faz isso antes de existir qualquer evidência de que a venture vai funcionar. Precificar isso como um contrato de serviço com um pequeno adicional em equity produz um studio que se comporta como fornecedor, que é o resultado que a corporação menos quer.",
+            "O que a corporação deve negociar com dureza não é o percentual de manchete. É a trajetória de diluição, as condições em que a participação do studio se reduz, e o que acontece com a venture se a corporação quiser adquiri-la por inteiro depois. Esses três termos decidem a economia muito mais do que a divisão inicial."
+          ]
+        },
+        {
+          "heading": "O Que Você Está Comprando de Fato",
+          "level": 2,
+          "paragraphs": [
+            "O produto é tempo comprimido e risco absorvido. Uma venture de studio normalmente lança de 6 a 9 meses à frente de um time independente com capital equivalente, porque a estruturação jurídica, o ciclo de contratação, a folha e a contabilidade, a base de segurança e o primeiro playbook de go to market já existem e são herdados no dia um.",
+            "Essa compressão tem valor em caixa. Resolver o encanamento da empresa uma vez em vez de a cada venture direciona cerca de 300 mil a 500 mil dólares de capital efetivo por venture para produto e tração em vez de overhead. Para uma corporação rodando três ventures por ano, é a diferença entre três tentativas e quatro.",
+            "O argumento estrutural do modelo está bem documentado no nível de retorno, e vale entender antes de tratar um studio como uma consultoria cara."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Venture studios produziram cerca de 50 por cento de TIR contra um padrão de indústria de cerca de 19 por cento do venture capital tradicional, aproximadamente 2,5x, em horizontes de tempo realistas.",
+            "attribution": "Global Startup Studio Network (GSSN)"
+          }
+        },
+        {
+          "heading": "As Perguntas a Fazer Antes de Assinar",
+          "level": 2,
+          "paragraphs": [
+            "A maioria dos acordos corporativos com studio falha em governança e não em preço. A venture é bem construída e depois morre dentro da controladora porque ninguém combinou antes quem decide o quê.",
+            "Pergunte quem tem a decisão de contratação do CEO da venture, e se a venture pode contratar fora da faixa salarial corporativa. Pergunte se a venture pode vender para concorrentes da controladora. Pergunte onde termina de fato o engajamento do operating partner, já que um studio que vale a pena permanece engajado até o primeiro marco de receita e depois passa a supervisão de conselho, em vez de sumir no lançamento.",
+            "Depois faça a pergunta desconfortável. O que acontece quando o melhor caminho comercial da venture conflita com o negócio existente da controladora. Se não houver resposta para isso no contrato, a venture vai perder essa disputa no ano dois, e o orçamento do ano um terá sido gasto à toa.",
+            "Para o lado do fundador nessa mesma economia, veja [Quanto Equity um Venture Studio Pega](https://avanteventures.com/pt/library/how-much-equity-do-venture-studios-take), e para a comparação de modelos veja [Venture Studio vs Aceleradora Explicado](https://avanteventures.com/pt/library/venture-studio-vs-accelerator-explained)."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Como negócios de venture studio corporativo são precificados, fee ou equity?",
+          "a": "De três formas. O modelo só de fee faz a corporação pagar a construção e ficar com a venture, o que dá propriedade máxima e alinhamento mínimo. O modelo só de equity faz o studio construir no risco por economia de cofundador, o que alinha incentivos com força e faz o studio recusar teses em que não acredita. O híbrido cobre o time operacional com retainer ou fee de construção e precifica o upside em equity, e é onde a maioria dos acordos corporativos sérios aterrissa."
+        },
+        {
+          "q": "Qual é um orçamento típico de ano um para um venture studio corporativo?",
+          "a": "Orce o fee operacional do studio mais o capital por venture, porque o fee compra o time e o capital compra a tentativa. Um studio construindo em pré-seed normalmente aloca 500 mil a 1,5 milhão de dólares por venture, e um studio crível lança 3 a 4 ventures por ano em vez de uma dúzia. Some estruturação jurídica por venture, um orçamento de validação gasto antes de qualquer construção, e uma reserva de follow on para as ventures que funcionarem."
+        },
+        {
+          "q": "Quanto custa um venture studio comparado a construir internamente?",
+          "a": "A comparação não é fee contra salário, é tempo e risco absorvido. Uma venture de studio normalmente lança de 6 a 9 meses à frente de um time independente com capital equivalente, porque estruturação jurídica, contratação, folha, contabilidade, segurança e o primeiro playbook de go to market são herdados em vez de reconstruídos. Resolver esse encanamento uma vez direciona cerca de 300 mil a 500 mil dólares de capital efetivo por venture para produto e tração em vez de overhead."
+        },
+        {
+          "q": "Quanto equity um venture studio pega de uma venture corporativa?",
+          "a": "Um studio toma economia de cofundador, materialmente acima do que pega uma aceleradora ou um investidor seed, porque ele cria a empresa em vez de investir em uma que já existe. O percentual é negociável, mas os termos mais importantes são a trajetória de diluição, as condições em que a participação do studio diminui ao longo do tempo, e o que acontece se a corporação quiser adquirir a venture por inteiro depois."
+        },
+        {
+          "q": "Qual é a razão mais comum para o fracasso desses acordos?",
+          "a": "Governança, não preço. A venture é construída e depois morre dentro da controladora porque ninguém combinou antes quem decide. Defina antes de assinar quem detém a decisão de contratação do CEO da venture, se a venture pode contratar fora da faixa salarial corporativa, se pode vender para concorrentes da controladora, e o que acontece quando o melhor caminho comercial da venture conflita com o negócio existente da controladora."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "venture-studio-vs-consultancy",
+    "category": "insights",
+    "type": "Comparison",
+    "readTime": "7 min",
+    "featured": false,
+    "date": "Aug 2026",
+    "datePublished": "2026-08-31",
+    "isPublished": true,
+    "en": {
+      "title": "Venture Studio vs Consultancy: Which Actually Launches a Digital Venture",
+      "description": "A consultancy delivers a plan and a build, a venture studio delivers a company it co owns. The difference is who carries the outcome, and it changes your timeline entirely.",
+      "sections": [
+        {
+          "paragraphs": [
+            "A consultancy is paid to deliver work. A venture studio is paid in ownership of a company it helps create. That single difference decides who carries the risk after the launch date, and it is the reason two proposals that look similar on a slide produce completely different outcomes twelve months later. If you are choosing between a venture studio, a consultancy and an accelerator to launch a new digital venture, the honest filter is not price. It is whether you need a deliverable, a company, or a network."
+          ]
+        },
+        {
+          "heading": "Venture Studio vs Consultancy vs Accelerator: Which Is Best for Launching a New Digital Venture",
+          "level": 2,
+          "paragraphs": [
+            "The three models are not competing versions of the same service. Each one is built for a different missing piece, and picking the wrong one is usually a diagnosis error rather than a vendor error.",
+            "A consultancy sells expertise and execution against a scope you define. An accelerator sells capital, network and a deadline to a company that already exists. A venture studio creates the company itself, staffs it, funds the first stage and stays in as a co owner."
+          ],
+          "table": {
+            "headers": [
+              "",
+              "Consultancy",
+              "Accelerator",
+              "Venture studio"
+            ],
+            "rows": [
+              [
+                "What it delivers",
+                "A defined scope of work, strategy or a built product",
+                "Capital, mentorship and investor access over a fixed programme",
+                "A company with an operating team, first capital and a go to market"
+              ],
+              [
+                "How it is paid",
+                "Fees against the scope",
+                "Equity in exchange for a check",
+                "Co founder economics in the venture it creates"
+              ],
+              [
+                "Who owns the outcome",
+                "You do, entirely",
+                "You do, minus the accelerator stake",
+                "Shared with the studio"
+              ],
+              [
+                "Exposure after launch",
+                "Ends with the engagement",
+                "Ends with the programme",
+                "Continues through the first revenue milestone"
+              ],
+              [
+                "Precondition",
+                "You know what to build",
+                "You already have a company",
+                "You have a domain insight and no company yet"
+              ]
+            ],
+            "caption": "The models differ less in what they do than in what happens after the work ends."
+          }
+        },
+        {
+          "heading": "The Structural Difference Is Who Owns the Outcome",
+          "level": 2,
+          "paragraphs": [
+            "A consultancy engagement is complete when the deliverable is accepted. This is not a criticism, it is the definition of the product, and it is exactly why consultancies are efficient at what they do. The incentive is to deliver the agreed scope well and on time.",
+            "A studio's incentive lives in the opposite place. Because the studio holds co founder economics, its return depends on the venture reaching traction and revenue rather than on the build being accepted. That means the studio will argue against a build it thinks is wrong, will change the plan mid stream when the market says something different, and will not treat launch as the finish line.",
+            "Corporates and founders repeatedly buy the consultancy product while expecting the studio outcome. That mismatch produces a beautifully executed venture that has nobody accountable for it in month seven, which is when the real work starts."
+          ]
+        },
+        {
+          "heading": "What Timelines Should You Expect",
+          "level": 2,
+          "paragraphs": [
+            "An accelerator programme runs on a fixed calendar, typically about three months, and the timeline is the product. A consultancy engagement is scoped, so the timeline is whatever the scope says, commonly one to two quarters for a strategy plus build.",
+            "A studio runs on a stage gate rather than a calendar. The sequence is Research, Partner, Build, Traction, Revenue, Compound, and a venture moves forward only when the previous stage produces evidence. That is slower to promise and faster to arrive, because the validation work that kills bad ideas happens before the expensive build rather than after it.",
+            "The compounding effect is where the time actually comes from. A studio venture typically launches 6 to 9 months ahead of a comparably funded standalone team, because legal setup, hiring, payroll and accounting, security baseline and the first go to market playbook already exist and are inherited on day one rather than rebuilt."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Solving company plumbing once instead of per venture routes roughly 300,000 to 500,000 dollars of effective capital per venture into product and traction rather than overhead.",
+            "attribution": "Avante Ventures operating model"
+          }
+        },
+        {
+          "heading": "Where a Consultancy Is Genuinely the Right Choice",
+          "level": 2,
+          "paragraphs": [
+            "There are situations where a studio is the wrong instrument and a consultancy is clearly right, and it is worth being direct about them.",
+            "If you already know exactly what to build and why, and the uncertainty is purely execution, buy execution. If the work is a defined migration, an integration, a compliance implementation or a redesign, a consultancy will do it better and cheaper than a studio, because that is a scoped problem and studios are built for unscoped ones.",
+            "If you want to retain 100 percent of the equity and you have the operating capacity in house to run the venture after launch, the fee model is genuinely cheaper. A studio's economics only make sense when you are buying the operating capacity you do not have."
+          ],
+          "bullets": [
+            "Scope is clear and the risk is execution, choose a consultancy.",
+            "The company exists and needs capital and network, choose an accelerator.",
+            "The insight exists but the company does not, choose a venture studio.",
+            "You need someone accountable after launch, choose a venture studio.",
+            "You must retain full ownership and can operate it yourself, choose a consultancy."
+          ]
+        },
+        {
+          "heading": "Where the Consultancy Model Breaks",
+          "level": 2,
+          "paragraphs": [
+            "The break happens at handover. A consultancy delivers a working product to an organisation that has no team to run it, no commercial motion behind it and no owner whose incentives depend on it working. The product is fine. The venture dies anyway.",
+            "The second break is the incentive to agree. A consultancy paid against a scope has a structural reason to build what the client asked for, and the most valuable thing an early venture needs is somebody with standing to say the plan is wrong. Studios have that standing because they are absorbing the downside.",
+            "The third is speed of correction. When a market signal contradicts the plan, a scoped engagement has to renegotiate the scope. A co owner just changes direction."
+          ]
+        },
+        {
+          "heading": "The LATAM Read",
+          "level": 2,
+          "paragraphs": [
+            "In Brazil and the broader LATAM market the choice tilts further toward the studio model for a specific reason. What is scarce here is not engineering capacity, which consultancies supply well and cheaply. What is scarce is domain operators with 10 or more years of local scar tissue who can pair a proven playbook with first ticket capital on day one.",
+            "That scarcity is also why services account for roughly 70 percent of Brazilian GDP with low software penetration. The opportunity is real, and the constraint on capturing it is operator time rather than build capacity. A consultancy sells build capacity. A studio sells operator time and takes the risk alongside you.",
+            "If you are weighing the studio model against the funded startup path instead, see [Venture Studio vs Accelerator Explained](https://avanteventures.com/en/library/venture-studio-vs-accelerator-explained) and [How to Choose a Venture Studio](https://avanteventures.com/en/library/how-to-choose-a-venture-studio)."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Venture studio vs consultancy vs accelerator, which is best for launching a new digital venture?",
+          "a": "It depends on what is actually missing. Choose a consultancy when the scope is clear and the only uncertainty is execution. Choose an accelerator when the company already exists and needs capital, network and a deadline. Choose a venture studio when you have a domain insight but no company, and you need somebody accountable for the outcome after launch rather than at handover."
+        },
+        {
+          "q": "What timelines should I expect from each model?",
+          "a": "An accelerator runs a fixed programme of roughly three months. A consultancy runs to its scope, commonly one to two quarters for strategy plus build. A venture studio runs on stage gates rather than a calendar, moving through Research, Partner, Build, Traction, Revenue and Compound only as each stage produces evidence. In practice a studio venture launches 6 to 9 months ahead of a comparably funded standalone team, because the company infrastructure is inherited rather than rebuilt."
+        },
+        {
+          "q": "What is the main difference between a venture studio and a consultancy?",
+          "a": "Who owns the outcome. A consultancy engagement is complete when the deliverable is accepted, so its incentive is to deliver the agreed scope well. A venture studio holds co founder economics, so its return depends on the venture reaching traction and revenue. That is why a studio will argue against a build it believes is wrong and a consultancy generally will not."
+        },
+        {
+          "q": "Is a venture studio more expensive than a consultancy?",
+          "a": "In fee terms usually not, and in ownership terms clearly yes, because the studio takes co founder economics rather than a fee. The comparison only makes sense against what you are buying. If you have the operating capacity to run the venture after launch, the consultancy is genuinely cheaper. If you do not, the fee model buys you a product with nobody accountable for it, which is the more expensive outcome."
+        },
+        {
+          "q": "Why does the consultancy model break for new ventures?",
+          "a": "At handover. A working product arrives at an organisation with no team to run it, no commercial motion behind it and no owner whose incentives depend on it succeeding. There is also an incentive problem, since a firm paid against a scope has a structural reason to build what was asked for, while an early venture most needs somebody with standing to say the plan is wrong."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Venture Studio vs Consultoria: Qual de Fato Lança uma Nova Venture Digital",
+      "description": "Uma consultoria entrega um plano e uma construção, um venture studio entrega uma empresa da qual é cossócio. A diferença é quem carrega o resultado, e ela muda todo o prazo.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Uma consultoria é paga para entregar trabalho. Um venture studio é pago em participação de uma empresa que ajuda a criar. Essa única diferença decide quem carrega o risco depois da data de lançamento, e é a razão pela qual duas propostas parecidas no slide produzem resultados completamente diferentes doze meses depois. Se você está escolhendo entre venture studio, consultoria e aceleradora para lançar uma nova venture digital, o filtro honesto não é preço. É se você precisa de um entregável, de uma empresa ou de uma rede."
+          ]
+        },
+        {
+          "heading": "Venture Studio vs Consultoria vs Aceleradora: Qual É Melhor para Lançar uma Nova Venture Digital",
+          "level": 2,
+          "paragraphs": [
+            "Os três modelos não são versões concorrentes do mesmo serviço. Cada um é feito para uma peça faltante diferente, e escolher errado costuma ser erro de diagnóstico e não erro de fornecedor.",
+            "Uma consultoria vende expertise e execução contra um escopo que você define. Uma aceleradora vende capital, rede e um prazo para uma empresa que já existe. Um venture studio cria a própria empresa, monta o time, financia a primeira etapa e permanece como cossócio."
+          ],
+          "table": {
+            "headers": [
+              "",
+              "Consultoria",
+              "Aceleradora",
+              "Venture studio"
+            ],
+            "rows": [
+              [
+                "O que entrega",
+                "Um escopo definido de trabalho, estratégia ou produto construído",
+                "Capital, mentoria e acesso a investidores em programa de prazo fixo",
+                "Uma empresa com time operacional, primeiro capital e go to market"
+              ],
+              [
+                "Como é paga",
+                "Honorários contra o escopo",
+                "Equity em troca de um cheque",
+                "Economia de cofundador na venture que cria"
+              ],
+              [
+                "Quem é dono do resultado",
+                "Você, integralmente",
+                "Você, menos a participação da aceleradora",
+                "Compartilhado com o studio"
+              ],
+              [
+                "Exposição após o lançamento",
+                "Termina com o contrato",
+                "Termina com o programa",
+                "Continua até o primeiro marco de receita"
+              ],
+              [
+                "Pré-requisito",
+                "Você sabe o que construir",
+                "Você já tem uma empresa",
+                "Você tem uma percepção de domínio e ainda não tem empresa"
+              ]
+            ],
+            "caption": "Os modelos diferem menos no que fazem e mais no que acontece quando o trabalho termina."
+          }
+        },
+        {
+          "heading": "A Diferença Estrutural É Quem É Dono do Resultado",
+          "level": 2,
+          "paragraphs": [
+            "Um contrato de consultoria está completo quando o entregável é aceito. Isso não é crítica, é a definição do produto, e é exatamente por isso que consultorias são eficientes no que fazem. O incentivo é entregar o escopo combinado bem e no prazo.",
+            "O incentivo de um studio mora no lugar oposto. Como o studio detém economia de cofundador, o retorno dele depende de a venture alcançar tração e receita e não de a construção ser aceita. Isso significa que o studio vai argumentar contra uma construção que considera errada, vai mudar o plano no meio do caminho quando o mercado disser outra coisa, e não vai tratar o lançamento como linha de chegada.",
+            "Corporações e fundadores compram com frequência o produto de consultoria esperando o resultado de studio. Esse descasamento produz uma venture bem executada e sem ninguém responsável por ela no mês sete, que é quando o trabalho de verdade começa."
+          ]
+        },
+        {
+          "heading": "Que Prazos Esperar",
+          "level": 2,
+          "paragraphs": [
+            "Um programa de aceleradora roda em calendário fixo, tipicamente cerca de três meses, e o prazo é o produto. Um contrato de consultoria é escopado, então o prazo é o que o escopo disser, comumente um a dois trimestres para estratégia mais construção.",
+            "Um studio roda por estágios e não por calendário. A sequência é Research, Partner, Build, Traction, Revenue, Compound, e uma venture só avança quando o estágio anterior produz evidência. É mais lento de prometer e mais rápido de chegar, porque o trabalho de validação que mata ideias ruins acontece antes da construção cara e não depois dela.",
+            "O efeito de composição é de onde o tempo realmente vem. Uma venture de studio normalmente lança de 6 a 9 meses à frente de um time independente com capital equivalente, porque estruturação jurídica, contratação, folha e contabilidade, base de segurança e o primeiro playbook de go to market já existem e são herdados no dia um em vez de reconstruídos."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Resolver o encanamento da empresa uma vez em vez de a cada venture direciona cerca de 300 mil a 500 mil dólares de capital efetivo por venture para produto e tração em vez de overhead.",
+            "attribution": "Modelo operacional da Avante Ventures"
+          }
+        },
+        {
+          "heading": "Quando a Consultoria É Genuinamente a Escolha Certa",
+          "level": 2,
+          "paragraphs": [
+            "Existem situações em que o studio é o instrumento errado e a consultoria é claramente certa, e vale ser direto sobre elas.",
+            "Se você já sabe exatamente o que construir e por quê, e a incerteza é puramente de execução, compre execução. Se o trabalho é uma migração definida, uma integração, uma implementação de compliance ou um redesenho, uma consultoria fará melhor e mais barato que um studio, porque esse é um problema escopado e studios existem para os não escopados.",
+            "Se você quer manter 100 por cento do equity e tem capacidade operacional interna para tocar a venture depois do lançamento, o modelo de honorários é genuinamente mais barato. A economia de um studio só faz sentido quando você está comprando a capacidade operacional que não tem."
+          ],
+          "bullets": [
+            "Escopo claro e risco de execução, escolha consultoria.",
+            "A empresa existe e precisa de capital e rede, escolha aceleradora.",
+            "A percepção existe mas a empresa não, escolha venture studio.",
+            "Você precisa de alguém responsável depois do lançamento, escolha venture studio.",
+            "Você precisa manter a propriedade integral e consegue operar sozinho, escolha consultoria."
+          ]
+        },
+        {
+          "heading": "Onde o Modelo de Consultoria Quebra",
+          "level": 2,
+          "paragraphs": [
+            "A quebra acontece na passagem de bastão. A consultoria entrega um produto funcionando para uma organização que não tem time para operá-lo, não tem motor comercial por trás e não tem um dono cujos incentivos dependam de aquilo funcionar. O produto está bom. A venture morre mesmo assim.",
+            "A segunda quebra é o incentivo a concordar. Uma consultoria paga contra escopo tem razão estrutural para construir o que o cliente pediu, e a coisa mais valiosa de que uma venture inicial precisa é alguém com legitimidade para dizer que o plano está errado. Studios têm essa legitimidade porque estão absorvendo o lado ruim.",
+            "A terceira é velocidade de correção. Quando um sinal de mercado contradiz o plano, um contrato escopado precisa renegociar o escopo. Um cossócio simplesmente muda de direção."
+          ]
+        },
+        {
+          "heading": "A Leitura LATAM",
+          "level": 2,
+          "paragraphs": [
+            "No Brasil e na América Latina a escolha pende ainda mais para o modelo de studio por uma razão específica. O que é escasso aqui não é capacidade de engenharia, que consultorias fornecem bem e barato. O escasso são operadores de domínio com 10 ou mais anos de cicatriz de mercado local, capazes de juntar um playbook comprovado com capital de primeiro cheque no dia um.",
+            "Essa escassez é também por que os serviços representam cerca de 70 por cento do PIB brasileiro com baixa penetração de software. A oportunidade é real, e a restrição para capturá-la é tempo de operador e não capacidade de construção. Uma consultoria vende capacidade de construção. Um studio vende tempo de operador e corre o risco junto com você.",
+            "Se você está comparando o modelo de studio com o caminho da startup capitalizada, veja [Venture Studio vs Aceleradora Explicado](https://avanteventures.com/pt/library/venture-studio-vs-accelerator-explained) e [Como Escolher um Venture Studio](https://avanteventures.com/pt/library/how-to-choose-a-venture-studio)."
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Venture studio, consultoria ou aceleradora, qual é melhor para lançar uma nova venture digital?",
+          "a": "Depende do que está de fato faltando. Escolha consultoria quando o escopo é claro e a única incerteza é execução. Escolha aceleradora quando a empresa já existe e precisa de capital, rede e prazo. Escolha venture studio quando você tem uma percepção de domínio mas não tem empresa, e precisa de alguém responsável pelo resultado depois do lançamento e não na entrega."
+        },
+        {
+          "q": "Que prazos esperar de cada modelo?",
+          "a": "Uma aceleradora roda um programa fixo de cerca de três meses. Uma consultoria roda conforme o escopo, comumente um a dois trimestres para estratégia mais construção. Um venture studio roda por estágios e não por calendário, avançando por Research, Partner, Build, Traction, Revenue e Compound apenas conforme cada estágio produz evidência. Na prática uma venture de studio lança de 6 a 9 meses à frente de um time independente com capital equivalente, porque a infraestrutura da empresa é herdada e não reconstruída."
+        },
+        {
+          "q": "Qual a principal diferença entre um venture studio e uma consultoria?",
+          "a": "Quem é dono do resultado. Um contrato de consultoria termina quando o entregável é aceito, então o incentivo é entregar bem o escopo combinado. Um venture studio detém economia de cofundador, então o retorno depende de a venture alcançar tração e receita. É por isso que um studio vai argumentar contra uma construção que considera errada e uma consultoria em geral não vai."
+        },
+        {
+          "q": "Um venture studio é mais caro que uma consultoria?",
+          "a": "Em honorários normalmente não, e em propriedade claramente sim, porque o studio toma economia de cofundador em vez de honorários. A comparação só faz sentido contra o que você está comprando. Se você tem capacidade operacional para tocar a venture depois do lançamento, a consultoria é genuinamente mais barata. Se não tem, o modelo de honorários compra um produto sem ninguém responsável por ele, que é o resultado mais caro."
+        },
+        {
+          "q": "Por que o modelo de consultoria quebra em novas ventures?",
+          "a": "Na passagem de bastão. Um produto funcionando chega a uma organização sem time para operá-lo, sem motor comercial e sem um dono cujos incentivos dependam do sucesso. Há também um problema de incentivo, já que uma firma paga contra escopo tem razão estrutural para construir o que foi pedido, enquanto o que uma venture inicial mais precisa é de alguém com legitimidade para dizer que o plano está errado."
+        }
+      ]
+    }
+  },
 ]
 // === CONTENT-ENGINE:END ===
 

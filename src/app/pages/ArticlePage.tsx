@@ -1564,6 +1564,74 @@ function articleTaxonomy(slug: string): {
           COMMON_AVANTE,
         ],
       }
+    case 'flat-round-vs-down-round':
+      return {
+        keywords: ['flat round vs down round', 'flat round', 'down round', 'anti-dilution', 'structured round', 'liquidation preference', 'option repricing', 'startup valuation'],
+        about: [
+          { '@type': 'Thing', name: 'Down round', sameAs: 'https://en.wikipedia.org/wiki/Down_round' },
+          { '@type': 'Thing', name: 'Stock dilution', sameAs: 'https://en.wikipedia.org/wiki/Stock_dilution' },
+          { '@type': 'Thing', name: 'Venture capital', sameAs: 'https://en.wikipedia.org/wiki/Venture_capital' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Carta', sameAs: 'https://carta.com' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'founder-institute-vs-yc-vs-techstars':
+      return {
+        keywords: ['Founder Institute vs YC vs Techstars', 'accelerator terms compared', 'YC standard deal', 'Techstars terms', 'Founder Institute equity', 'startup accelerator equity', 'venture studio vs accelerator'],
+        about: [
+          { '@type': 'Thing', name: 'Startup accelerator', sameAs: 'https://en.wikipedia.org/wiki/Startup_accelerator' },
+          { '@type': 'Thing', name: 'Simple agreement for future equity', sameAs: 'https://en.wikipedia.org/wiki/Simple_agreement_for_future_equity' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Y Combinator', sameAs: 'https://www.ycombinator.com' },
+          { '@type': 'Organization', name: 'Techstars', sameAs: 'https://www.techstars.com' },
+          { '@type': 'Organization', name: 'Founder Institute', sameAs: 'https://fi.co' },
+          { '@type': 'Organization', name: 'Global Startup Studio Network' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'fast-agreement-advisor-equity-benchmark':
+      return {
+        keywords: ['FAST agreement advisor equity', 'advisor equity percentages', 'startup advisor equity', 'how much equity for an advisor', 'advisor vesting schedule', 'Founder Advisor Standard Template', '0.25 to 1 percent advisor equity'],
+        about: [
+          { '@type': 'Thing', name: 'Vesting', sameAs: 'https://en.wikipedia.org/wiki/Vesting' },
+          { '@type': 'Thing', name: 'Equity compensation', sameAs: 'https://en.wikipedia.org/wiki/Equity_compensation' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Founder Institute', sameAs: 'https://fi.co' },
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'corporate-venture-studio-cost-and-budget':
+      return {
+        keywords: ['corporate venture studio cost', 'venture studio fees vs equity', 'venture studio year one budget', 'how much does a venture studio cost', 'corporate venture building', 'venture studio equity split'],
+        about: [
+          { '@type': 'Thing', name: 'Startup studio', sameAs: 'https://en.wikipedia.org/wiki/Startup_studio' },
+          { '@type': 'Thing', name: 'Corporate venture capital', sameAs: 'https://en.wikipedia.org/wiki/Corporate_venture_capital' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Global Startup Studio Network' },
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+          COMMON_AVANTE,
+        ],
+      }
+    case 'venture-studio-vs-consultancy':
+      return {
+        keywords: ['venture studio vs consultancy', 'venture studio vs accelerator vs consultancy', 'launching a digital venture', 'venture building timelines', 'consultancy vs venture builder', 'who owns the outcome'],
+        about: [
+          { '@type': 'Thing', name: 'Startup studio', sameAs: 'https://en.wikipedia.org/wiki/Startup_studio' },
+          { '@type': 'Thing', name: 'Management consulting', sameAs: 'https://en.wikipedia.org/wiki/Management_consulting' },
+        ],
+        mentions: [
+          { '@type': 'Organization', name: 'Global Startup Studio Network' },
+          { '@type': 'Place', name: 'Latin America', sameAs: 'https://en.wikipedia.org/wiki/Latin_America' },
+          { '@type': 'Place', name: 'Brazil', sameAs: 'https://en.wikipedia.org/wiki/Brazil' },
+          COMMON_AVANTE,
+        ],
+      }
     default:
       return { keywords: [], about: [], mentions: [COMMON_AVANTE] }
   }
