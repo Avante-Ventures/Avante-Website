@@ -86,6 +86,10 @@ export const CLUSTERS: Cluster[] = [
       'brazil-ai-studio-market-opportunity',
       'brazil-mobile-ai-market-opportunity',
       'brazil-ai-image-generator-market-opportunity',
+      // South America axis (2026-09): same template, wider geo. The Brazil
+      // computer-vision page was already leaking into `south america computer
+      // vision market` at pos ~24, so the geo variant gets its own page.
+      'south-america-computer-vision-market',
     ],
   },
 ]

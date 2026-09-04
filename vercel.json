@@ -11,7 +11,8 @@
       "permanent": true
     },
     { "source": "/", "destination": "/en", "permanent": true },
-    { "source": "/:locale(en|pt|es)/library/how-do-venture-studios-make-money", "destination": "/:locale/library/how-venture-studios-make-money", "permanent": true }
+    { "source": "/:locale(en|pt|es)/library/how-do-venture-studios-make-money", "destination": "/:locale/library/how-venture-studios-make-money", "permanent": true },
+    { "source": "/:locale(en|pt|es)/library/brazil-ai-studio-market-what-it-is-why-it-matters", "destination": "/:locale/library/brazil-ai-studio-market-opportunity", "permanent": true }
   ],
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
