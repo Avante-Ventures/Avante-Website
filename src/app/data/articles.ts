@@ -1767,7 +1767,7 @@ const articleSiggaCaseStudy: Article = {
 // ─────────────────────────────────────────────────────────────────────
 
 // === CONTENT-ENGINE:START (managed by content-engine/merge.py — do not edit by hand) ===
-// 97 article(s) generated from content-engine/outputs. Edit the engine, not this block.
+// 102 article(s) generated from content-engine/outputs. Edit the engine, not this block.
 const engineArticles: Article[] = [
   {
     "slug": "accelerator-vs-vc-founder-guide",
@@ -8122,6 +8122,477 @@ const engineArticles: Article[] = [
     }
   },
   {
+    "slug": "brazil-ai-workspace-market-opportunity",
+    "category": "brazil",
+    "type": "Market Analysis",
+    "readTime": "13 min",
+    "featured": false,
+    "date": "Sep 2026",
+    "datePublished": "2026-09-04",
+    "isPublished": true,
+    "en": {
+      "title": "Brazil AI Workspace Market: Why a Generic Copilot Underperforms Here",
+      "description": "The Brazil AI workspace market is real, but global copilots answer the wrong questions. CLT, SPED and NF-e are why the regulatory corpus is the product.",
+      "sections": [
+        {
+          "paragraphs": [
+            "The Brazil AI workspace market has a solved demand problem sitting on top of an unsolved supply problem. Half of Brazil's large enterprises used AI in 2025, and 80 percent of the companies that adopted it bought ready-made software rather than building anything. Almost nothing on the shelf was built for the way a Brazilian company actually works.",
+            "The market is real, and any single point estimate for it is a marketing artifact. Published ranges disagree by scope and by vintage, from a low single-digit billion USD in enterprise AI spend to a national software market an order of magnitude larger. The number worth arguing about is not the size. It is the shape.",
+            "Brazilian knowledge work is not generic knowledge work. It runs on the CLT labor regime, on the SPED digital bookkeeping system, and on NF-e electronic invoicing. None of that exists in the training distribution of a copilot built for a US knowledge worker. A global tool answers the question an American product manager asks. It does not answer the question a Brazilian controller, HR lead or tax analyst asks.",
+            "Services account for roughly 70% of Brazilian GDP on IBGE's value-added basis, with low software penetration, and the [Brazil services economy opportunity](/library/brazil-services-economy-opportunity) is the name for that gap. The [World Bank's narrower measure](https://api.worldbank.org/v2/country/BRA/indicator/NV.SRV.TOTL.ZS?format=json&date=2019:2024) puts services value added at 59.17 percent of Brazilian GDP in 2024. Keep both figures. The gap is methodological rather than directional, because the World Bank series measures sector value added against a GDP total that also includes net taxes on products, so the sector shares never sum to 100. Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America. This is the market read we run before writing a first ticket, and it sits alongside the rest of our [Brazil market analysis](/library)."
+          ]
+        },
+        {
+          "heading": "The Brazil AI workspace market, with dated numbers",
+          "level": 2,
+          "paragraphs": [
+            "There is no consensus number for the Brazil AI workspace market, and pretending otherwise is the fastest way to lose a room of operators. What should drive a build decision is not the AI line item anyway. It is the software market underneath it. ABES and IDC put the Brazilian IT market at USD 67.8 billion in 2025, growing 18.5 percent against a 14.1 percent global average, with software alone at USD 21.7 billion, or 32.1 percent of the total. Brazil holds 38.4 percent of Latin America's USD 176.6 billion in IT investment and ranks 10th worldwide, [per the study published in April 2026](https://theshift.info/hot/crescimento-tecnologia-brasil-abes-idc/).",
+            "Now the counterweight, because a market read that only points up is a pitch. The same study projects Brazilian growth decelerating to 5.3 percent in 2026, below the 9.7 percent global projection. The tailwind of the last two years is not promised to anyone.",
+            "On the narrower AI cut, three credible framings exist and each one measures something different. Scope explains the spread, and averaging the three produces a figure that describes nothing."
+          ],
+          "bullets": [
+            "Global AI in workspace at USD 9.48 billion in 2025 rising to USD 87.63 billion by 2035, a 24.9 percent CAGR, with the South America slice at USD 0.48 billion in 2023 rising to USD 3.75 billion by 2032 ([Market Research Future, 2025](https://www.marketresearchfuture.com/reports/artificial-intelligence-in-workspace-market-7310)).",
+            "Brazil enterprise AI at USD 2,577.5 million by 2030, a 33.4 percent CAGR from 2025 ([Grand View Research](https://www.grandviewresearch.com/horizon/outlook/enterprise-artificial-intelligence-market/brazil)).",
+            "Brazil total AI at USD 3,090.0 million in 2025 rising to USD 19,095.7 million by 2034, a 21.76 percent CAGR ([IMARC Group, 2025](https://www.imarcgroup.com/brazil-artificial-intelligence-market))."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "AI use by Brazilian companies rose from 13 percent in 2024 to 17 percent in 2025. Among companies with 250 or more employees it went from 38 percent to 50 percent. The enterprise wedge is already open. The mass market is not.",
+            "attribution": "Cetic.br, TIC Empresas 2025, 4,174 companies surveyed February 2025 to January 2026"
+          },
+          "id": "market-size"
+        },
+        {
+          "heading": "Why Brazilian knowledge work is not generic knowledge work",
+          "level": 2,
+          "paragraphs": [
+            "The compliance apparatus is the job, not an overhead on the job. The [IBPT study of norms edited in Brazil](https://ibpt.org.br/estudo-quantidade-de-normas-editadas-no-brasil-2024/) counted more than 7.8 million norms enacted in the 36 years since the 1988 Constitution, of which 517,388 were specifically tax norms. That is roughly 860 new norms per working day, more than two new tax norms every working hour, at an average of about 3,000 words each.",
+            "No controller holds that surface in her head. Neither do the 528,627 accounting professionals registered with the CFC in January 2025, made up of 389,327 contadores and 139,300 accounting technicians. Add controllers, tax analysts, fiscal clerks and HR administrators and the addressable seat count runs well past a million professionals whose daily output is regulatory documentation. The surface is not a rhetorical flourish about bureaucracy. It is a measured, dated, expanding corpus, which is the exact shape of problem retrieval-grounded systems were built for.",
+            "Labor risk is the second measured liability. Brazil's labor courts received 2.117 million new first-instance cases in 2024, a 14.1 percent increase over the 1.855 million filed in 2023 and the highest count since the 2017 labor reform, [reported by Conjur](https://www.conjur.com.br/2025-fev-12/justica-do-trabalho-recebeu-dois-milhoes-de-novas-acoes-em-2024/). Across all instances the [Conselho Nacional de Justica](https://www.cnj.jus.br/julgamentos-na-justica-do-trabalho-superaram-4-milhoes-em-2024/) counted more than 4 million labor judgments in the same year. A Brazilian HR lead is not asking a copilot to summarise a meeting. She is asking whether a specific termination package survives a claim.",
+            "The most quoted number in this category needs its caveat said out loud, every time. The World Bank Doing Business indicator put Brazilian tax compliance at 1,501 hours per year, last among 190 economies, against roughly 291 hours for Mexico and 286 for Chile. That was the final 2019 reading of [a series the World Bank discontinued in 2021](https://tradingeconomics.com/brazil/time-to-prepare-and-pay-taxes-hours-wb-data.html) after methodology irregularities. It is the last authoritative reading and not today's measurement, and anyone quoting it as current has not read the footnote. What survives the caveat is the order of magnitude, which held in every year the series ran.",
+            "Three named systems define the Brazilian back office. None of them has an analogue a global model was trained on."
+          ],
+          "bullets": [
+            "[SPED](https://www.gov.br/sped/pt-br/assuntos/escrituracoes-digitais/efd-icms-ipi), the public digital bookkeeping system that integrates federal, state and municipal tax administrations through modules including EFD ICMS IPI, ECD, ECF, EFD-Reinf and eSocial.",
+            "[NF-e](https://www.nfe.fazenda.gov.br/portal/informe.aspx?ehCTG=false), mandatory electronic invoicing live nationally since 2005, whose national portal runs a counter of authorised documents in the tens of billions across millions of issuing companies. Every commercial transaction produces a structured XML artefact with legal force.",
+            "CLT, the labor regime governing contracts, payroll, benefits and termination, which feeds eSocial and sets the terms of every one of those 2.117 million claims."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "517,388 tax norms enacted in the 36 years since the 1988 Constitution, roughly 860 new norms per working day. Brazilian regulatory complexity is not an anecdote. It is a measured surface.",
+            "attribution": "IBPT, Quantidade de Normas Editadas no Brasil, 2024"
+          },
+          "id": "not-generic"
+        },
+        {
+          "heading": "The AI-native openings inside the back office",
+          "level": 2,
+          "paragraphs": [
+            "The buildable wedges are the ones anchored to a named Brazilian artefact rather than to a generic workflow. Generic means the ground truth is a human opinion. Named artefact means the ground truth is machine-checkable, and machine-checkable is what turns daily usage into a data asset instead of a log file.",
+            "Demand is already forming in exactly that shape. Cetic.br found that among Brazilian companies using AI, natural language generation rose from 20 to 30 percent and text mining from 33 to 38 percent, the two fastest-growing applications in the survey. Brazilian companies are not asking for a chat window. They are asking for something that reads documents and produces documents."
+          ],
+          "bullets": [
+            "Fiscal classification and NF-e reconciliation. Match NF-e XML against purchase orders and catch classification errors before they become assessments. Structured input, checkable output, and an error cost already quantified in penalties.",
+            "CLT-grounded HR and termination copilot. Answer payroll, benefit and termination questions against current CLT text, collective bargaining agreements and labor court precedent. The 2.117 million annual labor claims are the market.",
+            "SPED filing assistant. Prepare and validate EFD, ECD, ECF and EFD-Reinf submissions, with the corpus of layout versions and validation rules as the defensible asset.",
+            "Contract and regulatory review in Portuguese, judged against the norm version in force on the date the obligation attached rather than against whatever a general model absorbed at training time.",
+            "Tax reform transition copilot. The highest-urgency wedge for 2026 through 2033, for the reason the next section puts at the centre of the argument."
+          ],
+          "id": "where-to-build"
+        },
+        {
+          "heading": "Why the regulatory corpus is the moat",
+          "level": 2,
+          "paragraphs": [
+            "Brazilian regulatory complexity is a moat rather than a tax, for whoever encodes it first. Complexity that repels generic entrants and cannot be scraped in a weekend is the textbook definition of a barrier to entry. In Hamilton Helmer's framing it is cornered resource plus process power, not scale economics. The cornered resource is a curated, versioned, jurisdiction-tagged corpus of Brazilian regulatory documents. The process power is the ingestion pipeline that keeps that corpus current against 860 new norms per working day.",
+            "What the moat is not: the model, and the chat interface. Both are commodities and both get cheaper every month.",
+            "Now the part that makes 2026 different from 2024 and from 2035. The corpus itself is being rewritten by statute, which is the rarest timing a corpus business can be handed. Brazil's indirect tax reform entered its operational test phase in 2026 at a symbolic combined rate of 1 percent, made up of 0.9 percent CBS and 0.1 percent IBS. CBS takes real effect in 2027. Split payment becomes mandatory from 2027. ICMS, ISS, PIS, Cofins and IPI phase out progressively through 2032 and 2033. [Agencia Brasil reported in January 2026](https://agenciabrasil.ebc.com.br/economia/noticia/2026-01/reforma-tributaria-entra-em-fase-de-testes-em-2026) that companies must update invoicing systems, add mandatory new fields, verify fiscal classifications, revise contracts and remodel cash flow for split payment.",
+            "Say the consequence plainly, because it is the whole timing argument. For roughly seven years every Brazilian company will run two tax systems in parallel. The institutional knowledge encoded in incumbent ERP configurations, the decades of accumulated state-by-state rules that make those systems hard to displace, is being partially invalidated by statute. That invalidation lands at the precise moment a new corpus can be built from scratch and kept current from the first day it exists. Corpus advantages are normally unattackable because the holder has a twenty-year head start on ingestion. Brazil has just reset part of that clock by law, and the reset closes as the phase-out completes through 2032 and 2033. A venture that starts encoding the transition in 2030 is starting late.",
+            "A frontier model cannot simply absorb that corpus, and the reasons are mechanical rather than philosophical."
+          ],
+          "bullets": [
+            "The corpus is fragmented across federal, 26 state and thousands of municipal authorities, much of it published as PDFs and portal notices rather than as clean structured data.",
+            "It versions constantly. A static snapshot decays. The moat is the update pipeline, not the snapshot.",
+            "The correct answer depends on tax regime, state, municipality and sector at once, and Simples Nacional, Lucro Presumido and Lucro Real produce three different right answers to the same question. That combinatorial context is precisely what a general-purpose model lacks.",
+            "Being right beats being fluent. A wrong fiscal classification is a financial penalty, not a bad paragraph."
+          ],
+          "id": "the-moat"
+        },
+        {
+          "heading": "How a workspace copilot compounds into proprietary data",
+          "level": 2,
+          "paragraphs": [
+            "This is the copilot to data to fund flywheel applied to the back office, and it runs unusually clean here because the work product is structured and the outcome is verifiable.",
+            "Copilot first. Ship a compliance-native assistant a controller or an HR lead opens daily, because the alternative is reading 3,000-word norms she did not write and cannot skip. Adoption stops being a growth-hacking problem when the manual path is that expensive.",
+            "Data second. Every interaction produces a labelled pair. The question a Brazilian company actually asked, the regulatory answer given, and then the rare third field: whether the filing was accepted or the claim was won. Most AI products never see ground truth. A compliance copilot sees it on every submission. Accuracy compounds from there, because each corrected classification improves the next answer and widens the gap against a newcomer holding the same frontier model and no outcome history.",
+            "Fund third. The accumulated record of outcomes becomes an underwriting asset. It supports risk pricing, contingent-fee structures and capital deployed against exposures the ERP incumbent cannot see, because the incumbent holds transactions and this holds resolutions.",
+            "The cost of running that loop collapsed while almost nobody in Brazil was building on it. The [Stanford HAI 2025 AI Index](https://hai.stanford.edu/ai-index/2025-ai-index-report) found the cost of querying a model performing at GPT-3.5 level on MMLU fell from USD 20.00 per million tokens in November 2022 to USD 0.07 per million tokens by October 2024, a more than 280-fold reduction in roughly 18 months, with hardware costs declining about 30 percent annually and energy efficiency improving about 40 percent. Retrieval across half a million tax norms was uneconomic in 2023. It is a rounding error now. AI infrastructure is now cheap enough to deploy without a Series A."
+          ],
+          "id": "the-flywheel"
+        },
+        {
+          "heading": "Long procurement, incumbent ERP distribution, wrapper risk",
+          "level": 2,
+          "paragraphs": [
+            "Three failure modes, stated without softening, because a thesis that only survives its own best case is not a thesis.",
+            "Procurement is slow and it deserves to be. The buyer of a compliance product is a controller or a CFO whose downside from a wrong answer is a tax assessment and whose upside from a right answer is time saved. That asymmetry produces evidence-heavy, committee-bound purchasing. Plan for pilots and reference customers, not for self-serve growth curves.",
+            "The incumbent owns distribution and is not asleep. TOTVS [closed 2025 with net revenue of R$ 5.7 billion, up 17 percent](https://brasilinovador.com.br/totvs-encerra-o-2025-com-receita-liquida-de-r-57-bi/), recurring revenue of R$ 4.6 billion at 91 percent of the total, and adjusted EBITDA above R$ 1.5 billion, up 22 percent. Its [investor relations disclosures](https://ri.totvs.com/en/) state more than 53 percent market share in Brazil across more than 70,000 clients in 12 economic segments. In that same February 2026 results release the company announced LYNN, positioned as the first B2B AI foundation in the Brazilian market and backed by R$ 75 million per year for four years. Any thesis that assumed incumbents would not ship Portuguese-language AI was already wrong when it was written.",
+            "The counter-argument is real but has to be earned rather than asserted. Incumbent ERP AI is bounded by the incumbent's own data model and release cycle, and ERP vendors monetise seats and modules rather than outcomes. The opening sits in the workflow between systems, and in outcome-based pricing an ERP vendor structurally will not offer.",
+            "One finding from [Cetic.br](https://cetic.br/pt/noticia/uso-de-inteligencia-artificial-por-empresas-brasileiras-avanca-e-atinge-17-aponta-pesquisa-do-cetic-br/) cuts both ways, and an honest read requires saying so. 80 percent of Brazilian AI adopters buy ready-made software rather than build it. For a product company that is the entire argument for a sellable market, because the buying behaviour is already established. For that same product company it is also the argument for why TOTVS, sitting inside more than 70,000 accounts, is the default vendor a controller calls first.",
+            "Wrapper risk is the kill shot. A thin wrapper over a frontier model with no regulatory corpus has no defence once Microsoft ships Portuguese compliance templates or TOTVS extends LYNN across its base. If a venture cannot name what it holds that a competitor could not obtain in ninety days, it is a feature and not a company.",
+            "Capital discipline follows from the funding picture rather than from temperament. Latin American startups [raised USD 4.126 billion across 681 rounds in 2025](https://reports.cuanticovp.com/latin-america-vc-report-2026/), a 13.8 percent recovery, with Brazil taking USD 2,032 million across 363 rounds, roughly 49 percent of the region. Average deal size grew 16 percent to USD 6.1 million while deal count fell to its lowest level since 2017, and fintech took 61 percent of the money on 29 percent of the deals. Capital is concentrating, not expanding. Plan to reach revenue on a small first ticket, because the abundant seed market this thesis would prefer does not exist."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Before writing a line of product code, name the artefact the copilot will be graded against. An NF-e XML that reconciles. A SPED validation that clears. A termination package that survives a claim. If a competitor could assemble the same corpus in ninety days, what you have is a feature and not a company.",
+            "attribution": "Avante Ventures, Build-stage test"
+          },
+          "id": "the-hard-parts"
+        },
+        {
+          "heading": "How Avante would approach it",
+          "level": 2,
+          "paragraphs": [
+            "The build order here is not the obvious one. Corpus before interface, operator before engineer, controller before CIO. Avante is a venture studio and not an accelerator, an incubator or a fund, and the [venture studio thesis](/why-avante) resolves into six concrete stages for a category shaped like this one.",
+            "The capital shape matters more than usual in a market where the regional seed pool contracted to 681 rounds. Avante deploys $500K-$1.5M per venture across pre-seed and retains co-founder economics. Solving company plumbing once routes roughly $300K-$500K of effective capital per venture into product and traction rather than overhead. The studio launches 3-4 ventures per year, and that constraint is what forces the Research stage to actually kill things.",
+            "The model-level case for building rather than funding is a benchmark and not a track record. The Global Startup Studio Network puts studio IRR at ~50% against ~19% for traditional VC, roughly 2.5x over realistic time horizons. That figure describes the studio model. It is never any single firm's realised return. What it buys in practice is time. A studio venture launches 6-9 months ahead of a comparably funded standalone team, and inside a seven-year transition window six to nine months is a meaningful share of the whole opening.",
+            "The tax reform will finish. Norms will settle into a new equilibrium, incumbent configurations will be rewritten, and the institutional knowledge that makes ERP sticky will rebuild itself around the new regime. Whoever holds the corpus and the outcome data on the day that happens owns the category. Whoever is still polishing a chat interface owns a demo."
+          ],
+          "bullets": [
+            "Research. Find the single back-office workflow with the highest ratio of regulatory pain to available tooling. Every candidate above is testable in weeks against real controllers, not in quarters against a survey panel.",
+            "Partner. The scarce input is not an engineer. It is a domain operator with 10+ years of Brazilian-market scar tissue in tax, payroll or fiscal operations, someone who already knows which SPED validation fails most often and why, paired with a Silicon Valley playbook and first-ticket capital, assembled on day one.",
+            "Build. Corpus first, interface second, because the differentiated asset is the ingestion and versioning pipeline and not the chat window.",
+            "Traction. Sell to controllers rather than to CIOs, and land on one measurable outcome. Rejected filings avoided. Labor-claim exposure reduced.",
+            "Revenue. Price against that outcome. Operating partners stay engaged through the first revenue milestone, then transition to board-level oversight.",
+            "Compound. Route the outcome data back into the underwriting asset. That is where copilot to data to fund closes."
+          ],
+          "id": "how-avante"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How big is the Brazil AI workspace market?",
+          "a": "There is no single credible point estimate, only a sourced range. Grand View Research puts Brazil enterprise AI at USD 2,577.5 million by 2030 at a 33.4 percent CAGR, while IMARC puts total Brazilian AI at USD 3,090.0 million in 2025 rising to USD 19,095.7 million by 2034. The more useful anchor is the base market. ABES and IDC report the Brazilian IT market at USD 67.8 billion in 2025 with software alone at USD 21.7 billion, and project growth decelerating to 5.3 percent in 2026."
+        },
+        {
+          "q": "Why does a generic copilot underperform in the Brazil AI workspace market?",
+          "a": "Because Brazilian knowledge work runs on CLT, SPED and NF-e, none of which exist in the training distribution of a global tool. The correct answer to a fiscal or payroll question depends on tax regime, state, municipality and the current version of the norm at once. IBPT counted 517,388 tax norms since the 1988 Constitution, roughly 860 new norms per working day. A general model is fluent about that surface and rarely right about it."
+        },
+        {
+          "q": "How many Brazilian companies actually use AI?",
+          "a": "17 percent in 2025, up from 13 percent in 2024, per the Cetic.br TIC Empresas 2025 survey of 4,174 companies. Among companies with 250 or more employees the figure is 50 percent, up from 38 percent a year earlier. 80 percent of adopters bought ready-made software rather than building it, which means the buying behaviour is established and the Brazil-native supply is thin."
+        },
+        {
+          "q": "Does Brazil's tax reform change enterprise software requirements?",
+          "a": "Yes, and it is the timing argument for this entire category. 2026 is a mandatory test year at a symbolic combined rate of 1 percent, CBS takes real effect in 2027, split payment becomes mandatory from 2027, and ICMS, ISS, PIS, Cofins and IPI phase out through 2032 and 2033. Every Brazilian company will run two tax systems in parallel for roughly seven years, which partially invalidates the configuration knowledge incumbent ERP systems depend on."
+        },
+        {
+          "q": "Who is the biggest competitor in the Brazil AI workspace market?",
+          "a": "TOTVS, on distribution more than on product. It reports more than 53 percent market share in Brazil across more than 70,000 clients, closed 2025 with net revenue of R$ 5.7 billion up 17 percent, and in February 2026 announced LYNN, a B2B AI foundation backed by R$ 75 million per year for four years. Any venture in this space competes against an incumbent already inside the account, so the defensible position is the regulatory corpus, the update pipeline and the outcome data."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Mercado de IA no Ambiente de Trabalho no Brasil: Por Que um Copilot Genérico Rende Menos Aqui",
+      "description": "O mercado de IA no ambiente de trabalho no Brasil é real, mas o copilot global responde à pergunta errada. CLT, SPED e NF-e: o corpus é o produto.",
+      "sections": [
+        {
+          "paragraphs": [
+            "O mercado de IA no ambiente de trabalho no Brasil não tem um número limpo, e quem oferece um está vendendo relatório e não tese. O que ele tem é uma assimetria medida. O copilot global vendido aqui foi treinado para responder à pergunta que um profissional americano faz, e nenhuma controladoria brasileira faz essa pergunta. Essa distância, e não a curva de CAGR de nenhum relatório, separa produto de demonstração.",
+            "Ninguém dentro de um back office brasileiro precisa de resumo de reunião. Precisa saber se uma classificação fiscal sobrevive a uma autuação, se um pacote de rescisão sobrevive a uma reclamação trabalhista e qual versão de layout do SPED vale para a competência que está sendo fechada. Cada uma dessas respostas depende de regime tributário, estado, município e setor ao mesmo tempo.",
+            "E existe uma data. Entre 2026 e 2033 o Brasil troca, peça por peça, a base tributária sobre a qual todo software corporativo do país foi configurado. Um corpus regulatório montado durante essa troca é um corpus montado no único momento em que o do incumbente para de ser suficiente. Na Avante Ventures, essa janela é a decisão de investimento inteira."
+          ]
+        },
+        {
+          "heading": "O mercado de IA no ambiente de trabalho no Brasil, com números datados",
+          "level": 2,
+          "paragraphs": [
+            "Não existe um número limpo para o mercado de IA no ambiente de trabalho no Brasil, e todo texto que apresenta um ponto único está escondendo a diferença de escopo entre as fontes. A âncora defensável é a base que sustenta o resto. Segundo [ABES e IDC, em levantamento publicado em abril de 2026](https://theshift.info/hot/crescimento-tecnologia-brasil-abes-idc/), o mercado de TI brasileiro chegou a US$ 67,8 bilhões em 2025, alta de 18,5% contra uma média global de 14,1%. Software sozinho respondeu por US$ 21,7 bilhões, ou 32,1% do total.",
+            "Coloque esse número ao lado do que a economia brasileira de fato é. Serviços respondem por cerca de 70% do PIB brasileiro na base de valor adicionado do IBGE, com baixa penetração de software. Na medida mais estreita do [Banco Mundial](https://api.worldbank.org/v2/country/BRA/indicator/NV.SRV.TOTL.ZS?format=json&date=2019:2024), o valor adicionado de serviços foi 59,17% do PIB brasileiro em 2024. Mantenha as duas cifras. A diferença é de método e não de direção, porque a série do Banco Mundial compara o valor adicionado setorial contra um PIB que inclui impostos líquidos sobre produtos, de modo que as fatias setoriais nunca somam 100. Um país que produz a maior parte do seu valor em trabalho de serviço gasta US$ 21,7 bilhões em software para sustentar esse trabalho. A distância entre os dois fatos é o mercado.",
+            "O Brasil concentra 38,4% dos US$ 176,6 bilhões investidos em TI na América Latina e ocupa a décima posição mundial. O mesmo estudo projeta desaceleração para 5,3% em 2026, abaixo da projeção global de 9,7%. Esse é o contrapeso honesto a qualquer entusiasmo. O mercado é grande e está esfriando na margem.",
+            "No recorte específico de IA aplicada ao trabalho, as estimativas divergem por definição e não por qualidade. Vale citar a faixa inteira em vez de escolher a mais favorável."
+          ],
+          "bullets": [
+            "Grand View Research projeta IA corporativa no Brasil em US$ 2.577,5 milhões até 2030, com CAGR de 33,4% a partir de 2025.",
+            "IMARC estima o mercado total de IA no Brasil em US$ 3,09 bilhões em 2025, chegando a US$ 19,1 bilhões em 2034.",
+            "Market Research Future dimensiona a fatia sul-americana do mercado de IA no ambiente de trabalho em US$ 0,48 bilhão em 2023, indo a US$ 3,75 bilhões em 2032."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "O mercado de TI brasileiro chegou a US$ 67,8 bilhões em 2025 e o software sozinho a US$ 21,7 bilhões. O Brasil responde por 38,4% de todo o investimento em TI da América Latina, e a mesma leitura projeta desaceleração para 5,3% em 2026.",
+            "attribution": "ABES e IDC, abril de 2026"
+          },
+          "id": "market-size"
+        },
+        {
+          "heading": "Por que o trabalho do conhecimento no Brasil não é genérico",
+          "level": 2,
+          "paragraphs": [
+            "A complexidade regulatória brasileira não é folclore. É uma superfície medida. O [estudo do IBPT sobre normas editadas no Brasil em 2024](https://ibpt.org.br/estudo-quantidade-de-normas-editadas-no-brasil-2024/) contou mais de 7,8 milhões de normas nos 36 anos desde a Constituição de 1988, das quais 517.388 são especificamente tributárias. Isso dá cerca de 860 normas novas por dia útil, mais de 2,36 normas tributárias por hora útil, com média aproximada de 3.000 palavras cada.",
+            "Nenhum profissional segura essa superfície na cabeça, e nenhum modelo treinado majoritariamente em texto em inglês a carrega nos pesos. É exatamente para isso que serve um copilot ancorado em recuperação de documento. A pergunta que o controller brasileiro faz não é aberta. Ela tem uma resposta certa, uma versão vigente e uma consequência financeira.",
+            "O passivo trabalhista dá a mesma medida por outro ângulo. O sistema estatístico do Tribunal Superior do Trabalho registra 2,117 milhões de novos casos de primeira instância em 2024, alta de 14,1% sobre os 1,855 milhão de 2023 e o maior volume desde a reforma de 2017, conforme [reportagem do Conjur de 12 de fevereiro de 2025](https://www.conjur.com.br/2025-fev-12/justica-do-trabalho-recebeu-dois-milhoes-de-novas-acoes-em-2024/). Somadas todas as instâncias, o [CNJ](https://www.cnj.jus.br/julgamentos-na-justica-do-trabalho-superaram-4-milhoes-em-2024/) contabilizou mais de 4 milhões de julgamentos na Justiça do Trabalho no mesmo ano.",
+            "Um copilot global resume a ata da reunião. A líder de RH brasileira não quer a ata. Ela quer saber se aquele desligamento específico sobrevive a uma reclamação, com a convenção coletiva daquela categoria e a jurisprudência daquele tribunal regional já dentro da conta.",
+            "O público que faz esse trabalho é contável, o que é raro em análise de mercado. O Conselho Federal de Contabilidade registrava 528.627 profissionais ativos em janeiro de 2025, sendo 389.327 contadores e 139.300 técnicos em contabilidade. Some controllers, analistas fiscais, escriturários fiscais e administradores de pessoal e o mercado endereçável por um copilot nativo em compliance passa confortavelmente de um milhão de profissionais cujo produto diário é documentação regulatória.",
+            "A referência mais citada sobre o custo desse aparato é o indicador Doing Business do Banco Mundial, que colocou o Brasil em 1.501 horas por ano para preparar e pagar tributos na leitura final de 2019, último lugar entre 190 economias, contra cerca de 291 horas no México e 286 no Chile. A ressalva é obrigatória e faz parte do argumento. A série foi descontinuada pelo Banco Mundial em 2021 após irregularidades de metodologia, então 1.501 horas é a última leitura autoritativa de uma série encerrada, não uma medida de hoje. A ordem de grandeza, essa sim, se manteve em todos os anos em que houve medição. Nenhum modelo de propósito geral atravessa sozinho a distância entre 1.501 e 291."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "517.388 normas tributárias editadas em 36 anos, cerca de 860 normas novas por dia útil e mais de 7,8 milhões de normas no total desde 1988.",
+            "attribution": "IBPT, estudo de normas editadas no Brasil, 2024"
+          },
+          "id": "not-generic"
+        },
+        {
+          "heading": "As aberturas AI-native dentro do back office",
+          "level": 2,
+          "paragraphs": [
+            "As aberturas não estão na caixa de conversa. Estão no ponto em que um artefato brasileiro estruturado encontra um julgamento que hoje é humano, caro e verificável. Cada frente abaixo tem entrada estruturada, gabarito checável por máquina e custo de erro quantificado em multa ou passivo.",
+            "A demanda já está se formando nessa direção. Na pesquisa do Cetic.br, entre as empresas que adotam IA, o uso de geração de linguagem natural subiu de 20% para 30% e a mineração de texto de 33% para 38%, as duas aplicações que mais cresceram no período. São exatamente os formatos de trabalho que a revisão de contrato e de norma em português consome.",
+            "As frentes abaixo têm uma coisa em comum. Nenhuma delas é uma caixa de texto de propósito geral. Todas terminam em um documento que uma administração pública aceita ou rejeita, o que dá ao produto algo que quase nenhum produto de IA tem. O sinal de acerto chega sozinho, sem pesquisa de satisfação, e chega com carimbo de terceiro."
+          ],
+          "bullets": [
+            "Classificação fiscal e conciliação de NF-e contra pedidos de compra, pegando erro de classificação antes que vire autuação.",
+            "Copilot de departamento pessoal ancorado na CLT, em convenções coletivas e em jurisprudência trabalhista. Os 2,117 milhões de reclamações anuais são o mercado.",
+            "Assistente de obrigações do SPED, com o corpus de versões de layout e regras de validação como ativo central.",
+            "Copilot de transição da reforma tributária, a frente de maior urgência entre 2026 e 2033."
+          ],
+          "id": "where-to-build"
+        },
+        {
+          "heading": "Por que o corpus regulatório é o moat",
+          "level": 2,
+          "paragraphs": [
+            "Complexidade regulatória brasileira é moat e não imposto, para quem a codifica primeiro. Uma barreira que afasta o entrante genérico e que não pode ser raspada em um fim de semana é a definição de barreira de entrada. No vocabulário de Hamilton Helmer, isso fica mais perto de recurso encurralado somado a poder de processo do que de economia de escala. O recurso é um corpus curado, versionado e etiquetado por jurisdição. O poder de processo é o pipeline que mantém esse corpus vivo contra 860 normas novas por dia útil. Desenvolvemos esse argumento em [por que a complexidade regulatória brasileira é um moat](/library/brazilian-regulatory-complexity-as-moat).",
+            "O modelo global não absorve isso por três motivos concretos. O corpus está fragmentado entre a União, 26 estados e milhares de municípios, e boa parte dele sai como PDF e aviso de portal, não como dado estruturado. Ele versiona o tempo todo, então um retrato estático apodrece. E a resposta certa depende ao mesmo tempo de regime tributário, estado, município e setor, uma combinatória que modelo de propósito geral não carrega.",
+            "Até aqui, nada disso é novo. O que é novo tem data. O corpus está sendo reescrito agora. A fase de teste da reforma tributária começou em 2026 com alíquota simbólica combinada de 1%, sendo 0,9% de CBS e 0,1% de IBS. A CBS passa a valer de fato em 2027, o split payment se torna obrigatório a partir de 2027, e ICMS, ISS, PIS, Cofins e IPI saem progressivamente até 2032 e 2033, conforme a [Agência Brasil](https://agenciabrasil.ebc.com.br/economia/noticia/2026-01/reforma-tributaria-entra-em-fase-de-testes-em-2026).",
+            "Traduzido para o que acontece dentro da empresa: por cerca de sete anos toda companhia brasileira vai operar dois sistemas tributários em paralelo. Sistema de faturamento atualizado, campos novos obrigatórios, reclassificação fiscal, revisão de contrato e remodelagem de fluxo de caixa por causa do split payment. O conhecimento institucional embutido na configuração do ERP incumbente, que é o verdadeiro custo de troca desse mercado, fica parcialmente inválido no exato momento em que dá para construir um corpus novo do zero.",
+            "É isso que torna a janela rara. Custo de troca acumulado ao longo de vinte anos não evapora com frequência. Quando evapora, evapora para todos os incumbentes ao mesmo tempo, e o cronograma dessa evaporação está publicado em lei complementar com ano e alíquota.",
+            "Vale dizer também o que o moat não é. Não é o modelo. Não é a interface. Os dois viraram commodity e ficam mais baratos a cada mês. O [Stanford HAI 2025 AI Index](https://hai.stanford.edu/ai-index/2025-ai-index-report) mostra o custo de consultar um modelo em nível GPT-3.5 no MMLU caindo de US$ 20,00 por milhão de tokens em novembro de 2022 para US$ 0,07 por milhão em outubro de 2024, uma redução de mais de 280 vezes em cerca de 18 meses. A infraestrutura de IA já está barata o suficiente para implantar sem uma Série A. O corpus é a única coisa nessa pilha que não fica mais barata com o tempo."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "A reforma tributária entrou em fase de teste em 2026 com alíquota combinada simbólica de 1%, sendo 0,9% de CBS e 0,1% de IBS. A CBS vale de fato em 2027, o split payment se torna obrigatório em 2027 e ICMS, ISS, PIS, Cofins e IPI saem progressivamente até 2032 e 2033. São cerca de sete anos com dois sistemas tributários rodando em paralelo.",
+            "attribution": "Agência Brasil, janeiro de 2026"
+          },
+          "id": "the-moat"
+        },
+        {
+          "heading": "Como um copilot de trabalho compõe dado proprietário",
+          "level": 2,
+          "paragraphs": [
+            "O padrão que se repete no portfólio da Avante é o flywheel copilot, dado, capital. No back office brasileiro ele fica mais limpo do que na maioria dos verticais, porque o produto do trabalho é estruturado e o desfecho é conferido por um terceiro que não é o cliente nem o fornecedor.",
+            "O elo raro não é o copilot nem o dado bruto. É o desfecho. A maioria dos produtos de IA nunca vê o gabarito. Um copilot de compliance vê o gabarito a cada transmissão de obrigação e a cada sentença publicada. O fornecedor de ERP guarda a transação. Quem opera o copilot guarda a resolução, e resolução é o dado que precifica risco.",
+            "A consequência prática é que acurácia compõe. Cada classificação corrigida melhora a resposta seguinte, e a distância contra qualquer entrante que tenha o mesmo modelo de fronteira e nenhum dado de desfecho aumenta em vez de encolher. É a diferença entre um ativo que envelhece e um ativo que engorda."
+          ],
+          "bullets": [
+            "Copilot. Um assistente nativo em compliance que o controller usa todo dia porque a alternativa é ler norma de 3.000 palavras.",
+            "Dado. Cada interação gera um par rotulado, com a pergunta que uma empresa brasileira realmente fez, a resposta regulatória e o registro de a obrigação ter sido aceita ou a reclamação ter sido ganha.",
+            "Capital. O acúmulo de desfechos vira ativo de subscrição, sustentando precificação de risco, modelo de êxito e alocação de capital contra exposições que o incumbente não enxerga."
+          ],
+          "id": "the-flywheel"
+        },
+        {
+          "heading": "Compra longa, distribuição do ERP incumbente, risco de wrapper",
+          "level": 2,
+          "paragraphs": [
+            "Três modos de falha, sem suavizar nenhum deles.",
+            "O primeiro é o ciclo de compra. Quem compra produto de compliance é o controller ou o CFO, cujo risco de resposta errada é autuação e cujo ganho de resposta certa é tempo. Essa assimetria produz compra lenta e pesada em evidência. Planeje piloto com prova documentada, não self-service.",
+            "O segundo é distribuição, e aqui o incumbente não está dormindo. A TOTVS fechou 2025 com receita líquida de R$ 5,7 bilhões, alta de 17%, receita recorrente de R$ 4,6 bilhões equivalente a 91% do total, e EBITDA ajustado acima de R$ 1,5 bilhão, alta de 22%, conforme [resultados divulgados em fevereiro de 2026](https://brasilinovador.com.br/totvs-encerra-o-2025-com-receita-liquida-de-r-57-bi/). A própria empresa declara mais de 53% de participação de mercado no Brasil e mais de 70 mil clientes em 12 segmentos econômicos. Na mesma divulgação anunciou a LYNN, posicionada como a primeira fundação de IA B2B do mercado brasileiro, com R$ 75 milhões por ano ao longo de quatro anos.",
+            "Qualquer tese que assuma que o incumbente não vai lançar IA em português já nasceu errada. O contra-argumento existe, mas precisa ser conquistado e não afirmado. A IA de ERP fica presa ao modelo de dados e ao ciclo de release do próprio ERP, e fornecedor de ERP monetiza assento e módulo, não desfecho. A abertura está no fluxo entre sistemas e em precificação por resultado, que estruturalmente o incumbente não vai oferecer.",
+            "O Cetic.br dá um dado que corta dos dois lados. A pesquisa TIC Empresas 2025, com 4.174 empresas ouvidas entre fevereiro de 2025 e janeiro de 2026, mostra uso de IA subindo de 13% em 2024 para 17% em 2025, e de 38% para 50% entre empresas de 250 funcionários ou mais. Entre as adotantes, 80% compram software pronto em vez de construir. Isso é ótimo para quem vende produto e péssimo para quem imagina que o cliente vai tolerar um piloto interminável. Quem compra pronto compra funcionando no dia um.",
+            "O terceiro modo de falha é o mais letal. Um wrapper fino sobre um modelo de fronteira, sem corpus regulatório próprio, não tem defesa alguma no dia em que a Microsoft publicar templates de compliance em português ou a TOTVS estender a LYNN para o fluxo fiscal. Se uma venture não consegue dizer em uma frase o que ela detém e um concorrente não obtém em noventa dias, ela é uma funcionalidade e não uma empresa.",
+            "O mercado de capital também não vai socorrer erro de tese. Segundo o [Cuantico LatAm VC Report 2026](https://reports.cuanticovp.com/latin-america-vc-report-2026/), startups latino-americanas captaram US$ 4,126 bilhões em 681 rodadas em 2025, recuperação de 13,8%, com o Brasil levando US$ 2.032 milhões em 363 rodadas, cerca de 49% da região. O ticket médio subiu 16%, para US$ 6,1 milhões, enquanto o número de rodadas caiu ao menor nível desde 2017. Capital está concentrando, não expandindo."
+          ],
+          "id": "the-hard-parts"
+        },
+        {
+          "heading": "Como a Avante abordaria",
+          "level": 2,
+          "paragraphs": [
+            "A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina. Não é aceleradora, não é incubadora, não é fundo. Para uma tese como esta, o sistema de seis estágios tem tradução direta.",
+            "São US$ 500K a US$ 1,5M por venture ao longo do pre-seed, com a Avante retendo economia de co-founder. Resolver uma única vez o encanamento que toda empresa nova precisa montar roteia entre US$ 300K e US$ 500K de capital efetivo por venture para produto e tração em vez de overhead, o que pesa mais do que o normal em um mercado cujo pool de seed encolheu para 681 rodadas em 2025. A Avante lança 3 a 4 ventures por ano. Com esse número, escolher o fluxo de trabalho errado custa um ano inteiro de capacidade.",
+            "Sobre o modelo em si, o benchmark da Global Startup Studio Network aponta IRR de venture studio em torno de ~50% contra ~19% do venture capital tradicional, cerca de 2,5x em horizontes realistas. Esse é o número do modelo, atribuído à GSSN, e nunca um retorno realizado da Avante. A tese completa está em [por que a Avante opera como venture studio](/why-avante).",
+            "A janela é estreita e tem data publicada. Entre 2026 e 2033 o Brasil reescreve a base regulatória sobre a qual todo software corporativo do país foi configurado. Quem estiver montando corpus, pipeline de atualização e dado de desfecho durante a transição chega em 2033 com um ativo que não está à venda. Corpus regulatório não se compra depois. Só se acumula durante, e o relógio começou a correr em janeiro."
+          ],
+          "bullets": [
+            "Research. Descobrir qual fluxo único do back office tem a maior razão entre dor regulatória e ferramenta disponível. As frentes acima são testáveis em semanas com controllers reais.",
+            "Partner. O insumo escasso não é engenheiro. É um operador de domínio com 10 anos ou mais de cicatriz de mercado brasileiro em tributário, folha ou operação fiscal, alguém que já sabe qual validação do SPED falha mais e por quê.",
+            "Build. Corpus primeiro, interface depois. O ativo diferenciado é o pipeline de ingestão e versionamento, não a janela de conversa.",
+            "Traction. Vender para controller e não para CIO, com um desfecho medível como redução de obrigação rejeitada ou de exposição trabalhista.",
+            "Revenue. Precificar contra o desfecho. Os operating partners ficam engajados até o primeiro marco de receita e depois passam a supervisão de conselho.",
+            "Compound. Rotear o dado de desfecho para o ativo de subscrição. É aqui que copilot, dado, capital fecha o ciclo."
+          ],
+          "id": "how-avante"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Qual o tamanho do mercado de IA no ambiente de trabalho no Brasil?",
+          "a": "Não existe um número único, e a faixa honesta fica na casa de poucos bilhões de dólares hoje. Grand View Research projeta IA corporativa no Brasil em US$ 2.577,5 milhões até 2030 e a IMARC estima o mercado total de IA em US$ 3,09 bilhões em 2025. A base que importa é maior: o software brasileiro somou US$ 21,7 bilhões em 2025 dentro de um mercado de TI de US$ 67,8 bilhões, segundo ABES e IDC, em uma economia cujos serviços respondem por cerca de 70% do PIB."
+        },
+        {
+          "q": "Por que um copilot genérico rende menos no mercado de IA corporativa no Brasil?",
+          "a": "Porque ele responde a uma pergunta que o profissional brasileiro de back office não faz. A resposta certa aqui depende de regime tributário, estado, município e setor ao mesmo tempo, e de versões de norma que mudam a cerca de 860 normas novas por dia útil segundo o IBPT. Para redigir e resumir, o modelo global serve. Para classificação fiscal, obrigação do SPED e questão trabalhista, não."
+        },
+        {
+          "q": "Quantas empresas brasileiras já usam inteligência artificial?",
+          "a": "17% em 2025, contra 13% em 2024, segundo a pesquisa TIC Empresas 2025 do Cetic.br com 4.174 empresas. Entre companhias de 250 funcionários ou mais o índice chega a 50%, acima dos 38% do ano anterior. E 80% das adotantes compram software pronto em vez de construir, o que confirma que o comprador corporativo já existe."
+        },
+        {
+          "q": "A reforma tributária muda o que uma empresa brasileira precisa de software?",
+          "a": "Sim, e de forma estrutural. A fase de teste começou em 2026 com alíquota simbólica de 1%, a CBS passa a valer de fato em 2027, o split payment se torna obrigatório em 2027, e ICMS, ISS, PIS, Cofins e IPI saem progressivamente até 2032 e 2033. Na prática, toda empresa brasileira roda dois sistemas tributários em paralelo por cerca de sete anos, com campos novos de faturamento, reclassificação fiscal e remodelagem de fluxo de caixa."
+        },
+        {
+          "q": "A TOTVS é um risco para quem quer construir IA de back office no Brasil?",
+          "a": "É o risco número um de distribuição. A TOTVS fechou 2025 com receita líquida de R$ 5,7 bilhões, alta de 17%, declara mais de 53% de participação de mercado e mais de 70 mil clientes, e anunciou em fevereiro de 2026 a LYNN, com R$ 75 milhões por ano por quatro anos. A abertura para um entrante está no fluxo entre sistemas e em precificação por resultado, que um fornecedor de ERP estruturalmente não oferece."
+        },
+        {
+          "q": "O Brasil realmente gasta 1.501 horas por ano com tributos?",
+          "a": "Esse é o último dado autoritativo, não o dado de hoje. As 1.501 horas vêm da leitura final de 2019 do indicador Doing Business do Banco Mundial, que colocou o Brasil em último lugar entre 190 economias, contra cerca de 291 horas no México e 286 no Chile. A série foi descontinuada pelo Banco Mundial em 2021 após irregularidades de metodologia, então ela deve ser citada como a última medição da série e não como medida atual. A ordem de grandeza se manteve em todos os anos medidos."
+        }
+      ]
+    },
+    "es": {
+      "title": "Mercado de IA en el Espacio de Trabajo en Brasil: Por Qué un Copilot Genérico Rinde Menos Aquí",
+      "description": "Mercado de IA en el espacio de trabajo en Brasil: el copilot global responde la pregunta equivocada. CLT, SPED y NF-e hacen del corpus el producto.",
+      "sections": [
+        {
+          "paragraphs": [
+            "El mercado de inteligencia artificial en el espacio de trabajo en Brasil no tiene un número limpio, y quien le ofrezca uno está vendiendo un informe, no una tesis. Lo que sí tiene es una asimetría medible. El trabajo de oficina brasileño lo gobierna un aparato regulatorio que ningún copilot global vio durante su entrenamiento.",
+            "Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina. Desde esa silla la lectura incomoda a quien vende licencias globales. Un copilot genérico responde bien la pregunta de un analista en Chicago. No responde la de un controller en São Paulo que debe firmar una clasificación fiscal capaz de convertirse en multa.",
+            "Y hay una ventana con fecha de vencimiento, que es el eje de todo lo que sigue. Entre 2026 y 2033 Brasil reescribe su sistema tributario entero. Durante esos siete años el conocimiento institucional acumulado en los ERP ya instalados deja de bastar, y una parte de lo que hoy hace valioso a ese software queda invalidada. El activo defendible en ese escenario no es el modelo. Es el corpus regulatorio nuevo y el flujo de trabajo que ese corpus gobierna."
+          ]
+        },
+        {
+          "heading": "El mercado de IA en el trabajo en Brasil, con números fechados",
+          "level": 2,
+          "paragraphs": [
+            "Ningún analista mide lo mismo, y conviene decirlo antes de citar una sola cifra. [Market Research Future](https://www.marketresearchfuture.com/reports/artificial-intelligence-in-workspace-market-7310) ubica el mercado global de IA en el espacio de trabajo en US$ 9.480 millones en 2025. [Grand View Research](https://www.grandviewresearch.com/horizon/outlook/enterprise-artificial-intelligence-market/brazil) proyecta la IA empresarial brasileña en US$ 2.577,5 millones hacia 2030, con un CAGR de 33,4% desde 2025. IMARC estima el mercado total de IA en Brasil en US$ 3.090 millones en 2025. Tres alcances distintos, tres números distintos. Ninguno es el titular limpio que un comité de inversión querría llevarse.",
+            "La base que de verdad importa no es la IA. Es el software. Según [ABES e IDC](https://theshift.info/hot/crescimento-tecnologia-brasil-abes-idc/), el mercado de TI de Brasil llegó a US$ 67.800 millones en 2025, con un crecimiento de 18,5% frente a un promedio global de 14,1%. El software solo sumó US$ 21.700 millones, o 32,1% del total. Brasil concentra 38,4% de la inversión en TI de América Latina y ocupa el décimo lugar del mundo.",
+            "El mismo estudio proyecta que ese crecimiento se desacelera a 5,3% en 2026, por debajo del 9,7% global. Quien construya para este mercado debería planear con esa cifra a la vista y no con la del año récord. La lectura honesta es una oportunidad brasileña de pocos miles de millones de dólares hoy, que se compone entre 20% y 33% anual según la definición que se elija.",
+            "Debajo de esos números hay un desajuste estructural que explica por qué el mercado no está saturado. Los servicios representan cerca del 70% del PIB brasileño en la medición de valor agregado del IBGE, con baja penetración de software. Bajo la definición más estrecha del [Banco Mundial](https://api.worldbank.org/v2/country/BRA/indicator/NV.SRV.TOTL.ZS?format=json&date=2019:2024), el valor agregado de servicios fue 59,17% del PIB brasileño en 2024. Mantener las dos cifras a la vista es deliberado. La brecha es metodológica, porque la serie del Banco Mundial compara el valor agregado sectorial contra un PIB que incluye los impuestos netos sobre los productos, de modo que las participaciones sectoriales nunca suman 100. Cualquiera sea el corte, la economía corre sobre servicios y el software captura una fracción de ese valor.",
+            "La adopción está temprano, y eso es exactamente el punto. La encuesta [TIC Empresas 2025 de Cetic.br](https://cetic.br/pt/noticia/uso-de-inteligencia-artificial-por-empresas-brasileiras-avanca-e-atinge-17-aponta-pesquisa-do-cetic-br/), levantada entre 4.174 empresas, encontró que el uso de IA en empresas brasileñas subió de 13% en 2024 a 17% en 2025. Entre las compañías de 250 empleados o más pasó de 38% a 50%. El comprador ya existe. La oferta nativa brasileña sigue delgada."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "17% de las empresas brasileñas usaron IA en 2025, frente a 13% en 2024. Entre las de 250 empleados o más, ya es la mitad.",
+            "attribution": "Cetic.br, TIC Empresas 2025"
+          },
+          "id": "market-size"
+        },
+        {
+          "heading": "Por qué el trabajo del conocimiento en Brasil no es genérico",
+          "level": 2,
+          "paragraphs": [
+            "El volumen normativo no es una anécdota de sobremesa. El [estudio del IBPT sobre normas editadas en Brasil](https://ibpt.org.br/estudo-quantidade-de-normas-editadas-no-brasil-2024/) contó más de 7,8 millones de normas promulgadas en los 36 años desde la Constitución de 1988, de las cuales 517.388 son específicamente tributarias. Eso equivale a cerca de 860 normas nuevas por día hábil, con un promedio cercano a 3.000 palabras cada una. Ninguna persona sostiene esa superficie en la cabeza. Para eso sirve un copilot anclado en recuperación de documentos.",
+            "Para dimensionarlo desde afuera sirve una comparación regional, con su advertencia pegada. La última lectura del indicador Doing Business del Banco Mundial sobre horas para preparar y pagar impuestos ubicó a Brasil en 1.501 horas al año, contra cerca de 291 en México y 286 en Chile. Esa serie fue descontinuada en 2021 por irregularidades metodológicas, así que 1.501 horas es la foto final de 2019 y no una medición de hoy. Lo que sí se sostuvo en todos los años de la serie es el orden de magnitud de la brecha.",
+            "El riesgo laboral es un pasivo cuantificado, no un temor difuso. Los datos del Tribunal Superior do Trabalho registran 2,117 millones de nuevos casos laborales de primera instancia en 2024, un alza de 14,1% sobre los 1,855 millones de 2023 y el conteo más alto desde la reforma laboral de 2017, [según Conjur](https://www.conjur.com.br/2025-fev-12/justica-do-trabalho-recebeu-dois-milhoes-de-novas-acoes-em-2024/). Una líder de recursos humanos en Brasil no le pide a un copilot que resuma una reunión. Le pregunta si un paquete de desvinculación específico sobrevive a una demanda.",
+            "Las personas que hacen ese trabajo se pueden contar. Brasil tenía 528.627 profesionales contables activos registrados en el CFC en enero de 2025, entre contadores y técnicos. Sume controllers, analistas fiscales y administradores de personal y el universo direccionable de un copilot nativo en cumplimiento supera el millón de profesionales cuyo producto diario es documentación regulatoria.",
+            "Tres siglas definen el back office brasileño, y ninguna existe en la distribución de entrenamiento de un copilot global. Para el lector de la región vale nombrarlas con precisión, porque el argumento entero depende de ver que este trabajo es distinto en especie y no solo en volumen."
+          ],
+          "bullets": [
+            "CLT, la Consolidación de las Leyes del Trabajo. El régimen laboral brasileño que gobierna contratos, nómina, beneficios y desvinculaciones. Es codificado y litigioso, no contractual y flexible.",
+            "SPED, el sistema público de contabilidad digital. Integra las administraciones tributarias federal, estatal y municipal, y estandariza el envío de datos contables y fiscales mediante módulos como EFD ICMS IPI, ECD, ECF, EFD-Reinf y eSocial.",
+            "NF-e, la factura electrónica obligatoria, vigente a nivel nacional desde 2005. Cada transacción comercial en Brasil genera un artefacto XML estructurado con fuerza legal."
+          ],
+          "id": "not-generic"
+        },
+        {
+          "heading": "Las aberturas AI-native dentro del back office",
+          "level": 2,
+          "paragraphs": [
+            "Lo que se puede construir aquí no son categorías de producto. Son artefactos brasileños con nombre propio, cuya respuesta correcta la verifica una autoridad y cuyo costo de error ya está tarifado en multas o en exposición judicial.",
+            "La demanda ya se está formando alrededor de esta forma de trabajo. Cetic.br encontró que el uso de generación de lenguaje natural saltó de 20% a 30% entre las empresas que adoptan IA, y la minería de texto de 33% a 38%. Son las dos aplicaciones de crecimiento más rápido del país. Ninguna de las dos se resuelve bien sin el documento brasileño correcto adelante."
+          ],
+          "bullets": [
+            "Clasificación fiscal y conciliación de NF-e. Cruzar el XML de la factura contra la orden de compra y detectar errores de clasificación antes de que se conviertan en una multa fiscal.",
+            "Copilot de recursos humanos anclado en la CLT. Responder preguntas de nómina, beneficios y desvinculación contra el texto vigente, los convenios colectivos y la jurisprudencia laboral. Los 2,117 millones de reclamos anuales son el mercado.",
+            "Asistente de declaraciones SPED. Preparar y validar envíos de EFD, ECD, ECF y EFD-Reinf, con el corpus de versiones de layout y reglas de validación como activo.",
+            "Copilot de transición tributaria. La cuña de mayor urgencia entre 2026 y 2033, y el eje del argumento que sigue."
+          ],
+          "id": "where-to-build"
+        },
+        {
+          "heading": "Por qué el corpus regulatorio es el moat",
+          "level": 2,
+          "paragraphs": [
+            "Nadie indexa el corpus regulatorio brasileño desde cero por gusto. Se hace ahora porque ese corpus se está reescribiendo. La fase de prueba de la reforma tributaria arrancó en 2026 con una tasa combinada simbólica de 1%, compuesta por 0,9% de CBS y 0,1% de IBS. El CBS toma efecto real en 2027, el split payment se vuelve obligatorio ese mismo año, y ICMS, ISS, PIS, Cofins e IPI salen de escena de forma progresiva hasta 2032 y 2033, [según Agência Brasil](https://agenciabrasil.ebc.com.br/economia/noticia/2026-01/reforma-tributaria-entra-em-fase-de-testes-em-2026).",
+            "El argumento de timing cabe en una frase. Durante unos siete años toda empresa brasileña va a operar dos sistemas tributarios en paralelo, y el conocimiento institucional que hace valiosa la configuración del ERP instalado queda parcialmente invalidado justo cuando más se lo necesita. Las empresas tienen que actualizar facturación, agregar campos obligatorios nuevos, revisar clasificaciones fiscales, rehacer contratos y remodelar el flujo de caja para el split payment, todo a la vez. Un corpus armado para la transición se arma en el único momento en que el corpus viejo deja de bastar para todos al mismo tiempo. Esa ventana no vuelve a abrirse.",
+            "El moat no es el modelo ni la interfaz de chat. Los dos son commodities y se abaratan cada mes. El activo es un corpus curado, versionado y etiquetado por jurisdicción, más el pipeline de ingesta que lo mantiene al día contra 860 normas nuevas por día hábil. En el marco de Hamilton Helmer eso es recurso acaparado más poder de proceso, no economías de escala.",
+            "Un modelo general no lo absorbe por cuatro razones concretas. El corpus está fragmentado entre la federación, 26 estados y miles de municipios, buena parte publicado como PDF y avisos de portal. Versiona sin parar, así que una foto estática se degrada sola. La respuesta correcta depende a la vez del régimen tributario, del estado, del municipio y del sector. Y acertar importa más que sonar fluido, porque una clasificación fiscal equivocada es una multa y no un párrafo mediocre.",
+            "Aquí está la lección transferible para quien opera desde México, Colombia o Chile. Cada mercado de la región tiene su propia maraña, con su factura electrónica y su autoridad fiscal, del CFDI mexicano a la facturación electrónica de la DIAN en Colombia. El reflejo habitual es tratar esa maraña como un impuesto a la operación. El reflejo correcto es tratarla como el moat, porque es justo lo que un entrante global no puede copiar en noventa días. El desarrollo completo de esa idea está en [la complejidad regulatoria brasileña como moat](/library/brazilian-regulatory-complexity-as-moat). Brasil es el caso extremo, y por eso es el mejor laboratorio."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "517.388 normas tributarias en 36 años, cerca de 860 normas nuevas por día hábil. La complejidad regulatoria brasileña es una superficie medida, no una anécdota.",
+            "attribution": "IBPT, Quantidade de Normas Editadas no Brasil, 2024"
+          },
+          "id": "the-moat"
+        },
+        {
+          "heading": "Cómo un copilot de trabajo compone dato propio",
+          "level": 2,
+          "paragraphs": [
+            "El patrón recurrente en las ventures de Avante es el flywheel copilot, dato, capital. Aplicado al back office brasileño sale inusualmente limpio, porque el producto del trabajo es estructurado y el resultado lo verifica una autoridad, no una encuesta de satisfacción.",
+            "Copilot. Un asistente nativo en cumplimiento que un controller o una líder de personal usa a diario, porque la alternativa es leer normas de 3.000 palabras para responder una sola pregunta.",
+            "Dato. Cada interacción produce un par etiquetado. La pregunta que una empresa brasileña realmente hizo, la respuesta regulatoria que recibió, y si la declaración fue aceptada o el reclamo fue ganado. Ese último campo es la parte rara. La mayoría de los productos de IA nunca ve el resultado real de su consejo. Un copilot de cumplimiento lo ve en cada envío.",
+            "Capital. El corpus acumulado de resultados se convierte en un activo de suscripción de riesgo. Sostiene pricing, modelos de honorarios contingentes y despliegue de capital contra exposiciones que el incumbente no ve, porque el incumbente guarda transacciones y no resoluciones.",
+            "El ciclo se refuerza solo. Cada clasificación corregida mejora la siguiente respuesta, y eso ensancha la brecha de precisión contra cualquier recién llegado que traiga el mismo modelo frontera y ningún dato de resultados. Es el mismo mecanismo descrito en [los efectos de red de datos en IA vertical](/library/data-network-effects-vertical-ai)."
+          ],
+          "id": "the-flywheel"
+        },
+        {
+          "heading": "Compra larga, distribución del ERP incumbente, riesgo de wrapper",
+          "level": 2,
+          "paragraphs": [
+            "Tres modos de falla, sin suavizar. El primero es el ciclo de venta. El comprador de un producto de cumplimiento es un controller o un CFO cuyo riesgo por una respuesta equivocada es una multa fiscal y cuyo premio por una correcta es tiempo ahorrado. Esa asimetría produce compras lentas y cargadas de evidencia. Planee pilotos, no autoservicio.",
+            "El segundo es distribución, y es el más serio. TOTVS cerró 2025 con una facturación neta de R$ 5.700 millones, un alza de 17%, ingresos recurrentes de R$ 4.600 millones equivalentes a 91% del total, y EBITDA ajustado por encima de R$ 1.500 millones. Su área de [relaciones con inversionistas](https://ri.totvs.com/en/) declara más de 53% de participación de mercado en Brasil y más de 70 mil clientes en 12 segmentos económicos.",
+            "En el mismo anuncio de resultados, en febrero de 2026, TOTVS presentó LYNN, posicionada como la primera fundación de IA B2B del mercado brasileño, respaldada con R$ 75 millones al año durante cuatro años. Cualquier tesis que asuma que los incumbentes no van a lanzar IA en portugués ya nació equivocada. El incumbente no está dormido, tiene la distribución y acaba de poner presupuesto plurianual sobre la mesa.",
+            "El contraargumento existe, pero hay que ganárselo en vez de afirmarlo. La IA del ERP incumbente queda atada al modelo de datos y al ciclo de release de ese ERP, y los vendedores de ERP monetizan licencias y módulos, no resultados. El espacio está en el flujo de trabajo entre sistemas y en un pricing por resultado que un vendedor de ERP estructuralmente no va a ofrecer.",
+            "El dato de Cetic.br corta para los dos lados, y conviene decirlo así. 80% de las empresas brasileñas que adoptan IA compran software listo en vez de construirlo. Eso confirma que el comprador existe y que no piensa armar nada por su cuenta, lo cual favorece a un producto nativo con corpus propio. También confirma que ese mismo comprador acepta con gusto lo que su proveedor actual le ponga adelante, y el proveedor actual suele ser el ERP que ya tiene instalado.",
+            "El tercer modo de falla es el tiro de gracia honesto. Un wrapper delgado sobre un modelo frontera, sin corpus regulatorio, no tiene defensa el día en que Microsoft publique plantillas de cumplimiento en portugués o TOTVS extienda LYNN. Si una venture no puede articular qué posee que un competidor no consiga en noventa días, es una funcionalidad y no una empresa."
+          ],
+          "id": "the-hard-parts"
+        },
+        {
+          "heading": "Cómo Avante lo abordaría",
+          "level": 2,
+          "paragraphs": [
+            "Avante opera como venture studio. No es una aceleradora, no es una incubadora, no es un fondo. La distinción importa aquí porque el insumo escaso de esta tesis no es capital ni ingeniería, y un vehículo que solo firma cheques no puede aportarlo.",
+            "El sistema de seis etapas se aplica sin ceremonia. Research valida cuál flujo de back office tiene la mayor razón entre dolor regulatorio y herramienta disponible, algo testeable en semanas contra controllers reales. Partner consigue el insumo escaso, que es un operador de dominio con 10 o más años de cicatrices del mercado brasileño en impuestos, nómina u operación fiscal, alguien que ya sabe cuál validación de SPED falla más seguido y por qué.",
+            "Build va corpus primero e interfaz después, porque el activo diferenciado es el pipeline de ingesta y versionado, no la ventana de chat. Traction vende a controllers y no a CIOs, y aterriza en un resultado medible como declaraciones rechazadas a la baja o exposición laboral a la baja. Revenue cobra contra ese resultado, y los operating partners siguen involucrados hasta el primer hito de ingresos, momento en que pasan a supervisión de directorio. Compound canaliza el dato de resultados hacia el activo de suscripción, que es donde cierra el flywheel.",
+            "El studio despliega $500K-$1.5M por venture a lo largo del pre-seed y retiene economía de co-founder, con 3-4 ventures por año. Resolver la plomería de compañía una sola vez canaliza cerca de $300K-$500K de capital efectivo por venture hacia producto y tracción en vez de overhead. Y como la infraestructura de IA ya es lo bastante barata para desplegar sin una Serie A, ese diferencial decide quién llega a ingresos primero en un mercado donde el capital semilla latinoamericano se concentró en menos rondas y más grandes.",
+            "Sobre el modelo en sí, el benchmark de la Global Startup Studio Network ubica el IRR de los venture studios en ~50% frente a ~19% del venture capital tradicional, cerca de 2,5x. Es el benchmark del modelo, atribuido a GSSN, y nunca un retorno realizado de Avante. La tesis completa está en [por qué operamos como venture studio](/why-avante), y el contexto de mercado más amplio en [la economía de servicios brasileña](/library/brazil-services-economy-opportunity).",
+            "La ventana tiene fecha. Entre 2026 y 2033 el corpus regulatorio brasileño se reescribe a la vista de todos, y quien lo esté indexando mientras ocurre va a terminar con algo que nadie podrá reconstruir hacia atrás. La maraña regulatoria de Brasil siempre se trató como el costo de operar ahí. Resulta ser lo único en este mercado que un entrante global no puede comprar."
+          ],
+          "id": "how-avante"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Qué tan grande es el mercado de IA en el espacio de trabajo en Brasil?",
+          "a": "No existe una cifra única, y las estimaciones dependen del alcance que use cada analista. Grand View Research proyecta la IA empresarial brasileña en US$ 2.577,5 millones hacia 2030 con un CAGR de 33,4%, mientras IMARC estima el mercado total de IA del país en US$ 3.090 millones en 2025. La base más útil es el software, que sumó US$ 21.700 millones en 2025 dentro de un mercado de TI de US$ 67.800 millones, según ABES e IDC."
+        },
+        {
+          "q": "¿El mercado de IA corporativa Brasil ya tiene un incumbente dominante?",
+          "a": "Sí, y es TOTVS. La compañía declara más de 53% de participación de mercado y más de 70 mil clientes, y cerró 2025 con una facturación neta de R$ 5.700 millones, un alza de 17%. En febrero de 2026 anunció LYNN, una fundación de IA B2B respaldada con R$ 75 millones al año durante cuatro años. Cualquier tesis que asuma incumbentes dormidos ya nació equivocada."
+        },
+        {
+          "q": "¿Qué son CLT, SPED y NF-e, y por qué importan para un producto de IA?",
+          "a": "Son los tres sistemas que definen el back office brasileño. La CLT es el régimen laboral que gobierna contratos, nómina y desvinculaciones. SPED es el sistema público de contabilidad digital que integra las administraciones tributarias federal, estatal y municipal. NF-e es la factura electrónica obligatoria vigente desde 2005. Un copilot global no fue entrenado sobre ninguno de los tres, y las preguntas de un controller brasileño viven adentro de ellos."
+        },
+        {
+          "q": "¿Cuántas empresas brasileñas usan inteligencia artificial hoy?",
+          "a": "17% en 2025, frente a 13% en 2024, según la encuesta TIC Empresas 2025 de Cetic.br levantada entre 4.174 empresas. Entre las compañías de 250 empleados o más la cifra llega a 50%, contra 38% el año anterior. El dato decisivo es otro. 80% de quienes adoptan IA compran software listo en vez de construirlo."
+        },
+        {
+          "q": "¿La reforma tributaria brasileña cambia lo que necesita el software empresarial?",
+          "a": "Sí, y de forma profunda. La fase de prueba arrancó en 2026 con una tasa combinada simbólica de 1%, el CBS toma efecto real en 2027, el split payment se vuelve obligatorio desde 2027, y ICMS, ISS, PIS, Cofins e IPI salen de escena hasta 2032 y 2033. Durante unos siete años cada empresa brasileña opera dos sistemas tributarios en paralelo, lo que obliga a actualizar facturación, clasificaciones fiscales, contratos y modelos de flujo de caja."
+        }
+      ]
+    }
+  },
+  {
     "slug": "brazil-computer-vision-market-opportunity",
     "category": "brazil",
     "type": "Market Analysis",
@@ -8475,6 +8946,486 @@ const engineArticles: Article[] = [
         {
           "q": "¿Cómo construiría un venture studio en visión por computadora?",
           "a": "Avante Ventures construiría un copilot de visión estrecho, dueño de un workflow y del dato etiquetado que produce, y luego usaría ese corpus para respaldar un vehículo de financiamiento, seguro o eficiencia aguas abajo. Es el flywheel copilot, dato, capital, operado por un operador de dominio con más de 10 años de cicatriz de mercado brasileño y USD 500K a 1,5M de capital de primer cheque."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "brazil-generative-ai-bfsi-opportunity",
+    "category": "brazil",
+    "type": "Market Analysis",
+    "readTime": "14 min",
+    "featured": false,
+    "date": "Sep 2026",
+    "datePublished": "2026-09-04",
+    "isPublished": true,
+    "en": {
+      "title": "Brazil Generative AI in BFSI: Pix and Open Finance Already Built the Substrate",
+      "description": "The Brazil generative AI in BFSI market runs on infrastructure the US lacks. Pix plus 208.79 million Open Finance consents make the data portable by law.",
+      "sections": [
+        {
+          "paragraphs": [
+            "The Brazil generative AI in BFSI market has no defensible size figure, and Brazil is still the best country in the world to build a banking or insurance AI product. Every regulated AI product needs two inputs a founder normally cannot buy. Payment data with near universal coverage, and customer financial data that moves on the customer's instruction instead of on a bilateral deal with a bank. Brazil shipped both as public infrastructure before the model layer got cheap.",
+            "Pix cleared 79.8 billion transactions worth R$ 35.36 trillion in 2025. Open Finance Brasil reported 208.79 million active consents on 31 July 2026. A founder in New York or Frankfurt assembles that substrate one integration at a time and pays for each one. In Brazil the customer hands it over by law, in a standard format, at no cost.",
+            "Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America. What follows is our read on where the openings actually sit across banking, credit and insurance, what the moat is once you strip out the model, and which parts of this are hard enough to sink a team that walks past them."
+          ]
+        },
+        {
+          "heading": "The Brazil generative AI BFSI market, with dated numbers",
+          "level": 2,
+          "paragraphs": [
+            "Start with the weakest part of the case, because pretending otherwise is how people underwrite badly. No research house publishes a defensible Brazil-specific figure for generative AI in BFSI. What circulates is a global BFSI segment estimate multiplied by a country weighting, and estimates for the same country and the same base year diverge by more than 2x. A category whose definition is still moving looks exactly like that from the outside.",
+            "One number held up at source, and it covers the whole country rather than the vertical. IMARC Group sizes the [Brazil generative AI market](https://www.imarcgroup.com/brazil-generative-ai-market) at USD 371.2 million in 2025, reaching USD 1,481.5 million by 2034 at a 16.63 percent CAGR. Useful as a directional signal. Useless as an underwriting input.",
+            "Observed spend is the stronger evidence, and it is public. [FEBRABAN and Deloitte](https://portal.febraban.org.br/noticia/4278/pt-br/) put the Brazilian bank technology budget at R$ 47.8 billion in 2025, up 13 percent from R$ 42.3 billion the year before, with investment in AI, analytics and big data growing an estimated 61 percent and Open Finance investment up 65 percent. More than 80 percent of surveyed banks already use generative AI, reporting an average 11.4 percent efficiency gain, and 38 percent report gains above 20 percent. The survey covers 20 banks representing 85 percent of Brazilian banking assets.",
+            "A forecast is one analyst's model of a future nobody has seen. A budget line is money already committed by the institutions holding most of the country's banking assets. When the two disagree, take the budget. It is the only one of the pair that has already survived a risk committee.",
+            "The macro backdrop is consistent with that. Services account for roughly 70% of Brazilian GDP on IBGE's value-added basis, while the [World Bank series](https://data.worldbank.org/indicator/NV.SRV.TOTL.ZS?locations=BR) puts services value added at 59.7 percent of GDP in 2025. Both are correct. GDP additionally counts net taxes on products, which is why the value-added share reads higher. Financial services sit inside that block and digitize faster than the rest of it, a pattern we trace in more depth in our analysis of the [Brazilian services economy opportunity](/library/brazil-services-economy-opportunity)."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Brazilian banks budgeted R$ 47.8 billion for technology in 2025, up 13 percent, with AI and analytics budgets growing an estimated 61 percent. More than 80 percent of surveyed banks already use generative AI.",
+            "attribution": "FEBRABAN and Deloitte, Pesquisa Febraban de Tecnologia Bancária 2025"
+          },
+          "id": "market-size"
+        },
+        {
+          "heading": "Why Pix and Open Finance already built the data substrate",
+          "level": 2,
+          "paragraphs": [
+            "Permissioned financial data in Brazil is portable by regulation rather than by partnership. That one sentence is the thesis, and it is the part that is not true in the United States or most of Europe.",
+            "Pix, launched by Banco Central do Brasil in November 2020, handled [79.8 billion transactions worth R$ 35.36 trillion in 2025](https://clearingpost.com/insights/pix-breaks-all-records-in-2025-798-billion-transactions-move-r-3536-trillion/), a 33.6 percent increase in value over R$ 26.24 trillion in 2024. That averages roughly 219 million transactions per day, with peak days above 300 million. [More than 170 million people use it, about 93 percent of the Brazilian adult population](https://www.ebanx.com/en/insights/articles/five-years-on-pix-approaches-8-monthly-transactions/), and person-to-business volume now runs at 44 percent of the total.",
+            "For a builder that means merchant cash flow, consumer spending behaviour and counterparty graphs sit on a single national rail with near universal coverage. No card network fragmentation. No batch settlement lag. No bureau-only view of a thin-file borrower who has never held a credit card but takes 400 Pix payments a month.",
+            "Open Finance is the second leg and the more consequential one. It is mandatory for large institutions and customer-permissioned by design, not a voluntary API programme a bank can quietly deprioritise. The trajectory is the tell. [FEBRABAN counted 62 million active consents in January 2025](https://portal.febraban.org.br/noticia/4253/pt-br), 44 percent above the 43 million a year earlier. Eighteen months later the dashboard reads 208.79 million. That curve is a function of a mandate, not of anyone's product roadmap.",
+            "Drex is the third leg and it is not ready. It remains a restricted pilot involving banks, fintechs, B3 and Visa, with broad rollout targeted for 2027 after Banco Central reoriented the programme because the original distributed-ledger architecture had not met bank-secrecy and privacy requirements. Treat Drex as optionality. Anyone selling it as a 2026 dependency is selling a roadmap, not a product."
+          ],
+          "bullets": [
+            "208.79 million active consents as of 31 July 2026, spanning transactional, credit, investment and insurance data.",
+            "More than 2.3 billion successful API communications per week, with FEBRABAN-associated banks having invested over R$ 2 billion in the regime.",
+            "Banco Central's 2025 to 2026 agenda extends the scope further, into salary and investment portability coordinated with the CVM and credit portability for unsecured lending."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "208.79 million active Open Finance consents in Brazil as of 31 July 2026. Financial data is portable by regulation, not by partnership.",
+            "attribution": "Open Finance Brasil dashboard, 31 July 2026"
+          },
+          "id": "the-substrate"
+        },
+        {
+          "heading": "The openings across banking, credit and insurance",
+          "level": 2,
+          "paragraphs": [
+            "The sector is not the opportunity. The decision is. Ranking matters more than listing here, because somebody with a larger balance sheet is already building three of the four openings below. The order follows how cleanly the Brazilian substrate maps onto each one.",
+            "Insurance earns its place on arithmetic. Brazilian insurance penetration was 3.3 percent of GDP in 2024 per [MAPFRE Economics](https://www.mapfre.com/en/communicate/corporate-communicate/latin-american-insurance-market-2024-mapfre-economics/), while total insurance penetration across OECD countries averaged 6.2 percent in 2024 per the [OECD](https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/12/global-insurance-market-trends-2025_e4869157/0d11ecf4-en.pdf). Both figures measure gross direct life and non-life premiums over GDP, so the comparison holds. Brazil sits at roughly half the developed-market level on a base that keeps expanding. [CNseg projects R$ 808 billion in 2026 revenue, up 5.7 percent](https://cnseg.org.br/noticias/setor-de-seguros-projeta-crescimento-de-5-7-em-2026-e-arrecadacao-de-r-808-bilhoes), and the industry's own development plan targets 10 percent of GDP by 2030. Low penetration on a growing base is a growth argument, not a maturity argument.",
+            "None of the first three openings below is a chat interface. Each one is a decision that has to leave a paper trail, which in Brazil is the only shape of AI product that reaches production at all."
+          ],
+          "bullets": [
+            "Credit underwriting where the model writes the reasoning a regulator can audit. Open Finance supplies permissioned cash-flow data on a thin-file borrower and Pix supplies merchant revenue seasonality. The product is not a score. It is a decision memo with the evidence trail attached, because that is what an examiner and a disputing customer both ask for.",
+            "KYC and AML triage. High volume, high false-positive rate, and a human review queue that is the actual cost centre. The model drafts the narrative and assembles the evidence. The analyst keeps the decision.",
+            "Insurance claims adjudication and underwriting. The strongest growth argument of the four, and the one we weight most heavily.",
+            "Servicing. The lowest defensibility of the four and the one every incumbent is already building. Enter here only as a wedge into the other three."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Brazilian insurance penetration was 3.3% of GDP in 2024 against an OECD average of 6.2%. Both measure premiums over GDP, so the gap is real and the gap is the market.",
+            "attribution": "MAPFRE Economics and OECD, 2024"
+          },
+          "id": "where-to-build"
+        },
+        {
+          "heading": "Why permissioned data plus a compliance posture is the moat",
+          "level": 2,
+          "paragraphs": [
+            "Now the harder question. A chat layer over a core banking system is not a company. It is a feature the core provider ships next quarter, bundled, at zero incremental price.",
+            "The defensible asset has two parts and neither of them is the model. The first is the outcome data. Open Finance makes the raw feed legally portable, which lowers the barrier to entry for everyone including the competitor who copies the demo. What is not portable is what a live book produces. Every claim declined and later paid, every loan approved and later in default, every human override of the model, is a training label nobody can buy at any price.",
+            "The second part is the compliance posture treated as a product surface rather than as documentation. In BFSI the audit trail is the thing the buyer is purchasing. A copilot that emits a versioned, reproducible reasoning record for every decision, carrying model version, input data lineage, confidence and the reviewer's identity, sells into a regulated institution. One that emits an answer does not get past information security.",
+            "Local operating knowledge belongs in the same column as the data. Brazilian businesses spend an average of [1,501 hours a year meeting tax obligations](https://tradingeconomics.com/brazil/time-to-prepare-and-pay-taxes-hours-wb-data.html), roughly five times the Latin America and Caribbean average and close to ten times the OECD high-income average. In BFSI that drag lands twice. Once in your own back office, and again inside the product, because tax treatment and documentary requirements are embedded in credit files, claims files and KYC packages. A foreign entrant prices the first cost and never sees the second one coming.",
+            "In Hamilton Helmer's terms the durable powers here are cornered resource and switching costs. The cornered resource is the outcome data on a live book. The switching cost is a decision log already embedded in the customer's own regulatory filings. Scale economies and network effects are weak in this category. Do not claim them in a deck a sophisticated investor will read."
+          ],
+          "id": "the-moat"
+        },
+        {
+          "heading": "How an underwriting copilot compounds toward a fund",
+          "level": 2,
+          "paragraphs": [
+            "This is the copilot to data to fund flywheel, applied to BFSI, and BFSI is the sharpest version of it because the outcome data carries a price. A loss curve on a specific book in a specific segment is not a nice-to-have analytics asset. It is the input a reinsurer or a credit facility underwrites against, which means the same dataset that improves the software also lowers the cost of capital for the vehicle it eventually feeds.",
+            "The capital market is currently paying for that order. Brazilian fintechs raised [USD 2.77 billion across 106 rounds in 2025](https://finsidersbrasil.com.br/negocios-em-fintechs/fintechs-captam-us-277-bi-em-2025-com-metade-das-rodadas-de-2021/), against a comparable total spread over 244 rounds in 2021. Money did not leave Brazilian financial technology. It concentrated into fewer and larger cheques for teams that can show unit economics. A venture that arrives with a paying design partner and a compliance answer is underwriting with that filter instead of against it.",
+            "The pattern already runs elsewhere in the portfolio. Alphajuri applies it to Brazilian judicial assets, precatórios and claims. WIR, with AXA, applies it to async insurance pricing and risk scoring. Neither publishes metrics, so take the pattern rather than an outcome. Three moves, in a fixed order."
+          ],
+          "bullets": [
+            "Copilot. Sell an underwriting or claims copilot to a mid-market lender, insurer or MGA with no in-house data science team. Revenue from day one, not a data-collection pretext dressed as a product.",
+            "Data. Every decision the copilot supports generates a labelled outcome. Over 18 to 36 months that becomes a loss and behaviour dataset on a specific book, in a specific segment, that no incumbent and no foreign entrant holds.",
+            "Fund. That dataset becomes the underwriting edge for a downstream credit or insurance vehicle. The software business proves the model. The capital vehicle monetises the edge at a completely different margin structure."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "Sequencing is the whole trick. A team that raises the vehicle first has capital without an edge. A team that builds the copilot first has an edge and a natural buyer for it."
+          },
+          "id": "the-flywheel"
+        },
+        {
+          "heading": "BACEN and SUSEP, explainability, and incumbent balance sheets",
+          "level": 2,
+          "paragraphs": [
+            "Explainability in Brazil is a legal requirement, not a design preference. [Article 20 of the LGPD](https://lgpd-brasil.info/capitulo_03/artigo_20) gives any data subject the right to request review of decisions taken solely on automated processing that affect their interests, expressly including credit profiling, and obliges the controller to supply clear and adequate information on the criteria and procedures used. A model that cannot produce that record is not deployable in a credit or claims decision. Not risky. Not deployable.",
+            "The AI-specific rules are coming and are not settled, which is a risk in both directions. [PL 2338/2023](https://www25.senado.leg.br/web/atividade/materias/-/materia/157233), the Marco Legal da IA, was approved unanimously by the Senate on 10 December 2024 and remains before the Chamber of Deputies. It follows the EU AI Act structure with risk tiers, rights to explanation and contestation, a national governance system linked to the ANPD, and sanctions of up to R$ 50 million per infraction. Banco Central placed AI on its 2025 to 2026 regulatory priorities agenda as studies on the risks of AI use in the financial system, aiming at guidelines rather than immediate binding rules. SUSEP set its 2026 regulation plan through Resolução SUSEP nº 72/2025, with explainability of automated underwriting and claims decisions a central theme.",
+            "So there is no safe harbour yet. Build to the strictest plausible standard now, because retrofitting a decision log into a shipped model costs more than designing one in, and the retrofit always lands in the same week the first regulator asks.",
+            "The incumbent is not a sleepy target either. [Itaú Unibanco](https://www.riotimesonline.com/itau-genai-assistant-iai-launch-2026/) reported roughly 150 generative AI solutions already in production and more than 750 projects in development by early 2026. Its ia.i assistant reached 300,000 users by July 2026 against a stated target of the full base of more than 60 million clients by December. [Bradesco's Bridge platform](https://www.microsoft.com/en/customers/story/25660-banco-bradesco-sa-azure-ai-foundry), built on Azure OpenAI, reports an 83 percent external resolution rate across roughly 74 million customers, a technology cost reduction above 30 percent, and solution launches up to 10 times faster.",
+            "So do not compete with the five largest Brazilian banks on general-purpose retail assistants. They have the teams, the balance sheets and the distribution. Compete where they are structurally slow, which is the mid-market institution they do not serve and the vertical workflow too small to make their roadmap.",
+            "Then price the calendar honestly. BFSI procurement in Brazil runs in quarters, not weeks, and passes through information security, compliance, legal and often a regulator-facing risk committee. Budget 6 to 12 months from first meeting to signed pilot. The compliance answer has to exist before the product demo, not after it."
+          ],
+          "id": "the-hard-parts"
+        },
+        {
+          "heading": "How Avante would approach it",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America. Not an accelerator, not an incubator, not a fund. The distinction earns its keep in BFSI more than in most categories, because the scarce input here is neither capital nor engineering. It is a person who has already owned the decision you intend to automate, inside a Brazilian institution, through a full rate cycle.",
+            "Inference cost for GPT-3.5-level capability fell more than 280-fold between November 2022 and October 2024, from USD 20.00 to USD 0.07 per million tokens, per the [Stanford HAI 2025 AI Index](https://hai.stanford.edu/ai-index/2025-ai-index-report). A vertical BFSI product that needed a Series A to fund inference in 2022 now reaches first revenue on a seed budget. That is the concrete basis for deploying AI without a Series A. The binding constraint moved from compute to distribution and compliance, which is exactly the pairing a studio staffs on day one and a traditional fund has to sit and wait for. More on how we assemble it is on [why Avante operates as a venture studio](/why-avante).",
+            "Avante deploys $500K-$1.5M per venture across pre-seed and retains co-founder economics, launching 3-4 ventures per year. Solving the company plumbing once routes roughly $300K-$500K of effective capital per venture into product and traction rather than overhead, and a studio venture typically launches 6-9 months ahead of a comparably funded standalone team. Operating partners stay engaged through the first revenue milestone. In BFSI that head start compounds harder than anywhere else, because the sales cycle is measured in quarters and the calendar is the scarce input.",
+            "The substrate is finished. The regulation is half-written. The incumbents are awake and spending R$ 47.8 billion a year on technology. What is still unclaimed is the mid-market decision nobody has automated with an audit trail attached, and in Brazil the clock on that started the day the first Open Finance consent was granted. Here is how the six-stage system of Research, Partner, Build, Traction, Revenue, Compound runs against it."
+          ],
+          "bullets": [
+            "Research. Pick the decision, not the sector. Underwriting for a mid-market lender is a company. Generative AI for banking is a category page.",
+            "Partner. Recruit the domain operator with 10+ years of Brazilian-market scar tissue who has already owned that decision inside an institution. This is the binding constraint, not engineering.",
+            "Build. Ship the decision log and the compliance posture in version one, because in BFSI the audit trail is the product surface.",
+            "Traction, Revenue and Compound. One paying design partner before the second engineer. Then a contract that survives a compliance review, which is the test that actually matters. Then the accumulated outcome data turned into the underwriting edge for a downstream vehicle. Copilot, then data, then fund."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Per the Global Startup Studio Network, studios have produced ~50% IRR against an industry-standard ~19% for traditional VC, roughly 2.5x over realistic time horizons.",
+            "attribution": "Global Startup Studio Network (GSSN). Studio-model benchmark, not an Avante realized return."
+          },
+          "id": "how-avante"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How large is the Brazil generative AI in BFSI market?",
+          "a": "No research house publishes a defensible Brazil-specific figure for generative AI in BFSI, and estimates for the same base year diverge by more than 2x. IMARC Group sizes the whole Brazil generative AI market at USD 371.2 million in 2025, reaching USD 1,481.5 million by 2034 at a 16.63 percent CAGR. The better anchor is observed spend. FEBRABAN and Deloitte put the Brazilian bank technology budget at R$ 47.8 billion in 2025, with AI and analytics budgets up an estimated 61 percent."
+        },
+        {
+          "q": "Why is Brazil a better place to build generative AI for banking than the United States?",
+          "a": "Because permissioned financial data is portable by regulation rather than by partnership. Open Finance Brasil reported 208.79 million active consents as of 31 July 2026 and more than 2.3 billion successful API communications per week, and participation is mandatory for large institutions. Pix adds near universal payment coverage, with 79.8 billion transactions worth R$ 35.36 trillion in 2025 and more than 170 million users."
+        },
+        {
+          "q": "Can generative AI be used for credit decisions in Brazil?",
+          "a": "Yes, with conditions that are legal rather than technical. Article 20 of the LGPD grants a right to review of decisions taken solely on automated processing, expressly including credit profiling, and requires clear information on the criteria used. PL 2338/2023 passed the Senate in December 2024 and would add EU-style risk-tier obligations with sanctions of up to R$ 50 million per infraction. Any deployable model has to emit an auditable reasoning record."
+        },
+        {
+          "q": "Why is the Brazil AI insurance market a growth story rather than a mature one?",
+          "a": "Brazilian insurance penetration was 3.3 percent of GDP in 2024 against an OECD average of 6.2 percent, with both measured as premiums over GDP. Brazil sits at roughly half the developed-market level while the sector keeps expanding, and CNseg projects R$ 808 billion in 2026 revenue, up 5.7 percent. Low penetration on a large and growing base is a growth argument."
+        },
+        {
+          "q": "Are incumbent Brazilian banks already building this?",
+          "a": "Yes, at serious scale. Itaú Unibanco reported roughly 150 generative AI solutions in production and more than 750 in development by early 2026, and Bradesco's Bridge platform reports an 83 percent external resolution rate with technology costs down more than 30 percent. The opening is not general retail assistants. It is the mid-market institution the top five do not serve and the vertical workflow too small for their roadmap."
+        }
+      ]
+    },
+    "pt": {
+      "title": "IA Generativa em BFSI no Brasil: Pix e Open Finance Já Construíram o Substrato",
+      "description": "O mercado de IA generativa em BFSI no Brasil roda sobre Pix e Open Finance. O dado financeiro é portátil por regulação, não por parceria.",
+      "sections": [
+        {
+          "paragraphs": [
+            "O mercado de IA generativa em BFSI no Brasil não se justifica pelo tamanho da projeção. Ele se justifica pelo substrato. Nenhuma casa de pesquisa publica hoje um número defensável para bancos, serviços financeiros e seguros no recorte brasileiro, e fingir o contrário é o primeiro erro de qualquer deck sobre o tema.",
+            "O que existe, e é verificável, é infraestrutura. Consentimento portátil por norma, trilho de pagamento com cobertura quase universal e uma linha de orçamento bancário de tecnologia crescendo em dois dígitos. Isso não é vantagem de mercado emergente. É vantagem sobre Nova York e sobre Londres, onde o dado financeiro do cliente ainda se compra em acordo bilateral, um banco por vez.",
+            "A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina. A leitura abaixo trata o Brasil como lugar de construir, não como mercado consumidor de IA importada, e nomeia os três pontos em que a tese quebra: o regulador, o ciclo de venda e o balanço do incumbente."
+          ]
+        },
+        {
+          "heading": "O mercado brasileiro de IA generativa em BFSI, com números datados",
+          "level": 2,
+          "paragraphs": [
+            "Comece pela parte desconfortável. Não existe número de mercado confiável para IA generativa em BFSI no Brasil. O que circula em apresentação é uma estimativa global do segmento multiplicada por um peso de país, e estimativas para o mesmo ano-base divergem em mais de 2x entre as principais casas.",
+            "O único recorte que se verifica na fonte é o do IMARC Group, que dimensiona o mercado brasileiro de IA generativa como um todo em USD 371,2 milhões em 2025, chegando a USD 1.481,5 milhões até 2034, com CAGR de 16,63% entre 2026 e 2034 ([IMARC Group](https://www.imarcgroup.com/brazil-generative-ai-market)). É o mercado inteiro, não o corte BFSI. Sinal direcional, nunca insumo de underwriting.",
+            "Gasto observado é evidência mais forte que qualquer projeção. Os bancos brasileiros orçaram R$ 47,8 bilhões em tecnologia em 2025, alta de 13% sobre os R$ 42,3 bilhões de 2024, com os orçamentos de IA, analytics e big data crescendo cerca de 61% e os de Open Finance 65% ([FEBRABAN e Deloitte, Pesquisa de Tecnologia Bancária 2025](https://portal.febraban.org.br/noticia/4278/pt-br/)).",
+            "Mais de 80% dos bancos pesquisados já usam IA generativa, com ganho médio de eficiência de 11,4% e 38% relatando ganho acima de 20%. A amostra é de 20 bancos que representam 85% dos ativos do setor. Não é intenção de compra medida em survey de fornecedor. É orçamento em execução dentro da fatia do sistema que concentra o ativo.",
+            "O pano de fundo é uma economia de serviços. Os serviços respondem por cerca de 70% do PIB brasileiro, com baixa penetração de software, na base de valor adicionado do IBGE. Na série do Banco Mundial, o valor adicionado de serviços foi 59,7% do PIB em 2025 ([Banco Mundial](https://data.worldbank.org/indicator/NV.SRV.TOTL.ZS?locations=BR)). A diferença entre os dois não é erro de ninguém. O PIB conta ainda impostos líquidos sobre produtos. Leve os dois números para a reunião, porque quem cita só um leva a pergunta. O detalhamento dessa base está na [análise da economia de serviços brasileira](/library/brazil-services-economy-opportunity)."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Os bancos brasileiros orçaram R$ 47,8 bilhões em tecnologia em 2025, alta de 13%, com os orçamentos de IA e analytics crescendo cerca de 61% e mais de 80% dos bancos pesquisados já usando IA generativa.",
+            "attribution": "FEBRABAN e Deloitte, Pesquisa Febraban de Tecnologia Bancária 2025"
+          },
+          "id": "market-size"
+        },
+        {
+          "heading": "Por que Pix e Open Finance já construíram o substrato de dados",
+          "level": 2,
+          "paragraphs": [
+            "Pix e Open Finance viraram paisagem, e é justamente por isso que a vantagem passa despercebida por quem opera dentro dela. Os dois trilhos juntos derrubam o custo de entrada de um produto de IA em serviço financeiro para um patamar que Nova York e Londres não alcançam com dinheiro.",
+            "O Open Finance Brasil registrou 208,79 milhões de consentimentos ativos em 31 de julho de 2026, com mais de 2,3 bilhões de chamadas de API bem-sucedidas por semana ([Open Finance Brasil](https://www.letsmoney.com.br/noticias/open-finance-208-milhoes-consentimentos-governanca/), [FEBRABAN](https://portal.febraban.org.br/noticia/4253/pt-br)). Participação obrigatória para as instituições grandes, escopo cobrindo dado transacional, de crédito, de investimento e de seguro.",
+            "A frase que importa para quem constrói: aqui o dado financeiro permissionado é portátil por regulação, não por parceria. Nos Estados Unidos e na maior parte da Europa, o fundador compra esse substrato em acordo bilateral, com veto comercial do incumbente em cada mesa e um cronograma de integração que consome a rodada inteira. No Brasil o cliente entrega por decisão dele, e o incumbente não tem como impedir.",
+            "O Pix acrescenta a camada de comportamento. Foram 79,8 bilhões de transações movimentando R$ 35,36 trilhões em 2025, alta de 33,6% em valor, com cerca de 219 milhões de transações por dia e picos acima de 300 milhões ([Banco Central do Brasil, via ClearingPost](https://clearingpost.com/insights/pix-breaks-all-records-in-2025-798-billion-transactions-move-r-3536-trillion/)). São mais de 170 milhões de usuários, cerca de 93% da população adulta ([EBANX](https://www.ebanx.com/en/insights/articles/five-years-on-pix-approaches-8-monthly-transactions/)).",
+            "Para modelo de crédito isso resolve o problema mais caro do país. Sazonalidade de receita de um comerciante e grafo de contraparte de um tomador sem histórico de bureau existem em trilho único, com cobertura quase universal, sem fragmentação de bandeira e sem defasagem de lote. Quem já tentou reconstruir esse mesmo sinal a partir de extrato raspado sabe quantos meses de engenharia isso custa.",
+            "O Drex não entra nessa conta. Segue como piloto restrito, com rollout amplo mirado em 2027 depois de um reset de arquitetura motivado por sigilo bancário e privacidade ([Exame](https://exame.com/future-of-money/drex-vai-ter-3a-fase-entenda-os-proximos-passos-do-piloto-do-banco-central/)). Opcionalidade, não dependência de 2026. Quem coloca Drex no plano de receita está vendendo cronograma do Banco Central como se fosse próprio."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "208,79 milhões de consentimentos ativos no Open Finance Brasil em 31 de julho de 2026, com mais de 2,3 bilhões de chamadas de API bem-sucedidas por semana.",
+            "attribution": "Open Finance Brasil, dados de agosto de 2026"
+          },
+          "id": "the-substrate"
+        },
+        {
+          "heading": "As aberturas em bancos, crédito e seguros",
+          "level": 2,
+          "paragraphs": [
+            "As quatro aberturas não valem o mesmo, e a ordem por defensabilidade é quase o inverso da ordem por facilidade de venda. Atendimento assistido fecha reunião rápido e não sustenta empresa. Crédito e sinistro custam trimestres para entrar e são os únicos que acumulam ativo.",
+            "Crédito é a maior das quatro porque o substrato encaixa direto. O Open Finance entrega fluxo de caixa permissionado de um tomador sem histórico e o Pix entrega a sazonalidade da receita dele. O que falta no mercado não é score. É a peça que o examinador e o cliente que contesta pedem na mesma frase, um memorando de decisão com a trilha de evidência anexada.",
+            "Seguros merece peso próprio, e o argumento é de crescimento, não de maturidade. A penetração de seguros no Brasil foi de 3,3% do PIB em 2024 ([MAPFRE Economics](https://www.mapfre.com/en/communicate/corporate-communicate/latin-american-insurance-market-2024-mapfre-economics/)), contra média de 6,2% nos países da OCDE no mesmo ano, medida da mesma forma, prêmios diretos sobre PIB ([OCDE](https://www.oecd.org/content/dam/oecd/en/publications/reports/2025/12/global-insurance-market-trends-2025_e4869157/0d11ecf4-en.pdf)).",
+            "Metade do nível de mercado desenvolvido, num setor que a CNseg projeta arrecadar R$ 808 bilhões em 2026, alta de 5,7% ([CNseg](https://cnseg.org.br/noticias/setor-de-seguros-projeta-crescimento-de-5-7-em-2026-e-arrecadacao-de-r-808-bilhoes)). Subscrição e regulação de sinistro sofrem menos concorrência de produto pronto do que crédito bancário e contam com a mesma disponibilidade de dado permissionado. É a assimetria mais limpa da lista."
+          ],
+          "bullets": [
+            "Crédito com raciocínio auditável. O produto não é um score. É um memorando de decisão com a trilha de evidência anexada, porque é isso que o examinador e o cliente que contesta pedem, na mesma frase.",
+            "Triagem de KYC e AML. Volume alto, taxa de falso positivo alta e uma fila de revisão humana que é o centro de custo real. O modelo redige a narrativa e monta a evidência. A decisão continua com o analista.",
+            "Subscrição e regulação de sinistro em seguros. Onde a lacuna de penetração é maior e o dado de desfecho chega mais rápido, porque o sinistro fecha o ciclo em meses e o crédito leva safras.",
+            "Atendimento e servicing. Menor defensabilidade, e todo incumbente já está construindo. Só entra como cunha para as três de cima."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "A penetração de seguros no Brasil foi de 3,3% do PIB em 2024, contra uma média de 6,2% nos países da OCDE. A diferença é o mercado.",
+            "attribution": "MAPFRE Economics e OCDE, Global Insurance Market Trends 2025"
+          },
+          "id": "where-to-build"
+        },
+        {
+          "heading": "Por que dado permissionado mais postura de compliance é o moat",
+          "level": 2,
+          "paragraphs": [
+            "Uma camada de chat sobre um core bancário não é empresa. É funcionalidade que o próprio fornecedor do core lança no trimestre seguinte, de graça, para não perder o contrato principal.",
+            "O ativo defensável tem duas partes, e nenhuma delas é o modelo. A primeira é o dado de desfecho. O Open Finance torna o feed bruto legalmente portátil, o que baixa a barreira de entrada para todo mundo, inclusive para o concorrente que ainda vai aparecer. O que não é portátil é o que uma carteira viva produz. Cada sinistro negado que depois foi pago e cada crédito aprovado que depois inadimpliu é um rótulo de treino que ninguém compra pronto.",
+            "A segunda é a postura de compliance como superfície de produto. Em BFSI a trilha de auditoria não é documentação. É o que o comprador está comprando. Um copilot que emite registro de raciocínio versionado e reproduzível para cada decisão, com versão de modelo, linhagem do dado de entrada, confiança e identidade do revisor humano, entra em instituição regulada. Um que entrega apenas a resposta não entra.",
+            "Existe uma terceira camada que quase nunca aparece em deck e é a que derruba entrante estrangeiro. Uma empresa brasileira gasta em média 1.501 horas por ano para cumprir obrigações tributárias, cerca de cinco vezes a média da América Latina e Caribe ([Banco Mundial, via Trading Economics](https://tradingeconomics.com/brazil/time-to-prepare-and-pay-taxes-hours-wb-data.html)). Num produto de BFSI esse custo aparece duas vezes: no próprio back office e dentro do produto, porque tratamento tributário e exigência documental estão embutidos no arquivo de crédito, no arquivo de sinistro e no pacote de KYC. Conhecimento operacional local deixa de ser overhead e vira barreira.",
+            "Nos termos de Hamilton Helmer, os poderes duráveis aqui são recurso encurralado, que é o dado de desfecho da carteira viva, e custo de troca, que é o log de decisão embutido nos próprios arquivos regulatórios do cliente. Efeito de rede e economia de escala são fracos nesta categoria. Não alegue o que não existe, porque o comitê de investimento pergunta."
+          ],
+          "id": "the-moat"
+        },
+        {
+          "heading": "Como um copilot de subscrição compõe em direção a um fundo",
+          "level": 2,
+          "paragraphs": [
+            "É o flywheel copilot, dado, capital aplicado a BFSI, e a ordem dos fatores decide o resultado.",
+            "Quem levanta o veículo primeiro tem capital sem vantagem e passa a competir por originação com quem tem balanço maior. Quem constrói o copilot primeiro tem vantagem informacional com comprador natural para ela. É o mesmo padrão que a Avante roda em outras posições do portfólio. Alphajuri aplica em ativos judiciais brasileiros, precatórios e créditos. WIR, com a AXA, aplica em precificação e scoring de risco assíncronos em seguros. Nenhuma das duas publica métricas, então o que se descreve aqui é o padrão, não um resultado.",
+            "O mercado de capitais brasileiro já premia essa ordem. As fintechs do país captaram USD 2,77 bilhões em 106 rodadas em 2025, contra um total parecido distribuído em 244 rodadas em 2021 ([Sling Hub e Torq, via Finsiders](https://finsidersbrasil.com.br/negocios-em-fintechs/fintechs-captam-us-277-bi-em-2025-com-metade-das-rodadas-de-2021/)). O capital não saiu de tecnologia financeira brasileira. Ele se concentrou em cheques maiores para menos empresas, e o filtro é unit economics demonstrada. Quem chega com parceiro de design pagante e resposta de compliance pronta está subscrevendo a favor desse filtro."
+          ],
+          "bullets": [
+            "Copilot. Vender subscrição ou regulação de sinistro assistida para credor, seguradora ou MGA de médio porte que não tem time próprio de ciência de dados. Receita desde o primeiro dia, não pretexto para coletar dado.",
+            "Dado. Cada decisão apoiada gera um desfecho rotulado. Em 18 a 36 meses isso vira uma base de perda e comportamento sobre uma carteira específica, num segmento específico, que nenhum incumbente e nenhum entrante estrangeiro tem.",
+            "Capital. Essa base é a vantagem de subscrição de um veículo de crédito ou seguro downstream. O software prova o modelo com receita de cliente. O veículo monetiza a vantagem numa estrutura de margem diferente."
+          ],
+          "id": "the-flywheel"
+        },
+        {
+          "heading": "BACEN e SUSEP, explicabilidade e o balanço dos incumbentes",
+          "level": 2,
+          "paragraphs": [
+            "Quem pular esta seção não deveria construir aqui. BFSI é a vertical mais regulada do país e nada disso é detalhe de implementação.",
+            "Explicabilidade é exigência legal, não funcionalidade. O Artigo 20 da LGPD dá ao titular o direito de solicitar revisão de decisões tomadas unicamente com base em tratamento automatizado que afetem seus interesses, incluindo expressamente a definição de perfil de crédito, e obriga o controlador a informar critérios e procedimentos, ressalvado segredo comercial e industrial ([LGPD, Artigo 20](https://lgpd-brasil.info/capitulo_03/artigo_20)). Modelo que não produz esse registro não é implantável em decisão de crédito ou de sinistro.",
+            "A regra específica de IA está vindo e ainda não fechou, o que é risco nos dois sentidos. O PL 2338/2023 foi aprovado no Senado em 10 de dezembro de 2024 e segue na Câmara, com camadas de risco no estilo europeu, direito a explicação e contestação e sanções de até R$ 50 milhões por infração ([Senado Federal](https://www25.senado.leg.br/web/atividade/materias/-/materia/157233)).",
+            "A agenda regulatória 2025 a 2026 do Banco Central trata IA como estudos sobre os riscos de uso no sistema financeiro, com objetivo declarado de produzir diretrizes e não norma vinculante imediata ([Souto Correa](https://www.soutocorrea.com.br/client-alerts/banco-central-divulga-agenda-de-prioridades-regulatorias-para-2025-2026/)). A SUSEP definiu o plano de regulação de 2026 pela Resolução SUSEP nº 72/2025, com explicabilidade de subscrição e sinistro automatizados como tema central. Não existe porto seguro. Construa para o padrão mais estrito plausível agora, porque enfiar log de decisão em modelo já embarcado custa mais do que projetá-lo antes.",
+            "Os incumbentes não estão dormindo, e esse é o risco mais subestimado da tese. O Itaú Unibanco reportou cerca de 150 soluções de IA generativa já em produção e mais de 750 projetos em desenvolvimento no início de 2026 ([Rio Times](https://www.riotimesonline.com/itau-genai-assistant-iai-launch-2026/)). O Bradesco construiu o Bridge, plataforma multiagente de IA generativa, com 83% de resolução externa sobre uma base de cerca de 74 milhões de clientes, 80% de resolução interna em consultas de funcionários e redução de custo de tecnologia acima de 30% ([Microsoft](https://www.microsoft.com/en/customers/story/25660-banco-bradesco-sa-azure-ai-foundry)).",
+            "A leitura prática é de posicionamento. Não compita com os cinco maiores em assistente de varejo, porque eles têm balanço, time interno e distribuição. Compita onde eles são estruturalmente lentos, que é a instituição de médio porte que eles não atendem e o fluxo vertical pequeno demais para o roadmap deles. E orce de 6 a 12 meses entre a primeira reunião e o piloto assinado, passando por segurança da informação, compliance, jurídico e comitê de risco. A resposta de compliance precisa existir antes da demo, não depois dela."
+          ],
+          "id": "the-hard-parts"
+        },
+        {
+          "heading": "Como a Avante abordaria",
+          "level": 2,
+          "paragraphs": [
+            "Em BFSI o sistema de seis estágios não muda de forma, muda de teste. Research, Partner, Build, Traction, Revenue, Compound continuam na mesma ordem, e cada um passa a ser aprovado por um critério que não existe em outra vertical.",
+            "Research escolhe a decisão, não o setor. Subscrição para um credor de médio porte é uma empresa. IA generativa para bancos é uma categoria. Partner recruta o operador que já foi dono daquela decisão dentro de uma instituição brasileira, e essa é a restrição que amarra o cronograma, não a engenharia. Build embarca o log de decisão e a postura de compliance já na versão um. O raciocínio da tese completa está em [por que a Avante opera como venture studio](/why-avante).",
+            "Traction exige um parceiro de design pagante antes do segundo engenheiro. Comprador regulado valida rápido e compra devagar, e piloto assinado vale mais que lista de espera. Revenue converte esse piloto em contrato que sobrevive à revisão de compliance, que é o teste real. Compound transforma o dado de desfecho acumulado na vantagem de subscrição de um veículo downstream.",
+            "O custo de inferência para capacidade nível GPT-3.5 caiu mais de 280 vezes entre novembro de 2022 e outubro de 2024, com hardware recuando cerca de 30% ao ano ([Stanford HAI, AI Index 2025](https://hai.stanford.edu/ai-index/2025-ai-index-report)). É a base concreta para implantar IA sem uma Série A, e é o que muda a conta de quem constrói produto vertical em serviço financeiro. O restante desse recorte está na [análise de mercado Brasil e América Latina](/library).",
+            "O insumo escasso não é modelo nem infraestrutura. É o operador de domínio com mais de 10 anos de cicatriz de mercado brasileiro, pareado com playbook de Vale do Silício e capital de primeiro cheque, montado no dia um em vez de descoberto dezoito meses depois. Segundo a Global Startup Studio Network (GSSN), studios entregaram IRR de ~50% contra ~19% do venture capital tradicional, cerca de 2,5x em horizontes realistas. Esse é o benchmark do modelo de studio medido pela GSSN, não retorno realizado da Avante.",
+            "A infraestrutura já está de pé. A regulação já tornou o dado portátil. O que ainda não existe em escala é o produto que devolve ao regulador o raciocínio de cada decisão, e essa lacuna não fecha com modelo maior. Fecha com quem já assinou aquela decisão, de próprio punho, dentro de uma instituição brasileira."
+          ],
+          "bullets": [
+            "US$ 500K a US$ 1,5M por venture no pré-seed, com economia de co-founder retida e 3-4 ventures por ano.",
+            "Resolver o encanamento de empresa uma vez roteia cerca de US$ 300K a US$ 500K de capital efetivo por venture para produto e tração em vez de overhead.",
+            "Uma venture de studio nasce 6-9 meses à frente de um time independente com financiamento comparável. Em BFSI o calendário é o recurso escasso, porque o ciclo de venda corre em trimestres."
+          ],
+          "id": "how-avante"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Qual é o tamanho do mercado de IA generativa em BFSI no Brasil?",
+          "a": "Não existe número defensável publicado especificamente para IA generativa em BFSI no Brasil. O recorte verificável mais próximo é o do IMARC Group para o mercado brasileiro de IA generativa como um todo, USD 371,2 milhões em 2025 chegando a USD 1.481,5 milhões até 2034, com CAGR de 16,63%. A âncora melhor é o gasto observado, R$ 47,8 bilhões orçados pelos bancos brasileiros em tecnologia em 2025 com orçamentos de IA e analytics em alta de 61%."
+        },
+        {
+          "q": "Por que o mercado de IA generativa em BFSI no Brasil é mais atraente que o dos Estados Unidos?",
+          "a": "Porque no Brasil o dado financeiro permissionado é portátil por regulação, não por parceria. O Open Finance Brasil chegou a 208,79 milhões de consentimentos ativos em 31 de julho de 2026, com participação obrigatória para instituições grandes e escopo que cobre dado transacional, de crédito, de investimento e de seguro. Nos Estados Unidos e na maior parte da Europa esse substrato ainda se compra em acordo bilateral, um incumbente por vez."
+        },
+        {
+          "q": "IA generativa pode ser usada em decisão de crédito no Brasil?",
+          "a": "Pode, com condições. O Artigo 20 da LGPD garante ao titular o direito de solicitar revisão de decisões tomadas unicamente com base em tratamento automatizado, incluindo definição de perfil de crédito, e obriga o controlador a informar critérios e procedimentos. O PL 2338/2023, aprovado no Senado em dezembro de 2024 e ainda na Câmara, acrescentaria camadas de risco no estilo europeu com sanções de até R$ 50 milhões por infração."
+        },
+        {
+          "q": "Por que seguros no Brasil é um mercado de crescimento e não de maturidade?",
+          "a": "Porque a penetração é metade do padrão desenvolvido enquanto o setor segue crescendo. A penetração de seguros no Brasil foi de 3,3% do PIB em 2024 contra uma média de 6,2% nos países da OCDE, medida da mesma forma. A CNseg projeta arrecadação de R$ 808 bilhões em 2026, alta de 5,7%."
+        },
+        {
+          "q": "O Drex já serve de base para construir produto de IA em serviço financeiro?",
+          "a": "Não. O Drex segue como piloto restrito, com rollout amplo mirado em 2027 depois de um reset de arquitetura motivado por exigências de sigilo bancário e privacidade. Trate como opcionalidade, nunca como dependência de roadmap em 2026. O substrato que já está de pé e que sustenta produto hoje é Pix mais Open Finance."
+        }
+      ]
+    },
+    "es": {
+      "title": "IA Generativa en BFSI en Brasil: Pix y Open Finance Ya Construyeron el Sustrato",
+      "description": "El mercado de IA generativa en BFSI en Brasil corre sobre un sustrato que no existe afuera. Open Finance vuelve el dato portátil por regulación, no por acuerdo.",
+      "sections": [
+        {
+          "paragraphs": [
+            "El mercado de IA generativa en BFSI en Brasil todavía no tiene una cifra defendible, y aun así Brasil es hoy la mejor plaza del hemisferio para construir en este vertical. Lo es porque el país ya resolvió las dos cosas que un producto de IA regulado casi nunca consigue por su cuenta. Dato financiero permisionado y portátil por norma. Y un riel de pagos con cobertura de casi toda la población adulta.",
+            "Pix movió 79,8 mil millones de transacciones por R$ 35,36 billones en 2025, cerca de 219 millones por día. Open Finance Brasil llegó a 208,79 millones de consentimientos activos al 31 de julio de 2026, sobre más de 2,3 mil millones de llamadas de API exitosas por semana. En Estados Unidos y en buena parte de Europa ese sustrato se compra acuerdo por acuerdo, banco por banco. En Brasil el cliente lo entrega y la institución está obligada a soltarlo.",
+            "Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina. Lo que sigue es la lectura que hacemos antes de decidir si un vertical merece una empresa nueva. Empieza por la parte más floja de la tesis, que es el tamaño de mercado, porque un memo que esconde su punto débil no sirve para decidir nada."
+          ]
+        },
+        {
+          "heading": "El mercado brasileño de IA generativa en BFSI, con números fechados",
+          "level": 2,
+          "paragraphs": [
+            "Nadie puede decirle cuánto vale el mercado brasileño de IA generativa en BFSI. Ninguna casa de investigación publica hoy una cifra defendible para ese corte específico de país y de vertical, y lo que circula es un estimado global del segmento BFSI multiplicado por un peso nacional. Decirlo antes de citar cualquier proyección es parte del trabajo, porque nada de lo que sigue se apoya en ella.",
+            "La única proyección que verificamos en la fuente es la de [IMARC Group](https://www.imarcgroup.com/brazil-generative-ai-market), que ubica el mercado brasileño de IA generativa completo en USD 371,2 millones en 2025 y en USD 1.481,5 millones para 2034, con un CAGR de 16,63% entre 2026 y 2034. Es el total de IA generativa, no el corte BFSI. Casas distintas divergen más de 2x sobre el mismo año base, que es lo esperable en una categoría cuya definición todavía se mueve. Señal direccional. Nunca insumo de underwriting.",
+            "El gasto observado aguanta mucho más peso que cualquier proyección. Los bancos brasileños presupuestaron R$ 47,8 mil millones en tecnología para 2025, 13% por encima de los R$ 42,3 mil millones de 2024, con los presupuestos de IA, analytics y big data creciendo un estimado de 61% y los de Open Finance 65%. Más del 80% de los bancos encuestados ya usa IA generativa y reporta una ganancia media de eficiencia de 11,4%, con 38% reportando ganancias por encima de 20%. La muestra son 20 bancos que concentran 85% de los activos bancarios del país ([FEBRABAN y Deloitte, Pesquisa Febraban de Tecnologia Bancária 2025](https://portal.febraban.org.br/noticia/4278/pt-br/)).",
+            "El capital privado cuenta la misma historia desde el otro lado del mostrador. Brasil se llevó 44% de los dólares de venture de América Latina en 2024, sobre unos USD 4.500 millones regionales repartidos en 751 transacciones ([datos LAVCA](https://serebrisky.com/2025/03/17/venture-capital-in-latin-america-shows-signs-of-recovery-heading-into-2025/)). Las fintechs brasileñas levantaron USD 2.770 millones en 2025 en apenas 106 rondas, contra 244 rondas para un total parecido en 2021 ([Sling Hub y Torq](https://finsidersbrasil.com.br/negocios-em-fintechs/fintechs-captam-us-277-bi-em-2025-com-metade-das-rodadas-de-2021/)). El dinero no se fue del sistema financiero brasileño. Se concentró. Menos cheques y más grandes, hacia equipos que muestran unit economics temprano en vez de prometerlos.",
+            "Todo esto ocurre dentro de una economía sostenida en servicios. Los servicios pesan cerca de 70% del PIB brasileño en la base de valor agregado del IBGE, y 59,7% en la [serie del Banco Mundial](https://data.worldbank.org/indicator/NV.SRV.TOTL.ZS?locations=BR) para 2025. La diferencia no es un error de nadie. El PIB cuenta además los impuestos netos sobre productos, así que la participación calculada sobre valor agregado sale más alta. Cite la base cada vez y la conclusión no se mueve. El sistema financiero vive dentro del bloque más grande de la [economía de servicios brasileña](/library/brazil-services-economy-opportunity) y se digitaliza más rápido que el resto de ese bloque."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Los bancos brasileños presupuestaron R$ 47,8 mil millones en tecnología para 2025, 13% más que en 2024, con los presupuestos de IA, analytics y big data en alza de 61% y más del 80% de los bancos encuestados ya usando IA generativa.",
+            "attribution": "FEBRABAN y Deloitte, Pesquisa Febraban de Tecnologia Bancária 2025. 20 bancos, 85% de los activos del sector."
+          },
+          "id": "market-size"
+        },
+        {
+          "heading": "Por qué Pix y Open Finance ya construyeron el sustrato de datos",
+          "level": 2,
+          "paragraphs": [
+            "Brasil no tiene un programa voluntario de APIs bancarias. Tiene un régimen obligatorio para las instituciones grandes, con el consentimiento del cliente como llave y el supervisor como árbitro. Al 31 de julio de 2026, Open Finance Brasil registraba 208,79 millones de consentimientos activos, que cubren dato transaccional, de crédito, de inversión y de seguros.",
+            "El volumen técnico acompaña al número de consentimientos. FEBRABAN reportó más de 2,3 mil millones de comunicaciones de API exitosas por semana y más de R$ 2 mil millones invertidos por los bancos asociados, con los consentimientos pasando de 43 millones en enero de 2024 a 62 millones en enero de 2025, un alza de 44% ([FEBRABAN, febrero de 2025](https://portal.febraban.org.br/noticia/4253/pt-br)). La agenda regulatoria 2025-2026 del Banco Central extiende el régimen hacia portabilidad salarial y de inversiones en coordinación con la CVM, y hacia portabilidad de crédito sin garantía. El perímetro del dato se sigue ampliando por decisión del supervisor, no por negociación entre privados.",
+            "Pix aporta la otra mitad del sustrato. Desde su lanzamiento en noviembre de 2020 acumula más de 170 millones de usuarios, cerca del 93% de la población adulta brasileña, con 44% del volumen en pagos de persona a comercio ([EBANX, noviembre de 2025](https://www.ebanx.com/en/insights/articles/five-years-on-pix-approaches-8-monthly-transactions/)). En 2025 movió 79,8 mil millones de transacciones por R$ 35,36 billones, 33,6% más en valor que los R$ 26,24 billones de 2024, con picos por encima de 300 millones de transacciones en un solo día ([datos del Banco Central do Brasil](https://clearingpost.com/insights/pix-breaks-all-records-in-2025-798-billion-transactions-move-r-3536-trillion/)).",
+            "Para quien construye, eso significa flujo de caja de comercios, comportamiento de consumo y grafos de contraparte dentro de un solo riel nacional. Sin fragmentación entre redes de tarjetas. Sin el rezago por lotes de un sistema tipo ACH. Sin depender del buró para ver a un cliente de historial delgado.",
+            "Vale medir la distancia desde afuera, porque el lector hispanohablante suele subestimarla. En Estados Unidos y en buena parte de Europa el acceso al dato financiero del cliente todavía se compra acuerdo por acuerdo, con veto comercial del incumbente en cada mesa y un cronograma de integración que consume la ronda entera. El fundador de afuera negocia el acceso antes de poder construir sobre él. El brasileño ya no.",
+            "Eso desplaza el eje de la competencia. Deja de tratarse de quién consigue el dato y pasa a tratarse de quién sabe qué decisión vale la pena tomar con él. Es una pregunta de dominio, no de acceso. Ahí gana un operador local y pierde un entrante extranjero con mejor modelo y peor oído.",
+            "Drex, la tercera pata, no está lista y no debe venderse como si lo estuviera. Sigue siendo un piloto restringido con bancos, fintechs, B3 y Visa, después de que el Banco Central reorientara el programa porque la arquitectura original de libro distribuido no cumplía los requisitos de sigilo bancario y privacidad. El rollout amplio está previsto para 2027. Es opcionalidad, no una dependencia de 2026. Venderlo como algo que ya opera le cuesta la credibilidad frente al único comprador que importa aquí, que es el regulado."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "208,79 millones de consentimientos activos de Open Finance en Brasil al 31 de julio de 2026, con más de 2,3 mil millones de llamadas de API exitosas por semana. El dato financiero permisionado es portátil por regulación, no por acuerdo comercial.",
+            "attribution": "Open Finance Brasil y FEBRABAN"
+          },
+          "id": "the-substrate"
+        },
+        {
+          "heading": "Las aberturas en banca, crédito y seguros",
+          "level": 2,
+          "paragraphs": [
+            "Cuatro frentes, ordenados por qué tan bien el sustrato brasileño mapea sobre cada uno. El primero es el más claro. El último es una trampa disfrazada de demo fácil.",
+            "El mercado de IA en seguros en Brasil merece peso propio dentro de esa lista, y no por moda. La penetración de seguros fue de 3,3% del PIB en 2024 según [MAPFRE Economics](https://www.mapfre.com/en/communicate/corporate-communicate/latin-american-insurance-market-2024-mapfre-economics/), contra un promedio de 6,2% en la OCDE ese mismo año bajo la misma definición, primas directas brutas de vida y no vida sobre PIB. Brasil está en cerca de la mitad del nivel de un mercado desarrollado.",
+            "Eso es un argumento de crecimiento, no de madurez. El sector ya es grande y sigue creciendo. CNseg proyecta R$ 808 mil millones de recaudación en 2026, 5,7% por encima de 2025, y el plan de desarrollo de la propia industria apunta a 10% del PIB para 2030. La brecha contra la OCDE es exactamente el mercado que puede cerrar un copilot de suscripción, el underwriting, siempre que cada decisión automatizada quede explicada por escrito.",
+            "El orden de entrada importa más que la lista. Una aseguradora mediana o una MGA compra un copilot de siniestros antes de que un banco de primera línea compre un copilot de crédito, porque el equipo interno que competiría con el producto todavía no existe. Empiece donde no hay un científico de datos. No donde hay cincuenta."
+          ],
+          "bullets": [
+            "Suscripción de crédito donde el modelo escribe el razonamiento que un regulador puede auditar. Open Finance entrega flujo de caja permisionado de un deudor de historial delgado y Pix entrega la estacionalidad de ingresos de un comercio. El producto no es un score. Es un memo de decisión con el rastro de evidencia adjunto.",
+            "Triage de KYC y AML. Volumen alto, tasa alta de falsos positivos y una fila de revisión humana que es el verdadero centro de costo. El modelo redacta la narrativa y arma la evidencia. La decisión se queda con el analista.",
+            "Adjudicación de siniestros y suscripción en seguros, donde el argumento de crecimiento es el más fuerte de todo el análisis y donde el incumbente tiene menos equipo propio para defenderse.",
+            "Servicing. La abertura menos defendible y la que todo incumbente ya está construyendo. Entre por ahí solo como cuña hacia las tres anteriores."
+          ],
+          "id": "where-to-build",
+          "callout": {
+            "kind": "stat",
+            "text": "La penetración de seguros en Brasil fue de 3,3% del PIB en 2024 contra un promedio de 6,2% en la OCDE. Ambas miden primas sobre PIB, así que la brecha es real y la brecha es el mercado.",
+            "attribution": "MAPFRE Economics y OCDE, Global Insurance Market Trends 2025"
+          }
+        },
+        {
+          "heading": "Por qué dato permisionado más postura de compliance es el moat",
+          "level": 2,
+          "paragraphs": [
+            "Una capa de chat sobre un core bancario no es una empresa. Es una función que el proveedor del core lanza el trimestre siguiente, dentro de la licencia que el cliente ya paga.",
+            "El activo defendible tiene dos partes y ninguna de las dos es el modelo. La primera es el rastro de dato propietario. Dato transaccional permisionado, resultados de siniestros, experiencia de pérdida y las anulaciones humanas etiquetadas sobre las decisiones del propio sistema. Open Finance vuelve el insumo crudo portátil por ley, lo que baja la barrera de entrada para todos por igual, incluido su competidor.",
+            "Lo que no es portátil es el dato de resultado que genera una cartera viva. Cada siniestro negado que después se pagó y cada crédito aprobado que después incumplió es una etiqueta de entrenamiento que nadie vende. Ese dato solo existe si usted operó el libro.",
+            "La segunda parte es la postura de compliance como superficie de producto. En BFSI el rastro de auditoría no es documentación de soporte. Es lo que el comprador está comprando. Un copilot que emite un registro de razonamiento versionado y reproducible por cada decisión, con versión de modelo, linaje del dato de entrada, nivel de confianza e identidad del revisor humano, entra a una institución regulada. Uno que solo emite una respuesta se queda para siempre en el piloto.",
+            "En los términos de Hamilton Helmer, los poderes durables aquí son cornered resource, que es el dato de resultado sobre una cartera viva, y switching costs, que es un log de decisiones incrustado en los reportes regulatorios del propio cliente. Las economías de escala y los efectos de red son débiles en esta categoría. No los reclame en un memo de inversión. Un LP que conoce el sector lo nota en la primera lectura."
+          ],
+          "id": "the-moat"
+        },
+        {
+          "heading": "Cómo un copilot de suscripción compone hacia un fondo",
+          "level": 2,
+          "paragraphs": [
+            "Este es el flywheel copilot, dato, capital aplicado a BFSI. Tres movimientos, en ese orden, y el orden no es negociable.",
+            "Es el mismo patrón que Avante corre en otras partes del portafolio. Alphajuri lo aplica a activos judiciales brasileños, precatórios y honorarios. WIR, junto a AXA, lo aplica a pricing y scoring de riesgo asíncrono en seguros. Ninguna de las dos publica métricas, así que aquí describimos el patrón y no un resultado.",
+            "El orden importa porque define quién tiene el poder de negociación. Un equipo que levanta el vehículo de capital primero tiene dinero sin ventaja informativa, y termina compitiendo por el mismo riesgo que ya vieron todos los demás. Un equipo que construye el copilot primero llega al vehículo con una ventaja propia y con un comprador natural para ella."
+          ],
+          "bullets": [
+            "Copilot. Venda un copilot de suscripción o de siniestros a un prestamista mediano, una aseguradora o una MGA sin equipo propio de ciencia de datos. Ingresos desde el día uno, no un pretexto para recolectar dato.",
+            "Dato. Cada decisión que el copilot apoya genera un resultado etiquetado. En 18 a 36 meses eso se vuelve un dataset de pérdida y comportamiento sobre una cartera específica, en un segmento específico, que ningún incumbente y ningún entrante extranjero tiene.",
+            "Capital. Ese dataset es la ventaja de suscripción para un vehículo de crédito o de seguros aguas abajo. El software prueba el modelo. El vehículo de capital monetiza la ventaja con otra estructura de margen."
+          ],
+          "id": "the-flywheel"
+        },
+        {
+          "heading": "BACEN y SUSEP, explicabilidad y el balance de los incumbentes",
+          "level": 2,
+          "paragraphs": [
+            "La explicabilidad en Brasil es una exigencia legal, no una preferencia de diseño. El [artículo 20 de la LGPD](https://lgpd-brasil.info/capitulo_03/artigo_20) da a cualquier titular el derecho a solicitar revisión de decisiones tomadas únicamente por tratamiento automatizado que afecten sus intereses, e incluye de forma expresa el perfilamiento crediticio. El controlador debe entregar información clara y adecuada sobre los criterios y procedimientos usados. Un modelo que no puede producir ese registro no es desplegable en una decisión de crédito ni de siniestro.",
+            "Las reglas específicas de IA vienen en camino y todavía no están cerradas, lo que es riesgo en las dos direcciones. Construir por debajo del estándar futuro obliga a rehacer. Construir muy por encima quema meses de calendario que el ciclo de venta ya castiga por su cuenta.",
+            "La lectura práctica es que todavía no existe un puerto seguro. Construya al estándar más estricto plausible desde ahora, porque meterle un log de decisiones a un modelo ya lanzado cuesta bastante más que diseñarlo adentro desde la versión uno.",
+            "El otro costo que casi nadie modela desde afuera es el de operar en Brasil. Una empresa brasileña dedica en promedio 1.501 horas al año a cumplir sus obligaciones tributarias, cerca de cinco veces el promedio de América Latina y el Caribe ([indicadores del Banco Mundial](https://tradingeconomics.com/brazil/time-to-prepare-and-pay-taxes-hours-wb-data.html)). Eso golpea dos veces en un producto BFSI. Una vez en su propio back office. Otra dentro del producto, porque el tratamiento tributario y los requisitos documentales están incrustados en los expedientes de crédito, de siniestro y de KYC. El conocimiento operativo local deja de ser overhead y pasa a ser barrera de entrada.",
+            "Los incumbentes tampoco están dormidos, y ese es el riesgo más subestimado de toda la tesis. Itaú Unibanco reportó cerca de 150 soluciones de IA generativa ya en producción y más de 750 proyectos en desarrollo a inicios de 2026. Bradesco construyó Bridge, una plataforma multiagente sobre Azure OpenAI, con 83% de resolución externa sobre cerca de 74 millones de clientes, 80% de resolución interna en consultas de empleados y una [reducción de costo tecnológico por encima de 30%](https://www.microsoft.com/en/customers/story/25660-banco-bradesco-sa-azure-ai-foundry).",
+            "Los cinco bancos más grandes de Brasil tienen equipos de IA internos, balance y distribución. No compita con ellos en asistentes de propósito general para el cliente minorista. Compita donde son estructuralmente lentos, que es la institución mediana que no atienden y el flujo de trabajo vertical que resulta demasiado pequeño para su roadmap.",
+            "Y cuente el calendario, porque es el costo que rara vez entra en el modelo. La compra en BFSI brasileño corre en trimestres, no en semanas, y pasa por seguridad de la información, compliance, jurídico y muchas veces el comité de riesgo que le responde al supervisor. Presupueste de 6 a 12 meses entre la primera reunión y un piloto firmado. La respuesta de compliance tiene que existir antes del demo, no después."
+          ],
+          "bullets": [
+            "PL 2338/2023, el Marco Legal da IA, fue aprobado por unanimidad en el Senado el 10 de diciembre de 2024 y sigue en la Cámara de Diputados. Sigue la estructura del AI Act europeo con capas de riesgo, derecho a explicación y contestación, y sanciones de hasta R$ 50 millones por infracción.",
+            "El Banco Central puso la IA en su agenda regulatoria 2025-2026 como estudios sobre los riesgos del uso de IA en el sistema financiero, con el objetivo declarado de producir directrices y no reglas vinculantes inmediatas.",
+            "SUSEP fijó su plan de regulación 2026 en la Resolución SUSEP nº 72/2025, con la explicabilidad de las decisiones automatizadas de suscripción y siniestros como tema central para el mercado asegurador."
+          ],
+          "id": "the-hard-parts"
+        },
+        {
+          "heading": "Cómo Avante lo abordaría",
+          "level": 2,
+          "paragraphs": [
+            "El error de encuadre más caro en este vertical es tratar el sector como si fuera el mercado. Nadie compra IA generativa para bancos. Alguien compra una decisión de crédito mejor documentada, o una fila de siniestros que se despacha en la mitad del tiempo sin perder el rastro de auditoría. Un venture studio no es un acelerador ni un fondo, y la diferencia se nota justo en la segunda etapa de la lista, donde la restricción que amarra es una persona y no una línea de código.",
+            "El studio despliega $500K-$1.5M por venture a lo largo del pre-seed y retiene economía de co-founder, lanzando 3-4 ventures por año. Resolver la plomería de la empresa una sola vez enruta cerca de $300K-$500K de capital efectivo por venture hacia producto y tracción en vez de overhead, y un venture de studio arranca 6-9 meses antes que un equipo independiente con financiamiento comparable. Esa ventaja pesa más en BFSI que en cualquier otro vertical, porque el ciclo de venta se mide en trimestres y el calendario es el recurso escaso.",
+            "Según la Global Startup Studio Network (GSSN), los studios han producido ~50% IRR contra un ~19% estándar de la industria para el venture capital tradicional, aproximadamente 2,5x en horizontes de tiempo realistas. Es el benchmark del modelo studio según GSSN, nunca un retorno realizado de Avante.",
+            "El insumo escaso no es el modelo ni el capital. Es un operador de dominio con más de 10 años de cicatrices del mercado brasileño, alguien que ya subscribió crédito brasileño a lo largo de un ciclo de tasas o ya manejó una mesa de siniestros bajo supervisión de SUSEP, emparejado con un playbook de Silicon Valley y capital de primer ticket, ensamblados el día uno en vez de descubiertos dieciocho meses después. La parte técnica dejó de ser el problema. El costo de inferencia para desempeño equivalente a GPT-3.5 pasó de USD 20,00 a USD 0,07 por millón de tokens entre noviembre de 2022 y octubre de 2024, así que la infraestructura ya se despliega sin una Serie A. Esa lógica está desarrollada en [la tesis del venture studio](/why-avante) y en el resto del [análisis de Brasil y América Latina](/library).",
+            "Brasil no le va a dar ventaja por el dato. El dato ya es de todos por regulación, y esa es exactamente la razón por la que la mayoría de los entrantes va a perder. La ventaja está en quién sabe cuál decisión vale la pena automatizar, y en quién puede sostener esa respuesta el día en que el supervisor la pida por escrito."
+          ],
+          "bullets": [
+            "Research. Escoja la decisión específica, no el sector. Suscripción para un prestamista mediano es una empresa. IA generativa para bancos no lo es.",
+            "Partner. Reclute al operador que ya fue dueño de esa decisión dentro de una institución brasileña. Esa es la restricción que amarra, no la ingeniería.",
+            "Build. Entregue el log de decisiones y la postura de compliance en la versión uno, porque en BFSI el rastro de auditoría es superficie de producto.",
+            "Traction. Un socio de diseño que pague antes del segundo ingeniero. Un comprador regulado valida mucho más rápido de lo que compra.",
+            "Revenue. Convierta el piloto en un contrato que sobreviva a una revisión de compliance, que es la prueba real.",
+            "Compound. Convierta el dato de resultado acumulado en la ventaja de suscripción de un vehículo aguas abajo. Copilot, luego dato, luego capital."
+          ],
+          "id": "how-avante"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Qué tan grande es el mercado de IA generativa en BFSI en Brasil?",
+          "a": "No existe hoy una cifra defendible específica de BFSI para Brasil, y quien la cite está tomando un estimado global y multiplicándolo por un peso de país. IMARC Group ubica el mercado brasileño de IA generativa completo en USD 371,2 millones en 2025 y en USD 1.481,5 millones para 2034, con un CAGR de 16,63%. El mejor ancla es el gasto observado. Los bancos brasileños presupuestaron R$ 47,8 mil millones en tecnología para 2025, con los presupuestos de IA y analytics en alza de 61%."
+        },
+        {
+          "q": "¿Por qué la oportunidad de IA generativa en fintech en Brasil aparece antes que en otros mercados?",
+          "a": "Porque en Brasil el dato financiero permisionado es portátil por regulación y no por acuerdo comercial. Open Finance Brasil es obligatorio para las instituciones grandes y registraba 208,79 millones de consentimientos activos al 31 de julio de 2026, cubriendo dato transaccional, de crédito, de inversión y de seguros. Pix suma un riel de pagos con cerca del 93% de la población adulta y 79,8 mil millones de transacciones en 2025. En Estados Unidos y en buena parte de Europa ese sustrato todavía se compra acuerdo por acuerdo, un banco a la vez."
+        },
+        {
+          "q": "¿Se puede usar IA generativa para decisiones de crédito en Brasil?",
+          "a": "Sí, con condiciones estrictas. El artículo 20 de la LGPD da derecho a solicitar revisión de decisiones tomadas únicamente por tratamiento automatizado, incluido el perfilamiento crediticio, y obliga a entregar información clara sobre los criterios usados. El PL 2338/2023 añadiría obligaciones por capas de riesgo al estilo europeo con sanciones de hasta R$ 50 millones. En la práctica, el modelo debe emitir un registro de razonamiento auditable por cada decisión."
+        },
+        {
+          "q": "¿Por qué el mercado de IA en seguros en Brasil es una historia de crecimiento y no de madurez?",
+          "a": "Porque la penetración de seguros fue de 3,3% del PIB en 2024 según MAPFRE Economics, contra un promedio de 6,2% en la OCDE bajo la misma definición de primas sobre PIB. Brasil está en cerca de la mitad del nivel de un mercado desarrollado mientras el sector sigue creciendo. CNseg proyecta R$ 808 mil millones de recaudación en 2026. Esa brecha es el mercado."
+        },
+        {
+          "q": "¿Drex ya está operando en Brasil?",
+          "a": "No. Drex sigue siendo un piloto restringido con bancos, fintechs, B3 y Visa, con rollout amplio previsto para 2027. El Banco Central reorientó la arquitectura porque el diseño original de libro distribuido no cumplía los requisitos de sigilo bancario y privacidad. Trátelo como opcionalidad, no como una dependencia de 2026."
         }
       ]
     }
@@ -8839,6 +9790,494 @@ const engineArticles: Article[] = [
         {
           "q": "¿Qué tan rápido crece la adopción de IA en Brasil?",
           "a": "Rápido. El uso de IA entre las empresas industriales brasileñas saltó de 16,9% en 2022 a 41,9% en 2024, la tecnología que más creció en la encuesta del IBGE y un alza de 163% en dos años. Esa aceleración ensancha las aberturas para productos generativos verticales, ya que los compradores llegan antes de que la mayoría de los flujos de trabajo tenga un dueño."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "brazil-generative-ai-media-entertainment-opportunity",
+    "category": "brazil",
+    "type": "Market Analysis",
+    "readTime": "14 min",
+    "featured": false,
+    "date": "Sep 2026",
+    "datePublished": "2026-09-04",
+    "isPublished": true,
+    "en": {
+      "title": "Brazil Generative AI in Media and Entertainment Market: The Rights Are the Moat",
+      "description": "Forecasts for the Brazil generative AI in media and entertainment market disagree by 50x. Where AI actually lands, and why the archive beats the model.",
+      "sections": [
+        {
+          "paragraphs": [
+            "The Brazil generative AI in media and entertainment market has no reliable size, and the disagreement is the most useful fact in it. Market Research Future prices that single vertical at USD 7,026.3 million for 2025. Grand View Research prices the entire Brazilian generative AI market, every sector included, at USD 140.6 million the same year. Roughly 50 times apart, on the same category, in the same calendar year.",
+            "That is not a rounding error, and it is not a reason to skip the category. It is evidence that nobody has agreed on what the category contains, which is the exact condition in which a venture studio can define a segment instead of buying share in one. The forecast is unusable. The market underneath it is not.",
+            "What survives verification is structural. Brazil is a top-tier global media consumer running on a language no larger neighbor subsidizes, its audiovisual sector set production records in 2025, and the overwhelming majority of that output never earns back in a cinema. The binding constraint is cost, not appetite. Everything worth building here attacks that cost line, and the asset worth owning at the end of it is not a model. It is rights."
+          ]
+        },
+        {
+          "heading": "The Brazil generative AI media market, with dated numbers",
+          "level": 2,
+          "paragraphs": [
+            "The right way to size this market is to quote both numbers and refuse to choose. [Market Research Future](https://www.marketresearchfuture.com/reports/brazil-generative-ai-in-media-and-entertainment-market-57467), in a report updated on August 24, 2026, puts the Brazil generative AI in media and entertainment market at USD 4,907.32 million in 2024, USD 7,026.3 million in 2025, and USD 254,345.01 million by 2035 at a 43.18% CAGR. [Grand View Research](https://www.grandviewresearch.com/horizon/outlook/generative-ai-market/brazil) puts all Brazilian generative AI revenue at USD 140.6 million in 2025, reaching USD 1,585.0 million by 2033 at a 36.2% CAGR.",
+            "One vendor prices a single vertical at roughly 50 times what the other prices the whole national category at, in the same calendar year. A number carrying a fifty-fold error bar is not an input to an investment model. What is verifiable sits underneath it. Services account for roughly 70% of Brazilian GDP with low software penetration, and media and entertainment is among the least software-penetrated corners of that base. That gap is measurable. The forecast is not.",
+            "Three sanity checks make the spread legible to anyone who has to underwrite it."
+          ],
+          "bullets": [
+            "The subsegment exceeds its own parent. USD 7.03 billion for generative AI in Brazilian media alone in 2025 is larger than the country's entire over-the-top video business, which [Mordor Intelligence](https://www.mordorintelligence.com/industry-reports/brazil-ott-market) puts at USD 5.94 billion in 2025. A tooling layer cannot outweigh the distribution business it serves.",
+            "The 2035 figure is a macro claim wearing a software label. USD 254.3 billion sits against a Brazilian economy that [IBGE](https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/45969-pib-cresce-2-3-em-2025) measured at R$ 12.7 trillion in 2025. One software category in one vertical would approach a tenth of national output.",
+            "The definitions are doing the work. Grand View counts model and platform revenue. Market Research Future appears to count media revenue that touches generative AI anywhere in its production chain. Neither is wrong on its own terms. Both are useless as a bottom-up TAM."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "USD 7,026.3 million for generative AI in Brazilian media alone in 2025, against USD 140.6 million for all Brazilian generative AI in the same year. A 50x spread on one category in one year.",
+            "attribution": "Market Research Future and Grand View Research"
+          },
+          "id": "market-size"
+        },
+        {
+          "heading": "Why Portuguese isolation is the opening, not the obstacle",
+          "level": 2,
+          "paragraphs": [
+            "Brazilian Portuguese is the only major content language whose home market receives no free supply from a larger neighbor. Spanish-language Latin America shares a production pipeline across nineteen countries and imports heavily from Mexico, Colombia, Argentina and Spain. Brazil imports almost nothing that arrives already in its language. Every foreign title has to be dubbed or subtitled specifically for Brazil, and every domestic title serves a market nobody else serves.",
+            "That isolation shows up as a production ceiling, not a demand ceiling. [ANCINE's Balanço 2025](https://www.gov.br/ancine/pt-br/assuntos/noticias/balanco-2025-regulacao-com-dados-inovacao-e-transparencia), published January 29, 2026, records 3,981 Brazilian audiovisual works registered during the year, a record, against 367 Brazilian films exhibited theatrically. Those 367 films drew 11.12 million spectators and R$ 214.99 million at the box office across 3,554 screens, also a record. Registrations from the Centro-Oeste, Norte and Nordeste regions grew 9%.",
+            "Do the division. R$ 214.99 million spread across 367 titles is roughly R$ 586,000 of theatrical revenue per Brazilian film. Meanwhile the overwhelming majority of those 3,981 registered works never reach a cinema at all, so their economics have to come from streaming windows, licensing and archive reuse. Cost reduction in producing, localizing, indexing and re-licensing that catalogue is not an efficiency play in this sector. It decides whether the work gets made at all.",
+            "Regulation raises the required volume of Portuguese-language content rather than lowering it. Per [Agência Câmara dos Deputados](https://www.camara.leg.br/noticias/1219786-projeto-aprovado-sobre-servicos-de-streaming-preve-cota-para-conteudo-nacional/), a video-on-demand platform carrying 2,000 titles must offer at least 100 Brazilian productions, and one carrying 7,000 titles at least 300, half of them from independent producers, phased to full compliance over eight years under ANCINE supervision. Platforms also owe CONDECINE of up to 3% of annual Brazilian gross revenue. A regulated, mandatory floor under Portuguese-language supply is a rare thing to be able to underwrite.",
+            "Brazil's weight as a consumer was never the question. The [Brazilian advertising market](https://www.imarcgroup.com/brazil-advertising-market) was valued at roughly USD 15.2 billion in 2025, Brazil holds close to a third of Latin America's 83 million SVOD subscriptions, and it is the second largest Netflix market outside the United States, per [Omdia data presented at Rio2C](https://variety.com/2025/film/global/rio2c-omdia-fast-channels-omdia-rio-keynote-2025-1236410608/), which also found weekly FAST viewing in Brazil quadrupling in four years to reach 30% of the population. Demand is enormous. Supply is expensive. That asymmetry is the entire opportunity."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "R$ 214.99 million of Brazilian box office across 367 films in 2025 is roughly R$ 586,000 per title, while 3,981 Brazilian audiovisual works were registered that year.",
+            "attribution": "ANCINE, Balanço 2025, published January 29, 2026"
+          },
+          "id": "language-isolation"
+        },
+        {
+          "heading": "Where generative AI lands in the production chain",
+          "level": 2,
+          "paragraphs": [
+            "The value is not in the model, and Brazilian incumbents have already voted on that with production deployments rather than pilots. [Tela Viva's SET Expo coverage](https://telaviva.com.br/17/08/2026/emissoras-adotam-inteligencia-artificial-para-acelerar-operacoes-e-reestruturar-fluxo-de-trabalho/) from August 2026 documents Globo applying multimodal analysis and automated metadata generation to sports coverage, cutting video every two minutes with automatic transcription so staff can retrieve specific match moments by natural-language search. The relevant Globo executive title says the rest of it: Head of Archive and Content Data Governance.",
+            "CNN Brasil transcribes anchor speech in real time so digital teams publish before the broadcast ends, with mandatory human review and transparency notices. Grupo RBS built its Iris signal-distribution and monitoring system in roughly eight hours using a frontier model, then shipped more than 15 custom operational tools within a year. SBT wrapped language models in a centralized platform specifically to control scaling and monitor cost. [TV Record is remastering part of its historical archive](https://www.dgabc.com.br/Noticia/4342257/ia-e-preservacao-dos-acervos-da-tv) with AI restoration, upscaling and captioning.",
+            "Read what those five companies actually built. Indexing, governance and retrieval over content they already own. Not one of them built a model.",
+            "Strip the deployments down and the same four workflow positions keep reappearing, each one already carrying a measurable cost and an approved budget line."
+          ],
+          "bullets": [
+            "Localization and dubbing at volume. Every foreign title needs a Brazilian Portuguese version and the quota rules keep raising the count. Sharpest unit-cost effect in the sector, and not coincidentally the sharpest labor and rights conflict.",
+            "Advertising creative produced per market segment rather than per campaign. A roughly USD 15.2 billion ad market across a country of continental regional variation makes per-segment production the obvious move once generation is cheap.",
+            "Archive monetization. Decades of Brazilian broadcast footage sit unindexed and therefore unsellable. Largest opportunity in the chain and the least contested.",
+            "Rights and content identification. Quota compliance, CONDECINE assessment and residuals all require knowing what a piece of content is, who owns it, and where it has run. Nobody in Brazil has a clean system of record for that."
+          ],
+          "id": "where-to-build"
+        },
+        {
+          "heading": "Why the rights-cleared archive is the moat, not the model",
+          "level": 2,
+          "paragraphs": [
+            "The defensible asset in this category is a rights-cleared proprietary corpus, Portuguese-language tuning, and distribution relationships. None of those three is a model, and the model is the only one of the three a frontier lab can hand your competitor for free.",
+            "Price out what it costs an entrant to copy each layer. The tuning is a few weeks of work for a competent team. The distribution relationships cost a year of meetings. The rights are a different class of problem, because they are negotiated one archive holder at a time, under Brazilian law, with counsel who has to sign off inside a company the size of Globo. A foreign entrant with unlimited capital still has to do that sequentially, in Portuguese, in a jurisdiction actively rewriting its training-data rules. Capital does not compress that timeline. Standing does.",
+            "The strategic implication is blunt. Anything a frontier lab can ship as a feature will be shipped as a feature and priced at zero. The rights position is the only layer they cannot ship, because it is jurisdictional, contractual and relationship-bound rather than technical. Acquire the rights position before building the model layer, never after. A venture that inverts that order spends its first ticket building something that becomes free.",
+            "Run Hamilton Helmer's 7 Powers against this category honestly and only two of the seven survive."
+          ],
+          "bullets": [
+            "Cornered resource. A rights-cleared Brazilian Portuguese corpus is legally scarce, expensive to assemble, and impossible for a well-funded foreign entrant to replicate without redoing the rights work deal by deal inside a foreign legal system.",
+            "Switching costs. Once a broadcaster's archive is indexed inside your system and its metadata governance runs through you, migration becomes a multi-year project rather than a procurement decision.",
+            "Scale economies, network economies, counter-positioning, branding and process power are not available here. A generative media tool holds none of them against a frontier lab."
+          ],
+          "id": "the-moat"
+        },
+        {
+          "heading": "How a production copilot compounds into an owned corpus",
+          "level": 2,
+          "paragraphs": [
+            "Owning a rights position without buying one means becoming the system that handles it. Buying a Brazilian archive outright is capital-intensive and slow. Earning access by becoming the system of record that indexes it is capital-light and fast. That difference is what makes this buildable inside a $500K-$1.5M pre-seed envelope rather than something that needs a Series A to begin.",
+            "The timing argument rests on inference cost, not on enthusiasm. The [Stanford HAI AI Index 2025](https://hai.stanford.edu/news/ai-index-2025-state-of-ai-in-10-charts) records the cost of querying a model performing at GPT-3.5 level falling from USD 20 per million tokens in November 2022 to USD 0.07 per million tokens by October 2024, a reduction of more than 280 times in roughly 18 months. Indexing a broadcaster's back catalogue, transcribing it and running semantic retrieval over it was a capital-expenditure project three years ago. It is now an operating-expense line small enough that a pre-seed team can run it against a real customer archive during a pilot. Grupo RBS is the proof already on the record. Eight hours to a production system, more than 15 tools in a year, built by a regional media group rather than a research lab. That is what AI infrastructure is now cheap enough to deploy without a Series A means in this specific vertical.",
+            "So the build order writes itself. It is the copilot to data to fund flywheel that recurs across Avante ventures, and here the sequencing carries the whole insight."
+          ],
+          "bullets": [
+            "Copilot. Ship a production or post-production copilot that a Brazilian producer, broadcaster or dubbing house adopts because it removes real cost today. Indexing, transcription, metadata, versioning, quota tracking. It earns its seat on unit economics, not on a generative demo.",
+            "Data. Every job run through the copilot accumulates a rights-cleared, Portuguese-language, contractually permissioned corpus. The rights clear as a term of the commercial agreement rather than being bought separately at prohibitive cost.",
+            "Fund. The corpus becomes the licensable asset and the tuning substrate. At that point the business is a rights holder with a distribution channel, not a tooling vendor."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Querying a model performing at GPT-3.5 level fell from USD 20 per million tokens in November 2022 to USD 0.07 per million tokens by October 2024. More than a 280-fold drop in roughly 18 months.",
+            "attribution": "Stanford HAI, AI Index 2025"
+          },
+          "id": "the-flywheel"
+        },
+        {
+          "heading": "Commoditization risk and unresolved rights litigation",
+          "level": 2,
+          "paragraphs": [
+            "This is the vertical most exposed to commoditization by frontier labs, and the Brazilian rights environment is unresolved. Neither risk is hypothetical, and neither should be argued away in a memo.",
+            "Failure mode one. The capability ships for free. Dubbing, voice cloning, translation, subtitling, video generation and semantic video search all sit on announced roadmaps at every major lab. A venture whose proposition is generative dubbing in Portuguese has a business only until a frontier model does it natively at marginal cost. A wrapper around a general capability has no defensible position and should not be funded.",
+            "Failure mode two. Brazilian rights law is genuinely unsettled, and it is trending strict. [PL 2338/2023](https://regulations.ai/regulations/RAI-BR-NA-PL23382-2023) cleared the Senate in December 2024 and went to the Câmara dos Deputados on March 17, 2025, where it remains under review. As [CISAC](https://www.cisac.org/Newsroom/society-news/creators-celebrate-brazils-senate-approval-ai-bill-prepare-tougher-battle) and an [IIC critical analysis of the Brazilian proposal](https://link.springer.com/article/10.1007/s40319-025-01672-8) describe it, the bill would require companies to pay rights holders whenever copyrighted works are used to train commercial AI systems, and would give authors an affirmative right to prohibit that use by large technology companies. Stricter than the EU, Japan or the United States.",
+            "Read that in both directions. A strict Brazilian training-data regime is bad news for anyone scraping and excellent news for anyone holding cleared rights. If remuneration for training data becomes mandatory, a rights-cleared Portuguese corpus stops being a nice-to-have and becomes the only legal way to operate at scale. The regulatory risk and the moat are the same fact viewed from two sides. The timing is the part nobody controls, and a venture that assumes the bill passes on a particular schedule is underwriting a legislature rather than a market.",
+            "Failure mode three. The labor opposition is organized, specific and sympathetic. The [Dublagem Viva movement](https://ids.org.br/en/news-post/brazilian-voice-actors-create-dublagem-viva-movement-to-call-for-regulation-of-the-use-of-ai/), launched by Brazilian voice actors in November 2023, has named demands, including that AI not be used to reproduce foreign actors' voices into Portuguese and that AI use comply with Brazilian copyright law 9.610/98 and with existing employment contracts. The related Real Voices campaign spans unions in more than twenty countries and has gathered close to 100,000 signatures. A Senate proposal has already been floated to make professional voice actors mandatory for foreign works exhibited in Brazil. Anyone positioning a venture as a replacement for dubbing labor is picking a fight with a legislatively active constituency inside the exact market they need.",
+            "None of the three is a reason to stay out. Each is a reason to build in a particular order. Rights before product, consent before scale, and no pitch that ends with fewer Brazilian voice actors working."
+          ],
+          "id": "the-hard-parts"
+        },
+        {
+          "heading": "How Avante would approach it",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America, launching 3-4 ventures per year and retaining co-founder economics. In a category this legally intensive, the discipline shows up mostly in what gets refused.",
+            "The [six-stage system](/principles) does more work here than in most categories. Research, Partner, Build, Traction, Revenue, Compound. In Brazilian media the Partner stage is not a formality. The rights relationship is the company, and it has to be secured before Build rather than negotiated after a product exists.",
+            "The scarce input in this sector is not engineering. It is the person who can start a rights conversation that survives legal review at a company the size of Globo. The structural edge is domain operators with 10+ years of Brazilian-market scar tissue, paired with a Silicon Valley playbook and first-ticket capital, assembled on day one. That team signs a rights agreement while a comparably funded standalone team is still taking introductory meetings. That is where the 6-9 months ahead advantage comes from in this vertical. Not generic speed. Skipping the year a technical founder spends earning credibility with rights holders.",
+            "Capital discipline is not optional either. [LAVCA](https://www.lavca.org/research/2025-lavca-industry-data-analysis/) put Latin American venture investment at approximately USD 4.5 billion across 751 transactions in 2024, with Brazil taking roughly 44% of it, and in the first half of 2025 more venture dollars went into Mexican startups than Brazilian ones for the first time. There is no Series A waiting on the other side of a demo. Solving company plumbing once across ventures routes roughly $300K-$500K of effective capital per venture into product and traction rather than overhead, which in a category this legally intensive is the difference between affording proper rights counsel and improvising without it.",
+            "The structural argument is the studio model, and the benchmark is not ours. Per the Global Startup Studio Network (GSSN), venture studios deliver a ~50% IRR against an industry-standard ~19% for traditional VC, roughly 2.5x over realistic time horizons. That figure is the studio-model benchmark, not any individual firm's realized return. The [studio thesis behind it](/why-avante) sits alongside the rest of our [Brazilian services economy opportunity](/library/brazil-services-economy-opportunity) work.",
+            "Applied to this category, that produces a short list of rules, and most of them are refusals."
+          ],
+          "bullets": [
+            "Refuse to underwrite the TAM. Build bottom-up from a named broadcaster's actual archive-handling and localization cost line. A number carrying a fifty-fold error bar is not an input to a model.",
+            "Secure the rights position in the Partner stage, before Build. If no agreement can be reached with a credible archive holder, the venture does not proceed. That is a kill criterion, not a milestone.",
+            "Position with dubbing labor, not against it. The Dublagem Viva demands are compatible with a consent-based, remunerated, rights-cleared model. Structure voice rights as licensed and paid.",
+            "Treat PL 2338/2023 as a tailwind to prepare for, not a date to bet on. Build as though mandatory remuneration for training data arrives, without assuming when."
+          ],
+          "callout": {
+            "kind": "quote",
+            "text": "The forecasts for this market will keep disagreeing by fifty times, and it will not matter. Whoever holds cleared rights to the Portuguese-language archive when the law settles owns the one input a frontier lab cannot ship. Everything else in this category is a feature waiting to be given away."
+          },
+          "id": "how-avante"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How big is the Brazil generative AI in media and entertainment market?",
+          "a": "There is no reliable size, and the range is the honest answer. Market Research Future puts the Brazil generative AI in media and entertainment market at USD 7,026.3 million in 2025, while Grand View Research puts all Brazilian generative AI across every sector at USD 140.6 million in the same year. That is a spread of roughly 50 times on the same category in the same calendar year. Underwrite a named customer's cost line instead of either forecast."
+        },
+        {
+          "q": "What is the moat in the Brazil generative AI media market?",
+          "a": "The moat is a rights-cleared Portuguese-language archive plus distribution relationships, never the model. Only two of Hamilton Helmer's 7 Powers apply here. Cornered resource, because a legally cleared Brazilian corpus cannot be replicated without redoing the rights work deal by deal inside a foreign legal system. And switching costs, once a broadcaster's metadata governance runs through your system. Anything a frontier lab can ship as a feature will be shipped as a feature and priced at zero."
+        },
+        {
+          "q": "Why does Brazil need its own AI dubbing and localization?",
+          "a": "Because Brazilian Portuguese is the only major content language whose home market receives no free supply from a larger neighbor. Spanish-language Latin America shares a production pipeline across nineteen countries, while Brazil imports almost nothing that arrives already in its language. Streaming quotas add a mandatory floor on top of that, requiring at least 100 Brazilian productions on a 2,000-title platform and at least 300 on a 7,000-title platform, phased over eight years under ANCINE supervision."
+        },
+        {
+          "q": "Is AI dubbing legal in Brazil?",
+          "a": "It is legal today and the rules are being rewritten. PL 2338/2023 cleared the Senate in December 2024 and moved to the Câmara dos Deputados on March 17, 2025. It would require payment to rights holders whenever copyrighted works are used to train commercial AI systems, a stricter regime than the EU, Japan or the United States. Brazilian voice actors also launched the Dublagem Viva movement in November 2023 with specific demands on consent and remuneration, so build for a licensed and paid model rather than betting on a passage date."
+        },
+        {
+          "q": "Which Brazilian broadcasters already use generative AI?",
+          "a": "Globo, CNN Brasil, Grupo RBS, SBT and TV Record all have deployments on the record. Globo applies multimodal analysis and automated metadata to sports coverage so staff retrieve match moments by natural-language search, CNN Brasil transcribes anchor speech in real time, and Grupo RBS built its Iris system in roughly eight hours and then shipped more than 15 custom operational tools within a year. Every one of those builds is indexing and retrieval over content the company already owns."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Mercado de IA Generativa em Mídia e Entretenimento no Brasil: O Moat São os Direitos",
+      "description": "O mercado de IA generativa em mídia e entretenimento no Brasil tem duas medições com 50x de diferença. Onde a IA entra e por que o acervo vence o modelo.",
+      "sections": [
+        {
+          "paragraphs": [
+            "O mercado de IA generativa em mídia e entretenimento no Brasil não tem tamanho confiável, e a divergência entre as fontes é o dado mais útil que existe sobre ele. A Market Research Future dimensiona só essa vertical em USD 7.026,3 milhões em 2025. A Grand View Research dimensiona toda a IA generativa do país, todos os setores somados, em USD 140,6 milhões no mesmo ano. Cinquenta vezes de diferença, na mesma categoria, no mesmo ano.",
+            "Isso não é ruído de amostragem. É a prova de que a categoria ainda não foi definida bem o bastante para ser medida. Quem monta uma tese em cima de uma projeção de consultoria está comprando uma barra de erro.",
+            "O que dá para verificar é a estrutura embaixo. Em 2025 a ANCINE registrou 3.981 obras audiovisuais brasileiras e apenas 367 filmes nacionais chegaram à sala de cinema. O país consome mídia como poucos no mundo, produz num idioma que nenhum mercado maior subsidia e tem cota de conteúdo nacional escrita em lei. A Avante Ventures trata esses fatos como a tese e as projeções como ruído. Deles sai a conclusão que atravessa o texto inteiro. O ativo defensável nesta categoria nunca foi o modelo."
+          ]
+        },
+        {
+          "heading": "O mercado brasileiro de IA generativa em mídia, com números datados",
+          "level": 2,
+          "paragraphs": [
+            "As duas fontes mais citadas do setor não podem estar certas ao mesmo tempo. A [Market Research Future](https://www.marketresearchfuture.com/reports/brazil-generative-ai-in-media-and-entertainment-market-57467) avalia o mercado brasileiro de IA generativa em mídia e entretenimento em USD 4.907,32 milhões em 2024 e USD 7.026,3 milhões em 2025, com CAGR de 43,18% até USD 254,3 bilhões em 2035. A [Grand View Research](https://www.grandviewresearch.com/horizon/outlook/generative-ai-market/brazil) avalia toda a IA generativa do país em USD 140,6 milhões em 2025, chegando a USD 1.585,0 milhões em 2033 com CAGR de 36,2%. A postura correta diante disso é reportar a faixa e nomear quem diz o quê.",
+            "A incoerência é verificável sem sair da mesa. Uma subvertical não pode valer mais que o negócio que ela serve, e os USD 7,03 bilhões da MRFR superam o mercado brasileiro de OTT inteiro, que a [Mordor Intelligence](https://www.mordorintelligence.com/industry-reports/brazil-ott-market) mede em USD 5,94 bilhões em 2025.",
+            "O número de 2035 é uma afirmação de escala macro, não uma projeção setorial. O [IBGE](https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/45969-pib-cresce-2-3-em-2025) mediu o PIB brasileiro em R$ 12,7 trilhões em 2025. Uma única categoria de software dentro de uma única vertical representaria algo perto de um décimo de tudo que o país produz hoje. Isso é artefato de definição, não previsão.",
+            "A explicação é banal e vale mais que qualquer uma das duas cifras. As metodologias contam coisas diferentes."
+          ],
+          "bullets": [
+            "A Grand View conta receita de modelo e de plataforma, ou seja, o gasto direto com IA generativa.",
+            "A MRFR parece contar receita de mídia e entretenimento que toca IA generativa em qualquer ponto da cadeia de produção.",
+            "Nenhuma das duas funciona como TAM bottom-up para uma decisão de capital.",
+            "A leitura honesta é que a categoria ainda não está definida. É exatamente a condição em que um venture studio define um segmento em vez de disputar fatia de um segmento já desenhado por outros."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "A MRFR dimensiona uma única vertical da IA generativa brasileira em USD 7.026,3 milhões em 2025. A Grand View dimensiona o mercado nacional inteiro, todos os setores somados, em USD 140,6 milhões no mesmo ano. Aproximadamente 50 vezes de diferença.",
+            "attribution": "Market Research Future (agosto de 2026) e Grand View Research"
+          },
+          "id": "market-size"
+        },
+        {
+          "heading": "Por que o isolamento do português é a abertura, não o obstáculo",
+          "level": 2,
+          "paragraphs": [
+            "O português brasileiro é o único idioma de conteúdo em escala cujo mercado doméstico não recebe oferta gratuita de um vizinho maior. A América Latina hispanofalante divide pipeline entre dezenove países e importa de México, Colômbia, Argentina e Espanha. O Brasil não importa quase nada que já chegue no idioma. Todo título estrangeiro precisa ser dublado ou legendado especificamente para cá, e todo título nacional atende um mercado que ninguém mais atende.",
+            "Esse isolamento aparece como teto de produção, não como teto de demanda. O [balanço 2025 da ANCINE](https://www.gov.br/ancine/pt-br/assuntos/noticias/balanco-2025-regulacao-com-dados-inovacao-e-transparencia) registra 3.981 obras audiovisuais brasileiras com CPB emitido, recorde histórico, e 367 filmes brasileiros exibidos em cinema, que somaram 11,12 milhões de espectadores e R$ 214,99 milhões de bilheteria em 3.554 salas, outro recorde.",
+            "Os cinco números contam uma história só. R$ 214,99 milhões divididos por 367 títulos dão em média R$ 586 mil de bilheteria por filme brasileiro. E foram 3.981 obras registradas para 367 que chegaram à sala. A maioria esmagadora da produção nacional nunca vê receita de bilheteria. Sua economia tem de sair de janela de streaming, licenciamento e reuso de acervo. Qualquer tecnologia que derrube o custo de produzir, localizar, indexar e relicenciar esse catálogo ataca a restrição que trava o setor inteiro.",
+            "Embaixo dessa demanda existe um piso obrigatório. Pela regra resumida pela [Agência Câmara](https://www.camara.leg.br/noticias/1219786-projeto-aprovado-sobre-servicos-de-streaming-preve-cota-para-conteudo-nacional/), uma plataforma com 2.000 títulos precisa ofertar ao menos 100 produções brasileiras, e uma com 7.000 títulos ao menos 300, metade delas de produtoras independentes, com oito anos de transição e fiscalização da ANCINE. Some a CONDECINE de até 3% sobre a receita bruta anual no país. Poucas teses de venture no Brasil têm demanda com piso escrito em lei.",
+            "E a escala do consumo sustenta o resto. O Brasil concentra perto de um terço das 83 milhões de assinaturas de SVOD da América Latina e é o segundo maior mercado da Netflix fora dos Estados Unidos, segundo [dados da Omdia apresentados no Rio2C](https://variety.com/2025/film/global/rio2c-omdia-fast-channels-omdia-rio-keynote-2025-1236410608/), que também apontam que o consumo semanal de FAST quadruplicou em quatro anos e já alcança 30% da população. Vale lembrar de que tipo de mercado se está falando. O brasileiro assiste dublado por preferência, ao contrário de boa parte da Europa. A dublagem aqui não é acessibilidade. É formato padrão, com indústria, sindicato e público próprios."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "R$ 214,99 milhões de bilheteria divididos por 367 filmes brasileiros em 2025 dão cerca de R$ 586 mil por título, enquanto 3.981 obras audiovisuais foram registradas no mesmo ano.",
+            "attribution": "ANCINE, balanço 2025, publicado em 29 de janeiro de 2026"
+          },
+          "id": "language-isolation"
+        },
+        {
+          "heading": "Onde a IA generativa entra na cadeia de produção",
+          "level": 2,
+          "paragraphs": [
+            "As emissoras brasileiras já decidiram onde a IA generativa entra, e a decisão está documentada. Segundo a [cobertura da Tela Viva sobre o SET Expo](https://telaviva.com.br/17/08/2026/emissoras-adotam-inteligencia-artificial-para-acelerar-operacoes-e-reestruturar-fluxo-de-trabalho/), a Globo aplicou análise multimodal e geração automática de metadados à cobertura esportiva, produzindo cortes a cada dois minutos com transcrição automática para que a equipe recupere lances por busca em linguagem natural. O cargo do executivo responsável já diz tudo. Head de Acervo e Governança de Dados de Conteúdo.",
+            "A CNN Brasil roda transcrição em tempo real da fala do apresentador para que o digital publique antes de a transmissão terminar, com revisão humana obrigatória e aviso de transparência. O Grupo RBS construiu o Iris, seu sistema de distribuição e monitoramento de sinal, em cerca de oito horas usando um modelo de fronteira, e depois produziu mais de 15 ferramentas operacionais próprias em um ano. O SBT montou uma plataforma centralizada em torno de modelos de linguagem justamente para controlar escala e monitorar custo.",
+            "Repare no que Globo e RBS de fato construíram. Não construíram modelos. Construíram indexação, governança e recuperação sobre conteúdo que já possuem. Do lado do acervo histórico, [reportagem sobre preservação de acervos de TV](https://www.dgabc.com.br/Noticia/4342257/ia-e-preservacao-dos-acervos-da-tv) registra a Record remasterizando parte do seu arquivo com IA, além de restauração de imagem, melhoria de áudio, upscaling, colorização e legendagem automática. Os incumbentes já votaram em onde está o valor. Votaram no acervo.",
+            "Ou seja, o valor não está no modelo. Está em quatro posições da cadeia onde a empresa de mídia brasileira já tem dor medida e orçamento aprovado."
+          ],
+          "bullets": [
+            "Localização e dublagem em volume. Todo título estrangeiro precisa de versão brasileira, e a cota só aumenta a contagem. É onde a IA generativa tem o efeito mais imediato sobre custo unitário e, não por acaso, o conflito trabalhista e de direitos mais agudo.",
+            "Criativo publicitário por segmento de mercado em vez de por campanha. Com um mercado publicitário de aproximadamente [USD 15,2 bilhões](https://www.imarcgroup.com/brazil-advertising-market) e variação regional de tamanho continental, produzir um criativo nacional cede lugar a produzir muitos.",
+            "Monetização de acervo. Décadas de material de broadcast estão sem indexação e portanto sem possibilidade de venda. É a maior e a menos disputada das quatro.",
+            "Direitos e identificação de conteúdo. Cota, CONDECINE e residuais exigem saber exatamente o que é cada peça, de quem ela é e onde já rodou. Ninguém tem um sistema de registro limpo disso no Brasil."
+          ],
+          "id": "where-to-build"
+        },
+        {
+          "heading": "Por que o acervo com direitos liberados é o moat, não o modelo",
+          "level": 2,
+          "paragraphs": [
+            "O ativo defensável nessa categoria é um corpus proprietário com direitos liberados, mais tuning em português brasileiro, mais relacionamento de distribuição. Nenhum dos três é um modelo.",
+            "Qualquer camada da stack que um laboratório de fronteira consiga entregar como feature vai ser entregue como feature e precificada em zero. A posição de direitos é a única camada que eles não conseguem embarcar, porque ela é jurisdicional, contratual e construída em relacionamento, não em engenharia.",
+            "Isso reordena o plano de construção. Quem for construir aqui adquire a posição de direitos antes da camada de modelo, e não depois. Produto pronto sem acordo de direitos é uma demo cara.",
+            "Aplique os 7 Powers de Hamilton Helmer com honestidade e sobram dois dos sete."
+          ],
+          "bullets": [
+            "Recurso encurralado, o cornered resource de Helmer. Um corpus em português brasileiro com direitos liberados é escasso por via legal, caro de montar e impossível de replicar por um entrante estrangeiro sem refazer o trabalho contrato a contrato dentro de um sistema jurídico que não é o dele.",
+            "Custo de troca. Depois que o acervo de uma emissora está indexado dentro do seu sistema e a governança de metadados passa por você, migrar vira projeto de vários anos.",
+            "Economias de escala, efeitos de rede, contraposicionamento, marca e poder de processo não estão disponíveis. Uma ferramenta de mídia generativa não tem nenhum deles contra um laboratório de fronteira."
+          ],
+          "id": "the-moat"
+        },
+        {
+          "heading": "Como um copilot de produção compõe um corpus proprietário",
+          "level": 2,
+          "paragraphs": [
+            "O padrão que se repete no portfólio da Avante é o flywheel copilot, dado, capital. Nessa vertical ele tem tradução literal.",
+            "Primeiro o copilot. Um copilot de produção ou de pós que um produtor, uma emissora ou uma casa de dublagem adote porque tira custo hoje. Indexação, transcrição, metadados, versionamento, controle de cota. Ele precisa se pagar na planilha do cliente, não na demo.",
+            "Depois o dado. Cada job que passa pelo copilot acumula um corpus em português, contratualmente permitido e com direitos liberados. O detalhe fino é que esse corpus é subproduto de trabalho pago. Os direitos entram como cláusula do contrato comercial em vez de serem comprados à parte por um preço proibitivo.",
+            "Por fim o capital. O corpus vira o ativo licenciável e o substrato de tuning. Nesse ponto a empresa é detentora de direitos com canal de distribuição, e não mais uma fornecedora de ferramenta.",
+            "O sequenciamento é a tese inteira. Comprar um acervo brasileiro é intensivo em capital e lento. Virar o sistema de registro que indexa esse acervo é leve em capital e rápido. É o tipo de empresa que cabe em um primeiro cheque de USD 500K a USD 1,5M em vez de precisar de uma Série A para começar.",
+            "E o timing é de custo, não de entusiasmo. Segundo o [AI Index 2025 de Stanford](https://hai.stanford.edu/news/ai-index-2025-state-of-ai-in-10-charts), consultar um modelo no nível do GPT-3.5 caiu de USD 20 por milhão de tokens em novembro de 2022 para USD 0,07 em outubro de 2024, uma redução superior a 280 vezes. Indexar o catálogo inteiro de uma emissora, transcrever, gerar metadados e rodar busca semântica era projeto de investimento três anos atrás. Hoje é linha de custeio que um time pré-seed consegue rodar contra o acervo real de um cliente durante o piloto.",
+            "É também por isso que o sistema de seis estágios da Avante importa aqui. Research, Partner, Build, Traction, Revenue, Compound. Nessa categoria o estágio Partner não é formalidade. A relação de direitos é a empresa, e ela precisa estar fechada antes do Build."
+          ],
+          "id": "the-flywheel"
+        },
+        {
+          "heading": "Risco de comoditização e litígio de direitos não resolvido",
+          "level": 2,
+          "paragraphs": [
+            "Esta é a vertical mais exposta a ser comoditizada por laboratórios de fronteira, e o ambiente de direitos no Brasil segue sem definição. Os dois riscos são reais e nenhum é hipotético.",
+            "Primeiro modo de falha. A capacidade passa a ser gratuita. Dublagem, clonagem de voz, tradução, legendagem, geração de vídeo e busca semântica em vídeo estão no roadmap anunciado de todos os grandes laboratórios. Uma venture cuja proposta de valor é fazer dublagem generativa em português tem negócio até o dia em que um modelo de fronteira fizer isso nativamente a custo marginal. Wrapper de capacidade genérica não tem posição defensável e não deveria ser financiado.",
+            "Segundo modo de falha. O direito autoral brasileiro está em aberto e a tendência é restritiva. O [PL 2338/2023](https://regulations.ai/regulations/RAI-BR-NA-PL23382-2023) foi aprovado pelo Senado em dezembro de 2024 e enviado à Câmara dos Deputados em 17 de março de 2025, onde segue em análise. Nas leituras da [CISAC](https://www.cisac.org/Newsroom/society-news/creators-celebrate-brazils-senate-approval-ai-bill-prepare-tougher-battle) e da [análise crítica publicada no IIC](https://link.springer.com/article/10.1007/s40319-025-01672-8), o texto obrigaria empresas a remunerar titulares sempre que obras protegidas forem usadas para treinar sistemas comerciais de IA, e daria ao autor o direito de proibir esse uso por grandes empresas de tecnologia. É um regime mais rígido que o europeu, o japonês e o norte-americano.",
+            "Leia esse risco na direção certa. Um regime rígido de dado de treinamento é péssimo para quem raspa e excelente para quem tem direitos liberados. Se a remuneração virar obrigatória, um corpus em português com direitos limpos deixa de ser diferencial e passa a ser a única forma legal de operar em escala. O risco regulatório e o moat são o mesmo fato visto de dois lados. Mas ninguém deve apostar em data de aprovação, porque isso é apostar em calendário legislativo.",
+            "Terceiro modo de falha, e o mais mal compreendido de fora do Brasil. A [Dublagem Viva](https://ids.org.br/en/news-post/brazilian-voice-actors-create-dublagem-viva-movement-to-call-for-regulation-of-the-use-of-ai/) não é protesto difuso. É um movimento com pautas nomeadas, criado em novembro de 2023, que pede que a IA não seja usada para reproduzir a voz de atores estrangeiros em português, que o uso respeite a Lei 9.610/98 e os contratos de trabalho, e que a regulação seja escrita com participação do setor. A campanha internacional Real Voices, ligada à United Voice Artists, reúne sindicatos de mais de vinte países e perto de 100 mil assinaturas. Já foi proposto no Senado tornar obrigatório o dublador profissional em obra estrangeira exibida no Brasil.",
+            "Quem se posiciona como substituto da dublagem escolhe brigar com uma categoria organizada, com simpatia pública e com atuação no Legislativo, dentro do único mercado que precisa atender. A leitura correta é a oposta. A dublagem é uma constituência para alinhar, não um custo para remover. As pautas da Dublagem Viva são compatíveis com um modelo de direitos liberados, consentido e remunerado. Estruture direito de voz como licenciado e pago e a venture fica do lado certo do movimento e da regulação provável ao mesmo tempo.",
+            "Quarto modo de falha. O dado de mercado é ruim. Volte ao começo deste texto. Quem avalia a categoria por uma projeção de consultoria está avaliando um número com barra de erro de cinquenta vezes. Modele a linha de custo do cliente."
+          ],
+          "id": "the-hard-parts"
+        },
+        {
+          "heading": "Como a Avante abordaria",
+          "level": 2,
+          "paragraphs": [
+            "A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina. São 3-4 ventures por ano, com economia de co-founder retida e USD 500K a USD 1,5M por venture no pré-seed. Numa categoria como esta, o método importa mais que a tese.",
+            "O capital disponível já impõe a disciplina. Segundo a [LAVCA](https://www.lavca.org/research/2025-lavca-industry-data-analysis/), o venture capital latino-americano ficou em aproximadamente USD 4,5 bilhões em 751 transações em 2024, com o Brasil capturando cerca de 44% do total. No primeiro semestre de 2025, pela primeira vez, o México recebeu mais dólares de venture que o Brasil. Não existe uma Série A esperando do outro lado de uma demo. É bom que não exista, porque ela distorceria o sequenciamento que essa categoria exige.",
+            "Nesse mercado o insumo escasso não é engenharia. É a pessoa que consegue abrir uma conversa de direitos e sustentá-la até o jurídico da Globo. Monetização de acervo depende de relação com quem detém o acervo. Localização em volume depende de trânsito com estúdios e casas de dublagem no meio de uma disputa trabalhista sobre exatamente essa tecnologia. Cota e CONDECINE dependem de fluência no aparato regulatório da ANCINE. Criativo por segmento depende de relações de agência que têm décadas.",
+            "Por isso a vantagem aqui vem de operadores de domínio com mais de 10 anos de cicatriz no mercado brasileiro, montados junto com o time de engenharia e com o primeiro cheque no dia um. Um studio que reúne os três ao mesmo tempo chega ao acordo de direitos assinado enquanto um time standalone comparável ainda está em reunião de apresentação. É daí que vem a vantagem de 6-9 meses de time-to-traction nesta vertical. Não é velocidade genérica. É pular os doze meses que um fundador técnico gastaria construindo credibilidade com detentores de direitos.",
+            "Resolver o encanamento da empresa uma vez direciona aproximadamente USD 300K a USD 500K de capital efetivo por venture para produto e tração em vez de overhead, o que numa categoria tão jurídica é a diferença entre bancar assessoria autoral decente e não bancar. É também o argumento estrutural para o modelo de studio em vez do time solto atrás de rodada. Segundo a Global Startup Studio Network (GSSN), venture studios entregam IRR de ~50% contra ~19% do venture capital tradicional, aproximadamente 2,5x em horizontes realistas. Esse número é o benchmark do modelo de studio apurado pela GSSN, e não o retorno realizado de nenhuma firma em particular.",
+            "Na prática, a disciplina para essa categoria cabe em quatro decisões. Não modele o TAM de cima para baixo, monte a conta a partir da linha real de custo de acervo e de localização de um cliente nomeado. Feche a posição de direitos no estágio Partner e trate a ausência dela como critério de kill, não como pendência. Entregue um copilot que se paga por custo hoje. E trate o PL 2338/2023 como vento a favor para o qual se prepara, sem apostar em quando ele chega.",
+            "O pano de fundo é o mesmo de toda a tese brasileira do studio, descrita em detalhe na [economia de serviços do Brasil](/library/brazil-services-economy-opportunity). Serviços respondem por aproximadamente 70% do PIB brasileiro, com baixa penetração de software, e mídia e entretenimento é um dos cantos menos penetrados dessa base. A [tese de venture studio da Avante](/why-avante) parte daí. A infraestrutura de IA já está barata o bastante para ser implantada sem uma Série A, o que significa que a barreira nesta vertical deixou de ser técnica e passou a ser contratual.",
+            "Quem entrar aqui achando que está comprando um modelo vai descobrir tarde que estava alugando uma feature. O acervo é que fica."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "O critério de kill mais útil nesta categoria é simples. Se não houver acordo de direitos com um detentor de acervo relevante ao fim do estágio Partner, a venture não avança para Build.",
+            "attribution": "Sistema de seis estágios da Avante"
+          },
+          "id": "how-avante"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Qual o tamanho do mercado de IA generativa em mídia e entretenimento no Brasil?",
+          "a": "Não existe número confiável, e a divergência entre as fontes é o dado mais útil. A Market Research Future dimensiona essa vertical em USD 7.026,3 milhões em 2025, enquanto a Grand View Research dimensiona toda a IA generativa brasileira em USD 140,6 milhões no mesmo ano. São aproximadamente 50 vezes de diferença, porque as metodologias contam coisas diferentes. Use a linha de custo real de um cliente nomeado em vez de qualquer uma das duas projeções."
+        },
+        {
+          "q": "Por que o Brasil precisa de IA generativa própria para dublagem e localização?",
+          "a": "Porque o português brasileiro não recebe oferta gratuita de nenhum mercado maior. Toda obra estrangeira precisa de versão feita especificamente para o Brasil, e a regra de cota obriga plataformas de VOD a carregar de 100 a 300 produções brasileiras conforme o tamanho do catálogo, com fiscalização da ANCINE. O volume exigido é regulado e crescente, o que torna o custo unitário de localização a variável decisiva."
+        },
+        {
+          "q": "A dublagem com IA é legal no Brasil?",
+          "a": "O ponto está em aberto e a tendência é restritiva. O PL 2338/2023 foi aprovado pelo Senado em dezembro de 2024 e segue em análise na Câmara desde 17 de março de 2025, e obrigaria a remuneração de titulares quando obras protegidas forem usadas em treinamento comercial. Em paralelo, o movimento Dublagem Viva pede que qualquer uso respeite a Lei 9.610/98 e os contratos de trabalho. Estruturar direito de voz como licenciado e remunerado é o único caminho que sobrevive aos dois cenários."
+        },
+        {
+          "q": "Qual é o moat de uma startup de IA em mídia no Brasil?",
+          "a": "O acervo com direitos liberados, e não o modelo. Um corpus em português brasileiro contratualmente permitido é recurso encurralado, e a indexação do acervo de uma emissora cria custo de troca de vários anos. Escala, efeito de rede e marca não estão disponíveis nessa vertical, então tudo que um laboratório de fronteira conseguir embarcar como feature será embarcado e precificado em zero."
+        },
+        {
+          "q": "Quais emissoras brasileiras já usam IA generativa na produção?",
+          "a": "Globo, CNN Brasil, Grupo RBS, SBT e Record já operam com IA em produção. A Globo aplica análise multimodal e metadados automáticos à cobertura esportiva com recuperação por busca em linguagem natural, o Grupo RBS construiu seu sistema Iris em cerca de oito horas e passou de 15 ferramentas operacionais em um ano, e a Record remasteriza parte do acervo histórico. Todos construíram indexação e governança sobre conteúdo próprio, e não modelos."
+        }
+      ]
+    },
+    "es": {
+      "title": "Mercado de IA Generativa en Medios y Entretenimiento en Brasil: El Moat Son los Derechos",
+      "description": "El mercado de IA generativa en medios y entretenimiento en Brasil tiene dos cifras que difieren 50 veces. Dónde entra la IA y por qué el archivo gana.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Nadie sabe cuánto vale el mercado de IA generativa en medios y entretenimiento en Brasil, y esa ignorancia es el dato más accionable de la categoría. Market Research Future valúa el vertical en USD 7.026,3 millones para 2025. Grand View Research valúa toda la IA generativa brasileña, todos los sectores sumados, en USD 140,6 millones el mismo año.",
+            "Un vertical no puede valer cincuenta veces el mercado que lo contiene. La contradicción no mata la oportunidad. Prueba que la categoría todavía no está definida lo bastante bien como para medirse, que es exactamente la condición en la que un venture studio define un segmento en lugar de pelear por una tajada de uno ya repartido.",
+            "Lo verificable está en otra parte y es más incómodo. Brasil registró 3.981 obras audiovisuales en 2025 y solo 367 películas brasileñas llegaron a una sala de cine. Ese es el número que Avante mira para evaluar esta categoría. Una proyección no se suscribe."
+          ]
+        },
+        {
+          "heading": "El mercado brasileño de IA generativa en medios, con números fechados",
+          "level": 2,
+          "paragraphs": [
+            "Empiece por la discrepancia, no por el promedio. Según [Market Research Future](https://www.marketresearchfuture.com/reports/brazil-generative-ai-in-media-and-entertainment-market-57467), con reporte actualizado el 24 de agosto de 2026, el mercado brasileño de IA generativa en medios y entretenimiento valía USD 4.907,32 millones en 2024, llega a USD 7.026,3 millones en 2025 y alcanzaría USD 254.345 millones en 2035 con un CAGR de 43,18%. Según [Grand View Research](https://www.grandviewresearch.com/horizon/outlook/generative-ai-market/brazil), toda la IA generativa de Brasil, en todos los sectores, generó USD 140,6 millones en 2025 y llegaría a USD 1.585 millones en 2033 con un CAGR de 36,2%.",
+            "Las dos cifras no pueden ser ciertas a la vez. Un vendor valúa un solo vertical en cerca de 50 veces lo que el otro valúa para toda la categoría nacional del mismo año, y un número con esa barra de error no entra en un modelo de inversión.",
+            "El peso estructural de Brasil, en cambio, no está en disputa, y es la parte que sí se puede suscribir. El [mercado publicitario brasileño](https://www.imarcgroup.com/brazil-advertising-market) valía cerca de USD 15.200 millones en 2025, dentro del top diez global. Brasil concentra casi un tercio de las 83 millones de suscripciones SVOD de América Latina y es el segundo mercado de Netflix fuera de Estados Unidos, según datos de Omdia presentados en Rio2C y [reportados por Variety](https://variety.com/2025/film/global/rio2c-omdia-fast-channels-omdia-rio-keynote-2025-1236410608/). El consumo semanal de canales FAST se cuadruplicó en cuatro años y ya alcanza al 30% de la población.",
+            "Debajo de todo eso hay una base de servicios enorme y sin software encima. Los servicios representan cerca del 70% del PIB brasileño con baja penetración de software, y el [IBGE](https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/47861-setor-de-servicos-emprega-15-9-milhoes-de-pessoas-e-gera-r-3-5-trilhoes-em-receita-em-2024) midió en agosto de 2026 un sector de servicios no financieros de 1,9 millones de empresas activas, 15,9 millones de empleados y R$ 3,5 billones de facturación neta. Medios y entretenimiento es uno de los rincones menos digitalizados de esa base. La misma lógica que sostiene la [oportunidad de la economía de servicios en Brasil](/library/brazil-services-economy-opportunity) aplica aquí, con una capa que las otras verticales no tienen. Los derechos.",
+            "Tres pruebas de sensatez muestran que la brecha es un artefacto de definición y no un desacuerdo entre pronosticadores."
+          ],
+          "bullets": [
+            "El subsegmento supera a su propio padre. Los USD 7.026,3 millones de MRFR para IA generativa en medios brasileños en 2025 son mayores que todo el mercado brasileño de OTT, que [Mordor Intelligence](https://www.mordorintelligence.com/industry-reports/brazil-ott-market) sitúa en USD 5.940 millones ese año. Una capa de herramientas no puede valer más que el negocio de distribución al que sirve.",
+            "La cifra de 2035 es una afirmación de escala macro. USD 254.345 millones contra un PIB brasileño que el [IBGE](https://agenciadenoticias.ibge.gov.br/agencia-noticias/2012-agencia-de-noticias/noticias/45969-pib-cresce-2-3-em-2025) midió en R$ 12,7 billones en 2025, cerca de USD 2,3 billones. Una sola categoría de software en un solo vertical equivaldría a casi una décima parte de la producción nacional de hoy.",
+            "Las definiciones hacen todo el trabajo. Grand View cuenta ingresos de modelos y plataformas. MRFR parece contar los ingresos de medios que tocan IA generativa en cualquier punto de la cadena de producción. Ninguno miente en sus propios términos. Ninguno sirve como TAM construido de abajo hacia arriba."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "50x. MRFR valúa la IA generativa en medios y entretenimiento brasileños en USD 7.026,3 millones en 2025. Grand View valúa toda la IA generativa de Brasil, en todos los sectores, en USD 140,6 millones ese mismo año.",
+            "attribution": "Market Research Future y Grand View Research, cifras de 2025"
+          },
+          "id": "market-size"
+        },
+        {
+          "heading": "Por qué el aislamiento del portugués es la apertura, no el obstáculo",
+          "level": 2,
+          "paragraphs": [
+            "El portugués brasileño es el único idioma de contenido relevante cuyo mercado de origen no recibe oferta gratis de un vecino más grande. América Latina hispanohablante comparte una tubería de producción entre diecinueve países e importa fuerte de México, Colombia, Argentina y España. Brasil casi no importa nada que llegue ya en su idioma. Cada título extranjero se dobla o se subtitula específicamente para Brasil, y cada título nacional sirve a un mercado que nadie más sirve.",
+            "Ese aislamiento aparece como techo de producción, no como techo de demanda. Según el [balance 2025 de ANCINE](https://www.gov.br/ancine/pt-br/assuntos/noticias/balanco-2025-regulacao-com-dados-inovacao-e-transparencia), publicado el 29 de enero de 2026, se registraron 3.981 obras audiovisuales brasileñas, un récord, y 367 películas brasileñas se exhibieron en cines. Esas películas atrajeron 11,12 millones de espectadores y R$ 214,99 millones de taquilla. El país cerró 2025 con 3.554 pantallas en operación, también récord, y los registros del Centro-Oeste, el Norte y el Nordeste crecieron 9%.",
+            "La división es despiadada. R$ 214,99 millones repartidos entre 367 títulos dan un promedio cercano a R$ 586 mil de taquilla por película brasileña. Se registraron 3.981 obras y solo 367 llegaron a una sala. La inmensa mayoría de la producción audiovisual brasileña nunca gana un peso en cine, y su economía tiene que salir de ventanas de streaming, licenciamiento y reuso de acervo. Cualquier tecnología que abarate producir, localizar, indexar y relicenciar ese catálogo ataca la restricción que amarra al sector entero.",
+            "La regulación empuja en la misma dirección y sube el volumen obligatorio de contenido en portugués. Según la [Cámara de Diputados](https://www.camara.leg.br/noticias/1219786-projeto-aprovado-sobre-servicos-de-streaming-preve-cota-para-conteudo-nacional/), una plataforma con 2.000 títulos debe ofrecer al menos 100 producciones brasileñas y una con 7.000 títulos al menos 300, la mitad de productores independientes, con cumplimiento pleno en ocho años y bajo supervisión de ANCINE. Las plataformas además deben CONDECINE de hasta 3% de su facturación bruta anual en Brasil. Eso es un piso obligatorio de demanda por ley. Rara vez un inversionista puede suscribir algo tan explícito.",
+            "Para quien lee esto en español y mira Brasil desde afuera, la lección se transfiere sin traducirse. Un mercado de idioma lo bastante grande para importar y lo bastante chico para que los jugadores globales lo ignoren es una apertura estructural, no un nicho de consuelo. En español ese aislamiento es más débil porque la oferta se comparte entre países, pero el mecanismo reaparece un piso más abajo, en cuota regulatoria país por país y en titularidad de acervo local."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "R$ 586.000. Taquilla promedio por película brasileña en 2025: R$ 214,99 millones repartidos entre 367 títulos estrenados, mientras se registraban 3.981 obras audiovisuales.",
+            "attribution": "ANCINE, balance 2025, publicado el 29 de enero de 2026"
+          },
+          "id": "language-isolation"
+        },
+        {
+          "heading": "Dónde entra la IA generativa en la cadena de producción",
+          "level": 2,
+          "paragraphs": [
+            "El valor no está en el modelo. Está en cuatro posiciones del flujo de trabajo donde las empresas de medios brasileñas ya tienen un dolor medible y una partida presupuestal abierta.",
+            "Los incumbentes brasileños ya votaron con su presupuesto. Según [Tela Viva](https://telaviva.com.br/17/08/2026/emissoras-adotam-inteligencia-artificial-para-acelerar-operacoes-e-reestruturar-fluxo-de-trabalho/), en el SET Expo del 17 de agosto de 2026 Globo presentó análisis multimodal y generación automática de metadatos sobre su cobertura deportiva, con cortes de video cada dos minutos y transcripción automática, de modo que el equipo recupera momentos específicos de un partido por búsqueda en lenguaje natural. El cargo del ejecutivo responsable dice el resto. Renan Porto Gomes es Head of Archive and Content Data Governance.",
+            "CNN Brasil transcribe en tiempo real el habla de sus presentadores para que los equipos digitales publiquen antes de que termine la emisión, con revisión humana obligatoria y avisos de transparencia. Grupo RBS construyó su sistema Iris de distribución y monitoreo de señal en unas ocho horas usando un modelo de frontera, y produjo más de 15 herramientas operativas propias en un año. SBT levantó una plataforma centralizada sobre modelos de lenguaje justamente para controlar el escalamiento y vigilar el costo. TV Record está remasterizando parte de su acervo histórico con IA, entre restauración de imagen, mejora de audio, escalado de video antiguo y colorización.",
+            "Ninguna de esas empresas construyó un modelo. Todas construyeron indexación, gobernanza y recuperación sobre contenido que ya poseen. Las emisoras brasileñas ya decidieron dónde está el valor, y no lo pusieron en la capa generativa."
+          ],
+          "bullets": [
+            "Localización y doblaje a volumen. Cada título extranjero necesita versión en portugués brasileño y la cuota sigue subiendo la cuenta. Es donde la IA generativa tiene el efecto más inmediato sobre el costo unitario y, no por casualidad, el conflicto laboral y de derechos más agudo.",
+            "Creativo publicitario por segmento de mercado en vez de por campaña. Con un mercado publicitario de unos USD 15.200 millones y variación regional de escala continental, la economía de producir una pieza nacional cede ante la de producir muchas.",
+            "Monetización de acervo. Décadas de material de archivo brasileño están sin indexar y por lo tanto no se pueden vender. Es la oportunidad más grande y la menos disputada.",
+            "Identificación de obra y de derechos. Cumplir cuota, calcular CONDECINE y pagar residuales exige saber exactamente qué es una pieza, quién la posee y dónde corrió. Nadie tiene un sistema de registro limpio para eso en Brasil."
+          ],
+          "id": "where-to-build"
+        },
+        {
+          "heading": "Por qué el archivo con derechos liberados es el moat, no el modelo",
+          "level": 2,
+          "paragraphs": [
+            "El activo defendible en esta categoría es un corpus propio con derechos liberados, más ajuste al portugués brasileño, más relaciones de distribución. Ninguno de los tres es un modelo.",
+            "La implicación es simple y desagradable. Cualquier parte del stack que un laboratorio de frontera pueda enviar como funcionalidad va a llegar como funcionalidad, y su precio va a ser cero. La posición de derechos es la única capa que no pueden enviar, porque es jurisdiccional, contractual y relacional antes que técnica. En la práctica eso reordena hasta la primera contratación cara, que deja de ser un ingeniero de machine learning y pasa a ser alguien que sepa negociar derecho autoral audiovisual brasileño. Quien construya aquí consigue los derechos antes de construir el modelo, no después.",
+            "Pase los 7 Powers de Hamilton Helmer sobre la categoría con honestidad y solo dos de los siete sobreviven."
+          ],
+          "bullets": [
+            "Recurso acorralado, el cornered resource de Helmer. Un corpus brasileño en portugués con derechos liberados es escaso por vía legal, caro de ensamblar y no replicable por un entrante extranjero bien financiado sin rehacer el trabajo de derechos contrato por contrato en un sistema jurídico ajeno.",
+            "Costos de cambio. Una vez que el acervo de una emisora está indexado dentro de su sistema y su gobernanza de metadatos pasa por ahí, migrar es un proyecto de varios años.",
+            "Economías de escala, efectos de red, contraposicionamiento, marca y poder de proceso no están disponibles. Una herramienta generativa de medios no tiene ninguno de ellos frente a un laboratorio de frontera."
+          ],
+          "id": "the-moat"
+        },
+        {
+          "heading": "Cómo un copilot de producción compone un corpus propio",
+          "level": 2,
+          "paragraphs": [
+            "El orden importa más que el producto. Comprar un acervo brasileño de frente es intensivo en capital y lento. Ganarse el acceso siendo el sistema de registro que lo indexa es liviano en capital y rápido. Ese es el patrón que se repite en el portafolio de Avante, el flywheel copilot, dato, capital.",
+            "Es una empresa que cabe en un primer cheque de $500K-$1.5M en lugar de una que necesita una Serie A para arrancar. Y cabe porque cambió el costo, no porque cambió el ánimo del mercado.",
+            "Según el [AI Index 2025 de Stanford HAI](https://hai.stanford.edu/news/ai-index-2025-state-of-ai-in-10-charts), consultar un modelo con desempeño equivalente a GPT-3.5 pasó de USD 20 por millón de tokens en noviembre de 2022 a USD 0,07 por millón en octubre de 2024, una caída de más de 280 veces en unos 18 meses. Indexar el catálogo de una emisora, transcribirlo, generar metadatos y correr recuperación semántica era un proyecto de inversión de capital hace tres años. Hoy es una línea de gasto operativo que un equipo pre-seed corre contra un acervo real durante un piloto. La infraestructura de IA ya es lo bastante barata para desplegar sin una Serie A.",
+            "Por eso el sistema de seis etapas importa aquí más que en otras categorías. Research, Partner, Build, Traction, Revenue, Compound. En este vertical la etapa Partner no es un trámite previo. La relación de derechos es la empresa, y hay que asegurarla antes de Build, no negociarla después de que ya exista un producto."
+          ],
+          "bullets": [
+            "Copilot. Un copilot de producción o postproducción que un productor, una emisora o una casa de doblaje brasileña adopta porque le quita costo hoy. Indexación, transcripción, metadatos, versionado, seguimiento de cuota. Tiene que ganarse el asiento por unit economics, no por un demo.",
+            "Dato. Cada trabajo que pasa por el copilot acumula un corpus en portugués, con derechos liberados y permisos contractuales. El corpus es un subproducto de trabajo pagado, así que los derechos se liberan como término del acuerdo comercial en lugar de comprarse aparte a un precio prohibitivo.",
+            "Capital. El corpus se vuelve el activo licenciable y el sustrato de ajuste. En ese punto el negocio es un titular de derechos con canal de distribución, no un proveedor de herramientas."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "280x. Caída en el costo de consultar un modelo con desempeño nivel GPT-3.5, de USD 20 por millón de tokens en noviembre de 2022 a USD 0,07 por millón en octubre de 2024.",
+            "attribution": "Stanford HAI, AI Index 2025"
+          },
+          "id": "the-flywheel"
+        },
+        {
+          "heading": "Riesgo de comoditización y litigio de derechos sin resolver",
+          "level": 2,
+          "paragraphs": [
+            "Este es el vertical más expuesto a ser comoditizado por los laboratorios de frontera, y el entorno de derechos en Brasil está sin resolver. Los dos riesgos son reales y ninguno es hipotético.",
+            "Primero, la capacidad se envía gratis. Doblaje, clonación de voz, traducción, subtitulado, generación de video y búsqueda semántica de video están en la hoja de ruta anunciada de todos los laboratorios grandes. Una empresa cuya propuesta de valor es hacer doblaje generativo en portugués tiene negocio solo hasta que un modelo de frontera lo haga de forma nativa a costo marginal. Lo que apenas es un envoltorio sobre una capacidad general no tiene posición defendible y no debería financiarse.",
+            "Segundo, la ley brasileña de derechos está genuinamente abierta y se mueve hacia lo estricto. El [PL 2338/2023](https://regulations.ai/regulations/RAI-BR-NA-PL23382-2023) fue aprobado por el Senado en diciembre de 2024 y enviado a la Cámara de Diputados el 17 de marzo de 2025, donde sigue en revisión. Según el análisis de [CISAC](https://www.cisac.org/Newsroom/society-news/creators-celebrate-brazils-senate-approval-ai-bill-prepare-tougher-battle) y la [crítica publicada en IIC](https://link.springer.com/article/10.1007/s40319-025-01672-8), el proyecto obligaría a pagar a los titulares cada vez que obras protegidas se usen para entrenar sistemas comerciales de IA, y daría a los autores el derecho a prohibir ese uso a las grandes tecnológicas. Sería un régimen más estricto que el de la Unión Europea, Japón o Estados Unidos.",
+            "Lea ese riesgo correctamente. Un régimen brasileño estricto sobre datos de entrenamiento es mala noticia para quien hace scraping y excelente noticia para quien tiene derechos liberados. Si la remuneración se vuelve obligatoria, un corpus en portugués con derechos limpios deja de ser un lujo y pasa a ser la única forma legal de operar a escala. El riesgo regulatorio y el moat son el mismo hecho visto desde dos lados. Pero el calendario es incierto, y una empresa que asume una fecha de aprobación está suscribiendo a un poder legislativo.",
+            "Tercero, la oposición laboral organizada es creíble y específica. [Dublagem Viva](https://ids.org.br/en/news-post/brazilian-voice-actors-create-dublagem-viva-movement-to-call-for-regulation-of-the-use-of-ai/), lanzado por actores de doblaje brasileños en noviembre de 2023, tiene demandas nombradas, entre ellas que la IA no reproduzca voces de actores extranjeros al portugués y que su uso cumpla la ley brasileña de derecho de autor 9.610/98 y los contratos laborales. La campaña internacional Real Voices, con sindicatos de más de veinte países, reunió cerca de 100.000 firmas. Una empresa que se posicione como reemplazo de mano de obra de doblaje elige pelear con un gremio organizado, con simpatía pública y con actividad legislativa, en el mercado exacto que necesita.",
+            "Cuarto, los datos de mercado son malos. Quien suscriba esta categoría con una proyección de vendor está suscribiendo un número con una barra de error de cincuenta veces. No suscriba la proyección. Suscriba la línea de costo del cliente, que sí tiene factura."
+          ],
+          "id": "the-hard-parts"
+        },
+        {
+          "heading": "Cómo Avante lo abordaría",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina, con 3-4 ventures por año y economía de co-founder retenida. En esta categoría un enfoque disciplinado se ve así.",
+            "El insumo escaso en medios brasileños no es ingeniería. Es la persona capaz de abrir una conversación de derechos con un grupo como Globo y sostenerla hasta la revisión legal. Por eso los operadores de dominio con más de 10 años de cicatrices en el mercado brasileño, emparejados con un playbook y capital de primer cheque desde el día uno, llegan a un acuerdo firmado mientras un equipo independiente comparablemente financiado sigue en reuniones de presentación. De ahí sale la ventaja de 6-9 meses en time-to-traction en este vertical. No es velocidad genérica. Es saltarse los doce meses que un fundador técnico gastaría ganando credibilidad ante titulares de derechos.",
+            "Resolver la plomería de empresa una sola vez, a lo largo de varias ventures, libera entre $300K y $500K de capital efectivo por venture hacia producto y tracción en lugar de overhead. En una categoría tan intensiva en derecho, esa es la diferencia entre pagar buena asesoría legal y improvisarla. El modelo tiene respaldo medible. Según la Global Startup Studio Network (GSSN), los venture studios entregan un IRR de ~50% frente al ~19% estándar de la industria para el capital de riesgo tradicional, cerca de 2,5x en horizontes realistas. Esa cifra es el benchmark del modelo studio, no el retorno realizado de ninguna firma en particular. La tesis completa está en [por qué el modelo venture studio gana en LATAM](/why-avante).",
+            "La conclusión práctica no es entrar a Brasil el mes que viene. Es dejar de leer proyecciones de categoría y empezar a leer contratos de acervo. El resto de la serie sobre el mercado brasileño está en la [Biblioteca](/library). Aplicado a esta categoría, el método se reduce a cinco decisiones, y casi todas son negativas."
+          ],
+          "bullets": [
+            "No suscribir el TAM. Modelar de abajo hacia arriba desde la línea de costo real de manejo de acervo y localización de una emisora o productora con nombre propio. Las proyecciones de los vendors son inusables.",
+            "Asegurar la posición de derechos en la etapa Partner, antes de Build. Si no se alcanza un acuerdo con un titular de acervo creíble, la venture no avanza. Ese es el criterio de muerte.",
+            "Enviar un copilot que se gane el asiento por costo hoy, no por un demo generativo. Indexación, metadatos, recuperación, seguimiento de cuota.",
+            "Posicionarse con el gremio de doblaje, no contra él. Las demandas de Dublagem Viva son compatibles con un modelo de consentimiento, licencia y pago, que además es el que la regulación probable va a premiar.",
+            "Tratar el PL 2338/2023 como viento a favor por el que hay que prepararse, no como una fecha a la que apostar."
+          ],
+          "callout": {
+            "kind": "quote",
+            "text": "Un acervo se cuenta título por título, con fechas y con firmas. Los USD 254.345 millones proyectados para 2035 no se cuentan. Se creen o no se creen."
+          },
+          "id": "how-avante"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Qué tamaño tiene el mercado de IA generativa en medios y entretenimiento en Brasil?",
+          "a": "No existe una cifra confiable, y la dispersión es el dato más útil. Market Research Future valúa el mercado brasileño de IA generativa en medios y entretenimiento en USD 7.026,3 millones para 2025, mientras Grand View Research valúa toda la IA generativa de Brasil, en todos los sectores, en USD 140,6 millones ese mismo año. La diferencia de 50 veces muestra que la categoría todavía no está definida lo bastante bien como para medirse. Lo verificable es el mercado subyacente, no la proyección."
+        },
+        {
+          "q": "¿Por qué Brasil necesita su propio doblaje y localización con IA?",
+          "a": "Porque el portugués brasileño no recibe contenido gratis de ningún mercado más grande. Cada título extranjero se dobla o se subtitula específicamente para Brasil, y la regulación de streaming obliga a que una plataforma con 2.000 títulos ofrezca al menos 100 producciones brasileñas y una con 7.000 títulos al menos 300, según la Cámara de Diputados. Es un piso obligatorio de demanda de contenido en portugués."
+        },
+        {
+          "q": "¿Es legal el doblaje con IA en Brasil?",
+          "a": "Hoy sí, pero el marco está abierto y se endurece. El PL 2338/2023 fue aprobado por el Senado en diciembre de 2024 y sigue en revisión en la Cámara de Diputados desde el 17 de marzo de 2025, y obligaría a pagar a los titulares cuando obras protegidas se usen para entrenar sistemas comerciales de IA. El movimiento Dublagem Viva, lanzado por actores de doblaje brasileños en noviembre de 2023, pide que la IA no reproduzca voces sin cumplir la ley 9.610/98. Un modelo con consentimiento, licencia y pago es el único que sobrevive a las dos cosas."
+        },
+        {
+          "q": "¿Cuál es el moat de una startup de IA en medios y entretenimiento en Brasil?",
+          "a": "Un acervo propio con derechos liberados, más el ajuste al portugués brasileño, más las relaciones de distribución. No es el modelo. Cualquier capacidad que un laboratorio de frontera pueda enviar como funcionalidad va a ser enviada y tarifada en cero, mientras que la posición de derechos es jurisdiccional, contractual y relacional, y no se puede enviar por software."
+        },
+        {
+          "q": "¿Qué emisoras brasileñas ya usan IA en sus operaciones?",
+          "a": "Globo, CNN Brasil, Grupo RBS, SBT y TV Record, según la cobertura de Tela Viva sobre el SET Expo de agosto de 2026. Globo aplica análisis multimodal y metadatos automáticos a su cobertura deportiva, CNN Brasil transcribe en tiempo real con revisión humana obligatoria, Grupo RBS construyó su sistema Iris en unas ocho horas y más de 15 herramientas internas en un año, y TV Record remasteriza su acervo histórico. Ninguno construyó un modelo. Todos construyeron indexación y gobernanza sobre contenido propio."
         }
       ]
     }
@@ -14069,7 +15508,7 @@ const engineArticles: Article[] = [
           "paragraphs": [
             "The Series A used to be the starting gun. Now it is a scaling choice. Because building is cheap, you can reach real revenue, proprietary data, and a working product before you ever open a deck.",
             "That changes everything about the raise. You negotiate from strength instead of hope. You raise at a better price, on cleaner terms, because you are selling traction rather than a promise. And you keep the option to not raise at all, which is the only thing that gives a term sheet any leverage back to you.",
-            "This is the AI-native discipline. Capital becomes fuel you add to something already burning, not the match that lights it. It is the same logic behind our [operating principles](https://avanteventures.com/principles), and it is available to any founder willing to earn before they ask."
+            "This is the AI-native discipline. Capital becomes fuel you add to something already burning, not the match that lights it. It is the same logic behind our [operating principles](/principles), and it is available to any founder willing to earn before they ask."
           ]
         },
         {
@@ -14088,7 +15527,7 @@ const engineArticles: Article[] = [
           "level": 2,
           "paragraphs": [
             "Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America. A studio deploys first-ticket capital and acts as a co-founder, not a passive check. Instead of pitching dozens of investors before you can afford to start, you get capital, an operator, and shared company plumbing on day one. That is the fifth path made concrete.",
-            "The model is specific. Avante launches 3 to 4 ventures per year through a six-stage system, Research, Partner, Build, Traction, Revenue, and Compound. It deploys $500K to $1.5M per venture and retains co-founder economics. Solving the company plumbing once routes roughly $300K to $500K of effective capital per venture into product and traction rather than overhead, so a venture launches 6 to 9 months ahead of a comparably funded standalone team. The edge is people. Domain operators with 10-plus years of Brazilian-market scar tissue, paired with a Silicon Valley playbook and first-ticket capital, assembled on day one. You can read [why we build this way](https://avanteventures.com/why-avante) for the full thesis.",
+            "The model is specific. Avante launches 3 to 4 ventures per year through a six-stage system, Research, Partner, Build, Traction, Revenue, and Compound. It deploys $500K to $1.5M per venture and retains co-founder economics. Solving the company plumbing once routes roughly $300K to $500K of effective capital per venture into product and traction rather than overhead, so a venture launches 6 to 9 months ahead of a comparably funded standalone team. The edge is people. Domain operators with 10-plus years of Brazilian-market scar tissue, paired with a Silicon Valley playbook and first-ticket capital, assembled on day one. You can read [why we build this way](/why-avante) for the full thesis.",
             "Venture studios have historically outperformed traditional venture capital. That said, the model only earns its equity if it truly removes risk and time. A passive studio that takes a founder's equity for a logo and a desk is a worse deal than raising alone, and a strong founder should walk from one. Judged that way, first-capital from a real studio is not a VC treadmill. It is the fastest honest way to start."
           ]
         }
@@ -22095,6 +23534,893 @@ const engineArticles: Article[] = [
     }
   },
   {
+    "slug": "south-america-ai-image-generator-market",
+    "category": "brazil",
+    "type": "Market Analysis",
+    "readTime": "13 min",
+    "featured": false,
+    "date": "Sep 2026",
+    "datePublished": "2026-09-04",
+    "isPublished": true,
+    "en": {
+      "title": "South America AI Image Generator Market: A Workflow Business in a Generative Costume",
+      "description": "The South America AI image generator market is USD 42 million against USD 215.31 billion of regional ecommerce. The moat is the workflow, not the model.",
+      "sections": [
+        {
+          "paragraphs": [
+            "The South America AI image generator market was worth USD 42.0 million in 2024. Every generator sold across the continent, added together. The commerce those images exist to move is projected at USD 215.31 billion in 2026. Roughly 5,000 to 1. That ratio is the entire investment case, and it points hard away from building a generator.",
+            "Nobody on this continent will build a durable company by selling image generation. This is a workflow business wearing a generative AI costume, and Avante Ventures reads it as a commerce operations problem rather than a model problem. The evidence for that reading sits in vendor pricing pages, not in analyst forecasts.",
+            "What follows is the dated evidence, the two honest defects in the only regional sizing that exists, and the specific build that survives contact with a frontier lab shipping the same capability for free."
+          ]
+        },
+        {
+          "heading": "The South America AI image generator market, with dated numbers",
+          "level": 2,
+          "paragraphs": [
+            "Market Research Future sizes the [South America AI image generator market at USD 42.0 million in 2024](https://www.marketresearchfuture.com/reports/south-america-ai-image-generator-market-61737), rising to USD 49.56 million in 2025 and a projected USD 217 million to USD 259 million by 2035 at an 18.0 percent CAGR. Ecommerce is the largest slice of the 2024 base at USD 10.0 million, ahead of social media at USD 7.5 million and media and entertainment at USD 6.3 million.",
+            "Two defects in that report deserve saying out loud. Its body text projects USD 217 million for 2035 while its executive summary says USD 259.44 million, so the 2035 number is a range and not a point estimate. It also files Mexico at 10.5 percent inside a report titled South America, and the country shares do not sum to 100. Cite the direction. Do not cite the decimal.",
+            "Now set that against the commerce it serves. Latin American ecommerce is projected at [USD 215.31 billion in 2026](https://www.digitalcommerce360.com/2026/01/28/latin-american-ecommerce-projection-215-billion/), growing roughly 1.5 times faster than the global average, per a joint Endeavor and Mercado Libre report dated 28 January 2026. Argentina, Brazil and Mexico account for close to 85 percent of regional sales, and 84 percent of purchases happen on a smartphone. Regional digital ad spend adds another USD 50.1 billion in 2026 on its way to USD 70.9 billion by 2029.",
+            "A category a vendor sizes at tens of millions of dollars across an entire continent is not a category. It is a line item inside somebody else's budget. The tool market is small because the tool is not where the value settles. That smallness is the signal, not the disappointment."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "795 million items sold in a single quarter on one marketplace, against USD 22 billion of GMV and 89 million unique active buyers. That is the catalogue volume the images have to serve.",
+            "attribution": "Mercado Libre Q2 2026 results"
+          },
+          "id": "market-size"
+        },
+        {
+          "heading": "Why the model layer has no moat and never will",
+          "level": 2,
+          "paragraphs": [
+            "Image generation is the most exposed category in the entire AI stack, and the pricing record proves it without needing an analyst. Google lists [Gemini 3.1 Flash Lite Image at USD 0.0336 per 1K resolution image](https://ai.google.dev/gemini-api/docs/pricing), dropping to USD 0.0168 with batch, with Gemini 3 Pro Image at USD 0.134 per 1K or 2K image and a 50 percent batch discount across the whole line.",
+            "The spread inside a single vendor's own lineup is the clearer tell. OpenAI prices [gpt-image-1-mini at USD 8.00 per 1M output tokens against gpt-image-1 at USD 40.00](https://developers.openai.com/api/docs/pricing), with batch again at half off. A vendor that undercuts itself fivefold inside one product line is not defending a moat. It is racing to the floor.",
+            "The floor is zero, because the weights are open and the license is permissive. [Qwen-Image](https://huggingface.co/Qwen/Qwen-Image), a 20 billion parameter image generation and editing model, shipped on 4 August 2025 under Apache 2.0 and passed 300,438 downloads in its first month. Anyone with a GPU can run it commercially for the cost of electricity. Stanford HAI's AI Index puts the broader curve at a [more than 280 fold drop](https://hai.stanford.edu/ai-index/2025-ai-index-report/research-and-development) in the cost of querying a GPT-3.5 equivalent model, from USD 20.00 per million tokens in November 2022 to USD 0.07 by October 2024.",
+            "State the conclusion without softening it. A South American company whose product is a generator competes on a capability that gets cheaper, better and more equal every quarter, against labs with vastly more capital and free open weights sitting underneath them. There is no version of that fight worth entering. The model is rented plumbing. Architect the venture so that swapping it is a configuration change and not a rebuild."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "USD 20.00 per million tokens in November 2022 to USD 0.07 by October 2024. A more than 280 fold collapse in roughly 18 months, on the capability a generator startup would be selling.",
+            "attribution": "Stanford HAI, 2025 AI Index Report"
+          },
+          "id": "commodity-layer"
+        },
+        {
+          "heading": "Catalogue, advertising, real estate and the small-merchant segment",
+          "level": 2,
+          "paragraphs": [
+            "Four commercial openings exist here. Rank them by how much proprietary data each one accumulates, never by how large the slide looks. They are listed below in that order, and the last of them is the least obvious and the most defensible.",
+            "Two structural facts explain why a global tool never closes the gap. The first is who the merchant actually is. The ILO puts informality at [47.6 percent of employment in Latin America and the Caribbean in 2024](https://www.ilo.org/resource/news/avances-en-el-empleo-en-am%C3%A9rica-latina-y-el-caribe-son-insuficientes-seg%C3%BAn), and ECLAC counts micro, small and medium companies as 99 percent of the regional industrial fabric. A merchant with 400 SKUs, no design team, no photo studio budget and a phone as their only device is not a Photoshop customer and never will be. They are reachable only through the marketplace, wallet or delivery app they already open every morning.",
+            "The second is that the region is not one buyer. The Cámara Colombiana de Comercio Electrónico counted 684.6 million online transactions in Colombia in 2025 worth COP 145.4 trillion, with [volume up 19.9 percent against value up only 11.1 percent](https://ccce.org.co/noticias/informe-trimestral-del-comportamiento-del-comercio-electronico-en-colombia-segundo-trimestre-2025/). Baskets got smaller and more frequent inside one country in one year. A Chilean shopper, a Colombian shopper and a Brazilian shopper do not answer to the same price anchor, the same seasonal cue or the same aspirational framing. That divergence is the localization argument, and it is exactly what a global tool treats as an afterthought."
+          ],
+          "bullets": [
+            "Marketplace and retail catalogue production at scale. Not one image. Ten thousand that are brand consistent, sized per marketplace template, legally cleared and localized per country. Elastic's Mercado Libre case study reports 4 million active sellers and 20 million live listings, up from 12 million two years earlier, with individual sellers running up to 50,000 items each.",
+            "Advertising creative produced per segment rather than per campaign. Against USD 50.1 billion of regional digital ad spend in 2026, hundreds of variants per audience, per country and per channel only pencil out when generation is close to free, which it now is.",
+            "Real estate and vehicle listing imagery. High volume, visually repetitive, commercially urgent and today mostly shot on phones in bad light. No verified regional market size exists for it, so the opportunity stays qualitative here rather than invented.",
+            "The informal and small-merchant segment. EMARKETER projects USD 54.45 billion of incremental Latin American retail ecommerce between 2026 and 2028, with Mercado Libre and Amazon taking roughly two thirds and nearly USD 19 billion left for small and medium retailers."
+          ],
+          "id": "where-to-build"
+        },
+        {
+          "heading": "Why brand consistency and integration are the actual product",
+          "level": 2,
+          "paragraphs": [
+            "The product is not the picture. The product is the guarantee that ten thousand pictures are all correct, all on brand, all cleared for use and already sitting in the systems where they get used.",
+            "Do the arithmetic on the generation half and it vanishes. Mercado Libre's roughly 20 million live listings, regenerated at Google's USD 0.0168 batch price, cost about USD 336,000 in raw generation. That is a calculation, 20 million multiplied by USD 0.0168, and not a published statistic. Against a USD 215.31 billion regional commerce base it is a rounding error. Generation is not the cost. Governance, rights, localization and integration are the cost.",
+            "What a buyer actually pays for is narrower and harder. A brand consistency layer trained on their proprietary catalogue and their approval history, so output matches their existing shelf instead of a generic aesthetic. Rights and legal clearance, so the marketing director keeps their job. Per country localization rules encoded once and applied automatically. And a live wire into the product information management system, the ERP, the marketplace listing API and the ad platform, so an approved asset lands where it is used without a human moving a file.",
+            "None of that is a model problem. All of it is scar tissue. It takes somebody who knows which marketplace rejects which aspect ratio, which legal review takes eleven days and which integration breaks at quarter end. That input is the whole company, and it is why the winning team here is built from domain operators with 10+ years of Brazilian-market scar tissue, paired with a Silicon Valley playbook and first-ticket capital, assembled on day one. The same structural edge runs through [the Brazilian services economy opportunity](/library/brazil-services-economy-opportunity), where services account for roughly 70% of Brazilian GDP with low software penetration. A generalist with a better model cannot buy it, and a frontier lab has no incentive to build it for a market this specific.",
+            "Of the seven powers, exactly two are available in this category and neither is technology. Switching costs, because a catalogue pipeline wired into a retailer's PIM and ad stack is not swapped casually. And cornered resource, in the form of the client's own approval history and brand rules, which no competitor can legally or practically obtain. Anyone claiming a technology power in image generation is describing a rented API."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Derived arithmetic, not a reported figure. 20 million live Mercado Libre listings multiplied by USD 0.0168 at batch pricing is roughly USD 336,000 to regenerate an entire marketplace catalogue. That is a rounding error against USD 215.31 billion of regional ecommerce.",
+            "attribution": "Avante calculation from Elastic listing counts and Google Gemini API pricing"
+          },
+          "id": "the-moat"
+        },
+        {
+          "heading": "How a catalogue copilot compounds into proprietary data",
+          "level": 2,
+          "paragraphs": [
+            "This category is a textbook expression of the copilot to data to fund flywheel, and the entry point is unusually measurable. The copilot earns its way into a retailer's catalogue process by beating the current agency loop on turnaround and rework. That is a number a procurement lead can check in one quarter, not a positioning claim.",
+            "Then the second-order effect starts. Every generation, every brand rejection, every legal note and every localization override becomes labelled proprietary data that no model provider holds and no competitor can buy. That corpus trains the brand consistency layer, which gets measurably better per client and creates the switching cost the model layer never can.",
+            "Once the pipeline is processing catalogue volume across several retailers, the venture is sitting on structured demand and performance data about what actually sells by country. In a region where 795 million items moved through one marketplace in a single quarter, where 20 million listings sit live at any moment and 84 percent of purchases happen on a phone, that dataset is the asset. It carries the next raise and, in the mature case, becomes a capital deployment product in its own right. The model at the bottom of the stack stays rented and interchangeable. The data loop is the company."
+          ],
+          "id": "the-flywheel"
+        },
+        {
+          "heading": "Frontier labs, pricing pressure, and the generation trap",
+          "level": 2,
+          "paragraphs": [
+            "Say this plainly rather than burying it in a risks appendix. This is the single most exposed category in the AI stack, and a venture here fails by default unless it owns workflow and integration.",
+            "The cost curve that opens the opportunity is the same curve that closes it. Cheap generation is what lets a regional venture serve enterprise catalogue volume without a Series A behind it. It is also what lets a frontier lab bundle a catalogue feature into a product tier at zero marginal cost. The only thing standing between those two outcomes is how much integration depth gets built first, and that window is measured in quarters.",
+            "So the kill criterion belongs in the plan before the first line of code. If at twelve months the venture's defensibility still rests on output quality rather than on integrations and accumulated approval data, it has failed and should be shut down rather than funded further.",
+            "The funding environment sharpens the same point. Latin American venture capital sits well below its 2021 peak and has concentrated into larger cheques across fewer deals. LAVCA's Trends in Tech series is the standing regional reference, and this analysis declines to quote a total it could not open and verify. Directionally, a concentrated market punishes the thin wrapper with a demo and no distribution, and rewards a venture with a named enterprise workflow, a signed design partner, revenue inside twelve months and a data asset that compounds."
+          ],
+          "bullets": [
+            "Frontier labs will ship the capability for free. Google, OpenAI and the design suites already price image generation as a loss leader for a larger platform. Any feature a thin layer adds is a candidate for absorption in the next release.",
+            "Pricing pressure is structural, not cyclical. A fivefold gap inside one vendor's own lineup, a 50 percent batch discount and Apache 2.0 open weights at zero marginal cost mean gross margin on generation trends to nothing. A venture that prices per image is pricing a commodity.",
+            "The generation trap. Generation demos beautifully and defends nothing. Governance, rights, localization and integration demo badly and defend everything. A team that cannot resist the demo will build the wrong company.",
+            "Enterprise trust is a gate, not a feature. A large retailer will not put generated imagery on a live catalogue without provenance, rights clearance and an audit trail. That is a compliance build and a sales cycle."
+          ],
+          "id": "the-hard-parts"
+        },
+        {
+          "heading": "How Avante would approach it",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America. It would treat this as a commerce operations problem rather than a generative AI problem, and it would say exactly that to the first customer in the first meeting.",
+            "The six-stage system applies cleanly here. Research narrows to one workflow with a named buyer, most likely mid market retail catalogue operations in Brazil with a second country in year two. Partner brings in a domain operator who has personally run catalogue production at regional scale, because that scar tissue is the scarce input and cannot be hired later. Build ships the brand consistency layer and the PIM and marketplace integrations first and treats the image model as swappable configuration. Traction proves the loop on one retailer's live catalogue with measured rework reduction, not with a demo reel. Revenue prices the workflow and the guarantee, never the image. Compound turns the accumulated approval corpus into the asset that carries the venture to its next raise.",
+            "The studio parameters are fixed rather than negotiated per deal. Avante launches 3-4 ventures per year, deploys $500K-$1.5M per venture across pre-seed and retains co-founder economics, with operating partners engaged through the first revenue milestone. Solving company plumbing once routes roughly $300K-$500K of effective capital per venture into product and traction rather than overhead. In a category where the window to build integration depth is measured in quarters, that reallocation is not a nice-to-have. The full model sits at [why Avante builds rather than invests](/why-avante).",
+            "Venture studios post ~50% IRR versus an industry-standard ~19% for traditional VC, per the Global Startup Studio Network (GSSN), roughly 2.5x over realistic time horizons. That benchmark belongs to the studio model and never to a single firm's realized return. The mechanism behind it is unglamorous. Assembling operator, playbook and first capital on day one beats discovering them sequentially, and the gap is widest where the winning input is local knowledge rather than a global technical breakthrough.",
+            "AI infrastructure is now cheap enough to deploy without a Series A, and this category is the cleanest illustration of that fact in the entire stack. A USD 215.31 billion regional commerce base. 4 million marketplace sellers. Roughly half the workforce informal. And a generation layer that already costs close to nothing. Build the costume and a frontier lab takes the market next quarter. Build the workflow underneath it and the costume stops mattering."
+          ],
+          "id": "how-avante"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How big is the South America AI image generator market?",
+          "a": "Market Research Future sizes the South America AI image generator market at USD 42.0 million in 2024, rising to USD 49.56 million in 2025 and a projected USD 217 million to USD 259 million by 2035 at an 18.0 percent CAGR. Read that report with two caveats. Its body text and its executive summary disagree on the 2035 figure, and it files Mexico under South America. Set it against USD 215.31 billion of projected Latin American ecommerce in 2026 and the ratio, roughly 5,000 to 1, is the finding rather than the forecast."
+        },
+        {
+          "q": "Is there a moat in the South America AI image generator market?",
+          "a": "Not at the model layer, and there never will be. Google lists image generation at USD 0.0168 with batch pricing, OpenAI undercuts itself fivefold inside one product line with gpt-image-1-mini at USD 8.00 per 1M output tokens against gpt-image-1 at USD 40.00, and Qwen-Image ships 20 billion parameters under Apache 2.0. The defensible layer is the brand consistency system trained on a client's proprietary catalogue plus the integrations into the PIM, marketplace and ad platforms where commerce actually happens."
+        },
+        {
+          "q": "What does it cost to regenerate a marketplace catalogue with AI?",
+          "a": "Roughly USD 336,000 for about 20 million live listings, using Google's USD 0.0168 batch rate. That number is arithmetic, 20 million multiplied by USD 0.0168, and not a published statistic. Against a USD 215.31 billion regional commerce base it is a rounding error, which is the cleanest proof that generation is not the business."
+        },
+        {
+          "q": "Who buys AI product photography in South America?",
+          "a": "Three buyers, in order of how much proprietary data each one generates. Retailers and marketplace sellers running thousands of SKUs, where Elastic reports 4 million active Mercado Libre sellers and 20 million live listings. Advertisers producing creative per segment against USD 50.1 billion of regional digital ad spend in 2026. And the small-merchant segment, where the ILO puts informality at 47.6 percent of Latin American and Caribbean employment in 2024 and a photo shoot is out of reach at any price."
+        },
+        {
+          "q": "Should a startup build an AI image generator in South America?",
+          "a": "No. Build the workflow around one instead. Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America, and the kill criterion in this category is explicit. If at twelve months defensibility still rests on output quality rather than on integrations and accumulated approval data, the venture has failed and should be shut down rather than funded further."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Mercado de Geradores de Imagem com IA na América do Sul: Um Negócio de Workflow com Fantasia Generativa",
+      "description": "O mercado de geradores de imagem com IA na América do Sul vale USD 42 milhões. O comércio que consome essas imagens vale USD 215 bilhões.",
+      "sections": [
+        {
+          "paragraphs": [
+            "O mercado de geradores de imagem com IA na América do Sul vale USD 42,0 milhões em 2024, segundo a [Market Research Future](https://www.marketresearchfuture.com/reports/south-america-ai-image-generator-market-61737). O comércio eletrônico latino-americano que consome essas imagens é projetado em USD 215,31 bilhões para 2026, no relatório conjunto da Endeavor e do Mercado Livre publicado pelo [Digital Commerce 360 em 28 de janeiro de 2026](https://www.digitalcommerce360.com/2026/01/28/latin-american-ecommerce-projection-215-billion/). A razão é de cerca de 5.000 para 1 entre a ferramenta e o dinheiro que ela movimenta. Todo o resto deste texto sai dessa distância.",
+            "Ninguém na América do Sul vai construir uma empresa durável vendendo geração de imagem. A camada do modelo não tem moat, o preço por imagem já está em frações de centavo e o piso é zero, porque existem pesos abertos com licença comercial permissiva rodando na GPU de qualquer um. O que se defende é o workflow em volta do gerador.",
+            "Diga o nome disso sem eufemismo. É um negócio de workflow com fantasia de IA generativa.",
+            "Para quem lê daqui, a moldura útil é a inversa da habitual. O Brasil é o maior mercado isolado do continente e mesmo assim é o recorte errado para desenhar o produto. O lojista chileno, o colombiano e o peruano enfrentam o mesmo problema de catálogo que o brasileiro, com a mesma ausência de estúdio fotográfico e o mesmo prazo de marketplace. Quem construir só para o português do Brasil entrega os outros mercados de graça ao próximo entrante. A Avante Ventures trata esse espaço como um problema de operação de comércio, não como um problema de IA generativa."
+          ]
+        },
+        {
+          "heading": "O mercado de geradores de imagem com IA na América do Sul, com números datados",
+          "level": 2,
+          "paragraphs": [
+            "A pequenez da categoria é o sinal, não a decepção. Uma categoria que um fornecedor dimensiona em dezenas de milhões de dólares para um continente inteiro não é uma categoria. É uma linha dentro do orçamento de outra pessoa.",
+            "Vale ler a composição interna, porque ela diz mais que o total.",
+            "Dois defeitos do relatório precisam ser registrados antes de alguém levar a cifra a um comitê de investimento. O primeiro é que ele se contradiz sobre 2035, com USD 217 milhões no corpo do texto e USD 259,44 milhões no sumário executivo, o que obriga a tratar 2035 como faixa e não como ponto. O segundo é que ele classifica o México, com 10,5%, dentro de um relatório intitulado América do Sul, ao lado do Brasil com 18,0% e da Argentina com 8,0%, e as participações não somam 100%. Cite a direção, nunca a casa decimal.",
+            "O ponto estrutural sobrevive aos defeitos do relatório. Serviços respondem por cerca de 70% do PIB brasileiro com baixa penetração de software, segundo o [IBGE](https://www.ibge.gov.br/estatisticas/economicas/servicos.html), e é exatamente em serviços que produção de catálogo, criação publicitária e operação de marketing se concentram em toda a região. A leitura longa dessa base está em [a economia de serviços do Brasil](/library/brazil-services-economy-opportunity)."
+          ],
+          "bullets": [
+            "Market Research Future: USD 42,0 milhões em 2024, USD 49,56 milhões em 2025 e projeção de USD 217 milhões a USD 259 milhões até 2035, com CAGR de 18,0% entre 2025 e 2035.",
+            "Dentro da base de 2024, ecommerce lidera com USD 10,0 milhões, à frente de redes sociais com USD 7,5 milhões, mídia e entretenimento com USD 6,3 milhões, saúde com USD 5,0 milhões e moda com USD 4,2 milhões.",
+            "Software responde por USD 20,0 milhões da base e serviços por USD 22,0 milhões. Metade do dinheiro dessa categoria já é gente entregando trabalho, não licença de algoritmo."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "USD 42,0 milhões em 2024 para a categoria de ferramenta na América do Sul, contra USD 215,31 bilhões de comércio eletrônico latino-americano projetados para 2026.",
+            "attribution": "Market Research Future e relatório Endeavor e Mercado Livre via Digital Commerce 360, 28 de janeiro de 2026"
+          },
+          "id": "market-size"
+        },
+        {
+          "heading": "Por que a camada do modelo não tem moat e nunca terá",
+          "level": 2,
+          "paragraphs": [
+            "A prova de que não existe moat está nas páginas de preço dos próprios fornecedores, não em opinião de analista.",
+            "Com esses números públicos dá para fazer a conta que interessa. O estudo de caso da [Elastic com o Mercado Livre](https://www.elastic.co/customers/mercadolibre) reporta 4 milhões de vendedores ativos e 20 milhões de anúncios ativos, ante 12 milhões dois anos antes. A USD 0,0168 por imagem em lote, regerar todos esses anúncios custaria aproximadamente USD 336.000 em geração bruta. Que fique explícito antes que alguém repita a cifra fora de contexto. Esse valor é um cálculo próprio, 20 milhões multiplicados por USD 0,0168, e não uma cifra publicada por nenhuma fonte.",
+            "USD 336.000 é erro de arredondamento contra uma base de comércio de USD 215 bilhões. A leitura operacional é direta. Geração não é o custo. Governança, direitos de uso, localização por país e integração são o custo, e são a única parte que alguém consegue defender.",
+            "Uma empresa sul-americana cujo produto é o gerador está competindo em uma capacidade que fica mais barata, melhor e mais igual a cada trimestre, contra laboratórios com capital incomparavelmente maior e contra pesos abertos gratuitos por baixo. Não existe versão dessa briga que valha a pena entrar. O modelo é encanamento alugado. Trate-o como intercambiável desde a primeira linha de código e desenhe a arquitetura para que trocá-lo seja mudança de configuração, não reconstrução."
+          ],
+          "bullets": [
+            "O Google lista o [Gemini 3.1 Flash Lite Image](https://ai.google.dev/gemini-api/docs/pricing) a USD 0,0336 por imagem em resolução 1K, caindo para USD 0,0168 em lote, com o Gemini 3 Pro Image a USD 0,134 por imagem em 1K ou 2K.",
+            "A [OpenAI](https://developers.openai.com/api/docs/pricing) se corta em cinco vezes dentro da mesma linha. O gpt-image-1-mini sai a USD 8,00 por 1M de tokens de saída contra USD 40,00 do gpt-image-1. Quem se subcota assim não está defendendo um moat, está correndo para o piso.",
+            "O piso é literalmente zero. O [Qwen-Image](https://huggingface.co/Qwen/Qwen-Image), modelo de geração e edição com 20B de parâmetros, foi publicado em 4 de agosto de 2025 sob licença Apache 2.0 e passou de 300.438 downloads no primeiro mês. Qualquer pessoa com uma GPU roda comercialmente pelo custo da eletricidade.",
+            "A curva de inferência confirma a direção. O custo de consultar um modelo equivalente ao GPT-3.5 caiu de USD 20,00 por milhão de tokens em novembro de 2022 para USD 0,07 em outubro de 2024, mais de 280 vezes em cerca de 18 meses, segundo o [Stanford HAI](https://hai.stanford.edu/ai-index/2025-ai-index-report/research-and-development)."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Cálculo próprio, não cifra publicada. Os cerca de 20 milhões de anúncios ativos do Mercado Livre poderiam ser inteiramente regerados por aproximadamente USD 336.000 em geração bruta, ou seja, 20 milhões multiplicados por USD 0,0168 por imagem em lote.",
+            "attribution": "Cálculo próprio da Avante sobre os preços publicados da Gemini API do Google e a contagem de anúncios do estudo de caso da Elastic com o Mercado Livre"
+          },
+          "id": "commodity-layer"
+        },
+        {
+          "heading": "Catálogo, publicidade, imóveis e o pequeno comerciante",
+          "level": 2,
+          "paragraphs": [
+            "Um único marketplace vendeu 795 milhões de itens em três meses. É esse o volume que consome imagem na região, e nenhum desses vendedores acorda querendo comprar um gerador. No segundo trimestre de 2026 o [Mercado Livre](https://finance.yahoo.com/markets/stocks/articles/mercado-libre-q2-2026-revenue-212400773.html) reportou USD 22 bilhões de GMV, 89 milhões de compradores únicos ativos e USD 10,2 bilhões de receita líquida e resultado financeiro. No Brasil, em base neutra de câmbio, o GMV cresceu 39% e os itens vendidos subiram 56%.",
+            "A oportunidade incremental também não está concentrada. A [EMARKETER](https://www.emarketer.com/content/latin-america-ecommerce-market-shares-2026) projeta USD 54,45 bilhões de crescimento no varejo digital latino-americano entre 2026 e 2028 e estima que Mercado Livre e Amazon capturam cerca de dois terços disso, o que deixa quase USD 19 bilhões para varejistas pequenos e médios. São exatamente os lojistas que nunca contrataram um ensaio fotográfico e nunca vão contratar.",
+            "A divergência entre países é o argumento de localização, e ela é mensurável. A [Câmara Colombiana de Comércio Eletrônico](https://ccce.org.co/noticias/informe-trimestral-del-comportamiento-del-comercio-electronico-en-colombia-segundo-trimestre-2025/) registra 684,6 milhões de transações online em 2025, somando COP 145,4 trilhões, com volume subindo 19,9% enquanto o valor subiu apenas 11,1%, [segundo o fechamento anual publicado em 23 de fevereiro de 2026](https://lanotaeconomica.com.co/movidas-empresarial/el-comercio-electronico-en-colombia-alcanzo-en-2025-su-nivel-historico-mas-alto-desde-2019-2/). Cestas menores e mais frequentes. Um comprador chileno, um colombiano e um brasileiro não respondem à mesma imagem, à mesma âncora de preço nem à mesma sazonalidade, e nenhum modelo global resolve isso sozinho. É por isso que a regra de localização precisa ser um parâmetro do sistema desde o começo, e não uma adaptação feita depois que o produto já nasceu monolíngue. A leitura de país único está em [o mercado brasileiro de geradores de imagem](/library/brazil-ai-image-generator-market-opportunity), e o Brasil sozinho não fecha a conta de escala desta categoria.",
+            "Metade da base comercial do continente está fora do radar de qualquer ferramenta vendida por assinatura. A [Organização Internacional do Trabalho](https://www.ilo.org/resource/news/avances-en-el-empleo-en-am%C3%A9rica-latina-y-el-caribe-son-insuficientes-seg%C3%BAn) coloca a informalidade em 47,6% do emprego na América Latina e no Caribe em 2024, e a [CEPAL](https://www.cepal.org/en/topics/micro-small-and-medium-sized-enterprises-msmes) aponta que micro, pequenas e médias empresas representam 99% do tecido industrial regional. Um lojista com 400 SKUs, sem time de design e com o celular como único equipamento, não é cliente de Photoshop e nunca será. Ele é alcançável por um workflow embutido no marketplace, na carteira digital ou no app de logística que ele já abre toda manhã."
+          ],
+          "bullets": [
+            "Produção de catálogo em escala para varejo e marketplace. Não uma imagem, e sim dez mil imagens consistentes com a marca, no template correto de cada marketplace, liberadas juridicamente e localizadas por país.",
+            "Criação publicitária por segmento em vez de por campanha. Contra um mercado regional de mídia digital de USD 50,1 bilhões em 2026 crescendo 10,8% ao ano, [segundo levantamento publicado em 10 de fevereiro de 2026](https://www.globenewswire.com/news-release/2026/02/10/3235502/0/en/latin-america-digital-ad-spend-market-size-forecast-by-spend-value-across-100-kpis-by-type-of-advertising-channel-form.html), o jogo passa a ser centenas de variações por audiência, país e canal.",
+            "Imagem de anúncio de imóveis e veículos. Volume alto, repetição visual, urgência comercial e fotos tiradas de celular em luz ruim. Não existe cifra regional verificada para esse recorte nesta pesquisa, então ele fica qualitativo de propósito.",
+            "O segmento informal e de pequeno comerciante. Quase metade do emprego regional na informalidade, 99% do tecido industrial em MPMEs e quase USD 19 bilhões de comércio incremental disponível até 2028."
+          ],
+          "id": "where-to-build"
+        },
+        {
+          "heading": "Por que consistência de marca e integração são o produto real",
+          "level": 2,
+          "paragraphs": [
+            "O produto não é a imagem. O produto é a garantia de que dez mil imagens estão todas corretas.",
+            "O que o comprador paga é uma camada de consistência de marca treinada no catálogo proprietário dele e no histórico de aprovações dele, para que a saída combine com a prateleira que ele já tem em vez de uma estética genérica. Paga também liberação de direitos, para que o diretor de marketing não seja demitido. Paga regras de localização por país codificadas uma vez e aplicadas automaticamente. E paga uma conexão viva com o sistema de informação de produto, o ERP, a API de anúncios do marketplace e a plataforma de mídia, para que um ativo aprovado chegue onde é usado sem ninguém arrastar arquivo.",
+            "Nada disso é problema de modelo. Tudo isso é cicatriz. Exige alguém que já entregou pessoalmente uma renovação de catálogo para um varejista regional, que sabe qual marketplace rejeita qual proporção, qual revisão jurídica demora onze dias e qual integração quebra no fechamento do trimestre. Operadores de domínio com 10 ou mais anos de cicatriz do mercado brasileiro e regional, combinados com um playbook de Vale do Silício e capital de primeiro cheque, montados desde o primeiro dia. Um generalista com um modelo melhor não compra isso, e um laboratório de fronteira não tem incentivo para construir para um mercado tão específico.",
+            "Usando a moldura de Hamilton Helmer com precisão, das sete forças exatamente duas estão disponíveis aqui, e nenhuma delas é tecnologia. Custos de troca, porque um pipeline de catálogo ligado ao PIM e à stack de mídia de um varejista não se troca por capricho. E recurso cativo, o cornered resource de Helmer, na forma do histórico de aprovação e das regras de marca do próprio cliente, que ninguém mais consegue obter nem legal nem praticamente. Economias de escala e efeito de rede não estão na mesa neste estágio. Quem alega força tecnológica em geração de imagem está descrevendo uma API alugada."
+          ],
+          "id": "the-moat"
+        },
+        {
+          "heading": "Como um copilot de catálogo compõe dado proprietário",
+          "level": 2,
+          "paragraphs": [
+            "O flywheel copilot, dado, capital não é metáfora aqui. É a única forma de a empresa acumular algo próprio enquanto o modelo na base continua sendo de outra pessoa.",
+            "O copilot entra no processo de catálogo do varejista por ser mais rápido que o ciclo atual de agência. A partir daí cada geração, cada rejeição de marca, cada nota jurídica e cada ajuste de localização vira dado proprietário rotulado que nenhum fornecedor de modelo tem e que nenhum concorrente consegue comprar. O ativo não é o que foi gerado. É o que foi reprovado, por quem, e por qual motivo.",
+            "Esse corpus treina a camada de consistência de marca, que fica mensuravelmente melhor por cliente e cria o custo de troca. Quando o pipeline já processa volume de catálogo de vários varejistas em mais de um país, a empresa passa a sentar sobre dado estruturado de demanda e desempenho sobre o que realmente vende no Brasil, no Chile e na Colômbia, com granularidade que nenhum relatório de mercado oferece. Esse dado é a base do próximo aporte e, no caso maduro, de um produto próprio de alocação de capital.",
+            "O modelo na base da pilha continua alugado e intercambiável. O loop de dado é a empresa."
+          ],
+          "id": "the-flywheel"
+        },
+        {
+          "heading": "Laboratórios de fronteira, pressão de preço e a armadilha da geração",
+          "level": 2,
+          "paragraphs": [
+            "Esta é a categoria mais exposta de toda a stack de IA, e suavizar isso seria mentir para o fundador.",
+            "A armadilha da geração merece nome próprio porque é o erro mais comum e o mais caro. O time constrói aquilo que demonstra bem. Geração demonstra lindamente e não defende nada. Governança, direitos, localização e integração demonstram mal e defendem tudo. Um time que não resiste à demo constrói a empresa errada e só descobre no dia em que um laboratório de fronteira liga o mesmo recurso de graça.",
+            "O critério honesto de encerramento precisa estar escrito antes de o dinheiro entrar. Se, doze meses depois, a defensabilidade do negócio ainda depender da qualidade da saída visual em vez de integrações e histórico acumulado de aprovações, ele falhou e deve ser encerrado em vez de receber mais capital.",
+            "O contexto de captação reforça a disciplina em vez de aliviá-la. O funding de venture na América Latina segue bem abaixo do pico de 2021 e ficou concentrado em cheques maiores e menos operações, e a série Trends in Tech da [LAVCA](https://www.lavca.org/research/2026-lavca-trends-in-tech/) é a referência anual para os números regionais. Esta pesquisa não conseguiu abrir o relatório de 2026, então o ponto fica direcional e sem cifra. Um mercado concentrado pune exatamente o perfil que essa categoria atrai, que é o wrapper fino com uma demo e nenhuma distribuição, e financia o perfil oposto, com comprador nomeado, receita dentro de doze meses e um ativo de dado que compõe."
+          ],
+          "bullets": [
+            "Laboratórios de fronteira vão entregar a capacidade de graça. Google e OpenAI já precificam geração de imagem como isca para uma plataforma maior, e qualquer recurso que uma camada fina adiciona é candidato a absorção na próxima versão.",
+            "A pressão de preço é brutal e estrutural. Cinco vezes de diferença dentro da linha de um mesmo fornecedor, mais 50% de desconto em lote, mais pesos Apache 2.0 a custo marginal zero, levam a margem bruta sobre geração para perto de nada.",
+            "Confiança corporativa e brand safety são portões reais. Um grande varejista não coloca imagem gerada em catálogo ao vivo sem procedência, liberação de direitos e trilha de auditoria. Isso é ciclo de vendas e construção de compliance, não recurso de produto."
+          ],
+          "id": "the-hard-parts"
+        },
+        {
+          "heading": "Como a Avante abordaria",
+          "level": 2,
+          "paragraphs": [
+            "A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina. Aqui ela trataria o problema como operação de comércio e diria isso ao primeiro cliente na primeira reunião, antes de mostrar qualquer imagem.",
+            "O sistema de seis estágios aplicado a este caso fica assim. Research estreita para um único workflow com comprador nomeado, provavelmente operação de catálogo no varejo de médio porte no Brasil, com um segundo país já no ano dois. Partner traz um operador de domínio que já rodou produção de catálogo em escala na região, porque essa cicatriz é o insumo escasso e não pode ser contratada depois. Build entrega primeiro a camada de consistência de marca e as integrações com PIM e marketplace, e trata o modelo de imagem como configuração trocável. Traction prova o loop no catálogo vivo de um varejista com redução de retrabalho medida, não com um vídeo de demonstração. Revenue precifica o workflow e a garantia, nunca a imagem. Compound transforma o corpus acumulado de aprovações no ativo que carrega a empresa até a próxima rodada.",
+            "Os parâmetros do studio, ditos como são. A Avante lança 3-4 ventures por ano, aporta USD 500K a 1,5M por venture no pré-seed e mantém economia de co-founder, com operating partners engajados até o primeiro marco de receita. Resolver o encanamento societário uma única vez direciona cerca de USD 300K a 500K de capital efetivo por venture para produto e tração em vez de overhead, e coloca a venture na rua 6 a 9 meses à frente de um time autônomo com o mesmo capital. Nesta categoria esses meses são o ativo, porque a janela para construir profundidade de integração fecha quando o próximo release de plataforma abre. A infraestrutura de IA já está barata o bastante para operar sem uma Série A, e esta é a ilustração mais limpa disso na stack inteira. A lógica completa está em [por que a Avante opera como venture studio](/why-avante).",
+            "O argumento geográfico fecha a conta. A razão pela qual venture studios registram ~50% de IRR contra ~19% do venture capital tradicional, segundo a Global Startup Studio Network, é que montar operador, playbook e capital desde o primeiro dia vence descobri-los em sequência. Essa vantagem é maior onde o insumo vencedor é conhecimento local e não um avanço técnico global. Comércio de catálogo sul-americano é precisamente isso. Uma base de USD 215 bilhões, 4 milhões de vendedores em um único marketplace, quase metade da força de trabalho na informalidade e uma camada de geração que já é praticamente gratuita. O gerador vai ficar de graça em algum trimestre próximo. A única pergunta que importa é quem terá construído o encanamento por onde ele passa."
+          ],
+          "id": "how-avante"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Qual o tamanho do mercado de geradores de imagem com IA na América do Sul?",
+          "a": "A Market Research Future dimensiona o mercado de geradores de imagem com IA na América do Sul em USD 42,0 milhões em 2024, com projeção de USD 217 milhões a USD 259 milhões até 2035 e CAGR de 18,0%. O relatório tem dois defeitos que precisam ser citados junto com a cifra. Ele se contradiz sobre o valor de 2035 e classifica o México como América do Sul. Use a direção, não a casa decimal."
+        },
+        {
+          "q": "Por que a geração de imagens com IA na América do Sul não é um negócio defensável por si só?",
+          "a": "Porque a camada do modelo não tem moat e o piso de preço é zero. O Google lista o Gemini 3.1 Flash Lite Image a USD 0,0336 por imagem em resolução 1K e USD 0,0168 em lote, a OpenAI se corta em cinco vezes dentro da própria linha, e o Qwen-Image de 20B de parâmetros saiu sob Apache 2.0 em 4 de agosto de 2025 com 300.438 downloads no primeiro mês. Quem vende geração compete com quem entrega geração de graça."
+        },
+        {
+          "q": "Onde está o dinheiro de verdade nesse mercado?",
+          "a": "Está no comércio que consome as imagens, não na ferramenta que as produz. O comércio eletrônico latino-americano é projetado em USD 215,31 bilhões para 2026, o Mercado Livre vendeu 795 milhões de itens em um único trimestre, e a EMARKETER deixa quase USD 19 bilhões de comércio incremental para varejistas pequenos e médios até 2028. A ferramenta vale dezenas de milhões e o comércio vale centenas de bilhões."
+        },
+        {
+          "q": "Quanto custaria regerar o catálogo inteiro de um grande marketplace?",
+          "a": "Cerca de USD 336.000 pelos preços atuais de lote, e esse valor é um cálculo próprio, não uma cifra publicada por nenhuma fonte. São os aproximadamente 20 milhões de anúncios ativos do Mercado Livre multiplicados por USD 0,0168 por imagem no preço de lote do Google. O ponto é que isso é erro de arredondamento contra uma base de comércio de USD 215 bilhões, o que prova que geração não é onde está o custo nem a defesa."
+        },
+        {
+          "q": "Vale a pena construir só para o mercado brasileiro?",
+          "a": "Não. O Brasil é o maior mercado isolado do continente, mas o problema de catálogo é idêntico no Chile, na Colômbia e no Peru, e as regras de localização mudam por país sem mudar a arquitetura. Um produto construído só para o português do Brasil resolve a maior fatia e entrega o resto do continente ao próximo entrante. Trate idioma e regra de país como parâmetro de configuração desde o primeiro cliente."
+        },
+        {
+          "q": "Como a Avante Ventures construiria uma empresa nessa categoria?",
+          "a": "Como um negócio de workflow, não como um negócio de IA generativa. A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina, lança 3-4 ventures por ano com USD 500K a 1,5M por venture, e aqui rodaria os seis estágios Research, Partner, Build, Traction, Revenue e Compound em torno de uma camada de consistência de marca integrada ao PIM e aos marketplaces. O modelo de imagem fica como configuração trocável."
+        }
+      ]
+    },
+    "es": {
+      "title": "Mercado de Generadores de Imagen con IA en América del Sur: Un Negocio de Workflow con Disfraz Generativo",
+      "description": "El mercado de generadores de imagen con IA en América del Sur vale USD 42 millones. El comercio que consume esas imágenes vale USD 215 mil millones.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Un proveedor dimensiona el mercado de generadores de imagen con IA en América del Sur en USD 42,0 millones. El comercio electrónico que consume esas imágenes se proyecta en USD 215,31 mil millones para 2026. Una relación cercana a 5.000 a 1 separa la categoría de la herramienta del comercio que la usa, y ese cociente es el argumento entero.",
+            "Nadie en la región va a construir una compañía durable vendiendo generación de imagen. La capa del modelo no tiene moat, nunca lo va a tener, y el precio cae por una curva que ninguna startup regional puede correr más rápido. Lo defendible es el workflow alrededor del generador. Consistencia de marca entrenada sobre el catálogo propio del cliente, liberación legal de derechos, localización país por país y una conexión viva con los sistemas de información de producto donde el comercio ocurre de verdad.",
+            "Sin rodeos: esto es un negocio de workflow con disfraz de IA generativa. Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina, y trataría esta categoría como un problema de operaciones de comercio y no como un problema de modelos. Véndalo como otra cosa y un laboratorio de frontera regala su producto el trimestre entrante."
+          ]
+        },
+        {
+          "heading": "El mercado de generadores de imagen con IA en América del Sur, con números fechados",
+          "level": 2,
+          "paragraphs": [
+            "La cifra de la herramienta es pequeña, y su pequeñez es la señal, no la decepción. [Market Research Future](https://www.marketresearchfuture.com/reports/south-america-ai-image-generator-market-61737) dimensiona el mercado de generadores de imagen con IA en América del Sur en USD 42,0 millones en 2024, con USD 49,56 millones en 2025 y una proyección de entre USD 217 millones y USD 259 millones para 2035, a una CAGR de 18,0% entre 2025 y 2035. Software aporta USD 20,0 millones de esa base y servicios USD 22,0 millones. Dentro de las verticales, el comercio electrónico ya es la mayor con USD 10,0 millones en 2024, por delante de redes sociales con USD 7,5 millones y de medios y entretenimiento con USD 6,3 millones.",
+            "Ese informe hay que leerlo con dos defectos dichos en voz alta. Su cuerpo de texto proyecta USD 217 millones para 2035 mientras el resumen ejecutivo dice USD 259,44 millones, así que la cifra de 2035 es un rango y no un punto. Y clasifica a México, con 10,5%, dentro de un informe titulado América del Sur, junto a Brasil con 18,0%, Argentina con 8,0% y el resto de la región con 5,5%, participaciones que además no suman 100. Cite la dirección, no el decimal.",
+            "Ahora el otro lado del cociente, que es donde vive el caso regional. Las ventas de comercio electrónico en América Latina se proyectan en USD 215,31 mil millones en 2026, creciendo cerca de 1,5 veces más rápido que el promedio global, según el informe conjunto de Endeavor y Mercado Libre recogido por [Digital Commerce 360 el 28 de enero de 2026](https://www.digitalcommerce360.com/2026/01/28/latin-american-ecommerce-projection-215-billion/). Argentina, Brasil y México concentran cerca de 85% de las ventas regionales y 84% de las compras ocurren en un smartphone. El gasto en publicidad digital de la región suma USD 50,1 mil millones en 2026 y llega a USD 70,9 mil millones en 2029.",
+            "El mejor proxy de volumen de catálogo no es un caso de estudio importado de otro continente. Es el marketplace donde el vendedor de Bogotá, Santiago o Buenos Aires publica todas las mañanas desde el celular. En el segundo trimestre de 2026 [Mercado Libre](https://finance.yahoo.com/markets/stocks/articles/mercado-libre-q2-2026-revenue-212400773.html) reportó USD 22 mil millones de GMV, 795 millones de ítems vendidos, 89 millones de compradores únicos activos y USD 10,2 mil millones de ingresos netos e ingresos financieros. Una categoría que un proveedor dimensiona en decenas de millones de dólares para todo un continente no es una categoría. Es una línea dentro del presupuesto de otro. El dinero está río abajo."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "795 millones de ítems vendidos en un solo trimestre, en un solo marketplace, con USD 22 mil millones de GMV y 89 millones de compradores únicos activos.",
+            "attribution": "Mercado Libre, resultados del segundo trimestre de 2026."
+          },
+          "id": "market-size"
+        },
+        {
+          "heading": "Por qué la capa del modelo no tiene moat y nunca lo tendrá",
+          "level": 2,
+          "paragraphs": [
+            "El precio publicado por imagen ya está en fracciones de centavo y sigue cayendo. La evidencia no necesita interpretación porque está en las páginas de precios que los propios proveedores publican.",
+            "Saque la cuenta con las publicaciones que ya existen. Mercado Libre mantiene cerca de 20 millones de publicaciones activas y 4 millones de vendedores activos, según el [caso de cliente de Elastic](https://www.elastic.co/customers/mercadolibre), y algunos vendedores individuales administran hasta 50.000 ítems cada uno. A USD 0,0168 por imagen en lote, regenerar la totalidad de ese catálogo cuesta alrededor de USD 336.000 en generación bruta.",
+            "Esa cifra de USD 336.000 es un cálculo propio, no un dato publicado. Son 20 millones de publicaciones multiplicadas por USD 0,0168, y se cita así a propósito. El punto es la escala: un error de redondeo contra una base de comercio de USD 215 mil millones. La generación no es el costo. El costo es la gobernanza, los derechos, la localización y la integración.",
+            "Sin eufemismos. Una compañía sudamericana cuyo producto sea un generador compite contra una capacidad que cada trimestre se abarata, mejora y se iguala, contra laboratorios con mucho más capital, y contra pesos abiertos gratuitos por debajo. No hay versión de esa pelea que valga la pena dar. El modelo es plomería rentada. Diseñe desde el día uno para que cambiarlo sea un cambio de configuración y no una reescritura."
+          ],
+          "bullets": [
+            "Google lista [Gemini 3.1 Flash Lite Image](https://ai.google.dev/gemini-api/docs/pricing) a USD 0,0336 por imagen de 1K y USD 0,0168 en lote, con Gemini 3.1 Flash Image a USD 0,067 y Gemini 3 Pro Image a USD 0,134, y 50% de descuento por lote en toda la línea.",
+            "[OpenAI](https://developers.openai.com/api/docs/pricing) se recorta cinco veces dentro de su propia línea. gpt-image-1-mini cuesta USD 8,00 por millón de tokens de salida contra USD 40,00 de gpt-image-1. Un proveedor que se subvalora a sí mismo cinco veces no está defendiendo un moat, está corriendo hacia el piso.",
+            "El piso es cero porque los pesos son abiertos y la licencia es permisiva. [Qwen-Image](https://huggingface.co/Qwen/Qwen-Image), un modelo de generación y edición de 20 mil millones de parámetros, salió el 4 de agosto de 2025 bajo Apache 2.0 y superó 300.438 descargas en su primer mes. Cualquiera con una GPU lo corre comercialmente por el costo de la electricidad.",
+            "La curva general confirma la dirección. [Stanford HAI](https://hai.stanford.edu/ai-index/2025-ai-index-report/research-and-development) documenta que consultar un modelo equivalente a GPT-3.5 pasó de USD 20,00 por millón de tokens en noviembre de 2022 a USD 0,07 en octubre de 2024, una caída de más de 280 veces en unos 18 meses."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Cálculo propio, no un dato publicado. Los cerca de 20 millones de publicaciones activas de Mercado Libre multiplicadas por USD 0,0168 por imagen en lote dan alrededor de USD 336.000 para regenerar el catálogo entero. Un error de redondeo contra USD 215,31 mil millones de comercio electrónico regional.",
+            "attribution": "Cálculo propio de Avante sobre los precios publicados de la API Gemini de Google y el conteo de publicaciones del caso de cliente de Elastic con Mercado Libre."
+          },
+          "id": "commodity-layer"
+        },
+        {
+          "heading": "Catálogo, publicidad, inmuebles y el pequeño comerciante",
+          "level": 2,
+          "paragraphs": [
+            "Cuatro aperturas comerciales, ordenadas por cuánto dato propio acumula cada una.",
+            "El comerciante con 400 SKU, sin diseñador, sin presupuesto para una sesión de fotografía de producto y con el celular como único equipo de trabajo no es cliente de Photoshop y nunca lo va a ser. También es cerca de la mitad de la base comercial del continente. A ese comprador no lo alcanza una herramienta. Lo alcanza un workflow incrustado en el marketplace, la billetera o la app de logística que ya abre cada mañana, cobrado por publicación o por transacción y no por licencia de usuario."
+          ],
+          "bullets": [
+            "Producción de catálogo para retail y marketplace a escala. No una imagen. Diez mil imágenes consistentes con la marca, dimensionadas al template de cada marketplace, liberadas legalmente y localizadas por país. El ancla de volumen son los 20 millones de publicaciones vivas y los 795 millones de ítems vendidos por trimestre. Cada activo aprobado y cada rechazo entrenan el siguiente lote.",
+            "Creativo publicitario producido por segmento en lugar de por campaña. Contra un mercado regional de publicidad digital de USD 50,1 mil millones en 2026, el cambio va de un creativo por campaña a cientos de variantes por audiencia, por país y por canal. La unidad económica solo cierra cuando generar es casi gratis, que es exactamente hoy.",
+            "Imágenes de inmuebles y vehículos en portales de listado. Alto volumen, visualmente repetitivo, comercialmente urgente y hoy fotografiado con celular en mala luz. No existe una cifra regional verificada para este segmento en esta investigación, así que la lectura queda cualitativa a propósito.",
+            "El comerciante informal y pequeño. La [Organización Internacional del Trabajo](https://www.ilo.org/resource/news/avances-en-el-empleo-en-am%C3%A9rica-latina-y-el-caribe-son-insuficientes-seg%C3%BAn) ubica la informalidad en 47,6% del empleo de América Latina y el Caribe en 2024, y la [CEPAL](https://www.cepal.org/en/topics/micro-small-and-medium-sized-enterprises-msmes) señala que las micro, pequeñas y medianas empresas son 99% del tejido industrial regional. [EMARKETER](https://www.emarketer.com/content/latin-america-ecommerce-market-shares-2026) deja cerca de USD 19 mil millones de comercio electrónico incremental para minoristas pequeños y medianos hasta 2028, después de que Mercado Libre y Amazon capturan cerca de dos tercios del crecimiento."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "Cerca de USD 19 mil millones de comercio electrónico incremental quedan para minoristas pequeños y medianos hasta 2028, exactamente el segmento que nunca pagó una sesión de fotos.",
+            "attribution": "EMARKETER, participaciones del comercio electrónico en América Latina, abril de 2026."
+          },
+          "id": "where-to-build"
+        },
+        {
+          "heading": "Por qué la consistencia de marca y la integración son el producto real",
+          "level": 2,
+          "paragraphs": [
+            "El producto no es la foto. El producto es la garantía de que diez mil fotos están todas correctas.",
+            "Lo que el comprador paga es una capa de consistencia de marca entrenada en su catálogo propio y en su historial de aprobaciones, para que la salida se parezca a su góndola y no a una estética genérica. Paga liberación de derechos, para que al director de marketing no lo despidan. Paga reglas de localización por país codificadas una vez y aplicadas automáticamente. Y paga una conexión viva con el sistema de información de producto, el ERP, la API de publicación del marketplace y la plataforma de anuncios, para que un activo aprobado llegue donde se usa sin que un humano mueva un archivo.",
+            "La localización no es un detalle estético, y los datos de nuestra propia región lo prueban. En el segundo trimestre de 2025 Colombia registró 140,6 millones de compras en línea por COP 26,9 billones, con un ticket promedio de COP 191.850, según la [Cámara Colombiana de Comercio Electrónico](https://ccce.org.co/noticias/informe-trimestral-del-comportamiento-del-comercio-electronico-en-colombia-segundo-trimestre-2025/), y el comercio electrónico seguía siendo apenas cerca de 2,3% del comercio minorista del país. El cierre del año completo, [reportado en febrero de 2026](https://lanotaeconomica.com.co/movidas-empresarial/el-comercio-electronico-en-colombia-alcanzo-en-2025-su-nivel-historico-mas-alto-desde-2019-2/), suma 684,6 millones de transacciones por COP 145,4 billones, con el volumen subiendo 19,9% mientras el valor subió apenas 11,1%. En doce meses los carritos se volvieron más pequeños y más frecuentes.",
+            "Si el comportamiento de compra se mueve así dentro de un mismo país de un año al siguiente, no espere que un comprador chileno, uno colombiano y uno brasileño respondan a la misma imagen. Anclaje de precio distinto, estacionalidad distinta, señales aspiracionales distintas, tonos de piel y tipos de cuerpo distintos, copy regulatorio distinto sobre la pieza, y variantes de portugués y español que un modelo global trata como un detalle posterior. Esa divergencia es el argumento de localización completo.",
+            "Nada de eso es un problema de modelo. Todo eso son cicatrices. Requiere a alguien que haya corrido personalmente una actualización de catálogo para un retailer regional, que sepa qué marketplace rechaza qué relación de aspecto, cuál revisión legal se demora once días y qué integración se rompe al cierre de trimestre. Operadores de dominio con 10 o más años de cicatrices de mercado en Brasil y la región, con un playbook de Silicon Valley y capital de primer cheque, ensamblados el día uno. Un generalista con un modelo mejor no compra eso, y a un laboratorio de frontera no le da la cuenta construirlo para un mercado tan específico.",
+            "Usando el marco de Helmer con precisión, de los siete poderes solo dos están disponibles aquí y ninguno es tecnología. Costos de cambio, porque un pipeline de catálogo cableado al PIM y al stack de anuncios de un retailer no se reemplaza a la ligera. Y recurso acorralado, en la forma del historial de aprobaciones y las reglas de marca del propio cliente, que nadie más puede obtener legal ni prácticamente. Quien reclame un poder tecnológico en generación de imagen está describiendo una API rentada."
+          ],
+          "id": "the-moat"
+        },
+        {
+          "heading": "Cómo un copilot de catálogo compone dato propio",
+          "level": 2,
+          "paragraphs": [
+            "Esta categoría es una expresión de manual del flywheel copilot, dato, capital.",
+            "El copilot se gana la entrada al proceso de catálogo de un retailer por ser más rápido que el loop actual con la agencia. Cada generación, cada rechazo de marca, cada nota legal y cada override de localización se convierten en dato propio etiquetado que ningún proveedor de modelos tiene y ningún competidor puede comprar. Se acumula con el uso, no con la ronda.",
+            "Ese corpus entrena la capa de consistencia de marca, que mejora de forma medible por cliente y crea el costo de cambio. La prueba no es un video de demostración. Es la reducción de retrabajo medida sobre el catálogo vivo de un design partner, contra el proceso que tenía antes.",
+            "Cuando el pipeline ya procesa volumen de catálogo de varios retailers, la compañía queda sentada sobre datos estructurados de demanda y desempeño sobre qué se vende de verdad en cada país, con la granularidad que ningún informe de mercado publica. Ese dato es la base del siguiente levantamiento de capital y, en el caso maduro, de un producto propio de despliegue de capital.",
+            "El modelo en el fondo del stack sigue rentado e intercambiable. El loop de datos es la compañía."
+          ],
+          "id": "the-flywheel"
+        },
+        {
+          "heading": "Laboratorios de frontera, presión de precio y la trampa de la generación",
+          "level": 2,
+          "paragraphs": [
+            "Esta es la categoría más expuesta de todo el stack de IA, y decirlo en voz alta es parte del trabajo. La IA generativa en el retail sudamericano se vende hoy como capacidad y debería venderse como operación.",
+            "El criterio de cierre, dicho por adelantado y consistente con los [principios operativos de un studio](/principles). Si a los doce meses la defensibilidad del emprendimiento todavía depende de la calidad de la salida y no de las integraciones y del corpus de aprobaciones acumulado, fracasó, y hay que cerrarlo en vez de seguir financiándolo.",
+            "Sobre capital y salidas la lectura honesta es direccional. El financiamiento de venture en América Latina está muy por debajo del pico de 2021 y se concentró en cheques mayores sobre menos operaciones, con las rondas tempranas representando cerca de la mitad del capital desplegado. [LAVCA](https://www.lavca.org/research/2026-lavca-trends-in-tech/) publica la referencia anual, pero esta investigación no pudo abrir el informe de 2026, así que no hay un total regional que citar y no se va a inventar uno. Lo que sí se puede decir es a quién castiga un mercado concentrado: al wrapper delgado con un demo y sin distribución. Y a quién premia: al emprendimiento con un workflow empresarial nombrado, un design partner firmado, ingresos dentro de doce meses y un activo de datos que compone."
+          ],
+          "bullets": [
+            "Los laboratorios de frontera van a regalar la capacidad. Google, OpenAI y sus contrapartes en suites de diseño ya cobran la generación de imagen como gancho de una plataforma mayor. Cualquier función que agregue una capa delgada es candidata a ser absorbida en el próximo release.",
+            "La presión de precio es brutal y estructural. Cinco veces de diferencia dentro de la línea de un mismo proveedor, más 50% de descuento por lote, más pesos abiertos Apache 2.0 a costo marginal cero. El margen bruto sobre generación tiende a nada. Quien cobra por imagen está cobrando por un commodity.",
+            "La trampa de la generación. La falla más común es construir lo que demuestra bien. Generar se ve hermoso en un demo y no defiende nada. Gobernanza, derechos, localización e integración se ven aburridos en un demo y defienden todo. Un equipo que no resiste el demo construye la compañía equivocada.",
+            "La confianza empresarial es una puerta real. Un retailer grande no pone imágenes generadas en un catálogo vivo sin procedencia, liberación de derechos y trazabilidad auditable. Eso es un ciclo de venta y una construcción de cumplimiento, no una función de producto."
+          ],
+          "id": "the-hard-parts"
+        },
+        {
+          "heading": "Cómo Avante lo abordaría",
+          "level": 2,
+          "paragraphs": [
+            "Avante trataría esto como un problema de operaciones de comercio y se lo diría al primer cliente en la primera reunión. La imagen se renta. Lo que se construye es todo lo que la rodea.",
+            "El sistema de seis etapas aplicado aquí. Research acota a un workflow con un comprador nombrado, probablemente operaciones de catálogo de retail de mercado medio en Brasil, con un segundo país en el año dos. Partner incorpora al operador de dominio que ya corrió producción de catálogo a escala en la región, porque esa cicatriz es el insumo escaso y no se contrata después. Build entrega primero la capa de consistencia de marca y las integraciones con el PIM y los marketplaces, y trata el modelo de imagen como configuración reemplazable. Traction prueba el loop sobre el catálogo vivo de un retailer con reducción medida de retrabajo. Revenue cobra el workflow y la garantía, nunca la imagen. Compound convierte el corpus de aprobaciones en el activo que carga al emprendimiento hacia su siguiente ronda.",
+            "Los parámetros del studio, dichos como son. Avante lanza 3-4 ventures por año, despliega USD 500K-1.5M por venture en pre-seed y retiene economía de co-founder, con operating partners comprometidos hasta el primer hito de ingresos y luego en supervisión de directorio. Resolver la plomería de compañía una sola vez enruta cerca de USD 300K-500K de capital efectivo por venture hacia producto y tracción en lugar de overhead, lo que pesa el doble en una categoría donde la ventana para construir profundidad de integración es corta.",
+            "El argumento estructural cierra el caso. Los venture studios registran un IRR de ~50% frente a ~19% del VC tradicional, según la Global Startup Studio Network (GSSN), cerca de 2,5x sobre horizontes realistas. Ese número es el benchmark del modelo studio y no un retorno realizado del studio. La razón por la que funciona es que ensamblar operador, playbook y capital el día uno le gana a descubrirlos en secuencia, y esa ventaja es mayor justo donde el insumo ganador es conocimiento local y no un avance técnico global.",
+            "La geografía hace el resto. Los servicios representan cerca de 70% del PIB brasileño con baja penetración de software, y ese mismo patrón se repite en la [economía de servicios de la región](/library/brazil-services-economy-opportunity), que es donde se concentran marketing, catálogo y producción creativa. La infraestructura de IA ya es lo bastante barata para desplegar sin una Serie A, y esta categoría es la ilustración más limpia de eso en todo el stack, que es la lectura completa de [por qué el modelo de venture studio gana en LATAM](/why-avante). Una base de comercio de USD 215 mil millones, 4 millones de vendedores de marketplace, cerca de la mitad de la fuerza laboral en informalidad y una capa de generación que ya es gratis. Quien cobre por la imagen pierde. Quien sea dueño del workflow se queda con el catálogo del continente."
+          ],
+          "id": "how-avante"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Cuánto vale el mercado de generadores de imagen con IA en América del Sur?",
+          "a": "Market Research Future lo dimensiona en USD 42,0 millones en 2024, con una proyección de entre USD 217 millones y USD 259 millones para 2035 a una CAGR de 18,0%. Ese informe se contradice entre su cuerpo y su resumen ejecutivo y clasifica a México dentro de América del Sur, así que conviene citar la dirección y no el decimal. La cifra que importa es la comparación: el comercio electrónico regional se proyecta en USD 215,31 mil millones en 2026."
+        },
+        {
+          "q": "¿Por qué la generación de imágenes con IA no tiene moat en América del Sur?",
+          "a": "Porque el precio cae y los pesos son abiertos. Google cobra USD 0,0168 por imagen en lote, OpenAI se recorta cinco veces dentro de su propia línea de producto, y Qwen-Image salió bajo Apache 2.0 el 4 de agosto de 2025 con 300.438 descargas en su primer mes. Un producto cuyo valor central es generar compite contra un piso de costo cero que ninguna startup regional puede defender."
+        },
+        {
+          "q": "¿Dónde está el dinero real en el mercado de imagen con IA LATAM?",
+          "a": "En la producción de catálogo, el creativo publicitario por segmento y el comerciante pequeño, no en el generador. Mercado Libre vendió 795 millones de ítems en el segundo trimestre de 2026 y mantiene cerca de 20 millones de publicaciones activas con 4 millones de vendedores activos. EMARKETER deja cerca de USD 19 mil millones de comercio electrónico incremental para minoristas pequeños y medianos hasta 2028, y la informalidad de 47,6% del empleo regional describe al comprador que nunca pagó una sesión de fotos."
+        },
+        {
+          "q": "¿Cómo aborda un venture studio el mercado de generadores de imagen con IA en América del Sur?",
+          "a": "Construyendo la capa de workflow y no el generador. Avante Ventures aplica su sistema de seis etapas, Research, Partner, Build, Traction, Revenue, Compound, despliega USD 500K-1.5M por venture en pre-seed y ancla el equipo en operadores de dominio con 10 o más años de cicatrices de mercado. Los venture studios registran un IRR de ~50% frente a ~19% del VC tradicional, según la Global Startup Studio Network (GSSN)."
+        },
+        {
+          "q": "¿Cuánto costaría regenerar todo el catálogo de un marketplace regional con IA?",
+          "a": "Alrededor de USD 336.000 en generación bruta, y esa cifra es un cálculo propio, no un dato publicado. Sale de multiplicar los cerca de 20 millones de publicaciones activas de Mercado Libre por el precio en lote de USD 0,0168 por imagen. Contra una base de comercio regional de USD 215 mil millones es un error de redondeo, lo que demuestra que el costo real está en gobernanza, derechos, localización e integración."
+        }
+      ]
+    }
+  },
+  {
+    "slug": "south-america-ai-studio-market",
+    "category": "brazil",
+    "type": "Market Analysis",
+    "readTime": "14 min",
+    "featured": false,
+    "date": "Sep 2026",
+    "datePublished": "2026-09-04",
+    "isPublished": true,
+    "en": {
+      "title": "South America AI Studio Market: Talent Is Regional, Distribution Is Not",
+      "description": "There is no single South America AI studio market. Brazil is 50.6% of the continent's GDP. Talent crosses borders. Regulation and distribution do not.",
+      "sections": [
+        {
+          "paragraphs": [
+            "There is no single South America AI studio market. Brazil alone was 50.6% of the continent's nominal GDP in 2024, computed from [World Bank national accounts](https://data.worldbank.org/indicator/NY.GDP.MKTP.CD) in current dollars, and it took roughly half of the region's venture dollars in 2025. Price the continent as one addressable market and you have mis-weighted half of it before the first term sheet.",
+            "The phrase itself covers two businesses with opposite economics. One sells hours as an agency or dev shop inside a Latin America IT services outsourcing market worth roughly USD 19.5 billion in 2025. The other takes co-founder economics and builds an owned portfolio. Most people searching the term are shopping in the first market. Most of the money in the category is made in the second.",
+            "The structural read that decides which one works here is cheap to state and expensive to ignore. Engineering talent and AI capability are genuinely regional and increasingly fungible across borders. Distribution, regulation and capital are stubbornly national. That asymmetry is why the studio model earns its place in this geography and a generalist regional fund does not. Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America."
+          ]
+        },
+        {
+          "heading": "The South America AI studio market, with dated numbers",
+          "level": 2,
+          "paragraphs": [
+            "Nobody has a clean number for the South America AI studio market, because analysts do not measure the category. Three adjacent measurements exist. They disagree with each other. Stating the range is more useful than picking the flattering one and hoping nobody checks.",
+            "The two AI forecasts diverge because their boundaries do. IMARC covers Latin America including Mexico. Statista covers South America only, on a narrower segment definition. One puts USD 34.62 billion on the table by 2034, the other about USD 19.0 billion by 2030. A spread that wide is evidence of an immature category, not a reason to discard both readings. Anyone quoting a single number for this market without naming the source and the year is selling something.",
+            "Public capital stopped being noise in 2024. Brazil launched the Plano Brasileiro de Inteligência Artificial for 2024 to 2028 on 30 July 2024, allocating R$ 23.03 billion, roughly USD 4 billion, per [UNCTAD's Investment Policy Monitor](https://investmentpolicy.unctad.org/investment-policy-monitor/measures/4930/launches-the-brazilian-artificial-intelligence-plan-2024-2028). Colombia adopted its national AI policy CONPES 4144 on 14 February 2025 with a budget near USD 479 million, per [Brigard Urrutia](https://www.bu.com.co/en/insights/noticias/ai-takes-colombia-colombia-adopts-conpes-4144). Both are national programs with national procurement rules. That is the first place the regional aggregate stops being useful, and it is nowhere near the last."
+          ],
+          "bullets": [
+            "Regional demand pool. IMARC Group sizes the [Latin America artificial intelligence market](https://www.imarcgroup.com/latin-america-artificial-intelligence-market) at USD 5.79 billion in 2025, forecast to USD 34.62 billion by 2034 on a 22.0% CAGR, with Brazil at roughly 25% of the 2025 total.",
+            "Competing forecast. Statista Market Insights puts the [South America artificial intelligence market](https://www.statista.com/outlook/tmo/artificial-intelligence/south-america) at about USD 19.0 billion by 2030 on a 16.7% CAGR from 2024.",
+            "The agency market. Latin America's IT services outsourcing market runs at roughly USD 19.5 billion in 2025 and grows toward the high twenties of billions by 2029. It dwarfs regional venture building, and it is where most AI studio searchers are actually buying."
+          ],
+          "id": "market-size"
+        },
+        {
+          "heading": "Why South America is not one market, and why that matters",
+          "level": 2,
+          "paragraphs": [
+            "Brazil is roughly half the continent, and it runs its own language, its own tax and regulatory apparatus and its own domestic capital market. The twelve South American economies totalled about USD 4.32 trillion in 2024, of which Brazil was USD 2,185.8 billion. Argentina followed at 14.8%, Colombia at 9.7%, Chile at 7.6% and Peru at 6.8%. The remaining seven economies come to 10.5% between them.",
+            "Venture capital concentrates harder than GDP does. [Crunchbase News](https://news.crunchbase.com/venture/vcs-bullish-latam-startup-funding-rebounds-2025/) reported Latin American venture funding of USD 4.1 billion in 2025, up 14.3% from USD 3.6 billion in 2024, with Brazil at USD 2.1 billion and Mexico at USD 1.1 billion. The [Latin America Venture Capital Report 2025](https://reports.cuanticovp.com/latin-america-venture-capital-report-2025/) puts the prior year at Brazil USD 1.7 billion, Mexico USD 792 million, Argentina USD 418 million and Colombia USD 353 million, with Chile and Peru below the reporting threshold. Two countries take about three quarters of the dollars, and one of them is not in South America at all.",
+            "Then each country carries at least one fact that breaks the monolith framing. Argentina ran 219.9% consumer price inflation in 2024 per [World Bank data](https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=AR), and holds the region's second-highest R&D intensity at 0.60% of GDP. Excellent engineers. Revenue that is structurally unpriceable in local currency. Chile is the richest per head at USD 16,659 GDP per capita and hosts [Start-Up Chile](https://www.wipo.int/en/web/wipo-magazine/articles/start-up-chile-38986), launched by CORFO in 2010 as the world's first public startup accelerator, with more than 3,000 startups from over 80 countries accelerated on over USD 100 million of public money. Its R&D intensity is still only 0.39% of GDP. Ecosystem reputation and research spending are not the same asset. Peru was the first country in Latin America to enact a general AI law and has the region's lowest R&D intensity at 0.18%.",
+            "Regulatory leadership and building capability are not the same variable. Research intensity across the big five spans Brazil at 1.19% of GDP, Argentina 0.60%, Chile 0.39%, Colombia 0.29% and Peru 0.18%, on [World Bank and UNESCO readings](https://data.worldbank.org/indicator/GB.XPD.RSDV.GD.ZS). Brazil spends more than three times Peru's share of an economy roughly seven and a half times larger. In absolute terms that gap is close to two orders of magnitude. Average those five countries into one regional figure and the only information that mattered is gone."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "50.6%. Brazil's share of South America's nominal GDP in 2024. Half a continent sits inside one language, one tax code and one capital market.",
+            "attribution": "Computed from World Bank national accounts, current USD"
+          },
+          "id": "not-one-market"
+        },
+        {
+          "heading": "Talent is regional, distribution and regulation are national",
+          "level": 2,
+          "paragraphs": [
+            "Engineering capability crosses South American borders with almost no friction, and it is already being sold into the same global demand. Latin America's IT services outsourcing market runs at roughly USD 19.5 billion in 2025, and Argentina's knowledge-economy exports, mostly software and IT services, have been running near USD 9.6 billion a year on recent readings. Remote-first hiring, a shared time zone with the United States, one Spanish-language labor market outside Brazil and portable AI tooling mean a Colombian machine-learning engineer, a Chilean data engineer and an Argentine backend lead can staff a Brazilian venture without any of them moving house.",
+            "Regulation went the other way. Five countries, five instruments, five timelines. Brazil's PL 2338 cleared the Senate on 10 December 2024 and went to the Chamber of Deputies on 17 March 2025, per [Data Privacy Brasil](https://www.dataprivacybr.org/en/the-artificial-intelligence-legislation-in-brazil-technical-analysis-of-the-text-to-be-voted-on-in-the-federal-senate-plenary/). Peru published the implementing regulations to Law 31814 as Supreme Decree 115-2025-PCM on 9 September 2025, per the [OECD.AI policy dashboard](https://oecd.ai/en/dashboards/policy-initiatives/law-31814-law-that-promotes-the-use-of-artificial-intelligence-in-favor-of-the-economic-and-social-development-of-the-country-3047). Colombia adopted CONPES 4144 on 14 February 2025, a policy instrument rather than a statute. Chile's bill 16821-19 passed the Chamber of Deputies in August 2025 and sits with the Senate, per [UNESCO](https://www.unesco.org/en/articles/chile-launches-national-ai-policy-and-introduces-ai-bill-following-unescos-recommendations). Argentina has no comprehensive framework and is keeping it that way on purpose to attract investment, per the [Future of Privacy Forum](https://fpf.org/blog/ai-regulation-in-latin-america-overview-and-emerging-trends-in-key-proposals/).",
+            "Distribution is national for harder reasons than regulation. Brazilian firms spend 1,501 hours a year preparing, filing and paying corporate income tax, consumption taxes and labor taxes, the highest of the 190 economies the [World Bank measured](https://tradingeconomics.com/brazil/time-to-prepare-and-pay-taxes-hours-wb-data.html). Constitutional Amendment 132 of 2023 is phasing in a consumption tax reform that changes the burden without making Brazilian tax logic portable to Bogotá or Santiago. Add per-country payment rails, per-country procurement law, per-country data protection regimes, per-country channel partners and a language boundary at Brazil's border, and the shape of the market is settled. The input is regional. The moat is national.",
+            "That asymmetry favors a studio specifically, and the reason is worth stating precisely. A single founding team cannot amortize regional inputs across anything, because it has one company. A generalist regional fund can amortize capital but never build capability, because it does not operate. A studio pools operator networks, engineering depth, shared build infrastructure and a reusable go-to-market playbook, then spends all of it winning one national market where the defensibility actually lives. That is the argument, and the same logic runs through the [Brazil services economy opportunity](/library/brazil-services-economy-opportunity) analysis in more depth."
+          ],
+          "id": "the-asymmetry"
+        },
+        {
+          "heading": "AI studio in the agency sense versus the venture studio model",
+          "level": 2,
+          "paragraphs": [
+            "Two businesses share this keyword and almost nothing else. An AI studio in the agency sense sells hours or fixed-scope projects. A venture studio takes equity and builds companies it partly owns. Confronting that ambiguity out loud is more useful than picking a definition quietly and hoping the reader guessed the same one.",
+            "A dev shop that rebrands as an AI studio is still selling hours, and the value it creates lands on the client's balance sheet. Its failure mode is utilization collapse and client concentration. A venture studio sells nothing by the hour, so its outcome is the portfolio rather than the invoice, and its failure mode is a set of companies that are individually too small to matter. Both models are legitimate. They should not sit under one keyword without a distinction drawn out loud.",
+            "The venture studio is also not an accelerator and not an incubator. An accelerator selects teams that already exist and runs them through a cohort. An incubator supplies space and services. A venture studio originates the company idea, recruits the founding operator and co-founds from day zero, which is a different risk position and a different cap table. That distinction decides who carries the first two years of execution risk, and who owns what at the end of them."
+          ],
+          "bullets": [
+            "Revenue model. The agency sells hours or fixed scope. The venture studio takes co-founder economics in an owned portfolio.",
+            "Economics. Agency gross margin is linear with headcount. Studio value compounds with the portfolio.",
+            "Measurability. The agency sits inside a roughly USD 19.5 billion LATAM IT outsourcing market in 2025. Regional venture building is not measured as a discrete category at all.",
+            "Failure mode. Utilization collapse and client concentration on one side. A portfolio of subscale companies on the other."
+          ],
+          "callout": {
+            "kind": "tip",
+            "text": "When a vendor calls itself an AI studio, ask one question. Do you take equity, or do you invoice hours. The answer tells you whose balance sheet the value lands on."
+          },
+          "id": "studio-vs-agency"
+        },
+        {
+          "heading": "What the studio-model performance data actually shows",
+          "level": 2,
+          "paragraphs": [
+            "Per the Global Startup Studio Network (GSSN), venture studios produce an IRR of ~50% against an industry-standard ~19% for traditional VC, on the order of 2.5x over realistic time horizons. That figure is the studio-model benchmark, published in the white paper [Disrupting the Venture Landscape](https://insightstudios.s3.amazonaws.com/Disrupting-the-Venture-Landscape_GSSN-White-Paper-1.pdf). It is never a claim about Avante's own realized return, and it should never be presented as one.",
+            "The primary source underneath it is a survey of 258 studio-created startups. It reports average IRR of 53% for studio-created companies against 21.3% for traditional startups, TVPI of 5.8 against 1.57, zero to seed in 10.7 months against 36 months, and zero to Series A in 25.2 months against 56 months. Seed to Series A conversion runs 72% against 42%.",
+            "Read that table with the caveat attached. It is a self-reported survey collected by the industry's own network association, so it carries survivorship bias. Studios kill ideas before they become companies, and those deaths never enter the sample. The speed figures hold up better than the return figures, because time from zero to a priced round is directly observable and hard to flatter. The credibility of every argument above depends on not overselling one table.",
+            "The speed numbers are also the ones that travel best to South America. Roughly 25 months of difference on the way to a Series A is worth more in a market running 219.9% inflation, thin exits and a 1,501-hour tax compliance burden than it is where capital is patient and currencies are boring. Compressed time to first revenue is a currency hedge and a regulatory hedge at once."
+          ],
+          "id": "the-evidence"
+        },
+        {
+          "heading": "Currency risk, thin exits, and the subscale portfolio trap",
+          "level": 2,
+          "paragraphs": [
+            "The post-2021 reset is real and only partly reversed. Latin American venture funding reached USD 4.1 billion in 2025, up from USD 3.6 billion in 2024, and still less than half the USD 8.4 billion invested in 2022. A recovery off a trough is not a boom. Model follow-on capacity on 2021 comparables and you are modeling a market that no longer exists, which is where regional theses usually break first.",
+            "Liquidity is the honest weak point. The Latin America Venture Capital Report 2025 records only 79 exits among venture-backed companies in the period analyzed, with acquisitions and exits declining steadily since 2021, and names the liquidity shortage as the ecosystem's single biggest challenge. LAVCA counts roughly 60 Latin American technology companies that have raised more than USD 150 million each without listing or being acquired. That is a backlog, not a pipeline. Secondaries are increasingly doing the work that M&A and IPOs used to do.",
+            "Currency and political risk do not diversify away inside the region either. Argentina at 219.9% inflation is the extreme case, but every economy in the table prices revenue in a currency that can move 20% against the dollar in a quarter, often for the same global reasons at the same time. Spreading a portfolio across five South American currencies does not remove that exposure. It correlates it.",
+            "Which leads to the specific trap. A studio that spreads across five countries without owning national distribution in any of them ends up with companies that are each too small to matter and collectively too diffuse to defend. More money does not fix that, because it is not a capital problem. It is a distribution problem, and the fix is structural. Concentrate go-to-market in one national market where the operator carries real scar tissue, and pool only the inputs that genuinely cross borders."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "79 exits among venture-backed Latin American companies in the most recent reported period, with roughly 60 companies that raised over USD 150 million each still unlisted and unacquired.",
+            "attribution": "Latin America Venture Capital Report 2025"
+          },
+          "id": "the-hard-parts"
+        },
+        {
+          "heading": "How Avante approaches the region from Brazil",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures runs the region from one national market rather than five. Brazil first, because Brazil is 50.6% of the continent's GDP, roughly half its venture dollars, and the market where the studio's operating partners carry the scar tissue. Regional expansion is a portfolio-company decision taken after national distribution exists. It is not a studio-level thesis, and treating it as one is the error this whole piece is about.",
+            "The scarce input is not engineering. The region has engineers, and AI tooling makes raw build capacity less scarce every quarter. The scarce input is a domain operator with 10+ years of Brazilian-market scar tissue, someone who knows which court publishes which docket, which underwriting committee actually signs, which municipal procurement calendar governs a sale. That knowledge does not cross the border and it does not compress with a better model. Pairing it with a Silicon Valley playbook and first-ticket capital, assembled on day one, is the structural edge.",
+            "Services account for roughly 70% of Brazilian GDP with low software penetration, per IBGE. The [World Bank's narrower services value-added series](https://data.worldbank.org/indicator/NV.SRV.TOTL.ZS?locations=BR) puts it at 59.2% for 2024. Both are right on their own basis, and either way the software layer over that economy is thin. That is the demand side of the case, argued at length in the [Brazil services economy opportunity](/library/brazil-services-economy-opportunity) piece and from a different angle in the [South America computer vision market](/library/south-america-computer-vision-market) analysis, which takes on the gap between a forecast and a system that actually runs.",
+            "The timing rests on cost data rather than sentiment. The [Stanford HAI 2025 AI Index](https://hai.stanford.edu/ai-index/2025-ai-index-report) documents the cost of querying a GPT-3.5-level model on MMLU falling from USD 20.00 per million tokens in November 2022 to USD 0.07 by October 2024, more than a 280-fold drop in about 18 months, with hardware costs down roughly 30% a year. That curve is why AI infrastructure is now cheap enough to deploy without a Series A, and why $500K-$1.5M per venture buys product in market instead of a prototype.",
+            "The operating model follows from all of it. The studio launches 3-4 ventures per year, deploys $500K-$1.5M per venture across pre-seed and retains co-founder economics. Every venture runs the six-stage system: Research, Partner, Build, Traction, Revenue, Compound. Operating partners stay engaged through the first revenue milestone, then move to board-level oversight. Solving company plumbing once routes roughly $300K-$500K of effective capital per venture into product and traction rather than overhead, and a studio venture launches 6-9 months ahead of a comparably funded standalone team. The recurring shape is the copilot to data to fund flywheel, set out in full on the [venture studio thesis](/why-avante) page.",
+            "When inference is nearly free, the binding constraint stops being model access and becomes proprietary data and distribution. In South America both of those are national. The regional aggregate was never the opportunity. It was the accounting error."
+          ],
+          "bullets": [
+            "Concentrate the go-to-market nationally. Brazil first, because that is where the operating partners have real depth.",
+            "Pool the regional inputs. Engineering depth, shared build infrastructure and the operating playbook amortize across the portfolio.",
+            "Own the outcome. Co-founder economics, not an hourly rate, and a portfolio built one national market at a time."
+          ],
+          "id": "how-avante"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How big is the South America AI studio market?",
+          "a": "There is no single measured figure, because analysts do not track the category. The nearest proxies are IMARC's Latin America artificial intelligence market at USD 5.79 billion in 2025 growing to USD 34.62 billion by 2034, Statista's South America figure of about USD 19.0 billion by 2030, and the roughly USD 19.5 billion LATAM IT services outsourcing market that most agency-style AI studios sell into. The forecasts disagree because the category boundaries do."
+        },
+        {
+          "q": "What is the difference between an AI studio and a venture studio?",
+          "a": "An AI studio in the agency sense sells hours or fixed-scope projects and the value accrues to the client. A venture studio co-founds companies and takes equity, so its return is the portfolio rather than the invoice. Different revenue model, different risk position, different outcome. A venture studio is also not an accelerator or an incubator, because it originates the idea and co-founds from day zero."
+        },
+        {
+          "q": "Do venture studios actually outperform traditional VC?",
+          "a": "Per the Global Startup Studio Network (GSSN), studio IRR runs at ~50% against ~19% for traditional VC, about 2.5x over realistic time horizons. The underlying evidence is a self-reported survey of 258 studio-created startups, so it carries survivorship bias. The speed metrics, such as time from zero to seed, hold up better than the return metrics because a priced round is directly observable."
+        },
+        {
+          "q": "Why do regional theses fail in the South America AI studio market?",
+          "a": "Because they treat distribution as regional when it is national. Talent, AI tooling and engineering depth cross borders freely. Tax regimes, procurement rules, payment rails, data protection law and language do not. Brazil alone is 50.6% of the continent's GDP, and a studio spread thinly across five countries ends up with a portfolio of subscale companies."
+        },
+        {
+          "q": "Which South American country is best for building an AI company?",
+          "a": "It depends on which variable binds first. Brazil leads on market size and capital at 50.6% of regional GDP and USD 2.1 billion of 2025 venture funding, Chile on per-capita wealth and ecosystem infrastructure, Argentina on engineering density at low dollar cost with 219.9% inflation attached, Colombia on policy support through CONPES 4144, and Peru on regulatory clarity that runs ahead of its 0.18% R&D intensity."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Mercado de AI Studio na América do Sul: O Talento É Regional, a Distribuição Não",
+      "description": "O mercado de AI studio na América do Sul não é um mercado só. O Brasil é 50,6% do PIB do continente. O talento cruza fronteiras, a distribuição não.",
+      "sections": [
+        {
+          "paragraphs": [
+            "O mercado de AI studio na América do Sul não existe como um mercado único, e é aí que quase toda tese regional quebra. O Brasil sozinho respondeu por 50,6% do PIB nominal sul-americano em 2024, cerca de USD 2,19 trilhões de um total de aproximadamente USD 4,32 trilhões, calculado a partir das [contas nacionais do Banco Mundial](https://data.worldbank.org/indicator/NY.GDP.MKTP.CD). Em 2025 ficou também com metade dos dólares de venture da região.",
+            "Para um leitor brasileiro, 50,6% não é motivo de orgulho. É a explicação de por que quase nenhum founder daqui perde tempo com o resto do continente. Quando metade do PIB, metade do capital de risco e todo o seu idioma comercial cabem dentro de uma fronteira, ignorar Bogotá, Santiago e Buenos Aires não é provincianismo. É alocação racional de atenção.",
+            "E o próprio termo cobre dois negócios de economia oposta. Um vende horas como agência dentro de um mercado latino-americano de terceirização de TI de cerca de USD 19,5 bilhões em 2025. O outro toma economia de co-founder e constrói um portfólio próprio. A tese deste artigo é que essa conta mudou de um lado só. O talento de engenharia e a capacidade de IA já são regionais e cada vez mais fungíveis entre fronteiras. A distribuição, a regulação e o capital seguem teimosamente nacionais. É essa assimetria, e não o tamanho do agregado regional, que explica por que o modelo de studio faz sentido nesta geografia. A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina, e opera exatamente em cima dessa assimetria."
+          ]
+        },
+        {
+          "heading": "O mercado de AI studio na América do Sul, com números datados",
+          "level": 2,
+          "paragraphs": [
+            "Ninguém tem um número limpo e defensável para o mercado de AI studio na América do Sul, porque nenhum analista mede essa categoria. O que existe são três medições adjacentes que discordam entre si. Declarar a faixa honestamente vale mais do que escolher uma e fingir precisão.",
+            "O IMARC Group dimensiona o [mercado de inteligência artificial da América Latina](https://www.imarcgroup.com/latin-america-artificial-intelligence-market) em USD 5,79 bilhões em 2025, com projeção de USD 34,62 bilhões até 2034 a um CAGR de 22,0% entre 2026 e 2034, e coloca o Brasil em cerca de 25% desse total regional. O Statista Market Insights projeta o [mercado de inteligência artificial da América do Sul](https://www.statista.com/outlook/tmo/artificial-intelligence/south-america) em torno de USD 19,0 bilhões até 2030, a um CAGR de 16,7% desde 2024. As duas leituras usam recortes geográficos e fronteiras de segmento diferentes. O IMARC inclui o México, o Statista não. Trate a distância entre elas como prova de que a categoria é imatura, não como motivo para desconfiar das duas.",
+            "A terceira medição é a maior de todas, e é a que quase ninguém cita. A terceirização de serviços de TI na América Latina está estimada em cerca de USD 19,5 bilhões em 2025. É nesse mercado que a maior parte de quem digita AI studio em um buscador está de fato comprando. O mercado de vender horas é maior do que o mercado de construir empresas, e confundir os dois é o primeiro erro de leitura da categoria.",
+            "O capital público deixou de ser ruído e virou variável. O Plano Brasileiro de Inteligência Artificial 2024 a 2028 foi lançado em 30 de julho de 2024 com R$ 23,03 bilhões, cerca de USD 4 bilhões, segundo o [Investment Policy Monitor da UNCTAD](https://investmentpolicy.unctad.org/investment-policy-monitor/measures/4930/launches-the-brazilian-artificial-intelligence-plan-2024-2028). A Colômbia adotou o CONPES 4144 em 14 de fevereiro de 2025, com orçamento de cerca de USD 479 milhões. São dois programas nacionais com duas regras de compra nacionais, e isso já antecipa o argumento central deste texto. Para uma leitura adjacente sobre como dimensionar um segmento vertical na mesma região, veja a análise do [mercado de visão computacional na América do Sul](/library/south-america-computer-vision-market)."
+          ],
+          "bullets": [
+            "IMARC, América Latina: USD 5,79 bilhões em 2025 para USD 34,62 bilhões em 2034, CAGR de 22,0%, com o Brasil em cerca de 25% do total.",
+            "Statista, América do Sul: cerca de USD 19,0 bilhões até 2030, CAGR de 16,7% desde 2024.",
+            "Terceirização de TI na América Latina: cerca de USD 19,5 bilhões em 2025, o mercado onde o comprador de horas realmente está.",
+            "Capital público: R$ 23,03 bilhões no PBIA brasileiro e cerca de USD 479 milhões no CONPES 4144 colombiano."
+          ],
+          "id": "market-size"
+        },
+        {
+          "heading": "Por que a América do Sul não é um mercado único",
+          "level": 2,
+          "paragraphs": [
+            "A América do Sul é um continente com uma economia dominante e quatro economias médias que quase não compartilham nada do ponto de vista operacional. O Brasil responde por 50,6% do PIB regional e tem idioma próprio, aparato tributário e regulatório próprio e mercado de capitais doméstico próprio. Uma tese que trata o Brasil como uma entre várias apostas de país equivalentes já errou o peso de metade do continente antes da primeira reunião.",
+            "Depois do Brasil vem a Argentina com 14,8% do PIB sul-americano, a Colômbia com 9,7%, o Chile com 7,6% e o Peru com 6,8%. Somados, os quatro não chegam a 40%. O capital de risco é ainda mais concentrado que o PIB. Em 2025, a América Latina recebeu USD 4,1 bilhões de venture, com o Brasil em USD 2,1 bilhões e o México em USD 1,1 bilhão, segundo a [Crunchbase News de 13 de janeiro de 2026](https://news.crunchbase.com/venture/vcs-bullish-latam-startup-funding-rebounds-2025/). Dois países ficam com cerca de três quartos dos dólares, e um deles nem é sul-americano.",
+            "O recorte de 2024 mostra o mesmo desenho por baixo. O [Latin America Venture Capital Report 2025](https://reports.cuanticovp.com/latin-america-venture-capital-report-2025/) reparte o ano em Brasil com USD 1,7 bilhão, cerca de 52% do total, México com USD 792 milhões, Argentina com USD 418 milhões e Colômbia com USD 353 milhões. Chile e Peru ficaram abaixo do limite de reporte. Isso não é um mercado regional com variação por país. É um mercado nacional cercado de mercados pequenos.",
+            "A capacidade de pesquisa diverge na mesma proporção. A intensidade de P&D é de 1,19% do PIB no Brasil, 0,60% na Argentina, 0,39% no Chile, 0,29% na Colômbia e 0,18% no Peru, segundo os [indicadores de P&D do Banco Mundial](https://data.worldbank.org/indicator/GB.XPD.RSDV.GD.ZS). O Brasil aplica mais de três vezes a fatia peruana sobre uma economia muito maior. Em valor absoluto, a diferença é de cerca de duas ordens de grandeza.",
+            "E cada país carrega pelo menos um fato que derruba o enquadramento monolítico. A Argentina fechou 2024 com inflação ao consumidor de 219,9%, segundo o [Banco Mundial](https://data.worldbank.org/indicator/FP.CPI.TOTL.ZG?locations=AR), o que torna receita em moeda local estruturalmente impossível de precificar, apesar da segunda maior intensidade de P&D da região. O Chile é o mais rico por habitante, com USD 16.659 de PIB per capita em 2024, e abriga o Start-Up Chile, criado pela CORFO em 2010 como o primeiro acelerador público do mundo, com mais de 3.000 startups aceleradas de mais de 80 países. Ainda assim, sua intensidade de P&D é de 0,39%. O Peru foi o primeiro país da América Latina a promulgar uma lei geral de IA e tem a menor intensidade de P&D da região. Liderança regulatória e capacidade de construir não são a mesma variável."
+          ],
+          "bullets": [
+            "Brasil: USD 2.185,8 bilhões de PIB nominal em 2024, 50,6% do total sul-americano.",
+            "Argentina: 14,8% do PIB regional, inflação de 219,9% em 2024, P&D de 0,60% do PIB.",
+            "Colômbia: 9,7% do PIB regional, política de IA mais explícita da região, P&D de 0,29%.",
+            "Chile e Peru: 7,6% e 6,8% do PIB regional, com P&D de 0,39% e 0,18%, respectivamente."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "50,6%. A fatia do Brasil no PIB nominal da América do Sul em 2024. Metade do continente é um país só, com idioma próprio, código tributário próprio e mercado de capitais próprio.",
+            "attribution": "Calculado a partir das contas nacionais do Banco Mundial, 2024"
+          },
+          "id": "not-one-market"
+        },
+        {
+          "heading": "Talento é regional, distribuição e regulação são nacionais",
+          "level": 2,
+          "paragraphs": [
+            "A engenharia e a capacidade de IA atravessam as fronteiras sul-americanas com atrito quase nulo. A distribuição, a regulação e o capital não atravessam quase nada. As duas metades têm prova, e as provas são de tipos diferentes.",
+            "A metade regional se prova pelo mercado. A terceirização de serviços de TI da América Latina roda em cerca de USD 19,5 bilhões em 2025 vendendo para a mesma demanda global, e as exportações argentinas de economia do conhecimento, sobretudo software e serviços de TI, vêm rodando perto de USD 9,6 bilhões ao ano nas leituras recentes. Contratação remota, fuso compartilhado com os Estados Unidos, um mercado de trabalho em espanhol fora do Brasil e ferramental de IA portátil significam que um engenheiro de machine learning colombiano, um engenheiro de dados chileno e um líder de backend argentino podem compor o time de uma venture brasileira sem que nenhum deles mude de cidade.",
+            "A metade nacional se prova por datas. O PL 2338/2023, o marco legal de IA, foi aprovado pelo Senado em 10 de dezembro de 2024 e seguiu para a Câmara dos Deputados em 17 de março de 2025, conforme a [análise técnica do Data Privacy Brasil](https://www.dataprivacybr.org/en/the-artificial-intelligence-legislation-in-brazil-technical-analysis-of-the-text-to-be-voted-on-in-the-federal-senate-plenary/). O Peru publicou o Decreto Supremo 115-2025-PCM em 9 de setembro de 2025, regulamentando a Lei 31814 e consolidando o primeiro marco geral de IA da região, segundo o [painel de políticas da OECD.AI](https://oecd.ai/en/dashboards/policy-initiatives/law-31814-law-that-promotes-the-use-of-artificial-intelligence-in-favor-of-the-economic-and-social-development-of-the-country-3047). A Colômbia adotou o CONPES 4144 em 14 de fevereiro de 2025, política e não estatuto. O Chile viu o projeto 16821-19 ser aprovado pela Câmara em agosto de 2025 e seguir para o Senado. A Argentina optou deliberadamente por não ter marco abrangente, apostando em regulação leve para atrair investimento. Cinco países, cinco instrumentos, cinco calendários.",
+            "A distribuição é nacional por motivos mais duros que a regulação. A última medição do Doing Business colocou a empresa brasileira em 1.501 horas por ano para apurar, declarar e pagar tributos corporativos, tributos sobre consumo e encargos trabalhistas, a pior marca entre as 190 economias medidas pelo [Banco Mundial](https://tradingeconomics.com/brazil/time-to-prepare-and-pay-taxes-hours-wb-data.html). A Emenda Constitucional 132 de 2023 está mudando esse custo, mas não torna a lógica tributária brasileira portátil para Bogotá ou Santiago. Some a isso meios de pagamento por país, lei de compras públicas por país, regime de proteção de dados por país, parceiros de canal por país e uma fronteira linguística exatamente na divisa brasileira. O insumo é regional. O moat é nacional.",
+            "É por isso que a assimetria favorece um studio especificamente. Um studio reúne o insumo regional, que é profundidade de operador, densidade de engenharia, infraestrutura de build compartilhada e um playbook de go-to-market reutilizável, e aponta tudo isso contra um go-to-market nacional, que é onde a defensabilidade de fato mora. Um time fundador isolado não amortiza o insumo regional em nada. Um fundo regional generalista amortiza capital, mas não amortiza capacidade de construir. Das três estruturas, só uma amortiza as duas coisas."
+          ],
+          "id": "the-asymmetry"
+        },
+        {
+          "heading": "AI studio no sentido de agência versus o modelo de venture studio",
+          "level": 2,
+          "paragraphs": [
+            "O termo AI studio é ambíguo, e a ambiguidade precisa ser enfrentada cedo, porque os dois modelos têm economias opostas. Quem procura AI studio na América do Sul está querendo dizer uma de duas coisas muito diferentes. Ou uma agência que vende horas e entrega um produto de IA para o cliente, ou um venture studio que assume economia de co-founder e constrói um portfólio próprio.",
+            "Uma software house que se rebatiza de AI studio continua vendendo horas. O valor criado vai para o balanço do cliente. Um venture studio não vende nada por hora. Ele constrói empresas das quais é dono em parte, o que significa que o resultado aparece no portfólio e não na fatura. Os dois modelos são legítimos. O que não faz sentido é os dois viverem sob a mesma palavra-chave sem distinção.",
+            "E um venture studio também não é acelerador nem incubadora. Um acelerador seleciona times que já existem e os passa por uma turma. Uma incubadora oferece espaço e serviços. Um venture studio origina a ideia da empresa, recruta o operador fundador e co-funda desde o dia zero. A diferença não é de intensidade de apoio. É de quem é dono do quê."
+          ],
+          "bullets": [
+            "Modelo de receita: a agência vende horas ou escopo fechado, o venture studio toma equity e constrói portfólio próprio.",
+            "Economia: margem bruta sobre entrega, linear com headcount, contra economia de co-founder, que compõe com o valor do portfólio.",
+            "Relação: fornecedor de um cliente contra co-fundador da empresa.",
+            "Risco: limitado e pago na entrega contra concentrado e pago no desfecho.",
+            "Modo de falha: colapso de utilização e concentração de clientes contra um portfólio de empresas subescala."
+          ],
+          "id": "studio-vs-agency"
+        },
+        {
+          "heading": "O que os dados de desempenho do modelo de studio mostram",
+          "level": 2,
+          "paragraphs": [
+            "Segundo a Global Startup Studio Network (GSSN), venture studios entregam TIR de cerca de 50% contra cerca de 19% do venture capital tradicional, algo em torno de 2,5x em horizontes de tempo realistas. Esse é o benchmark do modelo. Nunca um retorno realizado pela Avante Ventures.",
+            "A base é um levantamento de 258 startups criadas por studios. Ele reporta TIR média de 53% contra 21,3% no comparativo tradicional, TVPI de 5,8 contra 1,57, tempo de zero a seed de 10,7 meses contra 36 meses e tempo de zero a Série A de 25,2 meses contra 56 meses. A conversão de seed para Série A fica em 72% contra 42%.",
+            "Agora a ressalva, que é o que dá credibilidade ao resto. Trata-se de um levantamento autodeclarado de empresas criadas por studios, conduzido pela associação do próprio setor. Ele carrega viés de sobrevivência, porque studios matam ideias antes que elas virem empresas e essas nunca entram na amostra. Os números de velocidade são mais confiáveis que os de retorno, porque tempo até rodada é diretamente observável e taxa interna de retorno depende de marcação. Quem apresenta essa tabela sem a ressalva está vendendo outra coisa.",
+            "A parte da velocidade é a que mais interessa nesta região. Uma diferença de cerca de 25 meses até a primeira rodada institucional pesa muito mais em um mercado com inflação de 219,9% em um dos vizinhos, saídas rasas e 1.501 horas anuais de conformidade tributária do que pesaria em um mercado de capital paciente. Comprimir o tempo até a primeira receita é hedge cambial e hedge regulatório ao mesmo tempo."
+          ],
+          "id": "the-evidence"
+        },
+        {
+          "heading": "Risco cambial, saídas rasas e a armadilha do portfólio subescala",
+          "level": 2,
+          "paragraphs": [
+            "A correção pós-2021 é real e não foi revertida. Esse é o primeiro dos quatro modos de falha que qualquer tese sul-americana precisa encarar sem adoçante. O venture latino-americano somou USD 4,1 bilhões em 2025, acima dos USD 3,6 bilhões de 2024, e ainda assim menos da metade dos USD 8,4 bilhões de 2022. Recuperação a partir de um fundo não é boom. Quem modela capacidade de follow-on com comparáveis de 2021 está modelando um mercado que não existe mais.",
+            "O segundo é liquidez, e esse é o ponto fraco de verdade. O [Latin America Venture Capital Report 2025](https://reports.cuanticovp.com/latin-america-venture-capital-report-2025/) registra apenas 79 saídas entre empresas com aporte de venture no período analisado, com aquisições e saídas em queda contínua desde 2021, e aponta a escassez de liquidez como o maior desafio do ecossistema. Existem cerca de 60 empresas de tecnologia latino-americanas que levantaram mais de USD 150 milhões e não abriram capital nem foram adquiridas. Isso é um acúmulo, não um pipeline. Secundários vêm fazendo o trabalho que M&A e IPO faziam.",
+            "O terceiro é que risco cambial e político não se diversificam dentro da região. A Argentina a 219,9% é o caso extremo, mas todo país da tabela precifica receita em uma moeda que pode andar 20% contra o dólar em um trimestre. Espalhar um portfólio por cinco moedas sul-americanas não elimina esse risco. Apenas o correlaciona.",
+            "O quarto é a armadilha específica deste artigo. Um studio que se espalha por cinco países sem dominar a distribuição nacional em nenhum deles termina com um portfólio de empresas pequenas demais para importar individualmente e difusas demais para defender coletivamente. O padrão de falha da tese regional já é conhecido e não é um problema de capital. É um problema de distribuição. A estrutura correta é concentrar o go-to-market em um mercado nacional onde o operador tem cicatriz real e reunir apenas os insumos regionais."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "USD 4,1 bilhões contra USD 8,4 bilhões. O venture latino-americano em 2025 comparado a 2022. Sobe ano contra ano e ainda está abaixo da metade do pico recente, com apenas 79 saídas registradas.",
+            "attribution": "Crunchbase News, 13 de janeiro de 2026, e Latin America Venture Capital Report 2025"
+          },
+          "id": "the-hard-parts"
+        },
+        {
+          "heading": "Como a Avante aborda a região a partir do Brasil",
+          "level": 2,
+          "paragraphs": [
+            "O insumo escasso não é engenharia. A região tem engenheiros, e o ferramental de IA reduz a escassez de capacidade bruta de build a cada trimestre. O insumo escasso é o operador de domínio com 10 anos ou mais de cicatriz de mercado brasileiro. Alguém que sabe qual tribunal publica qual diário, qual comitê de subscrição de fato assina e qual calendário de compras municipal governa uma venda. Esse conhecimento não atravessa fronteira e não comprime com modelos melhores.",
+            "O momento também tem base em custo. O [AI Index 2025 do Stanford HAI](https://hai.stanford.edu/ai-index/2025-ai-index-report) documenta que consultar um modelo em nível GPT-3.5 no MMLU caiu de USD 20,00 por milhão de tokens em novembro de 2022 para USD 0,07 por milhão de tokens em outubro de 2024, uma redução de mais de 280 vezes em cerca de 18 meses, com hardware caindo perto de 30% ao ano e eficiência energética melhorando cerca de 40% ao ano. É por isso que a infraestrutura de IA já está barata o suficiente para operar sem uma Série A.",
+            "O Brasil entra nessa conta com um segundo fato estrutural. Os serviços respondem por cerca de 70% do PIB brasileiro com baixa penetração de software, segundo o IBGE na base de valor adicionado. A série mais estreita do Banco Mundial para valor adicionado de serviços marca 59,2% do PIB brasileiro em 2024. As duas leituras estão corretas em suas próprias bases e ambas descrevem a mesma coisa. Uma economia de serviços grande e pouco instrumentada por software. A tese completa está detalhada na análise da [oportunidade da economia de serviços brasileira](/library/brazil-services-economy-opportunity).",
+            "É assim que a Avante Ventures traduz a leitura regional em operação. O go-to-market é concentrado nacionalmente, começando pelo Brasil, porque o Brasil é 50,6% do PIB do continente, cerca de metade dos dólares de venture da região e o mercado onde os operating partners carregam a cicatriz. Expansão regional é decisão de empresa do portfólio, tomada depois que a distribuição nacional já existe, e nunca uma tese de studio. Os insumos regionais, esses sim, são reunidos e amortizados entre as ventures.",
+            "A mecânica é explícita. Toda venture percorre o sistema de seis estágios, Research, Partner, Build, Traction, Revenue, Compound. O studio lança 3-4 ventures por ano, com $500K-$1.5M aportados por venture ao longo do pre-seed, retendo economia de co-founder. Os operating partners permanecem engajados até o primeiro marco de receita e depois passam para supervisão de conselho. Uma venture de studio chega ao mercado 6-9 meses à frente de um time independente com financiamento comparável, e resolver o encanamento de empresa uma única vez direciona algo em torno de $300K-$500K de capital efetivo por venture para produto e tração em vez de overhead.",
+            "O padrão que se repete no portfólio é o flywheel copilot, dado, capital. Construir um copiloto de IA que gera dado proprietário e usar esse dado para levantar e alocar capital. A Alphajuri aplica isso ao mercado brasileiro de ativos judiciais. A WIR, com a AXA, aplica a precificação e scoring de risco em seguros. A BR Auction Intel aplica a leilões de imóveis no Brasil. As três são jogadas nacionais construídas sobre insumos regionais, e é essa leitura que sustenta [por que um venture studio no Brasil](/why-avante).",
+            "Quando a inferência fica quase de graça, a restrição que importa deixa de ser acesso a modelo e passa a ser dado proprietário e distribuição. As duas coisas são nacionais na América do Sul. O founder brasileiro que decidiu ignorar o continente acertou a metade fácil da conta. A metade que ele ainda não cobrou é que o time que constrói o produto já pode ser regional, mesmo quando o mercado que paga a conta nunca será."
+          ],
+          "id": "how-avante"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Qual é o tamanho do mercado de AI studio na América do Sul?",
+          "a": "Não existe um número único e defensável, e as fontes discordam de verdade. O IMARC estima o mercado de IA da América Latina em USD 5,79 bilhões em 2025 chegando a USD 34,62 bilhões em 2034, enquanto o Statista projeta cerca de USD 19,0 bilhões para a América do Sul até 2030. O mercado adjacente de terceirização de TI na América Latina, que é onde a maioria dos compradores de AI studio realmente está, roda perto de USD 19,5 bilhões em 2025."
+        },
+        {
+          "q": "Qual a diferença entre um AI studio e um venture studio?",
+          "a": "Um AI studio no sentido de agência vende horas e constrói para o cliente. Um venture studio co-funda empresas e toma equity, então seu resultado é o portfólio e não a fatura. São modelos de receita, perfis de risco e desfechos diferentes, e a confusão entre os dois é o erro de leitura mais comum do mercado de AI studio na América do Sul."
+        },
+        {
+          "q": "Um venture studio é a mesma coisa que acelerador ou incubadora?",
+          "a": "Não. Um acelerador seleciona times que já existem e os passa por uma turma, e uma incubadora oferece espaço e serviços. Um venture studio origina a ideia da empresa, recruta o operador fundador e co-funda desde o dia zero. A Avante Ventures é um venture studio."
+        },
+        {
+          "q": "Venture studios realmente superam o venture capital tradicional?",
+          "a": "Segundo a Global Startup Studio Network (GSSN), a TIR de venture studios fica em cerca de 50% contra cerca de 19% do venture capital tradicional. O dado de base é um levantamento autodeclarado de 258 startups criadas por studios e carrega viés de sobrevivência. As métricas de velocidade, como tempo até seed, são mais confiáveis que as de retorno, porque são diretamente observáveis."
+        },
+        {
+          "q": "Por que teses regionais na América do Sul costumam falhar?",
+          "a": "Porque tratam a distribuição como regional quando ela é nacional. O talento de engenharia atravessa fronteiras com facilidade, mas regimes tributários, regras de compras públicas, meios de pagamento, marcos de IA com datas diferentes por país e a fronteira linguística do Brasil não atravessam. Um studio espalhado por cinco países sem distribuição nacional em nenhum termina com um portfólio subescala."
+        }
+      ]
+    },
+    "es": {
+      "title": "Mercado de AI Studio en América del Sur: El Talento Es Regional, la Distribución No",
+      "description": "El mercado de AI studio en América del Sur no es uno solo. Brasil es 50,6% del PIB. El talento cruza fronteras, la regulación y la distribución no.",
+      "sections": [
+        {
+          "paragraphs": [
+            "El mercado de AI studio en América del Sur no es un mercado. Son cinco. Brasil concentró 50,6% del PIB nominal sudamericano en 2024, USD 2.185,8 mil millones de un total regional cercano a USD 4.320 mil millones, calculado sobre las cuentas nacionales del [Banco Mundial](https://data.worldbank.org/indicator/NY.GDP.MKTP.CD). La otra mitad se reparte entre economías que no comparten moneda, régimen tributario ni calendario regulatorio.",
+            "El término tampoco es uno solo. Quien escribe AI studio a veces busca un proveedor que le construya un producto de IA por horas, dentro de un mercado latinoamericano de outsourcing de TI de cerca de USD 19,5 mil millones en 2025. Otras veces busca la clase de activo que co-funda empresas y se queda con equity. Son dos negocios con economía opuesta bajo la misma palabra, y conviene separarlos antes de mirar cualquier cifra de mercado.",
+            "Para quien construye desde Bogotá, Santiago, Buenos Aires o Lima, la lectura útil no es que Brasil sea grande. Es que su propia restricción no es el talento. La ingeniería y la capacidad de IA ya son regionales y cada vez más fungibles entre fronteras. La distribución, la regulación y el capital siguen siendo tercamente nacionales.",
+            "Esa asimetría es el argumento completo del modelo de studio en esta geografía, y es la razón por la que Avante Ventures concentra el go-to-market en un solo país y agrupa nada más los insumos regionales."
+          ]
+        },
+        {
+          "heading": "El mercado de AI studio en América del Sur, con números fechados",
+          "level": 2,
+          "paragraphs": [
+            "Nadie tiene una cifra limpia de esta categoría, y decirlo es más útil que elegir una. No es un mercado que los analistas midan como tal. Aparece en los reportes bajo tres mediciones adyacentes que discrepan entre sí, y el rango es el dato.",
+            "IMARC Group dimensiona el [mercado de inteligencia artificial de América Latina](https://www.imarcgroup.com/latin-america-artificial-intelligence-market) en USD 5,79 mil millones en 2025, con proyección a USD 34,62 mil millones para 2034 a una CAGR de 22,0%, y ubica a Brasil en cerca de 25% del total regional. Statista Market Insights proyecta el [mercado de IA de América del Sur](https://www.statista.com/outlook/tmo/artificial-intelligence/south-america) en cerca de USD 19,0 mil millones para 2030, con una CAGR de 16,7% desde 2024. Las dos no se contradicen. Cubren geografías y segmentos distintos, y la distancia entre ellas mide qué tan joven es la categoría.",
+            "Hay un tercer mercado, mucho más grande y mucho menos glamoroso, que es donde de verdad compra la mayoría de quien busca el término. El outsourcing de servicios de TI latinoamericano se estima en cerca de USD 19,5 mil millones en 2025 y crece hacia los veintitantos mil millones al cierre de la década. Ese es el mercado de la agencia que vende horas. El venture studio, en cambio, no se mide como categoría en ningún reporte, porque su resultado no es una línea de ingresos sino un portafolio.",
+            "El capital público dejó de ser ruido. Brasil lanzó el Plano Brasileiro de Inteligência Artificial 2024 a 2028 el 30 de julio de 2024, con R$ 23,03 mil millones, cerca de USD 4 mil millones, según el [Investment Policy Monitor de la UNCTAD](https://investmentpolicy.unctad.org/investment-policy-monitor/measures/4930/launches-the-brazilian-artificial-intelligence-plan-2024-2028). Colombia adoptó el CONPES 4144 el 14 de febrero de 2025 con un presupuesto cercano a USD 479 millones, según [el análisis de Brigard Urrutia](https://www.bu.com.co/en/insights/noticias/ai-takes-colombia-colombia-adopts-conpes-4144). Son programas nacionales, con reglas de compra pública nacionales. Un proveedor con sede en Lima no accede al plan brasileño por ser regional. Ese detalle, y no la CAGR, decide dónde se factura."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "50,6%. La participación de Brasil en el PIB nominal de América del Sur en 2024. Medio continente es un solo país, con su propio idioma, su propio código tributario y su propio mercado de capitales.",
+            "attribution": "Cálculo sobre cuentas nacionales del Banco Mundial, USD corrientes, 2024"
+          },
+          "id": "market-size"
+        },
+        {
+          "heading": "Por qué América del Sur no es un mercado único",
+          "level": 2,
+          "paragraphs": [
+            "América del Sur tiene una economía dominante y cuatro medianas que no comparten casi nada a nivel operativo. Las doce economías suman cerca de USD 4.320 mil millones en 2024 y Brasil aporta USD 2.185,8 mil millones. Una tesis que trate a Brasil como una apuesta país más entre varias ya ponderó mal la mitad del continente antes de firmar el primer cheque.",
+            "El capital de riesgo está todavía más concentrado que el PIB. El venture latinoamericano cerró 2025 en USD 4,1 mil millones, con Brasil en USD 2,1 mil millones y México en USD 1,1 mil millones, según [Crunchbase News del 13 de enero de 2026](https://news.crunchbase.com/venture/vcs-bullish-latam-startup-funding-rebounds-2025/). El desglose de 2024 del [Latin America Venture Capital Report 2025](https://reports.cuanticovp.com/latin-america-venture-capital-report-2025/) ubica a Brasil en USD 1,7 mil millones, cerca de 52% del total, México en USD 792 millones, Argentina en USD 418 millones y Colombia en USD 353 millones, con Chile y Perú por debajo del umbral de reporte. Dos países se llevan tres cuartas partes de los dólares. El resto de la región se reparte lo que queda.",
+            "Cada país trae además al menos un hecho que descalifica el marco monolítico. Argentina cerró 2024 con inflación al consumidor de 219,9% y, al mismo tiempo, la segunda intensidad de I+D de la región, 0,60% del PIB. Ingenieros excelentes, ingresos imposibles de cotizar en moneda local.",
+            "Chile es el más pequeño de los cinco grandes por PIB y el más rico por habitante, con USD 16.659 de PIB per cápita en 2024. Start-Up Chile, lanzada por CORFO en 2010 como la primera aceleradora pública del mundo, ha acelerado más de 3.000 startups de más de 80 países con más de USD 100 millones de inversión pública, según [WIPO Magazine](https://www.wipo.int/en/web/wipo-magazine/articles/start-up-chile-38986). Y su intensidad de I+D sigue en 0,39% del PIB, baja para la reputación de su ecosistema.",
+            "Perú hizo el movimiento contrario. Fue el primer país de América Latina en promulgar una ley general de IA, la Ley 31814, cuyo reglamento se aprobó mediante el Decreto Supremo 115-2025-PCM publicado el 9 de septiembre de 2025, según el [tablero de políticas de OECD.AI](https://oecd.ai/en/dashboards/policy-initiatives/law-31814-law-that-promotes-the-use-of-artificial-intelligence-in-favor-of-the-economic-and-social-development-of-the-country-3047). Y tiene la menor intensidad de I+D del continente, 0,18% del PIB. Legislar la IA y poder construirla no son la misma variable."
+          ],
+          "bullets": [
+            "Participación en el PIB sudamericano, 2024: Brasil 50,6%, Argentina 14,8%, Colombia 9,7%, Chile 7,6%, Perú 6,8%. El resto del continente suma 10,5%.",
+            "Intensidad de I+D, último año disponible del Banco Mundial y la UNESCO: Brasil 1,19%, Argentina 0,60%, Chile 0,39%, Colombia 0,29%, Perú 0,18% del PIB.",
+            "Brasil gasta más de tres veces la proporción de Perú sobre una economía mucho mayor. En términos absolutos la brecha es de casi dos órdenes de magnitud.",
+            "Política de IA por país: CONPES 4144 en Colombia con cerca de USD 479 millones, PBIA en Brasil con cerca de USD 4 mil millones, ley general vigente en Perú, proyecto en trámite en Chile, marco deliberadamente liviano en Argentina."
+          ],
+          "id": "not-one-market"
+        },
+        {
+          "heading": "El talento es regional, la distribución y la regulación son nacionales",
+          "level": 2,
+          "paragraphs": [
+            "El talento cruza la frontera y la venta no. Esa frase sostiene todo lo demás, y cada mitad se prueba por separado.",
+            "La mitad regional es la fácil. El outsourcing de TI latinoamericano corre a cerca de USD 19,5 mil millones en 2025, y las exportaciones argentinas de economía del conocimiento, principalmente software y servicios de TI, han venido corriendo cerca de USD 9,6 mil millones anuales. Contratación remota, husos horarios compartidos con Estados Unidos, un mercado laboral común en español fuera de Brasil y herramientas de IA portables significan que una ingeniera de machine learning colombiana, un data engineer chileno y un líder de backend argentino pueden armar un venture brasileño sin que ninguno se mude.",
+            "La mitad nacional se prueba con fechas, y las fechas divergen. No hay convergencia regulatoria en curso. Hay cinco instrumentos distintos, en cinco etapas distintas, con cinco calendarios distintos. Brasil legisla por proyecto de ley, Perú ya reglamentó, Colombia gobierna con un documento de política pública, Chile está a mitad de trámite y Argentina eligió no tener marco integral, de forma explícita, para atraer inversión. Un mismo producto de IA cumple cinco veces o deja de vender cinco veces.",
+            "La distribución es nacional por razones más duras que la regulación. La medición del Banco Mundial ubicó a las empresas brasileñas en 1.501 horas al año para preparar, declarar y pagar impuesto corporativo, tributos tipo IVA y cargas laborales, la cifra más alta de las 190 economías medidas ([Banco Mundial](https://tradingeconomics.com/brazil/time-to-prepare-and-pay-taxes-hours-wb-data.html)). La Enmienda Constitucional 132 de 2023 está introduciendo una reforma al consumo que cambia esa carga, pero no vuelve portable la lógica tributaria brasileña a Bogotá ni a Santiago. Súmele rieles de pago por país, ley de compras públicas por país, régimen de datos personales por país, socios de distribución por país y una frontera idiomática en el límite de Brasil.",
+            "Por eso la asimetría favorece a un studio y no a un fondo generalista ni a un equipo fundador solo. El insumo es regional, el moat es nacional. Un studio amortiza redes de operadores, profundidad de ingeniería, infraestructura de build compartida y un playbook de go-to-market reutilizable, y los apunta contra un mercado nacional donde la defensibilidad de verdad vive. Un equipo fundador único no amortiza nada, porque tiene una sola empresa contra la cual repartir el costo. Un fondo regional amortiza capital y no capacidad de construcción."
+          ],
+          "bullets": [
+            "Brasil: el PL 2338 fue aprobado por el Senado el 10 de diciembre de 2024 y enviado a la Cámara de Diputados el 17 de marzo de 2025.",
+            "Perú: reglamento de la Ley 31814 mediante Decreto Supremo 115-2025-PCM, publicado el 9 de septiembre de 2025, el primer marco general de IA de la región.",
+            "Colombia: CONPES 4144 adoptado el 14 de febrero de 2025. Es política pública, no estatuto.",
+            "Chile: el proyecto 16821-19 fue aprobado por la Cámara de Diputados en agosto de 2025 y pasó al Senado. Argentina sigue sin marco integral, por decisión explícita."
+          ],
+          "id": "the-asymmetry"
+        },
+        {
+          "heading": "AI studio en el sentido de agencia versus el modelo de venture studio",
+          "level": 2,
+          "paragraphs": [
+            "El término AI studio nombra dos negocios con economía opuesta, y quien lo busca casi siempre quiere uno de los dos sin saber cuál. Vale la pena resolver la ambigüedad antes de discutir cifras, porque ninguna cifra significa lo mismo en los dos casos.",
+            "La agencia es un negocio legítimo y en la región es con mucho el más grande de los dos. Vive dentro de ese mercado de outsourcing de TI de cerca de USD 19,5 mil millones. Cobra por entrega, escala en línea recta con el headcount y su riesgo está acotado, porque le pagan por trabajo hecho. El valor que crea, en cambio, se acumula en el balance del cliente. Una casa de desarrollo que se rebautiza AI studio sigue vendiendo horas.",
+            "Un venture studio no vende nada por hora. Origina la empresa, la co-funda y se queda con una parte, lo que significa que su resultado es el portafolio y no la factura. El riesgo está concentrado y se cobra contra el desenlace, no contra la entrega. Por eso tampoco aparece dimensionado en los reportes de mercado. No hay facturación que sumar.",
+            "Tampoco es una aceleradora ni una incubadora. Una aceleradora selecciona equipos que ya existen y los pasa por una cohorte. Una incubadora presta espacio y servicios. Un venture studio origina la idea, recluta al operador fundador y co-funda desde el día cero. Este análisis se lee desde ese lado."
+          ],
+          "bullets": [
+            "Modelo de ingresos: la agencia vende horas o proyectos de alcance fijo. El venture studio toma equity y construye un portafolio propio.",
+            "Economía: margen bruto sobre entrega, lineal con el headcount, contra economía de co-founder que compone con el valor del portafolio.",
+            "Relación: proveedor de un cliente contra co-fundador de la empresa.",
+            "Modo de falla: caída de utilización y concentración de clientes contra un portafolio de empresas subescala."
+          ],
+          "id": "studio-vs-agency"
+        },
+        {
+          "heading": "Qué muestran los datos de desempeño del modelo de studio",
+          "level": 2,
+          "paragraphs": [
+            "Según la Global Startup Studio Network (GSSN), los venture studios producen una TIR de cerca de 50% frente a cerca de 19% del venture capital tradicional, del orden de 2,5x sobre horizontes realistas. Ese es el benchmark del modelo de studio como categoría. No es el resultado realizado de Avante ni de ningún studio en particular, y presentarlo así sería deshonesto.",
+            "La fuente primaria detrás de ese benchmark es una encuesta de 258 startups creadas por studios. Reporta una TIR promedio de 53% contra 21,3%, un TVPI de 5,8 contra 1,57, 10,7 meses de cero a seed contra 36 meses, y 25,2 meses de cero a Serie A contra 56 meses. La conversión de seed a Serie A aparece en 72% contra 42%.",
+            "Hay que ser honesto con la metodología. Es una encuesta autorreportada de empresas creadas por studios, levantada por la asociación de la propia industria, y arrastra sesgo de supervivencia, porque los studios matan ideas antes de que se conviertan en empresas y esas nunca entran en la muestra. Las cifras de velocidad se sostienen mejor que las de rentabilidad, por una razón simple. El tiempo hasta la ronda es directamente observable y la TIR no.",
+            "Y la velocidad es justamente lo que más pesa acá. Una brecha de cerca de 25 meses hasta la Serie A significa una cosa donde el capital es paciente y otra muy distinta en un mercado con 219,9% de inflación anual, salidas delgadas y 1.501 horas al año de cumplimiento tributario. Comprimir el tiempo hasta el primer ingreso es cobertura cambiaria y cobertura regulatoria al mismo tiempo."
+          ],
+          "id": "the-evidence"
+        },
+        {
+          "heading": "Riesgo cambiario, salidas delgadas y la trampa del portafolio subescala",
+          "level": 2,
+          "paragraphs": [
+            "La corrección post-2021 es real y solo se revirtió a medias, y ningún optimismo la cierra. El venture latinoamericano cerró 2025 en USD 4,1 mil millones, arriba de los USD 3,6 mil millones de 2024 y todavía por debajo de la mitad de los USD 8,4 mil millones de 2022. Una recuperación desde el piso no es un auge. Quien modele capacidad de follow-on con comparables de 2021 está modelando un mercado que ya no existe.",
+            "Las salidas son delgadas. El Latin America Venture Capital Report 2025 registra apenas 79 salidas entre empresas con respaldo de venture en el periodo analizado, con adquisiciones y salidas cayendo de forma sostenida desde 2021, y nombra la escasez de liquidez como el mayor desafío del ecosistema. La lectura de LAVCA sobre el mismo problema cuenta cerca de 60 empresas de tecnología latinoamericanas que levantaron más de USD 150 millones y no se listaron ni fueron adquiridas. Eso es un atasco, no un pipeline. Los secundarios están haciendo cada vez más el trabajo que antes hacían el M&A y las salidas a bolsa.",
+            "El riesgo cambiario y político tampoco se diversifica adentro de la región. Argentina con 219,9% de inflación en 2024 es el caso extremo, pero cada país de la tabla cotiza ingresos en una moneda que puede moverse 20% contra el dólar en un trimestre. Repartir un portafolio entre cinco monedas sudamericanas no elimina ese riesgo. Lo correlaciona.",
+            "Y está la trampa específica, la que más tesis regionales ha matado. Un studio que se reparte entre cinco países sin ser dueño de la distribución nacional en ninguno termina con un portafolio de empresas demasiado pequeñas para importar y demasiado difusas para defender. El patrón de falla no es de capital. Es de distribución. Cinco cabezas de playa a medias no suman una posición. La estructura correcta concentra el go-to-market en un solo mercado nacional, donde el operador tiene cicatrices reales, y agrupa únicamente los insumos regionales."
+          ],
+          "callout": {
+            "kind": "stat",
+            "text": "79 salidas entre empresas latinoamericanas con respaldo de venture en el último periodo reportado, y cerca de 60 compañías que levantaron más de USD 150 millones cada una siguen sin listarse ni ser adquiridas.",
+            "attribution": "Latin America Venture Capital Report 2025"
+          },
+          "id": "the-hard-parts"
+        },
+        {
+          "heading": "Cómo Avante aborda la región desde Brasil",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures es un venture studio que construye empresas AI-native en Brasil y América Latina, y la lectura regional de arriba se traduce directo en cómo opera. La concentración es nacional. Brasil primero, porque Brasil es 50,6% del PIB del continente, cerca de la mitad de sus dólares de venture y el mercado donde los operating partners cargan las cicatrices. La expansión regional viene después de que exista distribución nacional, nunca antes.",
+            "El ancla estructural brasileña es de servicios. Los servicios representan cerca de 70% del PIB brasileño con baja penetración de software, según el IBGE. La serie más estrecha de valor agregado de servicios del [Banco Mundial](https://data.worldbank.org/indicator/NV.SRV.TOTL.ZS?locations=BR) lo ubica en 59,2% del PIB brasileño en 2024. Ambas son correctas sobre su propia base y describen la misma brecha de digitalización. Ese argumento está desarrollado en [la oportunidad de la economía de servicios de Brasil](/library/brazil-services-economy-opportunity).",
+            "El insumo escaso no es la ingeniería. Es un operador de dominio con 10 o más años de cicatrices del mercado brasileño. Alguien que sabe qué tribunal publica qué lista, qué comité de suscripción de una aseguradora firma de verdad, qué calendario de compras municipales gobierna una venta. Ese conocimiento no cruza fronteras y no se comprime con mejores modelos. Emparejarlo con un playbook de Silicon Valley y capital de primer ticket, armado el día uno, es el borde estructural.",
+            "El porqué del momento es una respuesta de costos, no de moda. El [AI Index 2025 de Stanford HAI](https://hai.stanford.edu/ai-index/2025-ai-index-report) documenta que consultar un modelo de nivel GPT-3.5 en MMLU pasó de USD 20,00 por millón de tokens en noviembre de 2022 a USD 0,07 por millón de tokens en octubre de 2024, más de 280 veces menos en cerca de 18 meses. El hardware bajó cerca de 30% anual y la eficiencia energética mejoró cerca de 40% por año. Por eso la infraestructura de IA ya es lo bastante barata para desplegar sin una Serie A.",
+            "El modelo operativo es explícito y conviene leerlo como contrato. El studio lanza 3-4 ventures por año, despliega USD 500K-1,5M por venture a lo largo del pre-seed y retiene economía de co-founder. Cada venture recorre el sistema de seis etapas: Research, Partner, Build, Traction, Revenue, Compound. Los operating partners siguen involucrados hasta el primer hito de ingresos y después pasan a supervisión a nivel de directorio. Un venture de studio se lanza 6-9 meses antes que un equipo independiente con financiamiento comparable, y resolver la plomería de la empresa una sola vez enruta cerca de USD 300K-500K de capital efectivo por venture hacia producto y tracción en lugar de overhead.",
+            "El patrón que se repite en el portafolio es el flywheel copilot, dato, capital. Construir un copiloto de IA que genera datos propietarios y usar esos datos para levantar y desplegar capital. Alphajuri lo aplica al mercado brasileño de deuda judicial. WIR, con AXA, lo aplica a pricing de seguros y scoring de riesgo. BR Auction Intel lo aplica a los remates inmobiliarios brasileños. Las tres son jugadas nacionales construidas sobre insumos regionales.",
+            "Cuando la inferencia es casi gratis, la restricción se corre del acceso al modelo hacia el dato propietario y la distribución, y en América del Sur las dos son nacionales. El mismo ejercicio de dimensionamiento aplicado a otra categoría está en [el mercado de visión por computadora en América del Sur](/library/south-america-computer-vision-market), y el detalle del modelo en [por qué existe Avante](/why-avante). Para quien construye desde Bogotá, Lima o Santiago la conclusión no es mudarse a São Paulo. Es dejar de tratar el continente como un mercado, elegir el país donde puede ganar la distribución y usar el resto de la región como lo que ya es: el insumo."
+          ],
+          "id": "how-avante"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "¿Qué tan grande es el mercado de AI studio en América del Sur?",
+          "a": "No hay una sola cifra defendible, y el rango es el dato. IMARC estima el mercado de IA de América Latina en USD 5,79 mil millones en 2025, hacia USD 34,62 mil millones en 2034 a 22,0% de CAGR, mientras Statista proyecta cerca de USD 19,0 mil millones para América del Sur en 2030 a 16,7%. Las proyecciones discrepan porque los límites de la categoría discrepan, y eso es evidencia de inmadurez, no de mala medición."
+        },
+        {
+          "q": "¿Cuál es la diferencia entre un AI studio y un venture studio?",
+          "a": "Un AI studio en el sentido de agencia vende horas y construye para clientes dentro de un mercado de outsourcing de TI latinoamericano de cerca de USD 19,5 mil millones en 2025. Un venture studio co-funda empresas y toma equity, con economía de co-founder en lugar de margen sobre entrega. Distinto modelo de ingresos, distinto riesgo, distinto desenlace. Un venture studio tampoco es una aceleradora ni una incubadora, porque origina la idea y co-funda desde el día cero."
+        },
+        {
+          "q": "¿Los venture studios superan de verdad al venture capital tradicional?",
+          "a": "El benchmark de la Global Startup Studio Network (GSSN) ubica la TIR de los studios en cerca de 50% frente a cerca de 19% del venture capital tradicional. Conviene leerlo con cuidado, porque la base es una encuesta autorreportada de 258 startups creadas por studios y arrastra sesgo de supervivencia. Las métricas de velocidad, como el tiempo hasta seed y hasta Serie A, se sostienen mejor que las de rentabilidad, porque son directamente observables."
+        },
+        {
+          "q": "¿Por qué fracasan las tesis regionales en el mercado de AI studio en América del Sur?",
+          "a": "Porque tratan la distribución como regional cuando es nacional. El talento cruza fronteras, pero los regímenes tributarios, las reglas de compra pública, los rieles de pago y el idioma no lo hacen. Brasil solo son 1.501 horas anuales de cumplimiento tributario, la cifra más alta de las 190 economías medidas por el Banco Mundial. Un studio repartido entre cinco países sin distribución nacional en ninguno termina con un portafolio subescala."
+        },
+        {
+          "q": "¿Qué país sudamericano conviene para construir una empresa de IA?",
+          "a": "Depende de cuál variable sea la que aprieta. Brasil por tamaño de mercado y capital, con 50,6% del PIB del continente y USD 2,1 mil millones de venture en 2025. Chile por riqueza per cápita e infraestructura de ecosistema, Argentina por densidad de ingeniería a bajo costo en dólares con riesgo cambiario severo, Colombia por apoyo de política pública y Perú por claridad regulatoria adelantada a su capacidad."
+        }
+      ]
+    }
+  },
+  {
     "slug": "south-america-computer-vision-market",
     "category": "insights",
     "type": "Explainer",
@@ -23049,11 +25375,11 @@ const engineArticles: Article[] = [
           "heading": "How Avante builds for taste",
           "level": 2,
           "paragraphs": [
-            "Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America. We do not bet on a model. We build the loop around it. Every venture is AI-native from day one, with a model in the core product loop and a copilot positioned to capture proprietary data inside a real workflow. That is the recurring pattern across the portfolio: [copilot to data to fund](/library/copilot-to-data-to-fund-flywheel). Build the copilot, generate the data, use the data to raise and deploy capital. More on the thesis at [why Avante](https://avanteventures.com/why-avante).",
+            "Avante Ventures is a venture studio building AI-native companies in Brazil and Latin America. We do not bet on a model. We build the loop around it. Every venture is AI-native from day one, with a model in the core product loop and a copilot positioned to capture proprietary data inside a real workflow. That is the recurring pattern across the portfolio: [copilot to data to fund](/library/copilot-to-data-to-fund-flywheel). Build the copilot, generate the data, use the data to raise and deploy capital. More on the thesis at [why Avante](/why-avante).",
             "The studio model is itself an exercise in subtraction. We solve company plumbing once, centrally, which routes roughly $300K to $500K of effective capital per venture into product and traction instead of overhead. The same logic that drops inference cost 10x a year, applied to the company itself. Do the expensive thing once and let every venture launch lean. We launch three to four ventures a year through six stages, Research, Partner, Build, Traction, Revenue, Compound, with $500K to $1.5M deployed per venture and co-founder economics retained.",
             "The structural payoff is the studio model's track record, covered in full in [Why Venture Studios Outperform VC in LATAM](/library/why-venture-studios-win-latam). The model rewards exactly what the AI era rewards: judgment, iteration, and capital efficiency over raw build speed.",
             "One last Fadell idea, because it sets the right expectation. Category-defining products take three generations. First you make the product, then you fix the product, then you fix the business. The iPod, the iPhone, and Nest were not iconic at launch. They earned it through iteration. The job of a studio is to underwrite that iteration capacity, not to bet on a perfect version one.",
-            "In an AI-saturated market, anyone can build. Few decide well. Taste is not a soft virtue. It is the leverage that turns cheap production into a durable company. Browse the rest of [the Library](https://avanteventures.com/library)."
+            "In an AI-saturated market, anyone can build. Few decide well. Taste is not a soft virtue. It is the leverage that turns cheap production into a durable company. Browse the rest of [the Library](/library)."
           ]
         }
       ]
@@ -23134,11 +25460,11 @@ const engineArticles: Article[] = [
           "heading": "Como a Avante constrói para o critério",
           "level": 2,
           "paragraphs": [
-            "A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina. Nós não apostamos em um modelo. Construímos o loop ao redor dele. Toda venture é AI-native desde o dia um, com um modelo no loop central do produto e um copilot posicionado para capturar dado proprietário dentro de um workflow real. Esse é o padrão recorrente do portfólio: [flywheel copilot, dado, capital](/library/copilot-to-data-to-fund-flywheel). Construa o copilot, gere o dado, use o dado para levantar e alocar capital. Mais sobre a tese em [por que a Avante](https://avanteventures.com/why-avante).",
+            "A Avante Ventures é um venture studio que constrói empresas AI-native no Brasil e na América Latina. Nós não apostamos em um modelo. Construímos o loop ao redor dele. Toda venture é AI-native desde o dia um, com um modelo no loop central do produto e um copilot posicionado para capturar dado proprietário dentro de um workflow real. Esse é o padrão recorrente do portfólio: [flywheel copilot, dado, capital](/library/copilot-to-data-to-fund-flywheel). Construa o copilot, gere o dado, use o dado para levantar e alocar capital. Mais sobre a tese em [por que a Avante](/why-avante).",
             "O modelo de studio é, em si, um exercício de subtração. Resolvemos o encanamento de empresa uma vez, de forma central, o que direciona cerca de US$ 300 mil a US$ 500 mil de capital efetivo por venture para produto e tração em vez de overhead. A mesma lógica que derruba o custo de inferência 10x ao ano, aplicada à própria empresa. Faça a coisa cara uma vez e deixe cada venture nascer enxuta. Lançamos de três a quatro ventures por ano em seis estágios, Research, Partner, Build, Traction, Revenue, Compound, com US$ 500 mil a US$ 1,5 milhão alocados por venture e economia de co-founder retida.",
             "O retorno estrutural é o histórico do modelo de studio, detalhado em [Por Que Venture Studios Superam o VC na LATAM](/library/why-venture-studios-win-latam). O modelo recompensa exatamente o que a era da IA recompensa: critério, iteração e eficiência de capital acima da velocidade bruta de construir.",
             "Uma última ideia de Fadell, porque ela calibra a expectativa certa. Produtos que abrem categoria levam três gerações. Primeiro você faz o produto, depois conserta o produto, depois conserta o negócio. O iPod, o iPhone e a Nest não eram icônicos no lançamento. Eles conquistaram isso pela iteração. O trabalho de um studio é financiar essa capacidade de iterar, não apostar em uma versão um perfeita.",
-            "Em um mercado saturado de IA, qualquer um constrói. Poucos decidem bem. Critério não é uma virtude subjetiva. É a alavanca que transforma produção barata em empresa durável. Navegue pelo resto da [Biblioteca](https://avanteventures.com/library)."
+            "Em um mercado saturado de IA, qualquer um constrói. Poucos decidem bem. Critério não é uma virtude subjetiva. É a alavanca que transforma produção barata em empresa durável. Navegue pelo resto da [Biblioteca](/library)."
           ]
         }
       ]
@@ -28999,7 +31325,7 @@ const engineArticles: Article[] = [
           "paragraphs": [
             "There is a way to build technology companies that has been tested and refined over decades in the most competitive startup ecosystems in the world. The principles are not secret. Speed of iteration. Tight feedback loops. Hiring for ownership. Designing for distribution from day one.",
             "What has been missing in Brazil is not access to these ideas. It is the operational translation. What does a two-week sprint cycle look like when your engineering team is in São Paulo and your customer is a mid-sized enterprise in Porto Alegre? How do you run a growth loop in a market where B2B sales still depends heavily on relationships and trust?",
-            "Avante exists to answer those questions with specificity. Not with frameworks from a slide deck. With decisions we have made, mistakes we have absorbed, and patterns we have seen repeat. To understand more about how the AI studio model fits into the Brazilian market, [Brazil AI Studio Market: What It Is and Why It Matters Now](https://avanteventures.com/library/brazil-ai-studio-market-what-it-is-why-it-matters) is worth reading before your first conversation with us.",
+            "Avante exists to answer those questions with specificity. Not with frameworks from a slide deck. With decisions we have made, mistakes we have absorbed, and patterns we have seen repeat. To understand more about how the AI studio model fits into the Brazilian market, [Brazil AI Studio Market: What It Is and Why It Matters Now](/library/brazil-ai-studio-market-opportunity) is worth reading before your first conversation with us.",
             "The playbook is not a rigid system. It is a set of principles applied with judgment. That judgment comes from having built before."
           ],
           "bullets": [
@@ -29116,7 +31442,7 @@ const engineArticles: Article[] = [
           "paragraphs": [
             "Existe uma forma de construir empresas de tecnologia que foi testada e refinada ao longo de décadas nos ecossistemas de startups mais competitivos do mundo. Os princípios não são segredo. Velocidade de iteração. Ciclos curtos de feedback. Contratações orientadas a ownership. Produto desenhado para distribuição desde o primeiro dia.",
             "O que faltou no Brasil não foi acesso a essas ideias. Foi a tradução operacional. Como é um ciclo de sprint de duas semanas quando o time de engenharia está em São Paulo e o cliente é uma empresa de médio porte em Porto Alegre? Como você constrói um growth loop em um mercado onde o B2B ainda depende muito de relacionamento e confiança?",
-            "A Avante existe para responder a essas perguntas com especificidade. Não com frameworks de slide deck. Com decisões que tomamos, erros que absorvemos e padrões que vimos se repetir. Para entender melhor como o modelo de AI studio se encaixa no mercado brasileiro, vale a leitura de [Brazil AI Studio Market: What It Is and Why It Matters Now](https://avanteventures.com/library/brazil-ai-studio-market-what-it-is-why-it-matters) antes da sua primeira conversa conosco.",
+            "A Avante existe para responder a essas perguntas com especificidade. Não com frameworks de slide deck. Com decisões que tomamos, erros que absorvemos e padrões que vimos se repetir. Para entender melhor como o modelo de AI studio se encaixa no mercado brasileiro, vale a leitura de [Brazil AI Studio Market: What It Is and Why It Matters Now](/library/brazil-ai-studio-market-opportunity) antes da sua primeira conversa conosco.",
             "O playbook não é um sistema rígido. É um conjunto de princípios aplicados com julgamento. E esse julgamento vem de já ter construído antes."
           ],
           "bullets": [

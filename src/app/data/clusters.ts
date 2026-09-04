@@ -90,6 +90,16 @@ export const CLUSTERS: Cluster[] = [
       // computer-vision page was already leaking into `south america computer
       // vision market` at pos ~24, so the geo variant gets its own page.
       'south-america-computer-vision-market',
+      // Wave 2026-09. Splitting the absorbers: brazil-generative-ai-market-opportunity
+      // was carrying media-and-entertainment, BFSI and the generic head term at once
+      // and sat at pos ~52 on the site's highest impression count, while every page
+      // serving a single query ranked. These three take one query each. The two
+      // south-america pages extend the same template onto the geo axis.
+      'brazil-generative-ai-media-entertainment-opportunity',
+      'brazil-generative-ai-bfsi-opportunity',
+      'brazil-ai-workspace-market-opportunity',
+      'south-america-ai-studio-market',
+      'south-america-ai-image-generator-market',
     ],
   },
 ]
