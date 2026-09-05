@@ -5421,7 +5421,7 @@ const engineArticles: Article[] = [
           "heading": "Why We Publish This at All",
           "level": 2,
           "paragraphs": [
-            "Most venture builders hide their mistakes. They publish milestone announcements, not failure logs. Avante does the opposite.",
+            "Most venture studios hide their mistakes. They publish milestone announcements, not failure logs. Avante does the opposite.",
             "AlphaJuri is one of our companies in active construction. It sits at the intersection of legal intelligence and AI — a space where the margin for hallucination, misclassification, and trust erosion is essentially zero. Every error costs credibility. Every fix compounds learning.",
             "So we write it down. Publicly. Not because it's comfortable, but because the founders and co-builders who want to work with Avante deserve to see how we actually operate — not how we say we operate."
           ]
@@ -5502,7 +5502,7 @@ const engineArticles: Article[] = [
             "If you're building an AI-native company in a high-stakes vertical — legal, health, finance, compliance — the error taxonomy above is not specific to AlphaJuri. It's close to universal.",
             "The hallucination problem is architectural. The feature-market fit problem is a listening problem. The onboarding problem is a workflow integration problem. The latency problem is a prioritization problem. The 'done' problem is a discipline problem.",
             "None of them are fixed by better prompts. All of them are fixed by operational rigor applied to AI as a first-class engineering system.",
-            "The venture builder model — where operators are inside the company, not observing from a cap table — is what makes this error log possible. Avante teams work inside AlphaJuri. We see the errors when they happen, not in a quarterly board deck. That's the structural advantage, and it's worth understanding how it differs from traditional fund structures. The [How Do Venture Studios Make Money? The Honest Breakdown](https://avanteventures.com/en/library/how-do-venture-studios-make-money) piece gets into why that alignment matters beyond the feel-good version.",
+            "The venture studio model — where operators are inside the company, not observing from a cap table — is what makes this error log possible. Avante teams work inside AlphaJuri. We see the errors when they happen, not in a quarterly board deck. That's the structural advantage, and it's worth understanding how it differs from traditional fund structures. The [How Do Venture Studios Make Money? The Honest Breakdown](https://avanteventures.com/en/library/how-do-venture-studios-make-money) piece gets into why that alignment matters beyond the feel-good version.",
             "If you're a founder who wants to build this way — with real operational support, documented learning, and AI as the foundation rather than a feature — Avante is building that infrastructure now."
           ]
         }
@@ -5535,7 +5535,7 @@ const engineArticles: Article[] = [
           "heading": "Por Que Publicamos Isso",
           "level": 2,
           "paragraphs": [
-            "A maioria dos venture builders esconde seus erros. Publicam anúncios de marcos, não registros de falhas. A Avante faz o oposto.",
+            "A maioria dos venture studios escondem seus erros. Publicam anúncios de marcos, não registros de falhas. A Avante faz o oposto.",
             "O AlphaJuri é uma das nossas empresas em construção ativa. Ele opera na interseção entre inteligência jurídica e IA — um espaço onde a margem para alucinação, classificação errada e erosão de confiança é essencialmente zero. Cada erro custa credibilidade. Cada correção acumula aprendizado.",
             "Por isso, escrevemos. Publicamente. Não porque é confortável, mas porque os fundadores e co-construtores que querem trabalhar com a Avante merecem ver como operamos de verdade — não como dizemos que operamos."
           ]
@@ -5616,7 +5616,7 @@ const engineArticles: Article[] = [
             "Se você está construindo uma empresa nativa de IA em uma vertical de alto risco — jurídico, saúde, finanças, compliance — a taxonomia de erros acima não é específica do AlphaJuri. É próxima do universal.",
             "O problema de alucinação é arquitetural. O problema de fit funcionalidade-mercado é um problema de escuta. O problema de onboarding é um problema de integração ao fluxo de trabalho. O problema de latência é um problema de priorização. O problema do 'pronto' é um problema de disciplina.",
             "Nenhum deles é resolvido com prompts melhores. Todos são resolvidos com rigor operacional aplicado à IA como um sistema de engenharia de primeira classe.",
-            "O modelo de venture builder — onde operadores estão dentro da empresa, não observando de uma posição no cap table — é o que torna esse registro de erros possível. Os times da Avante trabalham dentro do AlphaJuri. Vemos os erros quando acontecem, não em um relatório trimestral para o board. Essa é a vantagem estrutural, e vale entender como ela difere das estruturas tradicionais de fundo.",
+            "O modelo de venture studio — onde operadores estão dentro da empresa, não observando de uma posição no cap table — é o que torna esse registro de erros possível. Os times da Avante trabalham dentro do AlphaJuri. Vemos os erros quando acontecem, não em um relatório trimestral para o board. Essa é a vantagem estrutural, e vale entender como ela difere das estruturas tradicionais de fundo.",
             "Se você é um fundador que quer construir dessa forma — com suporte operacional real, aprendizado documentado e IA como fundação em vez de funcionalidade — a Avante está construindo essa infraestrutura agora."
           ]
         }
@@ -12181,7 +12181,7 @@ const engineArticles: Article[] = [
             "The absence of real-time documentation is not just a content problem. It is a structural problem that slows everything down.",
             "When no one documents the build, every new founder starts from zero. They make the same mistakes. They hit the same walls. They waste months on questions that someone else already answered — but never published.",
             "In the context of AI-native companies specifically, the problem compounds. The playbook for building with AI as a foundation — not as a feature bolted on — is still being written. There is no established canon. No standard curriculum. The builders who are figuring it out right now have a responsibility to show their work.",
-            "Avante was built on exactly this premise. If we are constructing a portfolio of AI-native companies in Brazil using a venture builder model, and we genuinely believe our approach is differentiated, then hiding that approach defeats the purpose. The documentation is part of the thesis."
+            "Avante was built on exactly this premise. If we are constructing a portfolio of AI-native companies in Brazil using a venture studio model, and we genuinely believe our approach is differentiated, then hiding that approach defeats the purpose. The documentation is part of the thesis."
           ]
         },
         {
@@ -12207,7 +12207,7 @@ const engineArticles: Article[] = [
           "paragraphs": [
             "There is a counterintuitive truth here. Most builders assume that publishing your process exposes you to competition. The actual dynamic is the opposite.",
             "When you document the build in real time, you create an asymmetric advantage. You attract the exact people who can accelerate the work — operators, co-builders, domain experts, potential partners — who would never have found you inside a closed process. You compress the trust cycle that normally takes years to develop.",
-            "For a venture builder model specifically, this matters even more. Avante is not just building one company. We are building a portfolio, a methodology, a repeatable system. The documentation of that system is itself a competitive moat. It cannot be easily copied because the knowledge is embedded in the people and the decisions, not just the published words.",
+            "For a venture studio model specifically, this matters even more. Avante is not just building one company. We are building a portfolio, a methodology, a repeatable system. The documentation of that system is itself a competitive moat. It cannot be easily copied because the knowledge is embedded in the people and the decisions, not just the published words.",
             "Investors and strategic partners operating in Brazil's AI market need more than a deck. They need evidence of operational thinking. Real-time documentation provides exactly that — a living record of how we think, how we move, and how we correct when we are wrong. You can read more about how this model works structurally in [What Is Avante Ventures and How Does It Build AI-Native Companies](https://avanteventures.com/en/library/what-is-avante-ventures-ai-native-company-builder-brazil)."
           ]
         },
@@ -12259,11 +12259,11 @@ const engineArticles: Article[] = [
       ],
       "faqs": [
         {
-          "a": "Because the process is the proof. Avante's thesis is that building AI-native companies with a venture builder model is differentiated — but claims without evidence are just positioning. Real-time documentation creates a verifiable record of how decisions are made, which attracts the right co-builders and partners faster, creates genuine accountability, and contributes to an ecosystem that is desperately short on honest operational knowledge.",
+          "a": "Because the process is the proof. Avante's thesis is that building AI-native companies with a venture studio model is differentiated — but claims without evidence are just positioning. Real-time documentation creates a verifiable record of how decisions are made, which attracts the right co-builders and partners faster, creates genuine accountability, and contributes to an ecosystem that is desperately short on honest operational knowledge.",
           "q": "Why does Avante document the company-building process in real time instead of waiting until success is confirmed?"
         },
         {
-          "a": "No — and this is a common misreading of how competitive advantage works in a venture builder context. The moat is not in the words published. It is in the people making the decisions, the relationships built through trust, and the compounding knowledge that accumulates inside the actual portfolio companies. Publishing the reasoning accelerates trust and attracts talent. It does not meaningfully help anyone who lacks the operational infrastructure to execute.",
+          "a": "No — and this is a common misreading of how competitive advantage works in a venture studio context. The moat is not in the words published. It is in the people making the decisions, the relationships built through trust, and the compounding knowledge that accumulates inside the actual portfolio companies. Publishing the reasoning accelerates trust and attracts talent. It does not meaningfully help anyone who lacks the operational infrastructure to execute.",
           "q": "Does publishing the build process expose Avante to competitors copying the model?"
         },
         {
@@ -12298,7 +12298,7 @@ const engineArticles: Article[] = [
             "A ausência de documentação em tempo real não é apenas um problema de conteúdo. É um problema estrutural que desacelera tudo.",
             "Quando ninguém documenta a construção, cada novo fundador começa do zero. Comete os mesmos erros. Bate nas mesmas paredes. Desperdiça meses em perguntas que alguém já respondeu — mas nunca publicou.",
             "No contexto de empresas AI-native especificamente, o problema se agrava. O playbook para construir com IA como fundação — não como uma feature adicionada depois — ainda está sendo escrito. Não existe um cânone estabelecido. Nenhum currículo padrão. Os builders que estão descobrindo isso agora têm a responsabilidade de mostrar seu trabalho.",
-            "A Avante foi construída exatamente sobre essa premissa. Se estamos montando um portfólio de empresas AI-native no Brasil usando um modelo de venture builder, e genuinamente acreditamos que nossa abordagem é diferenciada, então esconder essa abordagem derrota o propósito. A documentação é parte da tese."
+            "A Avante foi construída exatamente sobre essa premissa. Se estamos montando um portfólio de empresas AI-native no Brasil usando um modelo de venture studio, e genuinamente acreditamos que nossa abordagem é diferenciada, então esconder essa abordagem derrota o propósito. A documentação é parte da tese."
           ]
         },
         {
@@ -12324,7 +12324,7 @@ const engineArticles: Article[] = [
           "paragraphs": [
             "Existe uma verdade contraintuitiva aqui. A maioria dos builders assume que publicar seu processo os expõe à concorrência. A dinâmica real é o oposto.",
             "Quando você documenta a construção em tempo real, cria uma vantagem assimétrica. Você atrai exatamente as pessoas que podem acelerar o trabalho — operadores, co-builders, especialistas de domínio, parceiros em potencial — que jamais teriam te encontrado dentro de um processo fechado. Você comprime o ciclo de confiança que normalmente leva anos para se desenvolver.",
-            "Para um modelo de venture builder especificamente, isso importa ainda mais. A Avante não está construindo apenas uma empresa. Estamos construindo um portfólio, uma metodologia, um sistema replicável. A documentação desse sistema é em si um moat competitivo. Ele não pode ser facilmente copiado porque o conhecimento está embutido nas pessoas e nas decisões, não apenas nas palavras publicadas.",
+            "Para um modelo de venture studio especificamente, isso importa ainda mais. A Avante não está construindo apenas uma empresa. Estamos construindo um portfólio, uma metodologia, um sistema replicável. A documentação desse sistema é em si um moat competitivo. Ele não pode ser facilmente copiado porque o conhecimento está embutido nas pessoas e nas decisões, não apenas nas palavras publicadas.",
             "Investidores e parceiros estratégicos atuando no mercado de IA do Brasil precisam de mais do que um deck. Precisam de evidência de pensamento operacional. A documentação em tempo real oferece exatamente isso — um registro vivo de como pensamos, como nos movemos e como corrigimos quando estamos errados. Você pode ler mais sobre como esse modelo funciona estruturalmente em [O Que É a Avante Ventures e Como Ela Constrói Empresas AI-Native](https://avanteventures.com/en/library/what-is-avante-ventures-ai-native-company-builder-brazil)."
           ]
         },
@@ -24576,7 +24576,7 @@ const engineArticles: Article[] = [
           "heading": "Co-fundar dentro da operação, não observar de fora dela",
           "level": 2,
           "paragraphs": [
-            "A alternativa ao modelo do cheque que espera a saída é entrar na operação desde o dia zero: escrever a primeira linha de código, montar o go-to-market e operar ao lado de quem vai usar o produto, não como consultoria cobrando por hora, e não como fundo esperando o próximo round. É esse o espaço que a Avante Ventures ocupa como venture builder AI-native: um estudo com sede em São Paulo e hub operativo no Vale do Silício que co-funda empresas de software com IA para o Brasil e para a América Latina, com operadores dentro de cada venture desde o primeiro dia. Hoje mantém três ventures com estado público, AlphaJuri, copiloto de IA para advogados brasileiros, em construção. WIR, camada de IA para seguradoras e corretores latino-americanos, com uma POC em vivo com uma seguradora global. e Futureproofing.dev, engenheiros seniores de IA embarcados dentro de operações legadas, já operando com várias companhias. O padrão que se repete em cada um desses ventures é o mesmo: a tese se escolhe antes, o operador entra na empresa no dia zero, e a IA se constrói no cimiento do produto, não em cima dele. Nenhum desses três ventures resolve, por si só, os US$ 2,2 bilhões projetados para a região. Resolvem, cada um, um processo específico dentro dele."
+            "A alternativa ao modelo do cheque que espera a saída é entrar na operação desde o dia zero: escrever a primeira linha de código, montar o go-to-market e operar ao lado de quem vai usar o produto, não como consultoria cobrando por hora, e não como fundo esperando o próximo round. É esse o espaço que a Avante Ventures ocupa como venture studio AI-native: um estúdio com sede em São Paulo e hub operativo no Vale do Silício que co-funda empresas de software com IA para o Brasil e para a América Latina, com operadores dentro de cada venture desde o primeiro dia. Hoje mantém três ventures com estado público, AlphaJuri, copiloto de IA para advogados brasileiros, em construção. WIR, camada de IA para seguradoras e corretores latino-americanos, com uma POC em vivo com uma seguradora global. e Futureproofing.dev, engenheiros seniores de IA embarcados dentro de operações legadas, já operando com várias companhias. O padrão que se repete em cada um desses ventures é o mesmo: a tese se escolhe antes, o operador entra na empresa no dia zero, e a IA se constrói no cimiento do produto, não em cima dele. Nenhum desses três ventures resolve, por si só, os US$ 2,2 bilhões projetados para a região. Resolvem, cada um, um processo específico dentro dele."
           ]
         }
       ],
@@ -24602,7 +24602,7 @@ const engineArticles: Article[] = [
           "a": "Não necessariamente. Um CAGR de 20,4% mede demanda projetada, não capacidade de execução. Num país onde o setor de serviços responde por cerca de 70% do PIB segundo o IBGE, cada processo, jurídico, seguros, operação industrial, exige entender o vocabulário e a lógica de quem trabalha nele todos os dias."
         },
         {
-          "q": "Como um venture builder difere de um fundo de capital de risco tradicional?",
+          "q": "Como um venture studio difere de um fundo de capital de risco tradicional?",
           "a": "Um fundo assina o cheque, entra no board e espera a saída. A Avante Ventures co-funda a empresa desde o dia zero: escreve código, monta o go-to-market e opera ao lado do time, em vez de acompanhar de fora enquanto o fundador constrói sozinho."
         }
       ]
@@ -31279,11 +31279,11 @@ const engineArticles: Article[] = [
     "isPublished": true,
     "en": {
       "title": "What Is Avante Ventures and How Does It Build AI-Native Companies",
-      "description": "Avante Ventures is a venture builder that co-founds and operates AI-native companies in Brazil from day one. It is not a fund that writes checks and waits. It i",
+      "description": "Avante Ventures is a venture studio that co-founds and operates AI-native companies in Brazil from day one. It is not a fund that writes checks and waits. It i",
       "sections": [
         {
           "paragraphs": [
-            "Avante Ventures is a venture builder that co-founds and operates AI-native companies in Brazil from day one. It is not a fund that writes checks and waits. It is an operating team that gets into the work alongside founders."
+            "Avante Ventures is a venture studio that co-founds and operates AI-native companies in Brazil from day one. It is not a fund that writes checks and waits. It is an operating team that gets into the work alongside founders."
           ]
         },
         {
@@ -31310,12 +31310,12 @@ const engineArticles: Article[] = [
           ]
         },
         {
-          "heading": "The Venture Builder Model vs. the Traditional Fund",
+          "heading": "The Venture Studio Model vs. the Traditional Fund",
           "level": 2,
           "paragraphs": [
             "A traditional fund raises capital, deploys it into startups, and manages a portfolio from the outside. The value-add is usually network, governance, and follow-on checks. That model works. But it is not what the AI-native moment in Brazil requires.",
-            "A venture builder co-founds. It shows up before the product exists. It helps define the problem, the architecture, the first team, the go-to-market motion. It takes operational risk alongside the founder. The relationship is not investor-to-portfolio. It is co-builder-to-company.",
-            "Avante operates as a venture builder. We bring a repeatable playbook, a network of operators, and hands-on support across strategy, product, and execution. We do not advise from the sideline. We sit at the table.",
+            "A venture studio co-founds. It shows up before the product exists. It helps define the problem, the architecture, the first team, the go-to-market motion. It takes operational risk alongside the founder. The relationship is not investor-to-portfolio. It is co-builder-to-company.",
+            "Avante operates as a venture studio. We bring a repeatable playbook, a network of operators, and hands-on support across strategy, product, and execution. We do not advise from the sideline. We sit at the table.",
             "For founders, this means you are not alone in the early chaos. For investors and partners, it means there is an experienced operating layer between capital and company risk."
           ]
         },
@@ -31348,8 +31348,8 @@ const engineArticles: Article[] = [
           "heading": "Who Is Behind the Thesis",
           "level": 2,
           "paragraphs": [
-            "Venture builders fail when they are run by people who have only invested, never built. The operating credibility has to be real. At Avante, the team behind the thesis has done the work — shipping products, managing teams, navigating the specific friction of the Brazilian market.",
-            "This is not a credential flex. It is a functional requirement. When a portfolio founder hits a wall at 2am, the value of the venture builder is not a warm introduction. It is someone who has hit the same wall and knows which way to turn.",
+            "Venture studios fail when they are run by people who have only invested, never built. The operating credibility has to be real. At Avante, the team behind the thesis has done the work — shipping products, managing teams, navigating the specific friction of the Brazilian market.",
+            "This is not a credential flex. It is a functional requirement. When a portfolio founder hits a wall at 2am, the value of the venture studio is not a warm introduction. It is someone who has hit the same wall and knows which way to turn.",
             "The operators behind Avante are not advisors. They are in the building."
           ]
         },
@@ -31360,7 +31360,7 @@ const engineArticles: Article[] = [
             "If you are a founder or operator with a specific problem in mind, a strong point of view on a sector, and the appetite to build an AI-native company in Brazil — this is directly relevant to you.",
             "What Avante offers is not just capital. It is a co-building relationship with people who will work alongside you from zero to one, with a playbook that reduces the cost of mistakes in the early stage, and with a network that opens doors that take most founders years to reach on their own.",
             "The bar to start a conversation is low. A real problem. A real conviction. The rest we can figure out together.",
-            "If you are an investor or strategic partner looking for structured exposure to Brazilian AI, the venture builder model offers something a fund typically cannot: an operating layer that is actively managing company risk, not just capital risk."
+            "If you are an investor or strategic partner looking for structured exposure to Brazilian AI, the venture studio model offers something a fund typically cannot: an operating layer that is actively managing company risk, not just capital risk."
           ],
           "bullets": [
             "Co-building from day zero, not check-writing from the sideline",
@@ -31373,7 +31373,7 @@ const engineArticles: Article[] = [
           "heading": "The Next Step Is Simple",
           "level": 2,
           "paragraphs": [
-            "If you searched for Avante Ventures and landed here, the next move is direct. Explore what we are building at avanteventures.com. Read the thinking behind the thesis. Look at how we approach the venture builder model in the Brazilian AI context.",
+            "If you searched for Avante Ventures and landed here, the next move is direct. Explore what we are building at avanteventures.com. Read the thinking behind the thesis. Look at how we approach the venture studio model in the Brazilian AI context.",
             "If something resonates, reach out. We respond to founders with real problems. We engage with partners who understand the market. We do not do long application forms or formal pitch processes at the early stage.",
             "The conversation is the beginning of the work."
           ]
@@ -31381,11 +31381,11 @@ const engineArticles: Article[] = [
       ],
       "faqs": [
         {
-          "a": "Avante Ventures is a venture builder that co-founds and operates AI-native companies in Brazil. Unlike a traditional fund, we get involved before the company exists — helping define the problem, the product architecture, the team, and the go-to-market strategy. We work alongside founders as operators, not observers.",
+          "a": "Avante Ventures is a venture studio that co-founds and operates AI-native companies in Brazil. Unlike a traditional fund, we get involved before the company exists — helping define the problem, the product architecture, the team, and the go-to-market strategy. We work alongside founders as operators, not observers.",
           "q": "What exactly does Avante Ventures do?"
         },
         {
-          "a": "Neither label fits perfectly. Avante is a venture builder — a model that combines the capital function of a fund with the operational depth of a startup studio. We take equity, we co-build, and we stay involved through the critical early stages. The distinction matters because it changes what founders actually get from the relationship.",
+          "a": "Neither label fits perfectly. Avante is a venture studio — a model that combines the capital function of a fund with the operational depth of a startup studio. We take equity, we co-build, and we stay involved through the critical early stages. The distinction matters because it changes what founders actually get from the relationship.",
           "q": "Is Avante Ventures a fund or a startup studio?"
         },
         {
@@ -31396,11 +31396,11 @@ const engineArticles: Article[] = [
     },
     "pt": {
       "title": "O Que É a Avante Ventures e Como Ela Constrói Empresas AI-Native",
-      "description": "A Avante Ventures é uma venture builder que co-funda e opera empresas AI-native no Brasil desde o primeiro dia. Não é um fundo que assina cheques e espera. É um",
+      "description": "A Avante Ventures é um venture studio que co-funda e opera empresas AI-native no Brasil desde o primeiro dia. Não é um fundo que assina cheques e espera. É um",
       "sections": [
         {
           "paragraphs": [
-            "A Avante Ventures é uma venture builder que co-funda e opera empresas AI-native no Brasil desde o primeiro dia. Não é um fundo que assina cheques e espera. É um time de operadores que entra no trabalho junto com os fundadores."
+            "A Avante Ventures é um venture studio que co-funda e opera empresas AI-native no Brasil desde o primeiro dia. Não é um fundo que assina cheques e espera. É um time de operadores que entra no trabalho junto com os fundadores."
           ]
         },
         {
@@ -31427,12 +31427,12 @@ const engineArticles: Article[] = [
           ]
         },
         {
-          "heading": "O Modelo de Venture Builder vs. o Fundo Tradicional",
+          "heading": "O Modelo de Venture Studio vs. o Fundo Tradicional",
           "level": 2,
           "paragraphs": [
             "Um fundo tradicional capta capital, investe em startups e gerencia um portfólio de fora. O valor agregado costuma ser rede de contatos, governança e cheques de follow-on. Esse modelo funciona. Mas não é o que o momento AI-native no Brasil exige.",
-            "Uma venture builder co-funda. Aparece antes de o produto existir. Ajuda a definir o problema, a arquitetura, o primeiro time, o movimento de go-to-market. Assume risco operacional junto com o fundador. A relação não é investidor-portfólio. É co-construtor-empresa.",
-            "A Avante opera como uma venture builder. Trazemos um playbook replicável, uma rede de operadores e suporte hands-on em estratégia, produto e execução. Não aconselhamos da arquibancada. Sentamos à mesa.",
+            "Um venture studio, modelo também chamado de venture builder no Brasil, co-funda. Aparece antes de o produto existir. Ajuda a definir o problema, a arquitetura, o primeiro time, o movimento de go-to-market. Assume risco operacional junto com o fundador. A relação não é investidor-portfólio. É co-construtor-empresa.",
+            "A Avante opera como um venture studio. Trazemos um playbook replicável, uma rede de operadores e suporte hands-on em estratégia, produto e execução. Não aconselhamos da arquibancada. Sentamos à mesa.",
             "Para fundadores, isso significa que você não está sozinho no caos inicial. Para investidores e parceiros, significa que há uma camada operacional experiente entre o capital e o risco da empresa."
           ]
         },
@@ -31465,8 +31465,8 @@ const engineArticles: Article[] = [
           "heading": "Quem Está por Trás da Tese",
           "level": 2,
           "paragraphs": [
-            "Venture builders fracassam quando são tocadas por pessoas que só investiram, nunca construíram. A credibilidade operacional precisa ser real. Na Avante, o time por trás da tese fez o trabalho — entregou produtos, gerenciou times, navegou o atrito específico do mercado brasileiro.",
-            "Isso não é flexibilização de currículo. É um requisito funcional. Quando um fundador do portfólio bate em uma parede às 2 da manhã, o valor da venture builder não é uma introdução calorosa. É alguém que já bateu na mesma parede e sabe para qual lado virar.",
+            "Venture studios fracassam quando são tocados por pessoas que só investiram, nunca construíram. A credibilidade operacional precisa ser real. Na Avante, o time por trás da tese fez o trabalho — entregou produtos, gerenciou times, navegou o atrito específico do mercado brasileiro.",
+            "Isso não é flexibilização de currículo. É um requisito funcional. Quando um fundador do portfólio bate em uma parede às 2 da manhã, o valor do venture studio não é uma introdução calorosa. É alguém que já bateu na mesma parede e sabe para qual lado virar.",
             "Os operadores por trás da Avante não são advisors. Eles estão dentro do prédio."
           ]
         },
@@ -31477,7 +31477,7 @@ const engineArticles: Article[] = [
             "Se você é fundador ou operador com um problema específico em mente, um ponto de vista forte sobre um setor e o apetite para construir uma empresa AI-native no Brasil — isso é diretamente relevante para você.",
             "O que a Avante oferece não é só capital. É uma relação de co-construção com pessoas que vão trabalhar junto com você do zero ao um, com um playbook que reduz o custo dos erros no estágio inicial, e com uma rede que abre portas que levam anos para a maioria dos fundadores alcançar por conta própria.",
             "A barra para começar uma conversa é baixa. Um problema real. Uma convicção real. O resto a gente descobre junto.",
-            "Se você é um investidor ou parceiro estratégico buscando exposição estruturada ao ecossistema de IA brasileiro, o modelo de venture builder oferece algo que um fundo tipicamente não consegue: uma camada operacional que gerencia ativamente o risco da empresa — não só o risco do capital."
+            "Se você é um investidor ou parceiro estratégico buscando exposição estruturada ao ecossistema de IA brasileiro, o modelo de venture studio oferece algo que um fundo tipicamente não consegue: uma camada operacional que gerencia ativamente o risco da empresa — não só o risco do capital."
           ],
           "bullets": [
             "Co-construção desde o dia zero, não assinatura de cheque da arquibancada",
@@ -31490,7 +31490,7 @@ const engineArticles: Article[] = [
           "heading": "O Próximo Passo É Simples",
           "level": 2,
           "paragraphs": [
-            "Se você buscou pela Avante Ventures e chegou até aqui, o próximo movimento é direto. Explore o que estamos construindo em avanteventures.com. Leia o raciocínio por trás da tese. Veja como abordamos o modelo de venture builder no contexto de IA brasileiro.",
+            "Se você buscou pela Avante Ventures e chegou até aqui, o próximo movimento é direto. Explore o que estamos construindo em avanteventures.com. Leia o raciocínio por trás da tese. Veja como abordamos o modelo de venture studio no contexto de IA brasileiro.",
             "Se algo ressoar, entre em contato. Respondemos a fundadores com problemas reais. Nos engajamos com parceiros que entendem o mercado. Não fazemos formulários longos nem processos formais de pitch no estágio inicial.",
             "A conversa é o começo do trabalho."
           ]
