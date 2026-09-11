@@ -96,6 +96,7 @@ Our model: pre-traction capital + repeatable operational system + in-market exec
 
 ### English
 
+- [Online Entrepreneurship Course: What to Take, in What Order, and What It Won't Teach You](https://avanteventures.com/en/library/online-entrepreneurship-course): Which online entrepreneurship course to take in Brazil: free Sebrae, gov.br, PUCRS and GINEAD programs, real hours, certificate costs, and a 30-day sequenc
 - [Accelerator vs VC: Which One, and in What Order](https://avanteventures.com/en/library/accelerator-vs-vc-founder-guide): Accelerator vs VC compared on equity, stage, and sequencing. The real terms, when each comes first, and where a venture studio changes the math. Comparison, 10 min.
 - [Agents vs Copilots: The Order That Builds a Moat](https://avanteventures.com/en/library/ai-agents-vs-copilots-b2b): A copilot earns trust and starts the data loop. An agent compounds it. Why a B2B venture ships them in that order, not the reverse. Playbook, 10 min.
 - [AI Capex 2026: The $700bn Build-Out Is a Subsidy for the Application Layer](https://avanteventures.com/en/library/ai-capex-boom-application-layer-opportunity): AI capex 2026: the big four plan $700bn of infrastructure while models commoditize. Why the profit pool moves up the stack, and how LATAM builders capture it. Market Analysis, 11 min.
@@ -201,6 +202,7 @@ Our model: pre-traction capital + repeatable operational system + in-market exec
 
 ### Português
 
+- [Curso de empreendedorismo online: o que existe, o que serve e o que falta](https://avanteventures.com/pt/library/curso-de-empreendedorismo-online): Cursos de empreendedorismo online no Brasil: carga horária, custo do certificado e para quem serve cada um. Mais uma trilha gratuita de 30 dias com entregá
 - [Aceleradora vs VC: Qual Escolher, e em Que Ordem](https://avanteventures.com/pt/library/accelerator-vs-vc-founder-guide): Aceleradora vs VC comparados em equity, estágio e sequência. Os termos reais, quando cada um vem primeiro e onde um venture studio muda a conta. Comparison, 10 min.
 - [Agentes vs Copilots: a Ordem que Constrói um Moat](https://avanteventures.com/pt/library/ai-agents-vs-copilots-b2b): Um copilot ganha confiança e inicia o loop de dados. Um agente o multiplica. Por que uma venture B2B lança nessa ordem, e não no contrário. Playbook, 10 min.
 - [Capex de IA 2026: a construção de US$ 700 bi que subsidia a camada de aplicação](https://avanteventures.com/pt/library/ai-capex-boom-application-layer-opportunity): Capex de IA 2026: US$ 700 bi em infraestrutura enquanto os modelos viram commodity. Por que o lucro migra para a camada de aplicação e como o Brasil captura. Market Analysis, 11 min.

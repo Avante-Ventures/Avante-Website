@@ -1770,6 +1770,316 @@ const articleSiggaCaseStudy: Article = {
 // 102 article(s) generated from content-engine/outputs. Edit the engine, not this block.
 const engineArticles: Article[] = [
   {
+    "slug": "online-entrepreneurship-course",
+    "category": "insights",
+    "type": "Explainer",
+    "readTime": "7 min",
+    "featured": false,
+    "date": "Sep 2026",
+    "datePublished": "2026-09-10",
+    "isPublished": true,
+    "en": {
+      "title": "Online Entrepreneurship Course: What to Take, in What Order, and What It Won't Teach You",
+      "description": "Which online entrepreneurship course to take in Brazil: free Sebrae, gov.br, PUCRS and GINEAD programs, real hours, certificate costs, and a 30-day sequenc",
+      "sections": [
+        {
+          "paragraphs": [
+            "A direct guide to online entrepreneurship courses in Brazil: what the free Sebrae, government, PUCRS and GINEAD programs actually cover, what the paid ones add, and the AI-native part no course ships for you.",
+            "An online entrepreneurship course is a self-paced distance-learning program that teaches the fundamentals of starting and running a business, entrepreneurial profile, business model, market research, marketing and finance, usually in 6 to 60 hours, with an optional certificate at the end."
+          ]
+        },
+        {
+          "id": "key-takeaways",
+          "heading": "Key takeaways",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "Sebrae offers free online entrepreneurship courses with no prerequisites and a certificate for anyone who completes 100% of the modules, including a 6-hour course on entrepreneurial profile and a 10-hour course on entrepreneurial mindset.",
+            "The federal Portal de Educação Empreendedora, part of the Programa Acredita no Primeiro Passo, hosts free courses including FIRME (10 modules) and ELA PODE, Inteligência Artificial.",
+            "PUCRS runs a free 100% online 10-hour course on Empreendedorismo e Novos Modelos de Negócios covering Lean Startup, Lean Canvas, Value Proposition Canvas and MVP creation, with a PUCRS digital certificate.",
+            "GINEAD's 25-hour entrepreneurship course is free to study, but the digital certificate costs R$49.70; Cursos 24 Horas sells a 60-hour course for R$50 with no monthly fees.",
+            "No course in this list teaches you to design a company around AI from the first architectural decision, that call gets made while you build, with operators who have built before."
+          ]
+        },
+        {
+          "id": "the-short-answer",
+          "heading": "The short answer",
+          "level": 2,
+          "paragraphs": [
+            "An online entrepreneurship course is a distance-learning program that teaches you how to plan, launch and run a business: entrepreneurial profile, business model, market research, marketing, finance. In Brazil, the credible options are mostly free. **Sebrae** publishes online courses with no prerequisites that issue a certificate to anyone who completes 100% of the modules. The federal government's **Portal de Educação Empreendedora**, inside the Programa Acredita no Primeiro Passo, gathers free courses such as FIRME (10 modules) and ELA PODE, Inteligência Artificial. **PUCRS** offers a free 10-hour online course with its own digital certificate. **GINEAD** gives free access to a 25-hour course and charges R$49.70 only for the certificate. On the paid side, **Cursos 24 Horas** sells a 60-hour course for R$50 with no monthly fees.",
+            "There is no single best course. There is a best course *for your stage*. Still figuring out if you want this life? Sebrae's 6-hour \"Será que sou empreendedor?\". Already have an idea and need a model? PUCRS, because it teaches Lean Startup, Lean Canvas, Value Proposition Canvas and MVP creation. Need the full business-plan sweep? GINEAD's 25 hours run from the entrepreneur to business plan, market research, marketing and financial fundamentals. Want the longest workload for the price of a lunch? Cursos 24 Horas, 60 hours, immediate start."
+          ]
+        },
+        {
+          "id": "what-the-free-courses-actually-cover",
+          "heading": "What the free courses actually cover",
+          "level": 2,
+          "paragraphs": [
+            "Free does not mean thin. It means narrow. Each program was built for one job, and the fastest way to waste a month is to take the one built for someone else's job.",
+            "**Sebrae** answers the identity question. \"Será que sou empreendedor?\" is 6 hours with a 30-day completion window: fundamentals, the difference between entrepreneur and business owner, behavioral traits, motivations, cases. \"Como desenvolver uma mentalidade empreendedora de sucesso\" adds 10 hours on turning ideas into businesses. Free, no prerequisites.",
+            "The **Portal de Educação Empreendedora (gov.br)** answers the survival question. FIRME covers financial formation, time management and financial freedom across 10 modules. Empreenda e Renda covers business structure, finance, digital tools, sales and formalization in 4 lessons. Elas Digitalizam and ELA PODE focus on digitalization and socio-emotional skills for women entrepreneurs.",
+            "**PUCRS** answers the model question, and it is the sharpest content on this list: 10 class-hours, 100% online, free certificate, covering Lean Startup, the 7 wastes of Lean, economic decisions, variability, business model, Value Proposition Canvas, Lean Canvas, and strategies to build an MVP. Taught by Rafael Caceres and Rafael Matone Chanin.",
+            "**GINEAD** answers the paperwork question: 25 hours across the entrepreneur, business plan, market research, business concept, marketing plan and financial and business fundamentals. Study is free; the digital certificate is R$49.70.",
+            "Now read that list again with ambition in mind. Not one of these is a course on building an AI-native company. The closest is ELA PODE, Inteligência Artificial, which teaches digital skills to use AI tools inside an existing business. Useful. Completely different problem from designing a company whose product *is* the model."
+          ]
+        },
+        {
+          "id": "free-or-paid-read-the-certificate-line",
+          "heading": "Free or paid: read the certificate line",
+          "level": 2,
+          "paragraphs": [
+            "The paywall in Brazilian online education usually sits on the certificate, not the content, which tells you exactly how much the certificate is worth to the market.",
+            "GINEAD is explicit: the free course gives you access to the study material and the assessment, and the digital certificate carries an issuance fee of R$49.70. Sebrae issues the certificate to whoever completes 100% of the modules of its free courses. PUCRS grants a digital certificate with the total workload on its free formations. Cursos 24 Horas charges R$50 once, no monthly fees, for 60 hours and immediate start.",
+            "So the decision is simple. If the certificate is a requirement in a selection process, a subsidy application or an HR file, check the issuance policy *before* enrolling. If what you need is a decision this month, the certificate is noise. Take the content and go build."
+          ]
+        },
+        {
+          "id": "a-30-day-sequence-we-would-actually-run",
+          "heading": "A 30-day sequence we would actually run",
+          "level": 2,
+          "paragraphs": [
+            "Courses fail when they are consumed like content. They work when they are run like a checklist against a real business. If you are serious, this is the order:",
+            "Thirty days. Roughly 40 hours of study. Zero to R$50 in cost. If you finish week 4 with nothing in front of a user, the problem was never the course. And if you finish with a canvas but no idea worth a decade, start from a thesis instead, our read on [AI startup ideas for Latin America in 2026](https://avanteventures.com/en/library/ai-startup-ideas-2026-latin-america) is a better week-two input than any template."
+          ],
+          "bullets": [
+            "**Week 1, decide.** Sebrae's 6-hour profile course. Output: a written answer on whether you are building a company or buying yourself a job.",
+            "**Week 2, model.** PUCRS, 10 hours. Output: one Lean Canvas and one Value Proposition Canvas filled in for *your* idea, not for the example in the video.",
+            "**Week 3, price the boring parts.** GINEAD's market research, marketing plan and financial fundamentals modules, or the Empreenda e Renda track on structure, finance, sales and formalization. Output: a price, a cost, a margin.",
+            "**Week 4, ship.** PUCRS teaches MVP creation strategies. Output: an MVP in front of five real users."
+          ]
+        },
+        {
+          "id": "what-no-course-teaches-the-ai-native-part",
+          "heading": "What no course teaches: the AI-native part",
+          "level": 2,
+          "paragraphs": [
+            "Brazil does not lack entrepreneurs. It lacks companies designed around AI from the first architectural decision.",
+            "That is the gap the curriculum does not cover, and no amount of extra modules will close it. Every course above teaches the business plan of a pre-2020 company: market, marketing, finance, formalization. All of it still necessary. None of it tells you how to decide what the model does versus what your code does, how inference cost lands on your gross margin, what data your product accumulates that a competitor cannot buy, or which parts of the workflow no human should ever touch again.",
+            "AI as foundation, not as feature. That distinction is architectural, it compounds, and it gets made in week one of building, not in module six. A course can hand you vocabulary. It cannot make the call."
+          ]
+        },
+        {
+          "id": "a-course-is-not-a-co-founder-and-capital-is-not-a-builder",
+          "heading": "A course is not a co-founder, and capital is not a builder",
+          "level": 2,
+          "paragraphs": [
+            "This is the honest limit of online entrepreneurship education, and it is not a criticism of the courses. A 10-hour class on Lean Startup gives you a canvas. It does not sit with you at 11pm when the retrieval pipeline is wrong, the first enterprise contract has a clause you have never read, and two of your three hypotheses just died.",
+            "The same limit applies one level up, and it is the distinction most founders learn too late: **a venture builder is not a fund**. A fund selects, wires money and waits for a board update. A venture builder co-founds, writes architecture with you, hires with you, ships with you, and carries the same downside. Courses and cheques are both inputs. Neither one builds the company. We wrote out where we stand on that in [why founders co-found with Avante](https://avanteventures.com/en/why-avante), and the mechanics of the model in [AI venture studio vs traditional venture studio](https://avanteventures.com/en/library/ai-venture-studio-vs-traditional-venture-studio).",
+            "**So: take the free courses.** Sebrae, gov.br, PUCRS, GINEAD, all of it, in the order above. Then stop studying and go find operators who have built before. If what you are building is AI-native and Brazilian, that is the room we are in: we co-found, and we build to compound."
+          ]
+        },
+        {
+          "id": "sources",
+          "heading": "Sources",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "[Curso de Empreendedorismo Online - Cursos 24 Horas](https://www.cursos24horas.com.br/cursos/empreendedorismo/)",
+            "[Curso Online de Empreendedorismo Gratuito | GINEAD](https://www.ginead.com.br/curso/curso-empreendedorismo)",
+            "[Portal de Educação Empreendedora, Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome](https://www.gov.br/mds/pt-br/acoes-e-programas/programa-acredita-no-primeiro-passo/quero-empreender/portal-de-educacao-empreendedora)",
+            "[Quatro cursos online e gratuitos para quem quer ser um empreendedor | ASN Nacional - Agência Sebrae de Notícias](https://agenciasebrae.com.br/cultura-empreendedora/quatro-cursos-online-e-gratuitos-para-quem-quer-ser-um-empreendedor/)",
+            "[Empreendedorismo e Novos Modelos de Negócios](https://online.pucrs.br/formacao-gratuita/empreendedorismo-e-novos-modelos-de-negocios)"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is the best online entrepreneurship course?",
+          "a": "There is no universal best, pick by stage. To test whether you should be doing this at all, Sebrae's free 6-hour \"Será que sou empreendedor?\". To model an idea, PUCRS's free 10-hour course on Lean Startup, Lean Canvas and MVP. For a full business-plan sweep, GINEAD's 25-hour course. For the longest paid workload at low cost, Cursos 24 Horas: 60 hours for R$50, no monthly fees."
+        },
+        {
+          "q": "Are online entrepreneurship courses really free in Brazil?",
+          "a": "Often yes, with the certificate as the paywall. Sebrae's courses are free, have no prerequisites and issue a certificate on 100% completion. The federal Portal de Educação Empreendedora offers free courses such as FIRME and Empreenda e Renda. PUCRS grants a free digital certificate with total workload. GINEAD gives free access to the material and the assessment but charges R$49.70 for the digital certificate."
+        },
+        {
+          "q": "What are the four types of entrepreneurship?",
+          "a": "Lists vary by author. The practical split: small business, intrapreneurship, social, and scalable technology. Only the last compounds, and in that one, the AI architecture you choose in month one sets the ceiling in year five."
+        },
+        {
+          "q": "What are the seven pillars of entrepreneurship?",
+          "a": "There is no official list. The one the Brazilian courses converge on: entrepreneurial profile, business concept, market research, business model, marketing plan, financial fundamentals and formalization. For anything AI-native, add architecture."
+        },
+        {
+          "q": "Can a course replace a technical co-founder?",
+          "a": "No. A course gives you vocabulary and a canvas, PUCRS, for example, teaches MVP creation strategies in 10 hours. It does not make architecture calls, own delivery, or share risk. Study first, then find operators who have built before."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Curso de empreendedorismo online: o que existe, o que serve e o que falta",
+      "description": "Cursos de empreendedorismo online no Brasil: carga horária, custo do certificado e para quem serve cada um. Mais uma trilha gratuita de 30 dias com entregá",
+      "sections": [
+        {
+          "paragraphs": [
+            "Mapa direto dos cursos de empreendedorismo online no Brasil, carga horária, custo e certificado, e o que nenhuma trilha EAD entrega para quem quer construir uma empresa AI-native.",
+            "Curso de empreendedorismo online é uma formação a distância, geralmente entre 6 e 60 horas, que ensina os fundamentos de abrir e gerir um negócio, perfil empreendedor, plano de negócios, pesquisa de mercado, finanças e marketing, com opções gratuitas (Sebrae, GINEAD, PUCRS, Portal de Educação Empreendedora do governo federal) e opções pagas de baixo custo."
+          ]
+        },
+        {
+          "id": "key-takeaways",
+          "heading": "Em resumo",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "O Sebrae oferece cursos online gratuitos sem pré-requisitos, com certificado para quem completa 100% dos módulos, como \"Será que sou empreendedor?\" (6 horas) e \"Como desenvolver uma mentalidade empreendedora de sucesso\" (10 horas), ambos com prazo de 30 dias para conclusão.",
+            "Na GINEAD, o curso de Empreendedorismo tem 25 horas e acesso gratuito ao material e à avaliação, mas o certificado digital custa R$ 49,70.",
+            "A PUCRS oferece formação gratuita de 10 horas-aula em Empreendedorismo e Novos Modelos de Negócios, com certificação e conteúdo de Lean Startup, Lean Canvas e construção de MVP.",
+            "O Portal de Educação Empreendedora do Programa Acredita no Primeiro Passo reúne cursos gratuitos do governo federal, incluindo ELA PODE, Inteligência Artificial, com 6 módulos e 36 aulas sobre ferramentas de IA no dia a dia do negócio.",
+            "Há também opção paga de baixo custo: 60 horas por R$ 50,00, sem mensalidades, com início imediato e nota 4.7 de 5.0 dada por 817 alunos."
+          ]
+        },
+        {
+          "id": "resposta-direta-onde-estao-os-cursos-que-valem-o-clique",
+          "heading": "Resposta direta: onde estão os cursos que valem o clique",
+          "level": 2,
+          "paragraphs": [
+            "**Curso de empreendedorismo online** é uma formação a distância que cobre os fundamentos de abrir e gerir um negócio: perfil empreendedor, plano de negócios, pesquisa de mercado, finanças e marketing. Existem versões gratuitas e pagas, com carga horária que vai de 6 a 60 horas. Nenhuma exige diploma prévio.",
+            "O mapa curto, hoje, no Brasil:",
+            "Se você quer só começar: Sebrae para mentalidade e formalização, PUCRS para método. Zero custo, poucos dias."
+          ],
+          "bullets": [
+            "**Sebrae**, cursos online gratuitos, sem pré-requisitos, com certificado para quem completa 100% dos módulos. Exemplos: \"Será que sou empreendedor?\" (6 horas) e \"Como desenvolver uma mentalidade empreendedora de sucesso\" (10 horas), ambos com prazo de 30 dias para conclusão.",
+            "**PUCRS Online**, formação gratuita de 10 horas-aula em Empreendedorismo e Novos Modelos de Negócios, 100% online, com certificação da universidade e conteúdo de Lean Startup, Lean Canvas, Canvas da Proposta de Valor e construção de MVP.",
+            "**GINEAD**, curso de Empreendedorismo com 25 horas, acesso gratuito ao material e à avaliação; o certificado digital custa R$ 49,70.",
+            "**Portal de Educação Empreendedora** (Programa Acredita no Primeiro Passo, governo federal), cursos gratuitos como FIRME (10 módulos), Empreenda e Renda (4 aulas), Elas Digitalizam (4 aulas) e ELA PODE, Inteligência Artificial (6 módulos, 36 aulas).",
+            "**Cursos 24 Horas**, opção paga: 60 horas, R$ 50,00 sem mensalidades, início imediato, nota 4.7 de 5.0 avaliada por 817 alunos."
+          ]
+        },
+        {
+          "id": "o-que-cada-formato-entrega-e-o-que-cobra",
+          "heading": "O que cada formato entrega, e o que cobra",
+          "level": 2,
+          "paragraphs": [
+            "Três eixos decidem quase tudo: **carga horária**, **custo do certificado** e **profundidade de método**.",
+            "**Carga horária.** Trilhas de 6 a 10 horas resolvem diagnóstico e vocabulário. Trilhas de 25 a 60 horas cobrem o ciclo completo, do conceito ao plano de marketing e às finanças.",
+            "**Custo do certificado.** Gratuito no curso não significa gratuito no papel. Sebrae: certificado ao concluir 100% dos módulos. PUCRS: certificado digital com carga horária total. GINEAD: material livre, certificado a R$ 49,70. No pacote pago de R$ 50,00, tudo incluso, sem mensalidade.",
+            "**Profundidade de método.** A maioria ensina estrutura: plano de negócios, pesquisa de mercado, finanças. Um subconjunto ensina **como testar**, Lean Startup, os 7 desperdícios do Lean, MVP e validação. Para quem vai construir software, o segundo grupo rende mais por hora.",
+            "Já existe conteúdo público ligando negócio e IA: o módulo ELA PODE, Inteligência Artificial, com 6 módulos e 36 aulas sobre ferramentas de IA no dia a dia."
+          ]
+        },
+        {
+          "id": "quatro-filtros-para-escolher-em-10-minutos",
+          "heading": "Quatro filtros para escolher em 10 minutos",
+          "level": 2,
+          "paragraphs": [
+            "Regra da casa: curso é insumo, não resultado. O que conta é o que sai da sua mão na semana seguinte."
+          ],
+          "bullets": [
+            "**Qual é o seu estágio?** Ainda decidindo se empreende → trilha de perfil empreendedor, 6 horas. Já tem ideia e quer validar → Lean Startup e MVP. Já vende e precisa organizar → finanças, gestão e formalização.",
+            "**Você precisa do certificado agora?** Se sim, confira a taxa antes de começar: há curso gratuito com certificado incluso e curso gratuito com certificado pago.",
+            "**Tem prazo?** Programas com prazo de conclusão de 30 dias criam disciplina. Programas de 60 horas com início imediato e sem prazo dependem inteiramente da sua agenda.",
+            "**O conteúdo tem sotaque de execução ou de teoria?** Procure ementa com entregável: Lean Canvas, protótipo, MVP, teste com cliente real. Ementa sem entregável vira anotação esquecida."
+          ]
+        },
+        {
+          "id": "qual-e-o-melhor-curso-de-empreendedorismo-online",
+          "heading": "Qual é o melhor curso de empreendedorismo online?",
+          "level": 2,
+          "paragraphs": [
+            "Não existe \"melhor\" absoluto. Existe melhor para o seu estágio.",
+            "O contexto que justifica tanta oferta gratuita é a própria escala do programa público: um portal federal inteiro dedicado a educação empreendedora, com trilhas de formalização, digitalização e vendas. Demanda enorme, base metodológica desigual."
+          ],
+          "bullets": [
+            "**Melhor primeiro passo, custo zero:** \"Será que sou empreendedor?\", 6 horas, gratuito, com certificado ao concluir 100% dos módulos.",
+            "**Melhor para validar ideia de produto:** Empreendedorismo e Novos Modelos de Negócios da PUCRS, 10 horas-aula, gratuito, com Lean Startup, Lean Canvas e MVP.",
+            "**Melhor visão completa por pouco dinheiro:** curso de 60 horas por R$ 50,00, sem mensalidades e com início imediato.",
+            "**Melhor cobertura pública e gratuita para MEI e microempreendedores:** o conjunto do Portal de Educação Empreendedora, com módulos de finanças, digitalização, vendas e formalização."
+          ]
+        },
+        {
+          "id": "os-4-tipos-de-empreendedorismo-e-por-que-a-pergunta-atrapalh",
+          "heading": "Os \"4 tipos de empreendedorismo\" e por que a pergunta atrapalha",
+          "level": 2,
+          "paragraphs": [
+            "Listas circulam com quatro, cinco ou sete tipos, individual, social, corporativo, digital. Nenhuma das fontes públicas que lemos define uma taxonomia oficial, então tratamos isso como convenção editorial, não como fato.",
+            "O que os programas reais mostram é uma divisão por **situação**, não por rótulo: quem quer se formalizar como MEI ou abrir um pequeno negócio, quem precisa digitalizar o que já opera, quem quer modelar um negócio inovador com Lean Startup e MVP.",
+            "Nossa leitura: escolha pelo problema que você resolve e pelo modelo de receita, não pela etiqueta. Rótulo não paga folha."
+          ]
+        },
+        {
+          "id": "o-que-curso-nenhum-ensina-construir-ai-native",
+          "heading": "O que curso nenhum ensina: construir AI-native",
+          "level": 2,
+          "paragraphs": [
+            "Os fundamentos são os mesmos de sempre, cliente, proposta de valor, unit economics. Mas empresa **AI-native** não é plano de negócios com uma camada de IA colada depois.",
+            "O que muda, e que você não encontra em ementa de 10 horas:",
+            "Curso dá vocabulário. Arquitetura se aprende construindo, com quem já construiu."
+          ],
+          "bullets": [
+            "**Arquitetura primeiro.** Onde o modelo entra no fluxo, o que é determinístico, o que é probabilístico, onde o humano decide.",
+            "**Dado como ativo.** Que loop de dados proprietário o produto cria a cada uso.",
+            "**Custo de inferência.** Margem bruta muda quando cada resposta tem preço.",
+            "**Avaliação contínua.** Sem *evals*, você não sabe se o produto piorou depois do último deploy.",
+            "**Distribuição no Brasil.** Regulação, integrações locais, ciclo de venda B2B, talento técnico escasso."
+          ]
+        },
+        {
+          "id": "trilha-de-30-dias-gratuita-com-entregavel",
+          "heading": "Trilha de 30 dias, gratuita, com entregável",
+          "level": 2,
+          "paragraphs": [
+            "Uma sequência que cabe em um mês e termina em algo testável:",
+            "Se quiser aprofundar em ferramentas de IA no operacional, encaixe o módulo ELA PODE, Inteligência Artificial, com 6 módulos e 36 aulas."
+          ],
+          "bullets": [
+            "**Semana 1, diagnóstico.** Curso de perfil empreendedor, 6 horas, gratuito. Entregável: uma página com o problema e quem sente a dor.",
+            "**Semana 2, método.** Formação de 10 horas-aula com Lean Canvas e Canvas da Proposta de Valor. Entregável: canvas preenchido e três hipóteses de risco.",
+            "**Semana 3, mentalidade e finanças.** Trilha de 10 horas sobre mentalidade empreendedora mais módulos de finanças e formalização do portal público. Entregável: planilha de custos e preço.",
+            "**Semana 4, MVP.** Estratégias de criação de MVP. Entregável: protótipo na frente de cinco clientes reais."
+          ]
+        },
+        {
+          "id": "curso-ensina-co-fundador-constroi",
+          "heading": "Curso ensina. Co-fundador constrói.",
+          "level": 2,
+          "paragraphs": [
+            "Certificado é sinal de disciplina. Não é tração.",
+            "A Avante Ventures não é escola nem fundo passivo: **co-fundamos** empresas AI-native no Brasil, com time na mesa desde o discovery. Arquitetura, produto, go-to-market e cap table entram na mesma conversa. Aprendizado acontece em cima de código rodando, não em cima de slide.",
+            "Se o modelo ainda soa abstrato, veja a diferença entre [venture studio AI-native e venture studio tradicional](https://avanteventures.com/en/library/ai-venture-studio-vs-traditional-venture-studio), é ali que fica claro por que curso, aceleradora e co-fundador não são a mesma coisa.",
+            "Entenda [por que a Avante](https://avanteventures.com/en/why-avante) opera assim e veja [o que já estamos construindo no portfólio](https://avanteventures.com/en/portfolio).",
+            "**Próximo passo:** se você já fez os cursos e quer construir de verdade, não procure a próxima trilha EAD. [Fale com a gente pelo portfólio da Avante](https://avanteventures.com/en/portfolio) e traga o problema que você quer atacar, sentamos ao seu lado e assumimos risco com você."
+          ]
+        },
+        {
+          "id": "sources",
+          "heading": "Fontes",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "[Curso de Empreendedorismo Online - Cursos 24 Horas](https://www.cursos24horas.com.br/cursos/empreendedorismo/)",
+            "[Curso Online de Empreendedorismo Gratuito | GINEAD](https://www.ginead.com.br/curso/curso-empreendedorismo)",
+            "[Portal de Educação Empreendedora, Ministério do Desenvolvimento e Assistência Social, Família e Combate à Fome](https://www.gov.br/mds/pt-br/acoes-e-programas/programa-acredita-no-primeiro-passo/quero-empreender/portal-de-educacao-empreendedora)",
+            "[Quatro cursos online e gratuitos para quem quer ser um empreendedor | ASN Nacional - Agência Sebrae de Notícias](https://agenciasebrae.com.br/cultura-empreendedora/quatro-cursos-online-e-gratuitos-para-quem-quer-ser-um-empreendedor/)",
+            "[Empreendedorismo e Novos Modelos de Negócios](https://online.pucrs.br/formacao-gratuita/empreendedorismo-e-novos-modelos-de-negocios)"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Qual é o melhor curso de empreendedorismo online?",
+          "a": "Depende do estágio. Para descobrir seu perfil, o curso gratuito \"Será que sou empreendedor?\" tem 6 horas e certificado para quem completa 100% dos módulos. Para validar uma ideia com método, a formação gratuita da PUCRS tem 10 horas-aula com Lean Startup, Lean Canvas e MVP. Para visão completa por pouco dinheiro, há opção paga de 60 horas por R$ 50,00, sem mensalidades."
+        },
+        {
+          "q": "Existe curso de empreendedorismo online gratuito com certificado?",
+          "a": "Sim. O Sebrae fornece certificado para quem conclui 100% dos módulos de seus cursos gratuitos e a PUCRS emite certificado digital com a carga horária total em sua formação gratuita. Já na GINEAD o acesso ao material e à avaliação é gratuito, mas o certificado digital custa R$ 49,70."
+        },
+        {
+          "q": "Quais são os 4 tipos de empreendedorismo?",
+          "a": "Não existe taxonomia oficial nas fontes públicas de cursos que consultamos, as listas de \"quatro tipos\" são convenção editorial. Na prática, os programas se organizam por situação: quem quer se formalizar como MEI ou abrir um pequeno negócio, quem precisa digitalizar o que já vende e quem quer modelar um negócio inovador com Lean Startup e MVP."
+        },
+        {
+          "q": "Quanto tempo leva um curso de empreendedorismo online?",
+          "a": "De 6 a 60 horas. Trilhas curtas de 6 e 10 horas costumam ter prazo de 30 dias para conclusão; formações de 10 horas-aula entregam certificação universitária; há cursos de 25 horas e de 60 horas com início imediato."
+        },
+        {
+          "q": "Um curso online basta para abrir uma startup de IA?",
+          "a": "Não. Os cursos cobrem plano de negócios, pesquisa de mercado, marketing e finanças, e alguns cobrem validação com MVP. Construir uma empresa AI-native exige decisões de arquitetura, loop de dados proprietário, custo de inferência e avaliação contínua do modelo, isso se aprende construindo, com operadores que já fizeram antes."
+        }
+      ]
+    },
+    "ogImage": "/og/online-entrepreneurship-course.png"
+  },
+  {
     "slug": "accelerator-vs-vc-founder-guide",
     "category": "insights",
     "type": "Comparison",
