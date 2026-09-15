@@ -31,7 +31,7 @@ export function WorldTour() {
   const [playing, setPlaying] = useState(false), [filmOpen, setFilmOpen] = useState(false);
   const [filmPlaying, setFilmPlaying] = useState(false);
   const [filmRequested, setFilmRequested] = useState(false);
-  // Reserve the desktop journey height before the router resolves venture anchors.
+  // Reserve the journey height before the router resolves venture anchors.
   const [enhanced, setEnhanced] = useState(() => typeof window !== 'undefined' && matchMedia(ENHANCED_QUERY).matches), [failed, setFailed] = useState(false), [ready, setReady] = useState(false), [chapter, setChapter] = useState(0);
   const [seconds, setSeconds] = useState(0);
   const success = useCallback(() => setReady(true), []);
@@ -84,7 +84,8 @@ export function WorldTour() {
       frame = 0;
       if (!animated) { stop(); present(0); return; }
       if (guided.current) return;
-      const target = animated ? clamp(-el.getBoundingClientRect().top / Math.max(1, el.offsetHeight - window.innerHeight)) : 0;
+      const stageHeight = el.querySelector<HTMLElement>('.world-stage')?.offsetHeight ?? window.innerHeight;
+      const target = animated ? clamp(-el.getBoundingClientRect().top / Math.max(1, el.offsetHeight - stageHeight)) : 0;
       const elapsed = Math.min((now - previous) / 1000, .05); previous = now;
       present(animated && !document.hidden ? dampProgress(progress.current, target, elapsed) : target);
       if (progress.current !== target) frame = requestAnimationFrame(update);
@@ -102,13 +103,22 @@ export function WorldTour() {
       if (['Escape', 'ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Home', 'End', ' '].includes(event.key)) stop();
     };
     const visibility = () => { if (document.hidden) stop(); };
-    window.addEventListener('wheel', stop, { passive: true }); window.addEventListener('touchstart', stop, { passive: true });
+    // Let the button handle its tap once; stopping on touchstart first would
+    // turn a pause tap into a new play request before the click arrives.
+    const touch = (event: TouchEvent) => {
+      if (event.target instanceof Element && event.target.closest('.journey-watch')) return;
+      stop();
+    };
+    window.addEventListener('wheel', stop, { passive: true }); window.addEventListener('touchstart', touch, { passive: true });
     window.addEventListener('keydown', key); document.addEventListener('visibilitychange', visibility);
-    return () => { cancelAnimationFrame(playback.current); window.removeEventListener('wheel', stop); window.removeEventListener('touchstart', stop); window.removeEventListener('keydown', key); document.removeEventListener('visibilitychange', visibility); };
+    return () => { cancelAnimationFrame(playback.current); window.removeEventListener('wheel', stop); window.removeEventListener('touchstart', touch); window.removeEventListener('keydown', key); document.removeEventListener('visibilitychange', visibility); };
   }, [stop]);
   const scrollTo = (p: number, behavior: ScrollBehavior = 'instant') => {
     const el = section.current;
-    if (el) window.scrollTo({ top: window.scrollY + el.getBoundingClientRect().top + (el.offsetHeight - innerHeight) * p, behavior });
+    if (el) {
+      const stageHeight = el.querySelector<HTMLElement>('.world-stage')?.offsetHeight ?? innerHeight;
+      window.scrollTo({ top: window.scrollY + el.getBoundingClientRect().top + (el.offsetHeight - stageHeight) * p, behavior });
+    }
   };
   const jump = (index: number) => { ambient.current = true; stop(); scrollTo(stops[index], 'smooth'); };
   const watch = () => {

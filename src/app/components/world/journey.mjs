@@ -5,7 +5,8 @@ export const stops = [0, 0.16, 0.49, 0.96];
 export const TOUR_SECONDS = 30;
 export const FILM_START = 0.21;
 export const FILM_END = 0.8;
-export const ENHANCED_QUERY = '(min-width: 900px) and (min-height: 620px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)';
+export const ENHANCED_QUERY = '(prefers-reduced-motion: no-preference)';
+export const COMPACT_QUERY = '(max-width: 899px), (hover: none), (pointer: coarse), (max-height: 619px)';
 export function journeyPose(value) {
   const p = clamp(value);
   return {

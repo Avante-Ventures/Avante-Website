@@ -1,6 +1,6 @@
 import { useEffect, useState, type MutableRefObject } from 'react';
 import { createFilmPlayback, filmIntent } from './filmPlayback.mjs';
-import { FILM_START } from './journey.mjs';
+import { COMPACT_QUERY, FILM_START } from './journey.mjs';
 import { CityPicture } from './CityPicture';
 
 // Both the guided tour and ordinary scrolling reveal a natively playing film.
@@ -43,6 +43,9 @@ export function JourneyFilm({ progress, enabled, guided, ambient, video, onBlock
   }, [progress, enabled, guided, ambient, video, onBlocked, onPlaying]);
   return <div className="journey-film" aria-hidden="true">
     <CityPicture />
-    {enabled && <video ref={video} className={ready ? 'is-ready' : ''} src="/world-assets/saopaulo-flight-journey.mp4" muted playsInline preload="auto" tabIndex={-1} onPlaying={() => onPlaying(true)} onPause={() => onPlaying(false)} onEnded={() => onPlaying(false)} />}
+    {enabled && <video ref={video} className={ready ? 'is-ready' : ''} muted playsInline preload="auto" tabIndex={-1} onPlaying={() => onPlaying(true)} onPause={() => onPlaying(false)} onEnded={() => onPlaying(false)}>
+      <source media={COMPACT_QUERY} src="/world-assets/saopaulo-flight-mobile.mp4" type="video/mp4" />
+      <source src="/world-assets/saopaulo-flight-journey.mp4" type="video/mp4" />
+    </video>}
   </div>;
 }

@@ -83,3 +83,9 @@
 - The SVG retains its official paths, gradients, viewBox and outlined lettering. Only trailing whitespace was removed on import. The complete lockup remains on the journey destination card.
 - `wir-mark.svg` and `wir-signature.svg` separate the existing paths into display layers with cropped viewBoxes. The mark keeps all seven original paths and both gradients; the signature keeps the original outlined lettering. No paths, typography or face colors were redrawn.
 - The exhibit uses a shallow satin extrusion and restrained pointer tilt for the mark in `VentureLogoScene.tsx`. The fine italic signature is a separate, stationary SVG below it, preserving its sharp edges on desktop and mobile. The static fallback uses the same two layers and alignment.
+
+## Mobile journey opening (September 15, 2026)
+
+- `globe-opening-mobile.webp` is a transparent capture of the existing `WorldScene` at progress 0, using its compact camera composition. It was rendered in native Safari at a 780 × 1440 CSS viewport, with the scene occupying 780 × 633.6 CSS pixels and DPR capped at 1.25. Source: 975 × 792 PNG; delivery: WebP quality 90. No AI generation or new geography. The Natural Earth attribution for `land.json` applies.
+- The mobile poster and live globe share vertical framing and center alignment. Regenerate this poster if the compact opening camera or globe geometry changes. It preserves the opening while WebGL loads and supplies the static reduced-motion/failure fallback.
+- Phones and touch tablets now retain the complete globe → São Paulo film → Avante gallery journey. The existing continuous `saopaulo-flight-mobile.mp4` supplies the mobile film; its source, grading and license are unchanged.
