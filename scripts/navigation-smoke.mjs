@@ -4,6 +4,8 @@ export async function verifyNavigation(browser, origin) {
   const page = await browser.newPage();
   const failures = [];
   page.on('pageerror', error => failures.push(String(error)));
+  page.on('console', message => { if (message.text().startsWith('NAVIGATION_CHUNK_ERROR')) console.log(message.text()); });
+  await page.evaluateOnNewDocument(() => window.addEventListener('vite:preloadError', event => console.warn('NAVIGATION_CHUNK_ERROR', String(event.payload))));
   await page.setViewport({ width: 1440, height: 900 });
   const arrived = async path => {
     await page.waitForFunction(expected => location.pathname === expected &&
@@ -11,6 +13,7 @@ export async function verifyNavigation(browser, origin) {
     if (failures.length) throw new Error(failures.join('\n'));
   };
   const follow = async path => {
+    console.log(`→ Following ${path}`);
     await page.click(`a[href="${path}"]`);
     await arrived(path);
   };
@@ -22,6 +25,7 @@ export async function verifyNavigation(browser, origin) {
     const intercept = request => {
       if (missing && /\/assets\/WhyAvantePage-[^/]+\.js/.test(request.url())) {
         missing = false;
+        console.log('→ Simulating missing route module');
         return request.respond({ status: 404, contentType: 'text/plain', body: 'Missing previous deployment chunk' });
       }
       return request.continue();
@@ -65,6 +69,14 @@ export async function verifyNavigation(browser, origin) {
         document.documentElement.style.overflow !== 'hidden' && document.body.style.overflow !== 'hidden');
     }
     console.log('✓ Mobile navigation: all internal menu routes open and restore scrolling');
+  } catch (error) {
+    console.error('Navigation failure:', await page.evaluate(() => ({
+      url: location.href, heading: document.querySelector('#root h1')?.textContent,
+      routeError: Boolean(document.querySelector('[data-route-error]')),
+      recovery: sessionStorage.getItem('avante-route-recovery'),
+      loading: document.querySelector('[role="status"]')?.textContent,
+    })).catch(() => 'Document unavailable'));
+    throw error;
   } finally {
     await page.close();
   }
