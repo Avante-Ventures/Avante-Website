@@ -1770,6 +1770,325 @@ const articleSiggaCaseStudy: Article = {
 // 102 article(s) generated from content-engine/outputs. Edit the engine, not this block.
 const engineArticles: Article[] = [
   {
+    "slug": "female-entrepreneurship-in-brazil",
+    "category": "insights",
+    "type": "Explainer",
+    "readTime": "6 min",
+    "featured": false,
+    "date": "Sep 2026",
+    "datePublished": "2026-09-15",
+    "isPublished": true,
+    "en": {
+      "title": "Female Entrepreneurship in Brazil: The Data, the Gaps, and the AI-Native Opening",
+      "description": "Brazil has 10.4 million women business owners, up 27% in a decade. The verified data on sectors, education, credit gaps, and the AI-native opening.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Brazil now has 10.4 million women running businesses, a record, and growing 16 points faster than men over the last decade. Here is what the data actually says, where the structural blocks sit, and how the numbers translate into AI-native company building.",
+            "Female entrepreneurship in Brazil (empreendedorismo feminino no Brasil) is the 10.4 million women who owned a business in December 2025, a record base that grew 27% in ten years, concentrated in services and commerce, and still constrained by credit access, unpaid domestic load, and thin founder networks."
+          ]
+        },
+        {
+          "id": "key-takeaways",
+          "heading": "Key takeaways",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "Brazil had 10.4 million women business owners in December 2025, up from 8.2 million in 2015, 27% growth in a decade.",
+            "Female entrepreneurship grew 16 percentage points faster than male entrepreneurship over the same ten years; men reached 19.9 million owners, up about 11%.",
+            "Women business owners are now 13 percentage points more likely than men to hold higher education.",
+            "Services account for 56.8% of women-led businesses and commerce 25.1%; 50.4% of these entrepreneurs are Black women.",
+            "Of the 4.96 million new MEIs and micro and small companies registered in 2025, more than 2 million, roughly 42%, were led by women."
+          ]
+        },
+        {
+          "id": "brazil-has-10-4-million-women-running-businesses",
+          "heading": "Brazil Has 10.4 Million Women Running Businesses",
+          "level": 2,
+          "paragraphs": [
+            "Female entrepreneurship in Brazil is at its historical peak. There were **10.4 million women business owners in December 2025**, up from 8.2 million in 2015, a 27% jump in ten years, **16 percentage points faster than men**, who grew roughly 11% to 19.9 million owners in the same period, according to a Sebrae study built on PNAD Contínua quarterly data. The flow matches the stock: of the 4.96 million new MEIs, micro and small companies registered in 2025, **more than 2 million, about 42%, were led by women**, over 320 thousand more than the previous year.",
+            "The composition matters more than the headline. **56.8% of women-led businesses sit in services, 25.1% in commerce**; 50.4% of these entrepreneurs are Black women and 48.2% are white women. Education is not the bottleneck, women owners are now **13 percentage points more likely to hold higher education than male owners**, after an 18.6 p.p. rise in the \"incomplete higher education or more\" bracket between 2012 and 2025. What still binds is capital, networks, and the unpaid load at home. That is a distribution problem, not an ambition problem."
+          ]
+        },
+        {
+          "id": "the-numbers-clean",
+          "heading": "The Numbers, Clean",
+          "level": 2,
+          "paragraphs": [
+            "No estimate here is ours. Every figure comes from Sebrae's reading of PNAD Contínua and Receita Federal registrations."
+          ],
+          "bullets": [
+            "**10.4 million** women business owners in Brazil, December 2025, record of the historical series.",
+            "**8.2 million** in 2015 → **+27%** in a decade.",
+            "Male entrepreneurship in the same window: **+11%**, to **19.9 million**.",
+            "Accumulated growth of **~42% between 2012 and 2024** in the number of women business owners.",
+            "**4.96 million** new MEIs, micro and small companies opened in 2025; **>2 million (≈42%)** women-led.",
+            "Sector split: **services 56.8%**, **commerce 25.1%**.",
+            "Race split: **50.4% Black women**, **48.2% white women**.",
+            "Education shift 2012-2025: **+18.6 p.p.** with higher education or more, **−17.3 p.p.** with incomplete primary schooling."
+          ]
+        },
+        {
+          "id": "what-is-pushing-the-curve-up",
+          "heading": "What Is Pushing the Curve Up",
+          "level": 2,
+          "paragraphs": [
+            "Two forces show up repeatedly in the reporting.",
+            "**Work changed shape.** Sebrae's national manager for female entrepreneurship, diversity and inclusion, Geórgia Nunes, points to post-pandemic shifts, online immersion and remote work, as a stimulus for women to start businesses.",
+            "**Motherhood is still the trigger.** Ana Fontes, CEO and founder of Rede Mulher Empreendedora and Instituto RME, is blunt about it: the corporate environment is hostile to those with small children, and **70% of women started their own business when they had kids**. Read that twice. A large share of Brazil's new company formation is a response to workplace exclusion, not a pull toward opportunity.",
+            "**Policy is catching up.** The Ministry of Development, Industry, Trade and Services (MDIC) published a study of female entrepreneurship in partnership with the United Nations Development Programme (UNDP), with the newly created Ministry of Entrepreneurship, Microenterprise and Small Business (MEMP) as an institutional home for the agenda, credit access, training, mentorship networks, formalization, and incentives for innovation and technology use."
+          ]
+        },
+        {
+          "id": "the-constraints-are-structural",
+          "heading": "The Constraints Are Structural",
+          "level": 2,
+          "paragraphs": [
+            "The academic literature converges with the government diagnosis. A 2025 review in *Revista Foco* lists the recurring blocks: **restricted access to financing, unequal opportunity, overload of domestic responsibilities, gender prejudice, and low representation in decision-making spaces**, which in turn limits access to support networks and mentorship. MDIC frames the same set as the **triple shift** and difficult credit access.",
+            "Our read, as builders: the mentorship and network gap compounds the fastest. Credit is a line item you can eventually fix with a program. A missing network changes which problems you even hear about, which co-founder you meet, and which customer answers your first cold email. That gap shows up years later as company size, and it is the one a venture builder can close directly."
+          ]
+        },
+        {
+          "id": "where-the-opportunity-actually-sits",
+          "heading": "Where the Opportunity Actually Sits",
+          "level": 2,
+          "paragraphs": [
+            "Concentration in services, 56.8% of women-led businesses, is usually reported as a limitation. We read it as raw material.",
+            "Services are where operational knowledge lives: clinics, legal practices, accounting, education, beauty, logistics support, HR, care. That is precisely the domain depth vertical AI needs and generic model companies cannot buy. A founder who has run a service operation for five years already owns the workflow map, the edge cases, and the customer trust. Those are the three things an AI-native company is hardest to build without.",
+            "What we would look for when translating that into a company:",
+            "Build the model into the architecture. Not as a feature bolted on after the fact. That distinction is the whole thesis."
+          ],
+          "bullets": [
+            "A workflow the founder has personally run, not one she read about.",
+            "A repeatable decision inside it that a model can carry end to end.",
+            "Proprietary data generated by doing the work, not scraped.",
+            "Regulatory friction high enough to slow copycats, low enough to ship.",
+            "A wedge that starts narrow and compounds."
+          ]
+        },
+        {
+          "id": "names-that-appear-in-the-data",
+          "heading": "Names That Appear in the Data",
+          "level": 2,
+          "paragraphs": [
+            "People search for women entrepreneurs in Brazil and get lists with no sourcing. Here are three who appear directly in the reporting we read:",
+            "We are deliberately not ranking \"the biggest\" woman entrepreneur in Brazil. None of the sources we read publish that ranking, so we will not invent one."
+          ],
+          "bullets": [
+            "**Ana Fontes**, CEO and founder of Rede Mulher Empreendedora and Instituto RME, one of the most cited voices on why Brazilian women start businesses.",
+            "**Débora Mendonça**, from Maranhão, took over the family company in 2018 after professional training built on \"learning by doing\".",
+            "**Raimunda Nonata da Silva Pinheiro**, commercial representative for an association, featured in Sebrae's coverage of the ten-year growth data."
+          ]
+        },
+        {
+          "id": "how-avante-builds-in-brazil",
+          "heading": "How Avante Builds in Brazil",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures co-founds AI-native companies from São Paulo and San Francisco. We are not a passive check. We sit on the ground with founders, architecture decisions, first hires, go-to-market, and we take equity as co-builders, not as spectators.",
+            "For a founder coming out of a services business, that means three concrete things: a technical co-founder path that does not depend on luck, a product architecture that is AI-native from the first commit, and a network that the data says most Brazilian women entrepreneurs are structurally denied.",
+            "If you are building, start here:",
+            "Ten million founders is not a talent pipeline problem. It is a co-founding problem. We ship."
+          ],
+          "bullets": [
+            "[How to find a technical co-founder for an AI startup](https://avanteventures.com/en/library/how-to-find-a-technical-cofounder-for-an-ai-startup)",
+            "[AI startup ideas for 2026 in Latin America](https://avanteventures.com/en/library/ai-startup-ideas-2026-latin-america)",
+            "[How much equity venture studios take](https://avanteventures.com/en/library/how-much-equity-do-venture-studios-take)",
+            "[Why Avante](https://avanteventures.com/en/why-avante)"
+          ]
+        },
+        {
+          "id": "sources",
+          "heading": "Sources",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "[Empreendedorismo feminino cresce quase 30% em dez anos e alcança maior patamar da série histórica | ASN Nacional - Agência Sebrae de Notícias](https://agenciasebrae.com.br/dados/empreendedorismo-feminino-cresce-quase-30-em-dez-anos-e-alcanca-maior-patamar-da-serie-historica/)",
+            "[Estudo do Empreendedorismo Feminino no Brasil, Empresas &amp; Negócios](https://www.gov.br/empresas-e-negocios/pt-br/empreendedor/elas-empreendem/panorama-do-empreendedorismo-feminino-no-brasil)",
+            "[EMPREENDEDORISMO FEMININO NO BRASIL: PRINCIPAIS DESAFIOS ENFRENTADOS E PERSPECTIVAS DE CRESCIMENTO | REVISTA FOCO](https://ojs.focopublicacoes.com.br/foco/article/view/7813)",
+            "[Empreendedorismo feminino é recorde | Mulheres de negócios | Valor Econômico](https://valor.globo.com/publicacoes/especiais/mulheres-de-negocios/noticia/2026/03/31/empreendedorismo-feminino-e-recorde.ghtml)",
+            "[Brasil tem mais de 10 milhões de mulheres à frente de negócios | CNN Brasil](https://www.cnnbrasil.com.br/economia/money/negocios/brasil-tem-mais-de-10-milhoes-de-mulheres-a-frente-de-negocios/)"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How many women entrepreneurs are there in Brazil?",
+          "a": "10.4 million women were business owners in Brazil in December 2025, the record of the historical series, up from 8.2 million in 2015, according to a Sebrae study based on PNAD Contínua data. CNN reports accumulated growth of roughly 42% between 2012 and 2024."
+        },
+        {
+          "q": "What are the main challenges for women entrepreneurs in Brazil?",
+          "a": "Restricted access to financing, unequal opportunity, overload of domestic responsibilities, gender prejudice, and low representation in decision-making spaces, which limits access to networks and mentorship. MDIC frames the same picture as the triple shift plus difficult credit access, and lists credit, training, mentorship and formalization as policy priorities."
+        },
+        {
+          "q": "Which sectors do Brazilian women entrepreneurs operate in?",
+          "a": "Services concentrate 56.8% of women-led businesses, followed by commerce at 25.1%. In 2025, more than 2 million of the 4.96 million new MEIs, micro and small companies registered were led by women, about 42% of the total."
+        },
+        {
+          "q": "Who are three women entrepreneurs in Brazil worth knowing?",
+          "a": "Ana Fontes, CEO and founder of Rede Mulher Empreendedora and Instituto RME; Débora Mendonça, from Maranhão, who took over her family company in 2018; and Raimunda Nonata da Silva Pinheiro, a commercial representative featured in Sebrae's coverage of the ten-year growth data. We avoid ranking a single \"biggest\" name, no source we read publishes that ranking."
+        },
+        {
+          "q": "Why do so many Brazilian women start their own business?",
+          "a": "Motherhood remains the main trigger: 70% of women started their own business when they had children, because the corporate environment is hostile to those with small children, according to Ana Fontes of Rede Mulher Empreendedora. Post-pandemic remote and online work also stimulated new business creation, per Sebrae's Geórgia Nunes."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Empreendedorismo feminino no Brasil: os números, os gargalos e o que muda com IA",
+      "description": "10,4 milhoes de mulheres a frente de negocios, alta de 27% em dez anos e os gargalos reais: credito, tripla jornada e escala. Dados e leitura AI-native.",
+      "sections": [
+        {
+          "paragraphs": [
+            "São 10,4 milhões de mulheres à frente de negócios no Brasil, recorde da série histórica. Este artigo mostra o retrato real, crescimento, perfil, setores, desafios, e onde a tecnologia AI-native muda a escala de um negócio liderado por mulher.",
+            "Empreendedorismo feminino no Brasil é o conjunto de negócios liderados por mulheres no país, 10,4 milhões de donas de negócio em dezembro de 2025, recorde da série histórica levantada pelo Sebrae a partir da PNAD Contínua, após um crescimento de 27% em dez anos."
+          ]
+        },
+        {
+          "id": "key-takeaways",
+          "heading": "Em resumo",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "O Brasil tem 10,4 milhões de mulheres donas de negócio, contra 8,2 milhões em 2015, crescimento de 27% em dez anos, 16 pontos percentuais acima do avanço entre os homens.",
+            "Em 2025, dos 4,96 milhões de novos MEIs, micro e pequenas empresas registrados, mais de 2 milhões (cerca de 42%) eram liderados por mulheres, mais de 320 mil acima do ano anterior.",
+            "A maioria dos negócios liderados por mulheres está em serviços (56,8%) e comércio (25,1%); 50,4% dessas empreendedoras são mulheres negras e 48,2% brancas.",
+            "Hoje há 13 pontos percentuais mais mulheres donas de negócio com Ensino Superior ou mais do que homens na mesma posição.",
+            "Os gargalos são estruturais, não de ambição: acesso restrito a financiamento, tripla jornada, preconceito de gênero e baixa representatividade em espaços de decisão."
+          ]
+        },
+        {
+          "id": "a-resposta-curta-10-4-milhoes-e-subindo",
+          "heading": "A resposta curta: 10,4 milhões e subindo",
+          "level": 2,
+          "paragraphs": [
+            "Empreendedorismo feminino no Brasil é, hoje, um bloco de **10,4 milhões de mulheres donas de negócio**, o maior patamar da série histórica levantada pelo Sebrae com dados da PNAD Contínua. Em 2015 eram 8,2 milhões. O crescimento na década foi de **27%**, contra cerca de 11% entre os homens, que somam 19,9 milhões à frente de negócios. A diferença não é ruído estatístico: são 16 pontos percentuais de vantagem no ritmo de expansão.",
+            "O fluxo de entrada confirma a tendência. Em 2025, foram registrados **4,96 milhões de novos MEIs, micro e pequenas empresas** no país; mais de 2 milhões, cerca de **42% do total**, eram negócios liderados por mulheres, um salto de mais de 320 mil em relação ao ano anterior. E o rendimento das empreendedoras brasileiras alcançou em 2025 o melhor resultado já registrado na pesquisa. Ou seja: mais mulheres empreendendo, com mais formação e ganhando mais do que em qualquer ponto anterior da série. O gargalo mudou de lugar, não é mais entrada, é escala."
+          ]
+        },
+        {
+          "id": "quem-sao-as-donas-de-negocio-brasileiras",
+          "heading": "Quem são as donas de negócio brasileiras",
+          "level": 2,
+          "paragraphs": [
+            "O retrato é mais específico do que o discurso genérico sobre \"mulheres empreendedoras\" sugere:",
+            "Leia essa combinação com atenção. Uma base majoritariamente de serviços, com escolaridade superior à dos pares homens, é exatamente o perfil que ganha mais produtividade por profissional quando o negócio é desenhado em cima de software, não quando compra mais horas de trabalho."
+          ],
+          "bullets": [
+            "**Setor:** 56,8% dos negócios liderados por mulheres estão em serviços e 25,1% no comércio.",
+            "**Raça:** 50,4% das empreendedoras são mulheres negras e 48,2% são brancas.",
+            "**Escolaridade:** entre 2012 e 2025, a faixa de Ensino Superior incompleto ou mais cresceu 18,6 pontos percentuais entre as donas de negócio, enquanto a faixa de Fundamental incompleto caiu 17,3 pontos. O resultado: há **13 pontos percentuais mais mulheres donas de negócio com Ensino Superior ou mais do que homens** na mesma posição.",
+            "**Volume total:** o crescimento acumulado entre 2012 e 2024 foi de cerca de 42%."
+          ]
+        },
+        {
+          "id": "a-historia-recente-de-gatilho-pessoal-a-politica-publica",
+          "heading": "A história recente: de gatilho pessoal a política pública",
+          "level": 2,
+          "paragraphs": [
+            "A história do empreendedorismo feminino no Brasil, na parte que os dados cobrem, é a história de uma década de expansão contínua: 8,2 milhões em 2015, recorde de 10,4 milhões em dezembro de 2025.",
+            "O motor, porém, não é só oportunidade. Segundo Ana Fontes, CEO e fundadora da Rede Mulher Empreendedora e do Instituto RME, o gatilho para a mulher empreender continua sendo a maternidade: **70% das mulheres montaram o próprio negócio quando tiveram filhos**, porque o ambiente corporativo é hostil para quem tem filhos pequenos. Há também um efeito estrutural pós-pandemia, a migração para o on-line e o trabalho remoto estimularam a decisão de empreender, aponta Geórgia Nunes, gerente de empreendedorismo feminino, diversidade e inclusão do Sebrae Nacional.",
+            "Do lado institucional, o tema saiu da margem. O MDIC, em parceria com o PNUD, publicou um estudo dedicado ao panorama do empreendedorismo feminino, e foi criado o Ministério do Empreendedorismo, da Microempresa e da Empresa de Pequeno Porte (MEMP), com atenção declarada às mulheres e aos dois obstáculos mais citados: a tripla jornada de trabalho e o difícil acesso ao crédito."
+          ]
+        },
+        {
+          "id": "os-desafios-que-ainda-travam-a-escala",
+          "heading": "Os desafios que ainda travam a escala",
+          "level": 2,
+          "paragraphs": [
+            "A literatura e os documentos oficiais convergem em cinco pontos. Nenhum deles é sobre falta de disposição:",
+            "Vale registrar o outro lado: as empreendedoras se destacam por inovação e resiliência. O problema não é o time. É a infraestrutura em volta dele."
+          ],
+          "bullets": [
+            "**Acesso restrito a financiamento.** Crédito é o obstáculo mais recorrente, tanto na análise acadêmica quanto no diagnóstico do Governo Federal.",
+            "**Sobrecarga doméstica e tripla jornada.** O negócio compete com cuidado e casa pelo mesmo tempo.",
+            "**Desigualdade de oportunidades e preconceito de gênero**.",
+            "**Baixa representatividade em espaços de decisão**, o que limita o acesso a redes de apoio e mentoria.",
+            "**Redes e capacitação insuficientes**, por isso as frentes de política pública citadas são crédito, capacitação e treinamento, rede de apoio e mentoria, incentivo à formalização e conciliação entre vida profissional e pessoal."
+          ]
+        },
+        {
+          "id": "os-pilares-na-pratica",
+          "heading": "Os pilares, na prática",
+          "level": 2,
+          "paragraphs": [
+            "Quando se pergunta pelos \"pilares do empreendedorismo feminino\", a resposta útil não é inspiracional. É a lista de alavancas que o próprio Estado brasileiro elegeu para destravar o setor:",
+            "O último pilar é o menos discutido e o mais determinante. Crédito resolve caixa. Rede resolve informação. Tecnologia resolve teto."
+          ],
+          "bullets": [
+            "**Crédito** acessível e desenhado para negócio pequeno.",
+            "**Capacitação e treinamento** contínuos.",
+            "**Rede de apoio e mentoria**, o que compensa a baixa presença em espaços de decisão.",
+            "**Formalização** dos negócios liderados por mulheres.",
+            "**Conciliação** entre vida profissional e pessoal.",
+            "**Inovação e tecnologia** como vetor de aumento da participação feminina nos setores econômicos."
+          ]
+        },
+        {
+          "id": "onde-a-ia-muda-o-teto-do-negocio",
+          "heading": "Onde a IA muda o teto do negócio",
+          "level": 2,
+          "paragraphs": [
+            "Esta é a nossa leitura, não um dado de pesquisa: a maior parte dos negócios liderados por mulheres no Brasil está em serviços, e serviço é o setor onde receita historicamente cresce junto com horas trabalhadas. É aí que a tripla jornada vira um limite matemático de crescimento.",
+            "Uma empresa **AI-native** rompe essa amarração. Não é adicionar um chatbot depois. É decidir, no desenho do produto e da arquitetura, que atendimento, triagem, precificação, roteirização e documentação rodam em software desde o primeiro dia, e que a fundadora opera o sistema, não a esteira. Isso muda a margem, muda a necessidade de capital de giro e muda o tipo de conversa possível com investidor.",
+            "O padrão que respeitamos é simples: **build to compound**. Um negócio que acumula dados proprietários a cada atendimento fica mais difícil de copiar a cada mês. Um negócio que só empilha horas fica igual para sempre."
+          ]
+        },
+        {
+          "id": "como-a-avante-entra-nessa-conversa",
+          "heading": "Como a Avante entra nessa conversa",
+          "level": 2,
+          "paragraphs": [
+            "A Avante Ventures é um venture builder: **we co-found**. Não somos capital passivo esperando deck. Entramos como co-fundadores operacionais, no chão da construção, produto, stack, go-to-market, com o playbook das melhores empresas de IA do mundo adaptado ao Brasil: regulação daqui, talento daqui, cliente daqui.",
+            "O que isso significa para uma fundadora brasileira que hoje lidera um negócio de serviços e sabe que o modelo tem teto:",
+            "O Brasil já provou a tese de volume: 10,4 milhões de donas de negócio, escolaridade acima dos pares homens, recorde de rendimento. A próxima década não é sobre abrir mais CNPJ. É sobre quantas dessas empresas nascem com IA na fundação. Se você está nesse ponto, fale com a gente."
+          ],
+          "bullets": [
+            "**Arquitetura antes de marketing.** Decidimos juntos o que é núcleo AI-native e o que é acessório.",
+            "**Ritmo de shipping.** Ciclos curtos, decisão registrada, discovery até in-market.",
+            "**Construção aberta.** Nosso portfólio, AlphaJuri, WIR, FutureProofing, serve de referência de como as decisões foram tomadas."
+          ]
+        },
+        {
+          "id": "sources",
+          "heading": "Fontes",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "[Empreendedorismo feminino cresce quase 30% em dez anos e alcança maior patamar da série histórica | ASN Nacional - Agência Sebrae de Notícias](https://agenciasebrae.com.br/dados/empreendedorismo-feminino-cresce-quase-30-em-dez-anos-e-alcanca-maior-patamar-da-serie-historica/)",
+            "[Estudo do Empreendedorismo Feminino no Brasil, Empresas &amp; Negócios](https://www.gov.br/empresas-e-negocios/pt-br/empreendedor/elas-empreendem/panorama-do-empreendedorismo-feminino-no-brasil)",
+            "[EMPREENDEDORISMO FEMININO NO BRASIL: PRINCIPAIS DESAFIOS ENFRENTADOS E PERSPECTIVAS DE CRESCIMENTO | REVISTA FOCO](https://ojs.focopublicacoes.com.br/foco/article/view/7813)",
+            "[Empreendedorismo feminino é recorde | Mulheres de negócios | Valor Econômico](https://valor.globo.com/publicacoes/especiais/mulheres-de-negocios/noticia/2026/03/31/empreendedorismo-feminino-e-recorde.ghtml)",
+            "[Brasil tem mais de 10 milhões de mulheres à frente de negócios | CNN Brasil](https://www.cnnbrasil.com.br/economia/money/negocios/brasil-tem-mais-de-10-milhoes-de-mulheres-a-frente-de-negocios/)"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Quantas mulheres empreendedoras existem no Brasil?",
+          "a": "São 10,4 milhões de mulheres donas de negócio, número recorde da série histórica em dezembro de 2025, contra 8,2 milhões em 2015, crescimento de 27% em dez anos. No mesmo período, os homens à frente de negócios somavam 19,9 milhões, com alta de cerca de 11%."
+        },
+        {
+          "q": "Quais são os principais desafios do empreendedorismo feminino?",
+          "a": "Acesso restrito a financiamento, desigualdade de oportunidades, sobrecarga das responsabilidades domésticas, preconceito de gênero e baixa representatividade em espaços de decisão, o que limita redes de apoio e mentoria. O diagnóstico oficial do MDIC destaca ainda a tripla jornada de trabalho e o difícil acesso ao crédito."
+        },
+        {
+          "q": "Quais são os pilares do empreendedorismo feminino?",
+          "a": "As alavancas listadas pelo Governo Federal são: acesso ao crédito, capacitação e treinamento, rede de apoio e mentoria, incentivo à formalização, políticas de conciliação entre vida profissional e pessoal e estímulo ao uso de inovação e tecnologia."
+        },
+        {
+          "q": "Quais ideias de negócio fazem sentido para empreender hoje?",
+          "a": "Dado que 56,8% dos negócios liderados por mulheres estão em serviços e 25,1% no comércio, nossa recomendação (opinião da marca, não dado de pesquisa) é escolher um serviço que você já conhece por dentro e reconstruí-lo como software: operação jurídica, backoffice contábil, saúde e agendamento, educação corporativa, logística de última milha e atendimento para pequeno varejo. O critério não é o setor, é se o negócio acumula dados proprietários a cada uso."
+        },
+        {
+          "q": "Por que a maternidade aparece como gatilho para empreender?",
+          "a": "Segundo Ana Fontes, da Rede Mulher Empreendedora e do Instituto RME, 70% das mulheres montaram o próprio negócio quando tiveram filhos, porque o ambiente corporativo é hostil para quem tem filhos pequenos. Mudanças pós-pandemia e a expansão do trabalho remoto também estimularam a decisão de empreender."
+        }
+      ]
+    },
+    "ogImage": "/og/female-entrepreneurship-in-brazil.png"
+  },
+  {
     "slug": "chatgpt-wrapper-is-not-an-ai-native-company",
     "category": "insights",
     "type": "Explainer",
