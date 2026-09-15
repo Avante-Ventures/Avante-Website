@@ -7,9 +7,12 @@ export async function verifyNavigation(browser, origin) {
   page.on('console', message => { if (message.text().startsWith('NAVIGATION_CHUNK_ERROR')) console.log(message.text()); });
   await page.evaluateOnNewDocument(() => window.addEventListener('vite:preloadError', event => console.warn('NAVIGATION_CHUNK_ERROR', String(event.payload))));
   await page.setViewport({ width: 1440, height: 900 });
+  // Navigation assertions do not need software WebGL. CI's GPU fallback can
+  // block the main thread for seconds before the first link request is sent.
+  await page.emulateMediaFeatures([{ name: 'prefers-reduced-motion', value: 'reduce' }]);
   const arrived = async path => {
     await page.waitForFunction(expected => location.pathname === expected &&
-      document.querySelector('#root h1') && !document.querySelector('[data-route-error]'), { timeout: 15000 }, path);
+      document.querySelector('#root h1') && !document.querySelector('[data-route-error]'), { timeout: 30000 }, path);
     if (failures.length) throw new Error(failures.join('\n'));
   };
   const follow = async path => {
@@ -34,12 +37,12 @@ export async function verifyNavigation(browser, origin) {
     await page.goto(`${origin}/en`, { waitUntil: 'domcontentloaded' });
     await arrived('/en');
     await Promise.all([
-      page.waitForResponse(result => /\/assets\/WhyAvantePage-[^/]+\.js/.test(result.url()) && result.status() === 200, { timeout: 15000 }),
+      page.waitForResponse(result => /\/assets\/WhyAvantePage-[^/]+\.js/.test(result.url()) && result.status() === 200, { timeout: 30000 }),
       follow('/en/why-avante'),
     ]);
     // The document reload must have retrieved the replacement module, not just
     // displayed prerendered HTML or left the Home underneath a loading overlay.
-    await page.waitForFunction(() => !document.querySelector('[data-route-error]') && document.querySelector('.interior-hero h1'), { timeout: 15000 });
+    await page.waitForFunction(() => !document.querySelector('[data-route-error]') && document.querySelector('.interior-hero h1'), { timeout: 30000 });
     if (missing) throw new Error('The missing route chunk regression was not exercised');
     page.off('request', intercept);
     await page.setRequestInterception(false);
