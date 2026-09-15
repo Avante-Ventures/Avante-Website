@@ -76,3 +76,9 @@
 - `globe-opening.webp`: transparent 2160 × 1350 capture of the existing `WorldScene` at progress 0, with its original camera, geography, materials and lighting. Rendered in native Safari at a 1440 × 900 CSS viewport and DPR 1.5, then encoded as WebP quality 90 (104 KiB). No AI generation or additional geographic source. The underlying Natural Earth attribution for `land.json` applies.
 - Used only as the enhanced desktop opening poster while WebGL and map data load. The native `<picture>` media query matches the 3D eligibility query. Mobile, touch-only and reduced-motion layouts retain their existing city photograph.
 - The poster and live scene share vertical camera framing. Regenerate this asset if the opening camera, globe geometry, materials or lighting changes. The city film keeps its own matching bridge poster.
+
+## WIR logo update (September 14, 2026)
+
+- `wir-logo.svg` is the official white WIR logo with the outlined “AI for insurance” signature, downloaded from https://wirinnovation.ai/assets/wir-logo-branco.svg. It replaces the older “Innovation” lockup.
+- The SVG retains its official paths, gradients, viewBox and outlined lettering. Only trailing whitespace was removed on import. The same asset feeds the interactive 3D exhibit, its static fallback and the journey destination card.
+- Existing extrusion and lighting are presentation effects in `VentureLogoScene.tsx`. No logo geometry, typography or colors were generated or reconstructed.
