@@ -33,7 +33,7 @@ type Operator = {
 //    Canonical facts + the log of resolved conflicts:
 //      ~/Claude/projects/avante/TEAM-FACTS.md
 //    Update that file first, then propagate to both surfaces.
-const OPERATORS: Operator[] = [
+export const OPERATORS: Operator[] = [
   {
     slug: "amanda",
     name: "Amanda Pinheiro",

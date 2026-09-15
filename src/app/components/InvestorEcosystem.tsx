@@ -2,13 +2,10 @@ import { Sparkles, Users, Cpu, MessageSquare, Linkedin, Mail, MapPin } from 'luc
 import { SectionMasthead } from '@/app/components/SectionMasthead';
 import { useLanguage } from '@/app/hooks/useLanguage';
 
-interface InvestorEcosystemProps {
-  onOpenContact: () => void;
-}
-
-export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
+export function InvestorEcosystem() {
   const { language } = useLanguage();
-  const t = (en: string, pt: string) => (language === 'pt' ? pt : en);
+  const t = (en: string, pt: string, es: string) => (language === 'pt' ? pt : language === 'es' ? es : en);
+  const contactHref = `mailto:cristian@avanteventures.com?subject=${encodeURIComponent(t('Avante investor conversation', 'Conversa com investidores Avante', 'Conversación para inversores de Avante'))}`;
 
   return (
     <div 
@@ -37,14 +34,12 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
         {/* Header */}
         <SectionMasthead
           centered
-          eyebrow={t('For Investors', 'Para Investidores')}
+          eyebrow={t("For Investors", "Para Investidores", "Para Inversores")}
           title={t(
-            'Welcome to the Avante ecosystem.',
-            'Bem-vindo ao ecossistema Avante.'
+            "Welcome to the Avante ecosystem.", "Bem-vindo ao ecossistema Avante.", "Bienvenido al ecosistema Avante."
           )}
           description={t(
-            'Beyond returns: strategic access to the AI revolution in Brazil.',
-            'Além dos retornos: acesso estratégico à revolução da IA no Brasil.'
+            "Operating knowledge and practical connections for our investors.", "Conhecimento operacional e conexões práticas para nossos investidores.", "Conocimiento operativo y conexiones prácticas para nuestros inversores."
           )}
         />
 
@@ -70,7 +65,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
               padding: 'var(--avante-space-10)',
               background: 'linear-gradient(135deg, rgba(230, 197, 76, 0.08) 0%, rgba(152, 80, 154, 0.06) 100%)',
               border: '1px solid rgba(230, 197, 76, 0.2)',
-              borderRadius: 'var(--avante-radius-24)',
+              borderRadius: '2px',
               backdropFilter: 'blur(10px)',
               transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
               position: 'relative',
@@ -155,7 +150,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                   letterSpacing: '-0.01em'
                 }}
               >
-                {t('Quarterly Expert AI Training', 'Treinamento Trimestral com Especialistas em IA')}
+                {t("Quarterly Expert AI Training", "Treinamento Trimestral com Especialistas em IA", "Formación Trimestral con Expertos en IA")}
               </h3>
 
               <p
@@ -168,8 +163,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                 }}
               >
                 {t(
-                  'Exclusive workshops led by top AI practitioners. Stay ahead of the curve with hands-on learning from the best minds in AI.',
-                  'Workshops exclusivos liderados por top practitioners de IA. Fique à frente da curva com aprendizado hands-on das mentes mais relevantes em IA.'
+                  "Practical workshops led by AI practitioners. Explore the tools, decisions and workflows behind implementation.", "Workshops práticos com profissionais de IA. Conheça as ferramentas, decisões e fluxos de trabalho por trás da implementação.", "Talleres prácticos con profesionales de IA. Conoce las herramientas, decisiones y procesos detrás de la implementación."
                 )}
               </p>
             </div>
@@ -183,7 +177,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
               padding: 'var(--avante-space-8)',
               background: 'linear-gradient(180deg, rgba(152, 80, 154, 0.08) 0%, rgba(230, 197, 76, 0.05) 100%)',
               border: '1px solid rgba(152, 80, 154, 0.2)',
-              borderRadius: 'var(--avante-radius-24)',
+              borderRadius: '2px',
               backdropFilter: 'blur(10px)',
               transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
               position: 'relative',
@@ -268,7 +262,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                   lineHeight: '1.3'
                 }}
               >
-                {t('Futureproofing.dev Priority', 'Prioridade Futureproofing.dev')}
+                {t("Futureproofing.dev Priority", "Prioridade Futureproofing.dev", "Acceso Prioritario a Futureproofing.dev")}
               </h3>
 
               <p
@@ -280,8 +274,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                 }}
               >
                 {t(
-                  'Priority access to our AI talent company. Hire vetted AI engineers before anyone else.',
-                  'Acesso prioritário à nossa empresa de talentos AI. Contrate engenheiros de IA pré-validados antes de qualquer outro.'
+                  "Priority access to vetted AI engineers through Futureproofing.dev.", "Acesso prioritário a engenheiros de IA pré-avaliados por meio da Futureproofing.dev.", "Acceso prioritario a ingenieros de IA evaluados a través de Futureproofing.dev."
                 )}
               </p>
             </div>
@@ -295,7 +288,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
               padding: 'var(--avante-space-8)',
               background: 'linear-gradient(135deg, rgba(244, 162, 97, 0.08) 0%, rgba(249, 180, 55, 0.05) 100%)',
               border: '1px solid rgba(244, 162, 97, 0.2)',
-              borderRadius: 'var(--avante-radius-24)',
+              borderRadius: '2px',
               backdropFilter: 'blur(10px)',
               transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
               position: 'relative',
@@ -379,7 +372,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                   lineHeight: '1.3'
                 }}
               >
-                {t('Access to Mahway Agents', 'Acesso aos Agentes Mahway')}
+                {t("Access to Mahway Agents", "Acesso aos Agentes Mahway", "Acceso a Agentes de Mahway")}
               </h3>
 
               <p
@@ -391,8 +384,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                 }}
               >
                 {t(
-                  'Portfolio of custom AI agents for your business. Ready-to-deploy automation tools.',
-                  'Portfólio de agentes de IA customizados para seu negócio. Ferramentas de automação prontas para deploy.'
+                  "A portfolio of AI agents and automation tools for your business.", "Um portfólio de agentes de IA e ferramentas de automação para seu negócio.", "Un portafolio de agentes de IA y herramientas de automatización para tu empresa."
                 )}
               </p>
             </div>
@@ -406,7 +398,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
               padding: 'var(--avante-space-10)',
               background: 'linear-gradient(135deg, rgba(249, 180, 55, 0.08) 0%, rgba(244, 162, 97, 0.06) 100%)',
               border: '1px solid rgba(249, 180, 55, 0.2)',
-              borderRadius: 'var(--avante-radius-24)',
+              borderRadius: '2px',
               backdropFilter: 'blur(10px)',
               transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
               position: 'relative',
@@ -490,7 +482,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                   letterSpacing: '-0.01em'
                 }}
               >
-                {t('On-Demand AI Consulting', 'Consultoria de IA Sob Demanda')}
+                {t("On-Demand AI Consulting", "Consultoria de IA Sob Demanda", "Consultoría de IA Bajo Demanda")}
               </h3>
 
               <p
@@ -503,8 +495,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                 }}
               >
                 {t(
-                  'Personalized AI implementation consulting. Turn your operations into AI-powered workflows with expert guidance.',
-                  'Consultoria personalizada de implementação de IA. Transforme suas operações em workflows AI-powered com orientação especialista.'
+                  "Guidance on AI implementation, from identifying useful applications to adapting operating workflows.", "Orientação sobre implementação de IA, da identificação de aplicações úteis à adaptação dos fluxos operacionais.", "Orientación sobre implementación de IA, desde identificar aplicaciones útiles hasta adaptar los procesos operativos."
                 )}
               </p>
             </div>
@@ -513,37 +504,33 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
 
         {/* Final CTA */}
         <div style={{ marginTop: 'var(--avante-space-8)' }}>
-          <button
-            onClick={() => {
-              const element = document.getElementById('contact');
-              if (element) {
-                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-              }
-            }}
+          <a
+            href={contactHref}
             style={{
               padding: 'var(--avante-space-5) var(--avante-space-8)',
               fontSize: '18px',
               fontWeight: 'var(--font-weight-semibold)',
-              color: '#FFFFFF',
-              background: 'linear-gradient(135deg, var(--avante-accent-orange) 0%, var(--avante-accent-gold) 100%)',
-              border: 'none',
-              borderRadius: 'var(--avante-radius-12)',
+              color: '#171C36',
+              background: '#F4F1EB',
+              border: '1px solid #F4F1EB',
+              borderRadius: '2px',
+              display: 'inline-flex',
+              alignItems: 'center',
+              minHeight: '44px',
+              textDecoration: 'none',
               cursor: 'pointer',
-              transition: 'all 0.4s ease',
-              boxShadow: '0 8px 32px rgba(249, 180, 55, 0.3)',
+              transition: 'background-color 0.2s ease',
               marginBottom: 'var(--avante-space-6)'
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.transform = 'translateY(-4px)';
-              e.currentTarget.style.boxShadow = '0 12px 48px rgba(249, 180, 55, 0.4)';
+              e.currentTarget.style.background = '#FFFFFF';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.transform = 'translateY(0)';
-              e.currentTarget.style.boxShadow = '0 8px 32px rgba(249, 180, 55, 0.3)';
+              e.currentTarget.style.background = '#F4F1EB';
             }}
           >
-            {t('Start a Conversation', 'Iniciar uma Conversa')}
-          </button>
+            {t("Start a Conversation", "Iniciar uma Conversa", "Iniciar una Conversación")}
+          </a>
 
           {/* Location info */}
           <div 
@@ -574,7 +561,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
               href="https://www.linkedin.com/company/avante-ventures/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Avante Ventures on LinkedIn"
+              aria-label={t('Avante Ventures on LinkedIn', 'Avante Ventures no LinkedIn', 'Avante Ventures en LinkedIn')}
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -604,8 +591,8 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
             </a>
 
             <a
-              href="mailto:cristian@avanteventures.com"
-              aria-label="Email Avante Ventures"
+              href={contactHref}
+              aria-label={t('Email Avante Ventures', 'Enviar email à Avante Ventures', 'Enviar correo a Avante Ventures')}
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -655,7 +642,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                 textAlign: 'center'
               }}
             >
-              {t('Worldwide Legal Advisors', 'Conselheiros Jurídicos Globais')}
+              {t("Worldwide Legal Advisors", "Assessoria Jurídica Internacional", "Asesoría Jurídica Internacional")}
             </p>
 
             <div
@@ -687,7 +674,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                   e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
                 }}
               >
-                {t('Foley (USA)', 'Foley (EUA)')}
+                {t("Foley (USA)", "Foley (EUA)", "Foley (EE. UU.)")}
               </div>
 
               <div
@@ -710,7 +697,7 @@ export function InvestorEcosystem({ onOpenContact }: InvestorEcosystemProps) {
                   e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.1)';
                 }}
               >
-                {t('Lefosse (Brazil)', 'Lefosse (Brasil)')}
+                {t("Lefosse (Brazil)", "Lefosse (Brasil)", "Lefosse (Brasil)")}
               </div>
             </div>
           </div>

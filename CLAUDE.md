@@ -50,3 +50,8 @@ Articles are fed by the sibling `../content-engine/` pipeline (trilingual Librar
 
 Every public figure on this site must reconcile against the brand-truth / company-facts docs before
 it ships. The `~50% vs ~19% IRR` numbers are historically sensitive.
+
+
+## Brand identity — corrected September 14, 2026
+
+Avante is a **venture builder**, in EN, PT and ES. Use this term in company copy, navigation, metadata and Avante-specific article passages. Never label Avante a venture studio or simply Studio. This explicit instruction from Cristian supersedes the previous terminology rule. Keep existing article URLs and accurate third-party research/source names intact. Canonical identity wording is synchronized in `../content-engine/knowledge-base/brand-truth.md`.

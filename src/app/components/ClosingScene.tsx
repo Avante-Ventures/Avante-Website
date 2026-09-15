@@ -128,10 +128,10 @@ export function ClosingScene() {
         <div style={{ ...rise(0), marginBottom: "clamp(40px, 7vh, 80px)" }}>
           <div style={{ margin: "0 auto", maxWidth: "20ch", fontFamily: "var(--avt-font-serif)", fontWeight: 500, fontSize: "clamp(28px, 4.6vw, 58px)", lineHeight: 1.04, letterSpacing: "-0.02em", color: "var(--avt-txt)" }}>
             <span className="avt-grad">$500M+</span>{" "}
-            {t("deployed across 20+ companies.", "investidos em 20+ empresas.", "desplegados en 20+ empresas.")}
+            {t("under management.", "sob gestão.", "bajo gestión.")}
           </div>
           <div style={{ marginTop: "14px", fontFamily: "var(--avt-font-body)", fontSize: "clamp(14px, 1.4vw, 17px)", color: "var(--avt-muted)" }}>
-            {t("By the same hands now building Avante.", "Pelas mesmas mãos que agora constroem a Avante.", "Por las mismas manos que ahora construyen Avante.")}
+            {t("Amanda Pinheiro's CFO experience at Innova Capital and Unbox Capital.", "Experiência de Amanda Pinheiro como CFO na Innova Capital e na Unbox Capital.", "Trayectoria de Amanda Pinheiro como CFO en Innova Capital y Unbox Capital.")}
           </div>
         </div>
 

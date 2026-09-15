@@ -13,6 +13,7 @@ import { createBrowserRouter, Outlet, Navigate, useParams, useNavigation, useLoc
 import HomePage from "./pages/HomePage.tsx"
 import { LanguageProvider, type Language } from "@/app/hooks/useLanguage"
 import { AvtSpinner } from "@/app/components/AvtSpinner"
+import { focusSection } from '@/app/components/focusSection'
 
 // HomePage stays in the main bundle (it's the LCP-critical entry route).
 // Sub-pages are heavy (JSX + framer-motion + article content) and only
@@ -61,7 +62,21 @@ function RootRedirect() {
 function ScrollToTopOnNavigate() {
   const { key, hash } = useLocation()
   useEffect(() => {
-    if (hash) return
+    if (hash) {
+      const revealTarget = () => {
+        let id: string;
+        try { id = decodeURIComponent(hash.slice(1)); } catch { return true; }
+        const target = document.getElementById(id);
+        if (!target) return false;
+        focusSection(target);
+        return true;
+      };
+      if (revealTarget()) return;
+      const observer = new MutationObserver(() => { if (revealTarget()) observer.disconnect(); });
+      observer.observe(document.getElementById('root') ?? document.body, { childList: true, subtree: true });
+      const timeout = window.setTimeout(() => observer.disconnect(), 5000);
+      return () => { observer.disconnect(); clearTimeout(timeout); };
+    }
     // 'instant' opts out of the global `html { scroll-behavior: smooth }`
     // (index.css / theme.css). On navigation we want an immediate jump to the
     // top, not a 1s+ glide through the new page; smooth stays for the in-page

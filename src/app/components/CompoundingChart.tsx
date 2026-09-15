@@ -131,8 +131,8 @@ export function CompoundingChart({
           overflow: 'visible',
         }}
         aria-label={t(
-          'Avante studio compounding curve: illustrative, not data',
-          'Curva de compounding do studio Avante: ilustrativa, não dados'
+          'Avante venture builder compounding curve: illustrative, not data',
+          'Curva de compounding do venture builder Avante: ilustrativa, não dados'
         )}
         role="img"
       >

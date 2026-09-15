@@ -22,7 +22,7 @@ import { useLanguage } from '@/app/hooks/useLanguage'
 const FEATURES = [
   { kind: 'MARKET REPORT', title: 'Brazil AI Market 2026', metric: '$2.5T economy · 70% services GDP', accent: '#F9B437', href: 'library/brazil-ai-market-report-2026' },
   { kind: 'PLAYBOOK', title: 'The First Ticket Advantage', metric: '4-filter framework · 100× upside vs 7×', accent: '#F4A261', href: 'library/first-ticket-advantage-framework' },
-  { kind: 'RESEARCH', title: 'Why Studios Beat Traditional VC', metric: '50% IRR vs 19% · GSSN 2025 data', accent: '#98509A', href: 'library/venture-studios-outperform-traditional-vc' },
+  { kind: 'RESEARCH', title: 'Why Venture builders Beat Traditional VC', metric: '50% IRR vs 19% · GSSN 2025 data', accent: '#98509A', href: 'library/venture-studios-outperform-traditional-vc' },
 ]
 
 const PORTFOLIO = ['SIGGA', 'MAHWAY', 'WIR', 'BAMBOO DCM', 'ALPHALIT', 'INDINERO']
@@ -179,7 +179,7 @@ export function HeroV2D_GeoStrip() {
               marginBottom: '20px',
             }}
           >
-            Est. 2025 · AI-Native Venture Studio
+            Est. 2025 · AI-Native Venture Builder
           </div>
 
           <img src={avanteLogo} alt="Avante" loading="eager" style={{ height: 'clamp(70px, 7vw, 100px)', width: 'auto', marginBottom: 'clamp(24px, 4vw, 40px)', filter: 'drop-shadow(0 8px 24px rgba(249, 180, 55, 0.18))' }} />

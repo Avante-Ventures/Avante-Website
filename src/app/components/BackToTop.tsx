@@ -1,26 +1,34 @@
 import { useEffect, useState } from 'react';
 import { ArrowUp } from 'lucide-react';
+import { useLanguage } from '@/app/hooks/useLanguage';
+import { focusSection } from './focusSection';
 
 export function BackToTop() {
   const [isVisible, setIsVisible] = useState(false);
+  const { language } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show button after scrolling down 500px
-      setIsVisible(window.scrollY > 500);
+      // Keep the floating button clear of the journey's chapter and skip controls.
+      const tour = document.querySelector('.world-tour');
+      const inJourney = tour && tour.getBoundingClientRect().bottom > 0;
+      setIsVisible(matchMedia('(min-width: 900px)').matches && window.scrollY > 500 && !inJourney);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll);
     handleScroll(); // Initial check
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => { window.removeEventListener('scroll', handleScroll); window.removeEventListener('resize', handleScroll); };
   }, []);
 
   const scrollToTop = () => {
+    const behavior = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth';
     const heroSection = document.getElementById('hero');
     if (heroSection) {
-      heroSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // The chapter heading may still be hidden while the camera returns.
+      focusSection(heroSection, behavior, false);
     } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior });
     }
   };
 
@@ -59,7 +67,7 @@ export function BackToTop() {
         e.currentTarget.style.transform = 'translateY(0)';
         e.currentTarget.style.boxShadow = 'none';
       }}
-      aria-label="Back to top"
+      aria-label={language === 'pt' ? 'Voltar ao início' : language === 'es' ? 'Volver al inicio' : 'Back to top'}
     >
       <ArrowUp size={20} color="rgba(255, 255, 255, 0.9)" />
     </button>

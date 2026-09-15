@@ -19,7 +19,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router'
 import { useLanguage } from '@/app/hooks/useLanguage'
-import { AvanteLockup } from '@/app/components/AvanteLockup'
+import { focusSection } from '@/app/components/focusSection'
 
 // Contact CTA flag, set via Vercel env variable.
 // Values: 'shown' (default: neutral "Contact" CTA) or 'hidden' (CTA hidden
@@ -34,13 +34,15 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState('hero')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const menuButton = useRef<HTMLButtonElement>(null)
+  const menuDialog = useRef<HTMLDialogElement>(null)
   const { language, setLanguage } = useLanguage()
   const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
-      const sections = ['hero', 'playbook', 'team', 'principles']
+      const sections = ['hero', 'studio', 'ventures', 'team', 'principles']
       const scrollPosition = window.scrollY + 200
       const reversed = [...sections].reverse()
       for (const sectionId of reversed) {
@@ -60,6 +62,28 @@ export function Navbar() {
     setMobileMenuOpen(false)
   }, [location])
 
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+    const dialog = menuDialog.current;
+    if (!dialog) return;
+    const rootOverflow = document.documentElement.style.overflow;
+    const bodyOverflow = document.body.style.overflow;
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
+    dialog.showModal();
+    const desktop = matchMedia('(min-width: 1024px)');
+    const closeOnDesktop = () => { if (desktop.matches) setMobileMenuOpen(false); };
+    desktop.addEventListener('change', closeOnDesktop);
+    return () => {
+      desktop.removeEventListener('change', closeOnDesktop);
+      const restoreOpener = dialog.open && dialog.contains(document.activeElement);
+      dialog.close();
+      document.documentElement.style.overflow = rootOverflow;
+      document.body.style.overflow = bodyOverflow;
+      if (restoreOpener && menuButton.current?.isConnected) menuButton.current.focus({ preventScroll: true });
+    };
+  }, [mobileMenuOpen]);
+
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (!href.includes('#')) {
       setMobileMenuOpen(false)
@@ -69,8 +93,9 @@ export function Navbar() {
     const element = document.getElementById(targetId)
     if (element) {
       e.preventDefault()
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      menuDialog.current?.close();
       setMobileMenuOpen(false)
+      focusSection(element, window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth')
     }
   }
 
@@ -83,20 +108,32 @@ export function Navbar() {
   }> = [
     {
       id: 'why',
-      label: language === 'pt' ? 'Por Que' : language === 'es' ? 'Por Qué' : 'Why',
+      label: 'Venture Builder',
       href: `/${language}/why-avante`,
       isRoute: true,
     },
     {
       id: 'portfolio',
-      label: language === 'pt' ? 'Portfólio' : language === 'es' ? 'Portafolio' : 'Portfolio',
+      label: 'Ventures',
       href: `/${language}/portfolio`,
       isRoute: true,
+    },
+    {
+      id: 'team',
+      label: language === 'pt' ? 'Pessoas' : language === 'es' ? 'Personas' : 'People',
+      href: `/${language}#team`,
+      isRoute: false,
     },
     {
       id: 'library',
       label: language === 'pt' ? 'Biblioteca' : language === 'es' ? 'Biblioteca' : 'Library',
       href: `/${language}/library`,
+      isRoute: true,
+    },
+    {
+      id: 'investors',
+      label: language === 'pt' ? 'Investidores' : language === 'es' ? 'Inversionistas' : 'Investors',
+      href: `/${language}/investors`,
       isRoute: true,
     },
   ]
@@ -126,7 +163,7 @@ export function Navbar() {
       <nav
         className="fixed top-0 left-0 right-0 z-50"
         style={{
-          backgroundColor: isScrolled ? 'rgba(6, 7, 13, 0.78)' : 'transparent',
+          backgroundColor: isScrolled ? 'rgba(6, 7, 13, 0.96)' : 'transparent',
           backdropFilter: isScrolled ? 'blur(14px)' : 'none',
           WebkitBackdropFilter: isScrolled ? 'blur(14px)' : 'none',
           borderBottom: isScrolled ? '1px solid var(--avt-hair)' : '1px solid transparent',
@@ -151,7 +188,7 @@ export function Navbar() {
           </Link>
 
           {/* Center nav links, desktop only — absolutely centered with the hero "A" */}
-          <div className="hidden lg:flex items-center" style={{ gap: '36px', position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}>
+          <div className="hidden lg:flex items-center" style={{ gap: '24px', position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}>
             {navLinks.map((link) => {
               const active = isLinkActive(link)
               const color = active ? '#fff' : 'var(--avt-muted)'
@@ -199,9 +236,7 @@ export function Navbar() {
 
             {VINTAGE_STATUS !== 'hidden' && (
               <a
-                href="https://avanteventures.substack.com"
-                target="_blank"
-                rel="noopener"
+                href="mailto:cristian@avanteventures.com?subject=Building%20with%20Avante"
                 className="hidden sm:inline-flex"
                 style={{
                   ...navTextStyle,
@@ -215,7 +250,7 @@ export function Navbar() {
                 onMouseEnter={(e) => (e.currentTarget.style.borderColor = '#fff')}
                 onMouseLeave={(e) => (e.currentTarget.style.borderColor = 'var(--avt-hair-2)')}
               >
-                {language === 'pt' ? 'Assinar' : language === 'es' ? 'Suscribirse' : 'Subscribe'}
+                {language === 'pt' ? 'Contato' : language === 'es' ? 'Contacto' : 'Contact'}
               </a>
             )}
 
@@ -223,9 +258,16 @@ export function Navbar() {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="avt-nav-hamburger"
-              aria-label="Toggle menu"
+              ref={menuButton}
+              aria-label={language === 'pt' ? 'Abrir menu' : language === 'es' ? 'Abrir menú' : 'Toggle menu'}
+              aria-expanded={mobileMenuOpen}
+              aria-controls="avante-mobile-navigation"
               style={{
                 padding: '8px',
+                minWidth: '44px',
+                minHeight: '44px',
+                justifyContent: 'center',
+                alignItems: 'center',
                 background: 'transparent',
                 border: 'none',
                 cursor: 'pointer',
@@ -241,27 +283,47 @@ export function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile menu overlay */}
-      {mobileMenuOpen && (
-        <div
-          className="lg:hidden fixed inset-0 z-40"
+      {/* Native modal contains keyboard focus and isolates the covered page. */}
+        <dialog
+          ref={menuDialog}
+          id="avante-mobile-navigation"
+          aria-label={language === 'pt' ? 'Navegação principal' : language === 'es' ? 'Navegación principal' : 'Main navigation'}
+          onCancel={(event) => { event.preventDefault(); setMobileMenuOpen(false); }}
+          onKeyDown={(event) => {
+            if (event.key !== 'Tab') return;
+            const controls = [...event.currentTarget.querySelectorAll<HTMLElement>('button:not([disabled]), a[href]')].filter(el => el.getClientRects().length);
+            if (!controls.length) return;
+            event.preventDefault();
+            const index = controls.indexOf(document.activeElement as HTMLElement);
+            controls[(index + (event.shiftKey ? -1 : 1) + controls.length) % controls.length].focus();
+          }}
           style={{
+            position: 'fixed', inset: 0, width: '100%', height: '100dvh',
+            maxWidth: 'none', maxHeight: 'none', margin: 0, padding: 0, border: 0,
+            color: '#eef0f7',
             backgroundColor: 'rgba(6, 7, 13, 0.98)',
             backdropFilter: 'blur(20px)',
             WebkitBackdropFilter: 'blur(20px)',
-            animation: 'fadeIn 0.3s ease',
+            overflowY: 'auto',
+            overscrollBehavior: 'contain',
           }}
           onClick={() => setMobileMenuOpen(false)}
         >
+          <button
+            autoFocus
+            onClick={() => setMobileMenuOpen(false)}
+            aria-label={language === 'pt' ? 'Fechar menu' : language === 'es' ? 'Cerrar menú' : 'Close menu'}
+            style={{ position: 'absolute', right: 24, top: 14, width: 44, height: 44, color: '#eef0f7', background: 'transparent', border: '1px solid #a6adc755', fontSize: 28, cursor: 'pointer' }}
+          >×</button>
           <div
             style={{
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
-              height: '100vh',
-              gap: '32px',
-              padding: '24px',
+              minHeight: '100svh',
+              gap: 'clamp(16px, 4svh, 32px)',
+              padding: '96px 24px 32px',
             }}
             onClick={(e) => e.stopPropagation()}
           >
@@ -274,7 +336,6 @@ export function Navbar() {
                   fontSize: 'clamp(28px, 6vw, 40px)',
                   color: '#fff',
                   textDecoration: 'none',
-                  animation: `slideIn 0.4s ease ${index * 0.05}s both`,
                 },
                 onClick: (e: React.MouseEvent<HTMLAnchorElement>) => handleNavClick(e, link.href),
               }
@@ -290,9 +351,8 @@ export function Navbar() {
             })}
             {VINTAGE_STATUS !== 'hidden' && (
               <a
-                href="https://avanteventures.substack.com"
-                target="_blank"
-                rel="noopener"
+                href="mailto:cristian@avanteventures.com?subject=Building%20with%20Avante"
+                onClick={() => setMobileMenuOpen(false)}
                 style={{
                   marginTop: '16px',
                   ...navTextStyle,
@@ -302,15 +362,13 @@ export function Navbar() {
                   gap: '10px',
                   border: '1px solid var(--avt-hair-2)',
                   padding: '14px 20px',
-                  animation: 'slideIn 0.4s ease 0.4s both',
                 }}
               >
-                {language === 'pt' ? 'Assinar' : language === 'es' ? 'Suscribirse' : 'Subscribe'}
+                {language === 'pt' ? 'Contato' : language === 'es' ? 'Contacto' : 'Contact'}
               </a>
             )}
           </div>
-        </div>
-      )}
+        </dialog>
 
       <style>{`
         /* Hamburger only renders below lg breakpoint (1024px). Inline media
@@ -396,6 +454,7 @@ function LanguageToggleMini({
           border: '1px solid var(--avt-hair-2)',
           borderRadius: '999px',
           padding: '6px 12px',
+          minHeight: '44px',
           background: open ? 'rgba(255, 255, 255, 0.06)' : 'transparent',
           color: '#fff',
           cursor: 'pointer',
@@ -458,6 +517,7 @@ function LanguageToggleMini({
                   background: 'transparent',
                   color: 'var(--avt-muted)',
                   padding: '7px 10px',
+                  minHeight: '44px',
                   borderRadius: '6px',
                   animation: `avtLangIn 0.22s cubic-bezier(0.16,1,0.3,1) ${i * 45}ms both`,
                 }}

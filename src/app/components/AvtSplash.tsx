@@ -33,6 +33,11 @@ export function AvtSplash() {
   const [phase, setPhase] = useState<'pre' | 'visible' | 'fading' | 'done'>('pre')
 
   useEffect(() => {
+    // The scroll experience presents its content immediately, without an intro gate.
+    if (/^\/(en|pt|es)?\/?$/.test(window.location.pathname)) {
+      setPhase('done')
+      return
+    }
     // Reduced-motion users skip the splash entirely.
     const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
     if (mq.matches) {

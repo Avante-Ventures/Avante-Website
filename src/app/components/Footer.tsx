@@ -7,7 +7,7 @@
 // draws itself in 1.4s on scroll-into-view) opens the footer, followed by a
 // MONUMENTAL "A vante." lockup at 340px on desktop (clamps to 96px on
 // mobile). Below: a Funnel Display tagline anchored to the firm's actual
-// horizon ("Studio that compounds. Brazil-native, AI-native. Built for
+// horizon ("Venture builder that compounds. Brazil-native, AI-native. Built for
 // decades."), the 4-column nav grid (Offices / Firm / For / Now), and the
 // Sources block (preserved verbatim — Diana's panel insisted citations stay).
 // Bottom is a mono colophon row: © + cordão version + signature line.
@@ -116,23 +116,23 @@ export function Footer() {
         >
           {t(
             <>
-              Studio that compounds.{' '}
+              Venture builder that compounds.{' '}
               <span className="avt-grad">Brazil-native, AI-native.</span> Built for decades.
             </>,
             <>
-              Studio que compõe.{' '}
-              <span className="avt-grad">Brasil-native, AI-native.</span> Construído para décadas.
+              Um venture builder que acumula valor.{' '}
+              <span className="avt-grad">Nascido no Brasil, AI-native.</span> Construído para décadas.
             </>,
             <>
-              Studio que compone.{' '}
-              <span className="avt-grad">Brasil-native, AI-native.</span> Construido para décadas.
+              Un venture builder que acumula valor.{' '}
+              <span className="avt-grad">Nacido en Brasil, AI-native.</span> Construido para décadas.
             </>
           )}
         </p>
 
         {/* ClockRow — Phase D. Live local time in the firm's two operating
             cities, rendered as 2-column hairline cells. Quietly tells the
-            visitor where the studio physically is, in real time. */}
+            visitor where the venture builder physically is, in real time. */}
         <div style={{ marginTop: 'clamp(40px, 5vw, 60px)' }}>
           <ClockRow />
         </div>
@@ -153,7 +153,7 @@ export function Footer() {
           </FooterColumn>
 
           {/* Column 2: Firm — top-level routes */}
-          <FooterColumn title={t('Firm', 'Studio', 'Studio')}>
+          <FooterColumn title={t('Firm', 'Venture Builder', 'Venture Builder')}>
             <FooterLink to={`/${language}/why-avante`} label={t('Why Avante', 'Por Que Avante', 'Por Qué Avante')} />
             <FooterLink to={`/${language}/portfolio`} label={t('Portfolio', 'Portfólio', 'Portafolio')} />
             <FooterLink to={`/${language}/principles`} label={t('Principles', 'Princípios', 'Principios')} />
@@ -168,7 +168,7 @@ export function Footer() {
 
           {/* Column 4: Now — operating reality */}
           <FooterColumn title={t('Now', 'Agora', 'Ahora')}>
-            <FooterStaticLine>{t('3 active · 3 in pipeline', '3 ativas · 3 no pipeline', '3 activas · 3 en pipeline')}</FooterStaticLine>
+            <FooterStaticLine>{t('Selected work: AlphaJuri + WIR', 'Destaques: AlphaJuri + WIR', 'Selección: AlphaJuri + WIR')}</FooterStaticLine>
             <FooterStaticLine>{t('São Paulo · winter 2026', 'São Paulo · inverno 2026', 'São Paulo · invierno 2026')}</FooterStaticLine>
             <FooterStaticLine
               style={{ color: 'rgba(205, 210, 238, 0.55)', marginTop: '6px', fontSize: '12px' }}
@@ -196,12 +196,12 @@ export function Footer() {
             gap: '16px',
           }}
         >
-          <MonoColophon>© 2026 Avante Ventures · São Paulo · cordão v0.1</MonoColophon>
+          <MonoColophon>© 2026 Avante Ventures · São Paulo</MonoColophon>
           <MonoColophon>
             {t(
-              '— a venture studio that signs its name',
-              '— um venture studio que assina seu nome',
-              '— un venture studio que firma con su nombre'
+              '— a venture builder that signs its name',
+              '— um venture builder que assina seu nome',
+              '— un venture builder que firma con su nombre'
             )}
           </MonoColophon>
         </div>

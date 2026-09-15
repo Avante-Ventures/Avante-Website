@@ -63,7 +63,7 @@ const translations = {
     'whatwedo.bullet1': 'Caminho 1: Co-Construir. Somos parceiros desde o dia um, fornecendo produto, engenharia e capital para lançar do zero.',
     'whatwedo.bullet2': 'Caminho 2: Investir Cedo. Lideramos rodadas pré-tração em fundadores excepcionais construindo líderes de categoria AI-native.',
     'whatwedo.bullet3': 'Ambos Caminhos: Suporte operacional completo incluindo go-to-market, estratégia de capital e infraestrutura de governança.',
-    'whatwedo.tagline': 'Avante combina execução de venture studio com disciplina de investimento em estágio inicial.',
+    'whatwedo.tagline': 'Avante combina execução de venture builder com disciplina de investimento em estágio inicial.',
     
     // The Avante System
     'system.title': 'O Sistema Avante',
@@ -230,8 +230,8 @@ const translations = {
     'whyavante.problem.issue3.description': 'Quando o modelo de negócio é rodadas de fundraising e flips, os incentivos quebram. Negócios reais fazem compound, não otimizam para demo day.',
     
     // Comparison & Returns
-    'whyavante.comparison.title': 'Venture Studio vs Capital Tradicional',
-    'whyavante.comparison.description': 'Enquanto VCs escrevem cheques e esperam, venture studios co-constroem do zero com execução hands-on. A diferença é estrutural, e os retornos refletem isso.',
+    'whyavante.comparison.title': 'Venture Builder vs Capital Tradicional',
+    'whyavante.comparison.description': 'Enquanto VCs escrevem cheques e esperam, venture builders co-constroem do zero com execução hands-on. A diferença é estrutural, e os retornos refletem isso.',
     'whyavante.returns.title': 'Os Dados: Venture Studios Superam',
     'whyavante.returns.description': 'Venture studios lideram todas as classes de ativos com ~50% de retornos anualizados, o dobro de aceleradoras e cerca de 2.5x de VCs tradicionais. Isso não é sorte. É um modelo operacional superior.',
     'whyavante.returns.source': 'Fonte: GSSN Global Venture Studio Report 2023',
@@ -292,7 +292,7 @@ const translations = {
     'library.backhome': 'Voltar ao Início',
     'library.hero.badge': 'Pesquisa & Insights',
     'library.hero.title': 'Insights de Venture Building para Operadores',
-    'library.hero.subtitle': 'Relatórios de pesquisa, playbooks e estudos de caso sobre venture studios, investimento de primeiro ticket, negócios AI-native e oportunidades no Brasil. Escritos por operadores que construíram e escalaram empresas.',
+    'library.hero.subtitle': 'Relatórios de pesquisa, playbooks e estudos de caso sobre venture builders, investimento de primeiro ticket, negócios AI-native e oportunidades no Brasil. Escritos por operadores que construíram e escalaram empresas.',
     'library.hero.stats': '9 Recursos • Atualizado Semanalmente',
     
     // Categories
@@ -362,7 +362,7 @@ const translations = {
     'whatwedo.bullet1': 'Path 1: Co-Build. We partner with you from day one, providing product, engineering, and capital to launch from zero.',
     'whatwedo.bullet2': 'Path 2: Invest Early. We lead pre-traction rounds in exceptional founders building AI-native category leaders.',
     'whatwedo.bullet3': 'Both Paths: Full operating support including go-to-market, capital strategy, and governance infrastructure.',
-    'whatwedo.tagline': 'Avante combines venture studio execution with early-stage investment discipline.',
+    'whatwedo.tagline': 'Avante combines venture builder execution with early-stage investment discipline.',
     
     // The Avante System
     'system.title': 'The Avante System',
@@ -529,8 +529,8 @@ const translations = {
     'whyavante.problem.issue3.description': 'When the business model is fundraising rounds and flips, incentives break. Real businesses compound, they don\'t optimize for demo day.',
     
     // Comparison & Returns
-    'whyavante.comparison.title': 'Venture Studio vs Traditional Capital',
-    'whyavante.comparison.description': 'While VCs write checks and wait, venture studios co-build from scratch with hands-on execution. The difference is structural, and the returns reflect it.',
+    'whyavante.comparison.title': 'Venture Builder vs Traditional Capital',
+    'whyavante.comparison.description': 'While VCs write checks and wait, venture builders co-build from scratch with hands-on execution. The difference is structural, and the returns reflect it.',
     'whyavante.returns.title': 'The Data: Venture Studios Outperform',
     'whyavante.returns.description': 'Venture studios lead all asset classes with ~50% annualized returns, double that of accelerators and roughly 2.5x traditional VC. This isn\'t luck. It\'s a superior operating model.',
     'whyavante.returns.source': 'Source: GSSN Global Venture Studio Report 2023',
@@ -591,7 +591,7 @@ const translations = {
     'library.backhome': 'Back to Home',
     'library.hero.badge': 'Research & Insights',
     'library.hero.title': 'Venture Building Insights for Operators',
-    'library.hero.subtitle': 'Research reports, playbooks, and case studies on venture studios, first-ticket investing, AI-native businesses, and Brazil opportunities. Written by operators who have built and scaled companies.',
+    'library.hero.subtitle': 'Research reports, playbooks, and case studies on venture builders, first-ticket investing, AI-native businesses, and Brazil opportunities. Written by operators who have built and scaled companies.',
     'library.hero.stats': '9 Resources • Updated Weekly',
     
     // Categories
@@ -666,7 +666,7 @@ const translations = {
     'whatwedo.bullet1': 'Camino 1: Co-Construir. Somos socios desde el día uno, aportando producto, ingeniería y capital para lanzar desde cero.',
     'whatwedo.bullet2': 'Camino 2: Invertir Temprano. Lideramos rondas pre-tracción en fundadores excepcionales construyendo líderes de categoría AI-native.',
     'whatwedo.bullet3': 'Ambos Caminos: Soporte operativo completo incluyendo go-to-market, estrategia de capital e infraestructura de gobernanza.',
-    'whatwedo.tagline': 'Avante combina ejecución de venture studio con disciplina de inversión en etapa temprana.',
+    'whatwedo.tagline': 'Avante combina ejecución de venture builder con disciplina de inversión en etapa temprana.',
 
     // The Avante System
     'system.title': 'El Sistema Avante',
@@ -833,8 +833,8 @@ const translations = {
     'whyavante.problem.issue3.description': 'Cuando el modelo de negocio son rondas de fundraising y flips, los incentivos se rompen. Los negocios reales hacen compound, no optimizan para demo day.',
 
     // Comparison & Returns
-    'whyavante.comparison.title': 'Venture Studio vs Capital Tradicional',
-    'whyavante.comparison.description': 'Mientras los VCs firman cheques y esperan, los venture studios co-construyen desde cero con ejecución hands-on. La diferencia es estructural, y los retornos lo reflejan.',
+    'whyavante.comparison.title': 'Venture Builder vs Capital Tradicional',
+    'whyavante.comparison.description': 'Mientras los VCs firman cheques y esperan, los venture builders co-construyen desde cero con ejecución hands-on. La diferencia es estructural, y los retornos lo reflejan.',
     'whyavante.returns.title': 'Los Datos: Venture Studios Superan',
     'whyavante.returns.description': 'Los venture studios lideran todas las clases de activos con ~50% de retornos anualizados, el doble de los aceleradores y cerca de 2.5x el VC tradicional. Esto no es suerte. Es un modelo operativo superior.',
     'whyavante.returns.source': 'Fuente: GSSN Global Venture Studio Report 2023',
@@ -895,7 +895,7 @@ const translations = {
     'library.backhome': 'Volver al Inicio',
     'library.hero.badge': 'Investigación & Insights',
     'library.hero.title': 'Insights de Venture Building para Operadores',
-    'library.hero.subtitle': 'Reportes de investigación, playbooks y case studies sobre venture studios, first-ticket investing, negocios AI-native y oportunidades en Brasil. Escritos por operadores que han construido y escalado empresas.',
+    'library.hero.subtitle': 'Reportes de investigación, playbooks y case studies sobre venture builders, first-ticket investing, negocios AI-native y oportunidades en Brasil. Escritos por operadores que han construido y escalado empresas.',
     'library.hero.stats': '9 Recursos • Actualizado Semanalmente',
 
     // Categories
@@ -936,8 +936,8 @@ export function LanguageProvider({
     if (lang === locale) return;
     // Replace the leading /en /pt /es with the target lang and keep the rest
     const newPath = location.pathname.replace(/^\/(en|pt|es)/, `/${lang}`);
-    navigate(newPath || `/${lang}`, { replace: false });
-  }, [locale, location.pathname, navigate]);
+    navigate(`${newPath || `/${lang}`}${location.search}${location.hash}`, { replace: false });
+  }, [locale, location.pathname, location.search, location.hash, navigate]);
 
   // ES dictionary may have gaps during incremental rollout — fall back to
   // EN strings rather than rendering raw key names. Pattern: `es?[k] || en[k]`.
@@ -945,7 +945,7 @@ export function LanguageProvider({
     const dict = translations[locale] as Record<string, string> | undefined;
     if (dict && dict[key]) return dict[key];
     // Fallback chain: dict -> EN -> the key itself
-    return translations.en[key] || key;
+    return (translations.en as Record<string, string>)[key] || key;
   }, [locale]);
 
   const value = useMemo(() => ({

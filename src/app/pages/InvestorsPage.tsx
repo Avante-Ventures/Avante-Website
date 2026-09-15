@@ -8,30 +8,29 @@ import { Navbar } from '@/app/components/Navbar'
 import { Footer } from '@/app/components/Footer'
 import { BackToTop } from '@/app/components/BackToTop'
 import { SEOHelmet } from '@/app/components/SEOHelmet'
+import { InteriorHero } from '@/app/components/interiors/InteriorHero'
 import { SectionMasthead } from '@/app/components/SectionMasthead'
 import { EditorialCard } from '@/app/components/EditorialCard'
 import { InvestorEcosystem } from '@/app/components/InvestorEcosystem'
 import { Link } from 'react-router'
-import { useState } from 'react'
-import { ContactModal } from '@/app/components/ContactModal'
 
 const SEO = {
   en: {
-    title: 'For Investors / LPs — Avante Ventures',
+    title: 'For Investors / LPs | Avante Ventures',
     description:
-      'Strategic exposure to AI-native Brazil through a venture studio with a 10× exit on its track record. Investment structure, thesis, and what we will and will not do in a first conversation.',
+      'A venture builder building AI-native companies in Brazil. Explore the investment thesis, current ventures, and the team’s prior experience, including Amanda Pinheiro’s $500M+ under management at Innova and Unbox.',
     inLanguage: 'en',
   },
   pt: {
-    title: 'Para Investidores / LPs — Avante Ventures',
+    title: 'Para Investidores / LPs | Avante Ventures',
     description:
-      'Exposição estratégica ao Brasil AI-native através de um venture studio com exit de 10× no track record. Estrutura de investimento, tese, e o que faremos e não faremos em uma primeira conversa.',
+      'Um venture builder que constrói empresas AI-native no Brasil. Conheça a tese, as ventures atuais e a experiência anterior do time, incluindo US$500M+ sob gestão na trajetória de Amanda Pinheiro na Innova e Unbox.',
     inLanguage: 'pt-BR',
   },
   es: {
-    title: 'Para Inversores / LPs — Avante Ventures',
+    title: 'Para Inversores / LPs | Avante Ventures',
     description:
-      'Exposición estratégica al Brasil AI-native a través de un venture studio con exit de 10× en su track record. Estructura de inversión, tesis, y lo que haremos y no haremos en una primera conversación.',
+      'Un venture builder que construye empresas AI-native en Brasil. Conoce la tesis, las ventures actuales y la experiencia previa del equipo, incluidos US$500M+ bajo gestión en la trayectoria de Amanda Pinheiro en Innova y Unbox.',
     inLanguage: 'es',
   },
 } as const
@@ -43,77 +42,77 @@ const FAQ_COPY = {
   en: [
     {
       q: "What is Avante's investment thesis?",
-      a: "Avante invests in AI-native ventures in Brazil's services economy. Brazil's $2.5T GDP is 70% services with ~90% of SMBs under-digitalized, and AI infrastructure is now cheap enough that a 4-person team can ship a vertical product at 2018 SaaS operating costs. The studio model captures this arbitrage across 3–4 ventures per year.",
+      a: "Avante Ventures is a venture builder building AI-native companies in Brazil and Latin America. Services account for roughly 70% of Brazilian GDP, per IBGE. The venture builder focuses on complex workflows with limited software adoption and provides first capital across 3-4 ventures per year.",
     },
     {
-      q: "What returns does Avante target for LPs?",
-      a: "The reference benchmark is the GSSN industry data: venture studios generate ~50% annualized IRR over 10-year vintages versus ~19% for traditional VC. Avante targets the structural advantage that drives this gap: operating depth at week one, capital efficiency by design, and no losing competitive deal sourcing.",
+      q: "Which industry benchmarks inform Avante's thesis?",
+      a: "GSSN reports studio IRR of ~50% versus ~19% for traditional VC, roughly 2.5x. These are industry-model benchmarks, not Avante's realized returns or a return target. Avante's thesis emphasizes operating experience, shared capabilities and capital efficiency.",
     },
     {
       q: "What is the typical Avante investment structure for LPs?",
-      a: "LPs gain exposure across the full annual cohort of 3–4 ventures co-founded by Avante, not single-deal selection risk. Operating partners hold studio economics; LPs hold capital economics. Reporting is quarterly with cohort-level NAV transparency. Specific terms (target fund size, GP commitment, fee model, distribution waterfall) are shared in a structured LP conversation.",
+      a: "LPs gain exposure across the annual cohort of 3-4 ventures co-founded by Avante. Operating partners participate in venture builder economics. LPs participate through their capital commitments. Quarterly reporting includes cohort-level net asset value and venture milestones. Specific terms, including target fund size, GP commitment, fees and distribution waterfall, are shared in a private LP conversation.",
     },
     {
       q: "What is Avante's track record?",
-      a: "The founding team has historically deployed $500M+ in venture and growth capital. The most recent realized outcome is Sigga Technologies, a 10× exit in industrial software, with Avante operators involved through fundraising, GTM, and exit prep. Active studio cohort includes Mahway, WIR, and Bamboo DCM.",
+      a: "Amanda Pinheiro's historical experience includes $500M+ under management as CFO at Innova Capital and Unbox Capital. Sigga’s 10× exit belongs to the team’s prior investment experience at Innova. Selected current Avante ventures include AlphaJuri and WIR. Bamboo DCM was co-founded by Felipe Moraes. Mahway belongs to team members' separate US company-building experience.",
     },
     {
-      q: "What will Avante NOT do as a venture studio?",
+      q: "What will Avante NOT do as a venture builder?",
       a: "Avante will not share LP names or identities (confidential by default), will not provide financial advice or tax structuring (LPs engage their own counsel), will not run a parallel co-investment vehicle without explicit governance, and will not launch ventures whose primary buyer is the LP base. Customer markets are independent of capital markets.",
     },
   ],
   pt: [
     {
       q: "Qual é a tese de investimento da Avante?",
-      a: "A Avante investe em ventures AI-native na economia de serviços do Brasil. O PIB brasileiro de US$ 2,5 tri é 70% serviços com ~90% das PMEs sub-digitalizadas, e a infraestrutura de IA está barata o suficiente para um time de 4 pessoas lançar um produto vertical com o custo operacional de uma SaaS de 2018. O modelo de studio captura essa arbitragem em 3–4 ventures por ano.",
+      a: "A Avante Ventures é um venture builder que constrói empresas AI-native no Brasil e na América Latina. Os serviços representam cerca de 70% do PIB brasileiro, segundo o IBGE. O venture builder se concentra em fluxos de trabalho complexos com adoção limitada de software e aporta o primeiro capital em 3-4 ventures por ano.",
     },
     {
-      q: "Quais retornos a Avante busca para LPs?",
-      a: "O benchmark de referência são os dados da indústria GSSN: venture studios geram ~50% de IRR anualizado em vintages de 10 anos versus ~19% de VC tradicional. A Avante busca a vantagem estrutural que gera esse gap: profundidade operacional desde a semana um, eficiência de capital por design e ausência de sourcing competitivo perdido.",
+      q: "Quais benchmarks do setor informam a tese da Avante?",
+      a: "O GSSN reporta IRR de studios de ~50% versus ~19% para VC tradicional, cerca de 2,5x. São benchmarks do modelo, não retornos realizados da Avante nem uma meta de retorno. A tese da Avante enfatiza experiência operacional, capacidades compartilhadas e eficiência de capital.",
     },
     {
       q: "Qual é a estrutura típica de investimento da Avante para LPs?",
-      a: "LPs ganham exposição em toda a cohort anual de 3–4 ventures co-fundadas pela Avante, não risco de seleção de deal único. Operating partners ficam com a economics do studio; LPs ficam com a economics de capital. Reporting trimestral com transparência de NAV no nível de cohort. Termos específicos (target de fund size, GP commitment, modelo de fees, distribution waterfall) são compartilhados em uma conversa estruturada de LP.",
+      a: "Os LPs têm exposição à cohort anual de 3-4 ventures cofundadas pela Avante. Os sócios operacionais participam dos resultados econômicos do venture builder. Os LPs participam por meio de seus compromissos de capital. Os relatórios trimestrais incluem o valor patrimonial líquido da cohort e os marcos de cada venture. Termos específicos, incluindo tamanho-alvo do fundo, compromisso do GP, taxas e ordem de distribuição, são compartilhados em uma conversa privada com LPs.",
     },
     {
       q: "Qual é o track record da Avante?",
-      a: "O time fundador deployou historicamente mais de US$ 500M em capital de venture e growth. O resultado realizado mais recente é Sigga Technologies, um exit de 10× em software industrial, com operadores Avante envolvidos em fundraising, GTM e prep de exit. A cohort ativa do studio inclui Mahway, WIR e Bamboo DCM.",
+      a: "A experiência anterior de Amanda Pinheiro inclui US$500M+ sob gestão como CFO na Innova Capital e Unbox Capital. O exit de 10× da Sigga faz parte da experiência anterior do time em investimentos na Innova. Entre as ventures atuais da Avante estão AlphaJuri e WIR. A Bamboo DCM foi cofundada por Felipe Moraes. A Mahway faz parte da experiência dos membros do time na construção de empresas nos EUA, em uma operação separada.",
     },
     {
-      q: "O que a Avante NÃO faz como venture studio?",
-      a: "A Avante não compartilha nomes de LPs ou identidades (confidencial por padrão), não dá conselho financeiro ou estruturação tributária (LPs contratam seus próprios advisors), não roda veículo paralelo de co-investment sem governança explícita, e não lança ventures cujo comprador principal é a base de LPs. Mercados de cliente são independentes do mercado de capital.",
+      q: "O que a Avante NÃO faz como venture builder?",
+      a: "A Avante não compartilha nomes nem identidades de LPs. Não presta aconselhamento financeiro ou estruturação tributária. Os LPs contratam seus próprios assessores. Não opera um veículo paralelo de coinvestimento sem governança explícita e não lança ventures cujo principal comprador seja a base de LPs. Os mercados de clientes são independentes dos mercados de capital.",
     },
   ],
   es: [
     {
       q: "¿Cuál es la tesis de inversión de Avante?",
-      a: "Avante invierte en ventures AI-native en la economía de servicios de Brasil. El PIB brasileño de US$ 2,5 billones es 70% servicios con ~90% de las PYMEs subdigitalizadas, y la infraestructura de IA está barata lo suficiente para que un equipo de 4 personas lance un producto vertical con el costo operativo de una SaaS de 2018. El modelo de studio captura este arbitraje en 3–4 ventures por año.",
+      a: "Avante Ventures es un venture builder que construye empresas AI-native en Brasil y América Latina. Los servicios representan cerca del 70% del PIB brasileño, según el IBGE. El venture builder se concentra en procesos complejos con adopción limitada de software y aporta el primer capital a 3-4 ventures al año.",
     },
     {
-      q: "¿Qué retornos busca Avante para los LPs?",
-      a: "El benchmark de referencia son los datos de la industria GSSN: los venture studios generan ~50% de IRR anualizado en vintages de 10 años versus ~19% del VC tradicional. Avante busca la ventaja estructural que genera ese gap: profundidad operativa desde la semana uno, eficiencia de capital por diseño y ausencia de sourcing competitivo perdido.",
+      q: "¿Qué benchmarks del sector informan la tesis de Avante?",
+      a: "GSSN reporta un IRR de studios de ~50% frente a ~19% del VC tradicional, aproximadamente 2,5x. Son benchmarks del modelo, no retornos realizados de Avante ni una meta de retorno. La tesis de Avante enfatiza la experiencia operativa, las capacidades compartidas y la eficiencia de capital.",
     },
     {
       q: "¿Cuál es la estructura típica de inversión de Avante para LPs?",
-      a: "Los LPs obtienen exposición en toda la cohort anual de 3–4 ventures co-fundadas por Avante, no riesgo de selección de deal único. Los operating partners tienen la economics del studio; los LPs tienen la economics de capital. Reporting trimestral con transparencia de NAV a nivel de cohort. Términos específicos (target de fund size, GP commitment, modelo de fees, distribution waterfall) se comparten en una conversación estructurada de LP.",
+      a: "Los LPs obtienen exposición a la cohorte anual de 3-4 ventures cofundadas por Avante. Los socios operativos participan en los resultados económicos del venture builder. Los LPs participan mediante sus compromisos de capital. Los informes trimestrales incluyen el valor patrimonial neto de la cohorte y los hitos de cada venture. Los términos específicos, incluidos el tamaño objetivo del fondo, el compromiso del GP, las comisiones y el orden de distribución, se comparten en una conversación privada con LPs.",
     },
     {
       q: "¿Cuál es el track record de Avante?",
-      a: "El equipo fundador ha desplegado históricamente más de US$ 500M en capital de venture y growth. El resultado realizado más reciente es Sigga Technologies, un exit de 10× en software industrial, con operadores de Avante involucrados en fundraising, GTM y preparación de exit. La cohort activa del studio incluye Mahway, WIR y Bamboo DCM.",
+      a: "La experiencia previa de Amanda Pinheiro incluye US$500M+ bajo gestión como CFO en Innova Capital y Unbox Capital. El exit de 10× de Sigga corresponde a la experiencia previa del equipo en inversiones en Innova. Entre las ventures actuales de Avante están AlphaJuri y WIR. Bamboo DCM fue cofundada por Felipe Moraes. Mahway forma parte de la experiencia de los miembros del equipo en la creación de empresas en Estados Unidos, en una operación separada.",
     },
     {
-      q: "¿Qué NO hace Avante como venture studio?",
-      a: "Avante no comparte nombres de LPs ni identidades (confidencial por defecto), no da consejo financiero ni estructuración tributaria (los LPs contratan sus propios advisors), no opera un vehículo paralelo de co-investment sin gobernanza explícita, y no lanza ventures cuyo comprador principal sea la base de LPs. Los mercados de cliente son independientes del mercado de capital.",
+      q: "¿Qué NO hace Avante como venture builder?",
+      a: "Avante no comparte nombres ni identidades de LPs. No ofrece asesoramiento financiero ni estructuración fiscal. Los LPs contratan a sus propios asesores. No opera un vehículo paralelo de coinversión sin una gobernanza explícita ni lanza ventures cuyo comprador principal sea la base de LPs. Los mercados de clientes son independientes de los mercados de capital.",
     },
   ],
 } as const
 
 export default function InvestorsPage() {
   const { language } = useLanguage()
-  const t = (en: string, pt: string) => (language === 'pt' ? pt : en)
+  const t = (en: string, pt: string, es: string) => (language === 'pt' ? pt : language === 'es' ? es : en)
   const copy = SEO[language] ?? SEO.en
   const faqEntries = FAQ_COPY[language] ?? FAQ_COPY.en
-  const [isContactOpen, setIsContactOpen] = useState(false)
+  const contactHref = `mailto:cristian@avanteventures.com?subject=${encodeURIComponent(t('Avante investor conversation', 'Conversa com investidores Avante', 'Conversación para inversores de Avante'))}`
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -144,25 +143,25 @@ export default function InvestorsPage() {
   const stats = [
     {
       value: '~50%',
-      label: t('Studio IRR (GSSN, 10-yr)', 'IRR de studios (GSSN, 10 anos)'),
+      label: t("Studio-model IRR (GSSN)", "IRR do modelo de studio (GSSN)", "IRR del modelo de studio (GSSN)"),
       color: '#F9B437',
       fn: '6',
     },
     {
       value: '~19%',
-      label: t('Traditional VC IRR', 'IRR de VC tradicional'),
+      label: t("Traditional VC benchmark IRR", "IRR de referência de VC tradicional", "IRR de referencia del VC tradicional"),
       color: 'rgba(255, 255, 255, 0.45)',
       fn: '6',
     },
     {
       value: '10×',
-      label: t('Sigga exit (Avante team)', 'Exit Sigga (time Avante)'),
+      label: t("Sigga exit · Prior Innova experience", "Exit Sigga · Experiência anterior na Innova", "Exit de Sigga · Experiencia previa en Innova"),
       color: '#98509A',
       fn: '',
     },
     {
       value: '$500M+',
-      label: t('Deployed by founding team historically', 'Deployado pelo time fundador historicamente'),
+      label: t("Historically under management · Amanda, Innova & Unbox", "Historicamente sob gestão · Amanda, Innova e Unbox", "Históricamente bajo gestión · Amanda, Innova y Unbox"),
       color: '#F4A261',
       fn: '',
     },
@@ -170,26 +169,23 @@ export default function InvestorsPage() {
 
   const thesis = [
     {
-      title: t('Brazil is the largest under-served services economy on earth.', 'O Brasil é a maior economia de serviços subatendida do mundo.'),
+      title: t("Brazil’s services economy is the starting point.", "A economia de serviços do Brasil é o ponto de partida.", "La economía de servicios de Brasil es el punto de partida."),
       body: t(
-        '$2.5T GDP, 70% services, ~90% of SMBs under-digitalized. The structural gap between volume and software penetration is unique among large markets globally.',
-        'PIB de US$ 2,5 tri, 70% serviços, ~90% das PMEs sub-digitalizadas. O gap estrutural entre volume e penetração de software é único entre grandes mercados no mundo.'
+        "Services account for roughly 70% of Brazilian GDP, per IBGE. Our thesis focuses on complex workflows where software adoption remains limited.", "Os serviços representam cerca de 70% do PIB brasileiro, segundo o IBGE. Nossa tese se concentra em fluxos de trabalho complexos com adoção limitada de software.", "Los servicios representan cerca del 70% del PIB brasileño, según el IBGE. Nuestra tesis se concentra en procesos complejos donde la adopción de software sigue siendo limitada."
       ),
       accent: '#F9B437',
     },
     {
-      title: t('AI infrastructure is now cheap enough to deploy without a Series A.', 'Infraestrutura de IA é barata o suficiente para deployar sem uma Série A.'),
+      title: t("AI infrastructure is now cheap enough to deploy without a Series A.", "A infraestrutura de IA já permite colocar produtos em operação sem uma Série A.", "La infraestructura de IA ya permite poner productos en operación sin una Serie A."),
       body: t(
-        'In 2026, a 4-person Brazilian team can ship an AI-native vertical product with the operating cost of a 2018 SaaS startup. The studio model captures that arbitrage with discipline.',
-        'Em 2026, um time brasileiro de 4 pessoas consegue lançar um produto vertical AI-native com o custo operacional de uma SaaS de 2018. O modelo de studio captura essa arbitragem com disciplina.'
+        "Shared product, engineering and operating capabilities let each founding team focus on its customers and product.", "Capacidades compartilhadas de produto, engenharia e operação permitem que cada time fundador se concentre nos clientes e no produto.", "Las capacidades compartidas de producto, ingeniería y operación permiten que cada equipo fundador se concentre en sus clientes y su producto."
       ),
       accent: '#F4A261',
     },
     {
-      title: t('The studio model historically outperforms VC by ~2.5×.', 'O modelo de studio historicamente supera VC por ~2.5×.'),
+      title: t("The studio-model benchmark is roughly 2.5× traditional VC IRR.", "O benchmark do modelo de studio é de cerca de 2,5× o IRR de VC tradicional.", "El benchmark del modelo de studio es de aproximadamente 2,5× el IRR del VC tradicional."),
       body: t(
-        'Operating depth at week one. Capital efficiency by design. Time spent on chosen ventures, not on losing competitive deal sourcing. Each compounds with every cohort.',
-        'Profundidade operacional desde a semana um. Eficiência de capital por design. Tempo dedicado às ventures escolhidas, não a sourcing competitivo perdido. Cada elemento compõe a cada cohort.'
+        "GSSN reports studio IRR of ~50% versus ~19% for traditional VC. These are industry-model benchmarks, not Avante’s realized returns or a return target.", "O GSSN reporta IRR de studios de ~50% versus ~19% para VC tradicional. São benchmarks do modelo, não retornos realizados da Avante nem uma meta de retorno.", "GSSN reporta un IRR de studios de ~50% frente a ~19% del VC tradicional. Son benchmarks del modelo, no retornos realizados de Avante ni una meta de retorno."
       ),
       accent: '#98509A',
     },
@@ -197,36 +193,31 @@ export default function InvestorsPage() {
 
   const structureItems = [
     t(
-      'Studio writes first-money-in across 3–4 ventures per year.',
-      'Studio escreve primeiro cheque em 3–4 ventures por ano.'
+      "The venture builder provides first capital across 3-4 ventures per year.", "O venture builder aporta o primeiro capital em 3-4 ventures por ano.", "El venture builder aporta el primer capital a 3-4 ventures al año."
     ),
     t(
-      'LPs gain exposure across the full cohort, not single-deal selection risk.',
-      'LPs ganham exposição em toda a cohort, não risco de seleção de deal único.'
+      "LPs gain exposure across the full cohort.", "Os LPs têm exposição ao conjunto de ventures da cohort.", "Los LPs obtienen exposición al conjunto de ventures de la cohorte."
     ),
     t(
-      'Operating partners hold studio economics; LPs hold capital economics. Aligned incentives, separated workload.',
-      'Operating partners ficam com a economics do studio; LPs ficam com a economics de capital. Incentivos alinhados, cargas de trabalho separadas.'
+      "Operating partners participate in venture builder economics. LPs participate through their capital commitments.", "Os sócios operacionais participam dos resultados econômicos do venture builder. Os LPs participam por meio de seus compromissos de capital.", "Los socios operativos participan en los resultados económicos del venture builder. Los LPs participan mediante sus compromisos de capital."
     ),
     t(
-      'Reporting on a quarterly cadence with cohort-level NAV transparency and per-venture milestone notes.',
-      'Reporting trimestral com transparência de NAV no nível de cohort e notas de milestones por venture.'
+      "Quarterly reporting includes cohort-level net asset value and milestone notes for each venture.", "Os relatórios trimestrais incluem o valor patrimonial líquido da cohort e os marcos de cada venture.", "Los informes trimestrales incluyen el valor patrimonial neto de la cohorte y los hitos de cada venture."
     ),
     t(
-      'Specific terms (target fund size, GP commitment, fee model, distribution waterfall) are shared in a structured LP conversation, not on a public page.',
-      'Termos específicos (target de fund size, GP commitment, modelo de fees, distribution waterfall) são compartilhados em uma conversa estruturada de LP, não em uma página pública.'
+      "Specific terms, including target fund size, GP commitment, fees and distribution waterfall, are shared in a private LP conversation.", "Termos específicos, incluindo tamanho-alvo do fundo, compromisso do GP, taxas e ordem de distribuição, são compartilhados em uma conversa privada com LPs.", "Los términos específicos, incluidos el tamaño objetivo del fondo, el compromiso del GP, las comisiones y el orden de distribución, se comparten en una conversación privada con LPs."
     ),
   ]
 
   const willNotDo = [
-    t('We will not share LP names or other LP identities. Each LP relationship is confidential by default.', 'Não compartilhamos nomes de LPs ou outras identidades de LPs. Cada relação de LP é confidencial por padrão.'),
-    t('We will not provide financial advice, allocation guidance, or tax structuring. LPs engage their own counsel.', 'Não damos conselho financeiro, orientação de alocação ou estruturação tributária. LPs contratam seus próprios advisors.'),
-    t('We will not run a parallel co-investment vehicle without explicit governance for it. The studio is the studio.', 'Não rodamos veículo paralelo de co-investment sem governança explícita. Studio é studio.'),
-    t('We will not launch ventures whose primary buyer is "the LP base." Customer markets are independent of capital markets.', 'Não lançamos ventures cujo comprador principal é "a base de LPs". Mercados de cliente são independentes do mercado de capital.'),
+    t("We will not share LP names or other LP identities. Each LP relationship is confidential by default.", "Não compartilhamos nomes nem identidades de LPs. Cada relação com um LP é confidencial por padrão.", "No compartimos nombres ni identidades de LPs. Cada relación con un LP es confidencial por defecto."),
+    t("We will not provide financial advice, allocation guidance, or tax structuring. LPs engage their own counsel.", "Não prestamos aconselhamento financeiro, orientação de alocação ou estruturação tributária. Os LPs contratam seus próprios assessores.", "No ofrecemos asesoramiento financiero, orientación de asignación de capital ni estructuración fiscal. Los LPs contratan a sus propios asesores."),
+    t("We will not run a parallel co-investment vehicle without explicit governance for it.", "Não operamos um veículo paralelo de coinvestimento sem governança explícita.", "No operamos un vehículo paralelo de coinversión sin una gobernanza explícita."),
+    t("We will not launch ventures whose primary buyer is the LP base. Customer markets are independent of capital markets.", "Não lançamos ventures cujo principal comprador seja a base de LPs. Os mercados de clientes são independentes dos mercados de capital.", "No lanzamos ventures cuyo comprador principal sea la base de LPs. Los mercados de clientes son independientes de los mercados de capital."),
   ]
 
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: 'var(--avante-background)' }}>
+    <div className="avante-interior">
       <SEOHelmet
         title={copy.title}
         description={copy.description}
@@ -236,112 +227,28 @@ export default function InvestorsPage() {
       <Navbar />
       <BackToTop />
 
-      <div
-        style={{
-          maxWidth: '1100px',
-          margin: '0 auto',
-          padding: 'var(--avt-page-pad-top) var(--avt-page-pad-x) var(--avt-page-pad-bottom)',
-        }}
-      >
-        <Link
-          to={`/${language}`}
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '8px',
-            color: 'rgba(255, 255, 255, 0.55)',
-            textDecoration: 'none',
-            fontSize: '14px',
-            marginBottom: '32px',
-          }}
-        >
-          ← {t('Back to home', 'Voltar ao início')}
-        </Link>
+      <main>
+        <InteriorHero kind="investors" eyebrow={t('For investors', 'Para investidores', 'Para inversores')}
+          title={<>{t('A local conviction.', 'Uma convicção local.', 'Una convicción local.')}<br />{t('A long horizon.', 'Um horizonte longo.', 'Un horizonte largo.')}</>}
+          description={t('AI-native Brazil. Built with operating experience. Explore the thesis, the team and the structure behind Avante.', 'Brasil AI-native. Construído com experiência operacional. Conheça a tese, o time e a estrutura da Avante.', 'Brasil AI-native. Construido con experiencia operativa. Conoce la tesis, el equipo y la estructura de Avante.')} />
+        <div className="interior-content" id="page-content">
+        <div className="investor-facts">{stats.map(s => <div key={s.label} className="investor-fact"><div className="investor-fact-value">{s.value}{s.fn && <a href={`/${language}#source-${s.fn}`} aria-label={`${t('Source', 'Fonte', 'Fuente')} ${s.fn}`}>{s.fn}</a>}</div><p>{s.label}</p></div>)}</div>
 
-        <SectionMasthead
-          eyebrow={t('For LPs', 'Para LPs')}
-          title={t(
-            'Strategic exposure to AI-native Brazil, through a studio with a 10× exit already in the ground.',
-            'Exposição estratégica ao Brasil AI-native, através de um studio com um exit de 10× já no chão.'
+        <p style={{ margin: '0 0 64px', maxWidth: '820px', fontSize: '15px', lineHeight: 1.7, color: 'rgba(255, 255, 255, 0.72)' }}>
+          {t(
+            'The $500M+ reflects capital historically under management during Amanda Pinheiro’s CFO roles at Innova Capital and Unbox Capital. Sigga’s 10× exit belongs to the team’s prior investment experience at Innova. AlphaJuri and WIR are among the companies Avante builds today.',
+            'Os US$500M+ refletem capital historicamente sob gestão durante a atuação de Amanda Pinheiro como CFO na Innova Capital e Unbox Capital. O exit de 10× da Sigga faz parte da experiência anterior do time em investimentos na Innova. AlphaJuri e WIR estão entre as empresas que a Avante constrói hoje.',
+            'Los US$500M+ reflejan capital históricamente bajo gestión durante la trayectoria de Amanda Pinheiro como CFO en Innova Capital y Unbox Capital. El exit de 10× de Sigga corresponde a la experiencia previa del equipo en inversiones en Innova. AlphaJuri y WIR están entre las empresas que Avante construye hoy.'
           )}
-          description={t(
-            'This page is the public version of how we describe ourselves to LPs. The private version goes deeper on terms, vintage, and pacing, but the thesis, the structure, and the discipline are the same in both.',
-            'Esta página é a versão pública de como nos descrevemos para LPs. A versão privada vai mais fundo em termos, vintage e pacing, mas a tese, estrutura e disciplina são as mesmas em ambas.'
-          )}
-        />
-
-        {/* Stats row */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
-            gap: '16px',
-            margin: '40px 0 64px',
-          }}
-        >
-          {stats.map((s) => (
-            <div
-              key={s.label}
-              style={{
-                padding: '24px 20px',
-                background: 'rgba(255, 255, 255, 0.025)',
-                border: '1px solid rgba(255, 255, 255, 0.08)',
-                borderRadius: '12px',
-                textAlign: 'center',
-              }}
-            >
-              <div
-                style={{
-                  fontSize: 'clamp(36px, 5vw, 48px)',
-                  fontWeight: 600,
-                  color: s.color,
-                  letterSpacing: '-0.02em',
-                  lineHeight: 1.05,
-                  marginBottom: '8px',
-                  fontVariantNumeric: 'tabular-nums',
-                }}
-              >
-                {s.value}
-                {s.fn && (
-                  <a
-                    href={`/${language}#source-${s.fn}`}
-                    style={{
-                      fontSize: '13px',
-                      fontWeight: 600,
-                      color: 'rgba(255, 255, 255, 0.4)',
-                      textDecoration: 'none',
-                      marginLeft: '2px',
-                      verticalAlign: 'super',
-                    }}
-                  >
-                    {s.fn}
-                  </a>
-                )}
-              </div>
-              <div
-                style={{
-                  fontSize: '11px',
-                  color: 'rgba(255, 255, 255, 0.6)',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.12em',
-                  fontWeight: 500,
-                  lineHeight: 1.4,
-                }}
-              >
-                {s.label}
-              </div>
-            </div>
-          ))}
-        </div>
+        </p>
 
         {/* Thesis */}
-        <section style={{ margin: '64px 0' }}>
+        <section className="investor-section">
           <SectionMasthead
             compact
-            eyebrow={t('The thesis', 'A tese')}
+            eyebrow={t("The thesis", "A tese", "La tesis")}
             title={t(
-              'Three structural conditions that compound into LP-grade returns.',
-              'Três condições estruturais que compõem em retornos de LP-grade.'
+              "The conditions behind our thesis.", "As condições por trás da nossa tese.", "Las condiciones detrás de nuestra tesis."
             )}
           />
           <div
@@ -355,6 +262,7 @@ export default function InvestorsPage() {
             {thesis.map((p, i) => (
               <EditorialCard
                 key={p.title}
+                className="investor-thesis-card"
                 eyebrow={String(i + 1).padStart(2, '0')}
                 title={p.title}
                 body={p.body}
@@ -367,17 +275,15 @@ export default function InvestorsPage() {
         </section>
 
         {/* Structure */}
-        <section style={{ margin: '64px 0' }}>
+        <section className="investor-section">
           <SectionMasthead
             compact
-            eyebrow={t('Structure', 'Estrutura')}
+            eyebrow={t("Structure", "Estrutura", "Estructura")}
             title={t(
-              'How the studio is set up, at a public level.',
-              'Como o studio é estruturado, em nível público.'
+              "How the venture builder is structured.", "Como o venture builder é estruturado.", "Cómo se estructura el venture builder."
             )}
             description={t(
-              'Specific commercial terms are shared in a private LP conversation. The architecture below is what every conversation starts from.',
-              'Termos comerciais específicos são compartilhados em conversa privada de LP. A arquitetura abaixo é onde cada conversa começa.'
+              "Specific commercial terms are shared in a private LP conversation. The architecture below is the starting point.", "Os termos comerciais específicos são compartilhados em uma conversa privada com LPs. A estrutura abaixo é o ponto de partida.", "Los términos comerciales específicos se comparten en una conversación privada con LPs. La estructura que sigue es el punto de partida."
             )}
           />
           <ul style={{ listStyle: 'none', padding: 0, margin: '24px 0 0', display: 'grid', gap: '12px' }}>
@@ -415,13 +321,12 @@ export default function InvestorsPage() {
         </section>
 
         {/* What we will not do — transparency block */}
-        <section style={{ margin: '64px 0' }}>
+        <section className="investor-section">
           <SectionMasthead
             compact
-            eyebrow={t('What we will not do', 'O que não faremos')}
+            eyebrow={t("What we will not do", "O que não faremos", "Lo que no haremos")}
             title={t(
-              'Discipline matters more than the pitch. Here is what is off the table.',
-              'Disciplina importa mais que o pitch. Eis o que está fora da mesa.'
+              "Clear boundaries from the first conversation.", "Limites claros desde a primeira conversa.", "Límites claros desde la primera conversación."
             )}
           />
           <ul style={{ listStyle: 'none', padding: 0, margin: '24px 0 0', display: 'grid', gap: '12px' }}>
@@ -451,7 +356,7 @@ export default function InvestorsPage() {
             priority, Mahway agents, On-demand AI consulting) is LP-side
             value-add and belongs on the investor-facing page, not on home. */}
         <section style={{ margin: '64px 0' }}>
-          <InvestorEcosystem onOpenContact={() => setIsContactOpen(true)} />
+          <InvestorEcosystem />
         </section>
 
         {/* CTA */}
@@ -459,10 +364,7 @@ export default function InvestorsPage() {
           style={{
             margin: '80px 0 0',
             padding: 'clamp(48px, 8vw, 72px)',
-            background:
-              'linear-gradient(135deg, rgba(98, 80, 154, 0.08) 0%, rgba(66, 70, 140, 0.06) 100%)',
-            border: '1px solid rgba(152, 80, 154, 0.18)',
-            borderRadius: '20px',
+            borderTop: '1px solid rgba(255, 255, 255, 0.18)',
             textAlign: 'center',
           }}
         >
@@ -476,7 +378,7 @@ export default function InvestorsPage() {
               lineHeight: 1.2,
             }}
           >
-            {t('Get in touch.', 'Fale com a gente.')}
+            {t("Let’s discuss the venture builder.", "Vamos conversar sobre o venture builder.", "Conversemos sobre el venture builder.")}
           </h2>
           <p
             style={{
@@ -488,40 +390,37 @@ export default function InvestorsPage() {
             }}
           >
             {t(
-              "A first conversation is 45 minutes: thesis walkthrough, the team's prior track record in detail, how the studio is structured, your questions. Every conversation is structured and documented.",
-              'Uma primeira conversa tem 45 minutos: walkthrough da tese, track record anterior do time em detalhe, como o studio é estruturado, suas perguntas. Cada conversa é estruturada e documentada.'
+              "Email Cristian to arrange a 45-minute investor conversation. We will cover the thesis, the team’s prior experience, the venture builder structure and your questions.", "Envie um email ao Cristian para agendar uma conversa de 45 minutos para investidores. Vamos abordar a tese, a experiência anterior do time, a estrutura do venture builder e suas perguntas.", "Escribe a Cristian para coordinar una conversación de 45 minutos para inversores. Hablaremos de la tesis, la experiencia previa del equipo, la estructura del venture builder y tus preguntas."
             )}
           </p>
-          <Link
-            to={`/${language}#contact`}
+          <a
+            href={contactHref}
             style={{
               display: 'inline-block',
               padding: '14px 28px',
-              background: 'transparent',
-              color: '#FFFFFF',
-              border: '1.5px solid rgba(255, 255, 255, 0.25)',
-              borderRadius: '999px',
+              background: '#F4F1EB',
+              color: '#171C36',
+              border: '1px solid #F4F1EB',
+              borderRadius: '2px',
+              minHeight: '44px',
               textDecoration: 'none',
               fontSize: '15px',
               fontWeight: 600,
-              transition: 'all 0.25s ease',
+              transition: 'background-color 0.2s ease',
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.55)'
-              e.currentTarget.style.background = 'rgba(255, 255, 255, 0.05)'
+              e.currentTarget.style.background = '#FFFFFF'
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.25)'
-              e.currentTarget.style.background = 'transparent'
+              e.currentTarget.style.background = '#F4F1EB'
             }}
           >
-            {t('Get in touch', 'Entre em contato')}
-          </Link>
+            {t("Request an investor conversation", "Solicite uma conversa para investidores", "Solicita una conversación para inversores")}
+          </a>
         </section>
       </div>
 
-      <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
-
+      </main>
       <Footer />
     </div>
   )

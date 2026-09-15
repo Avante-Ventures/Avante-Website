@@ -5,6 +5,8 @@ import { BackToTop } from '@/app/components/BackToTop'
 import { Footer } from '@/app/components/Footer'
 import { SEOHelmet } from '@/app/components/SEOHelmet'
 import { AvanteLockup } from '@/app/components/AvanteLockup'
+import { EditorialCover } from '@/app/components/interiors/EditorialCover'
+import '@/app/components/interiors/interiors.css'
 import { RelatedInSeries } from '@/app/components/RelatedInSeries'
 import { articleBySlug, type ArticleSection } from '@/app/data/articles'
 
@@ -153,14 +155,7 @@ export default function ArticlePage() {
   }
 
   return (
-    <div
-      style={{
-        minHeight: '100vh',
-        backgroundColor: 'var(--avt-ink)',
-        position: 'relative',
-        overflow: 'hidden',
-      }}
-    >
+    <div className="avante-interior">
       <SEOHelmet
         title={content.title}
         description={content.description}
@@ -173,135 +168,15 @@ export default function ArticlePage() {
       <Navbar />
       <BackToTop />
 
-      {/* Background haze */}
-      <div style={{ position: 'fixed', inset: 0, pointerEvents: 'none', zIndex: 0 }}>
-        <div
-          style={{
-            position: 'absolute',
-            top: '0',
-            left: '0',
-            right: '0',
-            height: '60%',
-            background:
-              'radial-gradient(ellipse at 30% 20%, rgba(152, 80, 154, 0.025) 0%, transparent 60%)',
-            opacity: 0.8,
-          }}
-        />
-      </div>
-
-      <article
-        style={{
-          maxWidth: '760px',
-          margin: '0 auto',
-          padding: '0 var(--avante-space-6)',
-          paddingTop: 'var(--avante-space-20)',
-          paddingBottom: 'var(--avante-space-16)',
-          position: 'relative',
-          zIndex: 1,
-        }}
-      >
-        {/* Back link */}
-        <Link
-          to={`/${language}/library`}
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '8px',
-            color: 'rgba(255, 255, 255, 0.6)',
-            textDecoration: 'none',
-            fontSize: '14px',
-            marginBottom: '32px',
-            transition: 'color 0.2s ease',
-          }}
-          onMouseEnter={(e) => (e.currentTarget.style.color = '#F4A261')}
-          onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255, 255, 255, 0.6)')}
-        >
-          <span>←</span> {t('Back to Library', 'Voltar para Biblioteca', 'Volver a la Biblioteca')}
-        </Link>
-
-        {/* Tier 2 / use 07 — Editorial article anchor. Replaces the absent
-            featured image with the gradient "A" mark. Acts as a visual
-            "Avante essay" stamp at the top of every article body. */}
-        <div style={{ marginBottom: '32px' }}>
-          <AvanteLockup size="md" markOnly variant="default" ariaLabel="Avante editorial" />
-        </div>
-
-        {/* Meta strip */}
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '12px',
-            marginBottom: '24px',
-            fontSize: '12px',
-            color: 'rgba(255, 255, 255, 0.55)',
-            textTransform: 'uppercase',
-            letterSpacing: '0.08em',
-          }}
-        >
-          <span style={{ color: '#F9B437', fontWeight: 600 }}>{article.type}</span>
-          <span>·</span>
-          <span>{article.readTime}</span>
-          <span>·</span>
-          <span>{article.date}</span>
-          {!article.isPublished && (
-            <>
-              <span>·</span>
-              <span style={{ color: 'rgba(249, 180, 55, 0.85)', fontWeight: 600 }}>
-                {t('Draft', 'Rascunho', 'Borrador')}
-              </span>
-            </>
-          )}
-        </div>
-
-        {/* ES translation in-progress notice — shown only when an ES viewer
-            lands on a slug that does not yet have a Spanish version. We
-            serve the EN body so the page is still useful, and signal
-            clearly that the ES translation is on the way. */}
-        {isEsFallingBackToEn && (
-          <div
-            style={{
-              margin: '0 0 32px 0',
-              padding: '12px 16px',
-              borderRadius: '8px',
-              background: 'rgba(249, 180, 55, 0.08)',
-              border: '1px solid rgba(249, 180, 55, 0.25)',
-              fontSize: '13px',
-              color: 'rgba(255, 255, 255, 0.78)',
-              lineHeight: 1.55,
-            }}
-          >
-            <strong style={{ color: '#F9B437' }}>Traducción al español en proceso.</strong>{' '}
-            Por ahora se muestra el contenido original en inglés.
-          </div>
-        )}
-
-        {/* Title */}
-        <h1
-          style={{
-            fontSize: 'clamp(32px, 5vw, 52px)',
-            fontWeight: 600,
-            color: '#FFFFFF',
-            lineHeight: 1.15,
-            letterSpacing: '-0.02em',
-            margin: '0 0 24px 0',
-          }}
-        >
-          {content.title}
-        </h1>
-
-        {/* Description as lede */}
-        <p
-          style={{
-            fontSize: '20px',
-            color: 'rgba(255, 255, 255, 0.75)',
-            lineHeight: 1.55,
-            margin: '0 0 56px 0',
-          }}
-        >
-          {content.description}
-        </p>
-
+      <main>
+      <article className="interior-article">
+        <header className="essay-header"><div>
+          <Link className="interior-breadcrumb" to={`/${language}/library`}>← {t('Back to Library', 'Voltar para Biblioteca', 'Volver a la Biblioteca')}</Link>
+          <div className="library-meta"><span>{article.type}</span><span>{article.readTime}</span><time dateTime={article.datePublished}>{article.date}</time>{!article.isPublished && <span>{t('Draft', 'Rascunho', 'Borrador')}</span>}</div>
+          <h1>{content.title}</h1><p>{content.description}</p>
+        </div><EditorialCover category={article.category} priority /></header>
+        <div className="essay-body">
+        {isEsFallingBackToEn && <div className="essay-language-note"><strong>Traducción al español en proceso.</strong> Por ahora se muestra el contenido original en inglés.</div>}
         {/* Body */}
         {content.sections.map((section, i) => (
           <Section key={i} section={section} locale={language} />
@@ -348,9 +223,9 @@ export default function ArticlePage() {
             </div>
             <div style={{ marginTop: '4px' }}>
               {t(
-                'São Paulo + Silicon Valley · written from inside the studio',
-                'São Paulo + Vale do Silício · escrito de dentro do studio',
-                'São Paulo + Silicon Valley · escrito desde dentro del studio'
+                'São Paulo + Silicon Valley · written from inside the venture builder',
+                'São Paulo + Vale do Silício · escrito de dentro do venture builder',
+                'São Paulo + Silicon Valley · escrito desde dentro del venture builder'
               )}
             </div>
           </div>
@@ -467,7 +342,9 @@ export default function ArticlePage() {
             </Link>
           </p>
         </div>
+        </div>
       </article>
+      </main>
 
       <Footer />
     </div>
@@ -1059,9 +936,9 @@ function articleTaxonomy(slug: string): {
       }
     case 'inside-the-avante-operating-stack':
       return {
-        keywords: ['venture studio infrastructure', 'operating stack', 'shared studio infrastructure', 'cap table architecture', 'studio talent funnel', 'GTM templates', 'venture studio playbook', 'Avante studio'],
+        keywords: ['venture builder infrastructure', 'operating stack', 'shared venture builder infrastructure', 'cap table architecture', 'venture builder talent funnel', 'GTM templates', 'venture builder playbook', 'Avante venture builder'],
         about: [
-          { '@type': 'Thing', name: 'Venture studio operating model' },
+          { '@type': 'Thing', name: 'Venture builder operating model' },
           { '@type': 'Thing', name: 'Shared startup infrastructure' },
         ],
         mentions: [
@@ -1075,7 +952,7 @@ function articleTaxonomy(slug: string): {
     // the noindex hint.
     case 'building-ai-native-companies-avante-playbook':
       return {
-        keywords: ['AI-native company', 'venture studio playbook', 'startup studio system', 'Brazilian venture building'],
+        keywords: ['AI-native company', 'venture builder playbook', 'venture building system', 'Brazilian venture building'],
         about: [{ '@type': 'Thing', name: 'AI-native venture building' }],
         mentions: [COMMON_AVANTE],
       }

@@ -95,6 +95,7 @@ export function SectionMasthead({
   return (
     <div
       ref={ref}
+      className="avante-editorial-masthead"
       style={{
         textAlign: centered ? 'center' : 'left',
         marginBottom: compact ? 'var(--avante-space-6)' : 'var(--avante-space-10)',

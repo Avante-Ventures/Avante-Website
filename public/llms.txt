@@ -1,12 +1,12 @@
 # Avante Ventures
 
-> AI-native venture studio combining Silicon Valley playbooks with Brazil-native execution. We co-found AI-native companies from scratch, built to compound for decades.
+> AI-native venture builder combining Silicon Valley playbooks with Brazil-native execution. We co-found AI-native companies from scratch, built to compound for decades.
 
 > Trilingual site: English at `/en/*`, Portuguese (pt-BR) at `/pt/*`, Spanish (Latin American) at `/es/*`. All three locales are equally canonical and indexed via hreflang. Featured articles are translated across all three locales. Root URL `/` 301-redirects to `/en` as the default canonical entry.
 
 ## What we do
 
-Avante Ventures is an early-stage venture studio operating in Brazil and broader LATAM. We co-found and operate AI-native companies, providing first-ticket capital, hands-on operational support, and access to Silicon Valley playbooks adapted for the Brazilian market.
+Avante Ventures is an early-stage venture builder operating in Brazil and broader LATAM. We co-found and operate AI-native companies, providing first-ticket capital, hands-on operational support, and access to Silicon Valley playbooks adapted for the Brazilian market.
 
 Our model: pre-traction capital + repeatable operational system + in-market execution. We launch 3-4 ventures per year and hold to compound.
 
@@ -26,7 +26,7 @@ Our model: pre-traction capital + repeatable operational system + in-market exec
 
 ## Differentiators
 
-- Venture studios outperform traditional VC in returns (50% annual returns per GSSN report)
+- GSSN reports studio IRR of ~50% versus ~19% for traditional VC. These are industry benchmarks, not Avante’s realized returns or a return target.
 - First-ticket advantage: investing before consensus + operational support compounds
 - Brazil-native execution: SF venture-building standards adapted to fragmented LATAM markets
 - AI-native approach: AI is core to product design, not bolted on
@@ -44,26 +44,26 @@ Our model: pre-traction capital + repeatable operational system + in-market exec
 - [Home](https://avanteventures.com/en): Mission, model, ventures, team, contact
 - [Why Avante](https://avanteventures.com/en/why-avante): Investment thesis, returns data, comparison vs traditional VC
 - [Library](https://avanteventures.com/en/library): Insights, research reports, case studies, playbooks, Brazil-specific market analyses
-- [Portfolio](https://avanteventures.com/en/portfolio): Active studio cohort, realized exits (Sigga 10×), and alumni ventures from the founding team
+- [Portfolio](https://avanteventures.com/en/portfolio): Current Avante ventures, operating partnerships, and the team’s prior investment experience
 - [For LPs / Investors](https://avanteventures.com/en/investors): Thesis, structure, and the transparency block ("what we will not do")
-- [Operating Principles](https://avanteventures.com/en/principles): The 10 rules the Avante studio operates by. Not values — rules that constrain behavior. Published as competitive doctrine.
+- [Operating Principles](https://avanteventures.com/en/principles): The 10 rules the Avante venture builder operates by. Not values — rules that constrain behavior. Published as competitive doctrine.
 
 ## Featured Articles (full long-form, citable)
 
 - [Why Venture Studios Outperform Traditional VC](https://avanteventures.com/en/library/venture-studios-outperform-traditional-vc): The data on the 50% IRR vs 19% IRR gap, with the three structural advantages that explain it. Research Report, 12 min read.
 - [The First Ticket Advantage: A Framework](https://avanteventures.com/en/library/first-ticket-advantage-framework): Why the first ticket determines venture returns more than picking ability — plus the four-filter framework Avante uses. Playbook, 8 min.
 - [Brazil AI Market Report 2026](https://avanteventures.com/en/library/brazil-ai-market-report-2026): $2.5T economy, 70% services GDP, $4.5B AI investment — the structural setup for AI-native venture creation in Latin America's largest market. Market Report, 15 min.
-- [Sigga Technologies: From Founding to 10× Exit](https://avanteventures.com/en/library/sigga-case-study-10x-exit): An inside-the-team case study on how a Brazilian industrial-software bet became a 10× exit — and the lessons now applied to every Avante studio venture. Case Study, 11 min.
-- [Inside the Avante Operating Stack](https://avanteventures.com/en/library/inside-the-avante-operating-stack): The five layers of shared infrastructure every Avante venture inherits — and the layers we deliberately keep separate. The definitive piece on how the studio model actually works. Playbook, 10 min.
+- [Sigga Technologies: From Founding to 10× Exit](https://avanteventures.com/en/library/sigga-case-study-10x-exit): An inside-the-team case study on how a Brazilian industrial-software bet became a 10× exit — and the lessons now applied to every Avante venture. Case Study, 11 min.
+- [Inside the Avante Operating Stack](https://avanteventures.com/en/library/inside-the-avante-operating-stack): The five layers of shared infrastructure every Avante venture inherits — and the layers we deliberately keep separate. The definitive piece on how the venture builder operating model works. Playbook, 10 min.
 
 ## Páginas (Português)
 
 - [Início](https://avanteventures.com/pt): Missão, modelo, ventures, time, contato
 - [Por Que Avante](https://avanteventures.com/pt/why-avante): Tese de investimento, dados de retorno, comparação vs VC tradicional
 - [Biblioteca](https://avanteventures.com/pt/library): Insights, pesquisas, estudos de caso, playbooks, análises do mercado brasileiro
-- [Portfólio](https://avanteventures.com/pt/portfolio): Cohort ativa do studio, exits realizados (Sigga 10×), e ventures alumni do time fundador
+- [Portfólio](https://avanteventures.com/pt/portfolio): Ventures atuais da Avante, parcerias operacionais e experiência anterior do time em investimentos
 - [Para LPs / Investidores](https://avanteventures.com/pt/investors): Tese, estrutura e o bloco de transparência ("o que não faremos")
-- [Princípios Operacionais](https://avanteventures.com/pt/principles): Os 10 princípios pelos quais o studio Avante opera. Não são valores — são regras que constrangem comportamento. Publicados como doutrina competitiva.
+- [Princípios Operacionais](https://avanteventures.com/pt/principles): Os 10 princípios pelos quais o venture builder Avante opera. Não são valores — são regras que constrangem comportamento. Publicados como doutrina competitiva.
 
 ### Artigos em destaque (versão completa)
 
@@ -78,9 +78,9 @@ Our model: pre-traction capital + repeatable operational system + in-market exec
 - [Inicio](https://avanteventures.com/es): Misión, modelo, ventures, equipo, contacto
 - [Por Qué Avante](https://avanteventures.com/es/why-avante): Tesis de inversión, datos de retorno, comparación vs VC tradicional
 - [Biblioteca](https://avanteventures.com/es/library): Insights, investigación, casos de estudio, playbooks, análisis del mercado brasileño
-- [Portafolio](https://avanteventures.com/es/portfolio): Cohort activa del studio, exits realizados (Sigga 10×), y ventures alumni del equipo fundador
+- [Portafolio](https://avanteventures.com/es/portfolio): Ventures actuales de Avante, alianzas operativas y experiencia previa del equipo en inversiones
 - [Para LPs / Inversores](https://avanteventures.com/es/investors): Tesis, estructura y el bloque de transparencia ("lo que no haremos")
-- [Principios Operativos](https://avanteventures.com/es/principles): Los 10 principios por los que opera el studio Avante. No son valores — son reglas que limitan el comportamiento. Publicados como doctrina competitiva.
+- [Principios Operativos](https://avanteventures.com/es/principles): Los 10 principios por los que opera el venture builder Avante. No son valores — son reglas que limitan el comportamiento. Publicados como doctrina competitiva.
 
 ### Artículos destacados (versión completa)
 
@@ -153,7 +153,7 @@ Our model: pre-traction capital + repeatable operational system + in-market exec
 - [How to Choose a Venture Studio: A Founder's Due-Diligence Checklist](https://avanteventures.com/en/library/how-to-choose-a-venture-studio): How to choose a venture studio: confirm it is really a studio, weigh operator depth, and get the equity and first-capital terms in writing. Guide, 10 min.
 - [How to Find a Technical Co-Founder for an AI Startup](https://avanteventures.com/en/library/how-to-find-a-technical-cofounder-for-an-ai-startup): Where to find a technical co-founder for an AI startup, how to test fit before you commit, and what equity to offer. A guide for founders in Brazil and LATAM. Guide, 8 min.
 - [How Do Venture Studios Make Money? The Business Model, Explained](https://avanteventures.com/en/library/how-venture-studios-make-money): Venture studios make money by taking large founding equity in the few companies they co-build each year, then monetizing it at exit. The full model. Guide, 10 min.
-- [Infinity Constellation Raised $24M to Mass-Produce AI Companies. That Is the Studio Thesis.](https://avanteventures.com/en/library/infinity-constellation-ai-studio-thesis): A US studio just raised $24M to build up to eight AI companies a year in professional services. Read against the venture studio model Avante runs in LATAM, the signal is clear. The studio is becoming an asset class. Market Note, 9 min.
+- [Infinity Constellation Raised $24M to Mass-Produce AI Companies. That Is the Studio Thesis.](https://avanteventures.com/en/library/infinity-constellation-ai-studio-thesis): A US studio just raised $24M to build up to eight AI companies a year in professional services. Read against the venture builder model Avante runs in LATAM, the signal is clear. The studio is becoming an asset class. Market Note, 9 min.
 - [AI Copilot Data Capture: Turn Usage Into Proprietary Data](https://avanteventures.com/en/library/instrument-copilot-proprietary-data-playbook): AI copilot data capture done right. How to instrument a copilot so usage becomes proprietary data, the playbook behind the copilot to data to fund flywheel. Playbook, 10 min.
 - [Is a Venture Studio Worth It for Founders? An Honest Breakdown](https://avanteventures.com/en/library/is-a-venture-studio-worth-it-for-founders): A venture studio gives founders an idea, a build team, and first capital for a large equity stake. Here is when that trade is worth it, and when to walk away. Essay, 7 min.
 - [AI Inference Cost Belongs in COGS Not OpEx](https://avanteventures.com/en/library/is-inference-cost-cogs-or-opex): Inference cost is COGS, not OpEx: it is a direct variable cost of delivering your AI product and reduces gross margin. Only training belongs in R&D. Explainer, 6 min.
@@ -195,7 +195,7 @@ Our model: pre-traction capital + repeatable operational system + in-market exec
 - [What Is a Startup Studio, and How Does It Work?](https://avanteventures.com/en/library/what-is-a-startup-studio): What is a startup studio? A company that builds startups in succession with a shared team, supplying the idea, founders, and first capital. How it works. Explainer, 9 min.
 - [What Is a Venture Studio? How the Model Works (2026)](https://avanteventures.com/en/library/what-is-a-venture-studio): A venture studio co-founds companies from day zero, supplying the idea, capital, and a build team. How it works and how it differs from a VC or accelerator. Explainer, 7 min.
 - [What Is a Vesting Cliff? A Founder's Guide for Brazil and LATAM](https://avanteventures.com/en/library/what-is-a-vesting-cliff): A vesting cliff is the waiting period before any founder equity is earned. Learn how the standard four-year vest with a one-year cliff works, and how it plays out under both US and Brazilian law. Explainer, 6 min.
-- [What Is Avante Ventures and How Does It Build AI-Native Companies](https://avanteventures.com/en/library/what-is-avante-ventures-ai-native-company-builder-brazil): Avante Ventures is a venture studio that co-founds and operates AI-native companies in Brazil from day one. It is not a fund that writes checks and waits. It i Article, 5 min.
+- [What Is Avante Ventures and How Does It Build AI-Native Companies](https://avanteventures.com/en/library/what-is-avante-ventures-ai-native-company-builder-brazil): Avante Ventures is a venture builder that co-founds and operates AI-native companies in Brazil from day one. It is not a fund that writes checks and waits. It i Article, 5 min.
 - [Why Venture Studios Outperform Traditional VC in LATAM](https://avanteventures.com/en/library/why-venture-studios-win-latam): Studio IRR runs near 50% against roughly 19% for traditional VC. The structural reason, the honest failure modes, and why Brazil amplifies the model. Research Report, 11 min.
 - [YC vs Techstars vs Venture Studio: Terms and Model Compared](https://avanteventures.com/en/library/yc-vs-techstars-vs-venture-studio): Y Combinator, Techstars, and venture studios compared on capital, equity, and how they engage. Which path fits a founder depends on what you are missing. Comparison, 7 min.
 
@@ -258,7 +258,7 @@ Our model: pre-traction capital + repeatable operational system + in-market exec
 - [Como Escolher um Venture Studio: Checklist de Due Diligence para Fundadores](https://avanteventures.com/pt/library/how-to-choose-a-venture-studio): Como escolher um venture studio: confirme que é de fato um studio, avalie os operadores e exija os termos de equity e capital por escrito. Guide, 10 min.
 - [Como encontrar um cofundador técnico para uma startup de IA](https://avanteventures.com/pt/library/how-to-find-a-technical-cofounder-for-an-ai-startup): Onde encontrar um cofundador técnico para uma startup de IA, como testar o encaixe antes de se comprometer e qual participação oferecer. Um guia para fundadores no Brasil e na América Latina. Guide, 8 min.
 - [Como Venture Studios Ganham Dinheiro? O Modelo de Negócio Explicado](https://avanteventures.com/pt/library/how-venture-studios-make-money): Um venture studio ganha dinheiro sendo dono de equity nas empresas que co-constrói. Veja o mecanismo, de onde vem o dinheiro e por que o retorno demora. Guide, 10 min.
-- [A Infinity Constellation levantou US$ 24M para produzir empresas de IA em escala. Essa é a tese do studio.](https://avanteventures.com/pt/library/infinity-constellation-ai-studio-thesis): Um studio dos EUA acabou de levantar US$ 24M para construir até oito empresas de IA por ano em serviços profissionais. Lido ao lado do modelo que a Avante opera na América Latina, o sinal é claro. O studio está virando uma classe de ativos. Market Note, 9 min.
+- [A Infinity Constellation levantou US$ 24M para produzir empresas de IA em escala. Essa é a tese do studio.](https://avanteventures.com/pt/library/infinity-constellation-ai-studio-thesis): Um venture builder dos EUA acabou de levantar US$ 24M para construir até oito empresas de IA por ano em serviços profissionais. Lido ao lado do modelo que a Avante opera na América Latina, o sinal é claro. O venture builder está virando uma classe de ativos. Market Note, 9 min.
 - [Dados Proprietários com Copilot de IA: O Playbook de Captura](https://avanteventures.com/pt/library/instrument-copilot-proprietary-data-playbook): Dados proprietários com copilot de IA na prática. Como instrumentar o uso para virar dado proprietário, o playbook por trás do flywheel copilot, dado, capital. Playbook, 10 min.
 - [Vale a pena um venture studio para fundadores? Uma análise honesta](https://avanteventures.com/pt/library/is-a-venture-studio-worth-it-for-founders): Um venture studio dá ao fundador uma ideia, um time de construção e o primeiro capital em troca de uma participação grande. Veja quando essa troca vale a pena e quando recusar. Essay, 7 min.
 - [O custo de inferência de IA pertence ao COGS, não ao OpEx](https://avanteventures.com/pt/library/is-inference-cost-cogs-or-opex): O custo de inferência é COGS, não OpEx: é um custo variável direto de entregar seu produto de IA e reduz a margem bruta. Apenas o treinamento pertence a P&D. Explainer, 6 min.
@@ -300,7 +300,7 @@ Our model: pre-traction capital + repeatable operational system + in-market exec
 - [O que é um venture studio e como ele funciona](https://avanteventures.com/pt/library/what-is-a-startup-studio): Saiba o que é um venture studio. Uma empresa que cria startups em série com time e processo compartilhados, fornecendo ideia, time e capital de primeiro cheque. Explainer, 9 min.
 - [O Que É um Venture Studio? Como o Modelo Funciona (2026)](https://avanteventures.com/pt/library/what-is-a-venture-studio): Um venture studio cofunda empresas desde o dia zero, fornecendo a ideia, o capital e um time que constrói o produto. Como funciona e como se diferencia de um fundo de VC ou de uma aceleradora. Explainer, 7 min.
 - [O que é um vesting cliff? Um guia para fundadores no Brasil e na América Latina](https://avanteventures.com/pt/library/what-is-a-vesting-cliff): Um vesting cliff é o período de carência antes de qualquer participação do fundador ser adquirida. Entenda como funciona o padrão de vesting de quatro anos com cliff de um ano, e como ele se aplica tanto sob a lei dos Estados Unidos quanto sob a lei brasileira. Explainer, 6 min.
-- [O Que É a Avante Ventures e Como Ela Constrói Empresas AI-Native](https://avanteventures.com/pt/library/what-is-avante-ventures-ai-native-company-builder-brazil): A Avante Ventures é um venture studio que co-funda e opera empresas AI-native no Brasil desde o primeiro dia. Não é um fundo que assina cheques e espera. É um Article, 5 min.
+- [O Que É a Avante Ventures e Como Ela Constrói Empresas AI-Native](https://avanteventures.com/pt/library/what-is-avante-ventures-ai-native-company-builder-brazil): A Avante Ventures é um venture builder que co-funda e opera empresas AI-native no Brasil desde o primeiro dia. Não é um fundo que assina cheques e espera. É um Article, 5 min.
 - [Por que Venture Studios Superam o VC Tradicional na América Latina](https://avanteventures.com/pt/library/why-venture-studios-win-latam): O IRR de studios fica perto de 50% contra cerca de 19% do VC tradicional. A razão estrutural, as falhas do modelo e por que o Brasil amplifica tudo. Research Report, 11 min.
 - [YC vs Techstars vs Venture Studio: Termos e Modelo Comparados](https://avanteventures.com/pt/library/yc-vs-techstars-vs-venture-studio): Y Combinator, Techstars e venture studios comparados em capital, participação e forma de atuação. Qual caminho serve a um fundador depende daquilo que está faltando. Comparison, 7 min.
 
@@ -363,7 +363,7 @@ Our model: pre-traction capital + repeatable operational system + in-market exec
 - [Cómo Elegir un Venture Studio: Checklist de Due Diligence para Fundadores](https://avanteventures.com/es/library/how-to-choose-a-venture-studio): Cómo elegir un venture studio: confirma que es de verdad un studio, evalúa a los operadores y exige los términos de equity y capital por escrito. Guide, 10 min.
 - [How to Find a Technical Co-Founder for an AI Startup](https://avanteventures.com/es/library/how-to-find-a-technical-cofounder-for-an-ai-startup): Where to find a technical co-founder for an AI startup, how to test fit before you commit, and what equity to offer. A guide for founders in Brazil and LATAM. Guide, 8 min.
 - [¿Cómo Ganan Dinero los Venture Studios? El Modelo de Negocio](https://avanteventures.com/es/library/how-venture-studios-make-money): Un venture studio gana dinero siendo dueño de equity en las empresas que cocrea. Toma una participación fundadora grande y cobra en la salida. Así funciona el modelo. Guide, 10 min.
-- [Infinity Constellation levantó US$ 24M para producir empresas de IA en serie. Esa es la tesis del studio.](https://avanteventures.com/es/library/infinity-constellation-ai-studio-thesis): Un studio de EE. UU. acaba de levantar US$ 24M para construir hasta ocho empresas de IA al año en servicios profesionales. Leído junto al modelo que opera Avante en América Latina, la señal es clara. El studio se está volviendo una clase de activo. Market Note, 9 min.
+- [Infinity Constellation levantó US$ 24M para producir empresas de IA en serie. Esa es la tesis del studio.](https://avanteventures.com/es/library/infinity-constellation-ai-studio-thesis): Un venture builder de EE. UU. acaba de levantar US$ 24M para construir hasta ocho empresas de IA al año en servicios profesionales. Leído junto al modelo que opera Avante en América Latina, la señal es clara. El venture builder se está volviendo una clase de activo. Market Note, 9 min.
 - [Datos Propietarios con Copilot de IA: El Playbook de Captura](https://avanteventures.com/es/library/instrument-copilot-proprietary-data-playbook): Datos propietarios con copilot de IA en la práctica. El playbook de instrumentación detrás del flywheel copilot, dato, capital. Playbook, 10 min.
 - [Is a Venture Studio Worth It for Founders? An Honest Breakdown](https://avanteventures.com/es/library/is-a-venture-studio-worth-it-for-founders): A venture studio gives founders an idea, a build team, and first capital for a large equity stake. Here is when that trade is worth it, and when to walk away. Essay, 7 min.
 - [AI Inference Cost Belongs in COGS Not OpEx](https://avanteventures.com/es/library/is-inference-cost-cogs-or-opex): Inference cost is COGS, not OpEx: it is a direct variable cost of delivering your AI product and reduces gross margin. Only training belongs in R&D. Explainer, 6 min.
@@ -405,7 +405,7 @@ Our model: pre-traction capital + repeatable operational system + in-market exec
 - [Qué es un venture studio y cómo funciona](https://avanteventures.com/es/library/what-is-a-startup-studio): Qué es un venture studio. Una empresa que construye startups en serie con un equipo compartido, aportando la idea, el equipo fundador y el primer capital. Explainer, 9 min.
 - [What Is a Venture Studio? How the Model Works (2026)](https://avanteventures.com/es/library/what-is-a-venture-studio): A venture studio co-founds companies from day zero, supplying the idea, capital, and a build team. How it works and how it differs from a VC or accelerator. Explainer, 7 min.
 - [What Is a Vesting Cliff? A Founder's Guide for Brazil and LATAM](https://avanteventures.com/es/library/what-is-a-vesting-cliff): A vesting cliff is the waiting period before any founder equity is earned. Learn how the standard four-year vest with a one-year cliff works, and how it plays out under both US and Brazilian law. Explainer, 6 min.
-- [What Is Avante Ventures and How Does It Build AI-Native Companies](https://avanteventures.com/es/library/what-is-avante-ventures-ai-native-company-builder-brazil): Avante Ventures is a venture studio that co-founds and operates AI-native companies in Brazil from day one. It is not a fund that writes checks and waits. It i Article, 5 min.
+- [What Is Avante Ventures and How Does It Build AI-Native Companies](https://avanteventures.com/es/library/what-is-avante-ventures-ai-native-company-builder-brazil): Avante Ventures is a venture builder that co-founds and operates AI-native companies in Brazil from day one. It is not a fund that writes checks and waits. It i Article, 5 min.
 - [Por qué los Venture Studios Superan al VC Tradicional en LATAM](https://avanteventures.com/es/library/why-venture-studios-win-latam): El IRR de los studios ronda el 50% frente a cerca del 19% del VC tradicional. La razón estructural, las fallas del modelo y por qué Brasil lo amplifica. Research Report, 11 min.
 - [YC vs Techstars vs Venture Studio: Terms and Model Compared](https://avanteventures.com/es/library/yc-vs-techstars-vs-venture-studio): Y Combinator, Techstars, and venture studios compared on capital, equity, and how they engage. Which path fits a founder depends on what you are missing. Comparison, 7 min.
 

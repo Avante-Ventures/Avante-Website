@@ -73,9 +73,9 @@ export function VentureBuilderScene() {
   return (
     <section
       aria-label={t(
-        "What a venture builder is — and why AI-native, in Brazil",
-        "O que é um venture builder — e por que AI-native, no Brasil",
-        "Qué es un venture builder — y por qué AI-native, en Brasil"
+        "What a venture builder is. AI-native, in Brazil",
+        "O que é um venture builder. AI-native, no Brasil",
+        "Qué es un venture builder. AI-native, en Brasil"
       )}
       style={{ position: "relative", width: "100%", background: "transparent", padding: "var(--avt-section-pad) 0" }}
     >

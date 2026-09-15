@@ -1,4 +1,4 @@
-// /principles — the 10 operating principles of the Avante studio.
+// /principles — the 10 operating principles of the Avante venture builder.
 //
 // Strategic intent: most studios keep their operating doctrine private.
 // Publishing it is competitive damage to peer studios and a signal of
@@ -14,6 +14,8 @@ import { Navbar } from '@/app/components/Navbar'
 import { Footer } from '@/app/components/Footer'
 import { BackToTop } from '@/app/components/BackToTop'
 import { SEOHelmet } from '@/app/components/SEOHelmet'
+import { InteriorHero } from '@/app/components/interiors/InteriorHero'
+import { ProcessExhibit } from '@/app/components/interiors/ProcessExhibit'
 import { SectionMasthead } from '@/app/components/SectionMasthead'
 import { AvtSectionDivider } from '@/app/components/AvtSectionDivider'
 import { Link } from 'react-router'
@@ -77,9 +79,9 @@ const PRINCIPLES: Principle[] = [
       es: 'Los hitos desbloquean capital. Los calendarios no.',
     },
     body: {
-      en: 'We do not write flat seed checks against vesting periods. Capital advances in tranches tied to specific product, revenue, or pilot milestones. The next dollar earns its way in. This protects the founder, the cap table, and the studio from running 12 months on auto-pilot.',
-      pt: 'Não escrevemos cheques seed flat amarrados a períodos de vesting. O capital avança em tranches atadas a milestones específicos de produto, receita ou pilot. O próximo dólar precisa ganhar a entrada. Isso protege o founder, o cap table e o studio de rodar 12 meses no automático.',
-      es: 'No escribimos cheques seed flat amarrados a periodos de vesting. El capital avanza en tranches atadas a hitos específicos de producto, revenue o piloto. El siguiente dólar tiene que ganarse la entrada. Esto protege al founder, al cap table y al studio de correr 12 meses en piloto automático.',
+      en: 'We do not write flat seed checks against vesting periods. Capital advances in tranches tied to specific product, revenue, or pilot milestones. The next dollar earns its way in. This protects the founder, the cap table, and the venture builder from running 12 months on auto-pilot.',
+      pt: 'Não escrevemos cheques seed flat amarrados a períodos de vesting. O capital avança em tranches atadas a milestones específicos de produto, receita ou pilot. O próximo dólar precisa ganhar a entrada. Isso protege o founder, o cap table e o venture builder de rodar 12 meses no automático.',
+      es: 'No escribimos cheques seed flat amarrados a periodos de vesting. El capital avanza en tranches atadas a hitos específicos de producto, revenue o piloto. El siguiente dólar tiene que ganarse la entrada. Esto protege al founder, al cap table y al venture builder de correr 12 meses en piloto automático.',
     },
   },
   {
@@ -103,9 +105,9 @@ const PRINCIPLES: Principle[] = [
       es: '3–4 ventures por año. Sin excepciones.',
     },
     body: {
-      en: 'We deliberately cap throughput. Studios that scale faster than their operating stack matures debase the very advantage that justifies the model. Discipline at the top of the funnel is the cheapest form of selection.',
-      pt: 'A gente limita throughput de propósito. Studios que escalam mais rápido do que seu stack operacional amadurece degradam a própria vantagem que justifica o modelo. Disciplina no topo do funil é a forma mais barata de seleção.',
-      es: 'Limitamos throughput a propósito. Los studios que escalan más rápido de lo que madura su stack operativo degradan la propia ventaja que justifica el modelo. La disciplina en la cima del funnel es la forma más barata de selección.',
+      en: 'We deliberately cap throughput. Venture builders that scale faster than their operating stack matures debase the very advantage that justifies the model. Discipline at the top of the funnel is the cheapest form of selection.',
+      pt: 'A gente limita throughput de propósito. Venture builders que escalam mais rápido do que seu stack operacional amadurece degradam a própria vantagem que justifica o modelo. Disciplina no topo do funil é a forma mais barata de seleção.',
+      es: 'Limitamos throughput a propósito. Los venture builders que escalan más rápido de lo que madura su stack operativo degradan la propia ventaja que justifica el modelo. La disciplina en la cima del funnel es la forma más barata de selección.',
     },
   },
   {
@@ -116,9 +118,9 @@ const PRINCIPLES: Principle[] = [
       es: 'Operating partner dentro del código.',
     },
     body: {
-      en: 'Not on a quarterly call. Not on a Slack channel that goes silent. In the ICP doc, the unit-economics spreadsheet, and the first ten hires. The studio earns its equity by sitting beside the founder where the work happens.',
-      pt: 'Não em call trimestral. Não em canal de Slack que esfria. Dentro do doc de ICP, da planilha de unit economics e nas primeiras dez contratações. O studio ganha seu equity sentando ao lado do founder onde o trabalho acontece.',
-      es: 'No en call trimestral. No en canal de Slack que se enfría. Dentro del doc de ICP, de la planilla de unit economics y en las primeras diez contrataciones. El studio se gana su equity sentándose al lado del founder donde sucede el trabajo.',
+      en: 'Not on a quarterly call. Not on a Slack channel that goes silent. In the ICP doc, the unit-economics spreadsheet, and the first ten hires. The venture builder earns its equity by sitting beside the founder where the work happens.',
+      pt: 'Não em call trimestral. Não em canal de Slack que esfria. Dentro do doc de ICP, da planilha de unit economics e nas primeiras dez contratações. O venture builder ganha seu equity sentando ao lado do founder onde o trabalho acontece.',
+      es: 'No en call trimestral. No en canal de Slack que se enfría. Dentro del doc de ICP, de la planilla de unit economics y en las primeras diez contrataciones. El venture builder se gana su equity sentándose al lado del founder donde sucede el trabajo.',
     },
   },
   {
@@ -129,9 +131,9 @@ const PRINCIPLES: Principle[] = [
       es: 'Los founders cierran los primeros 10 contratos enterprise. Nunca los reemplazamos.',
     },
     body: {
-      en: 'A specific commitment, not a slogan. The first ten enterprise customers must be closed by the founder personally: name on the contract, direct line for escalations, in the room for renewals. The studio brand never appears on a customer call. Studio support is operational behind the scenes, never relational on the front.',
-      pt: 'Um compromisso específico, não um slogan. Os primeiros dez clientes enterprise precisam ser fechados pelo founder pessoalmente: nome no contrato, linha direta para escalações, na sala nas renovações. A marca do studio nunca aparece numa call com cliente. Suporte do studio é operacional nos bastidores, nunca relacional na frente.',
-      es: 'Un compromiso específico, no un slogan. Los primeros diez clientes enterprise tienen que ser cerrados por el founder personalmente: nombre en el contrato, línea directa para escalaciones, en la sala en las renovaciones. La marca del studio nunca aparece en una call con cliente. El soporte del studio es operativo tras bastidores, nunca relacional en el frente.',
+      en: 'A specific commitment, not a slogan. The first ten enterprise customers must be closed by the founder personally: name on the contract, direct line for escalations, in the room for renewals. The venture builder brand never appears on a customer call. Venture builder support is operational behind the scenes, never relational on the front.',
+      pt: 'Um compromisso específico, não um slogan. Os primeiros dez clientes enterprise precisam ser fechados pelo founder pessoalmente: nome no contrato, linha direta para escalações, na sala nas renovações. A marca do venture builder nunca aparece numa call com cliente. Suporte do venture builder é operacional nos bastidores, nunca relacional na frente.',
+      es: 'Un compromiso específico, no un slogan. Los primeros diez clientes enterprise tienen que ser cerrados por el founder personalmente: nombre en el contrato, línea directa para escalaciones, en la sala en las renovaciones. La marca del venture builder nunca aparece en una call con cliente. El soporte del venture builder es operativo tras bastidores, nunca relacional en el frente.',
     },
   },
   {
@@ -155,9 +157,9 @@ const PRINCIPLES: Principle[] = [
       es: 'Lo que no hacemos es lo que somos.',
     },
     body: {
-      en: 'A studio that cannot articulate its negative space cannot articulate its positive. We turn down 95% of inbound: services-disguised-as-software, AI-feature wrappers, hype-first markets, founder profiles that score on charisma instead of judgment. Saying no is the discipline.',
-      pt: 'Um studio que não consegue articular seu espaço negativo não consegue articular o positivo. Recusamos 95% do inbound: serviços disfarçados de software, wrappers de feature de IA, mercados hype-first, perfis de founder que pontuam em carisma em vez de julgamento. Dizer não é a disciplina.',
-      es: 'Un studio que no puede articular su espacio negativo no puede articular el positivo. Rechazamos 95% del inbound: servicios disfrazados de software, wrappers de feature de IA, mercados hype-first, perfiles de founder que puntúan en carisma en vez de juicio. Decir no es la disciplina.',
+      en: 'A venture builder that cannot articulate its negative space cannot articulate its positive. We turn down 95% of inbound: services-disguised-as-software, AI-feature wrappers, hype-first markets, founder profiles that score on charisma instead of judgment. Saying no is the discipline.',
+      pt: 'Um venture builder que não consegue articular seu espaço negativo não consegue articular o positivo. Recusamos 95% do inbound: serviços disfarçados de software, wrappers de feature de IA, mercados hype-first, perfis de founder que pontuam em carisma em vez de julgamento. Dizer não é a disciplina.',
+      es: 'Un venture builder que no puede articular su espacio negativo no puede articular el positivo. Rechazamos 95% del inbound: servicios disfrazados de software, wrappers de feature de IA, mercados hype-first, perfiles de founder que puntúan en carisma en vez de juicio. Decir no es la disciplina.',
     },
   },
 ]
@@ -166,19 +168,19 @@ const SEO = {
   en: {
     title: 'Operating Principles — Avante Ventures',
     description:
-      'Ten principles the Avante studio operates by. Not values. Rules that constrain behavior. The decisions we have already made so we can spend operating time on the ones that are left.',
+      'Ten principles the Avante venture builder operates by. Not values. Rules that constrain behavior. The decisions we have already made so we can spend operating time on the ones that are left.',
     inLanguage: 'en',
   },
   pt: {
     title: 'Princípios Operacionais — Avante Ventures',
     description:
-      'Dez princípios pelos quais o studio Avante opera. Não são valores. São regras que constrangem comportamento. As decisões que já tomamos para gastar tempo operacional nas que ainda restam.',
+      'Dez princípios pelos quais o venture builder Avante opera. Não são valores. São regras que constrangem comportamento. As decisões que já tomamos para gastar tempo operacional nas que ainda restam.',
     inLanguage: 'pt-BR',
   },
   es: {
     title: 'Principios Operativos — Avante Ventures',
     description:
-      'Diez principios por los que opera el studio Avante. No son valores. Son reglas que limitan el comportamiento. Las decisiones que ya tomamos para gastar tiempo operativo en las que quedan.',
+      'Diez principios por los que opera el venture builder Avante. No son valores. Son reglas que limitan el comportamiento. Las decisiones que ya tomamos para gastar tiempo operativo en las que quedan.',
     inLanguage: 'es',
   },
 } as const
@@ -204,7 +206,7 @@ export default function PrinciplesPage() {
   }
 
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: 'var(--avante-background)' }}>
+    <div className="avante-interior">
       <SEOHelmet
         title={copy.title}
         description={copy.description}
@@ -214,46 +216,17 @@ export default function PrinciplesPage() {
       <Navbar />
       <BackToTop />
 
-      <div
-        style={{
-          maxWidth: '960px',
-          margin: '0 auto',
-          padding: 'var(--avt-page-pad-top) var(--avt-page-pad-x) var(--avt-page-pad-bottom)',
-        }}
-      >
-        <Link
-          to={`/${language}`}
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '8px',
-            color: 'rgba(255, 255, 255, 0.55)',
-            textDecoration: 'none',
-            fontSize: '14px',
-            marginBottom: '32px',
-          }}
-        >
-          ← {t('Back to home', 'Voltar ao início', 'Volver al inicio')}
-        </Link>
-
-        <SectionMasthead
-          eyebrow={t('Operating Principles', 'Princípios Operacionais', 'Principios Operativos')}
-          title={t(
-            'Ten principles we operate by.',
-            'Dez princípios pelos quais operamos.',
-            'Diez principios por los que operamos.'
-          )}
-          description={t(
-            'Not values. Rules that constrain behavior. The set of decisions we have already made so we can spend operating time on the ones that are left.',
-            'Não são valores. São regras que constrangem comportamento. As decisões que já tomamos para gastar tempo operacional nas que ainda restam.',
-            'No son valores. Son reglas que limitan el comportamiento. El conjunto de decisiones que ya tomamos para gastar tiempo operativo en las que quedan.'
-          )}
-        />
-
+      <main>
+        <InteriorHero kind="principles" eyebrow={t('Operating principles', 'Princípios operacionais', 'Principios operativos')}
+          title={<>{t('How we build.', 'Como construímos.', 'Cómo construimos.')}<br />{t('What guides us.', 'O que nos orienta.', 'Qué nos guía.')}</>}
+          description={t('Six stages give the work a structure. Ten operating principles guide the decisions along the way.', 'Seis etapas estruturam o trabalho. Dez princípios operacionais orientam as decisões ao longo do caminho.', 'Seis etapas estructuran el trabajo. Diez principios operativos guían las decisiones en el camino.')} />
+        <div className="interior-content interior-content--reading" id="page-content">
+          <ProcessExhibit />
+          <SectionMasthead compact eyebrow={t('The principles', 'Os princípios', 'Los principios')} title={t('Ten principles we operate by.', 'Dez princípios pelos quais operamos.', 'Diez principios por los que operamos.')} />
         {/* The 10 principles. Generous vertical rhythm — designed to be
             read top-to-bottom, not scanned. Each block reveals on scroll
             with the same Apple curve as the masthead family.            */}
-        <div
+        <div className="principles-list"
           style={{
             display: 'flex',
             flexDirection: 'column',
@@ -295,9 +268,9 @@ export default function PrinciplesPage() {
             }}
           >
             {t(
-              'These principles are public for one reason: a studio that cannot publish its operating doctrine is operating one.',
-              'Estes princípios são públicos por uma razão: um studio que não consegue publicar sua doutrina operacional está operando uma.',
-              'Estos principios son públicos por una razón: un studio que no puede publicar su doctrina operativa está operando una.'
+              'These principles are public for one reason: a venture builder that cannot publish its operating doctrine is operating one.',
+              'Estes princípios são públicos por uma razão: um venture builder que não consegue publicar sua doutrina operacional está operando uma.',
+              'Estos principios son públicos por una razón: un venture builder que no puede publicar su doctrina operativa está operando una.'
             )}
           </p>
           <Link
@@ -328,6 +301,7 @@ export default function PrinciplesPage() {
         </div>
       </div>
 
+      </main>
       <Footer />
     </div>
   )
@@ -345,7 +319,7 @@ function PrincipleBlock({
   // Two-column layout: large number on the left, content on the right.
   // At mobile, stacks vertically with the number above.
   return (
-    <div
+    <div className="principle-block"
       style={{
         display: 'grid',
         gridTemplateColumns: 'clamp(60px, 10vw, 100px) 1fr',

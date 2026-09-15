@@ -3,11 +3,10 @@ import { Navbar } from "@/app/components/Navbar";
 import { Footer } from "@/app/components/Footer";
 import { BackToTop } from "@/app/components/BackToTop";
 import { SEOHelmet } from "@/app/components/SEOHelmet";
-import { SectionMasthead } from "@/app/components/SectionMasthead";
-import { PortfolioStrip } from "@/app/components/PortfolioStrip";
+import { EditorialCover } from '@/app/components/interiors/EditorialCover';
+import '@/app/components/interiors/interiors.css';
 import { Link } from "react-router";
 import { useState } from "react";
-import { motion } from "motion/react";
 import { articles, type Category as ArticleCategory } from "@/app/data/articles";
 
 type Category = 'all' | ArticleCategory;
@@ -24,35 +23,36 @@ interface LibraryItem {
   readTime: string;
   featured?: boolean;
   date?: string;
+  datePublished: string;
   isPublished: boolean;
 }
 
 export default function LibraryPage() {
   const { t, language } = useLanguage();
   const [activeCategory, setActiveCategory] = useState<Category>('all');
+  const [query, setQuery] = useState('');
+  const [visibleCount, setVisibleCount] = useState(12);
 
   // Only published articles are listed. Drafts (isPublished:false) still
   // exist as direct URLs but are excluded from the index, sitemap.xml, and
   // llms.txt to preserve crawl budget and signal hygiene.
   const libraryItems: LibraryItem[] = articles
     .filter((a) => a.isPublished)
+    .sort((a, b) => b.datePublished.localeCompare(a.datePublished) || a.slug.localeCompare(b.slug))
     .map((a, i) => ({
       id: String(i + 1),
       slug: a.slug,
-      title: a[language === "es" ? "en" : language].title,
-      description: a[language === "es" ? "en" : language].description,
+      title: (a[language] ?? a.en).title,
+      description: (a[language] ?? a.en).description,
       category: a.category,
       type: a.type,
       readTime: a.readTime,
       featured: a.featured,
       date: a.date,
+      datePublished: a.datePublished,
       isPublished: a.isPublished,
     }));
 
-  // Editorial discipline: no emoji icons. The dot signature carries the
-  // category accent — same pattern used in the masthead family.
-  // Indigo (#42468C) dropped per Beirut's panel note — palette consolidated
-  // to gold / orange / purple as primary punctuation.
   const categories = [
     { id: 'all',         label: t('library.category.all'),         color: '#FFFFFF' },
     { id: 'insights',    label: t('library.category.insights'),    color: '#F9B437' },
@@ -63,15 +63,16 @@ export default function LibraryPage() {
     { id: 'ai',          label: t('library.category.ai'),          color: '#E6C54C' },
   ];
 
-  const filteredItems = activeCategory === 'all' 
-    ? libraryItems 
-    : libraryItems.filter(item => item.category === activeCategory);
-
-  const getCategoryColor = (category: Category) => {
-    const cat = categories.find(c => c.id === category);
-    return cat?.color || '#FFFFFF';
-  };
-
+  const search = (text: string) => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLocaleLowerCase(language);
+  const filteredItems = libraryItems.filter(item => (activeCategory === 'all' || item.category === activeCategory) && search(`${item.title} ${item.description}`).includes(search(query.trim())));
+  const lead = libraryItems[0];
+  const listing = activeCategory === 'all' && !query.trim() ? filteredItems.filter(item => item.slug !== lead?.slug) : filteredItems;
+  const editorial = {
+    en: { title: 'The Library.', intro: 'Research, field notes and the thinking behind the companies we build.', latest: 'Latest from Avante', search: 'Search the Library', count: 'articles', read: 'Read article', more: 'Show more articles', empty: 'No articles match this selection.', reset: 'Reset filters', newsletter: 'Thinking worth staying close to.', newsletterBody: 'Research and perspectives from Avante, delivered through Avante Intelligence.', subscribe: 'Read Avante Intelligence' },
+    pt: { title: 'A Biblioteca.', intro: 'Pesquisa, notas de campo e o pensamento por trás das empresas que construímos.', latest: 'O mais recente da Avante', search: 'Buscar na Biblioteca', count: 'artigos', read: 'Leia o artigo', more: 'Ver mais artigos', empty: 'Nenhum artigo corresponde a esta seleção.', reset: 'Limpar filtros', newsletter: 'Ideias para acompanhar de perto.', newsletterBody: 'Pesquisa e perspectivas da Avante, compartilhadas pelo Avante Intelligence.', subscribe: 'Leia Avante Intelligence' },
+    es: { title: 'La Biblioteca.', intro: 'Investigación, notas de campo y las ideas detrás de las empresas que construimos.', latest: 'Lo más reciente de Avante', search: 'Buscar en la Biblioteca', count: 'artículos', read: 'Leer artículo', more: 'Ver más artículos', empty: 'Ningún artículo coincide con esta selección.', reset: 'Restablecer filtros', newsletter: 'Ideas que vale la pena seguir.', newsletterBody: 'Investigación y perspectivas de Avante, compartidas en Avante Intelligence.', subscribe: 'Lee Avante Intelligence' },
+  }[language];
+  const date = (item: LibraryItem) => new Date(`${item.datePublished}T12:00:00Z`).toLocaleDateString(language, { month: 'short', year: 'numeric', timeZone: 'UTC' });
 
   // GEO-friendly schema: CollectionPage + ItemList of every published article.
   // Lets LLMs cite specific titles even when the underlying article pages
@@ -79,23 +80,23 @@ export default function LibraryPage() {
   const SEO_COPY = {
     en: {
       title: "Library: Insights, Research, Playbooks on AI-native Venture Building",
-      description: "Avante Library: research, case studies, and playbooks on venture studios, Brazil's AI market, and operating AI-native startups.",
+      description: "Avante Library: research, case studies, and playbooks on venture builders, Brazil's AI market, and operating AI-native startups.",
       collectionName: "Avante Library: Insights, Research, Playbooks",
-      collectionDescription: "Insights, research reports, case studies, and playbooks on AI-native venture building, Brazil's service economy, and venture studio dynamics.",
+      collectionDescription: "Insights, research reports, case studies, and playbooks on AI-native venture building, Brazil's service economy, and venture builder dynamics.",
       inLanguage: "en",
     },
     pt: {
       title: "Biblioteca: Insights, Pesquisa e Playbooks para Empresas AI-Native",
-      description: "Biblioteca Avante: pesquisas, estudos de caso e playbooks sobre venture studios, mercado de IA no Brasil e operação de startups AI-native.",
+      description: "Biblioteca Avante: pesquisas, estudos de caso e playbooks sobre venture builders, mercado de IA no Brasil e operação de startups AI-native.",
       collectionName: "Biblioteca Avante: Insights, Pesquisa, Playbooks",
-      collectionDescription: "Insights, relatórios de pesquisa, estudos de caso e playbooks sobre venture building AI-native, economia de serviços do Brasil e dinâmica de venture studios.",
+      collectionDescription: "Insights, relatórios de pesquisa, estudos de caso e playbooks sobre venture building AI-native, economia de serviços do Brasil e dinâmica de venture builders.",
       inLanguage: "pt-BR",
     },
     es: {
       title: "Biblioteca: Insights, Investigación y Playbooks para Empresas AI-Native",
-      description: "Biblioteca Avante: investigación, casos de estudio y playbooks sobre venture studios, mercado de IA en Brasil y operación de startups AI-native.",
+      description: "Biblioteca Avante: investigación, casos de estudio y playbooks sobre venture builders, mercado de IA en Brasil y operación de startups AI-native.",
       collectionName: "Biblioteca Avante: Insights, Investigación, Playbooks",
-      collectionDescription: "Insights, reportes de investigación, casos de estudio y playbooks sobre venture building AI-native, economía de servicios de Brasil y dinámica de venture studios.",
+      collectionDescription: "Insights, reportes de investigación, casos de estudio y playbooks sobre venture building AI-native, economía de servicios de Brasil y dinámica de venture builders.",
       inLanguage: "es",
     },
   } as const;
@@ -129,654 +130,28 @@ export default function LibraryPage() {
   };
 
   return (
-    <div
-      style={{
-        minHeight: '100vh',
-        backgroundColor: 'var(--avt-ink)',
-        position: 'relative',
-        overflow: 'hidden'
-      }}
-    >
-      <SEOHelmet
-        title={copy.title}
-        description={copy.description}
-        pathname="/library"
-        jsonLd={libraryJsonLd}
-      />
-      <Navbar />
-      <BackToTop />
-
-      {/* Animated Background Gradients */}
-      <div style={{ position: 'fixed', inset: 0, pointerEvents: 'none', zIndex: 0 }}>
-        <motion.div 
-          animate={{
-            opacity: [0.6, 0.8, 0.6],
-            scale: [1, 1.1, 1]
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-          style={{
-            position: 'absolute',
-            top: '-10%',
-            left: '-5%',
-            width: '70%',
-            height: '70%',
-            background: 'radial-gradient(ellipse at 30% 20%, rgba(66, 70, 140, 0.05) 0%, transparent 60%)',
-            filter: 'blur(60px)'
-          }}
-        />
-        
-        <motion.div 
-          animate={{
-            opacity: [0.5, 0.7, 0.5],
-            x: [0, 30, 0],
-            y: [0, -20, 0]
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-          style={{
-            position: 'absolute',
-            top: '30%',
-            right: '-10%',
-            width: '60%',
-            height: '60%',
-            background: 'radial-gradient(circle, rgba(152, 80, 154, 0.04) 0%, transparent 70%)',
-            filter: 'blur(80px)'
-          }}
-        />
-
-        <motion.div 
-          animate={{
-            opacity: [0.4, 0.6, 0.4],
-            scale: [1, 1.2, 1],
-            rotate: [0, 45, 0]
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-          style={{
-            position: 'absolute',
-            bottom: '10%',
-            left: '20%',
-            width: '50%',
-            height: '50%',
-            background: 'radial-gradient(circle, rgba(249, 180, 55, 0.03) 0%, transparent 70%)',
-            filter: 'blur(70px)'
-          }}
-        />
-      </div>
-
-      <div style={{ 
-        maxWidth: '1200px', 
-        margin: '0 auto',
-        padding: '0 var(--avante-space-6)',
-        paddingTop: 'var(--avante-space-20)',
-        paddingBottom: 'var(--avante-space-20)',
-        position: 'relative',
-        zIndex: 1
-      }}>
-        
-        {/* Hero Section */}
-        <motion.div 
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          style={{ marginBottom: 'var(--avante-space-16)' }}
-        >
-          <Link
-            to={`/${language}`}
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: 'var(--avante-space-2)',
-              color: 'var(--avt-meta)',
-              textDecoration: 'none',
-              fontSize: '14px',
-              marginBottom: 'var(--avante-space-8)',
-              transition: 'all 0.3s ease'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.color = 'var(--avt-txt)';
-              e.currentTarget.style.transform = 'translateX(-4px)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.color = 'var(--avt-meta)';
-              e.currentTarget.style.transform = 'translateX(0)';
-            }}
-          >
-            <span>←</span> {t('library.backhome')}
-          </Link>
-
-          <SectionMasthead
-            eyebrow={t('library.hero.badge')}
-            title={t('library.hero.title')}
-            description={t('library.hero.subtitle')}
-          />
-
-          <div
-            style={{
-              display: 'flex',
-              gap: 'var(--avante-space-3)',
-              alignItems: 'center',
-              flexWrap: 'wrap',
-              marginBottom: 'var(--avante-space-6)',
-            }}
-          >
-            <span
-              style={{
-                fontSize: '13px',
-                color: 'var(--avt-meta)',
-                display: 'flex',
-                alignItems: 'center',
-                gap: 'var(--avante-space-2)',
-                padding: '6px 12px',
-                backgroundColor: 'rgba(255, 255, 255, 0.03)',
-                borderRadius: 'var(--avante-radius-8)',
-                border: '1px solid rgba(255, 255, 255, 0.08)',
-              }}
-            >
-              <span
-                style={{
-                  width: '6px',
-                  height: '6px',
-                  borderRadius: '50%',
-                  backgroundColor: '#F9B437',
-                }}
-              />
-              {t('library.hero.stats')}
-            </span>
+    <div className="avante-interior">
+      <SEOHelmet title={copy.title} description={copy.description} pathname="/library" jsonLd={libraryJsonLd} />
+      <Navbar /><BackToTop />
+      <main>
+        <header className="library-opening">
+          <div className="library-opening-top"><div><span className="interior-kicker">Avante / {language === 'pt' ? 'Pesquisa e perspectivas' : language === 'es' ? 'Investigación y perspectivas' : 'Research & insights'}</span><h1>{editorial.title}</h1></div><p>{editorial.intro}</p></div>
+          {lead && <Link className="library-feature" to={`/${language}/library/${lead.slug}`}><EditorialCover category={lead.category} priority /><div><span className="interior-kicker">{editorial.latest}</span><h2>{lead.title}</h2><div className="library-meta"><span>{categories.find(c => c.id === lead.category)?.label}</span><time dateTime={lead.datePublished}>{date(lead)}</time><span>{lead.readTime}</span></div><p>{lead.description}</p><span className="interior-link">{editorial.read}<span>↗</span></span></div></Link>}
+        </header>
+        <section className="interior-content" id="page-content" aria-label={editorial.title}>
+          <div className="library-controls"><div className="library-filters">{categories.map(category => <button key={category.id} aria-pressed={activeCategory === category.id} onClick={() => { setActiveCategory(category.id as Category); setVisibleCount(12); }}>{category.label}</button>)}</div><label className="library-search"><span className="sr-only">{editorial.search}</span><input type="search" value={query} placeholder={editorial.search} onChange={event => { setQuery(event.target.value); setVisibleCount(12); }} /></label></div>
+          <span className="library-result-count" role="status">{filteredItems.length} {filteredItems.length === 1 ? { en: 'article', pt: 'artigo', es: 'artículo' }[language] : editorial.count}</span>
+          <div className="library-index">
+            {listing.length === 0 && <div className="library-empty"><p>{editorial.empty}</p><button onClick={() => { setQuery(''); setActiveCategory('all'); setVisibleCount(12); }}>{editorial.reset} ↗</button></div>}
+            {listing.slice(0, visibleCount).map(item => <Link key={item.slug} className="library-entry" to={`/${language}/library/${item.slug}`}>
+              <div className="library-meta"><span>{categories.find(c => c.id === item.category)?.label}</span><time dateTime={item.datePublished}>{date(item)}</time></div><h3>{item.title}</h3><p>{item.description}</p><div className="library-entry-bottom"><span>{item.readTime}</span><span aria-hidden="true">↗</span></div>
+            </Link>)}
           </div>
-
-          {/* Portfolio strip — discoverability + social proof */}
-          <div style={{ marginTop: 'var(--avante-space-8)' }}>
-            <PortfolioStrip
-              label={language === 'pt' ? 'Portfólio do Studio' : 'Studio Portfolio'}
-              viewAllHref={`/${language}/portfolio`}
-              compact
-            />
-          </div>
-        </motion.div>
-
-        {/* Category Filters */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7, duration: 0.6 }}
-          style={{ 
-            marginBottom: 'var(--avante-space-12)',
-            paddingBottom: 'var(--avante-space-8)',
-            borderBottom: '1px solid rgba(255, 255, 255, 0.05)'
-          }}
-        >
-          <div style={{
-            display: 'flex',
-            gap: 'var(--avante-space-3)',
-            flexWrap: 'wrap',
-            justifyContent: 'center'
-          }}>
-            {categories.map((category, index) => (
-              <motion.button
-                key={category.id}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.7 + index * 0.05, duration: 0.3 }}
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setActiveCategory(category.id as Category)}
-                style={{
-                  padding: '12px 24px',
-                  backgroundColor: activeCategory === category.id 
-                    ? `${category.color}20` 
-                    : 'rgba(255, 255, 255, 0.03)',
-                  border: activeCategory === category.id
-                    ? `1px solid ${category.color}80`
-                    : '1px solid rgba(255, 255, 255, 0.1)',
-                  borderRadius: 'var(--avante-radius-12)',
-                  color: activeCategory === category.id 
-                    ? category.color 
-                    : 'var(--avt-muted)',
-                  fontSize: '14px',
-                  fontWeight: activeCategory === category.id 
-                    ? 'var(--font-weight-semibold)' 
-                    : 'var(--font-weight-regular)',
-                  cursor: 'pointer',
-                  transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
-                  letterSpacing: '0.02em',
-                  backdropFilter: activeCategory === category.id ? 'blur(10px)' : 'none',
-                  boxShadow: activeCategory === category.id 
-                    ? `0 0 20px ${category.color}30, inset 0 0 20px ${category.color}10` 
-                    : 'none',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: 'var(--avante-space-2)'
-                }}
-              >
-                {/* Dot signature — same atom as the masthead family */}
-                <span
-                  aria-hidden
-                  style={{
-                    display: 'inline-block',
-                    width: '6px',
-                    height: '6px',
-                    borderRadius: '50%',
-                    background: category.color,
-                    boxShadow: activeCategory === category.id
-                      ? `0 0 8px ${category.color}AA`
-                      : `0 0 6px ${category.color}66`,
-                    transition: 'box-shadow 0.3s ease',
-                  }}
-                />
-                {category.label}
-              </motion.button>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Resources Grid */}
-        <motion.div 
-          layout
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 340px), 1fr))',
-            gap: 'clamp(var(--avante-space-4), 4vw, var(--avante-space-6))',
-            marginBottom: 'var(--avante-space-16)'
-          }}
-        >
-          {filteredItems.map((item, index) => {
-            const categoryColor = getCategoryColor(item.category);
-            return (
-              <Link
-                key={item.id}
-                to={`/${language}/library/${item.slug}`}
-                style={{ textDecoration: 'none', color: 'inherit', display: 'block' }}
-              >
-              <motion.div
-                layout
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{
-                  delay: index * 0.05,
-                  duration: 0.5,
-                  type: "spring",
-                  stiffness: 100
-                }}
-                whileHover={{
-                  y: -8,
-                  transition: { duration: 0.2 }
-                }}
-                style={{
-                  padding: 'clamp(var(--avante-space-6), 5vw, var(--avante-space-8))',
-                  background: item.featured
-                    ? `linear-gradient(135deg, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0.02) 100%)`
-                    : 'rgba(255, 255, 255, 0.02)',
-                  border: item.featured
-                    ? `1px solid ${categoryColor}40`
-                    : '1px solid rgba(255, 255, 255, 0.08)',
-                  borderRadius: 'var(--avante-radius-20)',
-                  cursor: 'pointer',
-                  position: 'relative',
-                  overflow: 'hidden',
-                  backdropFilter: 'blur(10px)'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = `${categoryColor}08`;
-                  e.currentTarget.style.borderColor = `${categoryColor}60`;
-                  e.currentTarget.style.boxShadow = `0 20px 60px ${categoryColor}25, inset 0 0 30px ${categoryColor}08`;
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = item.featured 
-                    ? 'rgba(255, 255, 255, 0.06)' 
-                    : 'rgba(255, 255, 255, 0.02)';
-                  e.currentTarget.style.borderColor = item.featured
-                    ? `${categoryColor}40`
-                    : 'rgba(255, 255, 255, 0.08)';
-                  e.currentTarget.style.boxShadow = 'none';
-                }}
-              >
-                {/* Glow Effect */}
-                <motion.div 
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                  transition={{ duration: 0.3 }}
-                  style={{
-                    position: 'absolute',
-                    top: '-50%',
-                    right: '-20%',
-                    width: '200px',
-                    height: '200px',
-                    background: `radial-gradient(circle, ${categoryColor}20 0%, transparent 70%)`,
-                    filter: 'blur(40px)',
-                    pointerEvents: 'none',
-                    zIndex: 0
-                  }}
-                />
-
-                {item.featured && (
-                  <motion.div 
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ delay: index * 0.05 + 0.2, type: "spring" }}
-                    style={{
-                      position: 'absolute',
-                      top: 'var(--avante-space-5)',
-                      right: 'var(--avante-space-5)',
-                      padding: '6px 12px',
-                      background: `linear-gradient(135deg, ${categoryColor}30 0%, ${categoryColor}20 100%)`,
-                      borderRadius: 'var(--avante-radius-8)',
-                      fontSize: '10px',
-                      fontWeight: 'var(--font-weight-bold)',
-                      color: categoryColor,
-                      letterSpacing: '0.1em',
-                      textTransform: 'uppercase',
-                      border: `1px solid ${categoryColor}40`,
-                      boxShadow: `0 0 15px ${categoryColor}30`,
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '4px'
-                    }}
-                  >
-                    ⭐ Featured
-                  </motion.div>
-                )}
-
-                <div style={{
-                  display: 'flex',
-                  gap: 'var(--avante-space-3)',
-                  alignItems: 'center',
-                  marginBottom: 'var(--avante-space-4)',
-                  position: 'relative',
-                  zIndex: 1,
-                  flexWrap: 'wrap'
-                }}>
-                  {/* Dot signature replaces the previous emoji icon */}
-                  <span
-                    aria-hidden
-                    style={{
-                      display: 'inline-block',
-                      width: '8px',
-                      height: '8px',
-                      borderRadius: '50%',
-                      background: categoryColor,
-                      boxShadow: `0 0 8px ${categoryColor}80`,
-                    }}
-                  />
-                  <span style={{
-                    fontSize: 'clamp(11px, 1.5vw, 12px)',
-                    fontWeight: 'var(--font-weight-bold)',
-                    color: categoryColor,
-                    letterSpacing: '0.08em',
-                    textTransform: 'uppercase'
-                  }}>
-                    {item.type}
-                  </span>
-                  {item.date && (
-                    <>
-                      <span style={{ 
-                        color: 'var(--avt-meta)', 
-                        fontSize: '12px' 
-                      }}>
-                        •
-                      </span>
-                      <span style={{
-                        fontSize: 'clamp(11px, 1.5vw, 12px)',
-                        color: 'var(--avt-meta)',
-                        fontWeight: 'var(--font-weight-medium)'
-                      }}>
-                        {item.date}
-                      </span>
-                    </>
-                  )}
-                </div>
-
-                <h3 
-                  style={{
-                    fontSize: 'clamp(20px, 3vw, 24px)',
-                    fontWeight: 'var(--font-weight-semibold)',
-                    color: 'var(--avt-txt)',
-                    marginBottom: 'var(--avante-space-4)',
-                    lineHeight: '1.3',
-                    position: 'relative',
-                    zIndex: 1
-                  }}
-                >
-                  {item.title}
-                </h3>
-
-                <p 
-                  style={{ 
-                    fontSize: 'clamp(14px, 2vw, 15px)',
-                    color: 'var(--avt-muted)',
-                    lineHeight: '1.7',
-                    marginBottom: 'var(--avante-space-6)',
-                    position: 'relative',
-                    zIndex: 1
-                  }}
-                >
-                  {item.description}
-                </p>
-
-                <div style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  position: 'relative',
-                  zIndex: 1
-                }}>
-                  <div style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: 'var(--avante-space-2)',
-                    fontSize: 'clamp(12px, 1.5vw, 13px)',
-                    color: 'var(--avt-meta)'
-                  }}>
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
-                      <path d="M12 6v6l4 2" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                    </svg>
-                    <span>{item.readTime} read</span>
-                  </div>
-
-                  <motion.div
-                    whileHover={{ x: 4 }}
-                    style={{
-                      fontSize: '20px',
-                      color: categoryColor,
-                      transition: 'transform 0.3s ease'
-                    }}
-                  >
-                    →
-                  </motion.div>
-                </div>
-              </motion.div>
-              </Link>
-            );
-          })}</motion.div>
-
-        {/* Newsletter CTA */}
-        <motion.section 
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.8 }}
-          style={{
-            background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.02) 100%)',
-            border: '1px solid rgba(255, 255, 255, 0.1)',
-            borderRadius: 'var(--avante-radius-24)',
-            padding: 'var(--avante-space-16)',
-            textAlign: 'center',
-            position: 'relative',
-            overflow: 'hidden',
-            backdropFilter: 'blur(20px)'
-          }}
-        >
-          {/* Animated Background Glows */}
-          <motion.div 
-            animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.3, 0.5, 0.3]
-            }}
-            transition={{
-              duration: 6,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-            style={{
-              position: 'absolute',
-              top: '20%',
-              left: '20%',
-              width: '400px',
-              height: '400px',
-              background: 'radial-gradient(circle, rgba(66, 70, 140, 0.15) 0%, transparent 70%)',
-              filter: 'blur(60px)',
-              pointerEvents: 'none',
-              zIndex: 0
-            }}
-          />
-
-          <motion.div 
-            animate={{
-              scale: [1, 1.3, 1],
-              opacity: [0.2, 0.4, 0.2],
-              x: [0, 50, 0]
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-            style={{
-              position: 'absolute',
-              bottom: '10%',
-              right: '10%',
-              width: '500px',
-              height: '500px',
-              background: 'radial-gradient(circle, rgba(249, 180, 55, 0.12) 0%, transparent 70%)',
-              filter: 'blur(70px)',
-              pointerEvents: 'none',
-              zIndex: 0
-            }}
-          />
-
-          <div style={{ position: 'relative', zIndex: 1, maxWidth: '700px', margin: '0 auto' }}>
-            <motion.div
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ delay: 1.2, type: "spring", stiffness: 200 }}
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: '60px',
-                height: '60px',
-                borderRadius: '50%',
-                background: 'linear-gradient(135deg, rgba(66, 70, 140, 0.2) 0%, rgba(249, 180, 55, 0.2) 100%)',
-                border: '1px solid rgba(66, 70, 140, 0.3)',
-                marginBottom: 'var(--avante-space-6)',
-                fontSize: '28px',
-                boxShadow: '0 0 30px rgba(66, 70, 140, 0.3)'
-              }}
-            >
-              📬
-            </motion.div>
-
-            <h2 
-              style={{
-                fontSize: 'clamp(28px, 4vw, 42px)',
-                fontWeight: 'var(--font-weight-semibold)',
-                color: 'var(--avt-txt)',
-                lineHeight: '1.2',
-                letterSpacing: '-0.02em',
-                marginBottom: 'var(--avante-space-5)'
-              }}
-            >
-              {t('library.cta.title')}
-            </h2>
-
-            <p 
-              style={{ 
-                fontSize: '17px',
-                color: 'var(--avt-muted)',
-                marginBottom: 'var(--avante-space-10)',
-                lineHeight: '1.7'
-              }}
-            >
-              {t('library.cta.description')}
-            </p>
-
-            <div style={{
-              display: 'flex',
-              justifyContent: 'center'
-            }}>
-              <motion.a
-                href="https://avanteventures.substack.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ y: -2 }}
-                whileTap={{ scale: 0.98 }}
-                style={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  padding: '15px 34px',
-                  background: 'transparent',
-                  color: 'var(--avt-txt)',
-                  borderRadius: '999px',
-                  fontSize: '16px',
-                  fontWeight: 600,
-                  border: '1px solid rgba(244, 169, 58, 0.45)',
-                  cursor: 'pointer',
-                  textDecoration: 'none',
-                  transition: 'background 0.25s ease, border-color 0.25s ease',
-                  whiteSpace: 'nowrap'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = 'rgba(244, 169, 58, 0.10)';
-                  e.currentTarget.style.borderColor = 'rgba(244, 169, 58, 0.8)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = 'transparent';
-                  e.currentTarget.style.borderColor = 'rgba(244, 169, 58, 0.45)';
-                }}
-              >
-                {t('library.cta.button')}
-                <span className="avt-grad" aria-hidden style={{ fontWeight: 600 }}>→</span>
-              </motion.a>
-            </div>
-
-            <p style={{
-              fontSize: '13px',
-              color: 'var(--avt-meta)',
-              marginTop: 'var(--avante-space-5)',
-              fontStyle: 'italic',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: 'var(--avante-space-2)'
-            }}>
-              <span style={{ fontSize: '16px' }}>🔒</span>
-              {t('library.cta.note')}
-            </p>
-          </div>
-        </motion.section>
-
-      </div>
-
+          {listing.length > visibleCount && <div className="library-pagination"><span>{Math.min(listing.length, visibleCount)} / {listing.length}</span><button onClick={() => setVisibleCount(count => count + 12)}>{editorial.more} ↓</button></div>}
+        </section>
+        <section className="interior-closing"><div><span className="interior-kicker">Avante Intelligence</span><h2>{editorial.newsletter}</h2><p>{editorial.newsletterBody}</p><a className="interior-button" href="https://avanteventures.substack.com" target="_blank" rel="noopener noreferrer">{editorial.subscribe} ↗</a></div><img src="/world-assets/avante-A.svg" alt="" width="180" height="240" loading="lazy" /></section>
+      </main>
       <Footer />
-
-      <style>{`
-        @keyframes pulse {
-          0%, 100% { opacity: 1; }
-          50% { opacity: 0.5; }
-        }
-      `}</style>
     </div>
   );
 }

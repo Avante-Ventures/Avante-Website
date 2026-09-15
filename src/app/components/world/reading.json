@@ -1,0 +1,56 @@
+[
+  {
+    "slug": "brazil-ai-workspace-market-opportunity",
+    "category": "brazil",
+    "date": "2026-09-04",
+    "readTime": "13 min",
+    "en": {
+      "title": "Brazil AI Workspace Market: Why a Generic Copilot Underperforms Here",
+      "description": "The Brazil AI workspace market is real, but global copilots answer the wrong questions. CLT, SPED and NF-e are why the regulatory corpus is the product."
+    },
+    "pt": {
+      "title": "Mercado de IA no Ambiente de Trabalho no Brasil: Por Que um Copilot Genérico Rende Menos Aqui",
+      "description": "O mercado de IA no ambiente de trabalho no Brasil é real, mas o copilot global responde à pergunta errada. CLT, SPED e NF-e: o corpus é o produto."
+    },
+    "es": {
+      "title": "Mercado de IA en el Espacio de Trabajo en Brasil: Por Qué un Copilot Genérico Rinde Menos Aquí",
+      "description": "Mercado de IA en el espacio de trabajo en Brasil: el copilot global responde la pregunta equivocada. CLT, SPED y NF-e hacen del corpus el producto."
+    }
+  },
+  {
+    "slug": "brazil-generative-ai-bfsi-opportunity",
+    "category": "brazil",
+    "date": "2026-09-04",
+    "readTime": "14 min",
+    "en": {
+      "title": "Brazil Generative AI in BFSI: Pix and Open Finance Already Built the Substrate",
+      "description": "The Brazil generative AI in BFSI market runs on infrastructure the US lacks. Pix plus 208.79 million Open Finance consents make the data portable by law."
+    },
+    "pt": {
+      "title": "IA Generativa em BFSI no Brasil: Pix e Open Finance Já Construíram o Substrato",
+      "description": "O mercado de IA generativa em BFSI no Brasil roda sobre Pix e Open Finance. O dado financeiro é portátil por regulação, não por parceria."
+    },
+    "es": {
+      "title": "IA Generativa en BFSI en Brasil: Pix y Open Finance Ya Construyeron el Sustrato",
+      "description": "El mercado de IA generativa en BFSI en Brasil corre sobre un sustrato que no existe afuera. Open Finance vuelve el dato portátil por regulación, no por acuerdo."
+    }
+  },
+  {
+    "slug": "brazil-generative-ai-media-entertainment-opportunity",
+    "category": "brazil",
+    "date": "2026-09-04",
+    "readTime": "14 min",
+    "en": {
+      "title": "Brazil Generative AI in Media and Entertainment Market: The Rights Are the Moat",
+      "description": "Forecasts for the Brazil generative AI in media and entertainment market disagree by 50x. Where AI actually lands, and why the archive beats the model."
+    },
+    "pt": {
+      "title": "Mercado de IA Generativa em Mídia e Entretenimento no Brasil: O Moat São os Direitos",
+      "description": "O mercado de IA generativa em mídia e entretenimento no Brasil tem duas medições com 50x de diferença. Onde a IA entra e por que o acervo vence o modelo."
+    },
+    "es": {
+      "title": "Mercado de IA Generativa en Medios y Entretenimiento en Brasil: El Moat Son los Derechos",
+      "description": "El mercado de IA generativa en medios y entretenimiento en Brasil tiene dos cifras que difieren 50 veces. Dónde entra la IA y por qué el archivo gana."
+    }
+  }
+]

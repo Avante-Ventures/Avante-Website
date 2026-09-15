@@ -222,9 +222,9 @@ export function HeroV2A_Masthead() {
             <span style={{ opacity: 0.4 }}>·</span>
             <span style={{ whiteSpace: 'nowrap' }}>
               {pick(
-                'Operator-Led Venture Studio',
-                'Venture Studio Liderado por Operadores',
-                'Venture Studio Liderado por Operadores'
+                'Operator-Led Venture Builder',
+                'Venture Builder Liderado por Operadores',
+                'Venture Builder Liderado por Operadores'
               )}
             </span>
           </div>

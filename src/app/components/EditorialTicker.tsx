@@ -62,10 +62,10 @@ export function EditorialTicker() {
       role="marquee"
       aria-label={
         language === 'pt'
-          ? 'Métricas operacionais — Avante studio'
+          ? 'Métricas operacionais — Avante venture builder'
           : language === 'es'
-            ? 'Métricas operativas — Avante studio'
-            : 'Operating metrics — Avante studio'
+            ? 'Métricas operativas — Avante venture builder'
+            : 'Operating metrics — Avante venture builder'
       }
       style={{
         position: 'relative',

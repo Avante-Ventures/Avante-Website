@@ -1,7 +1,7 @@
 // /portfolio — full venture lineup, beyond the home hero strip.
 //
 // Purpose: a destination page anyone (LP, founder, partner) can land on and
-// immediately understand the studio's track record + active cohort. Avoids
+// immediately understand the venture builder's track record + active cohort. Avoids
 // the home-page constraint of "one editorial line" and shows actual breadth.
 
 import { useLanguage } from '@/app/hooks/useLanguage'
@@ -9,13 +9,20 @@ import { Navbar } from '@/app/components/Navbar'
 import { Footer } from '@/app/components/Footer'
 import { BackToTop } from '@/app/components/BackToTop'
 import { SEOHelmet } from '@/app/components/SEOHelmet'
+import { InteriorHero, InteriorClosing } from '@/app/components/interiors/InteriorHero'
 import { SectionMasthead } from '@/app/components/SectionMasthead'
 import { VenturePipeline } from '@/app/components/VenturePipeline'
 import { Reveal } from '@/app/components/Reveal'
 import { Link } from 'react-router'
+import { VENTURES as VENTURE_BRANDS } from '@/app/components/world/ventures'
+import { VentureProductPreview } from '@/app/components/world/EditorialHome'
+import { VentureCaseNotes } from '@/app/components/world/VentureCaseNotes'
+
+type Translate = (en: string, pt: string, es: string) => string
 
 // Ventures data — Round 9 restructure (full deck-aligned taxonomy).
-//   'cohort1'           = Avante studio Cohort 1 — active Year 1 builds
+//   'cohort1'           = selected Avante ventures (internal key retained)
+//   'operating-network' = engineering partner, without implying Avante ownership
 //   'discovery'         = discovery-phase venture being explored pre-Cohort
 //   'partner-cofounded' = boutiques co-founded by an Avante partner
 //   'us-building'       = ventures built by Jess + Andrea in the US (Mahway brand family)
@@ -27,8 +34,8 @@ interface Venture {
   name: string
   /** Render the first letter in the brand gradient (the αlphajuri nod). */
   gradFirst?: boolean
-  description: { en: string; pt: string }
-  status: 'cohort1' | 'discovery' | 'partner-cofounded' | 'us-building' | 'investing' | 'us-alumni'
+  description: { en: string; pt: string; es: string }
+  status: 'cohort1' | 'operating-network' | 'discovery' | 'partner-cofounded' | 'us-building' | 'investing' | 'us-alumni'
   accent: string
   url?: string
   /** Short category chip rendered in the card eyebrow row. */
@@ -48,9 +55,11 @@ const VENTURES: Venture[] = [
   // ─────────── COHORT 1 — ACTIVE ───────────
   {
     name: 'WIR',
+    url: VENTURE_BRANDS.risk.url,
     description: {
-      en: 'Async insurance pricing + risk scoring API. Top-tier global insurer pilot in motion (under NDA); reference architecture for InsurTech sales across LATAM.',
-      pt: 'API assíncrona de pricing e risk scoring para seguros. Piloto com seguradora global Tier-1 em andamento (sob NDA); arquitetura de referência para vendas InsurTech na LATAM.',
+      en: 'AI for insurance distribution, underwriting and claims, connected to the systems insurers already use.',
+      pt: 'IA para distribuição, subscrição e sinistros, integrada aos sistemas que as seguradoras já utilizam.',
+      es: 'IA para distribución, suscripción y siniestros, integrada con los sistemas que las aseguradoras ya utilizan.',
     },
     status: 'cohort1',
     accent: '#F9B437',
@@ -58,11 +67,12 @@ const VENTURES: Venture[] = [
     est: 'Est. 2025',
   },
   {
-    name: 'alphajuri',
-    gradFirst: true,
+    name: 'AlphaJuri',
+    url: VENTURE_BRANDS.legal.url,
     description: {
-      en: 'AI-native judicial asset platform for the Brazilian precatorios + claims market. Copilot-to-fund flywheel; built from scratch inside Cohort 1.',
-      pt: 'Plataforma AI-native de ativos judiciais para o mercado brasileiro de precatórios + claims. Flywheel copilot-to-fund; construído do zero dentro da Cohort 1.',
+      en: 'Anticipation of precatórios, RPVs and court-awarded legal fees for creditors and lawyers in Brazil.',
+      pt: 'Antecipação de precatórios, RPVs e honorários de sucumbência para credores e advogados no Brasil.',
+      es: 'Anticipación de precatórios, RPVs y honorarios judiciales para acreedores y abogados en Brasil.',
     },
     status: 'cohort1',
     accent: '#F4A261',
@@ -72,10 +82,11 @@ const VENTURES: Venture[] = [
   {
     name: 'FutureProofing Brazil',
     description: {
-      en: 'Senior AI engineers embedded inside legacy Brazilian companies — shipping AI into the core business. Already working with several companies.',
-      pt: 'Engenheiros de IA sênior dentro de empresas tradicionais no Brasil — levando IA ao núcleo do negócio. Já trabalhando com várias empresas.',
+      en: 'Engineering partner in Avante’s operating network. Connects companies with experienced AI engineers through Futureproofing.dev.',
+      pt: 'Parceiro de engenharia na rede operacional da Avante. Conecta empresas a engenheiros experientes em IA por meio da Futureproofing.dev.',
+      es: 'Socio de ingeniería en la red operativa de Avante. Conecta empresas con ingenieros experimentados en IA a través de Futureproofing.dev.',
     },
-    status: 'cohort1',
+    status: 'operating-network',
     accent: '#ec5f72',
     tag: 'AI Engineering',
     est: 'Est. 2024',
@@ -86,9 +97,10 @@ const VENTURES: Venture[] = [
     description: {
       en: 'Builds in real estate auctions: scraping, enriching, and scoring properties, where the dataset compounds as coverage grows.',
       pt: 'Constrói em leilões imobiliários: scrape, enriquecimento e scoring de imóveis, onde o conjunto de dados melhora conforme a cobertura cresce.',
+      es: 'Inteligencia para subastas inmobiliarias en Brasil. Recopila, enriquece y evalúa información de propiedades.',
     },
     status: 'discovery',
-    accent: '#4FA3A5',
+    accent: '#B05B8D',
     tag: 'Real Estate Auctions',
   },
   // ─────────── PARTNER CO-FOUNDED ───────────
@@ -97,6 +109,7 @@ const VENTURES: Venture[] = [
     description: {
       en: 'AI-native technology platform and financial company based in Brazil that specializes in originating, structuring, and distributing private credit. Co-founded by Felipe Moraes.',
       pt: 'Plataforma tecnológica e empresa financeira AI-native baseada no Brasil, especializada em originar, estruturar e distribuir crédito privado. Co-fundada por Felipe Moraes.',
+      es: 'Plataforma tecnológica y empresa financiera AI-native en Brasil, especializada en originar, estructurar y distribuir crédito privado. Cofundada por Felipe Moraes.',
     },
     status: 'partner-cofounded',
     accent: '#F4A261',
@@ -115,6 +128,7 @@ const VENTURES: Venture[] = [
     description: {
       en: 'AI foundational model that understands and aligns with human behaviour, preferences, biology, and ethics. Built by Jess Mah + Andrea Barrica inside Mahway; flagship of the US Building track.',
       pt: 'Modelo fundacional de IA que entende e se alinha com comportamento, preferências, biologia e ética humanas. Construído por Jess Mah + Andrea Barrica dentro da Mahway; flagship do track US Building.',
+      es: 'Modelo fundacional de IA orientado al comportamiento, las preferencias, la biología y la ética humanas. Desarrollado por Jess Mah y Andrea Barrica dentro de Mahway.',
     },
     status: 'us-building',
     accent: '#a8429b',
@@ -127,6 +141,7 @@ const VENTURES: Venture[] = [
     description: {
       en: 'Turns breakthrough science into high-upside biotech ventures via a holding company model. US-side venture in the Mahway operating family.',
       pt: 'Transforma ciência de fronteira em ventures de biotech de alto potencial via modelo de holding company. Venture americana na família operacional Mahway.',
+      es: 'Desarrolla empresas de biotecnología a partir de avances científicos mediante un modelo de holding. Forma parte de la actividad de Mahway en Estados Unidos.',
     },
     status: 'us-building',
     accent: '#ec5f72',
@@ -139,6 +154,7 @@ const VENTURES: Venture[] = [
     description: {
       en: 'Fintech platform that originates, bundles, and sells equity in litigation finance portfolios, opening access to a $16B+ asset class.',
       pt: 'Plataforma fintech que origina, agrega e vende equity em portfólios de litigation finance, abrindo acesso a uma classe de ativos de $16B+.',
+      es: 'Plataforma financiera que origina y agrupa carteras de financiación de litigios y permite invertir en ellas.',
     },
     status: 'us-building',
     accent: '#E6C54C',
@@ -152,6 +168,7 @@ const VENTURES: Venture[] = [
     description: {
       en: 'Brazil\'s largest food-delivery unicorn. Tech holding comprising iFood, Wavy, and Playkids. Innova first invested in Movile in 2014; participated in several rounds and secondary investments. Exit 2021 at 80% market share, 55M users/month.',
       pt: 'O maior unicórnio de delivery do Brasil. Holding tecnológica composta por iFood, Wavy e Playkids. Innova investiu pela primeira vez em 2014; participou de várias rodadas e secundários. Exit em 2021 com 80% de market share e 55M de usuários/mês.',
+      es: 'Holding tecnológica brasileña de iFood, Wavy y Playkids. Innova invirtió por primera vez en Movile en 2014 y participó en rondas posteriores y operaciones secundarias. Forma parte de la experiencia de inversión del equipo anterior a Avante.',
     },
     status: 'investing',
     accent: '#ec5f72',
@@ -164,6 +181,7 @@ const VENTURES: Venture[] = [
     description: {
       en: '#1 enterprise asset management (EAM) field service solution in Brazil and one of the largest EAM companies globally. Mobile-native, SAP-integrated; sold into mining, paper, energy.',
       pt: 'Solução #1 em enterprise asset management (EAM) field service no Brasil e uma das maiores empresas EAM globalmente. Mobile-native, integrada com SAP; vendida para mineração, papel, energia.',
+      es: 'Software de gestión de activos y trabajo de campo integrado con SAP, para industrias como minería, papel y energía. Inversión de la etapa Innova, anterior a Avante.',
     },
     status: 'investing',
     accent: '#98509A',
@@ -176,6 +194,7 @@ const VENTURES: Venture[] = [
     description: {
       en: 'Platform for retailers and manufacturers, providing end-to-end advanced analytics and execution management.',
       pt: 'Plataforma para varejistas e fabricantes, oferecendo analytics avançado end-to-end e gestão de execução.',
+      es: 'Plataforma para comercios y fabricantes que ofrece análisis de datos y gestión de la ejecución. Inversión de la etapa Innova, anterior a Avante.',
     },
     status: 'investing',
     accent: '#F18B46',
@@ -187,8 +206,9 @@ const VENTURES: Venture[] = [
   {
     name: 'inDinero',
     description: {
-      en: 'Profitable company with 200+ clients in the USA, connecting finance teams with offshoring accounting solutions. Founded by Jess Mah pre-Avante; reference operator track record for the studio.',
-      pt: 'Empresa rentável com mais de 200 clientes nos EUA, conectando times de finanças com soluções de contabilidade offshore. Fundada por Jess Mah pré-Avante; track record de referência operacional para o studio.',
+      en: 'Profitable company with 200+ clients in the USA, connecting finance teams with offshoring accounting solutions. Founded by Jess Mah pre-Avante; reference operator track record for the venture builder.',
+      pt: 'Empresa rentável com mais de 200 clientes nos EUA, conectando times de finanças com soluções de contabilidade offshore. Fundada por Jess Mah pré-Avante; track record de referência operacional para o venture builder.',
+      es: 'Empresa rentable con más de 200 clientes en Estados Unidos que conecta equipos financieros con servicios contables. Fundada por Jess Mah antes de Avante.',
     },
     status: 'us-alumni',
     accent: '#7B68EE',
@@ -202,26 +222,26 @@ const SEO = {
   en: {
     title: 'Portfolio — Avante Ventures',
     description:
-      'The full Avante portfolio: realized exits, active cohort, and alumni ventures from our partner team. From Sigga (10× exit) to Mahway, WIR, and beyond.',
+      'Explore AlphaJuri and WIR, selected Avante ventures. Discover our operating network and the team’s separate company-building and prior investment experience.',
     inLanguage: 'en',
   },
   pt: {
     title: 'Portfólio — Avante Ventures',
     description:
-      'O portfólio completo da Avante: exits realizados, cohort ativa e ventures alumni do nosso time de partners. Da Sigga (exit 10×) à Mahway, WIR e além.',
+      'Conheça AlphaJuri e WIR, ventures selecionados da Avante, nossa rede operacional e a experiência própria do time em empresas e investimentos anteriores.',
     inLanguage: 'pt-BR',
   },
   es: {
     title: 'Portafolio — Avante Ventures',
     description:
-      'El portafolio completo de Avante: exits realizados, cohort activa y ventures alumni de nuestro equipo de partners. Desde Sigga (exit 10×) a Mahway, WIR y más allá.',
+      'Conoce AlphaJuri y WIR, empresas seleccionadas de Avante, nuestra red operativa y la experiencia independiente del equipo en empresas e inversiones anteriores.',
     inLanguage: 'es',
   },
 } as const
 
 export default function PortfolioPage() {
   const { language } = useLanguage()
-  const t = (en: string, pt: string) => (language === 'pt' ? pt : en)
+  const t: Translate = (en, pt, es) => ({ en, pt, es })[language]
   const copy = SEO[language] ?? SEO.en
 
   const jsonLd = {
@@ -237,7 +257,7 @@ export default function PortfolioPage() {
   }
 
   return (
-    <div style={{ minHeight: '100vh', backgroundColor: 'var(--avt-ink)' }}>
+    <div className="avante-interior">
       <SEOHelmet
         title={copy.title}
         description={copy.description}
@@ -247,42 +267,23 @@ export default function PortfolioPage() {
       <Navbar />
       <BackToTop />
 
-      <div
-        style={{
-          maxWidth: '1200px',
-          margin: '0 auto',
-          padding: 'var(--avt-page-pad-top) var(--avt-page-pad-x) var(--avt-page-pad-bottom)',
-        }}
-      >
-        <Link
-          to={`/${language}`}
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '8px',
-            color: 'rgba(255, 255, 255, 0.55)',
-            textDecoration: 'none',
-            fontSize: '14px',
-            marginBottom: '32px',
-            transition: 'color 0.2s ease',
-          }}
-          onMouseEnter={(e) => (e.currentTarget.style.color = '#F9B437')}
-          onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255, 255, 255, 0.55)')}
-        >
-          ← {t('Back to home', 'Voltar ao início')}
-        </Link>
-
-        <SectionMasthead
-          eyebrow={t('Portfolio · Year 1 of Building', 'Portfólio · Ano 1 de Building')}
-          title={t(
-            'Our Ventures, and our Track Record.',
-            'Nossas Ventures, e nosso Track Record.'
-          )}
-          description={t(
-            'Cohort 1 is live (WIR, alphajuri, FutureProofing). Below: every venture this team has built, co-founded, or invested in, from Innova-era tickets in 2014 (iFood, Sigga, Accera) to today\'s active US Building track (Mahway, Astonishing Labs, Alpha Lit) and the Avante studio cohort.',
-            'Cohort 1 está ativa (WIR, alphajuri, FutureProofing). Abaixo: cada venture que este time construiu, co-fundou ou investiu, dos cheques da era Innova em 2014 (iFood, Sigga, Accera) ao track US Building ativo hoje (Mahway, Astonishing Labs, Alpha Lit) e a cohort do studio Avante.'
-          )}
-        />
+      <main>
+        <InteriorHero kind="ventures" eyebrow={t('Our ventures', 'Nossos ventures', 'Nuestros ventures')}
+          title={<>{t('Conviction,', 'Convicção,', 'Convicción,')}<br />{t('made tangible.', 'em construção.', 'hecha realidad.')}</>}
+          description={t('Explore AlphaJuri and WIR. Real problems, companies built around them, and the work behind each one.', 'Conheça AlphaJuri e WIR. Problemas reais, empresas criadas para resolvê-los e o trabalho por trás de cada uma.', 'Conoce AlphaJuri y WIR. Problemas reales, empresas creadas para resolverlos y el trabajo detrás de cada una.')} />
+        <div className="interior-content" id="page-content">
+        <div className="portfolio-exhibits">
+          {(['legal', 'risk'] as const).map(kind => (
+            <details open key={kind} id={kind === 'legal' ? 'venture-alphajuri' : 'venture-wir'} className="portfolio-exhibit-detail">
+              <summary>
+                <span>{kind === 'legal' ? 'AlphaJuri' : 'WIR'}</span>
+                <span>{language === 'pt' ? 'Conheça a empresa' : language === 'es' ? 'Conoce la empresa' : 'Discover the company'} ↗</span>
+              </summary>
+              <VentureProductPreview kind={kind} />
+              <VentureCaseNotes kind={kind} language={language} />
+            </details>
+          ))}
+        </div>
 
         {/* (1) BY THE NUMBERS — panoramic strip right after the masthead.
             Anchors the visitor with operating scale before they scroll into
@@ -290,10 +291,7 @@ export default function PortfolioPage() {
             so it reads as a "headline summary," not chrome. */}
         <PortfolioSummaryStrip t={t} />
 
-        {/* (4) FEATURED ANCHOR — Sigga gets its own hero card before the
-            grid. It's the strongest single proof point we have (10× exit,
-            Amanda on board through scale + exit). Treating it as one of six
-            "regular" cards buried the most important data. */}
+        {/* Prior Innova investment experience, explicitly separate from Avante ventures. */}
         <SiggaAnchorCard language={language} t={t} />
 
         {/* (3) GROUPED VENTURE SECTIONS — replaces the 5-dot legend +
@@ -302,12 +300,13 @@ export default function PortfolioPage() {
             mini-masthead so the eye understands the taxonomy. */}
         {(
           [
-            { status: 'cohort1', label: t('Cohort 1', 'Cohort 1'), accent: '#F9B437' },
-            { status: 'discovery', label: t('Discovery', 'Discovery'), accent: '#4FA3A5' },
-            { status: 'partner-cofounded', label: t('Partner Co-founded', 'Co-fundada por Partner'), accent: '#F4A261' },
-            { status: 'us-building', label: t('US Building Track Record', 'Track Record US Building'), accent: '#a8429b' },
-            { status: 'investing', label: t('Investing Track Record', 'Track Record de Investimento'), accent: '#ec5f72' },
-            { status: 'us-alumni', label: t('US Alumni', 'Alumni EUA'), accent: '#7B68EE' },
+            { status: 'cohort1', label: t('Selected Avante ventures', 'Ventures selecionados da Avante', 'Empresas seleccionadas de Avante'), accent: '#98509A' },
+            { status: 'operating-network', label: t('Operating network', 'Rede operacional', 'Red operativa'), accent: '#ec5f72' },
+            { status: 'discovery', label: t('Discovery', 'Em exploração', 'En exploración'), accent: '#B05B8D' },
+            { status: 'partner-cofounded', label: t('Companies co-founded by partners', 'Empresas cofundadas pelos sócios', 'Empresas cofundadas por socios'), accent: '#F4A261' },
+            { status: 'us-building', label: t('Partners’ US company-building experience', 'Experiência dos sócios em empresas nos EUA', 'Experiencia de los socios creando empresas en EE. UU.'), accent: '#a8429b' },
+            { status: 'investing', label: t('Prior investments at Innova', 'Investimentos anteriores na Innova', 'Inversiones anteriores en Innova'), accent: '#ec5f72' },
+            { status: 'us-alumni', label: t('Companies founded before Avante', 'Empresas fundadas antes da Avante', 'Empresas fundadas antes de Avante'), accent: '#7B68EE' },
           ] as const
         ).map((group, gi) => {
           const ventures = VENTURES.filter((v) => v.status === group.status)
@@ -326,7 +325,8 @@ export default function PortfolioPage() {
                   <VentureCard
                     key={v.name}
                     venture={v}
-                    body={v.description[language === 'es' ? 'en' : language]}
+                    body={v.description[language]}
+                    language={language}
                   />
                 ))}
               </div>
@@ -341,8 +341,7 @@ export default function PortfolioPage() {
             padding: '32px',
             background: 'rgba(255, 255, 255, 0.02)',
             border: '1px solid rgba(255, 255, 255, 0.06)',
-            borderLeft: '3px solid #F9B437',
-            borderRadius: '12px',
+            borderRadius: '2px',
           }}
         >
           <p
@@ -351,42 +350,31 @@ export default function PortfolioPage() {
               lineHeight: 1.7,
               color: 'rgba(255, 255, 255, 0.75)',
               margin: 0,
-              fontStyle: 'italic',
             }}
           >
             {t(
-              'We launch 3–4 new ventures per year inside the studio. The active cohort listed here is intentionally narrow, a discipline, not a scarcity. New cohort additions are introduced after a venture has cleared Stage 3 (Build) of the playbook.',
-              'Lançamos 3–4 novas ventures por ano dentro do studio. A cohort ativa aqui listada é deliberadamente enxuta, uma disciplina, não escassez. Novas ventures aparecem na lista depois de passar pelo Estágio 3 (Build) do playbook.'
+              'The venture builder’s operating model is built around 3-4 ventures per year. The selections above describe different relationships: Avante ventures, engineering partners, independently built companies and prior investments. Partner experience is attributed to the person and firm involved.',
+              'O modelo operacional do venture builder prevê 3-4 ventures por ano. A seleção acima distingue ventures da Avante, parceiros de engenharia, empresas independentes e investimentos anteriores. A experiência dos sócios é atribuída à pessoa e à firma envolvidas.',
+              'El modelo operativo del venture builder contempla 3-4 empresas por año. La selección anterior distingue empresas de Avante, socios de ingeniería, empresas independientes e inversiones anteriores. La experiencia de los socios se atribuye a la persona y a la firma involucradas.'
             )}
           </p>
         </div>
 
-        {/* TRACK RECORD section — relocated from home (ProofSection).
-            10× / 4× / $500MM+ + 5× / 90% are studio-level proof points
-            and belong with the venture data, not with the marketing
-            home flow.                                                      */}
-        {/* Round 9: Track Record metrics + Early Signals + Timeline removed.
-            Those datapoints now live inside the venture cards above
-            (Investing Track Record group carries Sigga MOI 11×, Accera 5×,
-            iFood Exit 2021). Avoids duplicate proof and keeps the page
-            focused on cards. */}
-
-        {/* PIPELINE section — relocated from home. The pipeline ventures
-            (Pulse.ai, RADAR.ai, ROTA.ai) belong on the portfolio page
-            alongside the realized + active cohort, not as a separate home
-            section.                                                        */}
+        {/* Research areas carry no inferred launch dates or progress metrics. */}
         <section style={{ marginTop: '96px' }}>
           <SectionMasthead
             centered
             compact
-            eyebrow={t('New Ventures', 'Novas Ventures')}
+            eyebrow={t('Discovery', 'Em exploração', 'En exploración')}
             title={t(
-              'Next wave of AI-native category leaders.',
-              'A próxima onda de líderes de categoria AI-native.'
+              'Questions worth building around.',
+              'Perguntas que merecem uma empresa.',
+              'Preguntas que merecen una empresa.'
             )}
             description={t(
-              'Ventures currently in Stage 1–3 of the playbook (Research / Partner / Build). Names and details may shift before public launch.',
-              'Ventures atualmente nos Estágios 1–3 do playbook (Research / Partner / Build). Nomes e detalhes podem mudar antes do lançamento público.'
+              'Discovery starts with a market, a workflow and a question. These areas describe the work we investigate before defining a new company.',
+              'A exploração começa por um mercado, um fluxo de trabalho e uma pergunta. Estas áreas descrevem o que investigamos antes de definir uma nova empresa.',
+              'La exploración empieza por un mercado, un flujo de trabajo y una pregunta. Estas áreas describen lo que investigamos antes de definir una nueva empresa.'
             )}
           />
           <div style={{ marginTop: '32px' }}>
@@ -409,8 +397,9 @@ export default function PortfolioPage() {
             }}
           >
             {t(
-              'Pipeline ventures are pre-launch: names, taglines, and scope are subject to change as theses sharpen. Track Record above reflects realized outcomes from the founding team\'s prior work, not Pipeline performance.',
-              'Ventures de pipeline estão pré-lançamento: nomes, taglines e escopo podem mudar conforme as teses afinam. O Track Record acima reflete resultados realizados do trabalho prévio do time fundador, não performance do Pipeline.'
+              'Research themes describe areas of inquiry. Company formation and launch dates are announced only when confirmed.',
+              'Temas de pesquisa descrevem áreas de investigação. A formação de empresas e as datas de lançamento são anunciadas quando confirmadas.',
+              'Los temas de investigación describen áreas de estudio. La creación de empresas y las fechas de lanzamiento se anuncian cuando están confirmadas.'
             )}
           </p>
         </section>
@@ -432,12 +421,14 @@ export default function PortfolioPage() {
               gap: '8px',
             }}
           >
-            {t('Read the Sigga case study', 'Leia o estudo de caso da Sigga')}
+            {t('Read the Sigga case study', 'Leia o estudo de caso da Sigga', 'Lee el caso de Sigga')}
             <span className="avt-grad" aria-hidden style={{ fontWeight: 600 }}>→</span>
           </Link>
         </div>
       </div>
 
+      <InteriorClosing />
+      </main>
       <Footer />
     </div>
   )
@@ -447,8 +438,16 @@ export default function PortfolioPage() {
 // est year, body, optional backers strip, optional highlight metric.
 // Replaces the generic EditorialCard for the portfolio grid because we
 // now have multi-field data per venture.
-function VentureCard({ venture, body }: { venture: Venture; body: string }) {
-  const isCohort1 = venture.status === 'cohort1'
+function VentureCard({ venture, body, language }: { venture: Venture; body: string; language: 'en' | 'pt' | 'es' }) {
+  const t: Translate = (en, pt, es) => ({ en, pt, es })[language]
+  const tags: Record<string, [string, string, string]> = {
+    'AI Engineering': ['AI engineering', 'Engenharia de IA', 'Ingeniería de IA'],
+    'Real Estate Auctions': ['Real estate auctions', 'Leilões imobiliários', 'Subastas inmobiliarias'],
+    'Tech Holding': ['Technology holding', 'Holding de tecnologia', 'Holding de tecnología'],
+    'Maintenance SaaS': ['Maintenance software', 'Software de manutenção', 'Software de mantenimiento'],
+    'Retail Tech': ['Retail technology', 'Tecnologia para varejo', 'Tecnología para comercios'],
+    Finance: ['Finance', 'Finanças', 'Finanzas'],
+  }
   return (
     <div
       style={{
@@ -487,20 +486,7 @@ function VentureCard({ venture, body }: { venture: Venture; body: string }) {
         }}
       >
         <div style={{ display: 'inline-flex', alignItems: 'center', gap: '10px' }}>
-          {isCohort1 && (
-            <span
-              aria-hidden
-              style={{
-                width: '6px',
-                height: '6px',
-                borderRadius: '99px',
-                background: '#ec5f72',
-                boxShadow: '0 0 10px #ec5f72',
-                animation: 'navPulse 2s ease-in-out infinite',
-                display: 'inline-block',
-              }}
-            />
-          )}
+
           {venture.tag && (
             <span
               style={{
@@ -515,23 +501,10 @@ function VentureCard({ venture, body }: { venture: Venture; body: string }) {
                 borderRadius: '99px',
               }}
             >
-              {venture.tag}
+              {tags[venture.tag] ? t(...tags[venture.tag]) : venture.tag}
             </span>
           )}
-          {venture.est && (
-            <span
-              style={{
-                fontFamily: 'var(--avt-font-body)',
-                fontSize: '11px',
-                fontWeight: 600,
-                letterSpacing: '0.08em',
-                textTransform: 'uppercase',
-                color: 'var(--avt-meta)',
-              }}
-            >
-              {venture.est}
-            </span>
-          )}
+
         </div>
         {venture.highlight && (
           <span
@@ -547,7 +520,7 @@ function VentureCard({ venture, body }: { venture: Venture; body: string }) {
               whiteSpace: 'nowrap',
             }}
           >
-            {venture.highlight}
+            {venture.highlight.replace('Exit', t('Exit', 'Saída', 'Salida'))}
           </span>
         )}
       </div>
@@ -596,7 +569,7 @@ function VentureCard({ venture, body }: { venture: Venture; body: string }) {
               whiteSpace: 'nowrap',
             }}
           >
-            {venture.altBrand}
+            {venture.altBrand === 'by Mahway' ? t('by Mahway', 'da Mahway', 'de Mahway') : venture.altBrand}
           </span>
         )}
       </div>
@@ -612,6 +585,10 @@ function VentureCard({ venture, body }: { venture: Venture; body: string }) {
       >
         {body}
       </p>
+
+      {venture.url && <a href={venture.url} target="_blank" rel="noopener noreferrer" aria-label={`${t('Visit website', 'Visite o site', 'Visita el sitio')}: ${venture.name}`} style={{ display: 'inline-flex', alignItems: 'center', alignSelf: 'flex-start', minHeight: 44, gap: 16, color: '#eef0f7', borderBottom: '1px solid #b8bfd755', fontSize: 13 }}>
+        {new URL(venture.url).hostname.replace(/^www\./, '')}<span aria-hidden="true">↗</span>
+      </a>}
 
       {/* Backers — small caps line at the bottom when present */}
       {venture.backers && (
@@ -631,7 +608,7 @@ function VentureCard({ venture, body }: { venture: Venture; body: string }) {
         >
           <span style={{ color: 'var(--avt-meta)', opacity: 0.7 }}>
             {/* Small "Backed by" prefix kept short to give the names room */}
-            Backed by:&nbsp;
+            {t('Backed by', 'Apoiada por', 'Respaldada por')}:&nbsp;
           </span>
           <span style={{ color: 'var(--avt-muted)', textTransform: 'none', letterSpacing: '0.02em', fontWeight: 500 }}>
             {venture.backers}
@@ -642,31 +619,15 @@ function VentureCard({ venture, body }: { venture: Venture; body: string }) {
   )
 }
 
-function StatusKey({ label, dot }: { label: string; dot: string }) {
-  return (
-    <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
-      <span
-        style={{
-          display: 'inline-block',
-          width: '8px',
-          height: '8px',
-          borderRadius: '50%',
-          background: dot,
-          boxShadow: `0 0 8px ${dot}80`,
-        }}
-      />
-      <span>{label}</span>
-    </div>
-  )
-}
+
 
 // (2) Summary strip — Round 9 update with deck-aligned framing.
-function PortfolioSummaryStrip({ t }: { t: (en: string, pt: string) => string }) {
+function PortfolioSummaryStrip({ t }: { t: Translate }) {
   const items: Array<{ value: string; label: string }> = [
-    { value: t('Year 1', 'Ano 1'), label: t('of Building', 'de Building') },
-    { value: '2', label: t('Ventures · Cohort 1', 'Ventures · Cohort 1') },
-    { value: t('Since 2010', 'Desde 2010'), label: t('Building & Investing', 'Building & Investing') },
-    { value: '$500M+', label: t('Deployed lifetime', 'Investidos historicamente') },
+    { value: t('Brazil', 'Brasil', 'Brasil'), label: t('Venture builder roots', 'Raízes do venture builder', 'Origen del venture builder') },
+    { value: String(VENTURES.filter(v => v.status === 'cohort1').length), label: t('Selected Avante ventures', 'Ventures selecionados da Avante', 'Empresas seleccionadas de Avante') },
+    { value: 'Innova', label: t('Team’s prior investment experience', 'Experiência anterior do time em investimentos', 'Experiencia previa del equipo en inversiones') },
+    { value: 'USD 500M+', label: t('Under management in Amanda Pinheiro’s prior roles at Innova and Unbox', 'Sob gestão na trajetória de Amanda Pinheiro na Innova e Unbox', 'Bajo gestión en la trayectoria de Amanda Pinheiro en Innova y Unbox') },
   ]
   return (
     <div
@@ -733,7 +694,7 @@ function SiggaAnchorCard({
   t,
 }: {
   language: 'en' | 'pt' | 'es'
-  t: (en: string, pt: string) => string
+  t: Translate
 }) {
   return (
     <div
@@ -745,7 +706,7 @@ function SiggaAnchorCard({
         background:
           'linear-gradient(135deg, rgba(152, 80, 154, 0.10) 0%, rgba(66, 70, 140, 0.04) 60%, transparent 100%), var(--avt-ink-2)',
         padding: 'clamp(28px, 4vw, 48px)',
-        borderRadius: '14px',
+        borderRadius: '2px',
       }}
     >
       {/* Decorative glow */}
@@ -789,7 +750,7 @@ function SiggaAnchorCard({
               marginBottom: '12px',
             }}
           >
-            {t('Realized Exit · 2022', 'Exit Realizado · 2022')}
+            {t('Prior investment · Innova', 'Investimento anterior · Innova', 'Inversión anterior · Innova')}
           </div>
           <div
             style={{
@@ -833,10 +794,10 @@ function SiggaAnchorCard({
             }}
           >
             {language === 'pt'
-              ? 'Software industrial para o mid-market brasileiro. Amanda Pinheiro no Conselho durante todo o ciclo de escala e exit. A tese, a paciência operacional e o pool de exit não-óbvio que aprendemos com Sigga são a base do playbook Avante.'
+              ? 'Software industrial para empresas brasileiras. A Sigga faz parte da experiência anterior de investimento do time na Innova, antes da Avante. Esse trabalho em investimento e governança informa como construímos hoje.'
               : language === 'es'
-                ? 'Software industrial para el mid-market brasileño. Amanda Pinheiro en el Consejo durante todo el ciclo de escala y exit. La tesis, la paciencia operativa y el pool de exit no-obvio que aprendimos con Sigga son la base del playbook Avante.'
-                : "Industrial software for Brazilian mid-market operators. Amanda Pinheiro on the Board through the full scale-and-exit arc. The thesis, the operating patience, and the non-obvious exit pool we learned at Sigga are the foundation of the Avante playbook."}
+                ? 'Software industrial para empresas brasileñas. Sigga forma parte de la experiencia de inversión del equipo en Innova, anterior a Avante. Ese trabajo en inversión y gobierno corporativo informa cómo construimos hoy.'
+                : 'Industrial software for Brazilian companies. Sigga belongs to the team’s prior investment experience at Innova, before Avante. That work in investment and governance informs how we build today.'}
           </p>
           <Link
             to={`/${language}/library/sigga-case-study-10x-exit`}
@@ -864,7 +825,7 @@ function SiggaAnchorCard({
               e.currentTarget.style.background = 'transparent'
             }}
           >
-            {t('Read the case study', 'Leia o estudo de caso')}
+            {t('Read the case study', 'Leia o estudo de caso', 'Lee el caso')}
             <span aria-hidden>↗</span>
           </Link>
         </div>
@@ -894,17 +855,7 @@ function GroupHeader({ label, accent, count }: { label: string; accent: string; 
       }}
     >
       <div style={{ display: 'inline-flex', alignItems: 'center', gap: '12px' }}>
-        <span
-          aria-hidden
-          style={{
-            display: 'inline-block',
-            width: '10px',
-            height: '10px',
-            borderRadius: '50%',
-            background: accent,
-            boxShadow: `0 0 12px ${accent}AA`,
-          }}
-        />
+
         <h3
           style={{
             fontFamily: 'var(--avt-font-display)',
@@ -938,13 +889,13 @@ function GroupHeader({ label, accent, count }: { label: string; accent: string; 
 // (3) Horizontal timeline — anchors the track record metrics in continuous
 // chronology. Each milestone is a dot on a hairline gradient line, with
 // year + label below. Reads as a decade of operating + investing history.
-function PortfolioTimeline({ t }: { t: (en: string, pt: string) => string }) {
+function PortfolioTimeline({ t }: { t: Translate }) {
   const milestones: Array<{ year: string; label: string; accent: string }> = [
-    { year: '2014', label: t('iFood (early ticket)', 'iFood (cheque inicial)'), accent: '#42468C' },
-    { year: '2018', label: t('Accera · 4× MOI', 'Accera · 4× MOI'), accent: '#F18B46' },
-    { year: '2022', label: t('Sigga · 10× exit', 'Sigga · exit 10×'), accent: '#98509A' },
-    { year: '2024', label: t('Avante founded', 'Avante fundada'), accent: '#F9B437' },
-    { year: '2026', label: t('Cohort 1 live', 'Cohort 1 ativa'), accent: '#ec5f72' },
+    { year: '2014', label: t('iFood (early investment)', 'iFood (investimento inicial)', 'iFood (inversión inicial)'), accent: '#42468C' },
+    { year: '2018', label: t('Accera · 4× MOI', 'Accera · 4× MOI', 'Accera · 4× MOI'), accent: '#F18B46' },
+    { year: '2022', label: t('Sigga · 10× exit', 'Sigga · saída 10×', 'Sigga · salida 10×'), accent: '#98509A' },
+    { year: '2024', label: t('Avante founded', 'Avante fundada', 'Fundación de Avante'), accent: '#F9B437' },
+    { year: '2026', label: t('Selected Avante ventures', 'Ventures selecionados do venture builder', 'Empresas seleccionadas del venture builder'), accent: '#ec5f72' },
   ]
   return (
     <div style={{ marginTop: '40px', marginBottom: '48px', position: 'relative', padding: '0 8px' }}>
@@ -985,11 +936,11 @@ function PortfolioTimeline({ t }: { t: (en: string, pt: string) => string }) {
               aria-hidden
               style={{
                 display: 'inline-block',
-                width: '12px',
+                width: '2px',
                 height: '12px',
-                borderRadius: '50%',
+                borderRadius: 0,
                 background: m.accent,
-                boxShadow: `0 0 12px ${m.accent}AA`,
+
                 marginTop: '8px',
               }}
             />
@@ -1031,4 +982,3 @@ function PortfolioTimeline({ t }: { t: (en: string, pt: string) => string }) {
     </div>
   )
 }
-

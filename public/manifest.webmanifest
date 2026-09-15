@@ -1,7 +1,7 @@
 {
   "name": "Avante Ventures",
   "short_name": "Avante",
-  "description": "AI-native venture studio. Silicon Valley Playbooks. Brazil-Native Execution.",
+  "description": "AI-native venture builder. Silicon Valley Playbooks. Brazil-Native Execution.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#151E35",
