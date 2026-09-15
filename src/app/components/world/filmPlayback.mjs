@@ -16,18 +16,41 @@ export function dampProgress(current, target, elapsed) {
   return Math.abs(next - target) < 0.00005 ? target : next;
 }
 
+// A fast swipe must still show both dissolves. Integrating in travel-time space
+// gives each handoff a minimum duration, in either direction and at any FPS.
+const SCROLL_PHASES = [[.34, .22], [.70, 1.4], [.86, .16], [1, .6]];
+function scrollCoordinate(value, inverse = false) {
+  let position = 0, time = 0;
+  for (const [end, speed] of SCROLL_PHASES) {
+    const duration = (end - position) / speed;
+    if (inverse ? value <= time + duration : value <= end) {
+      return inverse ? position + (value - time) * speed : time + (value - position) / speed;
+    }
+    time += duration; position = end;
+  }
+  return inverse ? 1 : time;
+}
+export function advanceScrollJourney(current, target, elapsed) {
+  const from = scrollCoordinate(clamp(current)), to = scrollCoordinate(clamp(target));
+  let remaining = Math.abs(to - from);
+  const linear = Math.min(Math.max(0, elapsed), Math.max(0, remaining - .08));
+  remaining = (remaining - linear) * Math.exp(-Math.max(0, elapsed - linear) / .08);
+  const next = scrollCoordinate(to - Math.sign(to - from) * remaining, true);
+  return Math.abs(next - target) < .00005 ? target : clamp(next);
+}
+
 // Scrolling reveals the film; it does not step through still frames. A visitor
 // entering São Paulo without Watch gets the entire take from its first frame.
 export function filmIntent(progress, guided, ambientAllowed) {
   if (guided) return { progress, playing: true, rate: undefined };
-  if (ambientAllowed && progress >= FILM_START && progress < .85) return { progress: FILM_START, playing: true, rate: 1 };
+  if (ambientAllowed && progress >= FILM_START && progress < FILM_END) return { progress: FILM_START, playing: true, rate: 1 };
   return { progress, playing: false, rate: undefined };
 }
 
 // Resume from the decoded frame, which can be ahead of or behind scroll progress.
 export function resumeJourney(progress, media) {
   if (progress >= .95) return 0;
-  if (progress < FILM_START || progress >= .85 || !media || !Number.isFinite(media.duration) || media.duration <= 0) return progress;
+  if (progress < FILM_START || progress >= FILM_END || !media || !Number.isFinite(media.duration) || media.duration <= 0) return progress;
   if (media.ended || media.currentTime >= media.duration - 1 / 30) return FILM_START;
   return FILM_START + clamp(media.currentTime / media.duration) * (FILM_END - FILM_START);
 }

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { advanceJourney, createFilmPlayback, dampProgress, filmIntent, resumeJourney } from '../src/app/components/world/filmPlayback.mjs';
+import { advanceJourney, advanceScrollJourney, createFilmPlayback, dampProgress, filmIntent, resumeJourney } from '../src/app/components/world/filmPlayback.mjs';
 import { FILM_START, FILM_END, TOUR_SECONDS, journeyPose } from '../src/app/components/world/journey.mjs';
 
 function fakeVideo() {
@@ -45,7 +45,8 @@ test('entering the city by scrolling starts a continuous take, not a mid-film st
   assert.equal(video.plays, 1);
   assert.equal(video.playbackRate, 1);
   assert.equal(filmIntent(.49, false, false).playing, false, 'explicit pause disables ambient playback');
-  assert.equal(filmIntent(.85, false, true).playing, false, 'leaving the city stops the film');
+  assert.equal(filmIntent(FILM_END - .001, false, true).playing, true, 'keep moving until the dissolve is complete');
+  assert.equal(filmIntent(FILM_END, false, true).playing, false, 'leaving the city stops the film');
   controller.dispose();
 });
 
@@ -170,4 +171,44 @@ test('chapter copy changes while invisible, without flashes on reverse travel', 
     assert.ok(journeyPose(boundary - .00001).copyOpacity < .001);
     assert.ok(journeyPose(boundary + .00001).copyOpacity < .001);
   }
+});
+
+test('a fast swipe cannot skip either dissolve at 30, 60 or 120 Hz', () => {
+  for (const fps of [30, 60, 120]) {
+    let p = 0, landingIn, landingOut, arrivalIn, arrivalOut;
+    for (let frame = 1; frame <= fps * 6; frame++) {
+      const next = advanceScrollJourney(p, 1, 1 / fps);
+      assert.ok(next >= p && next <= 1);
+      if (p < FILM_START && next >= FILM_START) landingIn = frame / fps;
+      if (p < .34 && next >= .34) landingOut = frame / fps;
+      if (p < .72 && next >= .72) arrivalIn = frame / fps;
+      if (p < FILM_END && next >= FILM_END) arrivalOut = frame / fps;
+      p = next;
+    }
+    assert.equal(p, 1);
+    assert.ok(landingOut - landingIn >= .59 - 1 / fps);
+    assert.ok(arrivalOut - arrivalIn >= .875 - 1 / fps);
+  }
+});
+
+test('scroll timing is frame-rate independent and a reversal cannot overshoot', () => {
+  const positions = [30, 60, 120].map(fps => {
+    let p = .16;
+    for (let i = 0; i < fps; i++) p = advanceScrollJourney(p, .96, 1 / fps);
+    return p;
+  });
+  assert.ok(Math.max(...positions) - Math.min(...positions) < 1e-10);
+  let p = positions[0];
+  for (let i = 0; i < 600; i++) {
+    const next = advanceScrollJourney(p, .1, 1 / 60);
+    assert.ok(next <= p && next >= .1);
+    p = next;
+  }
+  assert.equal(p, .1);
+});
+
+test('the decoded film reaches its end only after the gallery dissolve finishes', () => {
+  assert.equal(journeyPose(FILM_END).arrival, 1);
+  assert.equal(journeyPose(.78).copyOpacity, 0, 'the destination waits for its framing');
+  assert.ok(journeyPose(.86).copyOpacity < 1, 'destination copy appears after the sculpture');
 });

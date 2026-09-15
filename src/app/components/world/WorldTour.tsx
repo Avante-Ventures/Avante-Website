@@ -1,8 +1,8 @@
 import { Component, useCallback, useEffect, useRef, useState, type ReactNode } from 'react';
 import { useLanguage } from '@/app/hooks/useLanguage';
-import { clamp, journeyPose, stops, TOUR_SECONDS, ENHANCED_QUERY } from './journey.mjs';
+import { clamp, journeyPose, stops, TOUR_SECONDS, ENHANCED_QUERY, FILM_END } from './journey.mjs';
 import { JourneyFilm } from './JourneyFilm';
-import { advanceJourney, dampProgress, resumeJourney } from './filmPlayback.mjs';
+import { advanceJourney, advanceScrollJourney, resumeJourney } from './filmPlayback.mjs';
 import { CityPicture } from './CityPicture';
 import { Link } from 'react-router';
 class SceneBoundary extends Component<{ children: ReactNode; onFailure: () => void }, { failed: boolean }> {
@@ -51,7 +51,7 @@ export function WorldTour() {
     if (!el) return;
     progress.current = clamp(value);
     const pose = journeyPose(progress.current);
-    if (progress.current > .06 && progress.current < .85) setFilmRequested(true);
+    if (progress.current > .015 && progress.current < FILM_END) setFilmRequested(true);
     setChapter(pose.chapter); setSeconds(Math.round(progress.current * TOUR_SECONDS));
     for (const key of ['landing', 'arrival', 'discovery', 'copyOpacity'] as const) el.style.setProperty(`--${key}`, String(pose[key]));
     el.dataset.discovered = String(pose.discovery > 0.05);
@@ -85,9 +85,11 @@ export function WorldTour() {
       if (!animated) { stop(); present(0); return; }
       if (guided.current) return;
       const stageHeight = el.querySelector<HTMLElement>('.world-stage')?.offsetHeight ?? window.innerHeight;
-      const target = animated ? clamp(-el.getBoundingClientRect().top / Math.max(1, el.offsetHeight - stageHeight)) : 0;
+      const bounds = el.getBoundingClientRect();
+      const target = animated ? clamp(-bounds.top / Math.max(1, el.offsetHeight - stageHeight)) : 0;
       const elapsed = Math.min((now - previous) / 1000, .05); previous = now;
-      present(animated && !document.hidden ? dampProgress(progress.current, target, elapsed) : target);
+      const visible = bounds.bottom > 0 && bounds.top < window.innerHeight;
+      present(animated && visible && !document.hidden ? advanceScrollJourney(progress.current, target, elapsed) : target);
       if (progress.current !== target) frame = requestAnimationFrame(update);
     };
     const schedule = () => { if (!guided.current && !frame) { previous = performance.now() - 16; frame = requestAnimationFrame(update); } };

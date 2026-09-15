@@ -1,6 +1,6 @@
 import { useEffect, useState, type MutableRefObject } from 'react';
 import { createFilmPlayback, filmIntent } from './filmPlayback.mjs';
-import { COMPACT_QUERY, FILM_START } from './journey.mjs';
+import { COMPACT_QUERY, FILM_START, FILM_END } from './journey.mjs';
 import { CityPicture } from './CityPicture';
 
 // Both the guided tour and ordinary scrolling reveal a natively playing film.
@@ -10,6 +10,10 @@ export function JourneyFilm({ progress, enabled, guided, ambient, video, onBlock
   video: MutableRefObject<HTMLVideoElement | null>; onBlocked: () => void; onPlaying: (playing: boolean) => void;
 }) {
   const [ready, setReady] = useState(false);
+  // Select the compact payload explicitly instead of relying on video source
+  // media queries. Keep it stable so resizing cannot reset the decoder.
+  const [source] = useState(() => typeof matchMedia !== 'undefined' && matchMedia(COMPACT_QUERY).matches
+    ? '/world-assets/saopaulo-flight-mobile.mp4' : '/world-assets/saopaulo-flight-journey.mp4');
   useEffect(() => {
     const el = video.current;
     if (!el || !enabled) return;
@@ -17,7 +21,7 @@ export function JourneyFilm({ progress, enabled, guided, ambient, video, onBlock
     const sync = () => {
       const intent = filmIntent(progress.current, guided.current && !document.hidden, ambient.current && !document.hidden);
       if (intent.playing) controller.sync(intent.progress, true, intent.rate);
-      else controller.pause(progress.current < FILM_START || progress.current >= .85);
+      else controller.pause(progress.current < FILM_START || progress.current >= FILM_END);
     };
     const loaded = () => { setReady(true); sync(); };
     const failed = () => setReady(false);
@@ -43,9 +47,6 @@ export function JourneyFilm({ progress, enabled, guided, ambient, video, onBlock
   }, [progress, enabled, guided, ambient, video, onBlocked, onPlaying]);
   return <div className="journey-film" aria-hidden="true">
     <CityPicture />
-    {enabled && <video ref={video} className={ready ? 'is-ready' : ''} muted playsInline preload="auto" tabIndex={-1} onPlaying={() => onPlaying(true)} onPause={() => onPlaying(false)} onEnded={() => onPlaying(false)}>
-      <source media={COMPACT_QUERY} src="/world-assets/saopaulo-flight-mobile.mp4" type="video/mp4" />
-      <source src="/world-assets/saopaulo-flight-journey.mp4" type="video/mp4" />
-    </video>}
+    {enabled && <video ref={video} src={source} className={ready ? 'is-ready' : ''} muted playsInline preload="auto" tabIndex={-1} onPlaying={() => onPlaying(true)} onPause={() => onPlaying(false)} onEnded={() => onPlaying(false)} />}
   </div>;
 }

@@ -1,6 +1,6 @@
 import { useEffect, useRef, type MutableRefObject } from 'react';
 import * as THREE from 'three';
-import { COMPACT_QUERY, geographicPoint, journeyPose } from './journey.mjs';
+import { COMPACT_QUERY, compactJourneyFrame, geographicPoint, journeyPose } from './journey.mjs';
 import { createAvanteGallery } from './AvanteGallery';
 
 type Country = { name: string; polygons: number[][][][] };
@@ -63,6 +63,8 @@ export default function WorldScene({ progress, onReady, onFailure }: Props) {
 
     let disposed = false, frame = 0, inView = true, ready = false, cityOnly = false, announced = false;
     let compact = matchMedia(COMPACT_QUERY).matches;
+    let stage = { width: 1, height: 1, landscape: false };
+    let opening = { centerX: 0, centerY: 0, height: 1 };
     const mouse = new THREE.Vector2(), pointer = new THREE.Vector2();
     const signal = new AbortController();
     const gallery = createAvanteGallery(renderer, () => draw());
@@ -72,15 +74,20 @@ export default function WorldScene({ progress, onReady, onFailure }: Props) {
       if (disposed || !inView) return;
       pointer.lerp(mouse, .065);
       const pose = journeyPose(progress.current);
-      gallery.update(pose.arrival, pointer);
-      // Phone artwork occupies its own upper viewport, above the copy.
+      gallery.update(pose.arrival, pointer, compact);
+      // A fixed full-stage buffer lets the globe approach without rectangular
+      // clipping and avoids reallocating it as the gallery appears.
+      if (compact) {
+        const view = compactJourneyFrame(progress.current, opening, stage);
+        camera.setViewOffset(stage.width, view.height, stage.width / 2 - view.centerX, view.height / 2 - view.centerY, stage.width, stage.height);
+      }
       gallery.group.position.x = compact ? -1.9 : 0;
       globe.visible = pose.globeVisible;
       globe.position.set(compact ? -pose.approach * .25 : 1.55 - pose.approach * .8, compact ? -pose.approach * .2 : .1 - pose.approach * .55, 0);
       globe.rotation.set(-.12 - pose.approach * .32 + pointer.y * .018, -.15 - pose.approach * .65 + pointer.x * .025, -.08);
       globe.scale.setScalar(1 + pose.approach * 1.8);
-      globeMat.opacity = 1 - pose.landing;
-      globeMat.transparent = pose.landing > 0;
+      // The film supplies the dissolve for the entire globe, including its
+      // atmosphere and lines. Fading the surface again darkened the overlap.
       camera.position.set(pointer.x * .045, pointer.y * .025, 8.6);
       camera.lookAt(0, 0, 0);
       renderer.autoClear = true;
@@ -96,8 +103,12 @@ export default function WorldScene({ progress, onReady, onFailure }: Props) {
     const resize = () => {
       const w = el.clientWidth, h = el.clientHeight;
       compact = matchMedia(COMPACT_QUERY).matches;
+      stage = { width: w, height: h, landscape: matchMedia('(orientation: landscape) and (max-height: 619px)').matches };
+      const bounds = el.getBoundingClientRect();
+      const poster = el.parentElement?.querySelector<HTMLElement>('.world-poster')?.getBoundingClientRect();
+      if (poster) opening = { centerX: poster.left - bounds.left + poster.width / 2, centerY: poster.top - bounds.top + poster.height / 2, height: poster.height };
       renderer.setPixelRatio(Math.min(devicePixelRatio, compact ? 1.25 : 1.5));
-      renderer.setSize(w, h); camera.aspect = w / Math.max(h, 1); camera.updateProjectionMatrix(); schedule();
+      renderer.setSize(w, h); camera.clearViewOffset(); camera.aspect = w / Math.max(h, 1); camera.updateProjectionMatrix(); schedule();
     };
     const move = (e: PointerEvent) => { if (e.pointerType !== 'mouse') return; const r = el.getBoundingClientRect(); mouse.set((e.clientX - r.left) / r.width - .5, (e.clientY - r.top) / r.height - .5); schedule(); };
     const lost = (e: Event) => { e.preventDefault(); onFailure(); };

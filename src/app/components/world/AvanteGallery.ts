@@ -15,6 +15,7 @@ export function createAvanteGallery(renderer: THREE.WebGLRenderer, onLoad: () =>
   room.dispose(); pmrem.dispose();
   const signal = new AbortController();
   let disposed = false;
+  let reflection: THREE.Mesh | undefined;
   group.add(sculpture);
   sculpture.position.set(1.9, .05, 0);
   const floor = new THREE.Mesh(geo(new THREE.PlaneGeometry(14, 14)), mat(new THREE.ShaderMaterial({
@@ -60,15 +61,16 @@ export function createAvanteGallery(renderer: THREE.WebGLRenderer, onLoad: () =>
     const metal = mat(new THREE.MeshPhysicalMaterial({ vertexColors: true, metalness: .32, roughness: .32, clearcoat: .45, clearcoatRoughness: .22, envMap: environment.texture, envMapIntensity: .4, side: THREE.DoubleSide }));
     const mark = new THREE.Mesh(geometry, metal);
     sculpture.add(mark);
-    const reflection = new THREE.Mesh(geometry, mat(new THREE.MeshBasicMaterial({ vertexColors: true, transparent: true, opacity: .075, side: THREE.DoubleSide, depthWrite: false })));
+    reflection = new THREE.Mesh(geometry, mat(new THREE.MeshBasicMaterial({ vertexColors: true, transparent: true, opacity: .075, side: THREE.DoubleSide, depthWrite: false })));
     reflection.scale.y = -1; reflection.position.y = -3.85; sculpture.add(reflection);
     onLoad();
   }).catch(error => { if (error.name !== 'AbortError') console.warn('Avante sculpture could not load. The ventures remain available.'); });
 
   return {
     group,
-    update(arrival: number, pointer: THREE.Vector2) {
+    update(arrival: number, pointer: THREE.Vector2, compact = false) {
       group.visible = arrival > 0;
+      if (reflection) reflection.visible = !compact;
       sculpture.rotation.y = -.3 + arrival * .5 + pointer.x * .16;
       sculpture.rotation.x = pointer.y * .04;
       sculpture.position.z = -.8 + arrival * .8;
