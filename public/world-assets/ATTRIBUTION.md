@@ -80,5 +80,6 @@
 ## WIR logo update (September 14, 2026)
 
 - `wir-logo.svg` is the official white WIR logo with the outlined “AI for insurance” signature, downloaded from https://wirinnovation.ai/assets/wir-logo-branco.svg. It replaces the older “Innovation” lockup.
-- The SVG retains its official paths, gradients, viewBox and outlined lettering. Only trailing whitespace was removed on import. The same asset feeds the interactive 3D exhibit, its static fallback and the journey destination card.
-- Existing extrusion and lighting are presentation effects in `VentureLogoScene.tsx`. No logo geometry, typography or colors were generated or reconstructed.
+- The SVG retains its official paths, gradients, viewBox and outlined lettering. Only trailing whitespace was removed on import. The complete lockup remains on the journey destination card.
+- `wir-mark.svg` and `wir-signature.svg` separate the existing paths into display layers with cropped viewBoxes. The mark keeps all seven original paths and both gradients; the signature keeps the original outlined lettering. No paths, typography or face colors were redrawn.
+- The exhibit uses a shallow satin extrusion and restrained pointer tilt for the mark in `VentureLogoScene.tsx`. The fine italic signature is a separate, stationary SVG below it, preserving its sharp edges on desktop and mobile. The static fallback uses the same two layers and alignment.

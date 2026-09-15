@@ -4,7 +4,7 @@ import { SVGLoader } from 'three/addons/loaders/SVGLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { VENTURES, type VentureKind } from './ventures';
 
-// Extrude the official vector paths. No replacement font or reconstructed mark.
+// Extrude the official marks. WIR's fine italic signature stays in the SVG layer.
 export default function VentureLogoScene({ kind, onReady, onFailure }: { kind: VentureKind; onReady: () => void; onFailure: () => void }) {
   const host = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -20,7 +20,8 @@ export default function VentureLogoScene({ kind, onReady, onFailure }: { kind: V
     el.appendChild(renderer.domElement);
     const scene = new THREE.Scene(), camera = new THREE.PerspectiveCamera(30, 1, .1, 50);
     const sculpture = new THREE.Group();
-    sculpture.rotation.set(-.09, kind === 'legal' ? -.28 : .22, kind === 'legal' ? 0 : -.035);
+    const restingX = kind === 'legal' ? -.09 : -.035, restingY = kind === 'legal' ? -.28 : .16;
+    sculpture.rotation.set(restingX, restingY, 0);
     scene.add(sculpture);
     const pmrem = new THREE.PMREMGenerator(renderer), room = new RoomEnvironment();
     let environment = pmrem.fromScene(room, .04);
@@ -37,8 +38,8 @@ export default function VentureLogoScene({ kind, onReady, onFailure }: { kind: V
       frame = 0;
       if (disposed || contextLost) return;
       pointer.lerp(target, .12);
-      sculpture.rotation.y = (kind === 'legal' ? -.28 : .22) + pointer.x * (kind === 'legal' ? .1 : .22);
-      sculpture.rotation.x = -.09 + pointer.y * (kind === 'legal' ? .06 : .13);
+      sculpture.rotation.y = restingY + pointer.x * .1;
+      sculpture.rotation.x = restingX + pointer.y * .06;
       renderer.render(scene, camera);
       if (loaded) onReady();
       if (!document.hidden && pointer.distanceTo(target) > .001) schedule();
@@ -86,7 +87,7 @@ export default function VentureLogoScene({ kind, onReady, onFailure }: { kind: V
       const data = new SVGLoader().parse(svg.replace(/url\(#[^)]+\)/g, '#ffffff'));
       const parts = data.paths.map(path => {
         const shapes = SVGLoader.createShapes(path);
-        const geometry = new THREE.ExtrudeGeometry(shapes, { depth: kind === 'legal' ? 110 : 30, steps: 1, curveSegments: 12, bevelEnabled: true, bevelThickness: kind === 'legal' ? 5 : 1, bevelSize: kind === 'legal' ? 3 : .65, bevelSegments: 3 });
+        const geometry = new THREE.ExtrudeGeometry(shapes, { depth: kind === 'legal' ? 110 : 18, steps: 1, curveSegments: 12, bevelEnabled: true, bevelThickness: kind === 'legal' ? 5 : .45, bevelSize: kind === 'legal' ? 3 : .3, bevelSegments: 3 });
         geometries.push(geometry); geometry.computeBoundingBox();
         return { path, geometry };
       });
@@ -105,7 +106,7 @@ export default function VentureLogoScene({ kind, onReady, onFailure }: { kind: V
           return value.includes('%') ? bounds.min.x + parseFloat(value) / 100 * size.x : Number(value);
         };
         const x1 = gradientX('x1', bounds.min.x), x2 = gradientX('x2', bounds.max.x);
-        const color = new THREE.Color('#f5f2ec');
+        const color = new THREE.Color(kind === 'legal' ? '#f5f2ec' : '#ffffff');
         for (let i = 0; i < positions.count; i++) {
           if (stops.length) {
             const t = THREE.MathUtils.clamp((positions.getX(i) - x1) / (x2 - x1), 0, 1);
@@ -118,7 +119,7 @@ export default function VentureLogoScene({ kind, onReady, onFailure }: { kind: V
         geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
         geometry.translate(-center.x, -center.y, -center.z); geometry.scale(scale, -scale, scale);
         const face = new THREE.MeshBasicMaterial({ vertexColors: true, toneMapped: false, side: THREE.DoubleSide });
-        const edge = new THREE.MeshPhysicalMaterial({ color: kind === 'legal' ? '#9c7564' : '#9183b3', metalness: .7, roughness: kind === 'legal' ? .32 : .24, envMapIntensity: .8, side: THREE.DoubleSide });
+        const edge = new THREE.MeshPhysicalMaterial({ color: kind === 'legal' ? '#9c7564' : '#5c4c84', metalness: kind === 'legal' ? .7 : .45, roughness: kind === 'legal' ? .32 : .38, envMapIntensity: .8, side: THREE.DoubleSide });
         materials.push(face, edge); sculpture.add(new THREE.Mesh(geometry, [face, edge]));
       }
       loaded = true; resize();

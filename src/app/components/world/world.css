@@ -149,10 +149,13 @@ body:has(.avante-world-home) { overflow-x: clip; overflow-y: visible; }
 .venture-logo-stage { position: absolute; z-index: 2; top: 1%; left: 4%; width: 58%; height: 25%; pointer-events: none; }
 .venture-exhibit--legal .venture-logo-stage { top: 16%; left: 3%; width: 24%; height: 55%; }
 .venture-brand-wordmark { position: absolute; width: 20%; height: auto; left: 5%; top: 74%; }
-.venture-exhibit--risk .venture-logo-stage { width: 31%; height: 59%; left: 0; top: 13%; }
+.venture-exhibit--risk .venture-logo-stage { width: 31%; height: auto; left: 1%; top: 44%; transform: translateY(-50%); display: flex; flex-direction: column; align-items: center; }
+.venture-logo-object { position: absolute; inset: 0; }
+.venture-exhibit--risk .venture-logo-object { position: relative; inset: auto; width: 100%; aspect-ratio: 637 / 355; }
+.venture-brand-signature { display: block; width: 64%; height: auto; margin-top: -8px; }
 .venture-logo-fallback { position: absolute; width: 85%; height: 80%; object-fit: contain; top: 10%; left: 7.5%; filter: drop-shadow(5px 9px 1px #070e3266) drop-shadow(0 16px 10px #0004); opacity: 1; transition: opacity .35s; }
 .venture-exhibit--legal .venture-logo-fallback { width: 73%; height: 73%; left: 13.5%; top: 13.5%; transform: none; filter: drop-shadow(5px 8px 0 #8a71634d) drop-shadow(0 18px 12px #1b2c5e1f); }
-.venture-exhibit--risk .venture-logo-fallback { width: 85%; left: 7.5%; transform: rotate(-7deg); }
+.venture-exhibit--risk .venture-logo-fallback { width: 83%; height: 100%; left: 8.5%; top: 0; transform: none; filter: drop-shadow(2px 3px 0 #100d2633) drop-shadow(0 10px 12px #100d261f); }
 .venture-logo-canvas { position: absolute; inset: 0; opacity: 0; transition: opacity .35s; }
 .venture-logo-canvas canvas { display: block; width: 100%; height: 100%; }
 .venture-logo-stage[data-ready=true] .venture-logo-fallback { opacity: 0; }
@@ -176,7 +179,8 @@ body:has(.avante-world-home) { overflow-x: clip; overflow-y: visible; }
   .venture-logo-stage { width: 80%; height: 25%; top: 5%; left: 4%; }
   .venture-site-preview { width: 89%; left: 5%; top: 38%; transform: rotateY(-5deg) rotateZ(-2deg); box-shadow: 0 18px 28px #050d2b55, 3px 4px 0 #a3aec8; }
   .venture-exhibit--risk .venture-composition { background: linear-gradient(162deg, #231d49 0%, #382653 47%, #eee9e0 47.2%); }
-  .venture-exhibit--risk .venture-logo-stage { width: 40%; height: 38%; left: 4%; top: 0; }
+  .venture-exhibit--risk .venture-logo-stage { width: 48%; height: auto; left: 4%; top: 2%; transform: none; }
+  .venture-brand-signature { width: 70%; margin-top: -4px; }
   .venture-exhibit--risk .venture-site-preview { width: 89%; left: 5%; top: 42%; transform: rotateY(-5deg) rotateZ(2deg); box-shadow: 0 18px 28px #231d4933, 3px 4px 0 #aba0ba; }
   .venture-exhibit--legal .venture-composition { height: clamp(350px, 96vw, 560px); background: linear-gradient(180deg, #eceff4 38%, #172746 38%); }
   .venture-exhibit--legal .venture-logo-stage { width: 28%; height: 30%; left: 5%; top: 4%; }

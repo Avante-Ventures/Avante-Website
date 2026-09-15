@@ -34,8 +34,11 @@ export function VentureExhibit({ kind, language }: { kind: VentureKind; language
         <img src={`${venture.website}.webp`} srcSet={`${venture.website}-720.webp 720w, ${venture.website}.webp 1117w`} sizes="(max-width: 600px) 88vw, (max-width: 1100px) 72vw, 900px" alt={`${PREVIEW[language]} — ${venture.name}`} width="1117" height={venture.height} loading="lazy" decoding="async" />
       </a>
       <div ref={host} className="venture-logo-stage" data-ready={visible && ready} role="img" aria-label={venture.name}>
-        <img className="venture-logo-fallback" src={venture.preview} alt="" loading="lazy" width={kind === 'legal' ? 930 : 590} height={kind === 'legal' ? 730 : 421} />
-        {visible && <Suspense fallback={null}><LogoScene kind={kind} onReady={onReady} onFailure={onFailure} /></Suspense>}
+        <div className="venture-logo-object">
+          <img className="venture-logo-fallback" src={venture.preview} alt="" loading="lazy" width={kind === 'legal' ? 930 : 637} height={kind === 'legal' ? 730 : 355} />
+          {visible && <Suspense fallback={null}><LogoScene kind={kind} onReady={onReady} onFailure={onFailure} /></Suspense>}
+        </div>
+        {kind === 'risk' && <img className="venture-brand-signature" src="/world-assets/wir-signature.svg" alt="" loading="lazy" width="480" height="76" />}
       </div>
       {kind === 'legal' && <img className="venture-brand-wordmark" src="/world-assets/alphajuri-logo.svg" alt="" loading="lazy" width="4582" height="1048" />}
     </div>
