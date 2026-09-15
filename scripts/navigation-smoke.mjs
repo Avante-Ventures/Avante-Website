@@ -17,7 +17,7 @@ export async function verifyNavigation(browser, origin) {
   };
   const follow = async path => {
     console.log(`→ Following ${path}`);
-    await page.click(`a[href="${path}"]`);
+    await page.locator(`a[href="${path}"]`).click();
     await arrived(path);
   };
 
@@ -64,9 +64,9 @@ export async function verifyNavigation(browser, origin) {
     await page.goto(`${origin}/es`, { waitUntil: 'domcontentloaded' });
     await arrived('/es');
     for (const route of ['why-avante', 'portfolio', 'library', 'investors']) {
-      await page.click('.avt-nav-hamburger');
+      await page.locator('.avt-nav-hamburger').click();
       await page.waitForSelector('#avante-mobile-navigation[open]');
-      await page.click(`#avante-mobile-navigation a[href="/es/${route}"]`);
+      await page.locator(`#avante-mobile-navigation a[href="/es/${route}"]`).click();
       await arrived(`/es/${route}`);
       await page.waitForFunction(() => !document.querySelector('#avante-mobile-navigation[open]') &&
         document.documentElement.style.overflow !== 'hidden' && document.body.style.overflow !== 'hidden');
