@@ -14,6 +14,7 @@ import HomePage from "./pages/HomePage.tsx"
 import { LanguageProvider, type Language } from "@/app/hooks/useLanguage"
 import { AvtSpinner } from "@/app/components/AvtSpinner"
 import { focusSection } from '@/app/components/focusSection'
+import RouteErrorPage from './pages/RouteErrorPage'
 
 // HomePage stays in the main bundle (it's the LCP-critical entry route).
 // Sub-pages are heavy (JSX + framer-motion + article content) and only
@@ -119,12 +120,13 @@ export const router = createBrowserRouter([
 
   // Internal preview pages — listed BEFORE /:locale so the locale matcher
   // doesn't swallow "preview". Have noindex meta tag in the page itself.
-  { path: "/preview/heroes", lazy: HeroConceptsPage },
+  { path: "/preview/heroes", lazy: HeroConceptsPage, ErrorBoundary: RouteErrorPage },
 
   // Locale-prefixed routes
   {
     path: "/:locale",
     element: <LocaleLayout />,
+    ErrorBoundary: RouteErrorPage,
     children: [
       { index: true, element: <HomePage /> },
       { path: "why-avante", lazy: WhyAvantePage },

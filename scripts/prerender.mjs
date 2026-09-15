@@ -20,6 +20,7 @@ import { readFile, writeFile, mkdir } from 'node:fs/promises'
 import { existsSync, readFileSync } from 'node:fs'
 import { resolve, join, dirname, extname } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { verifyNavigation } from './navigation-smoke.mjs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const DIST = resolve(__dirname, '..', 'dist')
@@ -155,6 +156,14 @@ console.log(`📡 Static server on http://localhost:${PORT}`)
 
 const browser = await puppeteer.launch(launchOpts)
 
+try {
+  await verifyNavigation(browser, `http://localhost:${PORT}`)
+} catch (error) {
+  await browser.close()
+  server.close()
+  throw error
+}
+
 const errors = []
 
 // Render a single route with up to 2 attempts. Vercel's Sparticuz Chromium
@@ -179,6 +188,10 @@ async function renderRoute(route) {
 
       // Settle window for lazy effects (Framer Motion poses, etc.)
       await new Promise((r) => setTimeout(r, 500))
+
+      const routeError = await page.evaluate(() => Boolean(document.querySelector('[data-route-error]')) ||
+        document.querySelector('#root h2')?.textContent?.includes('Unexpected Application Error'))
+      if (routeError) throw new Error('Route rendered an application error instead of page content')
 
       const html = await page.content()
 
