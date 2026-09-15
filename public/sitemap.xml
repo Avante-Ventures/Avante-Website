@@ -382,6 +382,16 @@
   <!-- CONTENT-ENGINE:START (managed by content-engine/merge.py - do not edit by hand) -->
   <!-- 102 engine article(s) x 3 locales. Generated from content-engine/outputs. Edit the engine, not this block. -->
   <url>
+    <loc>https://avanteventures.com/en/library/chatgpt-wrapper-is-not-an-ai-native-company</loc>
+    <lastmod>2026-09-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/chatgpt-wrapper-is-not-an-ai-native-company"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/chatgpt-wrapper-is-not-an-ai-native-company"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/chatgpt-wrapper-is-not-an-ai-native-company"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/chatgpt-wrapper-is-not-an-ai-native-company"/>
+  </url>
+  <url>
     <loc>https://avanteventures.com/en/library/online-entrepreneurship-course</loc>
     <lastmod>2026-09-10</lastmod>
     <changefreq>yearly</changefreq>

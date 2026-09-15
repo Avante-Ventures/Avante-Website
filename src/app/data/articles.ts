@@ -1770,6 +1770,339 @@ const articleSiggaCaseStudy: Article = {
 // 102 article(s) generated from content-engine/outputs. Edit the engine, not this block.
 const engineArticles: Article[] = [
   {
+    "slug": "chatgpt-wrapper-is-not-an-ai-native-company",
+    "category": "insights",
+    "type": "Explainer",
+    "readTime": "7 min",
+    "featured": false,
+    "date": "Sep 2026",
+    "datePublished": "2026-09-08",
+    "isPublished": true,
+    "en": {
+      "title": "A ChatGPT Wrapper Is Not an AI-Native Company",
+      "description": "Around 90% of AI wrappers stop shipping. The real line between a chat pasted on top of someone else's API and a company architected around the model.",
+      "sections": [
+        {
+          "paragraphs": [
+            "A chat window on top of someone else's API is an interface, not a foundation. Here is the line between a thin wrapper and a company architected around the model, and the five questions that tell you which one you are building.",
+            "A ChatGPT wrapper is a product that forwards API calls to someone else's model and adds little more than an interface on top. An AI-native company is the opposite order of construction: architecture, proprietary data, evaluation and feedback loops are designed around the model, and the chat, if there is one, is just one surface."
+          ]
+        },
+        {
+          "id": "key-takeaways",
+          "heading": "Key takeaways",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "In Silicon Valley the category has a name: \"thin wrapper\", a product that forwards API calls to a third-party model with little more than a UI on top.",
+            "The full technology of a generic \"compliant AI chat solution\" fits in one line: an API key, a system prompt, a chat window and a PDF data-processing contract.",
+            "Roughly 90% of AI wrappers launched on Product Hunt in the last two years shipped, peaked, then quietly stopped receiving commits.",
+            "The 10% that survived were not better coded and did not run on bigger models, their single common trait is that they validated before building.",
+            "If a wrapper is generic enough to be useful to everyone, it is exactly what model providers ship as a free feature within 18 months."
+          ]
+        },
+        {
+          "id": "short-answer-chat-is-the-interface-not-the-foundation",
+          "heading": "Short answer: chat is the interface, not the foundation",
+          "level": 2,
+          "paragraphs": [
+            "A ChatGPT wrapper is not an AI-native company because the thing that creates the value does not belong to you. In Silicon Valley the category already has a name, **thin wrapper**: a product that forwards API calls to a third-party model and puts little more than an interface on top. The complete technology of a generic \"AI chat solution\" fits in a single line: an API key to someone else's model, a system prompt, a chat window, and a PDF data-processing contract. A competent intern assembles that over a weekend.",
+            "An AI-native company is built in the opposite order. The model is a component, not the product. Around it sit architecture decisions, proprietary data, an evaluation harness, retrieval, orchestration, permissions, and feedback loops that get sharper every time a user works. The chat may still be there. It is a surface, not a foundation. That is the whole distinction, and it shows up in the cap table, in gross margin, and in how fast a competitor can copy you.",
+            "Everything below is the test we run with founders before we co-found."
+          ]
+        },
+        {
+          "id": "anatomy-of-a-wrapper",
+          "heading": "Anatomy of a wrapper",
+          "level": 2,
+          "paragraphs": [
+            "Open the box and look at what is inside. Or rather: what is not.",
+            "A thin wrapper is usually four parts:",
+            "The demos give it away. Whoever has seen three has seen all of them: same layout, only the logo at the top changes. Comparison portals already list more than 1,600 reviewed AI tools, and market roundups add half a dozen new \"compliant AI platforms\" with every update.",
+            "There is an even blunter signal of how thin the surface has become: you can buy the whole scaffold. Starter kits ship a dozen ready-to-use AI demo apps, text, image, audio, voice, vision, chat, plus landing pages, auth, database, payments and provider SDKs in one package, sold as \"build your AI startup in hours\" to hundreds of founders.",
+            "If your product can be bought as a template, your product is not the product.",
+            "One more tell from the sales side: when compliance is the first thing a vendor says about the software, look harder at the rest. A restaurant that advertises its health certificate instead of its kitchen has already told you something about the kitchen."
+          ],
+          "bullets": [
+            "**An API key** to a model built and owned by someone else.",
+            "**A system prompt**, the only \"IP\" in the stack, and it is a text file.",
+            "**A chat window**, history on the left, input field on the right.",
+            "**A compliance PDF** to make procurement comfortable."
+          ]
+        },
+        {
+          "id": "why-thin-wrappers-die",
+          "heading": "Why thin wrappers die",
+          "level": 2,
+          "paragraphs": [
+            "This is documented, not vibes. Roughly **90% of AI wrappers launched on Product Hunt over the last two years shipped, peaked, and then quietly stopped receiving commits**, the pattern is so reliable that the joke writes itself: another GPT-for-X.",
+            "Three structural pressures explain it:",
+            "The interesting part is who survived. The 10% still shipping are not better coded, do not run on bigger models, and did not have better prompts. They share exactly one trait: **they validated before they built**. Worth noting that the line is not \"wrappers can never be businesses\". Some durable products did begin life close to a wrapper. They just did not stay there."
+          ],
+          "bullets": [
+            "**The moat belongs to someone else.** Model providers have a direct interest in absorbing the most popular wrapper categories into their core product. If your wrapper is generic enough to be useful to everybody, it is exactly the kind of thing a provider ships as a free feature within 18 months.",
+            "**The surface is exhausted.** \"Thin layer around an LLM\" has been explored so thoroughly that being undifferentiated inside that category is economic suicide.",
+            "**Distribution is saturated.** The channel that worked in 2023 is crowded now."
+          ]
+        },
+        {
+          "id": "what-ai-native-actually-means",
+          "heading": "What AI-native actually means",
+          "level": 2,
+          "paragraphs": [
+            "AI-native is an architecture claim, not a marketing one. Four things have to be true.",
+            "**1. The model is a dependency you can swap.** Router, fallbacks, cost and latency budgets per task, cheap models for cheap work. If a provider price change or deprecation breaks your company, you built on rented foundations. Ours is a design decision made on day one, not a migration project in year two.",
+            "**2. Proprietary data enters the loop.** Not the customer's documents sitting in a bucket, the structured record of decisions, corrections and outcomes that your product produces and no one else has. That is the asset that compounds. See [data network effects in vertical AI](https://avanteventures.com/en/library/data-network-effects-vertical-ai).",
+            "**3. Evaluation is a system, not a feeling.** Golden sets, regression suites, per-task accuracy gates, human review on the tail. In an AI-native company the eval harness is core infrastructure, on the same tier as CI. Teams that skip it cannot ship changes safely, so they stop shipping.",
+            "**4. Unit economics are engineered.** Inference is a cost line that behaves like production, not like a SaaS server bill. If you do not know your cost per resolved task, you do not know your margin. Start with [is inference cost COGS or OpEx](https://avanteventures.com/en/library/is-inference-cost-cogs-or-opex).",
+            "Work on those four and the chat window becomes a detail. Skip them and the chat window is the company."
+          ]
+        },
+        {
+          "id": "five-questions-that-separate-the-two",
+          "heading": "Five questions that separate the two",
+          "level": 2,
+          "paragraphs": [
+            "Run this before writing a line of code.",
+            "Four or five clean answers and you have a company. Zero or one and you have a weekend project with a landing page, the kind that stops receiving commits."
+          ],
+          "bullets": [
+            "**What breaks if the model provider ships your feature for free next quarter?** If the answer is \"everything\", you are a wrapper.",
+            "**What data do you own after 1,000 users that you did not own at user zero?** No answer means no compound.",
+            "**How do you know a prompt change made the product better?** If the answer is \"it felt better\", you have no evals.",
+            "**What does one resolved task cost, and what do you charge for it?** Margin is architecture downstream.",
+            "**Did you validate demand before building?** It is the only trait the survivors share."
+          ]
+        },
+        {
+          "id": "the-brazil-translation",
+          "heading": "The Brazil translation",
+          "level": 2,
+          "paragraphs": [
+            "Brazil does not need more chat windows. It needs AI-native companies in domains where the workflow, the regulation and the data are local and hard.",
+            "The playbook from the best AI companies in the world travels: validate before building, instrument everything, ship weekly, keep evals in CI. What does not travel unchanged is context, regulated sectors, local compliance, payment rails, language, and how work actually gets done inside a Brazilian mid-market company. That context is exactly where a foreign generic wrapper cannot follow you, and where proprietary data accumulates fastest.",
+            "That is why our portfolio companies, AlphaJuri, WIR and FutureProofing, are built vertical-first, with the model inside the workflow instead of a chat pasted on top. We build in the open about those decisions in [our portfolio](https://avanteventures.com/en/portfolio)."
+          ]
+        },
+        {
+          "id": "how-we-co-found",
+          "heading": "How we co-found",
+          "level": 2,
+          "paragraphs": [
+            "We are not a fund writing checks into pitch decks. We co-found: architecture on the whiteboard, evals in the repo, pricing and cost per task on the same spreadsheet, operators on the ground from week one. Build to compound.",
+            "If you are early enough that the architecture is still a decision rather than a legacy, that is the right moment to talk. If you already have a chat window in production and want to turn it into a foundation, that is a rebuild, worth doing, cheaper today than next year.",
+            "More on how the model differs from passive capital: [AI venture studio vs traditional venture studio](https://avanteventures.com/en/library/ai-venture-studio-vs-traditional-venture-studio)."
+          ]
+        },
+        {
+          "id": "sources",
+          "heading": "Sources",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "[Anatomía de un wrapper de ChatGPT | amaiko](https://amaiko.ai/es/blog/chatgpt-wrapper-anatomy)",
+            "[Anatomia de um wrapper de ChatGPT | amaiko](https://amaiko.ai/pt/blog/chatgpt-wrapper-anatomy)",
+            "[ChatGPT Wrapper Creator | AnotherWrapper](https://anotherwrapper.com/tools/ai-app-generator/chatgpt-wrapper-creator)",
+            "[Wrapper ChatGPT en 2026 : encore viable comme business ? | LemonPage AI](https://lemonpage.ai/blog/fr/wrapper-chatgpt-2026-business-viable)"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Can a ChatGPT wrapper ever become a real company?",
+          "a": "Yes, but not by staying thin. Products that begin close to a wrapper can grow into real companies by moving into proprietary data, workflow depth and their own infrastructure. The failure mode is remaining undifferentiated inside a category whose surface has already been fully explored, which describes as economic suicide."
+        },
+        {
+          "q": "What is the difference between AI as a feature and AI as a foundation?",
+          "a": "A feature is added after the product exists: an API key, a system prompt, a chat window on top. A foundation means the product could not exist without the model, architecture, retrieval, evaluation, permissions and feedback loops are designed around it, and the interface is interchangeable."
+        },
+        {
+          "q": "Which are the biggest AI companies, and which ones use AI agents?",
+          "a": "The heaviest players in the stack are the model providers themselves. points out that providers have a direct incentive to absorb the most popular wrapper categories into their own products, which is precisely why building only on top of them is fragile. Agents are being adopted across the application layer, but agent orchestration on its own is not a moat either; the moat is the proprietary data and evaluation loop under it."
+        },
+        {
+          "q": "Is it AI or IA?",
+          "a": "Both are correct depending on the language: AI (artificial intelligence) in English, IA (inteligência artificial) in Portuguese. Neither acronym says anything about how a company is built, a Brazilian \"empresa de IA\" can still be a thin wrapper."
+        },
+        {
+          "q": "How long does it take for a thin wrapper to fail?",
+          "a": "There is no reliable countdown, but the attrition is visible in public data: around 90% of AI wrappers launched on Product Hunt in the last two years shipped, peaked, then quietly stopped receiving commits. The decisive variable is not time, it is whether demand was validated before the product was built."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Wrapper de ChatGPT não é empresa AI-native",
+      "description": "Chave de API, system prompt e uma janela de chat não são fundação. O que separa um thin wrapper de uma empresa AI-native, com dados, evals e loops de feed",
+      "sections": [
+        {
+          "paragraphs": [
+            "A diferença entre colar um chat em cima do produto e arquitetar a empresa em torno do modelo. O que separa um thin wrapper de uma empresa AI-native, e o teste que aplicamos antes de escrever a primeira linha de código.",
+            "Um wrapper de ChatGPT é um produto que repassa chamadas de API para o modelo de terceiros e coloca pouco mais que uma interface em cima disso; uma empresa AI-native é aquela cuja arquitetura, dados proprietários, avaliação e loops de feedback foram desenhados em torno do modelo, o chat, quando existe, é só a superfície."
+          ]
+        },
+        {
+          "id": "key-takeaways",
+          "heading": "Em resumo",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "No Vale do Silício, a categoria tem nome: thin wrapper, um produto que repassa chamadas de API a um modelo de terceiros com pouco mais que uma interface por cima.",
+            "A stack completa de um wrapper cabe em uma linha: chave de API, system prompt, janela de chat e um contrato de tratamento de dados em PDF, um estagiário competente monta isso em um fim de semana.",
+            "Cerca de 90% dos wrappers de IA lançados no Product Hunt nos últimos dois anos atingiram o pico e pararam discretamente de receber commits.",
+            "Granola, Cursor e Perplexity começaram como algo próximo de um wrapper, o que separou os 10% que sobreviveram não foi código melhor, foi ter validado antes de construir."
+          ]
+        },
+        {
+          "id": "o-chat-e-a-interface-nao-e-a-fundacao",
+          "heading": "O chat é a interface. Não é a fundação.",
+          "level": 2,
+          "paragraphs": [
+            "Um wrapper de ChatGPT não é uma empresa AI-native porque nada do que dá valor à empresa pertence a você. No Vale do Silício, essa categoria já tem nome: **thin wrapper**, um produto que repassa chamadas de API para o modelo de terceiros e não coloca muito mais em cima disso do que uma interface. A tecnologia completa cabe em uma linha: uma chave de API, um system prompt, uma janela de chat e um contrato de processamento de dados em PDF. Um estagiário competente monta isso em um fim de semana.",
+            "Empresa AI-native é o contrário disso. É quando a arquitetura, o modelo de dados, a camada de avaliação e os loops de feedback foram desenhados **em torno** do modelo, não colados depois. A pergunta que separa os dois casos não é \"vocês usam IA?\". É: se o provedor do modelo lançar amanhã, de graça, exatamente a sua funcionalidade, o que sobra da sua empresa? Se a resposta for \"o front-end\", você tem um wrapper. Se a resposta for \"os dados, o workflow, a avaliação e a confiança do cliente\", você tem uma empresa."
+          ]
+        },
+        {
+          "id": "anatomia-de-um-wrapper",
+          "heading": "Anatomia de um wrapper",
+          "level": 2,
+          "paragraphs": [
+            "Abrir a caixa é mais rápido do que discutir. O que tem dentro de um wrapper típico:",
+            "O mercado deixa isso ainda mais explícito: existem starter kits comerciais vendendo 12 apps demo de IA prontos (texto, imagem, áudio, voz, visão, chat) sobre Next.js com autenticação, banco, pagamentos e integração com OpenAI, Anthropic, Replicate e Groq, para \"construir sua startup de IA em horas\". Quando a construção vira commodity de fim de semana, a construção deixa de ser a vantagem.",
+            "Um sinal de alerta prático: **a ordem dos argumentos de venda**. Quando conformidade é a primeira coisa que um fornecedor diz sobre o produto, vale examinar o resto com cuidado, um restaurante que anuncia o certificado da vigilância sanitária em vez da própria cozinha já disse algo sobre a cozinha."
+          ],
+          "bullets": [
+            "**Chave de API** para o modelo de outra empresa.",
+            "**System prompt**, a única \"propriedade intelectual\" que muitos exibem.",
+            "**Janela de chat**: histórico à esquerda, campo de entrada à direita, logo no topo. Quem viu três demos conhece todas.",
+            "**Um PDF de conformidade** para tranquilizar o jurídico."
+          ]
+        },
+        {
+          "id": "o-que-os-numeros-mostram",
+          "heading": "O que os números mostram",
+          "level": 2,
+          "paragraphs": [
+            "Não é opinião de investidor. É padrão documentado.",
+            "A piada \"mais um GPT-for-X\" se escreve sozinha. Mas ela erra metade da história: os 10% que sobreviveram não tinham código melhor, modelos maiores nem prompts superiores. Tinham uma coisa em comum, **validaram antes de construir**."
+          ],
+          "bullets": [
+            "Cerca de **90% dos wrappers de IA** lançados no Product Hunt nos últimos dois anos entregaram, atingiram o pico e pararam discretamente de receber commits.",
+            "Portais de comparação já listam **mais de 1.600 ferramentas de IA avaliadas**, e levantamentos de mercado somam meia dúzia de novas \"plataformas de IA\" a cada atualização."
+          ]
+        },
+        {
+          "id": "tres-pressoes-estruturais-contra-o-wrapper",
+          "heading": "Três pressões estruturais contra o wrapper",
+          "level": 2,
+          "paragraphs": [
+            "A categoria não morre por incompetência. Morre por física de mercado:",
+            "Repare: nenhuma das três se resolve escrevendo mais código. Resolvem-se com posicionamento, dados e profundidade de workflow."
+          ],
+          "bullets": [
+            "**O moat do modelo é de outra pessoa.** Os provedores de modelos de fundação têm interesse direto em absorver as categorias de wrapper mais populares dentro do próprio produto principal, a leitura de quais empresas farão isso, e quando, é nossa e não da fonte.",
+            "**Se é genérico o bastante para ser útil a todo mundo**, é exatamente o tipo de coisa que os provedores de modelo tendem a lançar como feature gratuita mais cedo do que o fundador gostaria.",
+            "**A distribuição está saturada.** A superfície do \"wrapper fino em volta de um LLM\" já foi tão explorada que ser indiferenciado nessa categoria virou suicídio econômico."
+          ]
+        },
+        {
+          "id": "wrapper-nao-e-xingamento-e-estagio",
+          "heading": "Wrapper não é xingamento. É estágio.",
+          "level": 2,
+          "paragraphs": [
+            "Não confunda crítica de categoria com sentença de morte. **Granola, Cursor e Perplexity começaram como algo próximo de um wrapper**. O problema nunca foi começar fino. O problema é continuar fino.",
+            "A transição de wrapper para empresa AI-native acontece quando cada mês de operação deixa um resíduo que o concorrente não consegue comprar:",
+            "É isso que queremos dizer com **build to compound**: cada semana precisa deixar um ativo que a próxima semana usa."
+          ],
+          "bullets": [
+            "**Dados proprietários do workflow**, não o dado público, mas o que só existe porque seu produto está no meio da operação do cliente. É a lógica dos [efeitos de rede de dados em IA vertical](https://avanteventures.com/en/library/data-network-effects-vertical-ai).",
+            "**Camada de avaliação própria**: como você sabe que a saída está certa neste domínio? Sem eval, você não tem produto, tem sorte.",
+            "**Loops de feedback** que corrigem o comportamento do sistema com o uso real, não com um prompt maior.",
+            "**Orquestração e roteamento entre modelos**, para que trocar de fornecedor seja uma decisão de custo, não uma refundação.",
+            "**Economia unitária consciente**: engenharia sobre o modelo tem custo. Um exemplo público, vale registrar que é material publicado pelo próprio fornecedor da solução, portanto de peso baixo como evidência, descreve um wrapper de API que criptografa termos sensíveis antes do envio e observa que o **consumo de tokens aumenta** proporcionalmente à criptografia. O ponto geral se sustenta sem depender desse caso: toda camada adicional tem preço, e camada com preço também é camada difícil de copiar. Se essa conta entra em COGS ou em OpEx é outra discussão, tratamos dela em [custo de inferência é COGS ou OpEx?](https://avanteventures.com/en/library/is-inference-cost-cogs-or-opex)."
+          ]
+        },
+        {
+          "id": "o-teste-que-aplicamos-antes-da-primeira-linha-de-codigo",
+          "heading": "O teste que aplicamos antes da primeira linha de código",
+          "level": 2,
+          "paragraphs": [
+            "Nosso viés é operacional: validar antes de construir é o único ponto em comum dos sobreviventes. Na prática, quatro perguntas, e nenhuma exige um modelo próprio para ser respondida:",
+            "Se as quatro respostas forem fracas, o problema não é o modelo. É a tese."
+          ],
+          "bullets": [
+            "**Teste da feature gratuita.** Se o provedor do modelo lançar isso de graça dentro do produto principal, o que ainda faz o cliente pagar?",
+            "**Teste do resíduo.** Depois de seis meses rodando, que dado, avaliação ou integração ficou na empresa?",
+            "**Teste do fim de semana.** Um time competente reconstrói isso em dois dias? Se sim, sua vantagem não está no software.",
+            "**Teste da primeira frase.** Quando você descreve o produto, a primeira coisa que sai da sua boca é a IA ou é o problema do cliente?"
+          ]
+        },
+        {
+          "id": "como-isso-se-traduz-no-brasil",
+          "heading": "Como isso se traduz no Brasil",
+          "level": 2,
+          "paragraphs": [
+            "O padrão global chega aqui com atraso e com uma vantagem. O atraso: o Brasil está vivendo agora a fase de \"toda empresa quer IA imediatamente\" que produziu a enxurrada de wrappers lá fora. A vantagem: quem constrói agora já tem o mapa de como essa história termina.",
+            "Setores regulados e operacionalmente densos, jurídico, saúde, seguros, serviços financeiros, logística, são onde o wrapper fino falha mais rápido e onde arquitetura de verdade compõe mais rápido. Regulação local, dado em português, processo próprio de cada operação e integração com sistemas legados não cabem em um system prompt.",
+            "É por isso que co-fundamos em vez de só investir. On the ground, desde o dia zero: decidir a arquitetura, montar a camada de avaliação e definir qual dado a empresa vai acumular são decisões de fundação, não de roadmap. Essa é a diferença prática entre um venture builder e um fundo tradicional, que explicamos em [venture studio de IA vs. venture studio tradicional](https://avanteventures.com/en/library/ai-venture-studio-vs-traditional-venture-studio). Wrapper é o que se faz num fim de semana. Empresa AI-native é o que se decide na primeira semana."
+          ]
+        },
+        {
+          "id": "perguntas-frequentes",
+          "heading": "Perguntas frequentes",
+          "level": 2,
+          "paragraphs": [
+            "### É IA ou AI?",
+            "Em português, o correto é **IA** (Inteligência Artificial). **AI** é a sigla em inglês (Artificial Intelligence). No nosso vocabulário, mantemos o termo composto \"AI-native\" em inglês porque ele descreve uma categoria de empresa consolidada no mercado global, e não a tecnologia em si, mas quando falamos da tecnologia, falamos de IA.",
+            "### O que é um wrapper de ChatGPT, exatamente?",
+            "É um produto que repassa chamadas de API para o modelo de outra empresa e coloca pouco mais que uma interface por cima. A stack completa costuma ser: uma chave de API, um system prompt, uma janela de chat e um contrato de tratamento de dados em PDF, algo que um profissional competente monta em um fim de semana.",
+            "### É possível criar uma IA própria?",
+            "Treinar um modelo de fundação do zero é caro e raramente é o caminho certo para uma startup. Mas \"IA própria\" não significa modelo próprio: significa dados proprietários, camada de avaliação, orquestração entre modelos e loops de feedback que só existem porque seu produto está dentro do workflow do cliente. É exatamente essa camada que os provedores de modelo não conseguem lançar como feature gratuita.",
+            "### Todo wrapper está condenado?",
+            "Não. Cerca de 90% dos wrappers lançados no Product Hunt nos últimos dois anos pararam de receber commits, mas Granola, Cursor e Perplexity começaram como algo próximo de um wrapper. Começar fino é aceitável; continuar fino é o que mata.",
+            "### Como saber se minha startup é AI-native de verdade?",
+            "Aplique o teste da feature gratuita: se o provedor do modelo lançar sua funcionalidade sem custo dentro do produto principal, o que tende a acontecer com categorias genéricas e populares -, o que ainda faz o cliente pagar? Se a resposta for só a interface, você tem um wrapper. Se for dados, avaliação, workflow e integração, você tem uma empresa."
+          ]
+        },
+        {
+          "id": "sources",
+          "heading": "Fontes",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "[Anatomía de un wrapper de ChatGPT | amaiko](https://amaiko.ai/es/blog/chatgpt-wrapper-anatomy)",
+            "[Anatomia de um wrapper de ChatGPT | amaiko](https://amaiko.ai/pt/blog/chatgpt-wrapper-anatomy)",
+            "[ChatGPT Wrapper Creator | AnotherWrapper](https://anotherwrapper.com/tools/ai-app-generator/chatgpt-wrapper-creator)",
+            "[Wrapper ChatGPT en 2026 : encore viable comme business ? | LemonPage AI](https://lemonpage.ai/blog/fr/wrapper-chatgpt-2026-business-viable)",
+            "[Building a ChatGPT API Wrapper for Secure Business Use](https://zenn.dev/tesla/articles/323770f98b343c?locale=en)"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "É IA ou AI?",
+          "a": "Em português, o correto é **IA** (Inteligência Artificial). **AI** é a sigla em inglês (Artificial Intelligence). No nosso vocabulário, mantemos o termo composto \"AI-native\" em inglês porque ele descreve uma categoria de empresa consolidada no mercado global, e não a tecnologia em si, mas quando falamos da tecnologia, falamos de IA."
+        },
+        {
+          "q": "O que é um wrapper de ChatGPT, exatamente?",
+          "a": "É um produto que repassa chamadas de API para o modelo de outra empresa e coloca pouco mais que uma interface por cima. A stack completa costuma ser: uma chave de API, um system prompt, uma janela de chat e um contrato de tratamento de dados em PDF, algo que um profissional competente monta em um fim de semana."
+        },
+        {
+          "q": "É possível criar uma IA própria?",
+          "a": "Treinar um modelo de fundação do zero é caro e raramente é o caminho certo para uma startup. Mas \"IA própria\" não significa modelo próprio: significa dados proprietários, camada de avaliação, orquestração entre modelos e loops de feedback que só existem porque seu produto está dentro do workflow do cliente. É exatamente essa camada que os provedores de modelo não conseguem lançar como feature gratuita."
+        },
+        {
+          "q": "Todo wrapper está condenado?",
+          "a": "Não. Cerca de 90% dos wrappers lançados no Product Hunt nos últimos dois anos pararam de receber commits, mas Granola, Cursor e Perplexity começaram como algo próximo de um wrapper. Começar fino é aceitável; continuar fino é o que mata."
+        },
+        {
+          "q": "Como saber se minha startup é AI-native de verdade?",
+          "a": "Aplique o teste da feature gratuita: se o provedor do modelo lançar sua funcionalidade sem custo dentro do produto principal, o que tende a acontecer com categorias genéricas e populares -, o que ainda faz o cliente pagar? Se a resposta for só a interface, você tem um wrapper. Se for dados, avaliação, workflow e integração, você tem uma empresa."
+        }
+      ]
+    },
+    "ogImage": "/og/chatgpt-wrapper-is-not-an-ai-native-company.png"
+  },
+  {
     "slug": "online-entrepreneurship-course",
     "category": "insights",
     "type": "Explainer",
