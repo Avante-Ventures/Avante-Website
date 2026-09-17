@@ -96,6 +96,7 @@ Our model: pre-traction capital + repeatable operational system + in-market exec
 
 ### English
 
+- [FCJ Venture Builder: What It Is, How the Model Works, and How to Compare It](https://avanteventures.com/en/library/fcj-venture-builder): What FCJ Venture Builder is, its published numbers since 2013, how Corporate Venture Builder licensing works, and how it compares to accelerators, incubators…
 - [Criptomoeda (Cryptocurrency): What It Is, How It Works, and What Builders Should Actually Learn From It](https://avanteventures.com/en/library/criptomoeda-what-is-cryptocurrency): Cryptocurrency explained without hype: how the blockchain ledger settles transactions, why there is no fixed yield, and what AI-native builders should take…
 - [Create Animation With Artificial Intelligence Free: The Operator's Guide](https://avanteventures.com/en/library/create-animation-with-artificial-intelligence-free): How to create animation with artificial intelligence for free: text-to-video, image-to-video, and first/last frame workflows, plus real free-tier limits.
 - [Smart Glasses and the AI-Native Thesis: Why the Form Factor Matters for Venture Building](https://avanteventures.com/en/library/smart-glasses): What smart glasses are, what they do today, how AI glasses differ, and why the shift to ambient computing is an architecture decision for AI-native founders.
@@ -207,6 +208,7 @@ Our model: pre-traction capital + repeatable operational system + in-market exec
 
 ### Português
 
+- [FCJ Venture Builder: o que é, como funciona e onde ela se encaixa](https://avanteventures.com/pt/library/fcj-venture-builder): FCJ Venture Builder: o que é, como funciona o modelo CVB, números oficiais e a diferença entre venture builder, aceleradora e fundo. Direto ao ponto.
 - [Criptomoeda: o que é, como funciona e por que importa para quem constrói](https://avanteventures.com/pt/library/criptomoeda-o-que-e-como-funciona): Criptomoeda é um ativo digital em blockchain, sem banco central. Veja como funciona o consenso, o que muda em rendimento e regulação, e a leitura da Avante.
 - [Criar animação com inteligência artificial grátis: as três rotas que realmente funcionam](https://avanteventures.com/pt/library/criar-animacao-com-inteligencia-artificial-gratis): Como criar animação com inteligência artificial grátis: texto→vídeo, imagem→vídeo e pipeline de frames. Limites reais do plano free e o fluxo AI-native que…
 - [Óculos inteligente: o que é, o que faz e a leitura AI-native](https://avanteventures.com/pt/library/oculos-inteligente): Óculos inteligente é um computador vestível em formato de armação. O que faz, diferença vs. óculos com IA, se tem grau, melhores modelos e a leitura AI-native.

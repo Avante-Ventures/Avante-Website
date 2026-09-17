@@ -1770,6 +1770,312 @@ const articleSiggaCaseStudy: Article = {
 // 102 article(s) generated from content-engine/outputs. Edit the engine, not this block.
 const engineArticles: Article[] = [
   {
+    "slug": "fcj-venture-builder",
+    "category": "insights",
+    "type": "Explainer",
+    "readTime": "5 min",
+    "featured": false,
+    "date": "Sep 2026",
+    "datePublished": "2026-09-17",
+    "isPublished": true,
+    "en": {
+      "title": "FCJ Venture Builder: What It Is, How the Model Works, and How to Compare It",
+      "description": "What FCJ Venture Builder is, its published numbers since 2013, how Corporate Venture Builder licensing works, and how it compares to accelerators, incubators…",
+      "sections": [
+        {
+          "paragraphs": [
+            "FCJ Venture Builder is a Brazilian venture building group founded in 2013 that builds startups and licenses Corporate Venture Builders to corporates. Here are the numbers on record, how the model works, and how it compares to accelerators, incubators, VC funds and AI-native studios.",
+            "FCJ Venture Builder is a Brazilian venture building group founded in 2013 by programmer Paulo Justino that partners with startups from their earliest stage and licenses a Corporate Venture Builder (CVB) model to large companies, reporting 50+ CVBs and 300+ portfolio startups across the U.S., Brazil and Europe."
+          ]
+        },
+        {
+          "id": "key-takeaways",
+          "heading": "Key takeaways",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "FCJ was founded in 2013 by Paulo Justino, a programmer from Minas Gerais, and reported R$ 80 million in revenue in 2022 with the ambition of a Nasdaq listing within five years.",
+            "FCJ Group reports 50+ validated Corporate Venture Builders, 300+ portfolio startups, 1,300+ investors and 10+ exits, operating across the U.S., Brazil and Europe.",
+            "A venture builder partners with a startup and invests knowledge from the very beginning; an accelerator supports growth after the company is already operating.",
+            "FCJ licensed its model starting in 2018 and opened it to large corporates in 2019, matching corporate problems with startups able to solve them.",
+            "Brazil has roughly 22,000 startups according to StartupBase, the reason builder-style models keep multiplying locally."
+          ]
+        },
+        {
+          "id": "fcj-venture-builder-in-one-answer",
+          "heading": "FCJ Venture Builder, in one answer",
+          "level": 2,
+          "paragraphs": [
+            "FCJ Venture Builder is a Brazilian venture building group. It was founded in 2013 by Paulo Justino, a programmer from Minas Gerais, with a simple conviction: startups rarely die for lack of an idea, they die for lack of people close by. Today it operates as part of FCJ Group, which describes itself as one of the world's largest open innovation and venture-building organizations, with presence across the U.S., Brazil, Europe and Israel.",
+            "Two things define the model. First, FCJ partners with startups early and invests knowledge, not only money, Forbes frames the distinction plainly: a venture builder works in partnership with the startup and invests knowledge from the beginning, while an accelerator helps companies grow after they are already running. Second, FCJ turned that method into a **licensable product**: the Corporate Venture Builder (CVB), a model corporates buy to build ventures inside their own governance. FCJ began licensing the business in 2018, and in 2019 extended the offer to large companies by matching corporate problems with startups able to solve them.",
+            "So when someone searches \"FCJ venture builder,\" they are usually looking at one of three doors: joining as a startup, licensing a CVB as a corporate, or understanding the model to compare it with a fund, an accelerator or a studio."
+          ]
+        },
+        {
+          "id": "the-numbers-on-record",
+          "heading": "The numbers on record",
+          "level": 2,
+          "paragraphs": [
+            "Use published figures, not vibes. What FCJ states publicly:",
+            "Historical context matters for anyone benchmarking growth: in early 2023, Forbes reported 175 startups in the portfolio and 45 Venture Builders, each specialized in a specific sector. The current figures on FCJ's own sites are higher. Same model, different snapshots in time."
+          ],
+          "bullets": [
+            "**13 years** of operation since 2013, organized around four movements, build, educate, connect, invest.",
+            "**50+ Corporate Venture Builders** validated.",
+            "**300+ startups** in the portfolio.",
+            "**1,300+ investors** connected in the group's English-language site; the Brazilian site reports **+1,800 investors**.",
+            "**R$ 300M+** in investments and M&A, and **+55,000 people** through its events.",
+            "**10+ exits**.",
+            "**R$ 80 million** in revenue in 2022, with a stated plan to list on Nasdaq within five years."
+          ]
+        },
+        {
+          "id": "how-the-corporate-venture-builder-model-works",
+          "heading": "How the corporate venture builder model works",
+          "level": 2,
+          "paragraphs": [
+            "FCJ's CVB licensing is the part most people misread. It is not an accelerator batch. It is an operating system sold to a corporation.",
+            "What FCJ says sets it apart: integration of open innovation, focus on Innovation Horizons 1, 2 and 3, executive training with a solid governance structure, and emphasis on cultural transformation and intrapreneurship programs. The promise to the corporate is control plus speed, new ventures created with corporate ownership while keeping governance, agility and flexibility. CVB programs have been implemented in retail, healthcare, agriculture, energy and other industries.",
+            "Around the CVB, the group runs adjacent units and services: an ecosystem management platform, an academy, an innovation club, summits, plus **Softlanding** programs for Brazil and the USA that handle legal, financial and market-strategy support for companies entering a new region. One group, four movements, each unit feeding the next.",
+            "Read in reverse, this is the tell: FCJ's center of gravity is **corporate innovation at scale**. Breadth is the feature."
+          ]
+        },
+        {
+          "id": "venture-builder-vs-accelerator-vs-incubator-vs-vc",
+          "heading": "Venture builder vs accelerator vs incubator vs VC",
+          "level": 2,
+          "paragraphs": [
+            "The labels blur. The economics don't.",
+            "Forbes calls venture builders and accelerators \"two distinct activities that complement each other\". Fair. The practical question isn't which label is better, it's who is actually at the keyboard on Tuesday morning."
+          ],
+          "bullets": [
+            "**Venture builder / venture studio.** Sits in the company from day zero. Invests knowledge and work alongside capital, in partnership with the startup. Takes meaningful equity for that work.",
+            "**Accelerator.** Enters after the company exists. Cohort, mentors, demo day, small check. Helps growth of companies already operating.",
+            "**Incubator.** Closer to infrastructure and early nurture: space, services, network, light structure, usually no operating team inside your product.",
+            "**Traditional VC fund.** Capital plus board-level guidance. Passive by design. It doesn't ship with you.",
+            "**Corporate venture builder.** A studio method installed inside a corporate, with corporate ownership and governance."
+          ]
+        },
+        {
+          "id": "how-to-choose-a-venture-studio-in-latam",
+          "heading": "How to choose a venture studio in LATAM",
+          "level": 2,
+          "paragraphs": [
+            "Seven questions. Ask them in this order.",
+            "Question 7 is where most comparisons end today."
+          ],
+          "bullets": [
+            "**Who builds?** Names of the operators who will write code and ship, not the partner who joins the monthly call.",
+            "**Thesis width.** Sector-agnostic and 300+ companies, or narrow and concentrated? Breadth buys deal flow; focus buys depth.",
+            "**Customer of the studio.** Corporates licensing a method, or founders starting from zero? Both are legitimate. They produce different incentives.",
+            "**Equity and cap table.** What percentage, vesting, and what happens if the studio's team steps out.",
+            "**Geographic reality.** Regional HQs and local knowledge matter for Brazil, regulation, hiring, sales cycles.",
+            "**Evidence of exits.** Exits, M&A and investment volume, stated and dated.",
+            "**AI depth.** Is AI in the architecture, or a layer added after the product shipped?"
+          ]
+        },
+        {
+          "id": "where-avante-sits",
+          "heading": "Where Avante sits",
+          "level": 2,
+          "paragraphs": [
+            "Avante Ventures is not a fund with a friendly tone. We co-found.",
+            "We pick a narrow thesis, AI-native companies in Brazil and LATAM, and we work inside them. Architecture decisions, model choices, data strategy, first hires, first contracts. Built to compound, not to fill a batch. On the ground in São Paulo, San Francisco and Bogotá.",
+            "The difference from a broad open-innovation group like FCJ is deliberate. FCJ's strength is scale across sectors and corporates: 50+ CVBs, 300+ startups, four movements. Ours is depth: fewer companies, AI as foundation rather than feature, operators who have built before.",
+            "Brazil has roughly 22,000 startups. Most of them will bolt AI onto an existing product. A few will be designed AI-native from the first commit. We only work on the second kind."
+          ]
+        },
+        {
+          "id": "sources",
+          "heading": "Sources",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "[FCJ Group, 13 anos construindo inovação que vira resultado](https://fcjventurebuilder.com/)",
+            "[FCJ Group](https://fcj.group/)",
+            "[CVB Licensing - FCJ Group](https://fcj.group/cvb-licensing/)",
+            "[About page - FCJ Group](https://fcj.group/about-page/)",
+            "[FCJ Venture Builder fatura R$ 80 milhões e mira IPO na Nasdaq](https://forbes.com.br/forbes-money/2023/01/fcj-venture-builder-fatura-r-80-milhoes-e-mira-ipo-na-nasdaq/)"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is FCJ Venture Builder?",
+          "a": "FCJ Venture Builder is a Brazilian venture building group founded in 2013 by programmer Paulo Justino. It partners with startups from an early stage and licenses a Corporate Venture Builder model to large companies, reporting 50+ CVBs and 300+ portfolio startups across the U.S., Brazil and Europe."
+        },
+        {
+          "q": "Is a venture builder the same as an accelerator?",
+          "a": "No. A venture builder works in partnership with the startup and invests knowledge from the beginning, while an accelerator supports the growth of companies that are already operating, two distinct activities that complement each other."
+        },
+        {
+          "q": "How many startups and exits does FCJ report?",
+          "a": "FCJ Group reports 300+ portfolio startups, 50+ validated Corporate Venture Builders, 1,300+ investors and 10+ exits, plus R$ 300M+ in investments and M&A. In early 2023, Forbes reported 175 startups and 45 Venture Builders."
+        },
+        {
+          "q": "What is Corporate Venture Builder (CVB) licensing?",
+          "a": "It is FCJ's model sold to a corporation so it can build ventures internally: open innovation integration, focus on Innovation Horizons 1, 2 and 3, executive training, governance structure, and intrapreneurship programs, with new ventures created under corporate ownership."
+        },
+        {
+          "q": "Venture studio vs incubator: how do I choose?",
+          "a": "Choose by who does the work. A studio embeds operators in your company and takes equity for that build; an incubator mostly supplies space, services and network. If you need architecture and shipping, pick the studio. If you need early structure, an incubator or accelerator may be enough."
+        }
+      ]
+    },
+    "pt": {
+      "title": "FCJ Venture Builder: o que é, como funciona e onde ela se encaixa",
+      "description": "FCJ Venture Builder: o que é, como funciona o modelo CVB, números oficiais e a diferença entre venture builder, aceleradora e fundo. Direto ao ponto.",
+      "sections": [
+        {
+          "paragraphs": [
+            "FCJ Venture Builder é o braço de construção de negócios do FCJ Group, criado em 2013. Explicamos o modelo de Corporate Venture Builder, os números públicos e as diferenças entre venture builder, aceleradora e fundo tradicional, com a leitura de quem co-funda empresas AI-native no Brasil.",
+            "FCJ Venture Builder é a operação de venture building do FCJ Group, fundada em 2013 pelo programador mineiro Paulo Justino, que entra em sociedade com startups e investe conhecimento desde o início, e que hoje escala esse modelo via Corporate Venture Builders (CVBs) licenciados para grandes empresas."
+          ]
+        },
+        {
+          "id": "key-takeaways",
+          "heading": "Em resumo",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "A FCJ foi fundada em 2013 por Paulo Justino e licenciou seu modelo a partir de 2018.",
+            "O FCJ Group informa 13 anos de operação, mais de 50 Corporate Venture Builders, mais de 300 startups no portfólio e mais de R$ 300 milhões em investimentos e M&A.",
+            "Em 2022 a FCJ Venture Builder faturou R$ 80 milhões e declarou a intenção de abrir capital na Nasdaq em até cinco anos.",
+            "Venture builder e aceleradora são atividades distintas: a primeira atua em sociedade desde o início da startup, a segunda apoia o crescimento de empresas já em funcionamento.",
+            "O FCJ Group opera com HQs regionais em EUA, Brasil, Europa e Israel, e aplicou programas de CVB em setores como varejo, saúde, agro e energia."
+          ]
+        },
+        {
+          "id": "resposta-direta-o-que-e-a-fcj-venture-builder",
+          "heading": "Resposta direta: o que é a FCJ Venture Builder",
+          "level": 2,
+          "paragraphs": [
+            "FCJ Venture Builder é a operação de construção de negócios do FCJ Group, fundada em 2013 pelo programador mineiro Paulo Justino. A lógica é simples e o próprio fundador a descreve assim: venture builder entra **em sociedade com a startup** e investe conhecimento desde o começo, enquanto uma aceleradora atua depois, quando a empresa já está funcionando. A motivação foi pessoal, Justino havia falido duas empresas e sentiu falta de conselho de quem entendia do mercado.",
+            "Hoje a FCJ não é só um venture builder. O grupo se apresenta como **quatro movimentos: construir, educar, conectar e investir**, com unidades próprias para cada etapa da jornada de inovação, entre elas Innovarium, Reino Academy, FCJ Innovation Club, Master CVB, Merkatum e o Minas Summit. E se posiciona como uma das maiores organizações de inovação aberta e venture building do mundo, com HQs regionais nos EUA, Brasil, Europa e Israel.",
+            "Se você chegou aqui procurando um parceiro para construir, o ponto prático é este: o motor de escala da FCJ é **corporativo**. O modelo cresce licenciando Corporate Venture Builders para empresas estabelecidas, não co-fundando um número pequeno de companhias do zero."
+          ]
+        },
+        {
+          "id": "os-numeros-publicos",
+          "heading": "Os números públicos",
+          "level": 2,
+          "paragraphs": [
+            "Vale separar o que cada fonte diz, porque os dados são de momentos diferentes.",
+            "**Site institucional (FCJ Group):**",
+            "**Site global:** 300+ startups, 50+ CVBs validados, 1.300+ investidores e 10+ exits, com operação nos EUA, Brasil e Europa.",
+            "**Forbes, janeiro de 2023:** faturamento de R$ 80 milhões em 2022, 175 startups no portfólio, 45 Venture Builders e a intenção de abrir capital em Wall Street em até cinco anos. A mesma matéria cita que o Brasil tem aproximadamente 22 mil startups, segundo a StartupBase.",
+            "A leitura honesta: é uma operação grande, de mais de uma década, com track record de licenciamento, e uma curva de crescimento visível entre 2023 e hoje nos próprios números divulgados."
+          ],
+          "bullets": [
+            "13 anos de estrada em inovação, desde 2013",
+            "50+ Corporate Venture Builders",
+            "300+ startups no portfólio",
+            "+1.800 investidores conectados",
+            "R$ 300M+ em investimentos e M&A",
+            "+55 mil pessoas em seus eventos"
+          ]
+        },
+        {
+          "id": "como-funciona-o-modelo-cvb",
+          "heading": "Como funciona o modelo CVB",
+          "level": 2,
+          "paragraphs": [
+            "A oferta comercial do grupo se organiza em poucas frentes claras:",
+            "No licenciamento, o que a FCJ entrega é método e governança: integração de inovação aberta, foco nos horizontes de inovação 1, 2 e 3, treinamento executivo, estrutura de governança e programas de transformação cultural e intraempreendedorismo. O argumento central é **controle**: criar novas ventures com propriedade corporativa, mantendo governança e velocidade. Esses programas já foram implementados em varejo, saúde, agro, energia e outros setores.",
+            "Ou seja: é venture building **para corporações**, com startups do ecossistema resolvendo demandas reais dessas empresas. Modelo diferente de um venture studio que co-funda uma companhia nova, com time dedicado, do primeiro commit em diante."
+          ],
+          "bullets": [
+            "**Softlanding Brazil / Softlanding USA**, entrada de empresas estrangeiras em novos mercados, com apoio jurídico, financeiro e de estratégia de mercado.",
+            "**CVB as a Service**, programa de inovação aberta validado, operado para a corporação.",
+            "**CVB Licensing**, a empresa licencia o modelo e monta seu próprio venture builder interno."
+          ]
+        },
+        {
+          "id": "venture-builder-aceleradora-incubadora-e-fundo-a-tabela-ment",
+          "heading": "Venture builder, aceleradora, incubadora e fundo: a tabela mental",
+          "level": 2,
+          "paragraphs": [
+            "A confusão de nomes custa tempo de founder. A distinção que importa é **quando o parceiro entra** e **o que ele coloca na mesa**.",
+            "Na nossa leitura, a pergunta real não é \"builder ou fundo?\". É: **quem está na mesa na terça-feira à noite quando a arquitetura precisa de decisão?** Capital passivo é ótimo depois que a máquina roda. Antes disso, o que falta quase nunca é dinheiro, é execução."
+          ],
+          "bullets": [
+            "**Venture builder / venture studio**, entra em sociedade desde o início e investe conhecimento, não apenas capital. Opera junto: produto, contratação, go-to-market.",
+            "**Aceleradora**, auxilia o crescimento de empresas que já estão funcionando. Programa com data de início e fim, cohort, demo day.",
+            "**Incubadora**, infraestrutura, ambiente e mentoria para estágios muito iniciais; costuma não assumir execução.",
+            "**Fundo de venture capital**, capital e board. Ajuda em rede e disciplina, mas não senta no código nem no funil."
+          ]
+        },
+        {
+          "id": "como-escolher-um-venture-studio-na-america-latina",
+          "heading": "Como escolher um venture studio na América Latina",
+          "level": 2,
+          "paragraphs": [
+            "Compare propostas com cinco perguntas. Elas separam operação real de programa de inovação.",
+            "Modelos como o do FCJ Group brilham quando o objetivo é **ecossistema e inovação aberta em escala**, 50+ CVBs e 300+ startups mostram isso. Quem procura outra coisa, uma empresa só, AI-native, com co-fundador operacional, precisa avaliar outro tipo de parceiro."
+          ],
+          "bullets": [
+            "**Quem executa?** Nome, tempo dedicado, histórico de ter construído. Não \"squad alocado\", não \"mentor sênior\".",
+            "**Quantas empresas por ano?** Portfólio largo dilui atenção. Poucas e profundas é uma tese; muitas e rasas é outra.",
+            "**Qual o equity e por quê?** O número precisa corresponder ao trabalho entregue nos primeiros 18 meses, e não travar as próximas rodadas.",
+            "**Corporativo ou greenfield?** Construir dentro da demanda de uma corporação é um caminho legítimo e reduz risco de mercado. Construir do zero para um mercado aberto é outro. Saiba qual você está assinando.",
+            "**Onde o time está fisicamente?** Fuso, regulação e talento brasileiro não se resolvem por Zoom trimestral."
+          ]
+        },
+        {
+          "id": "onde-a-avante-se-posiciona",
+          "heading": "Onde a Avante se posiciona",
+          "level": 2,
+          "paragraphs": [
+            "Nós co-fundamos. Não financiamos e acompanhamos: entramos como fundadores operacionais em um número pequeno de empresas AI-native e ficamos on the ground até a empresa andar sozinha.",
+            "Três diferenças práticas:",
+            "Build to compound. Se o seu problema é montar um funil de inovação aberta dentro de uma corporação, um CVB licenciado resolve. Se o seu problema é **fundar** a empresa, e você quer alguém dividindo a decisão difícil desde o dia zero -, é aí que a gente entra."
+          ],
+          "bullets": [
+            "**AI como fundação, não como feature.** Arquitetura, dados e stack decididos antes do primeiro cliente, não uma camada de IA colada depois.",
+            "**Poucas apostas, profundidade alta.** Nosso portfólio é construído em público: AlphaJuri, WIR e FutureProofing.",
+            "**Playbook do Vale, execução no Brasil.** Ritmo e padrões das melhores empresas de IA do mundo, traduzidos para regulação, talento e mercado local."
+          ]
+        },
+        {
+          "id": "sources",
+          "heading": "Fontes",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "[FCJ Group, 13 anos construindo inovação que vira resultado](https://fcjventurebuilder.com/)",
+            "[FCJ Group](https://fcj.group/)",
+            "[CVB Licensing - FCJ Group](https://fcj.group/cvb-licensing/)",
+            "[About page - FCJ Group](https://fcj.group/about-page/)",
+            "[FCJ Venture Builder fatura R$ 80 milhões e mira IPO na Nasdaq](https://forbes.com.br/forbes-money/2023/01/fcj-venture-builder-fatura-r-80-milhoes-e-mira-ipo-na-nasdaq/)"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Quem fundou a FCJ Venture Builder e quando?",
+          "a": "A FCJ foi fundada em 2013 pelo programador mineiro Paulo Justino, formado em sistemas de informação, que já havia falido duas empresas e trabalhado por 35 anos como programador. Ele criou a FCJ para evitar que fundadores de startups passassem pelo que ele passou."
+        },
+        {
+          "q": "Qual a diferença entre venture builder e aceleradora?",
+          "a": "São atividades distintas e complementares: o venture builder funciona em sociedade com a startup e investe conhecimento desde o início; a aceleradora auxilia no crescimento das empresas depois que elas já estão funcionando."
+        },
+        {
+          "q": "Quantas startups a FCJ tem no portfólio?",
+          "a": "O FCJ Group informa mais de 300 startups no portfólio e mais de 50 Corporate Venture Builders. Em janeiro de 2023, a Forbes registrava 175 startups e 45 venture builders, a diferença mostra o crescimento da operação nesse intervalo."
+        },
+        {
+          "q": "O que é o Corporate Venture Builder (CVB) da FCJ?",
+          "a": "É o modelo em que a FCJ ajuda uma corporação a construir e executar novas ventures ligadas a demandas reais do negócio, com opção de licenciamento. Inclui inovação aberta, foco nos horizontes 1, 2 e 3, treinamento executivo, governança e programas de intraempreendedorismo."
+        },
+        {
+          "q": "A FCJ pretende abrir capital?",
+          "a": "Sim. Segundo a Forbes, a empresa faturou R$ 80 milhões em 2022 e esperava abrir capital em Wall Street, na Nasdaq, em até cinco anos."
+        }
+      ]
+    },
+    "ogImage": "/og/fcj-venture-builder.png"
+  },
+  {
     "slug": "criptomoeda-what-is-cryptocurrency",
     "category": "insights",
     "type": "Explainer",
