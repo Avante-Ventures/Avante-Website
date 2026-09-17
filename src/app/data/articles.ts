@@ -1770,6 +1770,293 @@ const articleSiggaCaseStudy: Article = {
 // 102 article(s) generated from content-engine/outputs. Edit the engine, not this block.
 const engineArticles: Article[] = [
   {
+    "slug": "smart-glasses",
+    "category": "insights",
+    "type": "Explainer",
+    "readTime": "7 min",
+    "featured": false,
+    "date": "Sep 2026",
+    "datePublished": "2026-09-17",
+    "isPublished": true,
+    "en": {
+      "title": "Smart Glasses and the AI-Native Thesis: Why the Form Factor Matters for Venture Building",
+      "description": "What smart glasses are, what they do today, how AI glasses differ, and why the shift to ambient computing is an architecture decision for AI-native founders.",
+      "sections": [
+        {
+          "paragraphs": [
+            "A technical, no-hype primer on smart glasses, what they are, what they actually do today, how they differ from AI glasses, and why the shift to ambient computing is, first of all, an architecture decision for anyone building an AI-native company.",
+            "Smart glasses are eye- or head-worn wearable computers built into an ordinary-looking frame, with speakers, microphones, a camera and sometimes a small transparent display, that add information, audio, capture or AI assistance to what the wearer already sees."
+          ]
+        },
+        {
+          "id": "key-takeaways",
+          "heading": "Key takeaways",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "Smart glasses are wearable computers worn on the eyes or head; many include displays that overlay information onto the field of view via an optical head-mounted display, transparent HUD or AR layer.",
+            "Core functions today are notifications and calls by voice, open-ear audio, and hands-free photo and video capture through the lenses.",
+            "Meta frames the split this way: smart glasses keep you connected as an extension of your smartphone, while AI glasses actively assist and answer in real time from a voice command.",
+            "Prescription is solved, not pending: Meta Glasses are compatible with clear prescription, blue-light, Transitions and sun lenses, with adjustable nose pads and multiple sizes.",
+            "The interesting question is not which frame wins. It is who owns the workflow and the data behind the voice command, a venture building question, not a hardware one."
+          ]
+        },
+        {
+          "id": "smart-glasses-defined",
+          "heading": "Smart glasses, defined",
+          "level": 2,
+          "paragraphs": [
+            "**Smart glasses are wearable computers you wear on your face.** Technically: eye- or head-worn computers, many of them carrying a display that adds information next to, or on top of, what the user already sees, through an optical head-mounted display, a transparent heads-up display, or an augmented reality overlay. The term is elastic. It also covers frames that change their optical properties electronically, like sunglasses programmed to shift tint, and frames whose main job is headset functionality.",
+            "From the outside they look normal. Meta describes them as ordinary glasses with technology integrated discreetly: at a glance they read as regular sunglasses or prescription frames, but inside there are small speakers, microphones, a lightweight camera, or even a small screen inside the field of view. That is the whole point of the category. The hardware disappears; the capability stays. Modern units are effectively wearable computers running standalone mobile apps, some hands-free, talking to the internet through natural-language voice commands, others driven by touch-sensitive buttons.",
+            "The lineage is long: the EyeTap Digital Eye Glass dates to 1998, and Google Glass in 2013 used a touchpad on the temple to talk to the user's phone over Bluetooth. What changed is not the frame. It is what sits behind the microphone."
+          ]
+        },
+        {
+          "id": "what-smart-glasses-actually-do",
+          "heading": "What smart glasses actually do",
+          "level": 2,
+          "paragraphs": [
+            "Strip the marketing and there are three jobs that ship today:",
+            "Current hardware pushes each of those further. Meta Glasses ship with a 12 MP ultra-wide camera, open-ear spatial audio and Meta AI built in; the camera records 3K UHD video with HDR from the wearer's viewpoint.",
+            "The assistant layer is where the category gets interesting. Real-time directions, conversation translation in more than 20 languages, personalized recommendations, and booking a restaurant table by voice, all without slowing down or pulling out the phone. We are deliberately not running a buyer's guide here: model numbers rotate every twelve months, and the thesis does not."
+          ],
+          "bullets": [
+            "**Stay connected.** See calls, messages and notifications in real time and answer with a voice command.",
+            "**Listen anywhere.** Music, podcasts and calls through discreet speakers in the frame.",
+            "**Capture what you see.** Photos and video through the lenses, recording the moment from your exact point of view."
+          ]
+        },
+        {
+          "id": "smart-glasses-vs-ai-glasses-an-architecture-question",
+          "heading": "Smart glasses vs. AI glasses: an architecture question",
+          "level": 2,
+          "paragraphs": [
+            "The labels get used interchangeably. They are not the same thing.",
+            "Meta draws the line by interaction model: smart glasses keep you connected and act as an extension of your smartphone, while AI glasses actively assist and answer in real time from a simple voice command. One is a remote control for a device in your pocket. The other is an agent sitting on your head, seeing what you see.",
+            "That distinction is exactly the one we make about software, and it is why [a ChatGPT wrapper is not an AI-native company](https://avanteventures.com/en/library/chatgpt-wrapper-is-not-an-ai-native-company). A product with a chat box bolted on the side inherits none of the hard parts. A product whose core loop assumes a model in the path, perception, context, response, is a different architecture, a different latency budget, a different data strategy, and usually a different team.",
+            "Glasses make that difference physical. Once the camera and microphone are always available and the assistant answers in the moment, the phone stops being the center of the interaction, and every fallback UI you were counting on disappears."
+          ]
+        },
+        {
+          "id": "prescription-fit-and-the-optics-question",
+          "heading": "Prescription, fit and the optics question",
+          "level": 2,
+          "paragraphs": [
+            "Yes, smart glasses can have prescription lenses. Meta Glasses are compatible with clear prescription lenses, blue-light lenses, Transitions and sun lenses, so vision correction and style do not have to be traded off. Fit is engineered too: adjustable nose pads, flexible temple tips and a range of sizes across styles such as Meta Adventurer, Meta Fury and Meta Starfire Kylie Edition.",
+            "One clarification worth making, because search results blur it. **Glasses that change their optical behavior electronically are a separate idea from glasses that carry a computer.** The smart glasses label sometimes refers to frames programmed to alter properties like tint on demand, that is electronically variable optics, not an AI assistant. When a page promises lenses that \"adapt to any prescription,\" check which of the two it means, because the sources that define the category do not describe universal auto-prescription as a shipping feature."
+          ]
+        },
+        {
+          "id": "what-the-category-is-really-optimizing-for",
+          "heading": "What the category is really optimizing for",
+          "level": 2,
+          "paragraphs": [
+            "Ignore the spec sheets for a minute and look at where the competition actually sits. Independent press and analyst coverage of the wearables cycle keeps converging on the same axes: display quality and field of view, the processing power of on-board AI silicon, the depth of contextual assistance and real-time translation, comfort and battery life, phone independence, and prescription fit.",
+            "Read that scorecard carefully. Optics and industrial design are two of those axes. The rest, chip power, depth of assistance, phone independence, are software, model and data questions. Manufacturer documentation makes the same point implicitly: what Meta sells as the differentiator is not the lens, it is the assistant behind it and the real-time tasks it can complete.",
+            "The moat is moving off the lens. That is good news for builders who do not own a factory."
+          ]
+        },
+        {
+          "id": "what-this-means-for-ai-native-builders",
+          "heading": "What this means for AI-native builders",
+          "level": 2,
+          "paragraphs": [
+            "Our read, as operators: glasses are the first consumer form factor where the interface *is* the model. No keyboard. No app grid. A camera, a microphone, a speaker, and an assistant that has to be right the first time, in the moment, with no second screen to fall back on.",
+            "That raises the bar on the things we obsess over when we co-found companies:",
+            "This is precisely why we operate as a venture builder rather than a check-writer. The gap between [an AI venture studio and a traditional venture studio](https://avanteventures.com/en/library/ai-venture-studio-vs-traditional-venture-studio) is that the first one makes the architecture decision on day one, with operators inside the company, instead of hoping a founder retrofits it after the seed round. Ambient form factors punish retrofits harder than dashboards do.",
+            "You can see the pattern in what we have co-founded. **AlphaJuri** was built with the model in the core loop of legal work, not as a chat panel next to it. **WIR** and **FutureProofing** were assembled the same way: a specific workflow, a proprietary data loop around it, and an interface that assumes the model is present rather than optional. None of those are glasses companies. All of them would survive the jump to a screenless interface, because the value never lived in the screen.",
+            "For Brazil and Latin America, the opportunity is not building the frame, it is building the vertical layer that runs on it: hands-free capture and assistance for field work, logistics, healthcare intake, inspection, field sales. Several of the [AI startup ideas we track for 2026 in Latin America](https://avanteventures.com/en/library/ai-startup-ideas-2026-latin-america) are workflow-first by construction, which is exactly what makes them portable to whatever hardware arrives next.",
+            "We build to compound. Form factors change. The architecture decision, model in the core loop, not on top of it, is the one that holds."
+          ],
+          "bullets": [
+            "**Latency is product.** Real-time scene description and live translation are only useful below the threshold where a human would have just looked it up.",
+            "**Context beats features.** Contextual assistance comes from proprietary data loops and [data network effects in vertical AI](https://avanteventures.com/en/library/data-network-effects-vertical-ai), not from prompt engineering.",
+            "**Distribution is physical.** Prescription lenses, sizes, nose pads, the boring parts decide adoption."
+          ]
+        },
+        {
+          "id": "the-operators-behind-the-thesis",
+          "heading": "The operators behind the thesis",
+          "level": 2,
+          "paragraphs": [
+            "We are not observers of this shift. We co-found companies, sit in the operating seat, and carry the consequences of the architecture calls we make.",
+            "> \"We never buy a form factor. We buy a workflow, and then we ask what has to be true for a model to run inside it. If the answer is 'a nice interface,' we pass. If the answer is 'proprietary context nobody else can assemble,' we build.\", Avante Ventures' founding partners",
+            "That is the same filter we applied to legal work with AlphaJuri and to the rest of the portfolio, and it is the reason [we co-found instead of invest](https://avanteventures.com/en/why-avante). Glasses are simply the clearest illustration we have seen so far: when the interface disappears, everything that was cosmetic disappears with it, and what is left is the workflow, the data and the speed of the answer."
+          ]
+        },
+        {
+          "id": "sources",
+          "heading": "Sources",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "[O que são óculos inteligentes? Explicação sobre os óculos com IA | Meta Store (pt-BR)](https://www.meta.com/br/ai-glasses/learn/what-are-smart-glasses/)",
+            "[Óculos com IA inteligentes projetados para a vida cotidiana | Meta Store (pt-BR)](https://www.meta.com/br/ai-glasses/smart-ai-glasses/)",
+            "[Óculos inteligente, Wikipédia, a enciclopédia livre](https://pt.wikipedia.org/wiki/%C3%93culos_inteligente)"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What do smart glasses do?",
+          "a": "Three core things today: show calls, messages and notifications in real time with voice replies; play music, podcasts and calls through discreet speakers in the frame; and capture photos and video through the lenses from your exact point of view. AI-enabled models add real-time directions, translation in more than 20 languages, recommendations and voice-driven tasks such as booking a restaurant table."
+        },
+        {
+          "q": "What is the difference between smart glasses and AI glasses?",
+          "a": "Smart glasses keep you connected and act as an extension of your smartphone; AI glasses actively assist and answer in real time from a simple voice command. The gap is architectural, not cosmetic, one relays a phone's functions, the other puts a model in the interaction loop, with all the latency, context and data requirements that implies."
+        },
+        {
+          "q": "Do smart glasses come with prescription lenses?",
+          "a": "Yes. Meta Glasses are compatible with clear prescription lenses, as well as blue-light, Transitions and sun lenses, with adjustable nose pads, flexible temple tips and multiple sizes for fit."
+        },
+        {
+          "q": "Are smart glasses the same as augmented reality glasses?",
+          "a": "Not always. Some smart glasses qualify as augmented reality devices, overlaying information on the field of view through an optical head-mounted display, a transparent HUD or an AR layer, while others are essentially wearable computers with audio and capture and no display at all."
+        },
+        {
+          "q": "Should a founder build a smart glasses startup?",
+          "a": "Building the frame is a hardware and supply-chain business. The more defensible position for most founders is the vertical layer that runs on top of it, a specific workflow, a proprietary data loop and an assistant that is right the first time. That software is portable: it works on a phone today and survives the move to a screenless interface tomorrow."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Óculos inteligente: o que é, o que faz e a leitura AI-native",
+      "description": "Óculos inteligente é um computador vestível em formato de armação. O que faz, diferença vs. óculos com IA, se tem grau, melhores modelos e a leitura AI-native.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Óculos inteligente é um computador vestível em formato de armação. Explicamos o que ele faz, a diferença entre óculos inteligente e óculos com IA, se tem grau, quais modelos lideram hoje, e o que isso muda para quem constrói empresas AI-native no Brasil.",
+            "Óculos inteligente é um computador vestível usado nos olhos ou na cabeça: uma armação de aparência comum que integra microfones, alto-falantes, câmera e, em parte dos modelos, uma tela transparente que sobrepõe informações ao campo de visão."
+          ]
+        },
+        {
+          "id": "key-takeaways",
+          "heading": "Em resumo",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "Óculos inteligentes são computadores vestíveis nos olhos ou na cabeça; muitos incluem telas que somam informações ao que o usuário vê.",
+            "Por fora parecem óculos de sol ou de grau comuns; por dentro trazem alto-falantes pequenos, microfones, câmera leve e, em alguns casos, uma tela no campo de visão.",
+            "A diferença entre óculos inteligente e óculos com IA está na interação: o primeiro funciona como extensão do smartphone, o segundo responde de forma ativa por comando de voz.",
+            "Os Meta Glasses chegam em três estilos, Meta Adventurer, Meta Fury e Meta Starfire Kylie Edition, com câmera ultra-wide de 12 MP, áudio open-ear e tradução em mais de 20 idiomas.",
+            "Sim, há suporte a grau: os modelos atuais aceitam lentes de grau transparentes, de luz azul, Transitions e de sol."
+          ]
+        },
+        {
+          "id": "resposta-direta-o-que-e-um-oculos-inteligente",
+          "heading": "Resposta direta: o que é um óculos inteligente",
+          "level": 2,
+          "paragraphs": [
+            "Óculos inteligente é um computador vestível usado nos olhos ou na cabeça. Por fora, parece um óculos de sol ou de grau qualquer. Por dentro, carrega tecnologia integrada de forma discreta: alto-falantes pequenos, microfones, uma câmera leve e, em alguns modelos, uma tela dentro do campo de visão. A sobreposição de informação acontece por meio de display óptico de cabeça (OHMD), heads-up display transparente ou camada de realidade aumentada.",
+            "O termo também é usado em sentidos mais amplos. Às vezes descreve óculos capazes de alterar suas propriedades ópticas, por exemplo, óculos de sol programados para mudar a tonalidade eletronicamente. Às vezes, apenas óculos com funcionalidade de fone de ouvido. O que separa as gerações é a autonomia: os primeiros modelos serviam como display de um sistema remoto, enquanto os modernos são efetivamente computadores vestíveis capazes de rodar aplicativos móveis independentes, operados por comandos de voz em linguagem natural ou por botões sensíveis ao toque. A linhagem é longa: o EyeTap de 1998 e o Google Glass de 2013, que usava um touchpad lateral para se comunicar com o telefone via Bluetooth."
+          ]
+        },
+        {
+          "id": "o-que-os-oculos-inteligentes-fazem-no-dia-a-dia",
+          "heading": "O que os óculos inteligentes fazem no dia a dia",
+          "level": 2,
+          "paragraphs": [
+            "Os usos documentados pelos fabricantes são concretos e poucos, o que, na nossa leitura, é um sinal de maturidade e não de limitação:",
+            "Tradução em tempo real e assistência contextual são justamente os critérios usados por avaliações independentes para separar os modelos sérios dos acessórios."
+          ],
+          "bullets": [
+            "**Ficar por dentro:** ver ligações, mensagens e notificações em tempo real e responder com comando de voz.",
+            "**Ouvir em qualquer lugar:** música, podcasts e chamadas por alto-falantes discretos na armação; nos Meta Glasses, áudio espacial open-ear.",
+            "**Documentar o que se vê:** fotos e vídeos capturados pelas lentes, do ponto de vista exato do usuário. A câmera ultrawide de 12 MP grava vídeo 3K UHD com HDR.",
+            "**Pedir respostas sem pegar o celular:** indicações de caminho em tempo real, tradução de conversas em mais de 20 idiomas, recomendações personalizadas e reserva de restaurante pelo Concierge, acionados por \"Hey Meta\".",
+            "**Transmitir e descrever:** o Ray-Ban Meta de 2ª geração faz transmissão ao vivo direta para Instagram e Facebook e traz descrição de cena em tempo real pelo assistente."
+          ]
+        },
+        {
+          "id": "oculos-inteligente-vs-oculos-com-ia-a-diferenca-que-importa",
+          "heading": "Óculos inteligente vs. óculos com IA: a diferença que importa",
+          "level": 2,
+          "paragraphs": [
+            "Os dois parecem a mesma coisa. Não são. Segundo a Meta, o óculos inteligente mantém você conectado, atuando como **extensão do seu smartphone**; o óculos com IA **auxilia e oferece respostas de forma ativa e em tempo real**, com um simples comando de voz.",
+            "Essa é a mesma fronteira que separa empresa com IA de empresa AI-native. No primeiro caso, a IA é uma camada colada depois: um botão, um atalho, um assistente opcional. No segundo, a IA é a arquitetura, define o produto, o loop de dados e o motivo de o hardware existir. Em óculos, isso fica visível: sem assistente, a armação é um fone com câmera. Com assistente no centro, a armação é uma interface nova.",
+            "É por isso que olhamos wearable como caso de estudo, não como hype. Quem constrói produto hoje deveria se perguntar qual parte da sua experiência sobrevive se você tirar o modelo do meio. Se sobrevive inteira, a IA era feature."
+          ]
+        },
+        {
+          "id": "oculos-inteligente-tem-grau-e-o-oculos-que-se-adapta-a-qualq",
+          "heading": "Óculos inteligente tem grau? E o \"óculos que se adapta a qualquer grau\"",
+          "level": 2,
+          "paragraphs": [
+            "Tem. Os modelos atuais são compatíveis com lentes de grau transparentes, de luz azul, de Transitions e de sol, justamente para não obrigar a escolher entre visão e estilo. O ajuste também virou item de engenharia: apoios de nariz ajustáveis, ponteiras flexíveis nas hastes e variedade de tamanhos. Em avaliações comparativas, \"soluções de ajuste de prescrição\" entram como critério formal de classificação.",
+            "Sobre o \"óculos que se adapta a qualquer grau\": as fontes que lemos não documentam lente de grau variável em óculos inteligentes de consumo. O que está documentado é outra coisa, óculos capazes de alterar propriedades ópticas eletronicamente, como tonalidade programável. Vale tratar promessa de grau universal com cautela e checar a especificação do fabricante antes de comprar."
+          ]
+        },
+        {
+          "id": "quais-sao-os-melhores-hoje",
+          "heading": "Quais são os melhores hoje",
+          "level": 2,
+          "paragraphs": [
+            "Não existe resposta única: existe critério. Avaliações do setor pesam qualidade da tela e campo de visão, poder de processamento dos chips de IA, profundidade das capacidades de IA (assistência contextual, tradução em tempo real), conforto, duração da bateria, independência em relação ao telefone e soluções de grau.",
+            "Com esses critérios, dois nomes se repetem:",
+            "Se a escolha é de consumo, decida por caso de uso: captura mãos-livres e áudio, ou tela transparente e AR. São produtos diferentes vendidos com o mesmo nome."
+          ],
+          "bullets": [
+            "**RayNeo X3 Pro**, apontado como o principal óculos inteligente com IA de 2026, reconhecido entre as Melhores Invenções da TIME em 2025. Usa Waveguide MicroLED para entregar uma tela 3D transparente que sobrepõe informação ao campo de visão, operando sobre um sistema operacional baseado em IA.",
+            "**Ray-Ban Meta (2ª geração)**, faixa de US$ 299 a US$ 379, câmera ultra-angular de 12 MP, live para Instagram e Facebook, assistente mãos-livres com descrição de cena, alto-falantes direcionais abertos e resistência à água IPX4; compatível com iOS e Android via app Meta View.",
+            "**Meta Glasses**, coleção em três estilos (Meta Adventurer, Meta Fury e Meta Starfire Kylie Edition), com Meta AI integrada, câmera ultra-wide de 12 MP e áudio espacial open-ear."
+          ]
+        },
+        {
+          "id": "a-leitura-da-avante-onde-esta-o-valor-que-compoe",
+          "heading": "A leitura da Avante: onde está o valor que compõe",
+          "level": 2,
+          "paragraphs": [
+            "Hardware vestível não é nossa tese. Interface nova é.",
+            "Quando um assistente passa a ver o que o usuário vê e a responder em tempo real por voz, o gargalo deixa de ser a câmera e passa a ser o contexto: quais dados o sistema tem, com que latência, sob qual permissão. Essa é a camada onde uma empresa AI-native brasileira pode construir algo que compõe, software vertical que entende um domínio, acumula sinal de uso e melhora a cada interação, em vez de disputar centímetros de armação com fabricantes globais.",
+            "Três perguntas que usamos quando um founder chega com uma ideia de wearable ou de \"copiloto visual\":",
+            "É assim que co-fundamos: no chão, com a arquitetura decidida junto, não com um deck de tendência. Se você está construindo na camada de contexto, e não no vidro -, essa é a conversa."
+          ],
+          "bullets": [
+            "**O que só funciona mãos-livres?** Se a mesma tarefa funciona melhor no celular, o produto é um acessório. Captura em campo, inspeção, atendimento, logística e tradução ao vivo são cenários onde a mão ocupada é o requisito.",
+            "**Onde fica o loop de dados?** Independência do telefone e chip de IA embarcado já são critérios de avaliação de dispositivo; para a startup, o que importa é reter o contexto do domínio, não o firmware.",
+            "**Quem dá o consentimento?** Câmera vestível em ambiente de trabalho no Brasil é decisão de compliance antes de ser decisão de produto. Resolver isso cedo é vantagem, não burocracia."
+          ]
+        },
+        {
+          "id": "sources",
+          "heading": "Fontes",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "[O que são óculos inteligentes? Explicação sobre os óculos com IA | Meta Store (pt-BR)](https://www.meta.com/br/ai-glasses/learn/what-are-smart-glasses/)",
+            "[Óculos com IA inteligentes projetados para a vida cotidiana | Meta Store (pt-BR)](https://www.meta.com/br/ai-glasses/smart-ai-glasses/)",
+            "[Top 10 Melhores Óculos Inteligentes com IA em 2026: Seu Guia de Tecnologia do Futuro | Nubia Magazine](https://nubiapage.com/pt/top-10-best-ai-smart-glasses-in/)",
+            "[Óculos inteligente, Wikipédia, a enciclopédia livre](https://pt.wikipedia.org/wiki/%C3%93culos_inteligente)",
+            "[Melhores Óculos Inteligentes 2025: Top 5 Óculos com IA Avaliados](https://airmore.ai/pt/ai-review/best-smart-glasses)"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "O que os óculos inteligentes fazem?",
+          "a": "Eles mostram ligações, mensagens e notificações em tempo real, respondem a comandos de voz, tocam música, podcasts e chamadas por alto-falantes discretos na armação e capturam fotos e vídeos pelas lentes. Modelos com IA integrada acrescentam indicações de caminho, tradução de conversas em mais de 20 idiomas e recomendações acionadas por voz, além de descrição de cena em tempo real."
+        },
+        {
+          "q": "Qual a diferença entre óculos inteligente e óculos com IA?",
+          "a": "O óculos inteligente funciona como extensão do smartphone, mantendo você conectado; o óculos com IA auxilia e responde de forma ativa e em tempo real por comando de voz. Na prática, no primeiro a inteligência está no telefone; no segundo, o assistente é o produto."
+        },
+        {
+          "q": "Óculos inteligente tem grau?",
+          "a": "Sim. Os modelos atuais são compatíveis com lentes de grau transparentes, de luz azul, de Transitions e de sol, com apoios de nariz ajustáveis e diferentes tamanhos de armação. Soluções de ajuste de prescrição são, inclusive, um dos critérios usados em comparativos do setor."
+        },
+        {
+          "q": "Existe óculos que se adapta a qualquer grau?",
+          "a": "As fontes que consultamos não documentam lente de grau variável em óculos inteligentes de consumo. O que está documentado é a existência de óculos capazes de alterar propriedades ópticas eletronicamente, como tonalidade programável, e a compatibilidade com lentes de grau feitas sob medida. Antes de comprar, confira a especificação do fabricante."
+        },
+        {
+          "q": "Quais são os melhores óculos inteligentes hoje?",
+          "a": "Depende do uso. Comparativos apontam o RayNeo X3 Pro como líder em 2026, com Waveguide MicroLED e tela 3D transparente, reconhecido entre as Melhores Invenções da TIME em 2025. Para captura e áudio, o Ray-Ban Meta de 2ª geração fica entre US$ 299 e US$ 379, com câmera de 12 MP, live para Instagram e Facebook e proteção IPX4; a coleção Meta Glasses traz três estilos com Meta AI integrada."
+        }
+      ]
+    },
+    "ogImage": "/og/smart-glasses.png"
+  },
+  {
     "slug": "female-entrepreneurship-in-brazil",
     "category": "insights",
     "type": "Explainer",
