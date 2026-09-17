@@ -1770,6 +1770,298 @@ const articleSiggaCaseStudy: Article = {
 // 102 article(s) generated from content-engine/outputs. Edit the engine, not this block.
 const engineArticles: Article[] = [
   {
+    "slug": "criptomoeda-what-is-cryptocurrency",
+    "category": "insights",
+    "type": "Explainer",
+    "readTime": "6 min",
+    "featured": false,
+    "date": "Sep 2026",
+    "datePublished": "2026-09-17",
+    "isPublished": true,
+    "en": {
+      "title": "Criptomoeda (Cryptocurrency): What It Is, How It Works, and What Builders Should Actually Learn From It",
+      "description": "Cryptocurrency explained without hype: how the blockchain ledger settles transactions, why there is no fixed yield, and what AI-native builders should take…",
+      "sections": [
+        {
+          "paragraphs": [
+            "A precise, no-hype explanation of cryptocurrency: the ledger, the consensus, the legal status, and why there is no fixed return on R$100. Written from an operator's desk, not a trading floor.",
+            "Cryptocurrency (criptomoeda) is a digital asset that uses cryptography and a distributed ledger, usually a blockchain, to secure transactions, control the creation of new units, and verify transfers of ownership without a central bank or issuing authority."
+          ]
+        },
+        {
+          "id": "key-takeaways",
+          "heading": "Key takeaways",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "Cryptocurrency is a digital asset recorded on a distributed ledger that uses a consensus mechanism to secure transactions, control coin creation, and verify ownership transfers; the two most common mechanisms are proof of work and proof of stake.",
+            "Bitcoin was the first cryptocurrency, created in 2009 by the pseudonymous Satoshi Nakamoto; Ethereum introduced programmable smart contracts in 2015 and enabled DeFi and NFTs.",
+            "Cryptocurrencies are not considered currencies in the traditional sense and are treated differently across jurisdictions, as commodities, securities, or currencies, but in practice are viewed as a distinct asset class.",
+            "There is no fixed yield in crypto: prices move continuously and much of the interest is trading for profit, with speculators at times driving prices skyward.",
+            "Anti-money-laundering frameworks, sanctions regimes, and financial crime obligations now extend to cryptocurrencies, custodians, and related businesses in most major jurisdictions."
+          ]
+        },
+        {
+          "id": "the-short-answer",
+          "heading": "The short answer",
+          "level": 2,
+          "paragraphs": [
+            "**Criptomoeda, cryptocurrency, is a digital asset that uses cryptography and a distributed ledger, usually a blockchain, to secure transactions.** Ownership records live in a computerized database that uses a consensus mechanism to secure transaction records, control the creation of additional coins, and verify the transfer of coin ownership. There is no central issuing or regulating authority; a decentralized system records transactions and issues new units instead.",
+            "In plain operating terms: it is a peer-to-peer payment system that does not rely on banks to verify transactions. Payments are not physical money exchanged in the real world, they are digital entries in an online database describing specific transactions, recorded in a public ledger, with the assets held in digital wallets. The first one was Bitcoin, founded in 2009, and it remains the best known today.",
+            "One correction to the usual summary: despite the name, cryptocurrencies are **not** considered currencies in the traditional sense. Legal treatment varies by jurisdiction, commodity, security, currency, and in practice they are generally viewed as a distinct asset class. Crypto is also not the same thing as digital money or electronic money. That distinction matters more than any price chart."
+          ]
+        },
+        {
+          "id": "how-a-transaction-actually-settles",
+          "heading": "How a transaction actually settles",
+          "level": 2,
+          "paragraphs": [
+            "Cryptocurrencies run on a distributed public ledger, the blockchain, a record of all transactions updated and held by currency holders. Every cryptocurrency is recorded on a ledger maintained by a network of nodes, each of which holds a full copy of the transaction history.",
+            "The mechanics, in order:",
+            "Because no single entity controls the ledger, the chain is tamper-resistant: altering a historical transaction would require simultaneously re-mining every subsequent block across most of the network. That immutability is exactly why blockchain records hold up as forensic proof, transactions on a public ledger cannot be altered, deleted, or retracted.",
+            "The name comes from the encryption itself: advanced coding stores and transmits data between wallets and public ledgers, and the goal of that encryption is security."
+          ],
+          "bullets": [
+            "New transactions are grouped into **blocks**.",
+            "The blocks are **cryptographically verified** by network participants.",
+            "Verified blocks are added to the chain **in sequence**.",
+            "The network agrees on the valid state through a **consensus mechanism**, most commonly proof of work or proof of stake.",
+            "New units are created through **mining**, which involves using computer power."
+          ]
+        },
+        {
+          "id": "how-much-is-1-criptomoeda-worth-in-reais-today",
+          "heading": "How much is 1 criptomoeda worth in reais today?",
+          "level": 2,
+          "paragraphs": [
+            "There is no single answer, and anyone giving you one is selling something.",
+            "\"Cryptocurrency\" is a category, not a unit. A Bitcoin, an Ether, and a meme token trade at completely different prices, and those prices change every second on open markets. Live quotes and market capitalizations are published continuously by aggregators such as CoinMarketCap. At the time this article was written, the total crypto market capitalization tracked there stood at roughly **$2.62 trillion**. Chainalysis describes crypto as having become a multi-trillion-dollar asset class that attracted both institutional adoption and regulatory attention.",
+            "So: check a live source before acting on any number, including this one. A price quoted in an article is a snapshot of a market that has already moved."
+          ]
+        },
+        {
+          "id": "what-does-r-100-or-r-1-000-in-crypto-yield",
+          "heading": "What does R$100 or R$1,000 in crypto \"yield\"?",
+          "level": 2,
+          "paragraphs": [
+            "Nothing guaranteed. This is the question search engines get most, and the honest answer is uncomfortable.",
+            "Crypto is not fixed income. There is no contracted rate, no maturity date, no issuer promising principal back. Much of the interest in cryptocurrencies is trading for profit, with speculators at times driving prices skyward, and the same mechanism works in reverse. Returns on R$100 or R$1,000 are entirely a function of the price at which you buy and the price at which you sell.",
+            "Three things worth holding in your head:",
+            "This is not investment advice. We build companies; we do not manage portfolios."
+          ],
+          "bullets": [
+            "**Volatility is the product, not a bug in it.** Speculative flows move these markets.",
+            "**Custody is your problem.** Crypto is stored in digital wallets; there is no central authority to call.",
+            "**Compliance applies.** AML frameworks, sanctions regimes, and financial crime obligations now extend to cryptocurrencies, custodians, and related businesses in most major jurisdictions."
+          ]
+        },
+        {
+          "id": "bitcoin-ethereum-and-everything-after",
+          "heading": "Bitcoin, Ethereum, and everything after",
+          "level": 2,
+          "paragraphs": [
+            "Bitcoin, the first cryptocurrency, was created in 2009 by the pseudonymous Satoshi Nakamoto. Ethereum, the second most important, introduced programmable smart contracts in 2015 and enabled the broader digital asset ecosystem, including decentralized finance (DeFi) and NFTs. Since Bitcoin, others have appeared with different characteristics, Litecoin, Ethereum, BNB, Bitcoin Cash, Ripple, Dogecoin, and tokens emerged on top of them.",
+            "The prehistory is older than most people assume. In 1983, cryptographer David Chaum conceived a form of cryptographic electronic money called ecash, and implemented it in 1995 through DigiCash. In 1996, the NSA published a paper titled *How to Make a Mint: The Cryptography of Anonymous Electronic Cash*. Twenty-six years of cryptographic groundwork preceded the asset class everyone now argues about.",
+            "The pattern is worth naming: the breakthrough was never the coin. It was the ledger primitive underneath it, and the second-order systems, smart contracts, DeFi, NFTs, that only became possible once the primitive existed."
+          ]
+        },
+        {
+          "id": "the-builder-s-read-foundation-vs-feature",
+          "heading": "The builder's read: foundation vs. feature",
+          "level": 2,
+          "paragraphs": [
+            "We are an AI venture studio, not a crypto fund. We write about this because the arc rhymes with the one we live every day.",
+            "Crypto's first decade was full of companies that bolted a token onto an existing product. The ones that compounded rebuilt around the primitive itself, Ethereum did not add smart contracts to a payment app, it made programmable contracts the substrate and let DeFi and NFTs emerge on top. Same test we apply to AI. A model call inside a legacy workflow is a feature. A company whose data model, unit economics, and product surface assume the model exists is **AI-native**.",
+            "Three transfers we take seriously:",
+            "We co-found. We ship on the ground, in São Paulo, with the Valley's build cadence. That is the lens we read every new asset class through."
+          ],
+          "bullets": [
+            "**Verifiability compounds.** A ledger that cannot be altered, deleted, or retracted becomes forensic evidence. Audit trails are a moat, not overhead, especially in regulated Brazilian verticals.",
+            "**Regulation arrives after product-market fit, and it arrives for everyone.** AML, sanctions, and financial-crime obligations now reach crypto businesses and custodians across most major jurisdictions. Build the compliance surface early.",
+            "**Classification ambiguity is a real cost.** Crypto still gets treated as commodity, security, or currency depending on where you stand. Any category-creating company should expect the same fog."
+          ]
+        },
+        {
+          "id": "sources",
+          "heading": "Sources",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "[Cryptocurrency - Wikipedia](https://en.wikipedia.org/wiki/Cryptocurrency)",
+            "[What is Cryptocurrency and How Does it Work?](https://www.kaspersky.com/resource-center/definitions/what-is-cryptocurrency)",
+            "[Cryptocurrency Prices, Charts And Market Capitalizations | CoinMarketCap](https://coinmarketcap.com/)",
+            "[Criptomoneda - Wikipedia, la enciclopedia libre](https://es.wikipedia.org/wiki/Criptomoneda)",
+            "[O que é “ Criptomoeda ”? Definição e exemplos - Chainalysis](https://www.chainalysis.com/pt-br/glossary/cryptocurrency/)"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is cryptocurrency and how does it work?",
+          "a": "Cryptocurrency is a digital asset that uses a distributed ledger, a blockchain, to enable secure transactions. Ownership records sit in a ledger that uses a consensus mechanism, most commonly proof of work or proof of stake, to secure transactions, control coin creation, and verify transfers. Transactions are grouped into blocks, cryptographically verified by network participants, and added to the chain in sequence, with each node holding a full copy of the history. Payments are peer-to-peer and do not rely on banks to verify them."
+        },
+        {
+          "q": "How much is 1 cryptocurrency worth in reais today?",
+          "a": "There is no single price, because \"cryptocurrency\" is a category with thousands of assets trading at different values. Prices update continuously on market aggregators such as CoinMarketCap, which at the time of writing tracked a total crypto market capitalization of about $2.62 trillion. Always check a live quote before converting to reais."
+        },
+        {
+          "q": "How much does R$100 or R$1,000 in crypto yield?",
+          "a": "There is no guaranteed yield. Crypto is not fixed income and has no contracted rate or issuer guaranteeing principal. Much of the market's activity is trading for profit, with speculators at times driving prices skyward, and the same dynamic can push them down. Any return depends entirely on the buy and sell price."
+        },
+        {
+          "q": "Is cryptocurrency the same as digital money?",
+          "a": "No. Cryptocurrency is not the same as digital money or electronic money. It also is not considered a currency in the traditional sense: jurisdictions classify it variously as a commodity, a security, or a currency, and in practice it is treated as a distinct asset class."
+        },
+        {
+          "q": "Which was the first cryptocurrency?",
+          "a": "Bitcoin, created in 2009 by the pseudonymous Satoshi Nakamoto, and still the best known today. Ethereum followed as the second most important, introducing programmable smart contracts in 2015 and enabling DeFi and NFTs. Other assets with different characteristics include Litecoin, BNB, Bitcoin Cash, Ripple, and Dogecoin."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Criptomoeda: o que é, como funciona e por que importa para quem constrói",
+      "description": "Criptomoeda é um ativo digital em blockchain, sem banco central. Veja como funciona o consenso, o que muda em rendimento e regulação, e a leitura da Avante.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Definição precisa, mecânica real (blockchain, consenso, carteiras), o que dá e o que não dá para esperar de rendimento, e a leitura de quem constrói empresas AI-native no Brasil.",
+            "Criptomoeda é um ativo digital que usa criptografia e um registro distribuído, a blockchain, para garantir transações, controlar a emissão de novas unidades e verificar a transferência de propriedade sem banco central ou autoridade governamental."
+          ]
+        },
+        {
+          "id": "key-takeaways",
+          "heading": "Em resumo",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "Criptomoeda é um ativo digital registrado em livro-razão distribuído, que usa criptografia para validar transações sem banco central.",
+            "Apesar do nome, criptomoedas não são consideradas moedas no sentido tradicional: recebem tratamentos legais distintos, commodity, valor mobiliário, moeda, e na prática funcionam como classe de ativo separada.",
+            "A primeira criptomoeda foi o Bitcoin, lançado em 2009 pelo pseudônimo Satoshi Nakamoto; o Ethereum introduziu contratos inteligentes programáveis em 2015.",
+            "Os dois mecanismos de consenso mais comuns são proof of work e proof of stake.",
+            "Não existe rendimento fixo em criptomoeda: o preço é de mercado e especuladores já empurraram cotações para cima de forma abrupta."
+          ]
+        },
+        {
+          "id": "o-que-e-criptomoeda-em-uma-definicao",
+          "heading": "O que é criptomoeda, em uma definição",
+          "level": 2,
+          "paragraphs": [
+            "**Criptomoeda é um ativo digital que usa criptografia e tecnologia de registro distribuído (blockchain) para garantir transações, controlar a criação de novas unidades e verificar a transferência de propriedade, sem banco central e sem autoridade governamental.** Os registros de posse ficam em um livro-razão digital compartilhado, protegido por um mecanismo de consenso. Não há cédula, não há moeda física: o pagamento existe como entrada em um banco de dados público, e o saldo fica guardado em carteiras digitais.",
+            "O sistema é peer-to-peer. Ele não depende de um banco para verificar a transação: qualquer pessoa, em qualquer lugar, pode enviar e receber. E um detalhe que quase todo resumo rápido erra: **apesar do nome, criptomoedas não são consideradas moedas no sentido tradicional**. O tratamento legal varia por jurisdição, já foram classificadas como commodities, valores mobiliários e moedas, e, na prática, são tratadas como uma classe de ativo distinta. Criptomoeda também não é sinônimo de dinheiro digital nem de dinheiro eletrônico, nem de moeda digital de banco central (CBDC), justamente porque o controle costuma ser descentralizado."
+          ]
+        },
+        {
+          "id": "como-funciona-por-dentro",
+          "heading": "Como funciona por dentro",
+          "level": 2,
+          "paragraphs": [
+            "A mecânica é mais simples do que o marketing sugere. Três camadas:",
+            "Daí vem a propriedade que interessa a quem constrói software: **imutabilidade**. Como nenhuma entidade controla o livro-razão, alterar uma transação histórica exigiria re-minerar simultaneamente todos os blocos seguintes na maior parte da rede, o que torna o registro resistente a adulteração e útil como prova forense.",
+            "A criação de novas unidades passa por **mineração**, processo que consome poder computacional. A criptografia entra em cada etapa: é ela que dá nome à coisa e que protege o trânsito de dados entre carteiras e livros-razão públicos."
+          ],
+          "bullets": [
+            "**Livro-razão distribuído.** Toda criptomoeda é registrada em uma blockchain mantida por uma rede de nós, e cada nó guarda uma cópia completa do histórico de transações.",
+            "**Blocos e verificação.** Novas transações são agrupadas em blocos, verificadas criptograficamente pelos participantes da rede e adicionadas à cadeia em sequência.",
+            "**Consenso.** O mecanismo de consenso é o que protege os registros, controla a emissão de novas unidades e valida transferências. Os dois mais comuns são **proof of work** e **proof of stake**."
+          ]
+        },
+        {
+          "id": "quanto-vale-e-quanto-rende-a-resposta-honesta",
+          "heading": "Quanto vale e quanto rende: a resposta honesta",
+          "level": 2,
+          "paragraphs": [
+            "Não existe \"quanto rende R$ 100 em criptomoeda\" com resposta fixa. **Não há taxa, não há cupom, não há garantia.** O preço é formado em mercado aberto, 24 horas por dia, e boa parte do interesse na categoria vem de negociação especulativa, com especuladores empurrando preços para cima em determinados momentos. O que sobe assim também desce assim.",
+            "Escala, para calibrar a expectativa: no momento da consulta, o CoinMarketCap exibia capitalização total de mercado de **US$ 2,62 trilhões**, com **US$ 364,09 milhões** em liquidações nas últimas 24 horas. O segundo número é o mais informativo dos dois, mostra posições alavancadas sendo encerradas à força em um único dia.",
+            "Por isso, a pergunta \"quanto vale 1 criptomoeda em reais hoje\" não tem resposta estática em artigo nenhum. Existem milhares de ativos, cada um com cotação própria e variação contínua; preços em tempo real vivem em agregadores de mercado. Qualquer conteúdo que finja cravar um número está desatualizado no minuto seguinte."
+          ]
+        },
+        {
+          "id": "nem-tudo-e-a-mesma-coisa",
+          "heading": "Nem tudo é a mesma coisa",
+          "level": 2,
+          "paragraphs": [
+            "A palavra \"criptomoeda\" virou guarda-chuva para ativos com propósitos muito diferentes.",
+            "A partir das criptomoedas também surgiram **tokens**, que rodam sobre redes existentes. A leitura prática: comparar BTC com um token recém-emitido é comparar duas coisas de natureza diferente, com liquidez, histórico e risco diferentes."
+          ],
+          "bullets": [
+            "**Bitcoin (BTC)**, a primeira a operar, lançada em 2009, criada pelo pseudônimo **Satoshi Nakamoto**.",
+            "**Ethereum (ETH)**, a segunda mais importante; introduziu **contratos inteligentes programáveis em 2015** e viabilizou o ecossistema mais amplo de ativos digitais, incluindo finanças descentralizadas (DeFi) e NFTs.",
+            "**Outras redes**, Litecoin, BNB, Bitcoin Cash, Ripple e Dogecoin surgiram depois, com características distintas."
+          ]
+        },
+        {
+          "id": "a-ideia-e-mais-velha-que-o-bitcoin",
+          "heading": "A ideia é mais velha que o Bitcoin",
+          "level": 2,
+          "paragraphs": [
+            "O conceito não nasceu em 2009. Em **1983**, o criptógrafo americano **David Chaum** concebeu uma forma de dinheiro eletrônico criptográfico chamada **ecash**. Em **1995**, ele a implementou pela **DigiCash**, uma forma inicial de pagamento eletrônico criptográfico: o usuário precisava de um software para sacar notas de um banco e designar chaves criptografadas antes de enviá-las, o que tornava a moeda digital não rastreável por terceiros. Em **1996**, a NSA publicou o artigo *How to Make a Mint: The Cryptography of Anonymous Electronic Cash*.",
+            "Ou seja: vinte e seis anos de pesquisa antes do primeiro bloco. Tecnologia fundacional raramente aparece do nada, ela amadurece em silêncio e depois parece súbita. O mesmo vale para IA."
+          ]
+        },
+        {
+          "id": "regulacao-e-rastreabilidade",
+          "heading": "Regulação e rastreabilidade",
+          "level": 2,
+          "paragraphs": [
+            "Conforme a categoria virou classe de ativo de trilhões de dólares, atraiu adoção institucional **e** atenção regulatória. Hoje, estruturas de combate à lavagem de dinheiro, regimes de sanções e obrigações ligadas a crimes financeiros já se estendem a criptomoedas, custodiantes e negócios relacionados na maioria das principais jurisdições.",
+            "Há uma ironia produtiva aqui. O livro-razão público, que parecia sinônimo de anonimato, é hoje o que sustenta análise forense: transações registradas em um ledger público não podem ser alteradas, excluídas ou revertidas. Transparência estrutural, não opacidade."
+          ]
+        },
+        {
+          "id": "a-leitura-de-quem-constroi",
+          "heading": "A leitura de quem constrói",
+          "level": 2,
+          "paragraphs": [
+            "Nós não somos um fundo de cripto e não damos recomendação de investimento. Mas a arquitetura importa para qualquer fundador AI-native, e vale o paralelo.",
+            "Cripto provou três coisas que usamos como referência mental ao co-fundar empresa:",
+            "O Brasil tem mercado, regulação em movimento e talento técnico. A tese da Avante é operacional: a gente co-funda, senta junto, e o que fica de pé é o que ships. Cripto é um bom lembrete de que a camada de base sempre vence a camada de discurso."
+          ],
+          "bullets": [
+            "**Infra decide produto.** A escolha de consenso, proof of work ou proof of stake, define custo, velocidade e modelo econômico de tudo que roda em cima. Em IA é igual: a decisão de arquitetura no dia zero define margem no ano três.",
+            "**Registro verificável é ativo.** Um histórico que não pode ser adulterado vale mais do que um dashboard bonito. Sistemas de IA sérios precisam de trilha de auditoria com a mesma disciplina.",
+            "**Narrativa não é tração.** Especulação move preço; não move produto. Build to compound."
+          ]
+        },
+        {
+          "id": "sources",
+          "heading": "Fontes",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "[Cryptocurrency - Wikipedia](https://en.wikipedia.org/wiki/Cryptocurrency)",
+            "[What is Cryptocurrency and How Does it Work?](https://www.kaspersky.com/resource-center/definitions/what-is-cryptocurrency)",
+            "[Cryptocurrency Prices, Charts And Market Capitalizations | CoinMarketCap](https://coinmarketcap.com/)",
+            "[Criptomoneda - Wikipedia, la enciclopedia libre](https://es.wikipedia.org/wiki/Criptomoneda)",
+            "[O que é “ Criptomoeda ”? Definição e exemplos - Chainalysis](https://www.chainalysis.com/pt-br/glossary/cryptocurrency/)"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Quanto vale 1 criptomoeda em reais hoje?",
+          "a": "Não existe valor único: cada criptomoeda tem sua própria cotação, formada em mercado aberto e em variação contínua. Preços em tempo real devem ser consultados em agregadores de mercado, que também exibem a capitalização total do setor, US$ 2,62 trilhões no momento da consulta."
+        },
+        {
+          "q": "Quanto rende R$ 100 ou R$ 1.000 em criptomoedas?",
+          "a": "Nada é garantido. Criptomoeda não paga taxa fixa: o resultado depende exclusivamente da variação de preço do ativo comprado, que pode subir ou cair. Boa parte do interesse na categoria vem de negociação especulativa, com especuladores já tendo empurrado preços para cima de forma abrupta."
+        },
+        {
+          "q": "Criptomoeda é a mesma coisa que dinheiro digital?",
+          "a": "Não. Criptomoeda não é sinônimo de dinheiro digital nem de dinheiro eletrônico, e se distingue de uma moeda digital de banco central (CBDC) porque o controle costuma ser descentralizado, apoiado em uma base de dados distribuída. Juridicamente, criptomoedas já foram classificadas como commodities, valores mobiliários e moedas, dependendo da jurisdição."
+        },
+        {
+          "q": "Qual foi a primeira criptomoeda?",
+          "a": "O Bitcoin, que começou a operar em 2009, criado pelo pseudônimo Satoshi Nakamoto. A ideia de dinheiro eletrônico criptográfico, porém, é anterior: David Chaum concebeu o ecash em 1983 e o implementou pela DigiCash em 1995."
+        },
+        {
+          "q": "Transações em cripto são anônimas?",
+          "a": "São pseudônimas, não invisíveis. Transações ficam em um livro-razão público e não podem ser alteradas, excluídas ou revertidas, o que as torna úteis como prova forense. Estruturas de combate à lavagem de dinheiro e regimes de sanções já alcançam criptomoedas, custodiantes e negócios do setor na maioria das grandes jurisdições."
+        }
+      ]
+    },
+    "ogImage": "/og/criptomoeda-what-is-cryptocurrency.png"
+  },
+  {
     "slug": "create-animation-with-artificial-intelligence-free",
     "category": "insights",
     "type": "Explainer",

@@ -382,6 +382,16 @@
   <!-- CONTENT-ENGINE:START (managed by content-engine/merge.py - do not edit by hand) -->
   <!-- 102 engine article(s) x 3 locales. Generated from content-engine/outputs. Edit the engine, not this block. -->
   <url>
+    <loc>https://avanteventures.com/en/library/criptomoeda-what-is-cryptocurrency</loc>
+    <lastmod>2026-09-17</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://avanteventures.com/en/library/criptomoeda-what-is-cryptocurrency"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://avanteventures.com/pt/library/criptomoeda-what-is-cryptocurrency"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://avanteventures.com/es/library/criptomoeda-what-is-cryptocurrency"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://avanteventures.com/en/library/criptomoeda-what-is-cryptocurrency"/>
+  </url>
+  <url>
     <loc>https://avanteventures.com/en/library/create-animation-with-artificial-intelligence-free</loc>
     <lastmod>2026-09-17</lastmod>
     <changefreq>yearly</changefreq>
