@@ -46,6 +46,17 @@ machine. SVG → PNG via `rsvg-convert` (installed).
 
 Articles are fed by the sibling `../content-engine/` pipeline (trilingual Library → `articles.ts`).
 
+**No Markdown syntax is ever shown to a reader.** A published article must never display `**`, `*`, `#`–`######`, `> `, `- ` / `1. ` list markers, backticks or `|` table pipes as text. This applies on the page, in the prerendered HTML and in the JSON-LD.
+- Paragraph, bullet, table-cell and FAQ-answer strings may contain only inline `[links](…)`, `**bold**` and `*italic*`. `renderRichText` renders these, and `plainText` strips them for JSON-LD.
+- Structure goes in the section fields, never inside a string:
+  - a subhead is a section with `level: 3`;
+  - a quote is `callout: { kind: 'quote' }`;
+  - a list goes in `bullets`;
+  - a table goes in `table`.
+- This holds for every producer that writes `articles.ts`: merge.py, Estúdio, or a hand edit.
+- Check the rendered page, not the data, before calling a publish done.
+- Background: on 2026-09-17, 15 articles showed raw `**`, and one showed `###` and `>`.
+
 ## ⚠️ Brand-truth gate
 
 Every public figure on this site must reconcile against the brand-truth / company-facts docs before
