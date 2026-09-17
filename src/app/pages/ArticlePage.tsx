@@ -145,8 +145,8 @@ export default function ArticlePage() {
               inLanguage,
               mainEntity: content.faqs.map((f) => ({
                 '@type': 'Question',
-                name: f.q,
-                acceptedAnswer: { '@type': 'Answer', text: f.a },
+                name: plainText(f.q),
+                acceptedAnswer: { '@type': 'Answer', text: plainText(f.a) },
               })),
             },
           ]
@@ -364,11 +364,48 @@ export default function ArticlePage() {
 const MD_LINK = /\[([^\]]+)\]\(([^)]+)\)/g
 const SAFE_EXTERNAL = /^(https?:|mailto:|tel:)/i
 const LOCALE_PREFIXED = /^\/(en|pt|es)(\/|$)/
+// The engines also write **bold** and *italic*. No lookbehind: older Safari
+// rejects the whole module at parse time. A lone "*" (footnote, "5 * 3") stays.
+const MD_EMPHASIS = /\*\*(.+?)\*\*|(^|[^\w*])\*(?![\s*])([^*\n]+?)\*(?![\w*])/g
+
+function renderEmphasis(text: string, keyPrefix: string): Array<string | JSX.Element> {
+  const nodes: Array<string | JSX.Element> = []
+  let lastIndex = 0
+  let key = 0
+  for (const match of text.matchAll(MD_EMPHASIS)) {
+    const start = match.index ?? 0
+    const [whole, bold, lead = '', italic] = match
+    if (start > lastIndex) nodes.push(text.slice(lastIndex, start))
+    if (bold !== undefined) {
+      nodes.push(
+        <strong key={`${keyPrefix}b${key++}`} style={{ fontWeight: 600, color: '#FFFFFF' }}>
+          {renderEmphasis(bold, `${keyPrefix}b${key}-`)}
+        </strong>,
+      )
+    } else {
+      if (lead) nodes.push(lead)
+      nodes.push(<em key={`${keyPrefix}i${key++}`}>{italic}</em>)
+    }
+    lastIndex = start + whole.length
+  }
+  if (lastIndex < text.length) nodes.push(text.slice(lastIndex))
+  return nodes
+}
+
+/** Text for places that cannot hold markup (JSON-LD): links keep their label, emphasis markers go. */
+function plainText(text: string): string {
+  return text
+    .replace(MD_LINK, '$1')
+    .replace(/\*\*(.+?)\*\*/g, '$1')
+    .replace(/(^|[^\w*])\*(?![\s*])([^*\n]+?)\*(?![\w*])/g, '$1$2')
+}
 
 function renderRichText(text: string, locale: string): Array<string | JSX.Element> {
   const nodes: Array<string | JSX.Element> = []
   let lastIndex = 0
   let key = 0
+  let seg = 0
+  const emphasis = (t: string) => renderEmphasis(t, `s${seg++}-`)
   const linkStyle = {
     color: '#F9B437',
     textDecoration: 'underline',
@@ -376,7 +413,7 @@ function renderRichText(text: string, locale: string): Array<string | JSX.Elemen
   }
   for (const match of text.matchAll(MD_LINK)) {
     const start = match.index ?? 0
-    if (start > lastIndex) nodes.push(text.slice(lastIndex, start))
+    if (start > lastIndex) nodes.push(...emphasis(text.slice(lastIndex, start)))
     const [, label, href] = match
     const isInternal = href.startsWith('/') && !href.startsWith('//')
     if (isInternal) {
@@ -386,7 +423,7 @@ function renderRichText(text: string, locale: string): Array<string | JSX.Elemen
       const to = LOCALE_PREFIXED.test(href) ? href : `/${locale}${href}`
       nodes.push(
         <Link key={key++} to={to} style={linkStyle}>
-          {label}
+          {emphasis(label)}
         </Link>,
       )
     } else if (SAFE_EXTERNAL.test(href)) {
@@ -398,7 +435,7 @@ function renderRichText(text: string, locale: string): Array<string | JSX.Elemen
           rel="noopener noreferrer"
           style={linkStyle}
         >
-          {label}
+          {emphasis(label)}
         </a>,
       )
     } else {
@@ -407,7 +444,7 @@ function renderRichText(text: string, locale: string): Array<string | JSX.Elemen
     }
     lastIndex = start + match[0].length
   }
-  if (lastIndex < text.length) nodes.push(text.slice(lastIndex))
+  if (lastIndex < text.length) nodes.push(...emphasis(text.slice(lastIndex)))
   return nodes
 }
 

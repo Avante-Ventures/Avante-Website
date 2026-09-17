@@ -2795,8 +2795,16 @@ const engineArticles: Article[] = [
           "heading": "The operators behind the thesis",
           "level": 2,
           "paragraphs": [
-            "We are not observers of this shift. We co-found companies, sit in the operating seat, and carry the consequences of the architecture calls we make.",
-            "> \"We never buy a form factor. We buy a workflow, and then we ask what has to be true for a model to run inside it. If the answer is 'a nice interface,' we pass. If the answer is 'proprietary context nobody else can assemble,' we build.\", Avante Ventures' founding partners",
+            "We are not observers of this shift. We co-found companies, sit in the operating seat, and carry the consequences of the architecture calls we make."
+          ],
+          "callout": {
+            "kind": "quote",
+            "text": "We never buy a form factor. We buy a workflow, and then we ask what has to be true for a model to run inside it. If the answer is 'a nice interface,' we pass. If the answer is 'proprietary context nobody else can assemble,' we build.",
+            "attribution": "Avante Ventures' founding partners"
+          }
+        },
+        {
+          "paragraphs": [
             "That is the same filter we applied to legal work with AlphaJuri and to the rest of the portfolio, and it is the reason [we co-found instead of invest](https://avanteventures.com/en/why-avante). Glasses are simply the clearest illustration we have seen so far: when the interface disappears, everything that was cosmetic disappears with it, and what is left is the workflow, the data and the speed of the answer."
           ]
         },
@@ -3566,23 +3574,6 @@ const engineArticles: Article[] = [
             "O padrão global chega aqui com atraso e com uma vantagem. O atraso: o Brasil está vivendo agora a fase de \"toda empresa quer IA imediatamente\" que produziu a enxurrada de wrappers lá fora. A vantagem: quem constrói agora já tem o mapa de como essa história termina.",
             "Setores regulados e operacionalmente densos, jurídico, saúde, seguros, serviços financeiros, logística, são onde o wrapper fino falha mais rápido e onde arquitetura de verdade compõe mais rápido. Regulação local, dado em português, processo próprio de cada operação e integração com sistemas legados não cabem em um system prompt.",
             "É por isso que co-fundamos em vez de só investir. On the ground, desde o dia zero: decidir a arquitetura, montar a camada de avaliação e definir qual dado a empresa vai acumular são decisões de fundação, não de roadmap. Essa é a diferença prática entre um venture builder e um fundo tradicional, que explicamos em [venture studio de IA vs. venture studio tradicional](https://avanteventures.com/en/library/ai-venture-studio-vs-traditional-venture-studio). Wrapper é o que se faz num fim de semana. Empresa AI-native é o que se decide na primeira semana."
-          ]
-        },
-        {
-          "id": "perguntas-frequentes",
-          "heading": "Perguntas frequentes",
-          "level": 2,
-          "paragraphs": [
-            "### É IA ou AI?",
-            "Em português, o correto é **IA** (Inteligência Artificial). **AI** é a sigla em inglês (Artificial Intelligence). No nosso vocabulário, mantemos o termo composto \"AI-native\" em inglês porque ele descreve uma categoria de empresa consolidada no mercado global, e não a tecnologia em si, mas quando falamos da tecnologia, falamos de IA.",
-            "### O que é um wrapper de ChatGPT, exatamente?",
-            "É um produto que repassa chamadas de API para o modelo de outra empresa e coloca pouco mais que uma interface por cima. A stack completa costuma ser: uma chave de API, um system prompt, uma janela de chat e um contrato de tratamento de dados em PDF, algo que um profissional competente monta em um fim de semana.",
-            "### É possível criar uma IA própria?",
-            "Treinar um modelo de fundação do zero é caro e raramente é o caminho certo para uma startup. Mas \"IA própria\" não significa modelo próprio: significa dados proprietários, camada de avaliação, orquestração entre modelos e loops de feedback que só existem porque seu produto está dentro do workflow do cliente. É exatamente essa camada que os provedores de modelo não conseguem lançar como feature gratuita.",
-            "### Todo wrapper está condenado?",
-            "Não. Cerca de 90% dos wrappers lançados no Product Hunt nos últimos dois anos pararam de receber commits, mas Granola, Cursor e Perplexity começaram como algo próximo de um wrapper. Começar fino é aceitável; continuar fino é o que mata.",
-            "### Como saber se minha startup é AI-native de verdade?",
-            "Aplique o teste da feature gratuita: se o provedor do modelo lançar sua funcionalidade sem custo dentro do produto principal, o que tende a acontecer com categorias genéricas e populares -, o que ainda faz o cliente pagar? Se a resposta for só a interface, você tem um wrapper. Se for dados, avaliação, workflow e integração, você tem uma empresa."
           ]
         },
         {
