@@ -1770,6 +1770,324 @@ const articleSiggaCaseStudy: Article = {
 // 102 article(s) generated from content-engine/outputs. Edit the engine, not this block.
 const engineArticles: Article[] = [
   {
+    "slug": "create-animation-with-artificial-intelligence-free",
+    "category": "insights",
+    "type": "Explainer",
+    "readTime": "7 min",
+    "featured": false,
+    "date": "Sep 2026",
+    "datePublished": "2026-09-17",
+    "isPublished": true,
+    "en": {
+      "title": "Create Animation With Artificial Intelligence Free: The Operator's Guide",
+      "description": "How to create animation with artificial intelligence for free: text-to-video, image-to-video, and first/last frame workflows, plus real free-tier limits.",
+      "sections": [
+        {
+          "paragraphs": [
+            "Free AI animation is real, and it ships. Here is the exact stack, text-to-video, image-to-video, first/last frame, plus what free tiers actually give you and where they break.",
+            "Creating animation with artificial intelligence for free means using no-cost AI tools that turn a text prompt, a sketch, or a still image into moving video without rigging, keyframes, or a timeline, typically via text-to-video generators or image-to-video models offered inside free plans."
+          ]
+        },
+        {
+          "id": "key-takeaways",
+          "heading": "Key takeaways",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "Free AI animation works in three modes: text-to-video, image-to-video, and first-frame/last-frame interpolation between two generated stills.",
+            "Adobe Firefly offers a free AI animation generator for 2D and 3D video from images, sketches, or text, with commercially safe output, a 1,024-character prompt limit, and uploads under 50 MB in JPG or PNG.",
+            "Renderforest converts a script into an animated video with style and voice selection, and reports 34M+ users and 100k+ companies.",
+            "A fully free Google-only pipeline exists: generate the first and last frame with an image AI, then interpolate them into video with Flow.",
+            "No rig and no timeline is the point, image-to-video animates art you already have instead of redrawing it."
+          ]
+        },
+        {
+          "id": "the-short-answer",
+          "heading": "The short answer",
+          "level": 2,
+          "paragraphs": [
+            "Yes. You can create animation with AI for free today, and the output is usable for social, product demos, and pitch material.",
+            "The fastest free path is **image-to-video**: take a still you already have, an illustration, a product frame, a brand mark, and let a model add motion. No rig, no timeline, no redraw. The second free path is **text-to-video**: describe the scene, pick a style and a voice, and get an animated explainer back in minutes with no animation skills required. Adobe Firefly runs a free AI animation generator that produces 2D and 3D animated video from images, sketches, or text, and the output is commercially safe to use.",
+            "The third path is the one most guides skip and the one we use most: generate your **first and last frame** with a free image model, then let a video model interpolate the movement between them. It costs nothing, and it gives you control over composition instead of praying to a prompt."
+          ]
+        },
+        {
+          "id": "what-free-actually-gives-you",
+          "heading": "What \"free\" actually gives you",
+          "level": 2,
+          "paragraphs": [
+            "Free does not mean unlimited. It means enough to validate.",
+            "Read the free tier as a **credit budget**, not a feature set. Every render is inference, and inference has a cost someone is paying."
+          ],
+          "bullets": [
+            "**Firefly (free tier):** animations from images, sketches, or text; 2D and 3D; commercially safe for use in client and product work. Hard limits are published: prompts cap at 1,024 characters, uploads must be under 50 MB, JPG or PNG only, one file at a time.",
+            "**Renderforest:** text-to-video and idea-to-video. You write the script, choose a style and a narrator, then customize colors, fonts, music, and voiceover before exporting to social or your site. Trusted by 34M+ users and 100k+ companies.",
+            "**Model aggregators:** Morphic puts Kling 3.0, Hailuo 2.3, LTX 2.3, Seedance 2.0, Veo 3.1, and Vidu Q3 in a single workspace so you can run the same prompt across models and compare side by side on a canvas. Seedance 2.5 there supports single 30-second takes, native audio, and up to 50 reference inputs.",
+            "**Google's free chain:** image generation plus Flow for image-to-video, at zero cost."
+          ]
+        },
+        {
+          "id": "three-workflows-ranked-by-control",
+          "heading": "Three workflows, ranked by control",
+          "level": 2,
+          "paragraphs": [
+            "**1. Text-to-video (lowest control, fastest).** Describe the animation idea, add the script, pick style and voice, generate. Good for explainers and startup promos. Bad when you need a specific frame, a specific product, or a specific brand asset on screen.",
+            "**2. Image-to-video (best ratio of effort to result).** Drop an illustration or photo and it gains motion, the model animates art you already have, without redrawing anything. This is how you animate a logo, a hero illustration, or a UI screenshot without touching After Effects.",
+            "**3. First frame / last frame interpolation (highest control).** Generate two stills, the start state and the end state, then hand both to a video model that builds the transition. The published warning is the important part: keep the two frames coherent in angle, light, and subject, and use clear references. Confusing or poorly defined images produce stiff, artificial motion.",
+            "A fourth trick from the same workflow: export the finished clip back into a frame sequence to clean up or re-time specific moments."
+          ]
+        },
+        {
+          "id": "the-zero-cost-stack-step-by-step",
+          "heading": "The zero-cost stack, step by step",
+          "level": 2,
+          "paragraphs": [
+            "This is the pipeline we would hand a founder who needs a launch clip this week and has no budget.",
+            "Total spend: zero. Total time: an afternoon."
+          ],
+          "bullets": [
+            "**Lock the concept in one sentence.** One subject, one movement, one light direction. Ambiguity is what breaks generative motion.",
+            "**Generate the start frame.** Use a free image model. Nail composition, palette, and lighting here, everything downstream inherits it.",
+            "**Generate the end frame from the start frame.** Same angle logic, same light, same subject. Coherence between frames is the single biggest quality lever.",
+            "**Interpolate.** Feed both frames to a free image-to-video model and render the transition. Or skip straight to image-to-video from a single still if the motion is simple.",
+            "**Compare models before you commit credits.** Running one prompt across several models side by side in one workspace beats guessing.",
+            "**Add narration and music if it's an explainer.** Text-to-video platforms let you customize colors, fonts, music, and voiceover in the same pass.",
+            "**Export and ship.** Download or publish straight to social, your site, or your team."
+          ]
+        },
+        {
+          "id": "where-free-breaks-and-what-we-d-pay-for",
+          "heading": "Where free breaks, and what we'd pay for",
+          "level": 2,
+          "paragraphs": [
+            "Free tiers optimize for the first render, not the tenth. Three failure points show up fast:",
+            "Our operator's rule: use free to prove the concept and kill the bad ideas, then pay only for the one render that ships. That is the same logic we apply to inference in production, a variable cost you manage, not a line item you ignore."
+          ],
+          "bullets": [
+            "**Duration.** Most free output is short. A 30-second single take with native audio is a premium-model capability, not a default.",
+            "**Consistency.** Holding one character, one product, or one brand asset stable across shots is the hard problem. Reference-heavy models, up to 50 reference inputs in one pass, exist precisely because of this.",
+            "**Rights.** If the clip goes on a paid channel, commercially safe generation matters. Firefly states its output is safe for commercial use. Not every free tool makes that claim. Check before you spend media money behind a render."
+          ]
+        },
+        {
+          "id": "brand-safe-animation-how-we-d-brief-it",
+          "heading": "Brand-safe animation: how we'd brief it",
+          "level": 2,
+          "paragraphs": [
+            "AI animation is easy to make and easy to make badly. The difference is the brief, not the model.",
+            "At Avante we treat animated assets like any other build: narrow inputs, one clear decision per frame. When we animate the **Avante isotype**, the 'A' drawn as a single calligraphic stroke, the brief is one sentence: the stroke draws itself, warm amber to indigo, dark ground, nothing else moves. First frame, last frame, interpolate. That's it.",
+            "Three rules we'd give any founder:",
+            "AI-native teams don't outsource taste to the model. They constrain it."
+          ],
+          "bullets": [
+            "**One motion per clip.** Two ideas in five seconds reads as noise.",
+            "**Fix the light before the motion.** If the key light direction shifts between your start and end frames, the interpolation will wobble.",
+            "**No generated text.** Models still fail at letterforms. Add type in post, over a dark, empty third of the frame."
+          ]
+        },
+        {
+          "id": "answering-the-questions-everyone-asks",
+          "heading": "Answering the questions everyone asks",
+          "level": 2,
+          "paragraphs": [
+            "**Can ChatGPT make animations?** Not directly as rendered video in the way a dedicated animation generator does. The practical use is upstream: script, storyboard, and prompt-writing, then hand the prompts to a text-to-video or image-to-video tool.",
+            "**Which free AI makes drawings?** Free image models generate the stills. That's step one of the animation chain, you generate the frames, then animate them. Firefly accepts sketches as an animation input, so a rough hand drawing can become the base of a 2D or 3D animation.",
+            "**What's the best free AI for animation?** Depends on the job. Script-driven explainer: a text-to-video platform with style and voice selection. Existing artwork: image-to-video, no rig. Commercially safe deliverable from a sketch: Firefly's free generator. Maximum control on a specific shot: first/last frame interpolation.",
+            "The honest answer is that no single free tool wins every brief, which is why comparing models on the same prompt is worth more than picking a favorite."
+          ]
+        },
+        {
+          "id": "sources",
+          "heading": "Sources",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "[Gerador de animação com IA grátis: sem rig](https://morphic.com/br/resources/tools/ai-animation-generator)",
+            "[Crear animaciones con IA gratis en línea | Renderforest](https://www.renderforest.com/es/ai-animation-generator)",
+            "[Gerador de animações por IA gratuito | Adobe Firefly](https://www.adobe.com/br/products/firefly/features/ai-animation-generator.html)",
+            "[Criar animação com IA online grátis | Renderforest](https://www.renderforest.com/pt/ai-animation-generator)",
+            "[Como criar animações só com IAs grátis: tutorial prático](https://www.crazystack.com.br/2025-3/fiz-um-site-usando-ia)"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "Can ChatGPT make animations?",
+          "a": "Not as a finished rendered clip. Use it upstream, to write the script, structure the storyboard, and draft prompts, then pass those prompts to a dedicated text-to-video or image-to-video generator, which is what actually produces the motion."
+        },
+        {
+          "q": "What is the best free AI for animation?",
+          "a": "There isn't one winner. For script-driven explainers, a text-to-video platform lets you add a script, style, and narrator and export in minutes. For animating art you already have, image-to-video works with no rig and no timeline. Adobe Firefly's free generator handles images, sketches, and text and produces commercially safe 2D and 3D output."
+        },
+        {
+          "q": "Which free AI makes drawings I can animate?",
+          "a": "Free image generators produce the stills. The proven free chain is: generate a first and last frame with an image AI, then interpolate them into video with a free image-to-video model such as Flow. Firefly also accepts uploaded sketches as an animation input."
+        },
+        {
+          "q": "What are the limits of free AI animation tools?",
+          "a": "They're published and worth checking. Firefly caps prompts at 1,024 characters, requires uploads under 50 MB in JPG or PNG, and accepts one file at a time. Longer single takes with native audio and heavy reference inputs, 30 seconds and up to 50 references, sit in premium model tiers."
+        },
+        {
+          "q": "How do I avoid stiff, artificial-looking AI animation?",
+          "a": "Keep your reference frames coherent. Angle, light, and subject must match between the start and end frame, and the references must be clearly defined, confusing or vague images produce stiff, artificial motion. One motion per clip, fixed light direction, and no generated text on screen."
+        }
+      ]
+    },
+    "pt": {
+      "title": "Criar animação com inteligência artificial grátis: as três rotas que realmente funcionam",
+      "description": "Como criar animação com inteligência artificial grátis: texto→vídeo, imagem→vídeo e pipeline de frames. Limites reais do plano free e o fluxo AI-native que…",
+      "sections": [
+        {
+          "paragraphs": [
+            "Dá para animar de graça, com texto, com esboço ou com frames. Mostramos as três rotas, onde o plano free quebra e como usamos isso nos produtos do portfólio.",
+            "Criar animação com inteligência artificial grátis é usar geradores de vídeo por IA em plano gratuito para transformar texto, esboço ou imagem estática em movimento, sem rig, sem timeline e sem equipe de animação."
+          ]
+        },
+        {
+          "id": "key-takeaways",
+          "heading": "Em resumo",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "Geradores de animação por IA transformam texto ou imagem estática em vídeo sem rig e sem timeline.",
+            "Três rotas cobrem quase tudo: texto→vídeo com template e narração, imagem ou esboço→vídeo em 2D e 3D e frame inicial + frame final interpolados por um modelo de vídeo.",
+            "Todo plano gratuito tem borda técnica: no Firefly, JPG ou PNG, até 50 MB, um arquivo por vez, prompt de até 1.024 caracteres.",
+            "Não existe 'melhor IA para animação' no absoluto. Rode o mesmo prompt em modelos diferentes e compare. Hype e ranking não substituem eval e aceite.",
+            "O ganho real não é economizar com fornecedor. É internalizar a geração de mídia no ciclo de produto, do jeito que fazemos em AlphaJuri, WIR e FutureProofing."
+          ]
+        },
+        {
+          "id": "sim-da-e-sao-tres-rotas-nao-uma",
+          "heading": "Sim, dá. E são três rotas, não uma",
+          "level": 2,
+          "paragraphs": [
+            "Dá para criar animação com IA de graça hoje. Os geradores atuais fazem texto ou imagem parada ganhar movimento, em qualquer estilo, sem rig e sem timeline.",
+            "Três rotas cobrem quase todo caso real:",
+            "O que muda entre elas é **controle**. Rota 1: velocidade, pouca autoria. Rota 2: preserva o ativo. Rota 3: controle máximo, custo de tempo maior.",
+            "Escolha a rota pelo requisito, não pela ferramenta da moda."
+          ],
+          "bullets": [
+            "**Texto → vídeo.** Você descreve, escolhe estilo e narração, exporta. Quatro etapas, nenhuma habilidade de animação exigida.",
+            "**Imagem ou esboço → vídeo.** Você anima a arte que já é sua. Entrada por imagem, esboço ou texto, saída em 2D e 3D.",
+            "**Pipeline de frames.** Frame inicial e frame final gerados numa IA de imagem; o modelo de vídeo cria a transição."
+          ]
+        },
+        {
+          "id": "o-que-o-plano-gratis-entrega-em-tres-linhas",
+          "heading": "O que o plano grátis entrega (em três linhas)",
+          "level": 2,
+          "paragraphs": [
+            "O mercado de ferramentas muda a cada trimestre. O critério não.",
+            "Não recomendamos ferramenta. Recomendamos fluxo. Ferramenta é substituível; fluxo é ativo."
+          ],
+          "bullets": [
+            "**Camadas multimodelo.** Um workspace, vários modelos de vídeo, comparação lado a lado na mesma tela. Serve para não ficar preso a um fornecedor.",
+            "**Texto→vídeo com template e locução.** Descrever, revisar, ajustar, exportar, quatro etapas. A plataforma se apresenta com mais de 34 milhões de usuários.",
+            "**Imagem/esboço→vídeo com saída comercialmente segura.** É o caso do Adobe Firefly, que aceita imagem, esboço ou texto e entrega 2D e 3D.",
+            "**Só com IAs gratuitas de imagem.** Gerar frame inicial e final, interpolar em vídeo, extrair frames para refinar."
+          ]
+        },
+        {
+          "id": "o-pipeline-que-usamos-ativo-primeiro-prompt-depois",
+          "heading": "O pipeline que usamos: ativo primeiro, prompt depois",
+          "level": 2,
+          "paragraphs": [
+            "Nossa ordem é inversa à do tutorial médio. Não começamos no prompt. Começamos no ativo.",
+            "Esse fluxo é o que permite time pequeno publicar sem estúdio externo. É também o teste mais honesto de IA no ambiente de trabalho no Brasil: ou a ferramenta entra no ritmo de quem entrega, ou sai."
+          ],
+          "bullets": [
+            "**Passo 1, um sujeito único.** Animação boa conta uma coisa. No nosso caso, quase sempre o **Isótipo Avante**, a letra A de traço caligráfico em gradiente, ou um frame da série 'guerreiro de pedra'. Um sujeito, um gesto.",
+            "**Passo 2, frame de entrada sob controle.** Composição, ângulo e luz decididos por você. Referência confusa trava o resultado final.",
+            "**Passo 3, anime por image-to-video.** A marca fica; o modelo só adiciona movimento.",
+            "**Passo 4, coerência entre frames.** Ângulo, luz e tema precisam conversar, ou a transição denuncia.",
+            "**Passo 5, variantes do mesmo conceito.** Compare antes de escolher."
+          ]
+        },
+        {
+          "id": "qual-e-a-melhor-ia-para-animacao",
+          "heading": "Qual é a melhor IA para animação?",
+          "level": 2,
+          "paragraphs": [
+            "Não existe. Desconfie de quem responde.",
+            "Cada modelo tem viés de movimento, coerência temporal e estilo. Comparar lado a lado vale mais que qualquer lista de 'melhores'.",
+            "O critério é operacional: **meça no seu contexto, hype e ranking não substituem eval e aceite**.",
+            "Requisito jurídico? Saída declarada segura para uso comercial. Requisito de volume e narração? Texto→vídeo com template. Requisito autoral? Pipeline de frames."
+          ],
+          "bullets": [
+            "Escreva o aceite antes: a marca aguenta? o movimento é crível? o take serve cortado em 6 segundos?",
+            "Rode o mesmo prompt e o mesmo frame de entrada em dois ou três modelos.",
+            "Decida pelo resultado, nunca pelo nome do modelo."
+          ]
+        },
+        {
+          "id": "onde-o-plano-gratis-quebra",
+          "heading": "Onde o plano grátis quebra",
+          "level": 2,
+          "paragraphs": [
+            "Três lugares, sempre os mesmos.",
+            "**Bordas de entrada.** Formato, peso e prompt são finitos: JPG ou PNG, até 50 MB, um arquivo por vez, prompt de até 1.024 caracteres. Planeje o ativo dentro da borda.",
+            "**Duração.** Animação por IA vive em takes curtos. Peça um take, não um filme. Narrativa longa se monta na edição.",
+            "**Consistência de marca.** É aqui que a maioria dos vídeos por IA morre: bonito, genérico, descartável. A correção é entrar com referência, não com adjetivo. Nosso teto é simples: se o frame não reduz a gradiente quente→frio, muito espaço negativo e a letra A como único elemento gráfico, não é nosso."
+          ]
+        },
+        {
+          "id": "do-video-ao-playbook-como-isso-entra-no-nosso-jeito-de-const",
+          "heading": "Do vídeo ao playbook: como isso entra no nosso jeito de construir",
+          "level": 2,
+          "paragraphs": [
+            "Animação com IA grátis não é economia de fornecedor. É teste de arquitetura de trabalho.",
+            "Empresa AI-native trata geração de mídia como parte do ciclo de produto. O mesmo time que decide o roteiro gera, avalia e publica. Nenhuma etapa terceirizada no meio. Isso muda o ritmo de saída, e ritmo compõe marca.",
+            "O mesmo padrão que vale para vídeo vale para o produto inteiro: modelo é insumo, não tese. Empacotar chamada de API e chamar de startup não é fundação, é [wrapper](/library/chatgpt-wrapper-is-not-an-ai-native-company). O que sustenta é dado proprietário, fluxo de aceite e distribuição.",
+            "Como isso aparece no que construímos:",
+            "É também assim que filtramos oportunidade: quem quer entender onde essa fundação vira negócio, comece pelas [ideias de startup AI-native para 2026 na América Latina](/library/ai-startup-ideas-2026-latin-america).",
+            "**Portfólio em construção aberta.** Publicamos o processo enquanto ele acontece. Os frames, os prompts, os takes que não passaram no aceite e os que passaram entram no mesmo registro público do [portfólio](/pt/portfolio). Plano gratuito prova o fluxo; depois de provado, pagar deixa de ser decisão sobre ferramenta e passa a ser sobre volume. Essa é a diferença entre adicionar IA depois e construir com IA desde a fundação."
+          ],
+          "bullets": [
+            "**AlphaJuri.** Domínio jurídico exige eval antes de estética. O critério de aceite escrito primeiro, depois a geração, mesma lógica do frame de entrada.",
+            "**WIR.** Comunicação em volume, marca constante, time enxuto. Ativo canônico animado, não arte nova a cada post.",
+            "**FutureProofing.** Conteúdo como produto. Camada multimodelo para não depender de um fornecedor de vídeo."
+          ]
+        },
+        {
+          "id": "sources",
+          "heading": "Fontes",
+          "level": 2,
+          "paragraphs": [],
+          "bullets": [
+            "[Gerador de animação com IA grátis: sem rig](https://morphic.com/br/resources/tools/ai-animation-generator)",
+            "[Crear animaciones con IA gratis en línea | Renderforest](https://www.renderforest.com/es/ai-animation-generator)",
+            "[Gerador de animações por IA gratuito | Adobe Firefly](https://www.adobe.com/br/products/firefly/features/ai-animation-generator.html)",
+            "[Criar animação com IA online grátis | Renderforest](https://www.renderforest.com/pt/ai-animation-generator)",
+            "[Como criar animações só com IAs grátis: tutorial prático](https://www.crazystack.com.br/2025-3/fiz-um-site-usando-ia)"
+          ]
+        }
+      ],
+      "faqs": [
+        {
+          "q": "O ChatGPT pode fazer animações?",
+          "a": "Modelo de chat serve para a etapa anterior: roteiro, storyboard em texto, escrita do prompt. O movimento vem de um gerador de vídeo, que anima texto ou imagem estática sem rig e sem timeline. Chat é copiloto de briefing, não render."
+        },
+        {
+          "q": "Qual IA gratuita faz desenhos que depois posso animar?",
+          "a": "Gere as artes numa IA de imagem, frame inicial e frame final, e converta em vídeo com uma ferramenta que cria a transição. O Adobe Firefly aceita imagem, esboço ou texto e entrega animação em 2D e 3D."
+        },
+        {
+          "q": "Preciso saber animar para usar essas ferramentas?",
+          "a": "Não. As plataformas de texto→vídeo afirmam que nenhuma habilidade em animação é necessária: descrever, escolher estilo e voz, revisar, exportar. O conceito dos geradores atuais é animar sem rig e sem timeline."
+        },
+        {
+          "q": "Qual a melhor plataforma de IA grátis para criar vídeos animados?",
+          "a": "Depende do requisito. Uso comercial declarado como seguro: Firefly. Template e narração prontos: texto→vídeo em quatro etapas. Comparação de vários modelos na mesma tela: camada multimodelo. O critério final é medir no seu contexto, eval e aceite acima de ranking."
+        },
+        {
+          "q": "Quais são os limites práticos do plano gratuito?",
+          "a": "Planeje o ativo dentro da borda. No Firefly: JPG ou PNG, até 50 MB, um upload por vez, prompt de até 1.024 caracteres. E pense em takes curtos, montando a narrativa na edição."
+        }
+      ]
+    },
+    "ogImage": "/og/create-animation-with-artificial-intelligence-free.png"
+  },
+  {
     "slug": "smart-glasses",
     "category": "insights",
     "type": "Explainer",

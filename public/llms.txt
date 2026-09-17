@@ -96,6 +96,7 @@ Our model: pre-traction capital + repeatable operational system + in-market exec
 
 ### English
 
+- [Create Animation With Artificial Intelligence Free: The Operator's Guide](https://avanteventures.com/en/library/create-animation-with-artificial-intelligence-free): How to create animation with artificial intelligence for free: text-to-video, image-to-video, and first/last frame workflows, plus real free-tier limits.
 - [Smart Glasses and the AI-Native Thesis: Why the Form Factor Matters for Venture Building](https://avanteventures.com/en/library/smart-glasses): What smart glasses are, what they do today, how AI glasses differ, and why the shift to ambient computing is an architecture decision for AI-native founders.
 - [Female Entrepreneurship in Brazil: The Data, the Gaps, and the AI-Native Opening](https://avanteventures.com/en/library/female-entrepreneurship-in-brazil): Brazil has 10.4 million women business owners, up 27% in a decade. The verified data on sectors, education, credit gaps, and the AI-native opening.
 - [A ChatGPT Wrapper Is Not an AI-Native Company](https://avanteventures.com/en/library/chatgpt-wrapper-is-not-an-ai-native-company): Around 90% of AI wrappers stop shipping. The real line between a chat pasted on top of someone else's API and a company architected around the model.
@@ -205,6 +206,7 @@ Our model: pre-traction capital + repeatable operational system + in-market exec
 
 ### Português
 
+- [Criar animação com inteligência artificial grátis: as três rotas que realmente funcionam](https://avanteventures.com/pt/library/criar-animacao-com-inteligencia-artificial-gratis): Como criar animação com inteligência artificial grátis: texto→vídeo, imagem→vídeo e pipeline de frames. Limites reais do plano free e o fluxo AI-native que…
 - [Óculos inteligente: o que é, o que faz e a leitura AI-native](https://avanteventures.com/pt/library/oculos-inteligente): Óculos inteligente é um computador vestível em formato de armação. O que faz, diferença vs. óculos com IA, se tem grau, melhores modelos e a leitura AI-native.
 - [Empreendedorismo feminino no Brasil: os números, os gargalos e o que muda com IA](https://avanteventures.com/pt/library/empreendedorismo-feminino-no-brasil): 10,4 milhoes de mulheres a frente de negocios, alta de 27% em dez anos e os gargalos reais: credito, tripla jornada e escala. Dados e leitura AI-native.
 - [Wrapper de ChatGPT não é empresa AI-native](https://avanteventures.com/pt/library/wrapper-de-chatgpt-nao-e-empresa-ai-native): Chave de API, system prompt e uma janela de chat não são fundação. O que separa um thin wrapper de uma empresa AI-native, com dados, evals e loops de feed
