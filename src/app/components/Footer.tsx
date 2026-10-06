@@ -205,6 +205,17 @@ export function Footer() {
             )}
           </MonoColophon>
         </div>
+
+        {/* Legal structure — the US parent owns the Brazilian entity. */}
+        <div style={{ marginTop: '14px' }}>
+          <MonoColophon>
+            {t(
+              'Avante Ventures (USA) is the owner of AD ASTRA ADVISORY LTDA (Brazil)',
+              'A Avante Ventures (EUA) é proprietária da AD ASTRA ADVISORY LTDA (Brasil)',
+              'Avante Ventures (EE. UU.) es propietaria de AD ASTRA ADVISORY LTDA (Brasil)'
+            )}
+          </MonoColophon>
+        </div>
       </div>
 
       <style>{`
