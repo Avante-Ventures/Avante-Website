@@ -20,7 +20,7 @@ export default function VentureLogoScene({ kind, onReady, onFailure }: { kind: V
     el.appendChild(renderer.domElement);
     const scene = new THREE.Scene(), camera = new THREE.PerspectiveCamera(30, 1, .1, 50);
     const sculpture = new THREE.Group();
-    const restingX = kind === 'legal' ? -.09 : -.035, restingY = kind === 'legal' ? -.28 : .16;
+    const look = VENTURES[kind].scene, restingX = look.restingX, restingY = look.restingY;
     sculpture.rotation.set(restingX, restingY, 0);
     scene.add(sculpture);
     const pmrem = new THREE.PMREMGenerator(renderer), room = new RoomEnvironment();
@@ -85,9 +85,9 @@ export default function VentureLogoScene({ kind, onReady, onFailure }: { kind: V
       const document = new DOMParser().parseFromString(svg, 'image/svg+xml');
       const gradients = [...document.querySelectorAll('linearGradient')];
       const data = new SVGLoader().parse(svg.replace(/url\(#[^)]+\)/g, '#ffffff'));
-      const parts = data.paths.map(path => {
+      const parts = data.paths.map((path, index) => {
         const shapes = SVGLoader.createShapes(path);
-        const geometry = new THREE.ExtrudeGeometry(shapes, { depth: kind === 'legal' ? 110 : 18, steps: 1, curveSegments: 12, bevelEnabled: true, bevelThickness: kind === 'legal' ? 5 : .45, bevelSize: kind === 'legal' ? 3 : .3, bevelSegments: 3 });
+        const geometry = new THREE.ExtrudeGeometry(shapes, { depth: look.depth - index * (look.depthStep ?? 0), steps: 1, curveSegments: 12, bevelEnabled: true, bevelThickness: look.bevelThickness, bevelSize: look.bevelSize, bevelSegments: 3 });
         geometries.push(geometry); geometry.computeBoundingBox();
         return { path, geometry };
       });
@@ -97,7 +97,7 @@ export default function VentureLogoScene({ kind, onReady, onFailure }: { kind: V
       width = size.x * scale; height = size.y * scale;
       for (const { path, geometry } of parts) {
         const node = path.userData!.node as Element;
-        const gradient = kind === 'legal' ? gradients[0] : node.getAttribute('class') === 'cls-1' ? gradients[0] : node.getAttribute('class') === 'cls-2' ? gradients[1] : undefined;
+        const gradient = look.gradient === 'first' ? gradients[0] : look.gradient !== 'by-class' ? undefined : node.getAttribute('class') === 'cls-1' ? gradients[0] : node.getAttribute('class') === 'cls-2' ? gradients[1] : undefined;
         const positions = geometry.attributes.position, colors = new Float32Array(positions.count * 3);
         const stops = gradient ? [...gradient.querySelectorAll('stop')].map(stop => ({ at: parseFloat(stop.getAttribute('offset') || '0') / (stop.getAttribute('offset')!.includes('%') ? 100 : 1), color: new THREE.Color(stop.getAttribute('stop-color')!) })) : [];
         const gradientX = (attribute: string, fallback: number) => {
@@ -106,7 +106,7 @@ export default function VentureLogoScene({ kind, onReady, onFailure }: { kind: V
           return value.includes('%') ? bounds.min.x + parseFloat(value) / 100 * size.x : Number(value);
         };
         const x1 = gradientX('x1', bounds.min.x), x2 = gradientX('x2', bounds.max.x);
-        const color = new THREE.Color(kind === 'legal' ? '#f5f2ec' : '#ffffff');
+        const color = new THREE.Color(look.face);
         for (let i = 0; i < positions.count; i++) {
           if (stops.length) {
             const t = THREE.MathUtils.clamp((positions.getX(i) - x1) / (x2 - x1), 0, 1);
@@ -119,7 +119,7 @@ export default function VentureLogoScene({ kind, onReady, onFailure }: { kind: V
         geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
         geometry.translate(-center.x, -center.y, -center.z); geometry.scale(scale, -scale, scale);
         const face = new THREE.MeshBasicMaterial({ vertexColors: true, toneMapped: false, side: THREE.DoubleSide });
-        const edge = new THREE.MeshPhysicalMaterial({ color: kind === 'legal' ? '#9c7564' : '#5c4c84', metalness: kind === 'legal' ? .7 : .45, roughness: kind === 'legal' ? .32 : .38, envMapIntensity: .8, side: THREE.DoubleSide });
+        const edge = new THREE.MeshPhysicalMaterial({ color: look.edge, metalness: look.metalness, roughness: look.roughness, envMapIntensity: .8, side: THREE.DoubleSide });
         materials.push(face, edge); sculpture.add(new THREE.Mesh(geometry, [face, edge]));
       }
       loaded = true; resize();

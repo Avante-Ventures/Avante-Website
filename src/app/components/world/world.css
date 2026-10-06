@@ -169,10 +169,20 @@ body:has(.avante-world-home) { overflow-x: clip; overflow-y: visible; }
 .venture-website:focus-visible { outline: 2px solid var(--venture-ink); outline-offset: -5px; }
 #home-alphajuri .venture-domain { color: #d8916b; }
 #home-wir .venture-domain { color: #bc97dc; }
+/* CRIA: its three rings on the site's navy, the site itself on its paper. */
+.venture-exhibit--brand { --venture-ink: #061923; --venture-line: #06192326; background: #f2efe9; }
+.venture-exhibit--brand .venture-composition { height: clamp(420px, 46vw, 600px); background: linear-gradient(75deg, #0000 41%, #f2efe9 41.1%), repeating-radial-gradient(circle at 19% 41%, #0000 0 53px, #ff510a24 53px 54px), #061923; }
+.venture-exhibit--brand .venture-logo-stage { top: 6%; left: 2.5%; width: 33%; height: 70%; }
+.venture-exhibit--brand .venture-logo-fallback { width: 76%; height: 76%; left: 12%; top: 12%; filter: drop-shadow(4px 7px 0 #7a2c0680) drop-shadow(0 16px 14px #0007); }
+.venture-exhibit--brand .venture-brand-wordmark { width: 14%; left: 6%; top: 81%; }
+.venture-exhibit--brand .venture-site-preview { width: 55%; left: 40.5%; top: 50%; transform: translateY(-50%) rotateX(3deg) rotateY(7deg) rotateZ(-1.5deg); border-color: #f2efe966; box-shadow: 0 24px 44px #06192347, -6px 7px 0 #ff510a; }
+.venture-exhibit--brand .venture-site-bar { color: #53626a; background: #f2efe9; border-bottom-color: #0619231f; }
+#home-cria .venture-domain { color: #ff8a52; }
 @media (hover: hover) and (pointer: fine) {
   .venture-exhibit:hover .venture-site-preview, .venture-exhibit:focus-within .venture-site-preview { transform: rotateX(1deg) rotateY(-3deg) rotateZ(-1deg) translateY(-5px); }
   .venture-exhibit--risk:hover .venture-site-preview, .venture-exhibit--risk:focus-within .venture-site-preview { transform: rotateX(1deg) rotateY(-4deg) rotateZ(1deg) translateY(-5px); }
   .venture-exhibit--legal:hover .venture-site-preview, .venture-exhibit--legal:focus-within .venture-site-preview { transform: translateY(calc(-50% - 3px)) rotateX(0deg); }
+  .venture-exhibit--brand:hover .venture-site-preview, .venture-exhibit--brand:focus-within .venture-site-preview { transform: translateY(calc(-50% - 4px)) rotateX(1deg) rotateY(2deg) rotateZ(0deg); }
 }
 @media (max-width: 600px) {
   .venture-composition { height: clamp(320px, 90vw, 470px); }
@@ -186,6 +196,10 @@ body:has(.avante-world-home) { overflow-x: clip; overflow-y: visible; }
   .venture-exhibit--legal .venture-logo-stage { width: 28%; height: 30%; left: 5%; top: 4%; }
   .venture-exhibit--legal .venture-brand-wordmark { width: 47%; left: 40%; top: 15%; }
   .venture-exhibit--legal .venture-site-preview { width: 86%; left: 7%; top: 69%; transform: translateY(-50%); box-shadow: 0 14px 22px #060e242b, 0 2px 0 #a1adc2; }
+  .venture-exhibit--brand .venture-composition { height: clamp(350px, 96vw, 560px); background: linear-gradient(180deg, #0000 40%, #f2efe9 40.1%), repeating-radial-gradient(circle at 20% 20%, #0000 0 33px, #ff510a24 33px 34px), #061923; }
+  .venture-exhibit--brand .venture-logo-stage { width: 30%; height: 31%; left: 5%; top: 4.5%; }
+  .venture-exhibit--brand .venture-brand-wordmark { width: 40%; left: 43%; top: 15.5%; }
+  .venture-exhibit--brand .venture-site-preview { width: 86%; left: 7%; top: 70%; transform: translateY(-50%) rotateY(4deg) rotateZ(-1deg); box-shadow: 0 14px 22px #0619232b, -3px 4px 0 #ff510a; }
   .venture-website { padding: 17px 18px; gap: 14px; min-height: 72px; }
   .venture-website-domain { font-size: 17px; }
   .venture-website > span:last-child { font-size: 10px; gap: 10px; }

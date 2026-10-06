@@ -35,12 +35,12 @@ export function VentureExhibit({ kind, language }: { kind: VentureKind; language
       </a>
       <div ref={host} className="venture-logo-stage" data-ready={visible && ready} role="img" aria-label={venture.name}>
         <div className="venture-logo-object">
-          <img className="venture-logo-fallback" src={venture.preview} alt="" loading="lazy" width={kind === 'legal' ? 930 : 637} height={kind === 'legal' ? 730 : 355} />
+          <img className="venture-logo-fallback" src={venture.preview} alt="" loading="lazy" width={venture.previewSize[0]} height={venture.previewSize[1]} />
           {visible && <Suspense fallback={null}><LogoScene kind={kind} onReady={onReady} onFailure={onFailure} /></Suspense>}
         </div>
-        {kind === 'risk' && <img className="venture-brand-signature" src="/world-assets/wir-signature.svg" alt="" loading="lazy" width="480" height="76" />}
+        {venture.signature && <img className="venture-brand-signature" src={venture.signature.src} alt="" loading="lazy" width={venture.signature.width} height={venture.signature.height} />}
       </div>
-      {kind === 'legal' && <img className="venture-brand-wordmark" src="/world-assets/alphajuri-logo.svg" alt="" loading="lazy" width="4582" height="1048" />}
+      {venture.wordmark && <img className="venture-brand-wordmark" src={venture.wordmark.src} alt="" loading="lazy" width={venture.wordmark.width} height={venture.wordmark.height} />}
     </div>
     <a className="venture-website" href={venture.url} target="_blank" rel="noopener noreferrer" aria-label={`${VISIT[language]}: ${venture.name} (${venture.domain})`}>
       <span className="venture-website-domain">{venture.domain}</span><span>{VISIT[language]} <span aria-hidden="true">↗</span></span>

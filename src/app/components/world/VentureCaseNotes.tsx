@@ -2,7 +2,8 @@ import { VENTURES, type VentureKind } from './ventures';
 
 // Scope sources: ../TEAM-FACTS.md and ../CLAUDE.md.
 // Public product evidence: AlphaJuri components/how-it-works.tsx and
-// app/(site)/sobre/page.tsx; WIR src/home-shift.jsx and src/solutions.jsx.
+// app/(site)/sobre/page.tsx; WIR src/home-shift.jsx and src/solutions.jsx;
+// CRIA criabrazil.com home (services) and /work case pages.
 // Describe inspectable workflows, without implying customer or revenue results.
 const COPY = {
   en: {
@@ -18,6 +19,11 @@ const COPY = {
       'Product and engineering for insurance pricing and risk workflows within WIR, an Avante venture.',
       'WIR presents Smart Sales for distribution and Underwriter Intelligence for quoting. Its public product pages show how submissions, prioritization and risk policies connect to existing systems.',
     ],
+    brand: [
+      'A company can have a real product and still lose the sale: buyers do not understand what it does, the website does not explain it, and the right people never hear about it.',
+      'Product and engineering for CRIA, an Avante venture. CRIA’s public work includes AlphaJuri’s visual identity, WIR’s website direction and Avante’s editorial content.',
+      'The website presents three connected services: positioning and identity, websites and content, and go-to-market and lead generation. Its work pages show the brand board behind each project.',
+    ],
   },
   pt: {
     title: 'Por dentro da empresa', labels: ['O problema do cliente', 'O papel da Avante', 'Conheça o trabalho'],
@@ -32,6 +38,11 @@ const COPY = {
       'Produto e engenharia para os fluxos de precificação e análise de riscos da WIR, um venture da Avante.',
       'A WIR apresenta Smart Sales para distribuição e Underwriter Intelligence para cotações. As páginas públicas mostram como propostas, priorização e políticas de risco se conectam aos sistemas existentes.',
     ],
+    brand: [
+      'Uma empresa pode ter um produto real e ainda assim perder a venda: o comprador não entende o que ela faz, o site não explica e as pessoas certas nunca ficam sabendo.',
+      'Produto e engenharia para a CRIA, um venture da Avante. O trabalho público da CRIA inclui a identidade visual da AlphaJuri, a direção do site da WIR e o conteúdo editorial da Avante.',
+      'O site apresenta três serviços conectados: posicionamento e identidade, sites e conteúdo, e go-to-market e geração de leads. As páginas de trabalho mostram o brand board por trás de cada projeto.',
+    ],
   },
   es: {
     title: 'Dentro de la empresa', labels: ['El problema del cliente', 'El papel de Avante', 'Conoce el trabajo'],
@@ -45,6 +56,11 @@ const COPY = {
       'Los equipos de seguros reciben solicitudes de cotización fragmentadas y dedican tiempo a organizarlas y comprobar si los riesgos encajan con los criterios de la aseguradora.',
       'Producto e ingeniería para los flujos de tarificación y análisis de riesgos de WIR, una empresa de Avante.',
       'WIR presenta Smart Sales para distribución y Underwriter Intelligence para cotizaciones. Sus páginas públicas muestran cómo las solicitudes, la priorización y las políticas de riesgo se conectan a los sistemas existentes.',
+    ],
+    brand: [
+      'Una empresa puede tener un producto real y aun así perder la venta: el comprador no entiende qué hace, el sitio no lo explica y las personas correctas nunca se enteran.',
+      'Producto e ingeniería para CRIA, una empresa de Avante. El trabajo público de CRIA incluye la identidad visual de AlphaJuri, la dirección del sitio de WIR y el contenido editorial de Avante.',
+      'El sitio presenta tres servicios conectados: posicionamiento e identidad, sitios y contenido, y go-to-market y generación de leads. Las páginas de trabajo muestran el brand board detrás de cada proyecto.',
     ],
   },
 };

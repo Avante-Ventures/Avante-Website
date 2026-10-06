@@ -168,7 +168,7 @@ export function Footer() {
 
           {/* Column 4: Now — operating reality */}
           <FooterColumn title={t('Now', 'Agora', 'Ahora')}>
-            <FooterStaticLine>{t('Selected work: AlphaJuri + WIR', 'Destaques: AlphaJuri + WIR', 'Selección: AlphaJuri + WIR')}</FooterStaticLine>
+            <FooterStaticLine>{t('Selected work: AlphaJuri + WIR + CRIA', 'Destaques: AlphaJuri + WIR + CRIA', 'Selección: AlphaJuri + WIR + CRIA')}</FooterStaticLine>
             <FooterStaticLine>{t('São Paulo · winter 2026', 'São Paulo · inverno 2026', 'São Paulo · invierno 2026')}</FooterStaticLine>
             <FooterStaticLine
               style={{ color: 'rgba(205, 210, 238, 0.55)', marginTop: '6px', fontSize: '12px' }}

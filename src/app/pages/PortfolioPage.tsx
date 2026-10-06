@@ -14,7 +14,7 @@ import { SectionMasthead } from '@/app/components/SectionMasthead'
 import { VenturePipeline } from '@/app/components/VenturePipeline'
 import { Reveal } from '@/app/components/Reveal'
 import { Link } from 'react-router'
-import { VENTURES as VENTURE_BRANDS } from '@/app/components/world/ventures'
+import { VENTURES as VENTURE_BRANDS, VENTURE_ORDER } from '@/app/components/world/ventures'
 import { VentureProductPreview } from '@/app/components/world/EditorialHome'
 import { VentureCaseNotes } from '@/app/components/world/VentureCaseNotes'
 
@@ -78,6 +78,18 @@ const VENTURES: Venture[] = [
     accent: '#F4A261',
     tag: 'LegalTech',
     est: 'Est. 2024',
+  },
+  {
+    name: 'CRIA',
+    url: VENTURE_BRANDS.brand.url,
+    description: {
+      en: 'Brand strategy, content and go-to-market execution for companies that need the right buyers to understand and find them.',
+      pt: 'Estratégia de marca, conteúdo e execução de go-to-market para empresas que precisam ser compreendidas e encontradas pelos compradores certos.',
+      es: 'Estrategia de marca, contenido y ejecución de go-to-market para empresas que necesitan que los compradores correctos las entiendan y las encuentren.',
+    },
+    status: 'cohort1',
+    accent: '#FF510A',
+    tag: 'Brand & Go-to-market',
   },
   {
     name: 'FutureProofing Brazil',
@@ -222,19 +234,19 @@ const SEO = {
   en: {
     title: 'Portfolio — Avante Ventures',
     description:
-      'Explore AlphaJuri and WIR, selected Avante ventures. Discover our operating network and the team’s separate company-building and prior investment experience.',
+      'Explore AlphaJuri, WIR and CRIA, selected Avante ventures. Discover our operating network and the team’s separate company-building and prior investment experience.',
     inLanguage: 'en',
   },
   pt: {
     title: 'Portfólio — Avante Ventures',
     description:
-      'Conheça AlphaJuri e WIR, ventures selecionados da Avante, nossa rede operacional e a experiência própria do time em empresas e investimentos anteriores.',
+      'Conheça AlphaJuri, WIR e CRIA, ventures selecionados da Avante, nossa rede operacional e a experiência própria do time em empresas e investimentos anteriores.',
     inLanguage: 'pt-BR',
   },
   es: {
     title: 'Portafolio — Avante Ventures',
     description:
-      'Conoce AlphaJuri y WIR, empresas seleccionadas de Avante, nuestra red operativa y la experiencia independiente del equipo en empresas e inversiones anteriores.',
+      'Conoce AlphaJuri, WIR y CRIA, empresas seleccionadas de Avante, nuestra red operativa y la experiencia independiente del equipo en empresas e inversiones anteriores.',
     inLanguage: 'es',
   },
 } as const
@@ -270,13 +282,13 @@ export default function PortfolioPage() {
       <main>
         <InteriorHero kind="ventures" eyebrow={t('Our ventures', 'Nossos ventures', 'Nuestros ventures')}
           title={<>{t('Conviction,', 'Convicção,', 'Convicción,')}<br />{t('made tangible.', 'em construção.', 'hecha realidad.')}</>}
-          description={t('Explore AlphaJuri and WIR. Real problems, companies built around them, and the work behind each one.', 'Conheça AlphaJuri e WIR. Problemas reais, empresas criadas para resolvê-los e o trabalho por trás de cada uma.', 'Conoce AlphaJuri y WIR. Problemas reales, empresas creadas para resolverlos y el trabajo detrás de cada una.')} />
+          description={t('Explore AlphaJuri, WIR and CRIA. Real problems, companies built around them, and the work behind each one.', 'Conheça AlphaJuri, WIR e CRIA. Problemas reais, empresas criadas para resolvê-los e o trabalho por trás de cada uma.', 'Conoce AlphaJuri, WIR y CRIA. Problemas reales, empresas creadas para resolverlos y el trabajo detrás de cada una.')} />
         <div className="interior-content" id="page-content">
         <div className="portfolio-exhibits">
-          {(['legal', 'risk'] as const).map(kind => (
-            <details open key={kind} id={kind === 'legal' ? 'venture-alphajuri' : 'venture-wir'} className="portfolio-exhibit-detail">
+          {VENTURE_ORDER.map(kind => (
+            <details open key={kind} id={`venture-${VENTURE_BRANDS[kind].slug}`} className="portfolio-exhibit-detail">
               <summary>
-                <span>{kind === 'legal' ? 'AlphaJuri' : 'WIR'}</span>
+                <span>{VENTURE_BRANDS[kind].label}</span>
                 <span>{language === 'pt' ? 'Conheça a empresa' : language === 'es' ? 'Conoce la empresa' : 'Discover the company'} ↗</span>
               </summary>
               <VentureProductPreview kind={kind} />
