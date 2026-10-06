@@ -2,6 +2,8 @@
 
 Delivery update: the original 400/800-pixel exports described below were superseded by higher-quality 480/960/1254-pixel variants. See [Team portrait quality](2026-09-14-team-photo-quality.md) for the current implementation and validation.
 
+Roster update, October 6, 2026: Giovanni dos Santos Jr. replaced Luiz Mitidiero on the team. His portrait, `giovanni-sunset-hq-{480,960,1254}.webp`, uses the São Paulo backdrop. It was made with the "Felipe and Luiz" recipe below (his photo as the only identity target, Amanda's generated portrait as background reference), through OpenAI `gpt-image-2.5-sunburst` on the image edits API instead of the built-in ImageGen tool. His source photo is 400 × 400, smaller than the others.
+
 The home and Studio now use a coordinated sunset portrait series through the shared `TeamPortrait` component.
 
 | People | Backdrop |

@@ -71,6 +71,13 @@
 - Pillow performs downsampling and WebP encoding only, at quality 96 and method 6. The 1254-pixel exports preserve native resolution; there is no upscaling, new generation or additional face/background edit.
 - Responsive delivery and validation: `docs/2026-09-14-team-photo-quality.md`.
 
+### Giovanni dos Santos Jr. (October 6, 2026)
+
+- `team/giovanni-sunset-hq-{480,960,1254}.webp` is the same kind of background replacement, based on the supplied photo in `public/redesign-assets/team-giovanni.webp`. It uses the São Paulo sunset backdrop, with Amanda's portrait as the background and color reference only.
+- The edit was produced with OpenAI `gpt-image-2.5-sunburst` through the image edits API. The supplied photo is 400 × 400, so the 1280 × 1280 generated master contains detail the source does not; Pillow downsampled it and encoded the WebP files at quality 96 and method 6.
+- Identity preservation was instructed and visually reviewed against the source. The output is generatively edited and is not claimed to preserve every source pixel. It is an editorial composite, not evidence of a person's residence or workplace.
+- The `luiz-sunset-*` files listed above are no longer referenced by the site.
+
 ## Opening globe loading frame (September 14, 2026)
 
 - `globe-opening.webp`: transparent 2160 × 1350 capture of the existing `WorldScene` at progress 0, with its original camera, geography, materials and lighting. Rendered in native Safari at a 1440 × 900 CSS viewport and DPR 1.5, then encoded as WebP quality 90 (104 KiB). No AI generation or additional geographic source. The underlying Natural Earth attribution for `land.json` applies.
