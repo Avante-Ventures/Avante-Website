@@ -124,7 +124,10 @@ function makeServer() {
     const urlPath = decodeURIComponent(req.url.split('?')[0])
     let filePath = join(DIST, urlPath === '/' ? 'index.html' : urlPath)
 
-    if (!extname(filePath) && !existsSync(filePath)) {
+    // Extension-less paths are app routes and always get the SPA shell. A
+    // route's folder can already exist on disk (a child route was written
+    // first), so its existence must not turn the request into a file read.
+    if (!extname(filePath)) {
       filePath = join(DIST, 'index.html')
     } else if (!existsSync(filePath)) {
       res.writeHead(404)
@@ -179,10 +182,19 @@ async function renderRoute(route) {
       const url = `http://localhost:${PORT}${route}`
       await page.goto(url, { waitUntil: 'networkidle0', timeout: 60000 })
 
-      // Wait until React mounts real content into #root. 30s tolerates
-      // Vercel build's slower Chromium + lazy chunk loads on first nav.
+      // Wait until the page itself has rendered, not only the app shell: every
+      // route ends up with an <h1> and the <footer>. Elapsed time is not a safe
+      // signal once several tabs share the CPU. An error page also ends the
+      // wait, and is rejected just below. 30s tolerates Vercel build's slower
+      // Chromium + lazy chunk loads on first nav.
       await page.waitForFunction(
-        () => document.getElementById('root')?.children.length > 0,
+        () => {
+          const root = document.getElementById('root')
+          if (!root) return false
+          if (root.querySelector('[data-route-error]')) return true
+          if (root.querySelector('h2')?.textContent?.includes('Unexpected Application Error')) return true
+          return Boolean(root.querySelector('h1') && root.querySelector('footer'))
+        },
         { timeout: 30000 }
       )
 
@@ -205,7 +217,7 @@ async function renderRoute(route) {
       return // success
     } catch (err) {
       const tag = attempt === 1 ? 'retry' : 'FAILED'
-      console.log(`  ${attempt === 1 ? '↻' : '✗'} ${tag}: ${err.message}`)
+      console.log(`  ${attempt === 1 ? '↻' : '✗'} ${tag} ${route}: ${err.message}`)
       if (attempt === 2) errors.push({ route, err: String(err) })
     } finally {
       await page.close()
@@ -213,10 +225,21 @@ async function renderRoute(route) {
   }
 }
 
-for (const route of ROUTES) {
-  console.log(`→ Rendering ${route}`)
-  await renderRoute(route)
-}
+// '/' renders first and alone: it overwrites dist/index.html, the shell the
+// static server hands to every other route, so they must all start from it.
+// The rest render on a fixed number of tabs in parallel.
+const CONCURRENCY = Math.max(1, Number(process.env.PRERENDER_CONCURRENCY) || 6)
+const startedAt = Date.now()
+console.log('→ Rendering /')
+await renderRoute('/')
+
+const queue = ROUTES.filter((route) => route !== '/')
+console.log(`→ Rendering ${queue.length} routes, ${CONCURRENCY} at a time`)
+await Promise.all(
+  Array.from({ length: CONCURRENCY }, async () => {
+    while (queue.length) await renderRoute(queue.shift())
+  })
+)
 
 await browser.close()
 server.close()
@@ -227,4 +250,5 @@ if (errors.length) {
   process.exit(1)
 }
 
-console.log('\n✅ Prerender complete.')
+const seconds = Math.round((Date.now() - startedAt) / 1000)
+console.log(`\n✅ Prerender complete: ${ROUTES.length} routes in ${seconds}s.`)
