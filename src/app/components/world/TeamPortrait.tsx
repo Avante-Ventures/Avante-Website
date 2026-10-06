@@ -3,7 +3,7 @@ import { useEffect, useRef, useState, type CSSProperties, type PointerEvent } fr
 // Art direction for the portrait backdrop, independent of the person's bio/location.
 const SUNSET_BACKDROPS: Record<string, string> = {
   andrea: 'San Francisco', jess: 'San Francisco', cristian: 'San Francisco',
-  amanda: 'São Paulo', felipe: 'São Paulo', luiz: 'São Paulo',
+  amanda: 'São Paulo', felipe: 'São Paulo',
 };
 // Square originals cover a taller portrait box: size for the painted image,
 // including the crop and desktop hover, rather than just the card's width.

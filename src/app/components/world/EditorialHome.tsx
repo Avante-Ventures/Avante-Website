@@ -51,7 +51,7 @@ export function EditorialHome() {
     </section>
     <section id="team" className="editorial-section people-section">
       <div className="editorial-kicker">{c.people}</div><div className="section-heading-row"><Heading lines={c.peopleTitle} /><p>{c.peopleBody}</p></div>
-      <div className="people-grid">{OPERATORS.map((person, index) => <article className="person-card" key={person.slug}><TeamPortrait slug={person.slug} name={person.name} city={person.city} index={index} /><h3>{person.name}</h3><p className="person-role">{person.role[language]}</p><details><summary>{c.bio}<span>+</span></summary><p>{person.fact[language].replace(/\s*[—–]\s*/g, '. ').replace(/;/g, ',')}</p><a href={person.linkedin} target="_blank" rel="noopener noreferrer">{c.profile} ↗</a></details></article>)}</div>
+      <div className="people-grid">{OPERATORS.map((person, index) => <article className="person-card" key={person.slug}><TeamPortrait slug={person.slug} name={person.name} city={person.city} index={index} /><h3>{person.name}</h3><p className="person-role">{person.role[language]}</p><details><summary>{c.bio}<span>+</span></summary><p>{person.fact[language].replace(/\s*[—–]\s*/g, '. ').replace(/;/g, ',')}</p>{person.linkedin && <a href={person.linkedin} target="_blank" rel="noopener noreferrer">{c.profile} ↗</a>}</details></article>)}</div>
     </section>
     <section className="editorial-section reading-section">
       <div className="editorial-kicker">{c.thinking}</div><div className="section-heading-row"><Heading lines={c.thinkingTitle} /><div><p>{c.thinkingBody}</p><Link className="editorial-link" to={`/${language}/library`}>{c.library} ↗</Link></div></div>

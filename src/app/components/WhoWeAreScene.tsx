@@ -13,7 +13,8 @@ import { useLanguage } from "@/app/hooks/useLanguage";
 type Operator = {
   slug: string;
   name: string;
-  linkedin: string;
+  // optional — a card without it renders no profile link
+  linkedin?: string;
   role: { en: string; pt: string; es: string };
   house: string;
   city: string;
@@ -120,21 +121,20 @@ export const OPERATORS: Operator[] = [
     highlight: { value: "8+ yrs", label: { en: "building across LATAM & USA", pt: "construindo entre LATAM e EUA", es: "construyendo entre LATAM y EE. UU." } },
   },
   {
-    slug: "luiz",
-    name: "Luiz Mitidiero",
-    linkedin: "https://www.linkedin.com/in/luizmitidiero/",
-    role: { en: "Head of Engineering", pt: "Head of Engineering", es: "Head of Engineering" },
-    house: "Avante / FP AI",
+    slug: "giovanni",
+    name: "Giovanni dos Santos Jr.",
+    role: { en: "Principal AI Product Manager", pt: "Principal AI Product Manager", es: "Principal AI Product Manager" },
+    house: "Avante",
     city: "São Paulo",
     coord: "23°33′S",
     accent: "#4d8df0",
     fact: {
-      en: "18 years as a senior software engineer — developer to director of engineering, with products driving $20M+ in revenue across companies. Ships LLMs, RAG and multi-agent systems into production, bridging Avante's portcos with Futureproofing.dev's pre-vetted AI bench.",
-      pt: "18 anos como engenheiro de software sênior — de desenvolvedor a diretor de engenharia, com produtos gerando mais de US$20M em receita em diversas empresas. Coloca LLMs, RAG e sistemas multiagentes em produção, conectando as empresas do portfólio da Avante ao time de IA pré-selecionado da Futureproofing.dev.",
-      es: "18 años como ingeniero de software senior — de desarrollador a director de ingeniería, con productos que generaron más de US$20M en ingresos en distintas empresas. Lleva LLMs, RAG y sistemas multiagente a producción, conectando las portcos de Avante con el equipo de IA preseleccionado de Futureproofing.dev.",
+      en: "8+ years building and scaling technology products, from 0→1 to scale, at the intersection of generative AI, product strategy and revenue growth. Led the creation of products that scaled businesses from R$0 to R$200M ARR in four years. Built an AI product portfolio spanning generative AI, LLMs, RAG and voice AI that reached R$4.5M ARR in seven months.",
+      pt: "Mais de 8 anos construindo e escalando produtos de tecnologia, do 0→1 à escala, na interseção entre IA generativa, estratégia de produto e crescimento de receita. Liderou a criação de produtos que escalaram negócios de R$0 a R$200M de ARR em quatro anos. Criou um portfólio de produtos de IA com IA generativa, LLMs, RAG e Voice AI que chegou a R$4,5M de ARR em sete meses.",
+      es: "Más de 8 años construyendo y escalando productos de tecnología, del 0→1 a la escala, en la intersección entre IA generativa, estrategia de producto y crecimiento de ingresos. Lideró la creación de productos que escalaron negocios de R$0 a R$200M de ARR en cuatro años. Creó un portafolio de productos de IA con IA generativa, LLMs, RAG y Voice AI que alcanzó R$4,5M de ARR en siete meses.",
     },
-    companies: ["Futureproofing.dev"],
-    highlight: { value: "$20M+", label: { en: "revenue built across companies", pt: "receita construída em várias empresas", es: "ingresos construidos en varias empresas" } },
+    companies: [],
+    highlight: { value: "R$200M", label: { en: "ARR scaled from zero in 4 years", pt: "de ARR escalados do zero em 4 anos", es: "de ARR escalados desde cero en 4 años" } },
   },
 ];
 
