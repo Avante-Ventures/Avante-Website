@@ -246,7 +246,6 @@ export default function InvestorsPage() {
         <section className="investor-section">
           <SectionMasthead
             compact
-            eyebrow={t("The thesis", "A tese", "La tesis")}
             title={t(
               "The conditions behind our thesis.", "As condições por trás da nossa tese.", "Las condiciones detrás de nuestra tesis."
             )}
@@ -263,7 +262,6 @@ export default function InvestorsPage() {
               <EditorialCard
                 key={p.title}
                 className="investor-thesis-card"
-                eyebrow={String(i + 1).padStart(2, '0')}
                 title={p.title}
                 body={p.body}
                 accent={p.accent}
@@ -278,7 +276,6 @@ export default function InvestorsPage() {
         <section className="investor-section">
           <SectionMasthead
             compact
-            eyebrow={t("Structure", "Estrutura", "Estructura")}
             title={t(
               "How the venture builder is structured.", "Como o venture builder é estruturado.", "Cómo se estructura el venture builder."
             )}
@@ -324,7 +321,6 @@ export default function InvestorsPage() {
         <section className="investor-section">
           <SectionMasthead
             compact
-            eyebrow={t("What we will not do", "O que não faremos", "Lo que no haremos")}
             title={t(
               "Clear boundaries from the first conversation.", "Limites claros desde a primeira conversa.", "Límites claros desde la primera conversación."
             )}

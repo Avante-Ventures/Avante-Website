@@ -43,23 +43,6 @@ export default function NotFoundPage() {
           editorial "we put our name on this miss" rather than apologetic. */}
       <AvanteLockup size="xl" markOnly ariaLabel="Avante 404" />
 
-      <div
-        style={{
-          fontFamily: 'var(--avt-font-body)',
-          fontSize: '12px',
-          fontWeight: 600,
-          letterSpacing: '0.10em',
-          textTransform: 'uppercase',
-          color: 'var(--avt-meta)',
-        }}
-      >
-        {language === 'pt'
-          ? '404 · rota não encontrada'
-          : language === 'es'
-            ? '404 · ruta no encontrada'
-            : '404 · route not found'}
-      </div>
-
       <h1
         style={{
           fontFamily: 'var(--avt-font-display)',

@@ -34,7 +34,6 @@ export function InvestorEcosystem() {
         {/* Header */}
         <SectionMasthead
           centered
-          eyebrow={t("For Investors", "Para Investidores", "Para Inversores")}
           title={t(
             "Welcome to the Avante ecosystem.", "Bem-vindo ao ecossistema Avante.", "Bienvenido al ecosistema Avante."
           )}

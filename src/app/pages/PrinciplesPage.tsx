@@ -6,7 +6,7 @@
 // behavior, not a value that flatters identity.
 //
 // Designed as an editorial poster: large numbered blocks, no decoration,
-// gold-dot eyebrow signature, masthead family. Reads top-to-bottom.
+// masthead family. Reads top-to-bottom.
 
 import { Fragment } from 'react'
 import { useLanguage } from '@/app/hooks/useLanguage'
@@ -222,7 +222,7 @@ export default function PrinciplesPage() {
           description={t('Six stages give the work a structure. Ten operating principles guide the decisions along the way.', 'Seis etapas estruturam o trabalho. Dez princípios operacionais orientam as decisões ao longo do caminho.', 'Seis etapas estructuran el trabajo. Diez principios operativos guían las decisiones en el camino.')} />
         <div className="interior-content interior-content--reading" id="page-content">
           <ProcessExhibit />
-          <SectionMasthead compact eyebrow={t('The principles', 'Os princípios', 'Los principios')} title={t('Ten principles we operate by.', 'Dez princípios pelos quais operamos.', 'Diez principios por los que operamos.')} />
+          <SectionMasthead compact title={t('Ten principles we operate by.', 'Dez princípios pelos quais operamos.', 'Diez principios por los que operamos.')} />
         {/* The 10 principles. Generous vertical rhythm — designed to be
             read top-to-bottom, not scanned. Each block reveals on scroll
             with the same Apple curve as the masthead family.            */}

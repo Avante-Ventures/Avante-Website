@@ -5,7 +5,7 @@ import { useLanguage } from '@/app/hooks/useLanguage';
 const STAGES = ['Research', 'Partner', 'Build', 'Traction', 'Revenue', 'Compound'];
 const COPY = {
   en: {
-    label: 'Inside the Venture Builder', title: ['We co-found', 'the company.'],
+    title: ['We co-found', 'the company.'],
     thesis: 'The conviction of a founder. The discipline of an operating partner.',
     body: 'We build AI-native companies around complex Brazilian markets. Domain expertise, product, engineering and first capital come together from the start. Our role is to build the business alongside its founders, with shared ownership and responsibility for the work.',
     why: 'Why Avante', principles: 'Our operating principles', model: 'Built for depth',
@@ -14,7 +14,7 @@ const COPY = {
       ['$500K-$1.5M', 'Pre-seed capital per venture', 'Capital moves in tranches tied to product, pilot and revenue milestones. Avante participates as a co-founder, with aligned economics.'],
       ['First revenue', 'Hands-on through the milestone', 'Operating partners stay engaged through the first revenue milestone, then transition to board-level oversight as the company builds its own operating team.'],
     ],
-    process: 'A company takes shape in six stages.', processNote: 'Each stage has work to do and a question to answer.', gate: 'The decision to advance',
+    process: 'A company takes shape in six stages.', processNote: 'Each stage has work to do and a question to answer.',
     stages: [
       ['Understand the market from the inside.', 'Map the workflow with the people doing the work. Examine the buyer, the cost of the problem, existing alternatives and the constraints of operating in Brazil.', 'Is there a specific problem, an identifiable buyer and a credible reason to build?'],
       ['Form the founding partnership.', 'Bring domain operators together with Avante’s product, engineering and capital experience. Agree on roles, ownership and the operating priorities before building.', 'Do the founding team, incentives and market knowledge fit the company we want to create?'],
@@ -25,7 +25,7 @@ const COPY = {
     ],
   },
   pt: {
-    label: 'Por dentro do Venture Builder', title: ['Cofundamos', 'a empresa.'],
+    title: ['Cofundamos', 'a empresa.'],
     thesis: 'A convicção de um fundador. A disciplina de um sócio operacional.',
     body: 'Construímos empresas AI-native para mercados complexos do Brasil. Conhecimento setorial, produto, engenharia e primeiro capital se encontram desde o início. Nosso papel é construir o negócio ao lado dos fundadores, com participação societária e responsabilidade pelo trabalho.',
     why: 'Por que Avante', principles: 'Nossos princípios operacionais', model: 'Foco para ir a fundo',
@@ -34,7 +34,7 @@ const COPY = {
       ['US$500K-US$1.5M', 'Capital pré-seed por venture', 'O capital avança em parcelas vinculadas a marcos de produto, piloto e receita. A Avante participa como cofundadora, com interesses econômicos alinhados.'],
       ['Primeira receita', 'Atuação direta até esse marco', 'Os sócios operacionais atuam até o primeiro marco de receita. Depois, passam à supervisão no conselho enquanto a empresa forma seu próprio time operacional.'],
     ],
-    process: 'Uma empresa toma forma em seis etapas.', processNote: 'Cada etapa tem trabalho a fazer e uma pergunta a responder.', gate: 'A decisão de avançar',
+    process: 'Uma empresa toma forma em seis etapas.', processNote: 'Cada etapa tem trabalho a fazer e uma pergunta a responder.',
     stages: [
       ['Entender o mercado por dentro.', 'Mapeamos o fluxo com quem faz o trabalho. Examinamos o comprador, o custo do problema, as alternativas existentes e as condições de operar no Brasil.', 'Existe um problema específico, um comprador identificável e uma razão concreta para construir?'],
       ['Formar a sociedade fundadora.', 'Reunimos operadores do setor e a experiência da Avante em produto, engenharia e capital. Alinhamos papéis, participação e prioridades antes de construir.', 'O time fundador, os incentivos e o conhecimento do mercado estão alinhados com a empresa que queremos criar?'],
@@ -45,7 +45,7 @@ const COPY = {
     ],
   },
   es: {
-    label: 'Dentro del Venture Builder', title: ['Cofundamos', 'la empresa.'],
+    title: ['Cofundamos', 'la empresa.'],
     thesis: 'La convicción de un fundador. La disciplina de un socio operativo.',
     body: 'Construimos empresas AI-native para mercados complejos de Brasil. Experiencia sectorial, producto, ingeniería y primer capital se reúnen desde el inicio. Nuestro papel es construir el negocio junto a sus fundadores, con participación y responsabilidad compartidas.',
     why: 'Por qué Avante', principles: 'Nuestros principios operativos', model: 'Foco para construir a fondo',
@@ -54,7 +54,7 @@ const COPY = {
       ['USD500K-USD1.5M', 'Capital pre-seed por venture', 'El capital avanza por tramos ligados a hitos de producto, piloto e ingresos. Avante participa como cofundador, con intereses económicos alineados.'],
       ['Primeros ingresos', 'Trabajo directo hasta ese hito', 'Los socios operativos siguen involucrados hasta el primer hito de ingresos. Después pasan a la supervisión desde la junta mientras la empresa forma su propio equipo operativo.'],
     ],
-    process: 'Una empresa toma forma en seis etapas.', processNote: 'Cada etapa tiene trabajo por hacer y una pregunta por responder.', gate: 'La decisión de avanzar',
+    process: 'Una empresa toma forma en seis etapas.', processNote: 'Cada etapa tiene trabajo por hacer y una pregunta por responder.',
     stages: [
       ['Entender el mercado desde dentro.', 'Mapeamos el proceso con las personas que hacen el trabajo. Estudiamos al comprador, el costo del problema, las alternativas y las condiciones de operar en Brasil.', '¿Hay un problema específico, un comprador identificable y una razón concreta para construir?'],
       ['Formar la sociedad fundadora.', 'Reunimos a operadores del sector con la experiencia de Avante en producto, ingeniería y capital. Acordamos roles, participación y prioridades antes de construir.', '¿El equipo fundador, los incentivos y el conocimiento del mercado encajan con la empresa que queremos crear?'],
@@ -73,7 +73,6 @@ export function InsideVentureBuilder() {
   const c = COPY[language];
   const [stage, setStage] = useState(0);
   return <section id="studio" className="editorial-section studio-section">
-    <div className="editorial-kicker">{c.label}</div>
     <div className="editorial-split">
       <h2 className="editorial-title">{c.title[0]}<br /><span>{c.title[1]}</span></h2>
       <div className="studio-description"><h3>{c.thesis}</h3><p>{c.body}</p><div className="editorial-links"><Link to={`/${language}/why-avante`}>{c.why} ↗</Link><Link to={`/${language}/principles`}>{c.principles} ↗</Link></div></div>
@@ -86,7 +85,7 @@ export function InsideVentureBuilder() {
       <div className="stage-buttons">{STAGES.map((name, i) => <button key={name} onClick={() => setStage(i)} aria-pressed={stage === i} aria-controls="stage-description"><span>0{i + 1}</span>{name}</button>)}</div>
       <div className="stage-description" id="stage-description" aria-live="polite" aria-atomic="true">
         <span>0{stage + 1}</span><h4>{c.stages[stage][0]}</h4>
-        <div className="stage-detail"><p>{c.stages[stage][1]}</p><div className="stage-gate"><span>{c.gate}</span><p>{c.stages[stage][2]}</p></div></div>
+        <div className="stage-detail"><p>{c.stages[stage][1]}</p><div className="stage-gate"><p>{c.stages[stage][2]}</p></div></div>
       </div>
     </div>
   </section>;

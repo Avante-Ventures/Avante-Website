@@ -377,7 +377,6 @@ export default function PortfolioPage() {
           <SectionMasthead
             centered
             compact
-            eyebrow={t('Discovery', 'Em exploração', 'En exploración')}
             title={t(
               'Questions worth building around.',
               'Perguntas que merecem uma empresa.',

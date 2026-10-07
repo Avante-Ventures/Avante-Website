@@ -4,27 +4,22 @@
 // SaaS section headers.
 //
 // New: 48-128px Funnel Display monumental poster. The title IS the moment.
-// The eyebrow keeps its gold-dot signature (a runtime "tag" the brand
-// learned in earlier sprints) but switches to JetBrains Mono for the
-// editorial publication voice. Description switches to Funnel Display
+// No eyebrow above it. Description switches to Funnel Display
 // weight 400, lighter, larger, reads like a magazine standfirst.
 //
 // New optional prop: `screenNum` ("§ II — thesis" + "02 / 05" pair on the
 // right). When passed, renders a pre-title meta row that anchors the
 // section in the publication's table of contents.
 //
-// API preservation: `eyebrow`, `title`, `description`, `centered`, `compact`
-// all still work. Consumers don't need to change.
+// API preservation: `title`, `description`, `centered`, `compact`
+// all still work.
 //
 // Microinteraction (Apple out-quint curve, 900ms, staggered): preserved
 // from rev a3. Only the typography and color tokens were swapped.
 
 import { useEffect, useRef, useState, type ReactNode } from 'react'
-import { AvanteLockup } from '@/app/components/AvanteLockup'
 
 export interface SectionMastheadProps {
-  /** Caps eyebrow shown above the title (e.g. "Our Playbook"). */
-  eyebrow?: string
   /** Main title. Pass JSX with <span class="avt-grad"> for gradient accents. */
   title: ReactNode
   /** Optional secondary copy below the title. Keep ≤ 2 lines. */
@@ -34,7 +29,7 @@ export interface SectionMastheadProps {
   /** Tighter spacing variant for nested sections. */
   compact?: boolean
   /**
-   * Optional editorial screen-number row above the eyebrow:
+   * Optional editorial screen-number row above the title:
    *   left:  "§ II — thesis"
    *   right: "02 / 05"
    * Pass either or both. When neither is set, the row is omitted entirely.
@@ -47,7 +42,6 @@ export interface SectionMastheadProps {
 const APPLE_CURVE = 'cubic-bezier(0.16, 1, 0.3, 1)'
 
 export function SectionMasthead({
-  eyebrow,
   title,
   description,
   centered = false,
@@ -139,30 +133,6 @@ export function SectionMasthead({
               {screenNum}
             </span>
           )}
-        </div>
-      )}
-
-      {eyebrow && (
-        <div
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '10px',
-            marginBottom: compact ? '14px' : '24px',
-            fontFamily: 'var(--avt-font-body)',
-            fontSize: '12px',
-            fontWeight: 600,
-            letterSpacing: '0.08em',
-            textTransform: 'uppercase',
-            color: '#F9B437',
-            ...stage(60),
-          }}
-        >
-          {/* Tier 1 / use 01. The gold dot signature is replaced by a mini
-              "A" lockup mark in xs/inline variant. Carries brand identity
-              into every section header rather than abstract ornament. */}
-          <AvanteLockup size="xs" markOnly variant="inline" ariaLabel="Avante section mark" />
-          <span>{eyebrow}</span>
         </div>
       )}
 

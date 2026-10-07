@@ -86,7 +86,6 @@ const TeamSectionComponent = () => {
         {/* Title */}
         <SectionMasthead
           centered
-          eyebrow={t('Our Team', 'Nosso Time')}
           title={t(
             'Silicon Valley meets Brazil.',
             'Vale do Silício encontra o Brasil.'

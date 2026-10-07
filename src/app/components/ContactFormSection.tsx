@@ -83,7 +83,6 @@ export function ContactFormSection() {
       {/* Header */}
       <SectionMasthead
         centered
-        eyebrow={t('Get in Touch', 'Entre em Contato')}
         title={t("Let's talk.", 'Vamos conversar.')}
         description={t(
           "Questions, partnerships, or anything else, we'd love to hear from you.",

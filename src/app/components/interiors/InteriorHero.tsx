@@ -45,16 +45,14 @@ export function InteriorHero({ kind, eyebrow, title, description, children }: { 
     {!photo && <InteriorSculpture mode={kind === 'principles' ? 'process' : 'gallery'} />}
     <div className="interior-hero-content">
       <Link className="interior-breadcrumb" to={`/${language}`}>{labels[0]} <span>/</span> {eyebrow}</Link>
-      <span className="interior-kicker">{eyebrow}</span>
       <h1>{title}</h1><p>{description}</p>
       {children ?? <a className="interior-link" href="#page-content">{labels[{ studio: 1, ventures: 2, investors: 3, principles: 4 }[kind]]} <span>↓</span></a>}
     </div>
-    <div className="interior-hero-caption"><span>Avante Ventures</span><span>{photo ? 'São Paulo / Brasil' : kind === 'principles' ? 'Research → Compound' : 'Built to compound'}</span></div>
   </header>;
 }
 
 export function InteriorClosing({ title, body }: { title?: string; body?: string }) {
   const { language } = useLanguage();
   const c = { en: ['The next chapter is being built.', 'Building a company or exploring a partnership? Tell us what you are working on.', 'Start a conversation'], pt: ['O próximo capítulo está em construção.', 'Está construindo uma empresa ou buscando uma parceria? Conte o que você está desenvolvendo.', 'Vamos conversar'], es: ['El próximo capítulo está en construcción.', '¿Estás construyendo una empresa o buscando una alianza? Cuéntanos en qué estás trabajando.', 'Conversemos'] }[language];
-  return <section className="interior-closing"><div><span className="interior-kicker">Avante Ventures</span><h2>{title ?? c[0]}</h2><p>{body ?? c[1]}</p><a className="interior-button" href="mailto:cristian@avanteventures.com?subject=Building%20with%20Avante">{c[2]} ↗</a></div><img src="/world-assets/avante-A.svg" alt="" loading="lazy" width="180" height="240" /></section>;
+  return <section className="interior-closing"><div><h2>{title ?? c[0]}</h2><p>{body ?? c[1]}</p><a className="interior-button" href="mailto:cristian@avanteventures.com?subject=Building%20with%20Avante">{c[2]} ↗</a></div><img src="/world-assets/avante-A.svg" alt="" loading="lazy" width="180" height="240" /></section>;
 }
