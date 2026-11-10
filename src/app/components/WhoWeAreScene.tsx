@@ -122,8 +122,8 @@ export const OPERATORS: Operator[] = [
   },
   {
     slug: "giovanni",
-    name: "Giovanni dos Santos Jr.",
-    role: { en: "Principal AI Product Manager", pt: "Principal AI Product Manager", es: "Principal AI Product Manager" },
+    name: "Giovani Santos Jr.",
+    role: { en: "CPO, AI", pt: "CPO, AI", es: "CPO, AI" },
     house: "Avante",
     city: "São Paulo",
     coord: "23°33′S",
