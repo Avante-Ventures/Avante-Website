@@ -11,7 +11,7 @@ const COPY = {
     why: 'Why Avante', principles: 'Our operating principles', model: 'Built for depth',
     commitments: [
       ['3-4', 'Ventures per year', 'A deliberately focused annual cohort. Each company gets the attention of operating partners and a shared product and engineering team.'],
-      ['$500K-$1.5M', 'Pre-seed capital per venture', 'Capital moves in tranches tied to product, pilot and revenue milestones. Avante participates as a co-founder, with aligned economics.'],
+      ['≤ $250K', 'Avante capital per venture, to positive cash flow', 'Capital moves in tranches tied to product, pilot and revenue milestones. Avante participates as a co-founder, with aligned economics.'],
       ['First revenue', 'Hands-on through the milestone', 'Operating partners stay engaged through the first revenue milestone, then transition to board-level oversight as the company builds its own operating team.'],
     ],
     process: 'A company takes shape in six stages.', processNote: 'Each stage has work to do and a question to answer.',
@@ -31,7 +31,7 @@ const COPY = {
     why: 'Por que Avante', principles: 'Nossos princípios operacionais', model: 'Foco para ir a fundo',
     commitments: [
       ['3-4', 'Ventures por ano', 'Uma seleção anual deliberadamente concentrada. Cada empresa recebe a atenção de sócios operacionais e de um time compartilhado de produto e engenharia.'],
-      ['US$500K-US$1.5M', 'Capital pré-seed por venture', 'O capital avança em parcelas vinculadas a marcos de produto, piloto e receita. A Avante participa como cofundadora, com interesses econômicos alinhados.'],
+      ['≤ US$250K', 'Capital da Avante por venture, até o fluxo de caixa positivo', 'O capital avança em parcelas vinculadas a marcos de produto, piloto e receita. A Avante participa como cofundadora, com interesses econômicos alinhados.'],
       ['Primeira receita', 'Atuação direta até esse marco', 'Os sócios operacionais atuam até o primeiro marco de receita. Depois, passam à supervisão no conselho enquanto a empresa forma seu próprio time operacional.'],
     ],
     process: 'Uma empresa toma forma em seis etapas.', processNote: 'Cada etapa tem trabalho a fazer e uma pergunta a responder.',
@@ -51,7 +51,7 @@ const COPY = {
     why: 'Por qué Avante', principles: 'Nuestros principios operativos', model: 'Foco para construir a fondo',
     commitments: [
       ['3-4', 'Ventures al año', 'Una selección anual deliberadamente concentrada. Cada empresa recibe la atención de socios operativos y de un equipo compartido de producto e ingeniería.'],
-      ['USD500K-USD1.5M', 'Capital pre-seed por venture', 'El capital avanza por tramos ligados a hitos de producto, piloto e ingresos. Avante participa como cofundador, con intereses económicos alineados.'],
+      ['≤ USD250K', 'Capital de Avante por venture, hasta el flujo de caja positivo', 'El capital avanza por tramos ligados a hitos de producto, piloto e ingresos. Avante participa como cofundador, con intereses económicos alineados.'],
       ['Primeros ingresos', 'Trabajo directo hasta ese hito', 'Los socios operativos siguen involucrados hasta el primer hito de ingresos. Después pasan a la supervisión desde la junta mientras la empresa forma su propio equipo operativo.'],
     ],
     process: 'Una empresa toma forma en seis etapas.', processNote: 'Cada etapa tiene trabajo por hacer y una pregunta por responder.',
